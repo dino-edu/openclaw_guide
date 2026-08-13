@@ -318,20 +318,20 @@
 | 路径 | 说明 | 关联章节 |
 |---|---|---|
 | `~/.openclaw/openclaw.json` | 主配置文件 | [4.1](../04_config_models/4.1_config_system.md) |
-| `~/.openclaw/workspace/` | 默认工作区（含引导文件） | [2.3.4](../02_setup/2.3_onboarding.md) |
-| `~/.openclaw/workspace/AGENTS.md` | 工作区主页与启动清单 | [2.3.4](../02_setup/2.3_onboarding.md) |
-| `~/.openclaw/workspace/SOUL.md` | 智能体人格定义 | [3.3.4](../03_minimal_loop/3.3_agent_persona.md) |
-| `~/.openclaw/workspace/USER.md` | 用户偏好与画像 | [2.3.4](../02_setup/2.3_onboarding.md) |
-| `~/.openclaw/workspace/IDENTITY.md` | 智能体元数据（名称、形象） | [2.3.4](../02_setup/2.3_onboarding.md) |
-| `~/.openclaw/workspace/TOOLS.md` | 环境级工具备忘 | [2.3.4](../02_setup/2.3_onboarding.md) |
+| `~/.openclaw/workspace/` | 默认工作区（含引导文件） | [2.3.3](../02_setup/2.3_onboarding.md) |
+| `~/.openclaw/workspace/AGENTS.md` | 工作区主页与启动清单 | [2.3.3](../02_setup/2.3_onboarding.md) |
+| `~/.openclaw/workspace/SOUL.md` | 智能体人格定义 | [3.3.2](../03_minimal_loop/3.3_agent_persona.md) |
+| `~/.openclaw/workspace/USER.md` | 用户偏好与画像 | [2.3.3](../02_setup/2.3_onboarding.md) |
+| `~/.openclaw/workspace/IDENTITY.md` | 智能体元数据（名称、形象） | [2.3.3](../02_setup/2.3_onboarding.md) |
+| `~/.openclaw/workspace/TOOLS.md` | 环境级工具备忘 | [2.3.3](../02_setup/2.3_onboarding.md) |
 | `~/.openclaw/workspace/HEARTBEAT.md` | 心跳巡检清单 | [8.3](../08_automation_ops/8.3_heartbeat.md) |
-| `~/.openclaw/workspace/BOOT.md` | 非默认创建；仅在文件存在且启用 bundled `boot-md` hook 时执行 | [2.3.4](../02_setup/2.3_onboarding.md) |
-| `~/.openclaw/workspace/BOOTSTRAP.md` | 首次运行入职脚本 | [2.3.4](../02_setup/2.3_onboarding.md) |
+| `~/.openclaw/workspace/BOOT.md` | 非默认创建；仅在文件存在且启用 bundled `boot-md` hook 时执行 | [2.3.3](../02_setup/2.3_onboarding.md) |
+| `~/.openclaw/workspace/BOOTSTRAP.md` | 首次运行入职脚本 | [2.3.3](../02_setup/2.3_onboarding.md) |
 | `~/.openclaw/workspace/MEMORY.md` | 可选长期记忆索引 | [6.3](../06_context_memory/6.3_memory_mechanism.md) |
 | `~/.openclaw/workspace/memory/` | 记忆或 hook 写入目录，不等于每轮自动加载 | [6.3](../06_context_memory/6.3_memory_mechanism.md) |
 | `<workspace>/skills/` | 当前工作区技能目录；`openclaw skills install` 默认写到这里 | [5.3](../05_tools_skills/5.3_skills_plugins.md) |
 | `<workspace>/.agents/skills/` | 工作区私有 Agent skills 目录 | [5.3](../05_tools_skills/5.3_skills_plugins.md) |
-| `~/.openclaw/workspace/canvas/` | 节点 UI 或可视化资源 | [2.3.4](../02_setup/2.3_onboarding.md) |
+| `~/.openclaw/workspace/canvas/` | 节点 UI 或可视化资源 | [2.3.3](../02_setup/2.3_onboarding.md) |
 | `~/.openclaw/skills/` | 本地 override / 共享技能目录（非当前 CLI 默认安装目标） | [5.3](../05_tools_skills/5.3_skills_plugins.md) |
 | `~/.agents/skills/` | 用户级共享 Agent skills 目录 | [5.3](../05_tools_skills/5.3_skills_plugins.md) |
 | `~/.openclaw/agents/` | Agent 数据目录 | — |

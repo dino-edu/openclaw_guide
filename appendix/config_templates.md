@@ -42,7 +42,7 @@ OpenClaw Gateway 的主配置文件默认路径为 `~/.openclaw/openclaw.json`�
 
   agents: {
     defaults: {
-      workspace: "~/openclaw-workspace",
+      workspace: "~/.openclaw/workspace",
     },
   },
 }
