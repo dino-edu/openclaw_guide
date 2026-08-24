@@ -1,4 +1,4 @@
-## 附录E：命令速查手册
+## 附录 E：命令速查手册
 
 本附录汇总 OpenClaw 的终端 CLI 命令与聊天斜杠命令，供日常操作时快速查阅。命令参数可能随版本演进，建议以 `openclaw <命令> --help` 的实际输出为准。
 
@@ -50,17 +50,17 @@
 | `openclaw status --all` | 一次性输出各状态分组的汇总 | [15.1](../15_troubleshooting_trees/15.1_diagnostic_decision_trees.md) |
 | `openclaw logs` | 查看最近日志 | [3.2](../03_minimal_loop/3.2_diagnostics.md) |
 | `openclaw logs --follow --json` | 实时跟踪结构化日志 | [3.2](../03_minimal_loop/3.2_diagnostics.md) |
-| `openclaw logs --limit <N> --json` | 取日志快照证据；排障清单优先用它而不是 `--follow` | [附录C](troubleshooting_checklist.md) |
+| `openclaw logs --limit <N> --json` | 取日志快照证据；排障清单优先用它而不是 `--follow` | [附录 C](troubleshooting_checklist.md) |
 | `openclaw gateway probe` | 主动探测 Gateway 可达性 | [15.1](../15_troubleshooting_trees/15.1_diagnostic_decision_trees.md) |
 | `openclaw gateway stability --json` | 网关稳定性快照（崩溃、重启、资源饱和） | [15.2](../15_troubleshooting_trees/15.2_high_concurrency_diagnosis.md) |
 | `openclaw gateway stability --bundle latest --export` | 导出最近一次稳定性事件包 | [15.2](../15_troubleshooting_trees/15.2_high_concurrency_diagnosis.md) |
-| `openclaw gateway diagnostics export --json` | 导出受控诊断包用于提 Issue；聊天内等价入口为 `/diagnostics` | [附录C](troubleshooting_checklist.md) |
-| `openclaw proxy validate` | 校验托管代理运行时路径（`proxy.enabled` / `proxy.proxyUrl` / `OPENCLAW_PROXY_URL`） | [附录H](env_check.md) |
+| `openclaw gateway diagnostics export --json` | 导出受控诊断包用于提 Issue；聊天内等价入口为 `/diagnostics` | [附录 C](troubleshooting_checklist.md) |
+| `openclaw proxy validate` | 校验托管代理运行时路径（`proxy.enabled` / `proxy.proxyUrl` / `OPENCLAW_PROXY_URL`） | [附录 H](env_check.md) |
 | `openclaw security audit` | 安全基线审计（谁能对话、在哪执行、能触及什么） | [8.5](../08_automation_ops/8.5_security_baseline.md) |
 | `openclaw security audit --deep` | 深度安全审计（live Gateway probes + 插件安全 collector） | [8.5](../08_automation_ops/8.5_security_baseline.md) |
 | `openclaw security audit --fix` | 安全审计 + 自动修复 | [8.5](../08_automation_ops/8.5_security_baseline.md) |
 
-> 遇到问题时的推荐排查顺序：`doctor` → `logs` → `status` → `gateway restart` → `doctor --repair`。旧资料里常见的 `doctor --fix` 仍会在部分迁移/兼容文档中出现；实际以本地 `openclaw doctor --help` 为准。详见[附录C](troubleshooting_checklist.md)。
+> 遇到问题时的推荐排查顺序：`doctor` → `logs` → `status` → `gateway restart` → `doctor --repair`。旧资料里常见的 `doctor --fix` 仍会在部分迁移/兼容文档中出现；实际以本地 `openclaw doctor --help` 为准。详见[附录 C](troubleshooting_checklist.md)。
 
 ### E.4 模型管理
 
@@ -235,10 +235,10 @@
 | 命令 | 说明 | 关联章节 |
 |---|---|---|
 | `openclaw secrets audit` | 审计凭据引用与依赖 | [8.5](../08_automation_ops/8.5_security_baseline.md) |
-| `openclaw secrets audit --check` | 迁移前的凭据存储体检 | [附录F](version_mapping.md) |
-| `openclaw secrets configure` | 交互式配置 secrets provider 与 `SecretRef` | [附录F](version_mapping.md) |
-| `openclaw secrets apply --from <plan.json> --dry-run` | 预演凭据变更计划 | [附录F](version_mapping.md) |
-| `openclaw secrets apply --from <plan.json>` | 应用凭据变更计划 | [附录F](version_mapping.md) |
+| `openclaw secrets audit --check` | 迁移前的凭据存储体检 | [附录 F](version_mapping.md) |
+| `openclaw secrets configure` | 交互式配置 secrets provider 与 `SecretRef` | [附录 F](version_mapping.md) |
+| `openclaw secrets apply --from <plan.json> --dry-run` | 预演凭据变更计划 | [附录 F](version_mapping.md) |
+| `openclaw secrets apply --from <plan.json>` | 应用凭据变更计划 | [附录 F](version_mapping.md) |
 | `openclaw secrets reload` | 重新加载凭据，不重启 Gateway | [8.5](../08_automation_ops/8.5_security_baseline.md) |
 
 **会话维护与成本**
@@ -292,7 +292,7 @@
 | `/queue collect [debounce:<时长>] [cap:<条数>] [drop:<策略>]` | 按会话临时调整消息合并队列行为 | [7.4](../07_multi_agent/7.4_collaboration_patterns.md) |
 | `/queue reset` | 恢复队列的默认行为 | [7.4](../07_multi_agent/7.4_collaboration_patterns.md) |
 | `/trace on` | 打开工具与插件 trace，诊断信息进入会话与结构化日志 | [14.2](../14_performance_cost/14.2_latency_throughput.md) |
-| `/diagnostics [补充说明]` | 在聊天窗口导出受控诊断包（等价于 `openclaw gateway diagnostics export`） | [附录C](troubleshooting_checklist.md) |
+| `/diagnostics [补充说明]` | 在聊天窗口导出受控诊断包（等价于 `openclaw gateway diagnostics export`） | [附录 C](troubleshooting_checklist.md) |
 | `/usage [off\|tokens\|full]` | 控制每条回复是否附带用量摘要 | [14.3](../14_performance_cost/14.3_usage_budget.md) |
 
 **技能、插件与记忆**
