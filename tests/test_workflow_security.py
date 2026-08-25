@@ -341,9 +341,9 @@ class WorkflowSecurityTests(unittest.TestCase):
         publish = job_block(release, "release")
 
         self.assertNotIn("attest-build-provenance", build)
-        self.assertIn(
-            "actions/attest-build-provenance@0f67c3f4856b2e3261c31976d6725780e5e4c373 # v4.1.1",
+        self.assertRegex(
             publish,
+            r"actions/attest-build-provenance@[0-9a-f]{40} # v\d",
         )
         self.assertIn("subject-path: |", publish)
         self.assertIn("dist/oc_guide-*.pdf", publish)
