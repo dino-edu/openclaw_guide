@@ -28,7 +28,7 @@ CalVer 的最大价值是“版本号天然携带时间语义”。做迁移判�
 | 家族 | 当前常见结构 | 说明 |
 |------|-------------|------|
 | 认证 | `auth.profiles` | 认证档案与 provider 绑定，不再把所有密钥都直接写进单层字段 |
-| Agent | `agents.defaults` + `agents.list[]` | “全局默认 + 按 agent 覆盖”是当前更常见的组织方式 |
+| Agent | `agents.defaults` + `agents.entries.*` | “全局默认 + 按 agent 覆盖”是当前更常见的组织方式 |
 | 模型 | `agents.defaults.model`（字符串或 `{ primary, fallbacks }`） | 当前 schema 以 `agents.defaults.model` 为主入口；对象形态可显式表达主模型与回退链 |
 | 渠道 | `channels.<channel>.dmPolicy` / `groupPolicy` | 私聊与群聊分开治理是当前入口控制的核心 |
 | Gateway | `gateway.port` / `gateway.auth.mode` / `gateway.controlUi.allowedOrigins` | 控制面鉴权与来源校验已经是显式结构 |
@@ -43,7 +43,8 @@ CalVer 的最大价值是“版本号天然携带时间语义”。做迁移判�
 
 | 历史写法 | 当前更应迁移到 | 迁移原则 |
 |---------|---------------|---------|
-| 单体 agent 配置 | `agents.defaults` + `agents.list[]` | 先抽公共默认，再做特定 agent 覆盖 |
+| 单体 agent 配置 | `agents.defaults` + `agents.entries.*` | 先抽公共默认，再做特定 agent 覆盖 |
+| 数组式名册 `agents.list[]`（条目里写 `id`） | 映射式 `agents.entries.<id>`（agent id 就是键） | 官方已把 `agents.list` 归为 legacy 名册，由 `openclaw doctor --fix` 迁移；迁移后 `default`、`workspace`、`model`、`tools`、`heartbeat`、`sandbox` 等字段位置不变，只是外层由数组变成对象 |
 | `agents.*.model` 单字符串 | `agents.defaults.model.primary` + `agents.defaults.model.fallbacks` | 把模型选择与回退链显式化；如仅需单模型，也可继续使用字符串形态 |
 | 渠道单层门控开关 | `dmPolicy` / `groupPolicy` / `groups.*` | 先分清私聊与群聊，再处理提及门控和白名单 |
 | 顶层零散安全字段 | `gateway.auth`、`gateway.controlUi.allowedOrigins`、`tools` 策略 | 把控制面鉴权、来源校验、执行策略分层 |
@@ -153,7 +154,7 @@ openclaw gateway restart
 版本迁移的关键不是背一张“旧字段 → 新字段”的表，而是先抓住当前 schema 家族：
 
 - 认证看 `auth.profiles`
-- Agent 看 `agents.defaults` 与 `agents.list[]`
+- Agent 看 `agents.defaults` 与 `agents.entries.*`
 - 模型看 `agents.defaults.model`
 - 渠道看 `dmPolicy / groupPolicy`
 - Gateway 看 `auth + gateway.controlUi.allowedOrigins`
