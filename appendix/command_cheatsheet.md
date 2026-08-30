@@ -199,7 +199,7 @@
 
 **定时任务（Cron）**
 
-作业创建需要先区分 payload 类型：主会话任务用 `--system-event`（通常配合 `--session main`），隔离任务用 `--message`（通常配合 `--session isolated`）。不带时区的 `--at` 按 UTC 解释，要按本地墙上时间应显式传 `--tz <IANA 时区>`。
+官方现以 `openclaw automations` 为主命令，`openclaw cron` 是保留别名，下表每条命令两种拼法等价。作业创建需要先区分 payload 类型：主会话任务用 `--system-event`（通常配合 `--session main`），隔离任务用 `--message`（通常配合 `--session isolated`）。不带时区的 `--at` 按 UTC 解释，要按本地墙上时间应显式传 `--tz <IANA 时区>`。
 
 | 命令 | 说明 | 关联章节 |
 |---|---|---|
