@@ -117,7 +117,7 @@ Telegram 渠道参考：[Telegram](https://docs.openclaw.ai/channels/telegram)�
 
 ### B.5 工具治理模板
 
-工具治理的官方配置以 `tools.profile` 作为基础模板，并包含 `tools.allow` 与 `tools.deny`。默认策略是允许该 profile 下的全部工具；显式 deny 会覆盖 allow；具体渠道还可按群组、房间或 peer 维度做分层治理。参考：[Tools](https://docs.openclaw.ai/tools) 与 [Group tool restrictions](https://docs.openclaw.ai/channels/groups#groupchannel-tool-restrictions-optional)。
+工具治理的官方配置以 `tools.profile` 作为基础模板，并包含 `tools.allow` 与 `tools.deny`。默认策略是允许该 profile 下的全部工具；显式 deny 会覆盖 allow；具体渠道还可按群组、房间或 peer 维度做分层治理。参考：[Tools](https://docs.openclaw.ai/tools) 与 [Group tool restrictions](https://docs.openclaw.ai/channels/groups#group/channel-tool-restrictions-optional)。
 
 ```json5
 {
