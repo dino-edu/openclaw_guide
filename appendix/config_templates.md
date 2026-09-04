@@ -29,8 +29,8 @@ OpenClaw Gateway 的主配置文件默认路径为 `~/.openclaw/openclaw.json`�
     level: "info",
     consoleLevel: "info",
     consoleStyle: "pretty",
-    // 注意：redaction 会尽力作用于控制台、文件日志、OTLP 与 transcript，但不承诺完整脱敏
-    redactSensitive: "tools",
+    // 注意：脱敏现已固定开启（redactSensitive 已在 v2026.8.1 退役，写了会被 config validate 拒绝），
+    // 可配置的只剩下面的 redactPatterns；且它会尽力作用于控制台、文件日志、OTLP 与 transcript，但不承诺完整脱敏
   },
 
   diagnostics: {
@@ -161,9 +161,8 @@ Telegram 渠道参考：[Telegram](https://docs.openclaw.ai/channels/telegram)�
   agents: {
     defaults: {
       // 记忆与上下文压缩的核心开关与策略
-      memorySearch: {
-        provider: "local"
-      },
+      // 注意：记忆搜索不在这里配置——agents.defaults.memorySearch 已退役，
+      // 现为顶层 memory.search（按智能体覆盖用 agents.entries.*.memory.search），见 6.3 节
       contextPruning: {
         mode: "cache-ttl"
       },
@@ -231,7 +230,7 @@ OpenClaw 采取严格的 Schema 校验机制，当您将旧版本配置文件带
 | 老配置形态 / 遗留字段 | 对应的新配置形态 / 最佳实践 | 备注 |
 | --- | --- | --- |
 | `diagnostics.logPath` | `logging.file` | 日志全系迁移至统一 `logging` 命名空间管理。 |
-| `diagnostics.redact` / `maskedEnv` | `logging.redactSensitive` / `redactPatterns` | 旧版中被混在诊断对象中，目前剥离到专注脱敏的日志对象层级。 |
+| `diagnostics.redact` / `maskedEnv` | `logging.redactPatterns` | 旧版中被混在诊断对象中，已剥离到专注脱敏的日志对象层级；其中 `logging.redactSensitive` 在 v2026.8.1 也一并退役，脱敏改为固定开启，只剩 `redactPatterns` 可配。 |
 | 配置中直写加密口令 / API Key | 结合 `${VAR}` 的内联环境变量替换或是 `SecretRef` 对象 | 出于审计与泄漏防护的考量，生产环境已不再建议将值硬编码在 JSON 当中。 |
 | `ENV:` 开头的魔术字符串 | `${VAR_NAME}` 字符串插值形式 | 原先 `ENV:` 为老版本遗留或口头契约，当前标准执行器将依据 `${}` 来挂接运行时环境。 |
 | `routing.allowFrom` / `routing.groupChat.*` | `channels.whatsapp.allowFrom`、`channels.<channel>.groups."*".requireMention`、`messages.groupChat.*` | 迁移不是把整个 `routing.rules` 平移到 `messages.groupChat`：群聊门控属于渠道策略，只有 `historyLimit`、`mentionPatterns` 等通用群聊上下文项进入 `messages.groupChat`。 |
