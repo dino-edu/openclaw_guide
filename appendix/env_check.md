@@ -10,28 +10,21 @@ if command -v node >/dev/null 2>&1; then
   node_major="${node_version%%.*}"
   node_rest="${node_version#*.}"
   node_minor="${node_rest%%.*}"
-  node_patch="${node_rest#*.}"
   echo "Node.js: v${node_version}"
-  # 官方支持线：22.22.3+ / 24.15+ / 25.9+（含 26），Node 23 不受支持
+  # 官方支持线：24.16+ / 26.1+；Node 22、23、25 与 26.0 不受支持
   node_supported=0
   case "$node_major" in
-    22)
-      if [ "$node_minor" -gt 22 ] || { [ "$node_minor" -eq 22 ] && [ "$node_patch" -ge 3 ]; }; then
-        node_supported=1
-      fi
-      ;;
-    23) node_supported=0 ;;
-    24) [ "$node_minor" -ge 15 ] && node_supported=1 ;;
-    25) [ "$node_minor" -ge 9 ] && node_supported=1 ;;
-    *)  [ "$node_major" -ge 26 ] && node_supported=1 ;;
+    24) [ "$node_minor" -ge 16 ] && node_supported=1 ;;
+    26) [ "$node_minor" -ge 1 ] && node_supported=1 ;;
+    *)  [ "$node_major" -ge 27 ] && node_supported=1 ;;
   esac
   if [ "$node_supported" -eq 0 ]; then
-    echo "警告: 当前 Node 不在官方支持线内（需 22.22.3+ / 24.15+ / 25.9+，Node 23 不受支持）；建议升级到 Node 26。"
+    echo "警告: 当前 Node 不在官方支持线内（需 24.16+ 或 26.1+，Node 22、23、25 不受支持）；建议升级到 Node 26。"
   elif [ "$node_major" -lt 26 ]; then
-    echo "提示: 当前版本受支持；新安装推荐 Node 26（官方 CI 与发布流程仍固定 Node 24）。"
+    echo "提示: 当前版本受支持；新安装推荐 Node 26（官方 CI 与 Linux 安装脚本使用 Node 24）。"
   fi
 else
-  echo "警告: 未安装 Node.js（推荐 Node 26；官方支持线为 22.22.3+ / 24.15+ / 25.9+）"
+  echo "警告: 未安装 Node.js（推荐 Node 26；官方支持线为 24.16+ / 26.1+）"
 fi
 npm --version || echo "提示: 未安装 npm。如果不使用自动化脚本安装，这是必需项"
 docker --version || echo "提示: 未安装 Docker (如使用容器化部署则是必需项)"
@@ -72,7 +65,7 @@ llm provider: 200
 | 输出 | 含义 | 排查方向 |
 |------|------|---------|
 | `警告: 未安装 Node.js` | Node.js 未安装或不在 PATH | 执行 `nvm install 26`（推荐）或 `nvm install 24` |
-| `警告: 当前 Node 不在官方支持线内` | 当前 Node 版本过低，或落在不受支持的 Node 23 上 | 升级到 Node 26，或至少升级到 22.22.3+ / 24.15+ / 25.9+ |
+| `警告: 当前 Node 不在官方支持线内` | 当前 Node 版本过低，或落在不受支持的 Node 22、23、25 上 | 升级到 Node 26（26.1+），或至少升级到 24.16+ |
 | `install script: 000` | 无法连接 openclaw.ai | 检查网络/代理/DNS 设置 |
 | `llm provider: 401` | API Key 无效或未设置 | 检查 `$OPENAI_API_KEY` 环境变量 |
 | `llm provider: 403` | API Key 无权限 | 确认 API Key 对应账户有可用额度 |
