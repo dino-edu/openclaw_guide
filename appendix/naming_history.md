@@ -1,10 +1,10 @@
-## 附录 I：OpenClaw 命名演进史
+## Phụ lục I: Lịch sử tiến hóa tên gọi OpenClaw
 
-当前仓库与官方文档并没有提供一份可直接核验的“命名演进史”正式时间线，因此本附录不再把社区流传版本当作已证实事实来陈述。
+Kho lưu trữ và tài liệu chính thức hiện tại không cung cấp một mốc thời gian chính thức có thể đối soát về "lịch sử tiến hóa tên gọi", do đó phụ lục này không đưa các câu chuyện lan truyền trong cộng đồng thành sự thật đã được kiểm chứng.
 
-可以稳定确认的只有两点：
+Chỉ có 2 sự kiện có thể xác nhận chắc chắn:
 
-1. 项目当前官方名称为 **OpenClaw**。
-2. 项目由 Peter Steinberger 发起并持续推动演进。
+1. Tên gọi chính thức hiện tại của dự án là **OpenClaw**.
+2. Dự án được khởi xướng và liên tục thúc đẩy phát triển bởi Peter Steinberger.
 
-如果后续官方仓库、官网或发布说明公开整理了正式的命名变更记录，再适合把这一附录补充为完整时间线。
+Nếu sau này kho mã nguồn, website chính thức hoặc thông cáo phát hành công bố bản ghi thay đổi tên gọi chính thức, phụ lục này sẽ được cập nhật bổ sung thành một mốc thời gian hoàn chỉnh.

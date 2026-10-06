@@ -1,22 +1,22 @@
-## 附录 B：配置模板与样例
+## Phụ lục B: Bản mẫu cấu hình & Ví dụ (Config Templates)
 
-本附录提供与官方配置结构对齐的 JSON5 示例，用于快速搭建最小可用系统，并给出可逐步演进到生产的配置组织方式。字段细节可能随版本演进，建议在变更后用 `doctor`、`status` 做一次验证。
+Phụ lục này cung cấp các ví dụ cấu hình định dạng JSON5 chuẩn hóa theo tài liệu chính thức, giúp bạn nhanh chóng dựng một hệ thống tối thiểu khả dụng, đồng thời định hướng cách thức tổ chức cấu hình để mở rộng dần lên môi trường sản xuất. Các chi tiết trường dữ liệu có thể tiếp tục tiến hóa giữa các phiên bản, khuyến nghị luôn dùng `openclaw doctor` và `openclaw status` để xác minh sau mỗi lần thay đổi.
 
-### B.1 配置文件位置与格式
+### B.1 Vị trí tệp cấu hình & Định dạng
 
-OpenClaw Gateway 的主配置文件默认路径为 `~/.openclaw/openclaw.json`。当前更准确的表述是：配置文件按 JSON5 解析；本书中的示例使用带注释的 JSON5 风格展示结构，便于阅读与维护。
+Tệp cấu hình chính của OpenClaw Gateway mặc định nằm tại `~/.openclaw/openclaw.json`. Tệp được phân giải theo chuẩn JSON5; các ví dụ trong sách sử dụng phong cách JSON5 kèm chú thích giải thích để thuận tiện cho việc đọc hiểu và bảo trì.
 
-建议把配置治理拆成两层。
+Khuyến nghị phân tách quản trị cấu hình thành 2 tầng:
 
-- 结构层：渠道策略、会话与记忆、工具治理、诊断配置等稳定结构。
-- 机密层：模型供应商密钥、渠道令牌等敏感字段，通过环境变量或密钥系统注入。
+- **Tầng cấu trúc**: Chính sách kênh chat, phiên và bộ nhớ, quản trị công cụ, thiết lập chẩn đoán...
+- **Tầng bí mật**: Khóa API của nhà cung cấp mô hình, token kênh chat..., được nạp qua biến môi trường hoặc hệ thống quản lý khóa SecretRef.
 
-### B.2 最小可用配置（本地模式 + Web 验证）
+### B.2 Cấu hình tối thiểu khả dụng (Chế độ Local + Xác thực qua Web)
 
-该示例用于本地起步：打开本地模式，启用诊断落盘，并保留默认智能体工作区。启动后用 `health/status` 验证，再用 Dashboard 进入 Control UI Chat 做最小交互。
+Mẫu cấu hình dùng để bắt đầu trên máy cá nhân: Chạy chế độ cục bộ (local mode), bật ghi log chẩn đoán, và giữ nguyên thư mục workspace mặc định. Sau khi khởi động, dùng `health/status` kiểm tra rồi mở Dashboard để trải nghiệm:
 
 > [!WARNING]
-> OpenClaw 对配置会有严格的 Schema 校验。配置未知键会导致 Gateway 拒绝启动。
+> OpenClaw áp dụng cơ chế xác thực Schema rất nghiêm ngặt. Việc khai báo các trường không nhận diện được sẽ khiến Gateway từ chối khởi động.
 
 ```json5
 {
@@ -29,8 +29,8 @@ OpenClaw Gateway 的主配置文件默认路径为 `~/.openclaw/openclaw.json`�
     level: "info",
     consoleLevel: "info",
     consoleStyle: "pretty",
-    // 注意：脱敏现已固定开启（redactSensitive 已在 v2026.8.1 退役，写了会被 config validate 拒绝），
-    // 可配置的只剩下面的 redactPatterns；且它会尽力作用于控制台、文件日志、OTLP 与 transcript，但不承诺完整脱敏
+    // Lưu ý: Tính năng làm mờ nhạy cảm hiện đã cố định bật sẵn,
+    // trường tùy biến còn lại là redactPatterns bên dưới
   },
 
   diagnostics: {
@@ -48,7 +48,7 @@ OpenClaw Gateway 的主配置文件默认路径为 `~/.openclaw/openclaw.json`�
 }
 ```
 
-操作验证命令：
+Lệnh xác minh vận hành:
 
 ```bash
 openclaw health --json
@@ -56,13 +56,13 @@ openclaw status --deep
 openclaw dashboard
 ```
 
-### B.3 WhatsApp 安全起步模板（配对 + 白名单 + 群聊门控）
+### B.3 Mẫu an toàn khởi đầu cho WhatsApp (Ghép nối + Danh sách trắng + Cổng nhóm chat)
 
-该示例把触发面收敛到可控范围。
+Mẫu cấu hình thu hẹp bề mặt kích hoạt vào vùng kiểm soát:
 
-- 私聊：默认配对，陌生私聊必须审批。
-- 白名单：只允许明确号码触发。
-- 群聊：默认要求提及，并建议配合群组允许列表。
+- **Chat riêng (DM)**: Mặc định bật ghép nối (`pairing`), người lạ bắt buộc phải qua phê duyệt.
+- **Danh sách trắng (Allowlist)**: Chỉ cho phép các số điện thoại được chỉ định kích hoạt bot.
+- **Chat nhóm (Group)**: Mặc định bắt buộc phải tag tên (@), kết hợp danh sách trắng nhóm chat.
 
 ```json5
 {
@@ -88,14 +88,13 @@ openclaw dashboard
 }
 ```
 
-渠道登录与配对审批参考：
+Tham khảo thêm:
+- Kênh WhatsApp: https://docs.openclaw.ai/channels/whatsapp
+- Lệnh ghép nối: https://docs.openclaw.ai/cli/pairing
 
-- WhatsApp 渠道：https://docs.openclaw.ai/channels/whatsapp
-- pairing 命令：https://docs.openclaw.ai/cli/pairing
+### B.4 Mẫu tối thiểu cho Telegram (Đơn tài khoản)
 
-### B.4 Telegram 最小模板（单账号）
-
-Telegram 以机器人 token 为核心，适合快速验证。该示例展示最小结构与建议的访问控制。
+Telegram lấy Bot Token làm hạt nhân, rất phù hợp để kiểm chứng nhanh tính năng:
 
 ```json5
 {
@@ -113,11 +112,11 @@ Telegram 以机器人 token 为核心，适合快速验证。该示例展示最�
 }
 ```
 
-Telegram 渠道参考：[Telegram](https://docs.openclaw.ai/channels/telegram)。
+Tài liệu tham khảo kênh Telegram: [Telegram](https://docs.openclaw.ai/channels/telegram).
 
-### B.5 工具治理模板
+### B.5 Mẫu Quản trị Công cụ (Tool Governance)
 
-工具治理的官方配置以 `tools.profile` 作为基础模板，并包含 `tools.allow` 与 `tools.deny`。默认策略是允许该 profile 下的全部工具；显式 deny 会覆盖 allow；具体渠道还可按群组、房间或 peer 维度做分层治理。参考：[Tools](https://docs.openclaw.ai/tools) 与 [Group tool restrictions](https://docs.openclaw.ai/channels/groups#group/channel-tool-restrictions-optional)。
+Cấu hình chính thức lấy `tools.profile` làm mẫu cơ sở, kết hợp `tools.allow` và `tools.deny`. Quy tắc mặc định là cho phép toàn bộ công cụ của profile đó; quy tắc từ chối tường minh (`deny`) sẽ ghi đè cho phép (`allow`); đồng thời có thể phân tầng hạn chế theo từng kênh, nhóm chat hoặc người gửi:
 
 ```json5
 {
@@ -147,29 +146,26 @@ Telegram 渠道参考：[Telegram](https://docs.openclaw.ai/channels/telegram)�
 }
 ```
 
-### B.6 持久化与记忆模板
+### B.6 Mẫu Lưu trữ Bền vững & Bộ nhớ
 
-持久化与记忆通常分为两部分：会话状态与长期记忆。官方文档对会话与记忆的文件布局、索引方式与裁剪策略有明确描述，建议先通读再落地配置：[会话](https://docs.openclaw.ai/concepts/session)、[记忆](https://docs.openclaw.ai/concepts/memory)、[上下文裁剪](https://docs.openclaw.ai/concepts/session-pruning)、[压缩](https://docs.openclaw.ai/concepts/compaction)。
-
-下面示例展示了常见的“会话与压缩”配置骨架。重点是把会话行为与压缩策略显式化，便于验收与排障。它不是可直接粘贴运行的完整配置：保留空对象或占位注释前，应先用 `openclaw config schema` 确认目标版本支持的字段，再用 `openclaw config validate` 验证。
+Cấu hình mẫu cho việc lưu trữ phiên và nén ngữ cảnh:
 
 ```json5
 {
   session: {
-    // 会话的重置、作用域与清理策略
+    // Chính sách đặt lại (reset), phạm vi tác động (scope) và dọn dẹp phiên
   },
   agents: {
     defaults: {
-      // 记忆与上下文压缩的核心开关与策略
-      // 注意：记忆搜索不在这里配置——agents.defaults.memorySearch 已退役，
-      // 现为顶层 memory.search（按智能体覆盖用 agents.entries.*.memory.search），见 6.3 节
+      // Công tắc cốt lõi của nén ngữ cảnh và bộ nhớ
+      // Lưu ý: Tìm kiếm bộ nhớ hiện cấu hình tại memory.search ở cấp cao nhất
       contextPruning: {
         mode: "cache-ttl"
       },
       compaction: {
         enabled: true,
         memoryFlush: {
-          // 默认启用；需要关闭时才设置 enabled: false
+          // Mặc định bật; chỉ đặt false khi cần tắt
         }
       }
     }
@@ -177,60 +173,58 @@ Telegram 渠道参考：[Telegram](https://docs.openclaw.ai/channels/telegram)�
 }
 ```
 
-验收建议以“可观测”为前提：优先通过 `status --deep` 与日志确认会话与记忆相关配置是否被加载，避免只靠主观对话观察。
+Lệnh xác minh:
 
 ```bash
 openclaw status --deep
 openclaw logs --limit 500 --json
 ```
 
-### B.7 技能文件模板
+### B.7 Mẫu Tệp Kỹ năng (SKILL.md)
 
-技能体系用于固化流程方法。当前更贴近实际使用的组织方式是把工作区技能放在 `<workspace>/skills/<skill-name>/SKILL.md`；若通过 `openclaw skills install` 安装，默认也会写入当前工作区的 `skills/` 目录。技能的格式与加载方式见官方说明：[技能机制](https://docs.openclaw.ai/tools/skills)、[技能命令](https://docs.openclaw.ai/cli/skills)。
-
-下面给出一个可直接复用的 `SKILL.md` 模板。
+Kỹ năng được lưu tại `<workspace>/skills/<skill-name>/SKILL.md`:
 
 ```markdown
 ---
 name: channel-troubleshooting
-description: 渠道不回消息、配对失败、群聊不触发时的排障流程
+description: Quy trình xử lý sự cố khi kênh không phản hồi, ghép nối thất bại hoặc nhóm chat không kích hoạt
 ---
 
-# 渠道排障
+# Xử lý sự cố kênh liên lạc
 
-## 适用场景
+## Kịch bản áp dụng
 
-渠道不回消息、配对失败、群聊不触发。
+Kênh không phản hồi tin nhắn, ghép nối thiết bị thất bại, nhóm chat không kích hoạt bot.
 
-## 步骤
+## Các bước thực hiện
 
-1. 运行 `openclaw doctor`。
-2. 运行 `openclaw channels capabilities` 或 `openclaw channels status --probe`。
-3. 根据日志中的 `traceId` 回放定位。
+1. Chạy lệnh `openclaw doctor`.
+2. Chạy lệnh `openclaw channels capabilities` hoặc `openclaw channels status --probe`.
+3. Căn cứ theo mã `traceId` trong nhật ký log để phát lại chuỗi xử lý và định vị lỗi.
 
-## 输出要求
+## Yêu cầu đầu ra
 
-输出必须包含：命令、预期输出、异常分支与下一步。
+Đầu ra bắt buộc bao gồm: Câu lệnh thực thi, Đầu ra kỳ vọng, Nhánh xử lý ngoại lệ và Bước tiếp theo.
 ```
 
-> 技能是方法与步骤，不是运行时权限边界；高风险能力仍应由工具策略与沙箱控制。
+> Kỹ năng chỉ là tài liệu hướng dẫn phương pháp thực hiện, không phải ranh giới phân quyền runtime; các công cụ rủi ro cao bắt buộc phải chịu sự kiểm soát của Chính sách công cụ và Sandbox.
 
-### B.8 使用说明与验收建议
+### B.8 Hướng dẫn sử dụng & Khuyến nghị nghiệm thu
 
-配置与扩展的验收建议遵循“先自检、再探针、最后做真实交互”的顺序：
+Trình tự nghiệm thu cấu hình chuẩn mực: **Tự kiểm tra trước → Chạy đầu dò probe → Tương tác thực tế**:
 
-- 自检：先确保依赖与配置结构无误。
-- 探针：再确认模型与渠道可用。
-- 交互：最后再用少量真实消息验证路由、门控与工具策略。
+- **Tự kiểm tra (Self-check)**: Đảm bảo cấu trúc file và phụ thuộc hệ thống không có lỗi cú pháp.
+- **Đầu dò (Probe)**: Xác nhận kết nối tới mô hình AI và các kênh chat hoạt động bình thường.
+- **Tương tác**: Dùng một số lượng nhỏ tin nhắn thực tế để xác minh định tuyến, cổng kiểm soát và chính sách công cụ.
 
-### B.9 历史版本字段迁移映射表
+### B.9 Bảng ánh xạ di trú các trường cấu hình lịch sử
 
-OpenClaw 采取严格的 Schema 校验机制，当您将旧版本配置文件带入新版本系统时，通常会被 Gateway 拒绝启动。遇到此类情况时，您可以通过 `openclaw doctor --repair` 尝试自动修复，或是参考下方给出的常见漂移映射手动修改：
+OpenClaw áp dụng cơ chế xác thực Schema nghiêm ngặt. Khi đưa cấu hình từ phiên bản cũ sang phiên bản mới, nếu gặp lỗi từ chối khởi động, bạn có thể chạy `openclaw doctor --repair` để tự động sửa chữa, hoặc tham khảo bảng đối chiếu dưới đây:
 
-| 老配置形态 / 遗留字段 | 对应的新配置形态 / 最佳实践 | 备注 |
-| --- | --- | --- |
-| `diagnostics.logPath` | `logging.file` | 日志全系迁移至统一 `logging` 命名空间管理。 |
-| `diagnostics.redact` / `maskedEnv` | `logging.redactPatterns` | 旧版中被混在诊断对象中，已剥离到专注脱敏的日志对象层级；其中 `logging.redactSensitive` 在 v2026.8.1 也一并退役，脱敏改为固定开启，只剩 `redactPatterns` 可配。 |
-| 配置中直写加密口令 / API Key | 结合 `${VAR}` 的内联环境变量替换或是 `SecretRef` 对象 | 出于审计与泄漏防护的考量，生产环境已不再建议将值硬编码在 JSON 当中。 |
-| `ENV:` 开头的魔术字符串 | `${VAR_NAME}` 字符串插值形式 | 原先 `ENV:` 为老版本遗留或口头契约，当前标准执行器将依据 `${}` 来挂接运行时环境。 |
-| `routing.allowFrom` / `routing.groupChat.*` | `channels.whatsapp.allowFrom`、`channels.<channel>.groups."*".requireMention`、`messages.groupChat.*` | 迁移不是把整个 `routing.rules` 平移到 `messages.groupChat`：群聊门控属于渠道策略，只有 `historyLimit`、`mentionPatterns` 等通用群聊上下文项进入 `messages.groupChat`。 |
+| Cấu hình phiên bản cũ | Cấu hình chuẩn mới tương ứng | Ghi chú di trú |
+|---|---|---|
+| `diagnostics.logPath` | `logging.file` | Toàn bộ log chuyển về namespace thống nhất `logging`. |
+| `diagnostics.redact` / `maskedEnv` | `logging.redactPatterns` | Tách rời tính năng làm mờ nhạy cảm vào đối tượng logging. |
+| Hardcode mật khẩu / API Key trong JSON | Dùng biến nội suy `${VAR}` hoặc đối tượng `SecretRef` | Tuyệt đối không ghi văn bản thuần trong JSON trong môi trường sản xuất. |
+| Chuỗi ma thuật tiền tố `ENV:` | Dùng cú pháp nội suy `${VAR_NAME}` | Chuẩn hóa theo cú pháp biến môi trường `${}`. |
+| `routing.allowFrom` / `routing.groupChat.*` | `channels.whatsapp.allowFrom`, `channels.<channel>.groups."*".requireMention`, `messages.groupChat.*` | Cổng kiểm soát nhóm chat thuộc về chính sách kênh; chỉ các mục ngữ cảnh chung mới nằm trong `messages.groupChat`. |

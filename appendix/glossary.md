@@ -1,48 +1,48 @@
-## 附录 A：术语表
+## Phụ lục A: Bảng thuật ngữ (Glossary)
 
-本附录用于术语速查，按概念、渠道与运维三类组织，便于在正文阅读与排障中快速对齐含义。
+Phụ lục này dùng để tra cứu nhanh các thuật ngữ chuyên môn, được phân loại thành 3 nhóm: Khái niệm cốt lõi, Kênh & Vận hành, Mở rộng & Tích hợp, giúp độc giả nhanh chóng thống nhất ngữ nghĩa khi đọc sách và xử lý sự cố.
 
-### A.1 核心术语
+### A.1 Thuật ngữ cốt lõi
 
-- **Agent Loop（智能体循环）**：指从任务输入到最终执行结果的完整决策闭环，包括意图理解、工具规划、执行、验证与反馈阶段。
-- **Agent Runtime（运行时内核）**：执行的核心引擎，负责接收归一化任务、组装提示词、发起模型调用以及截获并调度工具。
-- **auth-profile（认证配置）**：模型供应商认证档案，通常由 `auth.profiles` 元数据与 `auth-profiles.json` 中的凭据共同组成，用于 API Key/OAuth、轮换、冷却与故障转移。
-- **CalVer（日历版本）**：日历版本控制方案，OpenClaw 采用 CalVer 格式发布版本，例如 `v2026.3.12` 表示 2026 年 3 月 12 日发布。
-- **Compaction（上下文压缩）**：将会话中早期的对话记录总结为高密度摘要，以释放窗口空间。
-- **Context Window（上下文窗口）**：大模型在单次推理中能处理的最大输入输出 token 数量，决定了历史记录与检索上下文的容量上限。
-- **Failover（故障转移）**：当主模型限流、超时或熔断时，系统自动降级到备用模型或链路的安全机制。
-- **Gateway（网关/控制平面）**：负责外部连接（如 WebSocket/HTTP）、鉴权、设备配对、消息路由与系统级别的状态治理。
-- **HEARTBEAT.md（心跳清单文件）**：放在工作区根目录的可选检查清单文件；默认 Heartbeat 提示词会引导智能体读取它，并按其中的待办或 `tasks:` 块执行周期性巡检。
-- **Node（执行节点）**：与 Gateway WebSocket 配对的设备或 headless companion 进程，用于暴露本地屏幕、摄像头、系统工具等能力。
-- **Pi（Agent 运行时）**：OpenClaw 底层使用的 AI 编码智能体运行时引擎，通过 Pi SDK 内嵌 `AgentSession`，负责模型推理、工具调用和任务执行；RPC/外部进程模式不是当前主路径。
-- **Prompt Assembly（提示词装配）**：将用户任务、系统指令、历史对话、检索上下文等多个信号动态整合为一个完整的模型输入提示的过程。
-- **Pruning（上下文裁剪）**：按优先级算法（如基于时间衰减或重要度评分），强制丢弃低价值的中间执行回执。
-- **Session（会话/记忆容器）**：承载多轮任务连续性的抽象，内部维护了状态与短/长记忆快照。
-- **Skill（技能）**：文本化的方法固化机制，用于把高频任务的步骤、约束与验收标准沉淀为可复用流程；与插件并行使用，插件扩展能力，技能固化方法。
-- **SOUL.md（智能体身份配置）**：定义智能体个性、角色与行为约束的配置文件，用于独立控制单一智能体的价值观与决策偏向。
-- **Token Budget（token 预算）**：为了避免超出模型的 Context Window，系统对输入的各个部分（历史、检索结果、指令等）分配的 token 额度。
-- **Tool（工具）**：大模型与外部系统交互的原子执行单元，通常被严格划分为“读工具”（安全）与“写工具”（需要幂等与审计）。
+- **Agent Loop (Vòng lặp Agent)**: Vòng lặp ra quyết định khép kín từ khi tiếp nhận tác vụ đầu vào cho tới khi xuất ra kết quả cuối cùng, bao gồm các giai đoạn: hiểu ý định, lập kế hoạch công cụ, thực thi, kiểm chứng và phản hồi.
+- **Agent Runtime (Nhân thực thi Agent)**: Động cơ cốt lõi của việc thực thi, chịu trách nhiệm tiếp nhận tác vụ đã chuẩn hóa, lắp ráp prompt, khởi tạo lệnh gọi mô hình, đồng thời đánh chặn và điều phối công cụ.
+- **auth-profile (Hồ sơ xác thực)**: Hồ sơ xác thực của nhà cung cấp mô hình, được cấu thành từ metadata `auth.profiles` và thông tin chứng thư trong `auth-profiles.json`, dùng cho việc quản lý API Key/OAuth, xoay tua, làm nguội và chuyển đổi dự phòng.
+- **CalVer (Phiên bản theo lịch)**: Quy chuẩn đánh số phiên bản theo ngày tháng, OpenClaw phát hành phiên bản theo định dạng CalVer, ví dụ `v2026.3.12` biểu thị bản phát hành ngày 12 tháng 03 năm 2026.
+- **Compaction (Nén ngữ cảnh)**: Hành vi tóm tắt các bản ghi hội thoại cũ thành một bản tóm tắt mật độ cao có thể kiểm toán, nhằm giải phóng không gian cửa sổ ngữ cảnh.
+- **Context Window (Cửa sổ ngữ cảnh)**: Số lượng Token đầu vào và đầu ra tối đa mà một mô hình ngôn ngữ lớn có thể xử lý trong một lượt suy luận duy nhất, quyết định trần dung lượng của lịch sử và tri thức nạp vào.
+- **Failover (Chuyển đổi dự phòng)**: Cơ chế an toàn tự động hạ cấp hoặc chuyển luồng sang mô hình/kênh dự phòng khi mô hình chính bị chạm rate limit, timeout hoặc ngắt mạch.
+- **Gateway (Cổng kết nối / Mặt phẳng điều khiển)**: Thành phần chịu trách nhiệm quản lý kết nối ngoài (WebSocket/HTTP), xác thực, ghép nối thiết bị, định tuyến tin nhắn và quản trị trạng thái ở cấp hệ thống.
+- **HEARTBEAT.md (Tệp danh sách tuần tra)**: Tệp danh sách kiểm tra tùy chọn đặt tại thư mục gốc workspace; prompt nhịp tim mặc định sẽ dẫn dắt Agent đọc tệp này và thực hiện tuần tra định kỳ các tác vụ bên trong.
+- **Node (Điểm cuối thiết bị)**: Thiết bị hoặc tiến trình headless companion kết nối với Gateway qua WebSocket, dùng để phơi bày các năng lực ngoại vi như màn hình, camera hoặc công cụ hệ thống.
+- **Pi (Agent Runtime)**: Động cơ suy luận Agent mã nguồn mở chạy bên dưới OpenClaw, được nhúng trực tiếp qua Pi SDK (`AgentSession`), chịu trách nhiệm suy luận mô hình, gọi công cụ và thực thi tác vụ.
+- **Prompt Assembly (Lắp ráp Prompt)**: Tiến trình tích hợp động nhiều nguồn tín hiệu — tác vụ người dùng, chỉ thị hệ thống, lịch sử đối thoại, tri thức tìm kiếm — thành một gói đầu vào hoàn chỉnh gửi cho mô hình.
+- **Pruning (Cắt tỉa ngữ cảnh)**: Áp dụng thuật toán theo độ ưu tiên (như suy giảm theo thời gian hoặc điểm số quan trọng) để tạm thời loại bỏ các kết quả thực thi công cụ cũ có giá trị thấp khỏi bộ nhớ RAM.
+- **Session (Phiên làm việc / Thùng chứa trạng thái)**: Trừu tượng hóa việc duy trì tính liên tục của tác vụ qua nhiều vòng, bên trong quản lý trạng thái và bản chụp bộ nhớ ngắn hạn/dài hạn.
+- **Skill (Kỹ năng)**: Cơ chế chuẩn hóa phương pháp luận dưới dạng tài liệu văn bản, dùng để đúc kết các bước thực hiện, ràng buộc và tiêu chuẩn nghiệm thu của tác vụ thành quy trình có thể tái sử dụng.
+- **SOUL.md (Cấu hình nhân cách Agent)**: Tệp cấu hình định hình nét cá tính, vai trò và phong cách giao tiếp của Agent, giúp kiểm soát giá trị quan và thiên hướng ra quyết định của từng Agent riêng biệt.
+- **Token Budget (Ngân sách Token)**: Hạn mức Token được hệ thống phân bổ cho từng phần đầu vào (lịch sử, tài liệu tìm kiếm, chỉ thị...) nhằm bảo đảm không bị tràn cửa sổ Context Window.
+- **Tool (Công cụ)**: Đơn vị thực thi nguyên tử giúp mô hình AI tương tác với thế giới bên ngoài, thường được phân chia nghiêm ngặt thành "Công cụ đọc" (an toàn) và "Công cụ ghi" (cần tính bất biến và kiểm toán).
 
-### A.2 渠道与运维术语
+### A.2 Thuật ngữ Kênh & Vận hành (Channels & Ops)
 
-- **Webhook**：外部系统通过 HTTP 回调主动触发 OpenClaw 任务的机制，用于异步事件驱动工作流。
-- **Pairing（设备配对）**：通过设备身份、challenge-response、人工批准与令牌签发让新设备或 DM 发送者进入受信任集合；二维码或配对码只是常见引导方式之一。
-- **Hook（生命周期切面）**：允许开发者在 Agent 调用的各个阶段（如提示词构建前、工具执行后）注入自定义逻辑的扩展点。
-- **Cron（定时作业）**：OpenClaw Gateway 管理的定时任务系统，用于唤醒智能体执行自检、巡检、总结或清理任务，并在 `~/.openclaw/cron/` 下持久化任务状态。
-- **Rate Limit（限流）**：对外部 API、模型调用或资源访问施加的流量上限，防止过载与配额超支。
-- **Cooldown（冷却期）**：在重试或重新触发某个操作前，系统强制等待的最小时间间隔。
-- **Circuit Breaker（熔断器）**：当某个依赖服务连续失败次数或错误率超过阈值时，系统主动断开连接、快速失败的保护机制。
-- **Runbook（运维手册）**：记录处理系统故障、紧急回滚与例行排障步骤的标准文档。
-- **Guardrail（安全护栏）**：由权限边界、沙箱隔离约束、内容风控引擎与审计系统等组合而成的防御矩阵集合。
+- **Webhook**: Cơ chế hệ thống bên ngoài chủ động gửi HTTP callback để kích hoạt tác vụ OpenClaw trong các workflow hướng sự kiện bất đồng bộ.
+- **Pairing (Ghép nối thiết bị)**: Quá trình đưa một thiết bị mới hoặc người gửi DM vào vùng tin cậy thông qua danh tính thiết bị, thử thách challenge-response, sự phê duyệt của con người và cấp phát token.
+- **Hook (Điểm xen vòng đời)**: Điểm mở rộng cho phép lập trình viên bơm logic tùy biến vào các mắt xích then chốt trong chuỗi thực thi của Agent (như trước khi dựng prompt, sau khi chạy tool).
+- **Cron (Tác vụ định kỳ)**: Hệ thống lập lịch tác vụ do Gateway quản lý, dùng để đánh thức Agent thực hiện tự kiểm tra, tuần tra, tổng hợp hoặc dọn dẹp tại các mốc thời gian chính xác.
+- **Rate Limit (Giới hạn tần suất)**: Ngưỡng trần lưu lượng áp dụng lên API ngoài, lượt gọi mô hình hoặc tài nguyên hệ thống, ngăn ngừa quá tải và vượt ngân sách.
+- **Cooldown (Thời gian làm nguội)**: Khoảng thời gian hệ thống bắt buộc phải chờ đợi trước khi cho phép thử lại hoặc kích hoạt lại một thao tác vừa bị lỗi.
+- **Circuit Breaker (Bộ ngắt mạch)**: Cơ chế bảo vệ tự động ngắt kết nối và báo lỗi ngay lập tức khi một dịch vụ phụ thuộc liên tục thất bại vượt quá ngưỡng cho phép, tránh làm sập dây chuyền.
+- **Runbook (Sổ tay vận hành)**: Tài liệu tiêu chuẩn ghi lại các bước xử lý sự cố hệ thống, hoàn tác khẩn cấp và quy trình chẩn đoán định kỳ.
+- **Guardrail (Hàng rào bảo vệ)**: Ma trận phòng thủ tổng hợp từ ranh giới quyền hạn, ràng buộc hộp cát Sandbox, bộ lọc kiểm soát nội dung và hệ thống kiểm toán.
 
-### A.3 扩展与集成术语
+### A.3 Thuật ngữ Mở rộng & Tích hợp (Extensions & Integration)
 
-- **MCP（Model Context Protocol）**：一个开放标准协议，允许 LLM 客户端与上下文服务器通信，便于在多种应用间安全传递结构化数据与工具定义。
-- **Plugin（插件）**：扩展 OpenClaw 功能的模块化单元，可动态加载以增强工具库、数据源接入或自定义处理逻辑。
-- **Extension（扩展）**：对 OpenClaw 核心或插件体系的深度定制与增强，通常涉及代码开发与配置修改。
-- **Sandbox（沙箱）**：限制代码或工具执行权限与资源访问范围的隔离容器，防止恶意代码逃逸与未授权操作。
-- **Exec Approval（执行审批）**：针对宿主机 `exec` / shell 命令执行的本地审批闸门，叠加在工具策略和 elevated gate 之上；它不是通用文件权限策略。
-- **Trust Chain（信任链）**：从数据源到最终执行的完整验证链路，确保中间步骤的输出可被信任且未被篡改。
-- **Vector Index（向量索引）**：基于 Embedding 的快速检索数据结构，用于在语义相似性搜索中加速查询。
-- **Embedding（嵌入）**：将文本、代码或其他数据转换为高维向量表示的过程，用于语义相似性计算与检索。
-- **Hybrid Search（混合搜索）**：结合关键词检索与语义相似性搜索的混合查询策略，提高检索准确率与召回率。
+- **MCP (Model Context Protocol)**: Giao thức chuẩn mở do Anthropic khởi xướng, cho phép client LLM giao tiếp chuẩn hóa với các máy chủ ngữ cảnh để truyền tải dữ liệu và định nghĩa công cụ an toàn.
+- **Plugin (Tiện ích mở rộng)**: Module phần mềm viết bằng TypeScript/JavaScript được nạp động vào Gateway để bổ sung công cụ, kết nối kênh chat hoặc tùy biến logic runtime.
+- **Extension (Mở rộng)**: Khái niệm chung chỉ các tinh chỉnh và bổ sung năng lực chuyên sâu vào lõi OpenClaw hoặc hệ thống plugin.
+- **Sandbox (Hộp cát)**: Môi trường container cách ly (Docker, OpenShell, SSH) giới hạn quyền thực thi mã lệnh và phạm vi truy cập tài nguyên, ngăn chặn mã độc thoát ra máy chủ host.
+- **Exec Approval (Phê duyệt thực thi lệnh)**: Cổng kiểm soát phê duyệt cục bộ đối với các lệnh shell cấp hệ điều hành trên máy host, chồng lớp lên trên chính sách công cụ và elevated gate.
+- **Trust Chain (Chuỗi tin cậy)**: Chuỗi xác thực hoàn chỉnh từ nguồn dữ liệu đến lúc thực thi cuối cùng, bảo đảm kết quả của các bước trung gian đáng tin cậy và không bị giả mạo.
+- **Vector Index (Chỉ mục vector)**: Cấu trúc dữ liệu phục vụ tìm kiếm nhanh dựa trên Embedding, dùng để tăng tốc các truy vấn tương đồng ngữ nghĩa.
+- **Embedding (Nhúng vector)**: Quá trình chuyển đổi văn bản, mã nguồn thành các vector số học đa chiều để tính toán độ tương đồng ngữ nghĩa.
+- **Hybrid Search (Tìm kiếm kết hợp)**: Chiến lược tìm kiếm kết hợp giữa truy vấn từ khóa truyền thống (BM25) và độ tương đồng vector, nâng cao độ chuẩn xác và tỷ lệ bao phủ của kết quả.

@@ -1,16 +1,16 @@
-# 附录 参考资料与速查
+# Phụ lục: Tài liệu tham khảo & Tra cứu nhanh
 
-附录提供面向实战的高频参考内容，包括术语表、配置模板、故障排查检查单、API 参考、命令速查、版本映射、延伸阅读等。这些内容适合在日常开发与运维中作为快速查阅的工具。
+Phần phụ lục cung cấp các tài liệu tra cứu tần suất cao phục vụ thực chiến hàng ngày, bao gồm bảng thuật ngữ, mẫu cấu hình, checklist xử lý sự cố, tài liệu tham khảo API, sổ tay lệnh, bản đồ phiên bản và danh mục tài liệu mở rộng. Những nội dung này cực kỳ hữu ích khi đóng vai trò là cẩm nang tra cứu nhanh trong quá trình phát triển và vận hành hệ thống.
 
-## 本附录内容导读
+## Mục lục phụ lục
 
-- **[术语表](glossary.md)**：全书涉及的核心术语与概念的统一解释。
-- **[配置模板与样例](config_templates.md)**：不同场景下的 openclaw.json 配置模板。
-- **[故障排查检查单](troubleshooting_checklist.md)**：遇到问题时的系统化检查流程。
-- **[API 与 SDK 参考](api_reference.md)**：API 接口与 SDK 的入口参考。
-- **[命令速查手册](command_cheatsheet.md)**：常用 CLI 命令的快速参考。
-- **[版本映射与升级指南](version_mapping.md)**：版本兼容性与升级路径。
-- **[延伸阅读与参考资料](reading_list.md)**：深入学习的推荐资源。
-- **[环境自检工具](env_check.md)**：快速检查本机运行依赖与基础网络连通性。
-- **[OpenClaw 命名演进史](naming_history.md)**：当前仅记录可验证命名事实；完整命名时间线待官方发布后补充。
-- **[快变事实核验表](volatile_facts.md)**：记录模型、Node 版本、CLI 行为、价格和 release workflow 等高波动事实的核验入口。
+- **[Phụ lục A: Bảng thuật ngữ (Glossary)](glossary.md)**: Giải thích thống nhất toàn bộ các thuật ngữ và khái niệm cốt lõi trong sách.
+- **[Phụ lục B: Bản mẫu cấu hình & Ví dụ (Config Templates)](config_templates.md)**: Các mẫu tệp cấu hình openclaw.json cho nhiều kịch bản khác nhau.
+- **[Phụ lục C: Bảng kiểm tra xử lý sự cố (Troubleshooting Checklist)](troubleshooting_checklist.md)**: Quy trình kiểm tra có hệ thống khi phát sinh lỗi.
+- **[Phụ lục D: Tham chiếu API & SDK (API Reference)](api_reference.md)**: Tài liệu cổng vào API và SDK.
+- **[Phụ lục E: Sổ tay tra cứu lệnh nhanh (Command Cheatsheet)](command_cheatsheet.md)**: Bảng tra cứu các lệnh CLI thông dụng.
+- **[Phụ lục F: Bản đồ phiên bản & Hướng dẫn nâng cấp (Version Mapping)](version_mapping.md)**: Tính tương thích giữa các phiên bản và lộ trình nâng cấp an toàn.
+- **[Phụ lục G: Danh mục tài liệu đọc thêm & Tham khảo (Reading List)](reading_list.md)**: Tài nguyên khuyến nghị phục vụ học tập chuyên sâu.
+- **[Phụ lục H: Công cụ tự kiểm tra môi trường (Env Check)](env_check.md)**: Script tự động kiểm tra phụ thuộc và kết nối mạng cơ sở.
+- **[Phụ lục I: Lịch sử tiến hóa tên gọi OpenClaw (Naming History)](naming_history.md)**: Ghi lại các sự kiện đặt tên có thể kiểm chứng của dự án OpenClaw.
+- **[Phụ lục J: Bảng đối soát các dữ kiện biến động nhanh (Volatile Facts)](volatile_facts.md)**: Sổ cái kiểm chứng các dữ kiện biến động nhanh về mô hình, phiên bản Node, giá cước và release workflow.

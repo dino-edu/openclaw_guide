@@ -1,17 +1,17 @@
-## 附录 H：环境自检工具
+## Phụ lục H: Công cụ tự kiểm tra môi trường (Env Check)
 
-以下是前置诊断脚本 `check_env.sh`，用于验证 OpenClaw 的核心运行依赖。
+Dưới đây là kịch bản chẩn đoán điều kiện tiên quyết `check_env.sh`, dùng để xác minh các phụ thuộc vận hành cốt lõi của OpenClaw trên máy của bạn.
 
 ```bash
 #!/bin/bash
-echo "=== OpenClaw 环境自检 ==="
+echo "=== Tự kiểm tra môi trường OpenClaw ==="
 if command -v node >/dev/null 2>&1; then
   node_version="$(node -p 'process.versions.node')"
   node_major="${node_version%%.*}"
   node_rest="${node_version#*.}"
   node_minor="${node_rest%%.*}"
   echo "Node.js: v${node_version}"
-  # 官方支持线：24.16+ / 26.1+；Node 22、23、25 与 26.0 不受支持
+  # Ngưỡng hỗ trợ chính thức: 24.16+ / 26.1+; Node 22, 23, 25 và 26.0 không được hỗ trợ
   node_supported=0
   case "$node_major" in
     24) [ "$node_minor" -ge 16 ] && node_supported=1 ;;
@@ -19,53 +19,53 @@ if command -v node >/dev/null 2>&1; then
     *)  [ "$node_major" -ge 27 ] && node_supported=1 ;;
   esac
   if [ "$node_supported" -eq 0 ]; then
-    echo "警告: 当前 Node 不在官方支持线内（需 24.16+ 或 26.1+，Node 22、23、25 不受支持）；建议升级到 Node 26。"
+    echo "Cảnh báo: Bản Node hiện tại không nằm trong danh sách hỗ trợ (yêu cầu 24.16+ hoặc 26.1+, Node 22, 23, 25 không hỗ trợ); khuyến nghị nâng cấp lên Node 26."
   elif [ "$node_major" -lt 26 ]; then
-    echo "提示: 当前版本受支持；新安装推荐 Node 26（官方 CI 与 Linux 安装脚本使用 Node 24）。"
+    echo "Thông báo: Phiên bản hiện tại được hỗ trợ; cài đặt mới khuyên dùng Node 26 (CI chính thức và script Linux dùng Node 24)."
   fi
 else
-  echo "警告: 未安装 Node.js（推荐 Node 26；官方支持线为 24.16+ / 26.1+）"
+  echo "Cảnh báo: Chưa cài đặt Node.js (Khuyên dùng Node 26; danh sách hỗ trợ là 24.16+ / 26.1+)"
 fi
-npm --version || echo "提示: 未安装 npm。如果不使用自动化脚本安装，这是必需项"
-docker --version || echo "提示: 未安装 Docker (如使用容器化部署则是必需项)"
+npm --version || echo "Thông báo: Chưa cài đặt npm. Nếu không dùng script tự động thì đây là mục bắt buộc"
+docker --version || echo "Thông báo: Chưa cài đặt Docker (Bắt buộc nếu triển khai bằng container)"
 
-echo "测试网络连通（官方安装脚本）..."
+echo "Kiểm tra kết nối mạng (Script cài đặt chính thức)..."
 curl -fsSL -m 5 -o /dev/null -w "install script: %{http_code}\n" https://openclaw.ai/install.sh
 
-echo "测试运行期网络（模型供应商 API，以 OpenAI 为例，可替换为你的供应商）..."
+echo "Kiểm tra mạng tới API mô hình (Ví dụ với OpenAI, có thể thay bằng provider của bạn)..."
 if [ -n "${OPENAI_API_KEY:-}" ]; then
   curl -sS -m 10 -o /dev/null -w "llm provider: %{http_code}\n" https://api.openai.com/v1/models \
     -H "Authorization: Bearer $OPENAI_API_KEY"
 else
   curl -sS -m 10 -o /dev/null -w "llm provider: %{http_code}\n" https://api.openai.com/v1/models
 fi
-echo "提示: 200 表示鉴权通过；401/403 多为无 Key/无权限但网络可达。"
-echo "如果启用了 OpenClaw 托管代理，shell curl 不会验证运行时代理路径；请检查 proxy.enabled / proxy.proxyUrl 或 OPENCLAW_PROXY_URL，并运行 openclaw proxy validate。"
-echo "自检完成"
+echo "Gợi ý: 200 biểu thị xác thực thành công; 401/403 biểu thị chưa có Key/chưa cấp quyền nhưng mạng thông suốt."
+echo "Nếu bật Proxy được quản lý của OpenClaw, lệnh curl trong shell sẽ không đi qua proxy runtime; hãy kiểm tra proxy.enabled / proxy.proxyUrl hoặc OPENCLAW_PROXY_URL, và chạy lệnh openclaw proxy validate."
+echo "Hoàn tất tự kiểm tra"
 ```
 
-**正常环境下的预期输出**：
+**Đầu ra kỳ vọng trong môi trường chuẩn**:
 
 ```text
-=== OpenClaw 环境自检 ===
+=== Tự kiểm tra môi trường OpenClaw ===
 Node.js: v26.2.0
 11.13.0
 Docker version 27.3.1, build ce1223035a
-测试网络连通（官方安装脚本）...
+Kiểm tra kết nối mạng (Script cài đặt chính thức)...
 install script: 200
-测试运行期网络（模型供应商 API，以 OpenAI 为例，可替换为你的供应商）...
+Kiểm tra mạng tới API mô hình (Ví dụ với OpenAI, có thể thay bằng provider của bạn)...
 llm provider: 200
-提示: 200 表示鉴权通过；401/403 多为无 Key/无权限但网络可达。
-如果启用了 OpenClaw 托管代理，shell curl 不会验证运行时代理路径；请检查 proxy.enabled / proxy.proxyUrl 或 OPENCLAW_PROXY_URL，并运行 openclaw proxy validate。
-自检完成
+Gợi ý: 200 biểu thị xác thực thành công; 401/403 biểu thị chưa có Key/chưa cấp quyền nhưng mạng thông suốt.
+Nếu bật Proxy được quản lý của OpenClaw, lệnh curl trong shell sẽ không đi qua proxy runtime; hãy kiểm tra proxy.enabled / proxy.proxyUrl hoặc OPENCLAW_PROXY_URL, và chạy lệnh openclaw proxy validate.
+Hoàn tất tự kiểm tra
 ```
 
-**常见异常场景及排查**：
+**Các lỗi thường gặp và hướng xử lý**:
 
-| 输出 | 含义 | 排查方向 |
-|------|------|---------|
-| `警告: 未安装 Node.js` | Node.js 未安装或不在 PATH | 执行 `nvm install 26`（推荐）或 `nvm install 24` |
-| `警告: 当前 Node 不在官方支持线内` | 当前 Node 版本过低，或落在不受支持的 Node 22、23、25 上 | 升级到 Node 26（26.1+），或至少升级到 24.16+ |
-| `install script: 000` | 无法连接 openclaw.ai | 检查网络/代理/DNS 设置 |
-| `llm provider: 401` | API Key 无效或未设置 | 检查 `$OPENAI_API_KEY` 环境变量 |
-| `llm provider: 403` | API Key 无权限 | 确认 API Key 对应账户有可用额度 |
+| Đầu ra | Ý nghĩa | Hướng xử lý |
+|---|---|---|
+| `Cảnh báo: Chưa cài đặt Node.js` | Node.js chưa cài hoặc chưa có trong PATH | Chạy `nvm install 26` (khuyên dùng) hoặc `nvm install 24` |
+| `Cảnh báo: Bản Node hiện tại không nằm trong danh sách hỗ trợ` | Bản Node quá cũ, hoặc rơi vào các bản không hỗ trợ Node 22, 23, 25 | Nâng cấp lên Node 26 (26.1+), hoặc tối thiểu là 24.16+ |
+| `install script: 000` | Không thể kết nối tới openclaw.ai | Kiểm tra mạng / Proxy / DNS |
+| `llm provider: 401` | API Key không hợp lệ hoặc chưa thiết lập | Kiểm tra biến môi trường `$OPENAI_API_KEY` |
+| `llm provider: 403` | API Key không có quyền truy cập | Xác nhận tài khoản API Key còn hạn mức khả dụng |

@@ -1,34 +1,34 @@
-## 附录 G：延伸阅读与参考资料
+## Phụ lục G: Danh mục tài liệu đọc thêm & Tham khảo (Reading List)
 
-本节整理了 OpenClaw 相关的进阶阅读材料、理论论文以及周边开源项目，供进一步深入学习。
+Mục này tổng hợp các tài liệu đọc thêm nâng cao, các bài báo khoa học lý thuyết và các dự án mã nguồn mở liên quan đến OpenClaw, phục vụ cho việc nghiên cứu chuyên sâu.
 
-### G.1 官方核心资料
+### G.1 Tài liệu cốt lõi chính thức
 
-本指南的内容基准主要参考官方文档与版本发布说明：
+Nội dung cuốn sách tham chiếu trực tiếp từ các tài liệu và thông báo phát hành chính thức:
 
-- [OpenClaw 官方网站](https://openclaw.ai/)
-- [OpenClaw 官方代码仓库](https://github.com/openclaw/openclaw)
-- [OpenClaw 官方文档入口](https://docs.openclaw.ai/)
-- 关键模块文档：
-  - [快速开始 (Getting Started)](https://docs.openclaw.ai/start/getting-started)
-  - [初始化配置 (Onboard)](https://docs.openclaw.ai/start/wizard)
-  - [CLI 命令: Health](https://docs.openclaw.ai/cli/health)
-  - [CLI 命令: Status](https://docs.openclaw.ai/cli/status)
-  - [架构设计 (Gateway Architecture)](https://docs.openclaw.ai/concepts/architecture)
-  - [内置工具 (Tools)](https://docs.openclaw.ai/tools)
-  - [模型供应商 (Model Providers)](https://docs.openclaw.ai/providers)
-  - [模型故障转移 (Model Failover)](https://docs.openclaw.ai/concepts/model-failover)
-  - [网关运维 (Gateway Runbook)](https://docs.openclaw.ai/gateway)
-  - [安全配置 (Security)](https://docs.openclaw.ai/gateway/security)
-  - [设备配对 (Pairing)](https://docs.openclaw.ai/channels/pairing)
-- 历史版本发布与动态（以 Release 页面为准）：
+- [Trang chủ OpenClaw](https://openclaw.ai/)
+- [Kho mã nguồn GitHub OpenClaw](https://github.com/openclaw/openclaw)
+- [Cổng tài liệu chính thức OpenClaw](https://docs.openclaw.ai/)
+- Các tài liệu module trọng yếu:
+  - [Bắt đầu nhanh (Getting Started)](https://docs.openclaw.ai/start/getting-started)
+  - [Khởi tạo cấu hình (Onboard)](https://docs.openclaw.ai/start/wizard)
+  - [Lệnh CLI: Health](https://docs.openclaw.ai/cli/health)
+  - [Lệnh CLI: Status](https://docs.openclaw.ai/cli/status)
+  - [Kiến trúc Gateway (Gateway Architecture)](https://docs.openclaw.ai/concepts/architecture)
+  - [Công cụ tích hợp (Tools)](https://docs.openclaw.ai/tools)
+  - [Nhà cung cấp mô hình (Model Providers)](https://docs.openclaw.ai/providers)
+  - [Chuyển đổi dự phòng (Model Failover)](https://docs.openclaw.ai/concepts/model-failover)
+  - [Vận hành Gateway (Gateway Runbook)](https://docs.openclaw.ai/gateway)
+  - [Cấu hình an toàn (Security)](https://docs.openclaw.ai/gateway/security)
+  - [Ghép nối thiết bị (Pairing)](https://docs.openclaw.ai/channels/pairing)
+- Lịch sử các bản phát hành:
   - [OpenClaw Releases](https://github.com/openclaw/openclaw/releases)
   - [v2026.2.19 Release](https://github.com/openclaw/openclaw/releases/tag/v2026.2.19)
   - [v2026.1.29 Release](https://github.com/openclaw/openclaw/releases/tag/v2026.1.29)
 
-### G.2 理论与综述论文
+### G.2 Các bài báo khoa học & Tổng quan lý thuyết
 
-理解 Agent 系统的核心机制，推荐阅读以下经典研究与综述论文：
+Để hiểu sâu cơ chế của các hệ thống AI Agent, khuyến nghị đọc các công trình nghiên cứu kinh điển sau:
 
 - [ReAct: Synergizing Reasoning and Acting in Language Models (arXiv:2210.03629)](https://arxiv.org/abs/2210.03629)
 - [Toolformer: Language Models Can Teach Themselves to Use Tools (arXiv:2302.04761)](https://arxiv.org/abs/2302.04761)
@@ -37,64 +37,28 @@
 - [Survey on Evaluation of LLM-based Agents (arXiv:2503.16416)](https://arxiv.org/abs/2503.16416)
 - [Feedback Mechanism Survey (IJCAI 2025)](https://www.ijcai.org/proceedings/2025/1175)
 
-### G.3 相关图书与入门项目
+### G.3 Sách bổ trợ & Các dự án liên quan
 
-关于 AI 基础、提示工程与 Agent 体系建设的其他开源指南与参考项目：
+Các cẩm nang nguồn mở bổ trợ đắc lực:
 
-- [AI 入门指南](https://github.com/yeasy/ai_beginner_guide)：基础人工智能入门实战。
-- [Agentic AI 指南](https://github.com/yeasy/agentic_ai_guide)：前沿理论与应用综述。
-- [Prompt 工程指南](https://github.com/yeasy/prompt_engineering_guide)：系统化提示词优化技巧。
-- [Context 工程指南](https://github.com/yeasy/context_engineering_guide)：上下文管理与记忆优化。
-- [Claude 指南](https://github.com/yeasy/claude_guide)：Claude 体系专项指导。
-- [AI 安全指南](https://github.com/yeasy/ai_security_guide)：大模型应用层面的安全建设。
+- [Học AI từ số 0](https://github.com/yeasy/ai_beginner_guide): Nhập môn trí tuệ nhân tạo từ nền tảng.
+- [Cẩm nang Agentic AI](https://github.com/yeasy/agentic_ai_guide): Tổng quan lý thuyết tiền phong và ứng dụng.
+- [Cẩm nang Prompt Engineering](https://github.com/yeasy/prompt_engineering_guide): Kỹ thuật tối ưu hóa prompt có hệ thống.
+- [Cẩm nang Context Engineering](https://github.com/yeasy/context_engineering_guide): Quản trị ngữ cảnh và tối ưu hóa bộ nhớ.
+- [Cẩm nang Claude](https://github.com/yeasy/claude_guide): Hướng dẫn chuyên biệt cho hệ sinh thái Claude.
+- [Cẩm nang An toàn AI](https://github.com/yeasy/ai_security_guide): Xây dựng an toàn bảo mật ở tầng ứng dụng mô hình lớn.
 
-**其他知名 Agent 开源框架与平台**：
-- [LangChain](https://github.com/langchain-ai/langchain)：用于构建上下文感知推理应用的开发框架。
-- [AutoGPT](https://github.com/Significant-Gravitas/AutoGPT)：早期知名的实验性自主智能体框架。
-- [MetaGPT](https://github.com/geekan/MetaGPT)：引入标准化操作程序（SOP）的多智能体协作框架。
-- [Dify](https://github.com/langgenius/dify)：功能强大的开源 LLM 应用开发与编排平台。
-- [DSPy](https://github.com/stanfordnlp/dspy)：斯坦福大学开源的基于编程而非提示词的模型调用框架。
+**Các framework Agent mã nguồn mở nổi tiếng khác**:
+- [LangChain](https://github.com/langchain-ai/langchain): Framework phát triển ứng dụng suy luận nhận biết ngữ cảnh.
+- [AutoGPT](https://github.com/Significant-Gravitas/AutoGPT): Dự án tiên phong về Agent tự chủ thực nghiệm.
+- [MetaGPT](https://github.com/geekan/MetaGPT): Framework đa Agent đưa vào Quy trình vận hành chuẩn (SOP).
+- [Dify](https://github.com/langgenius/dify): Nền tảng điều phối và phát triển ứng dụng LLM mạnh mẽ.
+- [DSPy](https://github.com/stanfordnlp/dspy): Framework lập trình gọi mô hình của Đại học Stanford.
 
-### [第五章](../05_tools_skills/README.md)参考资料
+### Tài liệu tham khảo theo từng chương
 
-- 内置工具：https://docs.openclaw.ai/tools
-- 工具配置：https://docs.openclaw.ai/gateway/config-tools
-
-### [第三章](../03_minimal_loop/README.md)参考资料
-
-- Dashboard 命令：https://docs.openclaw.ai/cli/dashboard
-- Health 命令：https://docs.openclaw.ai/cli/health
-- Control UI (Dashboard)：https://docs.openclaw.ai/web/dashboard
-- Control UI 说明：https://docs.openclaw.ai/web/control-ui
-- Models 命令：https://docs.openclaw.ai/cli/models
-- Channels 命令：https://docs.openclaw.ai/cli/channels
-- Status 命令：https://docs.openclaw.ai/cli/status
-- Doctor 命令：https://docs.openclaw.ai/cli/doctor
-- 群组说明：https://docs.openclaw.ai/channels/groups
-- 群组消息：https://docs.openclaw.ai/channels/group-messages
-- pairing 命令：https://docs.openclaw.ai/cli/pairing
-- Gateway 配置：https://docs.openclaw.ai/gateway/configuration
-
-### [第六章](../06_context_memory/README.md)参考资料
-
-- 会话机制：https://docs.openclaw.ai/concepts/session
-- 配置参考：https://docs.openclaw.ai/gateway/config-agents
-- 工具结果裁剪：https://docs.openclaw.ai/gateway/config-agents
-- Session 裁剪概念：https://docs.openclaw.ai/concepts/session-pruning
-- 记忆机制：https://docs.openclaw.ai/concepts/memory
-- 压缩与记忆刷新：https://docs.openclaw.ai/reference/memory-config
-
-### [第九章](../09_gateway_protocol/README.md)参考资料
-
-- Gateway：https://docs.openclaw.ai/gateway
-- Health 命令：https://docs.openclaw.ai/cli/health
-- Status 命令：https://docs.openclaw.ai/cli/status
-
-### [第十一章](../11_reliability_security/README.md)参考资料
-
-- 配置 models: https://docs.openclaw.ai/gateway/configuration-reference#models
-- Multi-agent sandbox tools: https://docs.openclaw.ai/tools/multi-agent-sandbox-tools
-- Models 命令: https://docs.openclaw.ai/cli/models
-- Model Failover: https://docs.openclaw.ai/concepts/model-failover
-- Security: https://docs.openclaw.ai/gateway/security
-- Tools: https://docs.openclaw.ai/tools
+- **[Chương 5](../05_tools_skills/README.md)**: [Builtin Tools](https://docs.openclaw.ai/tools) · [Config Tools](https://docs.openclaw.ai/gateway/config-tools)
+- **[Chương 3](../03_minimal_loop/README.md)**: [CLI Dashboard](https://docs.openclaw.ai/cli/dashboard) · [CLI Health](https://docs.openclaw.ai/cli/health) · [Control UI](https://docs.openclaw.ai/web/control-ui) · [CLI Models](https://docs.openclaw.ai/cli/models) · [CLI Channels](https://docs.openclaw.ai/cli/channels) · [CLI Doctor](https://docs.openclaw.ai/cli/doctor) · [Pairing](https://docs.openclaw.ai/cli/pairing)
+- **[Chương 6](../06_context_memory/README.md)**: [Session](https://docs.openclaw.ai/concepts/session) · [Config Agents](https://docs.openclaw.ai/gateway/config-agents) · [Session Pruning](https://docs.openclaw.ai/concepts/session-pruning) · [Memory](https://docs.openclaw.ai/concepts/memory) · [Compaction](https://docs.openclaw.ai/reference/memory-config)
+- **[Chương 9](../09_gateway_protocol/README.md)**: [Gateway](https://docs.openclaw.ai/gateway) · [CLI Health](https://docs.openclaw.ai/cli/health) · [CLI Status](https://docs.openclaw.ai/cli/status)
+- **[Chương 11](../11_reliability_security/README.md)**: [Configuration Reference](https://docs.openclaw.ai/gateway/configuration-reference#models) · [Multi-agent Sandbox Tools](https://docs.openclaw.ai/tools/multi-agent-sandbox-tools) · [Model Failover](https://docs.openclaw.ai/concepts/model-failover) · [Security](https://docs.openclaw.ai/gateway/security)

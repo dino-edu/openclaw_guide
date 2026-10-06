@@ -1,20 +1,21 @@
-## 附录 D：API 与 SDK 参考
+## Phụ lục D: Tham chiếu API & SDK (API Reference)
 
-本附录提供“快速定位入口”的参考，不替代 API 文档。字段与接口会随版本变化：若发现字段或命令不同，优先用 CLI 的 `--help` 与 `status --deep`/结构化日志自证，再回到 D.2 的最小排障集核对结果。
+Phụ lục này đóng vai trò là "Cẩm nang định vị lối vào nhanh", không nhằm mục đích thay thế tài liệu chi tiết của từng API. Các trường dữ liệu và giao diện có thể thay đổi nhẹ giữa các phiên bản: Hãy luôn dùng cờ `--help` của CLI, `status --deep` và nhật ký log có cấu trúc để tự đối soát.
 
-### D.1 控制面入口（官方文档）
+### D.1 Cổng vào Mặt phẳng điều khiển (Tài liệu chính thức)
 
-- Gateway 配置总览：<https://docs.openclaw.ai/gateway/configuration>
-- Gateway 安全：<https://docs.openclaw.ai/gateway/security>
-- Channels：<https://docs.openclaw.ai/cli/channels>
-- Models：<https://docs.openclaw.ai/cli/models>
-- Plugins：<https://docs.openclaw.ai/cli/plugins>
+- Tổng quan cấu hình Gateway: <https://docs.openclaw.ai/gateway/configuration>
+- An toàn bảo mật Gateway: <https://docs.openclaw.ai/gateway/security>
+- Kênh liên lạc (Channels): <https://docs.openclaw.ai/cli/channels>
+- Quản trị mô hình (Models): <https://docs.openclaw.ai/cli/models>
+- Hệ thống Plugin: <https://docs.openclaw.ai/cli/plugins>
 
-建议先确认配置与状态命令可用，再进入接口联调。
+Khuyến nghị kiểm tra tính sẵn sàng của các lệnh cấu hình và trạng thái trước khi bước vào tích hợp API.
 
-### D.2 CLI 命令速查（建议作为一线排障入口）
+### D.2 Cụm lệnh CLI xử lý sự cố tuyến đầu
 
-下面是一组推荐的最小排障命令组合，可直接用于环境体检与链路回放。
+Dưới đây là bộ lệnh tối thiểu được khuyến nghị dùng làm bước kiểm tra môi trường và phát lại sự cố:
+
 ```bash
 openclaw doctor
 openclaw health --json
@@ -25,30 +26,28 @@ openclaw models status --probe
 openclaw logs --follow --json
 ```
 
-这些命令覆盖了依赖自检、运行状态、渠道探针、模型认证状态、live provider 探针和链路回放，是最小可复验集。
+Cụm lệnh này bao phủ trọn vẹn: Khám sức khỏe phụ thuộc, trạng thái vận hành, đầu dò kênh, trạng thái xác thực mô hình, live auth probe của provider và phát lại chuỗi xử lý.
 
-### D.3 WebSocket 与事件流参考
+### D.3 Tài liệu tham khảo WebSocket & Luồng sự kiện
 
-如需对接长连接与事件流，请优先阅读：
+Khi cần ghép nối kết nối dài và lắng nghe sự kiện:
 
-- Gateway 协议：<https://docs.openclaw.ai/gateway/protocol>
-- Gap recovery 与运维 Runbook：<https://docs.openclaw.ai/gateway#gap-recovery>
-- 设备配对与信任管理：<https://docs.openclaw.ai/cli/devices>
+- Giao thức Gateway: <https://docs.openclaw.ai/gateway/protocol>
+- Khôi phục khoảng trống dữ liệu (Gap recovery) & Runbook: <https://docs.openclaw.ai/gateway#gap-recovery>
+- Ghép nối thiết bị & Quản trị vùng tin cậy: <https://docs.openclaw.ai/cli/devices>
 
-接口实现建议遵循三条原则：
+Ba nguyên tắc vàng khi lập trình giao diện:
 
-1. 连接层可恢复（心跳、重连、恢复点）。
-2. 事件层可对账（event id、`seq`、`stateVersion`、幂等键、错误分类；`traceId` 只在日志或 payload 明确提供时保留）。
-3. 执行层可限权（工具策略与沙箱约束）。
+1. **Tầng kết nối có thể phục hồi** (Nhịp tim keepalive, thuật toán reconnect, điểm khôi phục).
+2. **Tầng sự kiện có thể đối soát** (event id, `seq`, `stateVersion`, khóa bất biến, phân loại lỗi).
+3. **Tầng thực thi có thể giới hạn quyền** (Chính sách công cụ và ràng buộc Sandbox).
 
-### D.4 SDK 与集成建议
+### D.4 Lời khuyên khi tích hợp SDK
 
-如需在应用中嵌入 OpenClaw 能力，建议采用“先 CLI 验证、再 SDK/HTTP 集成”的顺序：
+Khi nhúng năng lực OpenClaw vào ứng dụng của bạn, hãy tuân thủ trình tự "Xác minh qua CLI trước, Tích hợp SDK/HTTP sau":
 
-1. 先用 CLI 跑通完整链路并固化验收命令。
-2. 再在应用层封装调用，并保留 request id / idempotency key、event id / seq / stateVersion 与错误分类；若日志或 payload 暴露 `traceId`，再把它作为链路回放辅助字段保存。
-3. 最后把回退、重试、超时和审计接入统一运行手册。
+1. Chạy thông luồng hoàn chỉnh qua CLI và cố định bộ lệnh nghiệm thu trước.
+2. Đóng gói lệnh gọi ở tầng ứng dụng, lưu giữ đầy đủ request id / idempotency key, event id / seq / stateVersion và phân loại lỗi; lưu thêm `traceId` làm dữ liệu hỗ trợ phát lại.
+3. Tích hợp các cơ chế Fallback, Thử lại, Timeout và Kiểm toán vào sổ tay vận hành Runbook chung.
 
-配置与沙箱相关声明不要只靠文档记忆：用 `openclaw config schema` / `openclaw config validate` 证明 schema，用 `openclaw sandbox explain --json` 证明当前 agent / session 的有效沙箱与工具边界。
-
-这样可以避免把“配置问题”误判为“SDK 或业务代码问题”。
+Đừng chỉ dựa vào trí nhớ: Hãy dùng `openclaw config schema` / `openclaw config validate` để kiểm tra schema, và dùng `openclaw sandbox explain --json` để chứng minh ranh giới công cụ và sandbox có hiệu lực của Agent/Session hiện tại.
