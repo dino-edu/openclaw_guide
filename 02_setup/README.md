@@ -1,27 +1,27 @@
-# 第二章 环境准备与安装部署
+# Chương 2: Chuẩn bị môi trường & Cài đặt triển khai
 
-第一章向你介绍了 OpenClaw 的核心概念与应用场景。现在，该是把它装进你的电脑了。
+Chương 1 đã giới thiệu cho bạn các khái niệm cốt lõi và kịch bản ứng dụng của OpenClaw. Bây giờ là lúc cài đặt nó lên máy tính của bạn.
 
-本章分为四个步骤：（1）确认系统满足最小要求，（2）选择合适的安装方式并完成安装，（3）通过向导进行首轮配置，（4）验证所有基础链路正常工作。这些步骤看似机械，但都有设计意图——比如为什么推荐先跳过“搜索引擎”和“渠道”配置，那是因为初装时任何一个失败的扩展都会拖累整个流程。通过系统化的准备步骤、完整的安装流程与验收测试，你能够在自己的环境中可靠地运行 OpenClaw，为后续章节的实践奠定坚实基础。
+Chương này gồm 4 bước: (1) Xác nhận hệ thống đáp ứng các yêu cầu tối thiểu, (2) Lựa chọn phương thức cài đặt phù hợp và hoàn tất cài đặt, (3) Chạy wizard hướng dẫn để cấu hình vòng đầu tiên, (4) Xác minh toàn bộ các mắt xích cơ sở hoạt động ổn định. Các bước này tuy cơ học nhưng đều có chủ đích thiết kế — chẳng hạn tại sao lại khuyên bạn tạm thời bỏ qua cấu hình "Search Engine" và "Kênh liên lạc" ở bước đầu, bởi vì khi mới cài đặt, bất kỳ một tiện ích mở rộng nào bị lỗi cũng có thể làm gián đoạn toàn bộ luồng khởi tạo. Thông qua các bước chuẩn bị có hệ thống, quy trình cài đặt hoàn chỉnh và các bài test nghiệm thu, bạn sẽ tự tin vận hành OpenClaw ổn định trong môi trường riêng, tạo nền móng vững chắc cho các chương tiếp theo.
 
-## 本章内容导读
+## Mục lục hướng dẫn chương
 
-本章包括以下几个小节：
+Chương này bao gồm các mục sau:
 
-- **[2.1 系统要求与运行前检查](2.1_requirements.md)**：明确 Node.js 版本、网络连通性及账号密钥前置条件。
-- **[2.2 安装 OpenClaw](2.2_installation.md)**：通过推荐的一键脚本完成安装，了解替代安装方式与版本治理策略。
-- **[2.3 初始化向导与首轮配置](2.3_onboarding.md)**：运行 `openclaw onboard` 初始化向导，完成最小配置并了解工作区产物。
-- **[2.4 守护进程与可用性验收](2.4_gateway_service.md)**：管理后台服务进程，通过纯本地验收清单确认系统可用。
-- **[2.5 本章小结](summary.md)**：关键要点回顾与下一步建议。
+- **[2.1 Yêu cầu hệ thống & Kiểm tra trước khi chạy](2.1_requirements.md)**: Làm rõ phiên bản Node.js, khả năng kết nối mạng và các điều kiện tiên quyết về API Key.
+- **[2.2 Cài đặt OpenClaw](2.2_installation.md)**: Hoàn tất cài đặt bằng script một dòng lệnh được khuyến nghị, tìm hiểu các phương thức cài đặt thay thế và chiến lược quản trị phiên bản.
+- **[2.3 Wizard khởi tạo & Cấu hình vòng đầu](2.3_onboarding.md)**: Chạy wizard khởi tạo `openclaw onboard`, hoàn tất cấu hình tối thiểu và tìm hiểu các tệp tin trong không gian làm việc.
+- **[2.4 Dịch vụ Gateway daemon & Nghiệm thu tính khả dụng](2.4_gateway_service.md)**: Quản lý tiến trình dịch vụ chạy ngầm, xác nhận hệ thống hoạt động qua checklist nghiệm thu cục bộ.
+- **[2.5 Tóm tắt chương](summary.md)**: Điểm lại các ý chính và khuyến nghị cho bước tiếp theo.
 
-## 学习目标
+## Mục tiêu học tập
 
-完成本章的阅读后，你将能够：
-1. **准备环境**：验证本地环境符合 OpenClaw 的运行要求。
-2. **顺利安装**：使用官方工具完成完整的安装与初始化流程。
-3. **验证可用性**：通过标准的诊断命令确认系统正常运行。
-4. **建立基线**：为后续章节的实战应用打好基础。
+Sau khi hoàn thành chương này, bạn sẽ có thể:
+1. **Chuẩn bị môi trường**: Xác minh môi trường máy tính đáp ứng đầy đủ yêu cầu vận hành của OpenClaw.
+2. **Cài đặt suôn sẻ**: Sử dụng công cụ chính thức để hoàn thành trọn vẹn quy trình cài đặt và khởi tạo.
+3. **Nghiệm thu tính khả dụng**: Sử dụng các câu lệnh chẩn đoán chuẩn để xác nhận hệ thống vận hành bình thường.
+4. **Thiết lập đường cơ sở (Baseline)**: Chuẩn bị sẵn sàng cho các bài thực hành chuyên sâu ở các chương sau.
 
-**适用范围**
+**Phạm vi áp dụng**
 
-本指南适用于 macOS、Linux 及 Windows（建议使用 WSL2）环境。在生产级部署中，强烈建议采用 Linux 主机搭配 Docker，并辅以反向代理、进程守护程序以及严格的最小权限账号策略。
+Hướng dẫn này áp dụng cho macOS, Linux và Windows (khuyên dùng thông qua WSL2). Trong môi trường triển khai cấp sản xuất, chúng tôi khuyến nghị sử dụng máy chủ Linux kết hợp với Docker, thiết lập Reverse Proxy, tiến trình giám sát chạy ngầm (Process Daemon) và áp dụng nghiêm ngặt nguyên tắc đặc quyền tối thiểu (Least Privilege).

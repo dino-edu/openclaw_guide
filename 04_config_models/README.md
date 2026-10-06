@@ -1,30 +1,30 @@
-# 第四章 配置体系与模型治理
+# Chương 4: Hệ thống cấu hình & Quản trị mô hình
 
-在[第二章](../02_setup/README.md)中，`openclaw onboard` 向导已经帮你完成了模型与认证的最小接入——内置供应商的密钥已写入 auth-profiles，默认模型已可用。但“能用”和“能放心地长期用”之间还隔着几步。
+Ở [Chương 2](../02_setup/README.md), trình hướng dẫn `openclaw onboard` đã giúp bạn hoàn tất việc kết nối mô hình và xác thực tối thiểu — khóa API của nhà cung cấp tích hợp sẵn đã được ghi vào auth-profiles, mô hình mặc định đã có thể sử dụng. Tuy nhiên, giữa việc "dùng được" và "an tâm vận hành lâu dài" vẫn còn một khoảng cách đáng kể.
 
-本章的目标不是重复“接入”，而是把接入**治理化**：这意味着：
+Mục tiêu của chương này không phải lặp lại thao tác "kết nối", mà là đưa việc kết nối lên tầm **quản trị (Governance)**:
 
-- **配置可解释**：三个月后，你能清楚地说出“为什么当前用的是这个模型”，而不是“我也忘了怎么配的”
-- **认证可轮换**：API Key 泄露了，或者企业要求定期轮换，你能在 10 分钟内无缝切换到备用 Key，不中断服务
-- **选型有依据**：需要在 Claude、当前 OpenAI 旗舰模型、本地模型之间选择，你有一个四维框架（成本、质量、延迟、可靠性）来评估
-- **故障可回退**：主模型或主 provider 出现故障时，系统能按显式 fallback 链切换到可用备选，而不是整个服务瘫痪
+- **Cấu hình có thể giải thích được**: Ba tháng sau nhìn lại, bạn có thể nói vanh vách "vì sao hiện tại lại chọn mô hình này", chứ không phải "tôi cũng quên mất ngày xưa cấu hình thế nào".
+- **Xác thực có thể xoay tua an toàn**: Khi API Key bị lộ hoặc doanh nghiệp yêu cầu định kỳ đổi khóa, bạn có thể chuyển đổi mượt mà sang Key dự phòng trong vòng 10 phút mà không làm gián đoạn dịch vụ.
+- **Lựa chọn có cơ sở khoa học**: Khi cần cân nhắc giữa Claude, các dòng mô hình OpenAI hiện hành và mô hình chạy cục bộ (Local LLM), bạn có sẵn một khung đánh giá 4 chiều (Chi phí, Chất lượng, Độ trễ, Độ tin cậy).
+- **Có cơ chế tự động chuyển đổi dự phòng (Failover)**: Khi mô hình chính hoặc nhà cung cấp chính gặp sự cố, hệ thống sẽ tự động chuyển sang mô hình dự phòng theo chuỗi fallback rõ ràng thay vì làm sập toàn bộ dịch vụ.
 
-读完本章后，你应能独立回答三个问题：当前配置从哪里生效、当前模型为什么被选中、当前失败时系统会如何退化。
+Đọc xong chương này, bạn sẽ tự tin trả lời độc lập được 3 câu hỏi: Cấu hình hiện tại có hiệu lực từ nguồn nào, tại sao mô hình này được chọn, và khi xảy ra sự cố thì hệ thống sẽ thoái biến phục vụ (Graceful degradation) theo lộ trình nào.
 
-## 本章内容导读
+## Mục lục hướng dẫn chương
 
-本章包括以下几个小节：
+Chương này bao gồm các mục sau:
 
-- **[4.1 openclaw.json 结构与配置优先级](4.1_config_system.md)**：理解 openclaw.json 的核心结构与配置优先级。
-- **[4.2 模型供应商接入与认证方式](4.2_provider_access.md)**：区分内置供应商默认路径与自定义供应商显式配置路径，掌握密钥注入与轮换机制。
-- **[4.3 模型选择与默认策略](4.3_model_selection.md)**：建立模型选择的质量/成本/延迟/可靠性四维决策框架。
-- **[4.4 故障转移基础：回退链路与恢复策略](4.4_failover.md)**：配置并验证基础故障转移链路。
-- **[4.5 本章小结](summary.md)**：关键结论与自测题。
+- **[4.1 Cấu trúc openclaw.json & Thứ tự ưu tiên cấu hình](4.1_config_system.md)**: Hiểu cấu trúc cốt lõi của openclaw.json và thứ tự ưu tiên ghi đè cấu hình.
+- **[4.2 Kết nối nhà cung cấp mô hình (Provider) & Phương thức xác thực](4.2_provider_access.md)**: Phân biệt lộ trình mặc định của nhà cung cấp tích hợp sẵn với cấu hình rõ ràng cho nhà cung cấp tùy biến, nắm vững cơ chế nạp và xoay tua khóa API.
+- **[4.3 Lựa chọn mô hình & Chiến lược mặc định](4.3_model_selection.md)**: Thiết lập khung quyết định 4 chiều: Chất lượng / Chi phí / Độ trễ / Độ tin cậy.
+- **[4.4 Cơ sở chuyển đổi dự phòng (Failover): Chuỗi fallback & Chiến lược phục hồi](4.4_failover.md)**: Cấu hình và xác minh chuỗi chuyển đổi dự phòng cơ sở.
+- **[4.5 Tóm tắt chương](summary.md)**: Điểm lại các ý chính và câu hỏi tự kiểm tra.
 
-## 学习目标
+## Mục tiêu học tập
 
-完成本章的阅读后，你将能够：
-1. **理解配置**：快速定位配置的优先级与生效规则。
-2. **治理认证**：区分内置供应商的默认路径与自定义供应商的显式配置路径，掌握密钥注入与安全轮换。
-3. **做出决策**：基于质量、成本、延迟与可靠性做出合理的模型选择。
-4. **规划容错**：设计基本的故障转移链路，提高系统稳定性。
+Sau khi hoàn thành chương này, bạn sẽ có thể:
+1. **Hiểu sâu cấu hình**: Định vị nhanh thứ tự ưu tiên và quy tắc có hiệu lực của cấu hình.
+2. **Quản trị xác thực**: Phân biệt lộ trình mặc định của provider tích hợp với lộ trình cấu hình tùy biến, làm chủ việc nạp khóa và xoay tua an toàn.
+3. **Đưa ra quyết định chuẩn xác**: Đánh giá và lựa chọn mô hình phù hợp dựa trên 4 tiêu chí chất lượng, chi phí, độ trễ và độ tin cậy.
+4. **Quy hoạch khả năng chịu lỗi**: Thiết kế chuỗi fallback dự phòng cơ bản, nâng cao độ ổn định cho toàn hệ thống.

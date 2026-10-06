@@ -1,38 +1,38 @@
-# 第三章 快速上手与首轮对话实战
+# Chương 3: Bắt đầu nhanh & Thực chiến phiên hội thoại đầu tiên
 
-安装完成了，系统也验证可用了。现在该真正使用它了。但从“安装成功”到“能放心地在生产环境用”之间，还隔着一些关键认知：
+Cài đặt đã hoàn tất, hệ thống cũng đã được xác nhận khả dụng. Bây giờ là lúc thực sự đưa nó vào sử dụng. Nhưng từ cột mốc "cài đặt thành công" đến "tự tin đưa vào môi trường sản xuất" vẫn còn khoảng cách của một số nhận thức trọng yếu:
 
-- OpenClaw 如何回答问题？一句话输入是怎样一步步转化成智能体的回复的？
-- 出了问题怎么办？不是“重启试试”，而是有系统的排查方法
-- 怎样定义“机器人的个性和边界”？写指令的时候什么是有效的
+- OpenClaw trả lời câu hỏi như thế nào? Một câu lệnh nhập vào được chuyển đổi từng bước ra sao để trở thành phản hồi của Agent?
+- Khi gặp sự cố thì xử lý thế nào? Không phải "thử khởi động lại xem sao", mà cần có phương pháp chẩn đoán bài bản theo hệ thống.
+- Làm thế nào để định nghĩa "tính cách và ranh giới quyền hạn của bot"? Khi viết chỉ thị thì những yếu tố nào thực sự mang lại hiệu quả?
 
-本章建立可复验的“本地最小闭环基准线”：先用 Dashboard 的 Chat 页面验证本地主链路可用，掌握诊断命令与固定排障顺序；再固化初始指令的目标与格式；最后理解本地访问边界。通过本章，你将获得第一个可工作的 OpenClaw 实例，并为后续深入学习建立扎实基础。
+Chương này sẽ thiết lập một "đường cơ sở vòng lặp tối thiểu cục bộ" có thể tái hiện được: Trước tiên dùng trang Chat của Dashboard để xác minh luồng chính trên máy, nắm vững các câu lệnh chẩn đoán và quy trình xử lý sự cố chuẩn hóa; tiếp theo là cố định mục tiêu và định dạng của các chỉ thị ban đầu; và cuối cùng là hiểu rõ ranh giới kiểm soát truy cập cục bộ. Qua chương này, bạn sẽ sở hữu một phiên bản OpenClaw hoàn chỉnh đầu tiên chạy mượt mà, tạo tiền đề vững chắc cho việc học tập chuyên sâu.
 
-**这章学完能做什么**
+**Học xong chương này bạn sẽ làm được gì**
 
-- 自信地在 Dashboard 进行首轮对话，并理解每一个步骤
-- 用诊断命令定位问题，而不是盲目猜测
-- 写出清晰、可执行的初始指令，让智能体理解你的需求边界
+- Tự tin thực hiện phiên hội thoại đầu tiên trên Dashboard và hiểu rõ từng bước diễn ra phía sau.
+- Sử dụng các lệnh chẩn đoán để khoanh vùng sự cố thay vì đoán mò theo cảm tính.
+- Viết ra các chỉ thị ban đầu rõ ràng, có tính thực thi cao để Agent hiểu chính xác ranh giới mong muốn của bạn.
 
-## 本章内容导读
+## Mục lục hướng dẫn chương
 
-本章包括以下几个小节：
+Chương này bao gồm các mục sau:
 
-- **[3.1 控制台与 Chat 快速上手](3.1_control_ui_webchat.md)**：用 Dashboard 的 Chat 页面验证本地对话基线，学会用日志解释每一步发生了什么。
-- **[3.2 常用诊断命令与日志排障](3.2_diagnostics.md)**：形成固定的四层诊断顺序与证据链，避免“凭感觉改配置/改提示词”。
-- **[3.3 初始指令与智能体角色配置](3.3_agent_persona.md)**：写出“可执行的初始指令”：目标收敛、边界声明、输出结构约束。
-- **[3.4 本地访问边界与设备批准](3.4_pairing_groups.md)**：理解设备批准机制与默认安全策略，为后续渠道接入建立基础。
-- **[3.5 本章小结](summary.md)**：关键要点与自测题。
+- **[3.1 Bảng điều khiển & Chat nhanh qua giao diện Webchat](3.1_control_ui_webchat.md)**: Dùng trang Chat của Dashboard để xác thực đường cơ sở hội thoại cục bộ, học cách dùng nhật ký log để giải thích từng bước đang diễn ra.
+- **[3.2 Các lệnh chẩn đoán thông dụng & Xử lý sự cố qua Logs](3.2_diagnostics.md)**: Hình thành chuỗi bằng chứng và quy trình chẩn đoán 4 tầng cố định, tránh việc "sửa cấu hình hay sửa prompt theo cảm tính".
+- **[3.3 Chỉ thị ban đầu & Cấu hình vai trò cho Agent (Persona)](3.3_agent_persona.md)**: Viết "chỉ thị ban đầu có tính thực thi": hội tụ mục tiêu, tuyên bố ranh giới, ràng buộc cấu trúc đầu ra.
+- **[3.4 Ranh giới truy cập cục bộ & Phê duyệt thiết bị (Pairing)](3.4_pairing_groups.md)**: Hiểu cơ chế phê duyệt thiết bị và chính sách bảo mật mặc định, tạo nền tảng cho việc kết nối kênh sau này.
+- **[3.5 Tóm tắt chương](summary.md)**: Điểm lại các ý chính và câu hỏi tự kiểm tra.
 
-## 学习目标
+## Mục tiêu học tập
 
-完成本章的阅读后，你将能够：
-1. **快速验证**：用 Dashboard 的 Chat 页面验证本地对话基线。
-2. **自我诊断**：掌握四层诊断顺序与常用排障命令。
-3. **编写指令**：设计清晰、可执行的初始指令与角色定义。
-4. **理解边界**：理解设备批准机制与默认访问控制策略。
+Sau khi hoàn thành chương này, bạn sẽ có thể:
+1. **Xác minh nhanh**: Sử dụng trang Chat của Dashboard để kiểm chứng đường cơ sở hội thoại cục bộ.
+2. **Tự chẩn đoán**: Nắm vững trình tự chẩn đoán 4 tầng và các câu lệnh xử lý sự cố thông dụng.
+3. **Viết chỉ thị chuẩn**: Thiết kế các chỉ thị ban đầu và định nghĩa vai trò rõ ràng, có tính khả thi cao.
+4. **Hiểu rõ ranh giới**: Nắm vững cơ chế phê duyệt thiết bị và chính sách kiểm soát truy cập mặc định.
 
-## 前置条件
+## Điều kiện tiên quyết
 
-- 已完成[第二章](../02_setup/README.md)的安装与首跑验证。
-- 可打开本机浏览器访问 Dashboard 的 Chat 页面（远程环境需端口转发）。
+- Đã hoàn thành việc cài đặt và nghiệm thu chạy lần đầu ở [Chương 2](../02_setup/README.md).
+- Có thể mở trình duyệt trên máy để truy cập trang Chat của Dashboard (nếu dùng máy chủ từ xa thì cần cấu hình SSH Port Forwarding).

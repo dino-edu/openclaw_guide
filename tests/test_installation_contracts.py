@@ -20,15 +20,15 @@ class InstallationContractTests(unittest.TestCase):
             'export PATH="$(npm prefix -g)/bin:$PATH"',
             "openclaw doctor",
             "openclaw gateway status",
-            "关闭并重新打开终端",
+            "đóng và mở lại cửa sổ Terminal",
             "https://docs.openclaw.ai/install/node",
         )
         for marker in required:
             with self.subTest(marker=marker):
                 self.assertIn(marker, self.text)
 
-        self.assertIn("Node 24.16+ 或 26.1+", self.text)
-        self.assertIn("Node 22、23、25 不受支持", self.text)
+        self.assertIn("Node 24.16+ hoặc 26.1+", self.text)
+        self.assertIn("Node 22, 23, 25 không còn được hỗ trợ", self.text)
         self.assertNotIn("22.22.3", self.text)
         self.assertIn("`<npm-prefix>/bin`", self.text)
 
@@ -39,8 +39,8 @@ class InstallationContractTests(unittest.TestCase):
             "$npmPrefix = npm prefix -g",
             "$env:Path -split ';' -contains $npmPrefix",
             "openclaw gateway status --json",
-            "Windows 直接把 `<npm-prefix>` 加入 PATH",
-            "重新打开 Windows Terminal 或 PowerShell",
+            "Windows thêm trực tiếp `<npm-prefix>` vào biến PATH",
+            "mở lại Windows Terminal hoặc PowerShell",
         )
         for marker in required:
             with self.subTest(marker=marker):
@@ -50,7 +50,7 @@ class InstallationContractTests(unittest.TestCase):
         required = (
             "Windows Hub",
             "OpenClawGateway",
-            "不会修改你已有的 Ubuntu 发行版",
+            "không can thiệp vào bản Ubuntu hiện có của bạn",
             "wsl --list --verbose",
             "wsl -d <DistroName> -- openclaw doctor",
             "wsl -d <DistroName> -- openclaw gateway status",

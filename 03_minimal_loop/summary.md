@@ -1,24 +1,24 @@
-## 3.5 本章小结
+## 3.5 Tóm tắt chương
 
-第三章的目标是建立“本地最小闭环基准线”：在不引入外部渠道变量的前提下，验证主链路可用、可观测、可复验，并为后续的配置调优与扩展落地提供稳定的参照系。
+Mục tiêu của Chương 3 là thiết lập một "đường cơ sở vòng lặp tối thiểu cục bộ": Trong điều kiện chưa đưa vào các biến số phức tạp từ các kênh bên ngoài, xác minh luồng chính khả dụng, có thể quan sát và có thể tái hiện được, tạo hệ quy chiếu ổn định cho việc tinh chỉnh cấu hình và mở rộng sau này.
 
-### 3.5.1 关键设计原则沉淀
+### 3.5.1 Các nguyên tắc thiết kế trọng yếu
 
-完成本章后，应形成以下关键结论：
+Sau khi hoàn thành chương này, bạn cần nắm vững các kết luận cốt lõi sau:
 
-- 基准线优先：先在 Dashboard 的 Control UI Chat 验证固定用例，再扩展渠道与能力，避免变量叠加导致问题难复现。
-- 指令是契约：初始指令（instructions）要写成可检查条款（目标/边界/输出结构），并配合日志回放验证其生效。
-- 设备批准是最小防线：本地访问通过设备批准机制实施，理解这个机制是后续渠道级安全策略的基础。
-- 诊断看顺序：先 `health`（进程），再 `channels status --probe`（渠道），再 `models status` / `--probe`（模型），最后 `logs`（日志），避免先改提示词掩盖根因。
+- **Đường cơ sở là ưu tiên số một**: Luôn xác minh các ca kiểm thử cố định trên Control UI Chat của Dashboard trước khi mở rộng kênh chat hay bổ sung năng lực, tránh việc cộng dồn nhiều biến số khiến lỗi trở nên khó tái hiện.
+- **Chỉ thị là một bản giao ước**: Chỉ thị ban đầu (System Instructions) cần được viết thành các điều khoản có thể kiểm chứng được (Mục tiêu / Ranh giới / Cấu trúc đầu ra), kết hợp đối chiếu nhật ký log để xác thực tính hiệu lực.
+- **Phê duyệt thiết bị là tuyến phòng thủ tối thiểu**: Truy cập cục bộ và ngoại vi được bảo vệ thông qua cơ chế phê duyệt thiết bị (Device Approval); hiểu rõ cơ chế này là nền tảng để triển khai bảo mật cấp kênh liên lạc sau này.
+- **Chẩn đoán phải theo đúng trình tự**: Đi từ `health` (tiến trình) → `channels status --probe` (kênh chat) → `models status` / `--probe` (mô hình AI) → `logs` (nhật ký chi tiết), tránh việc vội vàng sửa prompt khiến nguyên nhân gốc rễ bị che lấp.
 
-### 3.5.2 自检清单
+### 3.5.2 Checklist tự kiểm tra
 
-建议在进入下一章前自检：
+Trước khi chuyển sang chương tiếp theo, hãy tự kiểm tra:
 
-- 是否能验证 3.1 的三个最小用例（健康链路、最小交互、流式输出），并在 `logs --json` 中定位到对应的请求与响应？
-- 新设备访问 Dashboard 时的批准流程能否完成闭环？能否解释批准对访问范围的影响？
-- 当出现“未回复/未触发”时，能否正确应用四层诊断顺序（进程 → 渠道 → 模型 → 日志）快速定位？
+- Bạn đã xác minh thành công 3 ca kiểm thử tối thiểu ở Mục 3.1 (Chuỗi sức khỏe, Tương tác tối thiểu, Xuất dạng luồng) và định vị được request/response tương ứng trong `logs --json` chưa?
+- Quy trình phê duyệt khi thiết bị mới mở Dashboard có diễn ra trơn tru không? Bạn có thể giải thích phạm vi ảnh hưởng của việc phê duyệt này không?
+- Khi gặp hiện tượng "bot không phản hồi / tin nhắn không kích hoạt", bạn đã nắm vững cách áp dụng trình tự chẩn đoán 4 tầng (Tiến trình → Kênh → Mô hình → Log) để khoanh vùng chưa?
 
-### 3.5.3 下一步规划预告
+### 3.5.3 Giới thiệu chương tiếp theo
 
-[第四章](../04_config_models/README.md)进入配置体系与模型接入：把“正常运行”升级为“可控可替换”，并建立可验证的模型选择与故障转移基线。后续章节将依次深化：[第五章](../05_tools_skills/README.md)讨论工具策略与权限治理，[第六章](../06_context_memory/README.md)讨论记忆与会话隔离，[第七章](../07_multi_agent/README.md)讨论多渠道入口治理与多智能体协作。
+[Chương 4](../04_config_models/README.md) sẽ đưa chúng ta vào hệ thống cấu hình và kết nối mô hình AI: Nâng cấp trạng thái từ "chạy được bình thường" lên "có thể kiểm soát và thay thế linh hoạt", đồng thời xây dựng đường cơ sở cho việc lựa chọn mô hình và chuyển đổi dự phòng (Failover). Các chương tiếp theo sẽ lần lượt đào sâu: [Chương 5](../05_tools_skills/README.md) bàn về chính sách công cụ và quản trị quyền hạn, [Chương 6](../06_context_memory/README.md) bàn về bộ nhớ và cô lập phiên, [Chương 7](../07_multi_agent/README.md) bàn về quản trị cổng vào đa kênh và đa Agent cộng tác.

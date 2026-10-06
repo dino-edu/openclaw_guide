@@ -1,25 +1,25 @@
-## 4.5 本章小结
+## 4.5 Tóm tắt chương
 
-第四章把“模型能调用”升级为“模型可控”。核心不是换更强模型，而是把配置、认证、选择与故障转移做成可解释的系统能力。
+Chương 4 đã nâng cấp bài toán từ "mô hình gọi được" lên thành "mô hình trong tầm kiểm soát". Cốt lõi của vấn đề không phải là liên tục chạy theo mô hình mạnh hơn, mà là biến cấu hình, xác thực, lựa chọn mô hình và chuyển đổi dự phòng thành các năng lực hệ thống có thể giải thích được.
 
-### 4.5.1 关键结论
+### 4.5.1 Các kết luận trọng yếu
 
-- 配置决定行为：先分清作用域，再谈优先级与生效证据。
-- 供应商接入要可替换：密钥注入、环境隔离与轮换是底线。
-- 模型选择要工程化：质量/成本/延迟/可靠性四维，依赖固定用例库回归。
-- 故障转移要可验证：重试、轮换、回退、冷却必须能在演练中触发并被解释。
+- **Cấu hình quyết định hành vi**: Phân định ranh giới phạm vi tác động (Scope) trước, sau đó mới bàn đến thứ tự ưu tiên và bằng chứng có hiệu lực.
+- **Kết nối nhà cung cấp phải đảm bảo khả năng thay thế linh hoạt**: Nạp khóa API an toàn qua biến môi trường/SecretRef, cách ly môi trường và cơ chế xoay tua là những yêu cầu căn bản.
+- **Lựa chọn mô hình phải được chuẩn hóa kỹ thuật**: Cân đối theo khung 4 chiều Chất lượng / Chi phí / Độ trễ / Độ tin cậy, kết hợp chạy hồi quy trên bộ ca kiểm thử cố định.
+- **Chuyển đổi dự phòng phải kiểm chứng được**: Thử lại, xoay tua tài khoản, fallback và làm nguội (Cooldown) bắt buộc phải kích hoạt được và giải thích được trong các bài diễn tập thực tế.
 
-### 4.5.2 最小闭环（可复制）
+### 4.5.2 Vòng lặp tối thiểu (Có thể áp dụng ngay)
 
-下面给出一份“只做本章关键事”的最小配置：设定默认主模型、配置一条回退链路，并用命令验收。
+Dưới đây là một cấu hình mẫu "tối giản chỉ làm những việc quan trọng nhất của chương này": Thiết lập mô hình chính mặc định, cấu hình một chuỗi fallback dự phòng và dùng các lệnh chuẩn để nghiệm thu.
 
-1) 配置片段（把它合并进你的 `~/.openclaw/openclaw.json`）：
+1) Đoạn cấu hình (Hợp nhất vào tệp `~/.openclaw/openclaw.json` của bạn):
 
 ```javascript
 {
-  // 如果你已通过 openclaw onboard 完成内置供应商认证，
-  // 以下 models.providers 段可省略——认证信息已在 auth-profiles 中。
-  // 仅当需要覆盖 baseURL、headers 或接入自定义供应商时才需要显式声明。
+  // Nếu bạn đã hoàn tất xác thực provider tích hợp qua openclaw onboard,
+  // khối models.providers có thể lược bỏ — thông tin xác thực đã nằm trong auth-profiles.
+  // Chỉ khai báo khi cần tùy biến baseURL, HTTP headers hoặc kết nối provider tùy biến.
 
   agents: {
     defaults: {
@@ -32,9 +32,7 @@
 }
 ```
 
-如果你走的是 ChatGPT/Codex 订阅 OAuth，模型引用仍使用 `openai/*`，订阅认证由 Codex/OpenAI auth profile 与运行时表达；历史 `openai-codex/*` 模型引用应通过 `openclaw doctor --fix` 迁移。直接 OpenAI API Key 路径也使用 `openai/*`，但选择不同的认证 profile。两者都要以当前模型目录和运行时策略为准。
-
-2) 验收命令（只看结果，不靠感觉）：
+2) Các câu lệnh nghiệm thu (Đánh giá bằng kết quả thực tế, không dựa vào cảm tính):
 
 ```bash
 openclaw doctor
@@ -43,18 +41,18 @@ openclaw models status --probe
 openclaw status --deep
 ```
 
-达到的目标：认证状态可解释、provider live auth 可验证、默认模型可解释、回退链路存在且可演练。
+Mục tiêu đạt được: Trạng thái xác thực có thể giải thích được, live auth của provider kiểm chứng được, mô hình mặc định minh bạch, và chuỗi fallback tồn tại sẵn sàng cho diễn tập.
 
-### 4.5.3 读者自检
+### 4.5.3 Câu hỏi tự kiểm tra
 
-- 能否说明“某个配置字段最终生效值”的证据链（配置路径、体检、日志）？
-- 是否具备至少一主一备两条模型链路，并完成最小验收？
-- 当出现 401/429/超时/5xx 时，系统分别应该采取什么动作？
+- Bạn có thể trình bày chuỗi bằng chứng chứng minh "giá trị có hiệu lực cuối cùng của một trường cấu hình" (đường dẫn file, kiểm tra khám sức khỏe, nhật ký log) không?
+- Bạn đã thiết lập sẵn ít nhất 2 chuỗi mô hình (một chính, một dự phòng) và hoàn thành nghiệm thu tối thiểu chưa?
+- Khi gặp các lỗi 401, 429, timeout và 5xx, hệ thống sẽ thực hiện các hành động tương ứng khác nhau như thế nào?
 
-### 4.5.4 下一章预告
+### 4.5.4 Giới thiệu chương tiếp theo
 
-[第五章](../05_tools_skills/README.md)进入工具系统、技能与插件：把“会回答”升级为“会行动”，并把行动能力收敛在最小权限与可审计边界内。
+[Chương 5](../05_tools_skills/README.md) sẽ đưa chúng ta vào Hệ thống Tool, Skill và Plugin: Nâng cấp năng lực từ "biết trả lời" lên thành "biết hành động", đồng thời thu hẹp năng lực hành động trong ranh giới đặc quyền tối thiểu và có thể kiểm toán.
 
 ---
 
-> **发现错误或有改进建议？** 欢迎提交 [Issue](https://github.com/yeasy/openclaw_guide/issues) 或 [PR](https://github.com/yeasy/openclaw_guide/pulls)。
+> **Phát hiện lỗi hoặc có đề xuất cải tiến?** Hoan nghênh bạn gửi [Issue](https://github.com/yeasy/openclaw_guide/issues) hoặc [Pull Request](https://github.com/yeasy/openclaw_guide/pulls).

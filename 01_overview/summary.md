@@ -1,25 +1,25 @@
-## 1.5 本章小结
+## 1.5 Tóm tắt chương
 
-### 1.5.1 要点回顾
+### 1.5.1 Điểm lại các ý chính
 
-- OpenClaw 是一个本地优先、可自托管的个人智能体系统，可以接入多种渠道（Telegram、WhatsApp、飞书等），调用本地工具完成真实任务——不只是聊天，是真正“把活干完”。
-- 它解决了智能体落地的三个核心痛点：对话过长后 AI 忘事、AI 可能越权操作、出了问题无法追溯。
-- 最适合场景：执行链条较长、允许异步、需要多工具组合的任务。不适合：纯聊天问答、毫秒级实时系统、无运维能力的团队。
-- 五个核心概念：**Gateway**（门）、**Agent**（干活的）、**Tool**（手）、**Session**（记忆本）、**Node**（执行节点）。记住这五个名字，后面各章会逐一深入讲解。
-- Token 成本容易被低估：只在需要自然语言理解、模糊决策或多步推理的环节使用智能体，其余部分用确定性代码实现。
+- OpenClaw là một hệ thống Agent cá nhân ưu tiên chạy cục bộ (local-first), có thể tự lưu trữ (self-hosted), kết nối được nhiều kênh chat (Telegram, WhatsApp, Lark/Feishu...), gọi công cụ trên máy để hoàn thành công việc thực tế — không chỉ trò chuyện mà là thực sự "làm xong việc".
+- Hệ thống giải quyết 3 điểm nghẽn lớn khi triển khai Agent: Hội thoại dài khiến AI bị quên thông tin, AI có nguy cơ thực hiện hành vi vượt quyền, và không thể truy vết khi xảy ra sự cố.
+- Kịch bản phù hợp nhất: Chuỗi thực thi nhiều bước, chấp nhận bất đồng bộ, cần phối hợp nhiều công cụ. Kịch bản không phù hợp: Chat hỏi đáp đơn thuần, hệ thống phản hồi thời gian thực mili-giây, hoặc các nhóm không có khả năng tự vận hành máy chủ.
+- Năm khái niệm cốt lõi: **Gateway** (cánh cổng tiếp nhận), **Agent** (đơn vị làm việc), **Tool** (cánh tay thực thi), **Session** (cuốn sổ ghi nhớ), **Node** (điểm cuối thiết bị). Hãy nhớ 5 cái tên này vì các chương sau sẽ mổ xẻ chi tiết từng phần.
+- Chi phí Token rất dễ bị đánh giá thấp: Chỉ nên dùng Agent ở các khâu cần hiểu ngôn ngữ tự nhiên, ra quyết định mờ hoặc suy luận đa bước; các phần việc còn lại nên giải quyết bằng code xác định.
 
-### 1.5.2 读者自检
+### 1.5.2 Câu hỏi tự kiểm tra
 
-阅读完本章后，尝试回答以下问题：
+Sau khi đọc xong chương này, hãy thử trả lời các câu hỏi sau:
 
-- 能否用一句话分别描述 Gateway、Agent、Tool、Session、Node 各自负责什么？
-- 如果让你向同事推荐 OpenClaw，你会说它适合解决什么问题，不适合什么场景？
-- 比起直接用 ChatGPT，OpenClaw 多出来的价值是什么？
+- Bạn có thể mô tả trong một câu nhiệm vụ của từng thành phần Gateway, Agent, Tool, Session, Node không?
+- Nếu giới thiệu OpenClaw cho đồng nghiệp, bạn sẽ nói nó giải quyết bài toán gì và không phù hợp với trường hợp nào?
+- So với việc dùng trực tiếp ChatGPT, giá trị vượt trội mà OpenClaw mang lại là gì?
 
-### 1.5.3 下一章预告
+### 1.5.3 Giới thiệu chương tiếp theo
 
-[第二章](../02_setup/README.md)将进入实际安装：系统前置检查、安装方式选择、初始化向导与首次运行验收。
+[Chương 2](../02_setup/README.md) sẽ đưa chúng ta vào bước cài đặt thực tế: Kiểm tra điều kiện môi trường, lựa chọn phương thức cài đặt, chạy wizard khởi tạo và nghiệm thu hệ thống lần đầu tiên.
 
 ---
 
-> 发现错误或有改进建议？欢迎提交 [Issue](https://github.com/yeasy/openclaw_guide/issues) 或 [PR](https://github.com/yeasy/openclaw_guide/pulls)。
+> Phát hiện lỗi hoặc có đề xuất cải tiến? Hoan nghênh bạn gửi [Issue](https://github.com/yeasy/openclaw_guide/issues) hoặc [Pull Request](https://github.com/yeasy/openclaw_guide/pulls).
