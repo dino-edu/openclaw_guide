@@ -1,0 +1,290 @@
+{
+  "scriptCompleted": true,
+  "filesAnalyzed": 6,
+  "filesSkipped": [],
+  "filesUnreadable": [],
+  "analysisOutcomes": {
+    "structure": {
+      "succeeded": 6,
+      "failed": 0
+    },
+    "callGraph": {
+      "succeeded": 0,
+      "failed": 0,
+      "skipped": 6
+    }
+  },
+  "results": [
+    {
+      "path": "11_reliability_security/11.1_auth_profiles.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 119,
+      "nonEmptyLines": 86,
+      "sections": [
+        {
+          "heading": "11.1 Quản trị đa khóa: Hồ sơ xác thực (Auth Profiles), Xoay tua môi trường & Thứ tự xác thực (auth.order)",
+          "level": 2,
+          "line": 1
+        },
+        {
+          "heading": "11.1.1 Vì sao quản trị đa khóa không chỉ là thao tác vận hành đơn thuần",
+          "level": 3,
+          "line": 5
+        },
+        {
+          "heading": "11.1.2 Mô hình đối tượng xác thực: auth profile, auth order, ghi đè phiên & auth state",
+          "level": 3,
+          "line": 15
+        },
+        {
+          "heading": "11.1.3 Chiến lược cách ly đa khóa: Theo môi trường, Theo Agent, Theo Nhà cung cấp",
+          "level": 3,
+          "line": 40
+        },
+        {
+          "heading": "1. Phân tách theo môi trường",
+          "level": 4,
+          "line": 44
+        },
+        {
+          "heading": "2. Phân tách theo Agent",
+          "level": 4,
+          "line": 48
+        },
+        {
+          "heading": "3. Phân tách theo Nhà cung cấp hoặc Miền thanh toán",
+          "level": 4,
+          "line": 52
+        },
+        {
+          "heading": "11.1.4 Vòng đời chuẩn mực: Sinh khóa, Nạp vào, Xác minh, Chuyển đổi, Thu hồi",
+          "level": 3,
+          "line": 56
+        },
+        {
+          "heading": "11.1.5 Vòng đời sự cố: Ứng cứu khẩn cấp khi rò rỉ khóa",
+          "level": 3,
+          "line": 91
+        },
+        {
+          "heading": "11.1.6 Các sai lầm phổ biến & Trọng tâm nghiệm thu",
+          "level": 3,
+          "line": 101
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 10
+      }
+    },
+    {
+      "path": "11_reliability_security/11.2_rotation_cooldown.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 97,
+      "nonEmptyLines": 76,
+      "sections": [
+        {
+          "heading": "11.2 Làm nguội & Vô hiệu hóa (Cooldown): Cơ chế ngăn chặn lỗi lan rộng",
+          "level": 2,
+          "line": 1
+        },
+        {
+          "heading": "11.2.1 Bài toán mà cơ chế làm nguội (Cooldown) giải quyết: Ngăn chặn khuếch đại thử lại",
+          "level": 3,
+          "line": 5
+        },
+        {
+          "heading": "11.2.2 Cơ chế làm nguội Auth Profile: Phân cấp chính thức",
+          "level": 3,
+          "line": 11
+        },
+        {
+          "heading": "11.2.3 Nghiệm thu & Xử lý sự cố",
+          "level": 3,
+          "line": 85
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 4
+      }
+    },
+    {
+      "path": "11_reliability_security/11.3_fallback_rules.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 90,
+      "nonEmptyLines": 63,
+      "sections": [
+        {
+          "heading": "11.3 Chuỗi dự phòng mô hình (Fallback Chain) & Phân luồng xử lý lỗi",
+          "level": 2,
+          "line": 1
+        },
+        {
+          "heading": "11.3.1 Mục tiêu của Fallback: Ưu tiên tính liên tục nhưng phải có khả năng giải thích",
+          "level": 3,
+          "line": 5
+        },
+        {
+          "heading": "11.3.2 Thiết kế quy tắc: Phân luồng theo thứ tự tuần tự",
+          "level": 3,
+          "line": 16
+        },
+        {
+          "heading": "11.3.3 Các hành vi thông minh bên trong chuỗi Fallback",
+          "level": 3,
+          "line": 62
+        },
+        {
+          "heading": "11.3.4 Phương pháp xác minh: Bơm lỗi & Đối soát nhật ký Log",
+          "level": 3,
+          "line": 76
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 5
+      }
+    },
+    {
+      "path": "11_reliability_security/11.4_guardrails.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 107,
+      "nonEmptyLines": 77,
+      "sections": [
+        {
+          "heading": "11.4 Hàng rào bảo vệ (Guardrails): Liên kết Tool Policy, Sandbox, Phê duyệt & Kiểm toán",
+          "level": 2,
+          "line": 1
+        },
+        {
+          "heading": "11.4.1 Chính sách công cụ: Thu hẹp bề mặt năng lực bằng allow/deny, kiểm soát exec và phân tầng kênh",
+          "level": 3,
+          "line": 21
+        },
+        {
+          "heading": "11.4.2 Hộp cát (Sandbox): Cô lập vùng thực thi có độ rủi ro cao",
+          "level": 3,
+          "line": 57
+        },
+        {
+          "heading": "11.4.3 Cách ly thông tin nhạy cảm & Phê duyệt thực thi (Exec Approvals)",
+          "level": 3,
+          "line": 66
+        },
+        {
+          "heading": "11.4.4 Hệ thống kiểm toán an toàn: Kiến trúc thu thập đa chiều",
+          "level": 3,
+          "line": 73
+        },
+        {
+          "heading": "11.4.5 Kiểm toán & Làm mờ dữ liệu (Data Masking)",
+          "level": 3,
+          "line": 84
+        },
+        {
+          "heading": "11.4.6 Danh mục triển khai tối thiểu",
+          "level": 3,
+          "line": 90
+        },
+        {
+          "heading": "11.4.7 Bộ lệnh nghiệm thu & Chẩn đoán",
+          "level": 3,
+          "line": 97
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 8
+      }
+    },
+    {
+      "path": "11_reliability_security/README.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 25,
+      "nonEmptyLines": 17,
+      "sections": [
+        {
+          "heading": "Chương 11: Hiện thực hóa cơ chế tin cậy & An toàn",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "Mục lục hướng dẫn chương",
+          "level": 2,
+          "line": 5
+        },
+        {
+          "heading": "Mục tiêu học tập",
+          "level": 2,
+          "line": 15
+        },
+        {
+          "heading": "Lời khuyên khi đọc",
+          "level": 2,
+          "line": 23
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 4
+      }
+    },
+    {
+      "path": "11_reliability_security/summary.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 25,
+      "nonEmptyLines": 16,
+      "sections": [
+        {
+          "heading": "11.5 Tóm tắt chương",
+          "level": 2,
+          "line": 1
+        },
+        {
+          "heading": "11.5.1 Các kết luận trọng yếu",
+          "level": 3,
+          "line": 5
+        },
+        {
+          "heading": "11.5.2 Checklist tự kiểm tra",
+          "level": 3,
+          "line": 12
+        },
+        {
+          "heading": "11.5.3 Giới thiệu chương tiếp theo",
+          "level": 3,
+          "line": 18
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 4
+      }
+    }
+  ]
+}

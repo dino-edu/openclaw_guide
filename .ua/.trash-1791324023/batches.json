@@ -1,0 +1,1204 @@
+{
+  "schemaVersion": 1,
+  "algorithm": "louvain",
+  "totalFiles": 135,
+  "totalBatches": 20,
+  "exportsByPath": {
+    "check_emphasis.py": [
+      "_fence_match",
+      "_is_in_code_block",
+      "_is_in_mermaid_block",
+      "_is_punct",
+      "_is_space",
+      "_left_flanking",
+      "_right_flanking",
+      "_neutralize_code",
+      "_scan_runs",
+      "_process_emphasis",
+      "_snippet",
+      "check_emphasis",
+      "iter_markdown_files",
+      "main"
+    ],
+    "check_project_rules.py": [
+      "check_volatile_facts",
+      "iter_markdown_files",
+      "strip_fenced_blocks",
+      "check_fences",
+      "is_local_target",
+      "normalize_target",
+      "check_links",
+      "check_summary_links",
+      "main"
+    ],
+    "tests/test_build_pdf.py": [
+      "BuildPdfTests"
+    ],
+    "tests/test_cjk_typography.py": [
+      "mask",
+      "prose_lines",
+      "markdown_files",
+      "unspaced",
+      "half_width_parens",
+      "CjkTypographyTests"
+    ],
+    "tests/test_html_list_rendering.py": [
+      "_reader_pandoc_format",
+      "HtmlListRenderingTests"
+    ],
+    "tests/test_installation_contracts.py": [
+      "InstallationContractTests"
+    ],
+    "tests/test_verify_artifacts.py": [
+      "load_verifier",
+      "ArtifactVerifierTests"
+    ],
+    "tests/test_workflow_security.py": [
+      "job_block",
+      "workflow_step_script",
+      "workflow_step_scripts_in_document_order",
+      "WorkflowSecurityTests"
+    ],
+    "tools/build_html_reader.py": [
+      "esc",
+      "escattr",
+      "parse_summary",
+      "fix_inline_dollar",
+      "process_file",
+      "main"
+    ],
+    "tools/build_pdf.py": [
+      "positive_float",
+      "nonnegative_float",
+      "append_log",
+      "terminate_process_tree",
+      "build_once",
+      "parse_args",
+      "main"
+    ],
+    "tools/render_mermaid.py": [
+      "render",
+      "done"
+    ],
+    "tools/verify_artifacts.py": [
+      "ArtifactVerificationError",
+      "normalized_title",
+      "require_file",
+      "sha256_file",
+      "verify_html",
+      "command_output",
+      "verify_pdf",
+      "write_checksums",
+      "verify_checksums",
+      "parse_args",
+      "main"
+    ]
+  },
+  "batches": [
+    {
+      "batchIndex": 1,
+      "files": [
+        {
+          "path": ".github/workflows/auto-release.yml",
+          "language": "yaml",
+          "sizeLines": 184,
+          "fileCategory": "infra"
+        },
+        {
+          "path": ".github/workflows/ci.yaml",
+          "language": "yaml",
+          "sizeLines": 128,
+          "fileCategory": "infra"
+        },
+        {
+          "path": ".github/workflows/dependabot-automerge.yml",
+          "language": "yaml",
+          "sizeLines": 31,
+          "fileCategory": "infra"
+        },
+        {
+          "path": ".github/workflows/identity-guard.yaml",
+          "language": "yaml",
+          "sizeLines": 137,
+          "fileCategory": "infra"
+        },
+        {
+          "path": ".github/workflows/preview-pdf.yml",
+          "language": "yaml",
+          "sizeLines": 241,
+          "fileCategory": "infra"
+        }
+      ],
+      "batchImportData": {
+        ".github/workflows/auto-release.yml": [],
+        ".github/workflows/ci.yaml": [],
+        ".github/workflows/dependabot-automerge.yml": [],
+        ".github/workflows/identity-guard.yaml": [],
+        ".github/workflows/preview-pdf.yml": []
+      },
+      "neighborMap": {}
+    },
+    {
+      "batchIndex": 2,
+      "files": [
+        {
+          "path": "01_overview/1.1_what_is_openclaw.md",
+          "language": "markdown",
+          "sizeLines": 91,
+          "fileCategory": "docs"
+        },
+        {
+          "path": "01_overview/1.2_scenarios_comparison.md",
+          "language": "markdown",
+          "sizeLines": 33,
+          "fileCategory": "docs"
+        },
+        {
+          "path": "01_overview/1.3_concepts.md",
+          "language": "markdown",
+          "sizeLines": 68,
+          "fileCategory": "docs"
+        },
+        {
+          "path": "01_overview/1.4_use_cases.md",
+          "language": "markdown",
+          "sizeLines": 58,
+          "fileCategory": "docs"
+        },
+        {
+          "path": "01_overview/README.md",
+          "language": "markdown",
+          "sizeLines": 35,
+          "fileCategory": "docs"
+        },
+        {
+          "path": "01_overview/summary.md",
+          "language": "markdown",
+          "sizeLines": 25,
+          "fileCategory": "docs"
+        }
+      ],
+      "batchImportData": {
+        "01_overview/1.1_what_is_openclaw.md": [],
+        "01_overview/1.2_scenarios_comparison.md": [],
+        "01_overview/1.3_concepts.md": [],
+        "01_overview/1.4_use_cases.md": [],
+        "01_overview/README.md": [],
+        "01_overview/summary.md": []
+      },
+      "neighborMap": {}
+    },
+    {
+      "batchIndex": 3,
+      "files": [
+        {
+          "path": "02_setup/2.1_requirements.md",
+          "language": "markdown",
+          "sizeLines": 54,
+          "fileCategory": "docs"
+        },
+        {
+          "path": "02_setup/2.2_installation.md",
+          "language": "markdown",
+          "sizeLines": 247,
+          "fileCategory": "docs"
+        },
+        {
+          "path": "02_setup/2.3_onboarding.md",
+          "language": "markdown",
+          "sizeLines": 86,
+          "fileCategory": "docs"
+        },
+        {
+          "path": "02_setup/2.4_gateway_service.md",
+          "language": "markdown",
+          "sizeLines": 133,
+          "fileCategory": "docs"
+        },
+        {
+          "path": "02_setup/README.md",
+          "language": "markdown",
+          "sizeLines": 27,
+          "fileCategory": "docs"
+        },
+        {
+          "path": "02_setup/summary.md",
+          "language": "markdown",
+          "sizeLines": 24,
+          "fileCategory": "docs"
+        }
+      ],
+      "batchImportData": {
+        "02_setup/2.1_requirements.md": [],
+        "02_setup/2.2_installation.md": [],
+        "02_setup/2.3_onboarding.md": [],
+        "02_setup/2.4_gateway_service.md": [],
+        "02_setup/README.md": [],
+        "02_setup/summary.md": []
+      },
+      "neighborMap": {}
+    },
+    {
+      "batchIndex": 4,
+      "files": [
+        {
+          "path": "03_minimal_loop/3.1_control_ui_webchat.md",
+          "language": "markdown",
+          "sizeLines": 144,
+          "fileCategory": "docs"
+        },
+        {
+          "path": "03_minimal_loop/3.2_diagnostics.md",
+          "language": "markdown",
+          "sizeLines": 92,
+          "fileCategory": "docs"
+        },
+        {
+          "path": "03_minimal_loop/3.3_agent_persona.md",
+          "language": "markdown",
+          "sizeLines": 65,
+          "fileCategory": "docs"
+        },
+        {
+          "path": "03_minimal_loop/3.4_pairing_groups.md",
+          "language": "markdown",
+          "sizeLines": 78,
+          "fileCategory": "docs"
+        },
+        {
+          "path": "03_minimal_loop/README.md",
+          "language": "markdown",
+          "sizeLines": 38,
+          "fileCategory": "docs"
+        },
+        {
+          "path": "03_minimal_loop/summary.md",
+          "language": "markdown",
+          "sizeLines": 24,
+          "fileCategory": "docs"
+        }
+      ],
+      "batchImportData": {
+        "03_minimal_loop/3.1_control_ui_webchat.md": [],
+        "03_minimal_loop/3.2_diagnostics.md": [],
+        "03_minimal_loop/3.3_agent_persona.md": [],
+        "03_minimal_loop/3.4_pairing_groups.md": [],
+        "03_minimal_loop/README.md": [],
+        "03_minimal_loop/summary.md": []
+      },
+      "neighborMap": {}
+    },
+    {
+      "batchIndex": 5,
+      "files": [
+        {
+          "path": "04_config_models/4.1_config_system.md",
+          "language": "markdown",
+          "sizeLines": 108,
+          "fileCategory": "docs"
+        },
+        {
+          "path": "04_config_models/4.2_provider_access.md",
+          "language": "markdown",
+          "sizeLines": 327,
+          "fileCategory": "docs"
+        },
+        {
+          "path": "04_config_models/4.3_model_selection.md",
+          "language": "markdown",
+          "sizeLines": 173,
+          "fileCategory": "docs"
+        },
+        {
+          "path": "04_config_models/4.4_failover.md",
+          "language": "markdown",
+          "sizeLines": 78,
+          "fileCategory": "docs"
+        },
+        {
+          "path": "04_config_models/README.md",
+          "language": "markdown",
+          "sizeLines": 30,
+          "fileCategory": "docs"
+        },
+        {
+          "path": "04_config_models/summary.md",
+          "language": "markdown",
+          "sizeLines": 58,
+          "fileCategory": "docs"
+        }
+      ],
+      "batchImportData": {
+        "04_config_models/4.1_config_system.md": [],
+        "04_config_models/4.2_provider_access.md": [],
+        "04_config_models/4.3_model_selection.md": [],
+        "04_config_models/4.4_failover.md": [],
+        "04_config_models/README.md": [],
+        "04_config_models/summary.md": []
+      },
+      "neighborMap": {}
+    },
+    {
+      "batchIndex": 6,
+      "files": [
+        {
+          "path": "05_tools_skills/5.1_tool_inventory.md",
+          "language": "markdown",
+          "sizeLines": 160,
+          "fileCategory": "docs"
+        },
+        {
+          "path": "05_tools_skills/5.2_tool_policy.md",
+          "language": "markdown",
+          "sizeLines": 200,
+          "fileCategory": "docs"
+        },
+        {
+          "path": "05_tools_skills/5.3_skills_plugins.md",
+          "language": "markdown",
+          "sizeLines": 140,
+          "fileCategory": "docs"
+        },
+        {
+          "path": "05_tools_skills/5.4_browser_nodes.md",
+          "language": "markdown",
+          "sizeLines": 114,
+          "fileCategory": "docs"
+        },
+        {
+          "path": "05_tools_skills/README.md",
+          "language": "markdown",
+          "sizeLines": 45,
+          "fileCategory": "docs"
+        },
+        {
+          "path": "05_tools_skills/summary.md",
+          "language": "markdown",
+          "sizeLines": 32,
+          "fileCategory": "docs"
+        }
+      ],
+      "batchImportData": {
+        "05_tools_skills/5.1_tool_inventory.md": [],
+        "05_tools_skills/5.2_tool_policy.md": [],
+        "05_tools_skills/5.3_skills_plugins.md": [],
+        "05_tools_skills/5.4_browser_nodes.md": [],
+        "05_tools_skills/README.md": [],
+        "05_tools_skills/summary.md": []
+      },
+      "neighborMap": {}
+    },
+    {
+      "batchIndex": 7,
+      "files": [
+        {
+          "path": "06_context_memory/6.1_sessions.md",
+          "language": "markdown",
+          "sizeLines": 135,
+          "fileCategory": "docs"
+        },
+        {
+          "path": "06_context_memory/6.2_context_building.md",
+          "language": "markdown",
+          "sizeLines": 66,
+          "fileCategory": "docs"
+        },
+        {
+          "path": "06_context_memory/6.3_memory_mechanism.md",
+          "language": "markdown",
+          "sizeLines": 99,
+          "fileCategory": "docs"
+        },
+        {
+          "path": "06_context_memory/6.4_compaction_pruning.md",
+          "language": "markdown",
+          "sizeLines": 127,
+          "fileCategory": "docs"
+        },
+        {
+          "path": "06_context_memory/README.md",
+          "language": "markdown",
+          "sizeLines": 33,
+          "fileCategory": "docs"
+        },
+        {
+          "path": "06_context_memory/summary.md",
+          "language": "markdown",
+          "sizeLines": 35,
+          "fileCategory": "docs"
+        }
+      ],
+      "batchImportData": {
+        "06_context_memory/6.1_sessions.md": [],
+        "06_context_memory/6.2_context_building.md": [],
+        "06_context_memory/6.3_memory_mechanism.md": [],
+        "06_context_memory/6.4_compaction_pruning.md": [],
+        "06_context_memory/README.md": [],
+        "06_context_memory/summary.md": []
+      },
+      "neighborMap": {}
+    },
+    {
+      "batchIndex": 8,
+      "files": [
+        {
+          "path": "07_multi_agent/7.1_telegram_whatsapp.md",
+          "language": "markdown",
+          "sizeLines": 168,
+          "fileCategory": "docs"
+        },
+        {
+          "path": "07_multi_agent/7.2_lark_integration.md",
+          "language": "markdown",
+          "sizeLines": 131,
+          "fileCategory": "docs"
+        },
+        {
+          "path": "07_multi_agent/7.3_routing_basics.md",
+          "language": "markdown",
+          "sizeLines": 233,
+          "fileCategory": "docs"
+        },
+        {
+          "path": "07_multi_agent/7.4_collaboration_patterns.md",
+          "language": "markdown",
+          "sizeLines": 226,
+          "fileCategory": "docs"
+        },
+        {
+          "path": "07_multi_agent/README.md",
+          "language": "markdown",
+          "sizeLines": 25,
+          "fileCategory": "docs"
+        },
+        {
+          "path": "07_multi_agent/summary.md",
+          "language": "markdown",
+          "sizeLines": 27,
+          "fileCategory": "docs"
+        }
+      ],
+      "batchImportData": {
+        "07_multi_agent/7.1_telegram_whatsapp.md": [],
+        "07_multi_agent/7.2_lark_integration.md": [],
+        "07_multi_agent/7.3_routing_basics.md": [],
+        "07_multi_agent/7.4_collaboration_patterns.md": [],
+        "07_multi_agent/README.md": [],
+        "07_multi_agent/summary.md": []
+      },
+      "neighborMap": {}
+    },
+    {
+      "batchIndex": 9,
+      "files": [
+        {
+          "path": "08_automation_ops/8.1_hooks.md",
+          "language": "markdown",
+          "sizeLines": 122,
+          "fileCategory": "docs"
+        },
+        {
+          "path": "08_automation_ops/8.2_cron_jobs.md",
+          "language": "markdown",
+          "sizeLines": 145,
+          "fileCategory": "docs"
+        },
+        {
+          "path": "08_automation_ops/8.3_heartbeat.md",
+          "language": "markdown",
+          "sizeLines": 252,
+          "fileCategory": "docs"
+        },
+        {
+          "path": "08_automation_ops/8.4_remote_access.md",
+          "language": "markdown",
+          "sizeLines": 95,
+          "fileCategory": "docs"
+        },
+        {
+          "path": "08_automation_ops/8.5_security_baseline.md",
+          "language": "markdown",
+          "sizeLines": 146,
+          "fileCategory": "docs"
+        },
+        {
+          "path": "08_automation_ops/README.md",
+          "language": "markdown",
+          "sizeLines": 32,
+          "fileCategory": "docs"
+        },
+        {
+          "path": "08_automation_ops/summary.md",
+          "language": "markdown",
+          "sizeLines": 34,
+          "fileCategory": "docs"
+        }
+      ],
+      "batchImportData": {
+        "08_automation_ops/8.1_hooks.md": [],
+        "08_automation_ops/8.2_cron_jobs.md": [],
+        "08_automation_ops/8.3_heartbeat.md": [],
+        "08_automation_ops/8.4_remote_access.md": [],
+        "08_automation_ops/8.5_security_baseline.md": [],
+        "08_automation_ops/README.md": [],
+        "08_automation_ops/summary.md": []
+      },
+      "neighborMap": {}
+    },
+    {
+      "batchIndex": 10,
+      "files": [
+        {
+          "path": "09_gateway_protocol/9.1_architecture_overview.md",
+          "language": "markdown",
+          "sizeLines": 86,
+          "fileCategory": "docs"
+        },
+        {
+          "path": "09_gateway_protocol/9.2_control_plane.md",
+          "language": "markdown",
+          "sizeLines": 162,
+          "fileCategory": "docs"
+        },
+        {
+          "path": "09_gateway_protocol/9.3_ws_handshake.md",
+          "language": "markdown",
+          "sizeLines": 119,
+          "fileCategory": "docs"
+        },
+        {
+          "path": "09_gateway_protocol/9.4_event_idempotency.md",
+          "language": "markdown",
+          "sizeLines": 120,
+          "fileCategory": "docs"
+        },
+        {
+          "path": "09_gateway_protocol/9.5_pairing_trust.md",
+          "language": "markdown",
+          "sizeLines": 99,
+          "fileCategory": "docs"
+        },
+        {
+          "path": "09_gateway_protocol/README.md",
+          "language": "markdown",
+          "sizeLines": 24,
+          "fileCategory": "docs"
+        },
+        {
+          "path": "09_gateway_protocol/summary.md",
+          "language": "markdown",
+          "sizeLines": 25,
+          "fileCategory": "docs"
+        }
+      ],
+      "batchImportData": {
+        "09_gateway_protocol/9.1_architecture_overview.md": [],
+        "09_gateway_protocol/9.2_control_plane.md": [],
+        "09_gateway_protocol/9.3_ws_handshake.md": [],
+        "09_gateway_protocol/9.4_event_idempotency.md": [],
+        "09_gateway_protocol/9.5_pairing_trust.md": [],
+        "09_gateway_protocol/README.md": [],
+        "09_gateway_protocol/summary.md": []
+      },
+      "neighborMap": {}
+    },
+    {
+      "batchIndex": 11,
+      "files": [
+        {
+          "path": "10_agent_loop/10.1_request_lifecycle.md",
+          "language": "markdown",
+          "sizeLines": 97,
+          "fileCategory": "docs"
+        },
+        {
+          "path": "10_agent_loop/10.2_pi_framework.md",
+          "language": "markdown",
+          "sizeLines": 106,
+          "fileCategory": "docs"
+        },
+        {
+          "path": "10_agent_loop/10.3_entry_queue.md",
+          "language": "markdown",
+          "sizeLines": 98,
+          "fileCategory": "docs"
+        },
+        {
+          "path": "10_agent_loop/10.4_prompt_assembly.md",
+          "language": "markdown",
+          "sizeLines": 139,
+          "fileCategory": "docs"
+        },
+        {
+          "path": "10_agent_loop/10.5_tool_execution.md",
+          "language": "markdown",
+          "sizeLines": 78,
+          "fileCategory": "docs"
+        },
+        {
+          "path": "10_agent_loop/10.6_streaming_retry.md",
+          "language": "markdown",
+          "sizeLines": 82,
+          "fileCategory": "docs"
+        },
+        {
+          "path": "10_agent_loop/README.md",
+          "language": "markdown",
+          "sizeLines": 23,
+          "fileCategory": "docs"
+        },
+        {
+          "path": "10_agent_loop/summary.md",
+          "language": "markdown",
+          "sizeLines": 27,
+          "fileCategory": "docs"
+        }
+      ],
+      "batchImportData": {
+        "10_agent_loop/10.1_request_lifecycle.md": [],
+        "10_agent_loop/10.2_pi_framework.md": [],
+        "10_agent_loop/10.3_entry_queue.md": [],
+        "10_agent_loop/10.4_prompt_assembly.md": [],
+        "10_agent_loop/10.5_tool_execution.md": [],
+        "10_agent_loop/10.6_streaming_retry.md": [],
+        "10_agent_loop/README.md": [],
+        "10_agent_loop/summary.md": []
+      },
+      "neighborMap": {}
+    },
+    {
+      "batchIndex": 12,
+      "files": [
+        {
+          "path": "11_reliability_security/11.1_auth_profiles.md",
+          "language": "markdown",
+          "sizeLines": 119,
+          "fileCategory": "docs"
+        },
+        {
+          "path": "11_reliability_security/11.2_rotation_cooldown.md",
+          "language": "markdown",
+          "sizeLines": 97,
+          "fileCategory": "docs"
+        },
+        {
+          "path": "11_reliability_security/11.3_fallback_rules.md",
+          "language": "markdown",
+          "sizeLines": 90,
+          "fileCategory": "docs"
+        },
+        {
+          "path": "11_reliability_security/11.4_guardrails.md",
+          "language": "markdown",
+          "sizeLines": 107,
+          "fileCategory": "docs"
+        },
+        {
+          "path": "11_reliability_security/README.md",
+          "language": "markdown",
+          "sizeLines": 25,
+          "fileCategory": "docs"
+        },
+        {
+          "path": "11_reliability_security/summary.md",
+          "language": "markdown",
+          "sizeLines": 25,
+          "fileCategory": "docs"
+        }
+      ],
+      "batchImportData": {
+        "11_reliability_security/11.1_auth_profiles.md": [],
+        "11_reliability_security/11.2_rotation_cooldown.md": [],
+        "11_reliability_security/11.3_fallback_rules.md": [],
+        "11_reliability_security/11.4_guardrails.md": [],
+        "11_reliability_security/README.md": [],
+        "11_reliability_security/summary.md": []
+      },
+      "neighborMap": {}
+    },
+    {
+      "batchIndex": 13,
+      "files": [
+        {
+          "path": "12_extension_engineering/12.1_plugin_architecture.md",
+          "language": "markdown",
+          "sizeLines": 219,
+          "fileCategory": "docs"
+        },
+        {
+          "path": "12_extension_engineering/12.2_custom_tools.md",
+          "language": "markdown",
+          "sizeLines": 217,
+          "fileCategory": "docs"
+        },
+        {
+          "path": "12_extension_engineering/12.3_testing_debugging.md",
+          "language": "markdown",
+          "sizeLines": 227,
+          "fileCategory": "docs"
+        },
+        {
+          "path": "12_extension_engineering/12.4_production_blueprint.md",
+          "language": "markdown",
+          "sizeLines": 141,
+          "fileCategory": "docs"
+        },
+        {
+          "path": "12_extension_engineering/12.5_framework_interoperability.md",
+          "language": "markdown",
+          "sizeLines": 131,
+          "fileCategory": "docs"
+        },
+        {
+          "path": "12_extension_engineering/README.md",
+          "language": "markdown",
+          "sizeLines": 25,
+          "fileCategory": "docs"
+        },
+        {
+          "path": "12_extension_engineering/summary.md",
+          "language": "markdown",
+          "sizeLines": 25,
+          "fileCategory": "docs"
+        }
+      ],
+      "batchImportData": {
+        "12_extension_engineering/12.1_plugin_architecture.md": [],
+        "12_extension_engineering/12.2_custom_tools.md": [],
+        "12_extension_engineering/12.3_testing_debugging.md": [],
+        "12_extension_engineering/12.4_production_blueprint.md": [],
+        "12_extension_engineering/12.5_framework_interoperability.md": [],
+        "12_extension_engineering/README.md": [],
+        "12_extension_engineering/summary.md": []
+      },
+      "neighborMap": {}
+    },
+    {
+      "batchIndex": 14,
+      "files": [
+        {
+          "path": "13_practical_cases/13.1_lark_slack_workbot.md",
+          "language": "markdown",
+          "sizeLines": 167,
+          "fileCategory": "docs"
+        },
+        {
+          "path": "13_practical_cases/13.2_customer_support_agent.md",
+          "language": "markdown",
+          "sizeLines": 161,
+          "fileCategory": "docs"
+        },
+        {
+          "path": "13_practical_cases/13.3_vertical_industry_cases.md",
+          "language": "markdown",
+          "sizeLines": 54,
+          "fileCategory": "docs"
+        },
+        {
+          "path": "13_practical_cases/README.md",
+          "language": "markdown",
+          "sizeLines": 10,
+          "fileCategory": "docs"
+        },
+        {
+          "path": "13_practical_cases/summary.md",
+          "language": "markdown",
+          "sizeLines": 20,
+          "fileCategory": "docs"
+        }
+      ],
+      "batchImportData": {
+        "13_practical_cases/13.1_lark_slack_workbot.md": [],
+        "13_practical_cases/13.2_customer_support_agent.md": [],
+        "13_practical_cases/13.3_vertical_industry_cases.md": [],
+        "13_practical_cases/README.md": [],
+        "13_practical_cases/summary.md": []
+      },
+      "neighborMap": {}
+    },
+    {
+      "batchIndex": 15,
+      "files": [
+        {
+          "path": "14_performance_cost/14.1_token_context_cost.md",
+          "language": "markdown",
+          "sizeLines": 220,
+          "fileCategory": "docs"
+        },
+        {
+          "path": "14_performance_cost/14.2_latency_throughput.md",
+          "language": "markdown",
+          "sizeLines": 194,
+          "fileCategory": "docs"
+        },
+        {
+          "path": "14_performance_cost/14.3_usage_budget.md",
+          "language": "markdown",
+          "sizeLines": 230,
+          "fileCategory": "docs"
+        },
+        {
+          "path": "14_performance_cost/14.4_budget_templates.md",
+          "language": "markdown",
+          "sizeLines": 256,
+          "fileCategory": "docs"
+        },
+        {
+          "path": "14_performance_cost/README.md",
+          "language": "markdown",
+          "sizeLines": 13,
+          "fileCategory": "docs"
+        },
+        {
+          "path": "14_performance_cost/summary.md",
+          "language": "markdown",
+          "sizeLines": 31,
+          "fileCategory": "docs"
+        }
+      ],
+      "batchImportData": {
+        "14_performance_cost/14.1_token_context_cost.md": [],
+        "14_performance_cost/14.2_latency_throughput.md": [],
+        "14_performance_cost/14.3_usage_budget.md": [],
+        "14_performance_cost/14.4_budget_templates.md": [],
+        "14_performance_cost/README.md": [],
+        "14_performance_cost/summary.md": []
+      },
+      "neighborMap": {}
+    },
+    {
+      "batchIndex": 16,
+      "files": [
+        {
+          "path": "15_troubleshooting_trees/15.1_diagnostic_decision_trees.md",
+          "language": "markdown",
+          "sizeLines": 467,
+          "fileCategory": "docs"
+        },
+        {
+          "path": "15_troubleshooting_trees/15.2_high_concurrency_diagnosis.md",
+          "language": "markdown",
+          "sizeLines": 269,
+          "fileCategory": "docs"
+        },
+        {
+          "path": "15_troubleshooting_trees/README.md",
+          "language": "markdown",
+          "sizeLines": 11,
+          "fileCategory": "docs"
+        },
+        {
+          "path": "15_troubleshooting_trees/summary.md",
+          "language": "markdown",
+          "sizeLines": 18,
+          "fileCategory": "docs"
+        }
+      ],
+      "batchImportData": {
+        "15_troubleshooting_trees/15.1_diagnostic_decision_trees.md": [],
+        "15_troubleshooting_trees/15.2_high_concurrency_diagnosis.md": [],
+        "15_troubleshooting_trees/README.md": [],
+        "15_troubleshooting_trees/summary.md": []
+      },
+      "neighborMap": {}
+    },
+    {
+      "batchIndex": 17,
+      "files": [
+        {
+          "path": "16_claude_ecosystem/16.1_claude_integration.md",
+          "language": "markdown",
+          "sizeLines": 129,
+          "fileCategory": "docs"
+        },
+        {
+          "path": "16_claude_ecosystem/16.2_agent_team_integration.md",
+          "language": "markdown",
+          "sizeLines": 142,
+          "fileCategory": "docs"
+        },
+        {
+          "path": "16_claude_ecosystem/16.3_other_ecosystems.md",
+          "language": "markdown",
+          "sizeLines": 178,
+          "fileCategory": "docs"
+        },
+        {
+          "path": "16_claude_ecosystem/README.md",
+          "language": "markdown",
+          "sizeLines": 10,
+          "fileCategory": "docs"
+        },
+        {
+          "path": "16_claude_ecosystem/summary.md",
+          "language": "markdown",
+          "sizeLines": 19,
+          "fileCategory": "docs"
+        }
+      ],
+      "batchImportData": {
+        "16_claude_ecosystem/16.1_claude_integration.md": [],
+        "16_claude_ecosystem/16.2_agent_team_integration.md": [],
+        "16_claude_ecosystem/16.3_other_ecosystems.md": [],
+        "16_claude_ecosystem/README.md": [],
+        "16_claude_ecosystem/summary.md": []
+      },
+      "neighborMap": {}
+    },
+    {
+      "batchIndex": 18,
+      "files": [
+        {
+          "path": "CONTRIBUTING.md",
+          "language": "markdown",
+          "sizeLines": 57,
+          "fileCategory": "docs"
+        },
+        {
+          "path": "README.md",
+          "language": "markdown",
+          "sizeLines": 116,
+          "fileCategory": "docs"
+        },
+        {
+          "path": "README_en.md",
+          "language": "markdown",
+          "sizeLines": 101,
+          "fileCategory": "docs"
+        },
+        {
+          "path": "SUMMARY.md",
+          "language": "markdown",
+          "sizeLines": 127,
+          "fileCategory": "docs"
+        },
+        {
+          "path": "book.json",
+          "language": "json",
+          "sizeLines": 18,
+          "fileCategory": "config"
+        },
+        {
+          "path": "package.json",
+          "language": "json",
+          "sizeLines": 11,
+          "fileCategory": "config"
+        }
+      ],
+      "batchImportData": {
+        "CONTRIBUTING.md": [],
+        "README.md": [],
+        "README_en.md": [],
+        "SUMMARY.md": [],
+        "book.json": [],
+        "package.json": []
+      },
+      "neighborMap": {}
+    },
+    {
+      "batchIndex": 19,
+      "files": [
+        {
+          "path": "appendix/README.md",
+          "language": "markdown",
+          "sizeLines": 16,
+          "fileCategory": "docs"
+        },
+        {
+          "path": "appendix/api_reference.md",
+          "language": "markdown",
+          "sizeLines": 53,
+          "fileCategory": "docs"
+        },
+        {
+          "path": "appendix/command_cheatsheet.md",
+          "language": "markdown",
+          "sizeLines": 308,
+          "fileCategory": "docs"
+        },
+        {
+          "path": "appendix/config_templates.md",
+          "language": "markdown",
+          "sizeLines": 230,
+          "fileCategory": "docs"
+        },
+        {
+          "path": "appendix/env_check.md",
+          "language": "markdown",
+          "sizeLines": 71,
+          "fileCategory": "docs"
+        },
+        {
+          "path": "appendix/glossary.md",
+          "language": "markdown",
+          "sizeLines": 48,
+          "fileCategory": "docs"
+        },
+        {
+          "path": "appendix/naming_history.md",
+          "language": "markdown",
+          "sizeLines": 10,
+          "fileCategory": "docs"
+        },
+        {
+          "path": "appendix/reading_list.md",
+          "language": "markdown",
+          "sizeLines": 64,
+          "fileCategory": "docs"
+        },
+        {
+          "path": "appendix/troubleshooting_checklist.md",
+          "language": "markdown",
+          "sizeLines": 148,
+          "fileCategory": "docs"
+        },
+        {
+          "path": "appendix/version_mapping.md",
+          "language": "markdown",
+          "sizeLines": 154,
+          "fileCategory": "docs"
+        },
+        {
+          "path": "appendix/volatile_facts.md",
+          "language": "markdown",
+          "sizeLines": 16,
+          "fileCategory": "docs"
+        }
+      ],
+      "batchImportData": {
+        "appendix/README.md": [],
+        "appendix/api_reference.md": [],
+        "appendix/command_cheatsheet.md": [],
+        "appendix/config_templates.md": [],
+        "appendix/env_check.md": [],
+        "appendix/glossary.md": [],
+        "appendix/naming_history.md": [],
+        "appendix/reading_list.md": [],
+        "appendix/troubleshooting_checklist.md": [],
+        "appendix/version_mapping.md": [],
+        "appendix/volatile_facts.md": []
+      },
+      "neighborMap": {}
+    },
+    {
+      "batchIndex": 20,
+      "files": [
+        {
+          "path": ".github/dependabot.yml",
+          "language": "yaml",
+          "sizeLines": 14,
+          "fileCategory": "config"
+        },
+        {
+          "path": ".ua/config.json",
+          "language": "json",
+          "sizeLines": 1,
+          "fileCategory": "config"
+        },
+        {
+          "path": "check_emphasis.py",
+          "language": "python",
+          "sizeLines": 274,
+          "fileCategory": "code"
+        },
+        {
+          "path": "check_project_rules.py",
+          "language": "python",
+          "sizeLines": 204,
+          "fileCategory": "code"
+        },
+        {
+          "path": "docs/superpowers/plans/2026-10-06-vietnamese-translation.md",
+          "language": "markdown",
+          "sizeLines": 281,
+          "fileCategory": "docs"
+        },
+        {
+          "path": "docs/superpowers/specs/2026-10-06-vietnamese-translation-design.md",
+          "language": "markdown",
+          "sizeLines": 100,
+          "fileCategory": "docs"
+        },
+        {
+          "path": "tests/test_build_pdf.py",
+          "language": "python",
+          "sizeLines": 183,
+          "fileCategory": "code"
+        },
+        {
+          "path": "tests/test_cjk_typography.py",
+          "language": "python",
+          "sizeLines": 207,
+          "fileCategory": "code"
+        },
+        {
+          "path": "tests/test_html_list_rendering.py",
+          "language": "python",
+          "sizeLines": 85,
+          "fileCategory": "code"
+        },
+        {
+          "path": "tests/test_installation_contracts.py",
+          "language": "python",
+          "sizeLines": 66,
+          "fileCategory": "code"
+        },
+        {
+          "path": "tests/test_verify_artifacts.py",
+          "language": "python",
+          "sizeLines": 81,
+          "fileCategory": "code"
+        },
+        {
+          "path": "tests/test_workflow_security.py",
+          "language": "python",
+          "sizeLines": 470,
+          "fileCategory": "code"
+        },
+        {
+          "path": "tools/build_html_reader.py",
+          "language": "python",
+          "sizeLines": 265,
+          "fileCategory": "code"
+        },
+        {
+          "path": "tools/build_pdf.py",
+          "language": "python",
+          "sizeLines": 158,
+          "fileCategory": "code"
+        },
+        {
+          "path": "tools/render_mermaid.py",
+          "language": "python",
+          "sizeLines": 84,
+          "fileCategory": "code"
+        },
+        {
+          "path": "tools/verify_artifacts.py",
+          "language": "python",
+          "sizeLines": 153,
+          "fileCategory": "code"
+        }
+      ],
+      "batchImportData": {
+        ".github/dependabot.yml": [],
+        ".ua/config.json": [],
+        "check_emphasis.py": [],
+        "check_project_rules.py": [],
+        "docs/superpowers/plans/2026-10-06-vietnamese-translation.md": [],
+        "docs/superpowers/specs/2026-10-06-vietnamese-translation-design.md": [],
+        "tests/test_build_pdf.py": [],
+        "tests/test_cjk_typography.py": [],
+        "tests/test_html_list_rendering.py": [],
+        "tests/test_installation_contracts.py": [],
+        "tests/test_verify_artifacts.py": [],
+        "tests/test_workflow_security.py": [],
+        "tools/build_html_reader.py": [],
+        "tools/build_pdf.py": [],
+        "tools/render_mermaid.py": [],
+        "tools/verify_artifacts.py": []
+      },
+      "neighborMap": {}
+    }
+  ]
+}

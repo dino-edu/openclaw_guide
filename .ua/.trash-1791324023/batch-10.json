@@ -1,0 +1,237 @@
+{
+  "nodes": [
+    {
+      "id": "document:09_gateway_protocol/9.1_architecture_overview.md",
+      "type": "document",
+      "name": "9.1_architecture_overview.md",
+      "filePath": "09_gateway_protocol/9.1_architecture_overview.md",
+      "summary": "Presents the five-plane architectural framework (Control, Data, Context, Trust, and Visibility planes) for understanding Gateway responsibilities and module boundaries. Analyzes plane interactions, execution surface separation, and cross-plane diagnostic tracing.",
+      "tags": [
+        "architecture-overview",
+        "five-plane-framework",
+        "control-plane",
+        "data-plane",
+        "documentation"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "document:09_gateway_protocol/9.2_control_plane.md",
+      "type": "document",
+      "name": "9.2_control_plane.md",
+      "filePath": "09_gateway_protocol/9.2_control_plane.md",
+      "summary": "Explores the five core duties and boundaries of the Gateway Control Plane: connection attribution, routing, session lifecycle, policy enforcement, and circuit-breaking failover. Introduces layered approval architecture and practical openclaw.json configuration examples.",
+      "tags": [
+        "control-plane",
+        "routing-dispatch",
+        "policy-enforcement",
+        "session-management",
+        "documentation"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "document:09_gateway_protocol/9.3_ws_handshake.md",
+      "type": "document",
+      "name": "9.3_ws_handshake.md",
+      "filePath": "09_gateway_protocol/9.3_ws_handshake.md",
+      "summary": "Details the full lifecycle of persistent WebSocket connections, covering challenge-response authentication, device identity signatures, keepalive heartbeats, and exponential backoff reconnection. Clarifies the architectural distinction between transport-level connections and stateful sessions.",
+      "tags": [
+        "websocket",
+        "handshake-protocol",
+        "challenge-response",
+        "heartbeat",
+        "documentation"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "document:09_gateway_protocol/9.4_event_idempotency.md",
+      "type": "document",
+      "name": "9.4_event_idempotency.md",
+      "filePath": "09_gateway_protocol/9.4_event_idempotency.md",
+      "summary": "Examines event idempotency, sequence ordering, and eventual consistency guarantees across distributed agent networks. Explains handling duplicate, lost, or unknown states via idempotency keys, sequence gap detection for snapshot refresh, and session-level mutex locking.",
+      "tags": [
+        "idempotency",
+        "event-ordering",
+        "sequence-gap",
+        "eventual-consistency",
+        "documentation"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "document:09_gateway_protocol/9.5_pairing_trust.md",
+      "type": "document",
+      "name": "9.5_pairing_trust.md",
+      "filePath": "09_gateway_protocol/9.5_pairing_trust.md",
+      "summary": "Explains establishing local trust perimeters via device identity registration, nonce-based cryptographic challenge verification, and operator approval workflows. Distinguishes Control Plane device pairing from chat-level DM sender pairing, and outlines token rotation and emergency revocation mechanisms.",
+      "tags": [
+        "device-pairing",
+        "trust-perimeter",
+        "cryptographic-verification",
+        "token-rotation",
+        "documentation"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "document:09_gateway_protocol/README.md",
+      "type": "document",
+      "name": "README.md",
+      "filePath": "09_gateway_protocol/README.md",
+      "summary": "Introduces Chapter 9 on OpenClaw Gateway control plane responsibilities, WebSocket connection lifecycles, event consistency, and local device pairing trust. Outlines the chapter outline, pedagogical five-plane architectural framework, and core learning objectives.",
+      "tags": [
+        "chapter-overview",
+        "gateway-protocol",
+        "control-plane",
+        "entry-point",
+        "documentation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "document:09_gateway_protocol/summary.md",
+      "type": "document",
+      "name": "summary.md",
+      "filePath": "09_gateway_protocol/summary.md",
+      "summary": "Summarizes Chapter 9 key conclusions on control plane arbitration, WebSocket lifecycle management, event idempotency, and device trust bootstrapping. Includes a self-check verification checklist and transitions to Chapter 10 agent loop mechanics.",
+      "tags": [
+        "chapter-summary",
+        "checklist",
+        "review",
+        "gateway-protocol",
+        "documentation"
+      ],
+      "complexity": "simple"
+    }
+  ],
+  "edges": [
+    {
+      "source": "document:09_gateway_protocol/README.md",
+      "target": "document:09_gateway_protocol/9.1_architecture_overview.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:09_gateway_protocol/README.md",
+      "target": "document:09_gateway_protocol/9.2_control_plane.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:09_gateway_protocol/README.md",
+      "target": "document:09_gateway_protocol/9.3_ws_handshake.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:09_gateway_protocol/README.md",
+      "target": "document:09_gateway_protocol/9.4_event_idempotency.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:09_gateway_protocol/README.md",
+      "target": "document:09_gateway_protocol/9.5_pairing_trust.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:09_gateway_protocol/README.md",
+      "target": "document:09_gateway_protocol/summary.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:09_gateway_protocol/summary.md",
+      "target": "document:09_gateway_protocol/9.1_architecture_overview.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:09_gateway_protocol/summary.md",
+      "target": "document:09_gateway_protocol/9.2_control_plane.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:09_gateway_protocol/summary.md",
+      "target": "document:09_gateway_protocol/9.3_ws_handshake.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:09_gateway_protocol/summary.md",
+      "target": "document:09_gateway_protocol/9.4_event_idempotency.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:09_gateway_protocol/summary.md",
+      "target": "document:09_gateway_protocol/9.5_pairing_trust.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:09_gateway_protocol/9.1_architecture_overview.md",
+      "target": "document:09_gateway_protocol/9.2_control_plane.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:09_gateway_protocol/9.1_architecture_overview.md",
+      "target": "document:09_gateway_protocol/9.5_pairing_trust.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:09_gateway_protocol/9.2_control_plane.md",
+      "target": "document:09_gateway_protocol/9.3_ws_handshake.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:09_gateway_protocol/9.2_control_plane.md",
+      "target": "document:09_gateway_protocol/9.5_pairing_trust.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:09_gateway_protocol/9.3_ws_handshake.md",
+      "target": "document:09_gateway_protocol/9.4_event_idempotency.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:09_gateway_protocol/9.3_ws_handshake.md",
+      "target": "document:09_gateway_protocol/9.5_pairing_trust.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:09_gateway_protocol/9.5_pairing_trust.md",
+      "target": "document:09_gateway_protocol/9.3_ws_handshake.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    }
+  ]
+}

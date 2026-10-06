@@ -1,0 +1,230 @@
+{
+  "nodes": [
+    {
+      "id": "document:08_automation_ops/README.md",
+      "type": "document",
+      "name": "README.md",
+      "filePath": "08_automation_ops/README.md",
+      "summary": "Serves as the chapter roadmap and table of contents for Chapter 8, introducing architectural governance across lifecycle hooks, cron jobs, heartbeat polling, remote access, and security baselines for 24/7 unattended operations.",
+      "tags": [
+        "documentation",
+        "overview",
+        "entry-point",
+        "automation",
+        "operations"
+      ],
+      "complexity": "simple",
+      "languageNotes": "Chapter overview establishing five dimensions of architectural governance required for sustainable unattended operations."
+    },
+    {
+      "id": "document:08_automation_ops/8.1_hooks.md",
+      "type": "document",
+      "name": "8.1_hooks.md",
+      "filePath": "08_automation_ops/8.1_hooks.md",
+      "summary": "Details OpenClaw lifecycle hooks and event interception points, establishing clear separation of cross-cutting governance concerns like rate limiting, auditing, and data masking while enforcing timeout, degradation, and idempotency constraints.",
+      "tags": [
+        "documentation",
+        "hooks",
+        "lifecycle",
+        "governance",
+        "interception"
+      ],
+      "complexity": "moderate",
+      "languageNotes": "Covers gateway hook discovery mechanisms, HOOK.md structure, handler TypeScript files, and diagnostic commands via openclaw hooks."
+    },
+    {
+      "id": "document:08_automation_ops/8.2_cron_jobs.md",
+      "type": "document",
+      "name": "8.2_cron_jobs.md",
+      "filePath": "08_automation_ops/8.2_cron_jobs.md",
+      "summary": "Guides the design and scheduling of exact-time unattended tasks using built-in gateway cron and external crontab integration, emphasizing idempotency keys, non-overlapping locks, and error triage.",
+      "tags": [
+        "documentation",
+        "cron-jobs",
+        "scheduling",
+        "automation",
+        "idempotency"
+      ],
+      "complexity": "moderate",
+      "languageNotes": "Differentiates main session events (--system-event) from isolated session tasks (--message) and details jobs.json versus jobs-state.json runtime persistence."
+    },
+    {
+      "id": "document:08_automation_ops/8.3_heartbeat.md",
+      "type": "document",
+      "name": "8.3_heartbeat.md",
+      "filePath": "08_automation_ops/8.3_heartbeat.md",
+      "summary": "Explains OpenClaw's periodic heartbeat mechanism for batched polling and notify-on-demand alerting, dissecting the timer-to-delivery lifecycle, HEARTBEAT_OK protocol, active hours configuration, and token cost optimization.",
+      "tags": [
+        "documentation",
+        "heartbeat",
+        "periodic-polling",
+        "monitoring",
+        "alerting"
+      ],
+      "complexity": "complex",
+      "languageNotes": "Details 250ms debounce merge, per-agent timers, HEARTBEAT.md inspection checklists, and suppression semantics using HEARTBEAT_OK."
+    },
+    {
+      "id": "document:08_automation_ops/8.4_remote_access.md",
+      "type": "document",
+      "name": "8.4_remote_access.md",
+      "filePath": "08_automation_ops/8.4_remote_access.md",
+      "summary": "Architects secure remote management for OpenClaw instances using SSH port forwarding, Tailscale Serve private network tunnels, Zero Trust identity principles, and rclone file synchronization.",
+      "tags": [
+        "documentation",
+        "remote-access",
+        "ssh-tunnel",
+        "tailscale",
+        "zero-trust"
+      ],
+      "complexity": "moderate",
+      "languageNotes": "Contrasts private Tailscale Serve against public Tailscale Funnel, detailing explicit CLI authentication requirements and remote browser takeover via KasmVNC."
+    },
+    {
+      "id": "document:08_automation_ops/8.5_security_baseline.md",
+      "type": "document",
+      "name": "8.5_security_baseline.md",
+      "filePath": "08_automation_ops/8.5_security_baseline.md",
+      "summary": "Establishes a verifiable defense-in-depth security baseline spanning ingress control, routing bindings, tool execution policies, and secret management with structured audit event logging.",
+      "tags": [
+        "documentation",
+        "security-baseline",
+        "defense-in-depth",
+        "audit-logging",
+        "access-control"
+      ],
+      "complexity": "moderate",
+      "languageNotes": "Formulates a four-tier defense model verified using openclaw doctor, status --deep, and structured JSON log streaming."
+    },
+    {
+      "id": "document:08_automation_ops/summary.md",
+      "type": "document",
+      "name": "summary.md",
+      "filePath": "08_automation_ops/summary.md",
+      "summary": "Summarizes key operational automation takeaways, provides a practical self-inspection checklist for production readiness, and showcases community deployment patterns.",
+      "tags": [
+        "documentation",
+        "summary",
+        "checklist",
+        "best-practices",
+        "operations"
+      ],
+      "complexity": "simple",
+      "languageNotes": "Includes self-check items for hooks, cron idempotency, heartbeat quiet hours, remote ingress verification, and previews Chapter 9."
+    }
+  ],
+  "edges": [
+    {
+      "source": "document:08_automation_ops/README.md",
+      "target": "document:08_automation_ops/8.1_hooks.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:08_automation_ops/README.md",
+      "target": "document:08_automation_ops/8.2_cron_jobs.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:08_automation_ops/README.md",
+      "target": "document:08_automation_ops/8.3_heartbeat.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:08_automation_ops/README.md",
+      "target": "document:08_automation_ops/8.4_remote_access.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:08_automation_ops/README.md",
+      "target": "document:08_automation_ops/8.5_security_baseline.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:08_automation_ops/README.md",
+      "target": "document:08_automation_ops/summary.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:08_automation_ops/summary.md",
+      "target": "document:08_automation_ops/8.1_hooks.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:08_automation_ops/summary.md",
+      "target": "document:08_automation_ops/8.2_cron_jobs.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:08_automation_ops/summary.md",
+      "target": "document:08_automation_ops/8.3_heartbeat.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:08_automation_ops/summary.md",
+      "target": "document:08_automation_ops/8.4_remote_access.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:08_automation_ops/summary.md",
+      "target": "document:08_automation_ops/8.5_security_baseline.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:08_automation_ops/8.2_cron_jobs.md",
+      "target": "document:08_automation_ops/8.3_heartbeat.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:08_automation_ops/8.3_heartbeat.md",
+      "target": "document:08_automation_ops/8.2_cron_jobs.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:08_automation_ops/8.4_remote_access.md",
+      "target": "document:08_automation_ops/8.5_security_baseline.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:08_automation_ops/8.5_security_baseline.md",
+      "target": "document:08_automation_ops/8.1_hooks.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:08_automation_ops/8.5_security_baseline.md",
+      "target": "document:08_automation_ops/8.4_remote_access.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    }
+  ]
+}

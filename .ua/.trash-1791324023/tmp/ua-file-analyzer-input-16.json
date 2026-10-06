@@ -1,0 +1,35 @@
+{
+  "projectRoot": "/Users/ngohongthai/Documents/openclaw_guide",
+  "batchFiles": [
+    {
+      "path": "15_troubleshooting_trees/15.1_diagnostic_decision_trees.md",
+      "language": "markdown",
+      "sizeLines": 467,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "15_troubleshooting_trees/15.2_high_concurrency_diagnosis.md",
+      "language": "markdown",
+      "sizeLines": 269,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "15_troubleshooting_trees/README.md",
+      "language": "markdown",
+      "sizeLines": 11,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "15_troubleshooting_trees/summary.md",
+      "language": "markdown",
+      "sizeLines": 18,
+      "fileCategory": "docs"
+    }
+  ],
+  "batchImportData": {
+    "15_troubleshooting_trees/15.1_diagnostic_decision_trees.md": [],
+    "15_troubleshooting_trees/15.2_high_concurrency_diagnosis.md": [],
+    "15_troubleshooting_trees/README.md": [],
+    "15_troubleshooting_trees/summary.md": []
+  }
+}

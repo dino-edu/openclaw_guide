@@ -1,0 +1,4295 @@
+{
+  "fileNodes": [
+    {
+      "id": "pipeline:.github/workflows/auto-release.yml",
+      "name": "auto-release.yml",
+      "filePath": ".github/workflows/auto-release.yml",
+      "summary": "Automates building, testing, verifying, attesting provenance, and publishing PDF and HTML guide editions for tagged releases.",
+      "type": "pipeline"
+    },
+    {
+      "id": "pipeline:.github/workflows/ci.yaml",
+      "name": "ci.yaml",
+      "filePath": ".github/workflows/ci.yaml",
+      "summary": "Continuous integration workflow that executes project tests and rule checks, followed by building and verifying PDF and HTML guide editions on pull requests and pushes to main.",
+      "type": "pipeline"
+    },
+    {
+      "id": "pipeline:.github/workflows/dependabot-automerge.yml",
+      "name": "dependabot-automerge.yml",
+      "filePath": ".github/workflows/dependabot-automerge.yml",
+      "summary": "Automatically enables auto-merge for Dependabot pull requests targeting semver patch updates while leaving minor and major updates for manual review.",
+      "type": "pipeline"
+    },
+    {
+      "id": "pipeline:.github/workflows/identity-guard.yaml",
+      "name": "identity-guard.yaml",
+      "filePath": ".github/workflows/identity-guard.yaml",
+      "summary": "Server-side git audit workflow that inspects commit authors, committers, and Co-authored-by trailers to prevent AI assistant identities from entering repository history.",
+      "type": "pipeline"
+    },
+    {
+      "id": "pipeline:.github/workflows/preview-pdf.yml",
+      "name": "preview-pdf.yml",
+      "filePath": ".github/workflows/preview-pdf.yml",
+      "summary": "Builds, verifies, and publishes rolling preview editions of the PDF and HTML guides to a mutable preview-pdf release tag on push to main.",
+      "type": "pipeline"
+    },
+    {
+      "id": "document:01_overview/README.md",
+      "name": "README.md",
+      "filePath": "01_overview/README.md",
+      "summary": "Introduces Chapter 1 of the OpenClaw guide, providing a table of contents and learning objectives for understanding the local-first AI assistant.",
+      "type": "document"
+    },
+    {
+      "id": "document:01_overview/1.1_what_is_openclaw.md",
+      "name": "1.1_what_is_openclaw.md",
+      "filePath": "01_overview/1.1_what_is_openclaw.md",
+      "summary": "Explains OpenClaw's architecture using a smart intern metaphor, addressing isolated AI capabilities, multi-channel messaging, and system auditability.",
+      "type": "document"
+    },
+    {
+      "id": "document:01_overview/1.2_scenarios_comparison.md",
+      "name": "1.2_scenarios_comparison.md",
+      "filePath": "01_overview/1.2_scenarios_comparison.md",
+      "summary": "Compares OpenClaw with ChatGPT, Cursor, Zapier, and Dify, analyzing token cost implications and practical workload suitability.",
+      "type": "document"
+    },
+    {
+      "id": "document:01_overview/1.3_concepts.md",
+      "name": "1.3_concepts.md",
+      "filePath": "01_overview/1.3_concepts.md",
+      "summary": "Introduces the five core concepts of OpenClaw—Gateway, Agent, Tool, Session, and Node—mapping out the message lifecycle and chapter cross-references.",
+      "type": "document"
+    },
+    {
+      "id": "document:01_overview/1.4_use_cases.md",
+      "name": "1.4_use_cases.md",
+      "filePath": "01_overview/1.4_use_cases.md",
+      "summary": "Outlines typical OpenClaw deployment scenarios, including personal ChatOps, smart home automation, auditable memory systems, and security sandbox research.",
+      "type": "document"
+    },
+    {
+      "id": "document:01_overview/summary.md",
+      "name": "summary.md",
+      "filePath": "01_overview/summary.md",
+      "summary": "Summarizes the fundamental principles covered in Chapter 1, featuring comprehension review questions and a preview of the setup chapter.",
+      "type": "document"
+    },
+    {
+      "id": "document:02_setup/README.md",
+      "name": "README.md",
+      "filePath": "02_setup/README.md",
+      "summary": "Serves as the chapter roadmap and table of contents for Chapter 2, outlining the four-step setup sequence from prerequisites to gateway acceptance testing.",
+      "type": "document"
+    },
+    {
+      "id": "document:02_setup/2.1_requirements.md",
+      "name": "2.1_requirements.md",
+      "filePath": "02_setup/2.1_requirements.md",
+      "summary": "Specifies hardware, Node.js runtime, network connectivity, and API credential prerequisites for deploying OpenClaw.",
+      "type": "document"
+    },
+    {
+      "id": "document:02_setup/2.2_installation.md",
+      "name": "2.2_installation.md",
+      "filePath": "02_setup/2.2_installation.md",
+      "summary": "Guides users through OpenClaw installation using the one-line install script, npm, Docker, and source builds, alongside environment variable and path configurations.",
+      "type": "document"
+    },
+    {
+      "id": "document:02_setup/2.3_onboarding.md",
+      "name": "2.3_onboarding.md",
+      "filePath": "02_setup/2.3_onboarding.md",
+      "summary": "Explains how to run the interactive onboarding wizard to configure models, workspaces, and daemons while defining workspace bootstrap file roles.",
+      "type": "document"
+    },
+    {
+      "id": "document:02_setup/2.4_gateway_service.md",
+      "name": "2.4_gateway_service.md",
+      "filePath": "02_setup/2.4_gateway_service.md",
+      "summary": "Details OpenClaw Gateway daemon management, local health acceptance testing checklists, and layered troubleshooting architectures.",
+      "type": "document"
+    },
+    {
+      "id": "document:02_setup/summary.md",
+      "name": "summary.md",
+      "filePath": "02_setup/summary.md",
+      "summary": "Reviews key setup takeaways, provides a post-installation security and operational checklist, and previews Chapter 3 minimal loop topics.",
+      "type": "document"
+    },
+    {
+      "id": "document:03_minimal_loop/3.1_control_ui_webchat.md",
+      "name": "3.1_control_ui_webchat.md",
+      "filePath": "03_minimal_loop/3.1_control_ui_webchat.md",
+      "summary": "Details the Control UI web dashboard navigation structure and minimal loop verification workflow using local webchat. Guides testing Gateway health, streaming outputs, and initial connection barriers before integrating external channels.",
+      "type": "document"
+    },
+    {
+      "id": "document:03_minimal_loop/3.2_diagnostics.md",
+      "name": "3.2_diagnostics.md",
+      "filePath": "03_minimal_loop/3.2_diagnostics.md",
+      "summary": "Establishes a systematic 4-tier diagnostic methodology across process, channels, AI models, and structured logs. Provides diagnostic CLI commands including deep status probes and guided repair tools to pinpoint failures.",
+      "type": "document"
+    },
+    {
+      "id": "document:03_minimal_loop/3.3_agent_persona.md",
+      "name": "3.3_agent_persona.md",
+      "filePath": "03_minimal_loop/3.3_agent_persona.md",
+      "summary": "Explains how to craft executable initial system instructions and configure agent personas across workspace markdown files like AGENTS.md and SOUL.md. Covers goal convergence, boundary enforcement, and format constraints.",
+      "type": "document"
+    },
+    {
+      "id": "document:03_minimal_loop/3.4_pairing_groups.md",
+      "name": "3.4_pairing_groups.md",
+      "filePath": "03_minimal_loop/3.4_pairing_groups.md",
+      "summary": "Covers local access boundaries, device pairing approval workflows, and default channel policies for direct messages and group chats. Explains how 'block first, approve later' establishes the minimal trust perimeter.",
+      "type": "document"
+    },
+    {
+      "id": "document:03_minimal_loop/README.md",
+      "name": "README.md",
+      "filePath": "03_minimal_loop/README.md",
+      "summary": "Introduces Chapter 3 on rapid setup and the first live interactive session using a local minimal loop baseline. Outlines the chapter contents, learning objectives, and prerequisites.",
+      "type": "document"
+    },
+    {
+      "id": "document:03_minimal_loop/summary.md",
+      "name": "summary.md",
+      "filePath": "03_minimal_loop/summary.md",
+      "summary": "Summarizes the essential design principles and self-check criteria for validating a minimal local conversational baseline. Concludes Chapter 3 and outlines next steps for configuration and AI model integration.",
+      "type": "document"
+    },
+    {
+      "id": "document:04_config_models/README.md",
+      "name": "README.md",
+      "filePath": "04_config_models/README.md",
+      "summary": "Introduces Chapter 4 on configuration systems and model governance, establishing learning objectives for config explanation, safe auth rotation, multi-dimensional model evaluation, and failover design.",
+      "type": "document"
+    },
+    {
+      "id": "document:04_config_models/4.1_config_system.md",
+      "name": "4.1_config_system.md",
+      "filePath": "04_config_models/4.1_config_system.md",
+      "summary": "Explains the openclaw.json structure, scope boundaries between Gateway, Agent, Channel, and Tool levels, configuration precedence layering, and the four-part evidence chain for verifying active parameters.",
+      "type": "document"
+    },
+    {
+      "id": "document:04_config_models/4.2_provider_access.md",
+      "name": "4.2_provider_access.md",
+      "filePath": "04_config_models/4.2_provider_access.md",
+      "summary": "Covers model provider connection strategies and authentication, comparing built-in onboarding with custom proxy configurations, SecretRef pipelines, multi-key auth profiles, and rate-limit cooldown handling.",
+      "type": "document"
+    },
+    {
+      "id": "document:04_config_models/4.3_model_selection.md",
+      "name": "4.3_model_selection.md",
+      "filePath": "04_config_models/4.3_model_selection.md",
+      "summary": "Presents a four-dimensional decision framework balancing quality, cost, latency, and reliability, detailing primary model setup in agents.defaults.model, per-agent overrides, and regression testing protocols.",
+      "type": "document"
+    },
+    {
+      "id": "document:04_config_models/4.4_failover.md",
+      "name": "4.4_failover.md",
+      "filePath": "04_config_models/4.4_failover.md",
+      "summary": "Details fault classification mapping, fallback chain configuration via agents.defaults.model.fallbacks, coordination with bounded retries, auth-profile cooldown tiers, and fault-injection verification.",
+      "type": "document"
+    },
+    {
+      "id": "document:04_config_models/summary.md",
+      "name": "summary.md",
+      "filePath": "04_config_models/summary.md",
+      "summary": "Summarizes Chapter 4 core conclusions, provides a minimal viable configuration loop and standard verification commands, and includes a self-assessment checklist for model governance.",
+      "type": "document"
+    },
+    {
+      "id": "document:05_tools_skills/README.md",
+      "name": "README.md",
+      "filePath": "05_tools_skills/README.md",
+      "summary": "Introduces Chapter 5 on OpenClaw's Action Layer, establishing the architectural relationship between intent proposal, tool contracts, permission policies, and execution governance.",
+      "type": "document"
+    },
+    {
+      "id": "document:05_tools_skills/5.1_tool_inventory.md",
+      "name": "5.1_tool_inventory.md",
+      "filePath": "05_tools_skills/5.1_tool_inventory.md",
+      "summary": "Explores tool inventory engineering, covering tool contracts, failure semantics, read-only vs. mutating boundaries, tool chaining with error propagation, result injection, and execution replayability.",
+      "type": "document"
+    },
+    {
+      "id": "document:05_tools_skills/5.2_tool_policy.md",
+      "name": "5.2_tool_policy.md",
+      "filePath": "05_tools_skills/5.2_tool_policy.md",
+      "summary": "Explains tool policy enforcement including global allow/deny precedence, tool profiles, channel and sender-level layering, provider customizations, and sub-agent depth restrictions.",
+      "type": "document"
+    },
+    {
+      "id": "document:05_tools_skills/5.3_skills_plugins.md",
+      "name": "5.3_skills_plugins.md",
+      "filePath": "05_tools_skills/5.3_skills_plugins.md",
+      "summary": "Delineates the division of labor between Plugins for runtime capability extension and Skills for process standardization, while highlighting ClawHub supply-chain risks and review checklists.",
+      "type": "document"
+    },
+    {
+      "id": "document:05_tools_skills/5.4_browser_nodes.md",
+      "name": "5.4_browser_nodes.md",
+      "filePath": "05_tools_skills/5.4_browser_nodes.md",
+      "summary": "Covers browser automation governance, detailing isolation boundaries, a 4-tier capability hierarchy from search to vision, CLI operations, and structured troubleshooting workflows.",
+      "type": "document"
+    },
+    {
+      "id": "document:05_tools_skills/summary.md",
+      "name": "summary.md",
+      "filePath": "05_tools_skills/summary.md",
+      "summary": "Summarizes Chapter 5 key conclusions on runtime policy boundaries and tool governance, providing diagnostic self-test questions and practical automation scenarios.",
+      "type": "document"
+    },
+    {
+      "id": "document:06_context_memory/README.md",
+      "name": "README.md",
+      "filePath": "06_context_memory/README.md",
+      "summary": "Introduces Chapter 6 on sessions, context, and memory, establishing learning objectives for session isolation, multi-tier context budgeting, long-term memory retrieval, and compaction management.",
+      "type": "document"
+    },
+    {
+      "id": "document:06_context_memory/6.1_sessions.md",
+      "name": "6.1_sessions.md",
+      "filePath": "06_context_memory/6.1_sessions.md",
+      "summary": "Covers OpenClaw's session model and persistence layer, explaining session key resolution, thread and DM isolation boundaries, reset strategies, message queue modes, and session bleed troubleshooting.",
+      "type": "document"
+    },
+    {
+      "id": "document:06_context_memory/6.2_context_building.md",
+      "name": "6.2_context_building.md",
+      "filePath": "06_context_memory/6.2_context_building.md",
+      "summary": "Explains context assembly across four prioritized information tiers, token window budget allocation ratios, structured tool result injection, and pluggable context engines.",
+      "type": "document"
+    },
+    {
+      "id": "document:06_context_memory/6.3_memory_mechanism.md",
+      "name": "6.3_memory_mechanism.md",
+      "filePath": "06_context_memory/6.3_memory_mechanism.md",
+      "summary": "Details the dual-tier workspace memory architecture comprising MEMORY.md and daily logs, fact curation criteria, hybrid search with vector embedding indexing, and memory expiration.",
+      "type": "document"
+    },
+    {
+      "id": "document:06_context_memory/6.4_compaction_pruning.md",
+      "name": "6.4_compaction_pruning.md",
+      "filePath": "06_context_memory/6.4_compaction_pruning.md",
+      "summary": "Analyzes context governance for long conversations, contrasting ephemeral in-memory tool result pruning with persistent transcript compaction and pre-compaction memory flush triggers.",
+      "type": "document"
+    },
+    {
+      "id": "document:06_context_memory/summary.md",
+      "name": "summary.md",
+      "filePath": "06_context_memory/summary.md",
+      "summary": "Summarizes Chapter 6 with key conclusions on state ownership and token governance, an end-to-end trace walkthrough, self-check verification criteria, and a transition to multi-agent routing.",
+      "type": "document"
+    },
+    {
+      "id": "document:07_multi_agent/7.1_telegram_whatsapp.md",
+      "name": "7.1_telegram_whatsapp.md",
+      "filePath": "07_multi_agent/7.1_telegram_whatsapp.md",
+      "summary": "Covers channel onboarding and ingress governance for Telegram and WhatsApp, detailing direct-message and group policy segregation, token configurations, and multi-account isolation strategies.",
+      "type": "document"
+    },
+    {
+      "id": "document:07_multi_agent/7.2_lark_integration.md",
+      "name": "7.2_lark_integration.md",
+      "filePath": "07_multi_agent/7.2_lark_integration.md",
+      "summary": "Walks through enterprise bot onboarding for Lark/Feishu Open Platform, covering long connection WebSocket subscriptions, event dispatching, permission setups, and pairing verification.",
+      "type": "document"
+    },
+    {
+      "id": "document:07_multi_agent/7.3_routing_basics.md",
+      "name": "7.3_routing_basics.md",
+      "filePath": "07_multi_agent/7.3_routing_basics.md",
+      "summary": "Explains multi-agent routing mechanics, routing bindings precedence over natural intent routers, risk-gated entry point mappings, and workspace memory isolation.",
+      "type": "document"
+    },
+    {
+      "id": "document:07_multi_agent/7.4_collaboration_patterns.md",
+      "name": "7.4_collaboration_patterns.md",
+      "filePath": "07_multi_agent/7.4_collaboration_patterns.md",
+      "summary": "Details multi-agent collaboration topologies, contrasting isolated sub-agent task delegation via sessions_spawn with parallel fan-out via broadcast groups and message queue announce flows.",
+      "type": "document"
+    },
+    {
+      "id": "document:07_multi_agent/README.md",
+      "name": "README.md",
+      "filePath": "07_multi_agent/README.md",
+      "summary": "Introduces Chapter 7 on multi-channel message distribution and multi-agent collaboration, outlining channel policies, routing bindings, sandbox boundary enforcement, and chapter navigation.",
+      "type": "document"
+    },
+    {
+      "id": "document:07_multi_agent/summary.md",
+      "name": "summary.md",
+      "filePath": "07_multi_agent/summary.md",
+      "summary": "Summarizes Chapter 7 key architectural takeaways on deterministic agent ownership, channel policies, auditability, self-check verification questions, and multi-agent production use cases.",
+      "type": "document"
+    },
+    {
+      "id": "document:08_automation_ops/README.md",
+      "name": "README.md",
+      "filePath": "08_automation_ops/README.md",
+      "summary": "Serves as the chapter roadmap and table of contents for Chapter 8, introducing architectural governance across lifecycle hooks, cron jobs, heartbeat polling, remote access, and security baselines for 24/7 unattended operations.",
+      "type": "document"
+    },
+    {
+      "id": "document:08_automation_ops/8.1_hooks.md",
+      "name": "8.1_hooks.md",
+      "filePath": "08_automation_ops/8.1_hooks.md",
+      "summary": "Details OpenClaw lifecycle hooks and event interception points, establishing clear separation of cross-cutting governance concerns like rate limiting, auditing, and data masking while enforcing timeout, degradation, and idempotency constraints.",
+      "type": "document"
+    },
+    {
+      "id": "document:08_automation_ops/8.2_cron_jobs.md",
+      "name": "8.2_cron_jobs.md",
+      "filePath": "08_automation_ops/8.2_cron_jobs.md",
+      "summary": "Guides the design and scheduling of exact-time unattended tasks using built-in gateway cron and external crontab integration, emphasizing idempotency keys, non-overlapping locks, and error triage.",
+      "type": "document"
+    },
+    {
+      "id": "document:08_automation_ops/8.3_heartbeat.md",
+      "name": "8.3_heartbeat.md",
+      "filePath": "08_automation_ops/8.3_heartbeat.md",
+      "summary": "Explains OpenClaw's periodic heartbeat mechanism for batched polling and notify-on-demand alerting, dissecting the timer-to-delivery lifecycle, HEARTBEAT_OK protocol, active hours configuration, and token cost optimization.",
+      "type": "document"
+    },
+    {
+      "id": "document:08_automation_ops/8.4_remote_access.md",
+      "name": "8.4_remote_access.md",
+      "filePath": "08_automation_ops/8.4_remote_access.md",
+      "summary": "Architects secure remote management for OpenClaw instances using SSH port forwarding, Tailscale Serve private network tunnels, Zero Trust identity principles, and rclone file synchronization.",
+      "type": "document"
+    },
+    {
+      "id": "document:08_automation_ops/8.5_security_baseline.md",
+      "name": "8.5_security_baseline.md",
+      "filePath": "08_automation_ops/8.5_security_baseline.md",
+      "summary": "Establishes a verifiable defense-in-depth security baseline spanning ingress control, routing bindings, tool execution policies, and secret management with structured audit event logging.",
+      "type": "document"
+    },
+    {
+      "id": "document:08_automation_ops/summary.md",
+      "name": "summary.md",
+      "filePath": "08_automation_ops/summary.md",
+      "summary": "Summarizes key operational automation takeaways, provides a practical self-inspection checklist for production readiness, and showcases community deployment patterns.",
+      "type": "document"
+    },
+    {
+      "id": "document:09_gateway_protocol/9.1_architecture_overview.md",
+      "name": "9.1_architecture_overview.md",
+      "filePath": "09_gateway_protocol/9.1_architecture_overview.md",
+      "summary": "Presents the five-plane architectural framework (Control, Data, Context, Trust, and Visibility planes) for understanding Gateway responsibilities and module boundaries. Analyzes plane interactions, execution surface separation, and cross-plane diagnostic tracing.",
+      "type": "document"
+    },
+    {
+      "id": "document:09_gateway_protocol/9.2_control_plane.md",
+      "name": "9.2_control_plane.md",
+      "filePath": "09_gateway_protocol/9.2_control_plane.md",
+      "summary": "Explores the five core duties and boundaries of the Gateway Control Plane: connection attribution, routing, session lifecycle, policy enforcement, and circuit-breaking failover. Introduces layered approval architecture and practical openclaw.json configuration examples.",
+      "type": "document"
+    },
+    {
+      "id": "document:09_gateway_protocol/9.3_ws_handshake.md",
+      "name": "9.3_ws_handshake.md",
+      "filePath": "09_gateway_protocol/9.3_ws_handshake.md",
+      "summary": "Details the full lifecycle of persistent WebSocket connections, covering challenge-response authentication, device identity signatures, keepalive heartbeats, and exponential backoff reconnection. Clarifies the architectural distinction between transport-level connections and stateful sessions.",
+      "type": "document"
+    },
+    {
+      "id": "document:09_gateway_protocol/9.4_event_idempotency.md",
+      "name": "9.4_event_idempotency.md",
+      "filePath": "09_gateway_protocol/9.4_event_idempotency.md",
+      "summary": "Examines event idempotency, sequence ordering, and eventual consistency guarantees across distributed agent networks. Explains handling duplicate, lost, or unknown states via idempotency keys, sequence gap detection for snapshot refresh, and session-level mutex locking.",
+      "type": "document"
+    },
+    {
+      "id": "document:09_gateway_protocol/9.5_pairing_trust.md",
+      "name": "9.5_pairing_trust.md",
+      "filePath": "09_gateway_protocol/9.5_pairing_trust.md",
+      "summary": "Explains establishing local trust perimeters via device identity registration, nonce-based cryptographic challenge verification, and operator approval workflows. Distinguishes Control Plane device pairing from chat-level DM sender pairing, and outlines token rotation and emergency revocation mechanisms.",
+      "type": "document"
+    },
+    {
+      "id": "document:09_gateway_protocol/README.md",
+      "name": "README.md",
+      "filePath": "09_gateway_protocol/README.md",
+      "summary": "Introduces Chapter 9 on OpenClaw Gateway control plane responsibilities, WebSocket connection lifecycles, event consistency, and local device pairing trust. Outlines the chapter outline, pedagogical five-plane architectural framework, and core learning objectives.",
+      "type": "document"
+    },
+    {
+      "id": "document:09_gateway_protocol/summary.md",
+      "name": "summary.md",
+      "filePath": "09_gateway_protocol/summary.md",
+      "summary": "Summarizes Chapter 9 key conclusions on control plane arbitration, WebSocket lifecycle management, event idempotency, and device trust bootstrapping. Includes a self-check verification checklist and transitions to Chapter 10 agent loop mechanics.",
+      "type": "document"
+    },
+    {
+      "id": "document:10_agent_loop/10.1_request_lifecycle.md",
+      "name": "10.1_request_lifecycle.md",
+      "filePath": "10_agent_loop/10.1_request_lifecycle.md",
+      "summary": "Traces the complete end-to-end request lifecycle of an agent message and provides an outside-in layered diagnostic framework for isolating errors across gateway, agent, session, model, and tool tiers.",
+      "type": "document"
+    },
+    {
+      "id": "document:10_agent_loop/10.2_pi_framework.md",
+      "name": "10.2_pi_framework.md",
+      "filePath": "10_agent_loop/10.2_pi_framework.md",
+      "summary": "Analyzes OpenClaw's embedded integration of the Pi runtime engine, detailing session lifecycle management, custom tool injection, event subscription bridges, and dynamic system prompts.",
+      "type": "document"
+    },
+    {
+      "id": "document:10_agent_loop/10.3_entry_queue.md",
+      "name": "10.3_entry_queue.md",
+      "filePath": "10_agent_loop/10.3_entry_queue.md",
+      "summary": "Details ingress protocol normalization, replay deduplication barriers, and the pure TypeScript lane-based Command Queue governing session, global, and background execution concurrency.",
+      "type": "document"
+    },
+    {
+      "id": "document:10_agent_loop/10.4_prompt_assembly.md",
+      "name": "10.4_prompt_assembly.md",
+      "filePath": "10_agent_loop/10.4_prompt_assembly.md",
+      "summary": "Examines structured context assembly across four data tiers, token window budgeting with priority-based pruning, prompt persistence audits, and defense-in-depth against prompt injection attacks.",
+      "type": "document"
+    },
+    {
+      "id": "document:10_agent_loop/10.5_tool_execution.md",
+      "name": "10.5_tool_execution.md",
+      "filePath": "10_agent_loop/10.5_tool_execution.md",
+      "summary": "Explores the four-stage tool call lifecycle, static policy filtering, dynamic before_tool_call plugin interception hooks, loop detection, and result trimming injection.",
+      "type": "document"
+    },
+    {
+      "id": "document:10_agent_loop/10.6_streaming_retry.md",
+      "name": "10.6_streaming_retry.md",
+      "filePath": "10_agent_loop/10.6_streaming_retry.md",
+      "summary": "Explains the EmbeddedBlockChunker streaming engine with fence-aware markdown chunking, bounded request-level HTTP retry strategies, model failover sequences, and early termination controls.",
+      "type": "document"
+    },
+    {
+      "id": "document:10_agent_loop/README.md",
+      "name": "README.md",
+      "filePath": "10_agent_loop/README.md",
+      "summary": "Serves as the chapter navigation guide for the OpenClaw Agent Loop core, introducing foundational mental models, learning objectives, and reading advice.",
+      "type": "document"
+    },
+    {
+      "id": "document:10_agent_loop/summary.md",
+      "name": "summary.md",
+      "filePath": "10_agent_loop/summary.md",
+      "summary": "Summarizes the key architectural conclusions of Chapter 10, provides a self-assessment checklist across all agent loop mechanisms, and previews Chapter 11 on reliability and security.",
+      "type": "document"
+    },
+    {
+      "id": "document:11_reliability_security/11.1_auth_profiles.md",
+      "name": "11.1_auth_profiles.md",
+      "filePath": "11_reliability_security/11.1_auth_profiles.md",
+      "summary": "Defines the multi-key authentication object model and lifecycle in OpenClaw, covering auth profiles, selection order priority, session overrides, and runtime state tracking. Explains key isolation across environments, zero-downtime key rotation workflows, emergency credential leak response, and audit verification probes.",
+      "type": "document"
+    },
+    {
+      "id": "document:11_reliability_security/11.2_rotation_cooldown.md",
+      "name": "11.2_rotation_cooldown.md",
+      "filePath": "11_reliability_security/11.2_rotation_cooldown.md",
+      "summary": "Details the auth profile cooldown and temporary disablement mechanisms designed to prevent retry amplification during provider outages or rate limits. Explains failure count cooldown tiers, exponential backoff for billing failures, and runtime state tracking via auth-state.json.",
+      "type": "document"
+    },
+    {
+      "id": "document:11_reliability_security/11.3_fallback_rules.md",
+      "name": "11.3_fallback_rules.md",
+      "filePath": "11_reliability_security/11.3_fallback_rules.md",
+      "summary": "Establishes explainable model fallback chains and failure triage rules to ensure continuous operation without silent model switches. Covers sequential fallback tiers, context overflow bypass behaviors, half-open probing during cooldown, and fault injection verification techniques.",
+      "type": "document"
+    },
+    {
+      "id": "document:11_reliability_security/11.4_guardrails.md",
+      "name": "11.4_guardrails.md",
+      "filePath": "11_reliability_security/11.4_guardrails.md",
+      "summary": "Explains the four-layer defense-in-depth guardrail framework combining tool policies, sandbox container isolation, manual execution approvals, and audit logging. Demonstrates prompt injection mitigation, sensitive data masking, and health diagnostic commands.",
+      "type": "document"
+    },
+    {
+      "id": "document:11_reliability_security/README.md",
+      "name": "README.md",
+      "filePath": "11_reliability_security/README.md",
+      "summary": "Chapter roadmap and learning objectives for implementing reliability and security mechanisms in OpenClaw, introducing multi-key governance, cooldown mechanisms, model fallback chains, and defensive guardrails.",
+      "type": "document"
+    },
+    {
+      "id": "document:11_reliability_security/summary.md",
+      "name": "summary.md",
+      "filePath": "11_reliability_security/summary.md",
+      "summary": "Summarizes Chapter 11 key takeaways on explicit multi-key governance, explainable model fallbacks, cooldown circuit breaking, and four-tier guardrail defense. Provides a self-assessment checklist and introduces Chapter 12 on plugin engineering and production operations.",
+      "type": "document"
+    },
+    {
+      "id": "document:12_extension_engineering/README.md",
+      "name": "README.md",
+      "filePath": "12_extension_engineering/README.md",
+      "summary": "Introduces Chapter 12 on extension engineering and production operations, framing how OpenClaw evolves into an auditable and extensible enterprise platform. Contrasts developer extension mechanisms with Chapter 5's tool user perspective, summarizing plugin lifecycles, custom tools, testing pipelines, and production blueprints.",
+      "type": "document"
+    },
+    {
+      "id": "document:12_extension_engineering/12.1_plugin_architecture.md",
+      "name": "12.1_plugin_architecture.md",
+      "filePath": "12_extension_engineering/12.1_plugin_architecture.md",
+      "summary": "Details OpenClaw's native plugin architecture, manifest validation mechanics, and five execution modes across agent, message, tool, and gateway lifecycle hooks. Explains two-tier perimeter isolation combining plugin whitelists with tool policies, bundle compatibility with external ecosystems, and CLI diagnostic commands.",
+      "type": "document"
+    },
+    {
+      "id": "document:12_extension_engineering/12.2_custom_tools.md",
+      "name": "12.2_custom_tools.md",
+      "filePath": "12_extension_engineering/12.2_custom_tools.md",
+      "summary": "Provides technical guidance for designing and registering custom OpenClaw tools using TypeBox parameter schemas, structured reproducible outputs, and idempotency keys to bound side effects. Demonstrates policy layering where deny rules take precedence, sandbox execution for high-risk actions, and common design anti-patterns.",
+      "type": "document"
+    },
+    {
+      "id": "document:12_extension_engineering/12.3_testing_debugging.md",
+      "name": "12.3_testing_debugging.md",
+      "filePath": "12_extension_engineering/12.3_testing_debugging.md",
+      "summary": "Establishes a three-tier verification methodology for extensions spanning plugin loading, policy enforcement, and gateway ingress before end-to-end testing. Introduces snapshot baseline diffing, traceId replay for deterministic fault localization, and automated CI/CD canary release and rollback procedures.",
+      "type": "document"
+    },
+    {
+      "id": "document:12_extension_engineering/12.4_production_blueprint.md",
+      "name": "12.4_production_blueprint.md",
+      "filePath": "12_extension_engineering/12.4_production_blueprint.md",
+      "summary": "Defines a production blueprint for OpenClaw extensions, enforcing separation of code and configuration changes, three-tier security perimeters, and secret injection via SecretRef. Details emergency rollback runbooks, graceful degradation strategies, and operational KPIs with alert thresholds for gateway latency, resource usage, and tool health.",
+      "type": "document"
+    },
+    {
+      "id": "document:12_extension_engineering/12.5_framework_interoperability.md",
+      "name": "12.5_framework_interoperability.md",
+      "filePath": "12_extension_engineering/12.5_framework_interoperability.md",
+      "summary": "Analyzes interoperability between OpenClaw and frameworks like LangGraph and CrewAI across adapter, protocol, and data layers. Contrasts local embedded, remote service-based, and external bridge topologies, comparing OpenClaw's declarative gateway governance with external state-machine and multi-role orchestration engines.",
+      "type": "document"
+    },
+    {
+      "id": "document:12_extension_engineering/summary.md",
+      "name": "summary.md",
+      "filePath": "12_extension_engineering/summary.md",
+      "summary": "Summarizes Chapter 12 key takeaways on extension engineering, highlighting mandatory whitelists, policy-driven custom tool containment, layered verification, and standardized diagnostic replay. Provides a self-assessment production readiness checklist and previews practical enterprise case studies in Chapter 13.",
+      "type": "document"
+    },
+    {
+      "id": "document:13_practical_cases/13.1_lark_slack_workbot.md",
+      "name": "13.1_lark_slack_workbot.md",
+      "filePath": "13_practical_cases/13.1_lark_slack_workbot.md",
+      "summary": "Demonstrates building an enterprise Lark/Slack workgroup assistant for an engineering team, progressing from a minimal single-tool knowledge search loop to layered RBAC permission enforcement, GitHub PR analysis, Jira issue tracking, and scheduled cron summaries.",
+      "type": "document"
+    },
+    {
+      "id": "document:13_practical_cases/13.2_customer_support_agent.md",
+      "name": "13.2_customer_support_agent.md",
+      "filePath": "13_practical_cases/13.2_customer_support_agent.md",
+      "summary": "Details an enterprise customer support agent implementation for B2B SaaS, covering automated FAQ retrieval, sentiment-driven human escalation workflows, Zendesk ticket creation, pre-LLM PII masking, and multilingual policy configuration.",
+      "type": "document"
+    },
+    {
+      "id": "document:13_practical_cases/13.3_vertical_industry_cases.md",
+      "name": "13.3_vertical_industry_cases.md",
+      "filePath": "13_practical_cases/13.3_vertical_industry_cases.md",
+      "summary": "Provides a comparative reference contrasting agent architectures across four vertical sectors (Financial Research, Clinical Healthcare, Adaptive Education, and E-Commerce), examining regulatory compliance constraints (SOX, HIPAA, FERPA, PCI-DSS), human-in-the-loop review gates, and memory isolation.",
+      "type": "document"
+    },
+    {
+      "id": "document:13_practical_cases/README.md",
+      "name": "README.md",
+      "filePath": "13_practical_cases/README.md",
+      "summary": "Introduces Chapter 13 on practical real-world OpenClaw deployment cases, detailing the standardized five-stage evolutionary path from a minimal verification loop to production readiness across enterprise workbots, customer support, and vertical industry scenarios.",
+      "type": "document"
+    },
+    {
+      "id": "document:13_practical_cases/summary.md",
+      "name": "summary.md",
+      "filePath": "13_practical_cases/summary.md",
+      "summary": "Summarizes Chapter 13 key insights on progressive configuration, tool access controls, AI model tiering, and industry-specific adaptation vectors, providing transition guidance into performance tuning and operational troubleshooting chapters.",
+      "type": "document"
+    },
+    {
+      "id": "document:14_performance_cost/README.md",
+      "name": "README.md",
+      "filePath": "14_performance_cost/README.md",
+      "summary": "Serves as the chapter roadmap and table of contents for Chapter 14, introducing performance optimization and cost governance across token consumption, inference latency, usage observation, and budget planning.",
+      "type": "document"
+    },
+    {
+      "id": "document:14_performance_cost/14.1_token_context_cost.md",
+      "name": "14.1_token_context_cost.md",
+      "filePath": "14_performance_cost/14.1_token_context_cost.md",
+      "summary": "Analyzes the three-stage token lifecycle in agent conversations and details systematic optimization techniques for input and output tokens. Covers system prompt refinement, specialized per-agent tool allocation, dynamic context pruning, and automated transcript compaction.",
+      "type": "document"
+    },
+    {
+      "id": "document:14_performance_cost/14.2_latency_throughput.md",
+      "name": "14.2_latency_throughput.md",
+      "filePath": "14_performance_cost/14.2_latency_throughput.md",
+      "summary": "Establishes formal mathematical models for end-to-end latency decomposition across LLM inference, tool I/O, sandbox execution, and orchestration overhead. Formulates a structured multi-component cost equation and contrasts serial versus parallel multi-agent dispatch architectures.",
+      "type": "document"
+    },
+    {
+      "id": "document:14_performance_cost/14.3_usage_budget.md",
+      "name": "14.3_usage_budget.md",
+      "filePath": "14_performance_cost/14.3_usage_budget.md",
+      "summary": "Guides real-time token consumption observation and budget control using OpenClaw built-in commands like /status, /usage cost, and /compact alongside Dashboard metrics. Explains global and per-agent budget quotas, automated session pruning, model tiering fallbacks, and cost anomaly alerts.",
+      "type": "document"
+    },
+    {
+      "id": "document:14_performance_cost/14.4_budget_templates.md",
+      "name": "14.4_budget_templates.md",
+      "filePath": "14_performance_cost/14.4_budget_templates.md",
+      "summary": "Provides detailed monthly cost breakdowns and deployment budget templates across three distinct operating tiers: Personal/Small Team, Medium Scale/Startup, and Enterprise. Features a cost driver weight comparison matrix and a practical budget planning decision tree.",
+      "type": "document"
+    },
+    {
+      "id": "document:14_performance_cost/summary.md",
+      "name": "summary.md",
+      "filePath": "14_performance_cost/summary.md",
+      "summary": "Summarizes key operational takeaways from Chapter 14, provides a 6-point cost optimization audit checklist, and previews troubleshooting trees and ecosystem integration chapters.",
+      "type": "document"
+    },
+    {
+      "id": "document:15_troubleshooting_trees/README.md",
+      "name": "README.md",
+      "filePath": "15_troubleshooting_trees/README.md",
+      "summary": "Introduces Chapter 15 and outlines the directory structure for systematic troubleshooting decision trees, high-concurrency diagnostic paths, and operational best practices.",
+      "type": "document"
+    },
+    {
+      "id": "document:15_troubleshooting_trees/15.1_diagnostic_decision_trees.md",
+      "name": "15.1_diagnostic_decision_trees.md",
+      "filePath": "15_troubleshooting_trees/15.1_diagnostic_decision_trees.md",
+      "summary": "Establishes a 6-tier diagnostic decision tree framework covering startup, messaging gateway, model invocation, tool execution, session/memory, and performance degradation, guided by evidence chain hypothesis elimination.",
+      "type": "document"
+    },
+    {
+      "id": "document:15_troubleshooting_trees/15.2_high_concurrency_diagnosis.md",
+      "name": "15.2_high_concurrency_diagnosis.md",
+      "filePath": "15_troubleshooting_trees/15.2_high_concurrency_diagnosis.md",
+      "summary": "Provides diagnostic decision trees and mitigation strategies for high-concurrency production incidents, addressing HTTP 429 rate limiting, authentication expiration, token budget exhaustion, queue overflows, and cascading system failures.",
+      "type": "document"
+    },
+    {
+      "id": "document:15_troubleshooting_trees/summary.md",
+      "name": "summary.md",
+      "filePath": "15_troubleshooting_trees/summary.md",
+      "summary": "Summarizes the key concepts of Chapter 15, emphasizing binary triage, proactive health checks via openclaw doctor, high-concurrency circuit breakers, and scheduled operational auditing.",
+      "type": "document"
+    },
+    {
+      "id": "document:16_claude_ecosystem/README.md",
+      "name": "README.md",
+      "filePath": "16_claude_ecosystem/README.md",
+      "summary": "Serves as the chapter roadmap and table of contents for Chapter 16, introducing integration patterns for mainstream AI ecosystems including Anthropic Claude, Model Context Protocol (MCP), multi-agent orchestration, OpenAI, and local LLMs via Ollama.",
+      "type": "document"
+    },
+    {
+      "id": "document:16_claude_ecosystem/16.1_claude_integration.md",
+      "name": "16.1_claude_integration.md",
+      "filePath": "16_claude_ecosystem/16.1_claude_integration.md",
+      "summary": "Guides integration with the Anthropic Claude model family and external tool connectivity via the Model Context Protocol (MCP). Covers model tier selection from Haiku to Opus, Adaptive Thinking controls, 1M context token activation, stdio and Streamable HTTP MCP server configurations, and multi-provider failover chains.",
+      "type": "document"
+    },
+    {
+      "id": "document:16_claude_ecosystem/16.2_agent_team_integration.md",
+      "name": "16.2_agent_team_integration.md",
+      "filePath": "16_claude_ecosystem/16.2_agent_team_integration.md",
+      "summary": "Explains multi-agent collaboration architectures in OpenClaw using agentId, accountId, and channel bindings alongside task delegation via sessions_spawn. Compares sequential, parallel (fan-out/fan-in), and dynamic routing patterns, and outlines governance constraints and synergy with the Claude Agent SDK.",
+      "type": "document"
+    },
+    {
+      "id": "document:16_claude_ecosystem/16.3_other_ecosystems.md",
+      "name": "16.3_other_ecosystems.md",
+      "filePath": "16_claude_ecosystem/16.3_other_ecosystems.md",
+      "summary": "Covers connecting OpenAI models, Azure OpenAI Service, and local LLMs through Ollama, detailing multi-ecosystem hybrid strategies. Highlights native tool-calling requirements, hardware VRAM sizing guidelines, privacy-first offline fallbacks, and unified status inspection using CLI probe commands.",
+      "type": "document"
+    },
+    {
+      "id": "document:16_claude_ecosystem/summary.md",
+      "name": "summary.md",
+      "filePath": "16_claude_ecosystem/summary.md",
+      "summary": "Summarizes the core takeaways of Chapter 16 on standard model identifiers, MCP tool protocol advantages, dual multi-agent orchestration paths, and enterprise multi-ecosystem hybrid governance.",
+      "type": "document"
+    },
+    {
+      "id": "document:CONTRIBUTING.md",
+      "name": "CONTRIBUTING.md",
+      "filePath": "CONTRIBUTING.md",
+      "summary": "Outlines contributor guidelines, code of conduct, markdown formatting standards, and pull request workflows for the project.",
+      "type": "document"
+    },
+    {
+      "id": "document:README.md",
+      "name": "README.md",
+      "filePath": "README.md",
+      "summary": "Main documentation landing page providing an overview of the OpenClaw guide, key highlights, reading formats, quickstart steps, and role-based learning tracks.",
+      "type": "document"
+    },
+    {
+      "id": "document:README_en.md",
+      "name": "README_en.md",
+      "filePath": "README_en.md",
+      "summary": "English edition of the project overview introducing OpenClaw architecture highlights, local preview instructions, and guided reading tracks.",
+      "type": "document"
+    },
+    {
+      "id": "document:SUMMARY.md",
+      "name": "SUMMARY.md",
+      "filePath": "SUMMARY.md",
+      "summary": "GitBook table of contents defining the structural navigation across beginner fundamentals, advanced features, core principles, practical deployment, and appendices.",
+      "type": "document"
+    },
+    {
+      "id": "config:book.json",
+      "name": "book.json",
+      "filePath": "book.json",
+      "summary": "GitBook configuration file specifying book metadata, Vietnamese language setting, official sidebar links, and theme display settings.",
+      "type": "config"
+    },
+    {
+      "id": "config:package.json",
+      "name": "package.json",
+      "filePath": "package.json",
+      "summary": "NPM package manifest configuring test discovery scripts and development dependencies for Mermaid diagram compilation and browser automation.",
+      "type": "config"
+    },
+    {
+      "id": "document:appendix/README.md",
+      "name": "README.md",
+      "filePath": "appendix/README.md",
+      "summary": "Serves as the master index for the appendix section, cataloging and describing reference documents including glossaries, configuration templates, troubleshooting checklists, and CLI guides.",
+      "type": "document"
+    },
+    {
+      "id": "document:appendix/api_reference.md",
+      "name": "api_reference.md",
+      "filePath": "appendix/api_reference.md",
+      "summary": "Provides an entry-point quick reference for OpenClaw API and SDK integration, control plane documentation links, frontline CLI diagnostic commands, and WebSocket protocol guidance.",
+      "type": "document"
+    },
+    {
+      "id": "document:appendix/command_cheatsheet.md",
+      "name": "command_cheatsheet.md",
+      "filePath": "appendix/command_cheatsheet.md",
+      "summary": "Comprehensive CLI reference manual organizing OpenClaw commands across service operations, models, channels, plugins, skills, sandbox environments, and chat slash commands.",
+      "type": "document"
+    },
+    {
+      "id": "document:appendix/config_templates.md",
+      "name": "config_templates.md",
+      "filePath": "appendix/config_templates.md",
+      "summary": "Collection of standardized JSON5 configuration templates for OpenClaw Gateway spanning minimal local setups, channel integrations (WhatsApp, Telegram), tool governance, storage, and SKILL.md specs.",
+      "type": "document"
+    },
+    {
+      "id": "document:appendix/env_check.md",
+      "name": "env_check.md",
+      "filePath": "appendix/env_check.md",
+      "summary": "Diagnostic bash script and guide to verify core runtime prerequisites, including Node.js version constraints, Docker availability, and outbound network connectivity to model providers.",
+      "type": "document"
+    },
+    {
+      "id": "document:appendix/glossary.md",
+      "name": "glossary.md",
+      "filePath": "appendix/glossary.md",
+      "summary": "Defines core terminology and concepts for OpenClaw, categorized into foundational agent loop concepts, channel operations, and protocol/plugin extension architectures.",
+      "type": "document"
+    },
+    {
+      "id": "document:appendix/naming_history.md",
+      "name": "naming_history.md",
+      "filePath": "appendix/naming_history.md",
+      "summary": "Documents verifiable naming milestones and origins of the OpenClaw project and its continuous development led by Peter Steinberger.",
+      "type": "document"
+    },
+    {
+      "id": "document:appendix/reading_list.md",
+      "name": "reading_list.md",
+      "filePath": "appendix/reading_list.md",
+      "summary": "Curated bibliography compiling official OpenClaw documentation, foundational academic papers on autonomous LLM agents (ReAct, Toolformer), and related open-source ecosystems.",
+      "type": "document"
+    },
+    {
+      "id": "document:appendix/troubleshooting_checklist.md",
+      "name": "troubleshooting_checklist.md",
+      "filePath": "appendix/troubleshooting_checklist.md",
+      "summary": "Systematic step-by-step diagnostic checklist covering startup failures, channel issues, tool policy denials, AI model errors, and session memory faults.",
+      "type": "document"
+    },
+    {
+      "id": "document:appendix/version_mapping.md",
+      "name": "version_mapping.md",
+      "filePath": "appendix/version_mapping.md",
+      "summary": "Guides safe upgrades and schema migrations across OpenClaw CalVer releases, detailing changes in authentication profiles, agent defaults, channel policies, and diagnostic commands.",
+      "type": "document"
+    },
+    {
+      "id": "document:appendix/volatile_facts.md",
+      "name": "volatile_facts.md",
+      "filePath": "appendix/volatile_facts.md",
+      "summary": "Auditing ledger tracking rapidly changing facts such as supported Node.js version ranges, AI model releases, pricing tiers, and protocol specifications with TTL expiration dates.",
+      "type": "document"
+    },
+    {
+      "id": "config:.github/dependabot.yml",
+      "name": "dependabot.yml",
+      "filePath": ".github/dependabot.yml",
+      "summary": "GitHub Dependabot configuration that automates weekly version updates for GitHub Actions workflows.",
+      "type": "config"
+    },
+    {
+      "id": "config:.ua/config.json",
+      "name": "config.json",
+      "filePath": ".ua/config.json",
+      "summary": "Understand-Anything configuration file specifying English as the target output language for generated documentation and graphs.",
+      "type": "config"
+    },
+    {
+      "id": "file:check_emphasis.py",
+      "name": "check_emphasis.py",
+      "filePath": "check_emphasis.py",
+      "summary": "CJK-aware Markdown emphasis validator that detects broken bold and italic formatting caused by CommonMark flanking rules around CJK punctuation.",
+      "type": "file"
+    },
+    {
+      "id": "file:check_project_rules.py",
+      "name": "check_project_rules.py",
+      "filePath": "check_project_rules.py",
+      "summary": "Lightweight Markdown quality checker enforcing rules on volatile date facts, explicit code fence languages, and valid internal relative links.",
+      "type": "file"
+    },
+    {
+      "id": "document:docs/superpowers/plans/2026-10-06-vietnamese-translation.md",
+      "name": "2026-10-06-vietnamese-translation.md",
+      "filePath": "docs/superpowers/plans/2026-10-06-vietnamese-translation.md",
+      "summary": "Implementation plan outlining phased execution steps for translating all 112 book Markdown documents into Vietnamese while preserving syntax, links, and diagrams.",
+      "type": "document"
+    },
+    {
+      "id": "document:docs/superpowers/specs/2026-10-06-vietnamese-translation-design.md",
+      "name": "2026-10-06-vietnamese-translation-design.md",
+      "filePath": "docs/superpowers/specs/2026-10-06-vietnamese-translation-design.md",
+      "summary": "Technical design specification defining translation standards, terminology conventions, and in-place replacement strategy for the Vietnamese edition.",
+      "type": "document"
+    },
+    {
+      "id": "file:tests/test_build_pdf.py",
+      "name": "test_build_pdf.py",
+      "filePath": "tests/test_build_pdf.py",
+      "summary": "Unit test suite for tools/build_pdf.py validating bounded retries, log retention, timeout handling, and process group termination.",
+      "type": "file"
+    },
+    {
+      "id": "file:tests/test_cjk_typography.py",
+      "name": "test_cjk_typography.py",
+      "filePath": "tests/test_cjk_typography.py",
+      "summary": "Typography test suite enforcing spacing boundaries between CJK and Latin characters and full-width parentheses around CJK text.",
+      "type": "file"
+    },
+    {
+      "id": "file:tests/test_html_list_rendering.py",
+      "name": "test_html_list_rendering.py",
+      "filePath": "tests/test_html_list_rendering.py",
+      "summary": "Regression test ensuring Pandoc Markdown reader configuration enables lists without preceding blank lines to prevent list collapsing in mobile reader HTML.",
+      "type": "file"
+    },
+    {
+      "id": "file:tests/test_installation_contracts.py",
+      "name": "test_installation_contracts.py",
+      "filePath": "tests/test_installation_contracts.py",
+      "summary": "Contract tests verifying that the setup documentation specifies mandatory diagnostic commands, Node version constraints, and platform installation procedures.",
+      "type": "file"
+    },
+    {
+      "id": "file:tests/test_verify_artifacts.py",
+      "name": "test_verify_artifacts.py",
+      "filePath": "tests/test_verify_artifacts.py",
+      "summary": "Test suite verifying tools/verify_artifacts.py HTML title checks, PDF signature validation, and portable SHA-256 checksum manifest operations.",
+      "type": "file"
+    },
+    {
+      "id": "file:tests/test_workflow_security.py",
+      "name": "test_workflow_security.py",
+      "filePath": "tests/test_workflow_security.py",
+      "summary": "Security audit test suite validating GitHub Actions workflows for pinned action SHAs, least-privilege token permissions, artifact provenance, and secure preview releases.",
+      "type": "file"
+    },
+    {
+      "id": "file:tools/build_html_reader.py",
+      "name": "build_html_reader.py",
+      "filePath": "tools/build_html_reader.py",
+      "summary": "Build script producing a self-contained, GitBook-style mobile HTML reader featuring embedded CSS navigation, offline math rendering, and pre-rendered SVG Mermaid diagrams.",
+      "type": "file"
+    },
+    {
+      "id": "file:tools/build_pdf.py",
+      "name": "build_pdf.py",
+      "filePath": "tools/build_pdf.py",
+      "summary": "Robust PDF build wrapper providing bounded retries, attempt log capture, and process tree termination to prevent runaway headless browser processes.",
+      "type": "file"
+    },
+    {
+      "id": "file:tools/render_mermaid.py",
+      "name": "render_mermaid.py",
+      "filePath": "tools/render_mermaid.py",
+      "summary": "Diagram rendering script that scans book chapters for Mermaid code blocks and renders them into static SVG assets using mermaid-cli.",
+      "type": "file"
+    },
+    {
+      "id": "file:tools/verify_artifacts.py",
+      "name": "verify_artifacts.py",
+      "filePath": "tools/verify_artifacts.py",
+      "summary": "Artifact integrity verification tool that checks HTML document titles, validates PDF headers and metadata, and maintains sorted SHA-256 checksum manifests.",
+      "type": "file"
+    }
+  ],
+  "layers": [
+    {
+      "id": "layer:ci-cd",
+      "name": "CI/CD & Release Automation",
+      "description": "GitHub Actions workflows for automated guide building, PDF preview generation, release attestation, and dependency management."
+    },
+    {
+      "id": "layer:config",
+      "name": "Project & Build Configuration",
+      "description": "Configuration files defining project dependencies, package manifests, HonKit book build settings, and Dependabot rules."
+    },
+    {
+      "id": "layer:tooling",
+      "name": "Build Tooling & Rule Verification",
+      "description": "Python utility scripts for rendering Mermaid diagrams, compiling PDF and HTML book formats, verifying build artifacts, and enforcing formatting rules."
+    },
+    {
+      "id": "layer:test",
+      "name": "Testing & Quality Assurance",
+      "description": "Automated test suite validating PDF generation, CJK typography rendering, list layout formatting, installation contracts, and workflow security."
+    },
+    {
+      "id": "layer:documentation",
+      "name": "Project Documentation & Editorial Specs",
+      "description": "Repository-level documentation, bilingual README overviews, contribution guidelines, navigation table of contents, and localization design specs."
+    },
+    {
+      "id": "layer:fundamentals",
+      "name": "Guide Part I: Fundamentals & Getting Started",
+      "description": "Introductory guide chapters covering OpenClaw core concepts, environment prerequisites, installation workflows, initial onboarding, minimal interaction loops, and model configuration."
+    },
+    {
+      "id": "layer:subsystems",
+      "name": "Guide Part II: Subsystems & Operational Features",
+      "description": "Advanced feature chapters detailing tool inventories, execution policies, session memory lifecycle, multi-agent chat integrations (Telegram, WhatsApp, Lark), cron scheduling, and operational security baselines."
+    },
+    {
+      "id": "layer:architecture",
+      "name": "Guide Part III: Core Architecture & Runtime Internals",
+      "description": "In-depth technical chapters exploring the 5-plane Gateway protocol, agent loop request execution lifecycle, multi-key auth and cooldown reliability, guardrails, and plugin extension engineering."
+    },
+    {
+      "id": "layer:production-cases",
+      "name": "Guide Part IV: Enterprise Practice & Optimization",
+      "description": "Production-focused chapters covering enterprise use cases, token budget and latency optimization, diagnostic decision trees, and multi-agent AI ecosystem integrations."
+    },
+    {
+      "id": "layer:reference",
+      "name": "Reference Material & Appendices",
+      "description": "Comprehensive reference material providing quick-lookup command cheatsheets, configuration templates, API and SDK references, glossary definitions, and troubleshooting checklists."
+    }
+  ],
+  "edges": [
+    {
+      "source": "pipeline:.github/workflows/auto-release.yml",
+      "target": "pipeline:.github/workflows/preview-pdf.yml",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "pipeline:.github/workflows/preview-pdf.yml",
+      "target": "pipeline:.github/workflows/auto-release.yml",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "pipeline:.github/workflows/ci.yaml",
+      "target": "pipeline:.github/workflows/preview-pdf.yml",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "pipeline:.github/workflows/ci.yaml",
+      "target": "pipeline:.github/workflows/auto-release.yml",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "pipeline:.github/workflows/dependabot-automerge.yml",
+      "target": "pipeline:.github/workflows/ci.yaml",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "pipeline:.github/workflows/identity-guard.yaml",
+      "target": "pipeline:.github/workflows/ci.yaml",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:01_overview/README.md",
+      "target": "document:01_overview/1.1_what_is_openclaw.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:01_overview/README.md",
+      "target": "document:01_overview/1.2_scenarios_comparison.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:01_overview/README.md",
+      "target": "document:01_overview/1.3_concepts.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:01_overview/README.md",
+      "target": "document:01_overview/1.4_use_cases.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:01_overview/README.md",
+      "target": "document:01_overview/summary.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:01_overview/1.1_what_is_openclaw.md",
+      "target": "document:01_overview/1.2_scenarios_comparison.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:01_overview/1.1_what_is_openclaw.md",
+      "target": "document:01_overview/1.3_concepts.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:01_overview/1.2_scenarios_comparison.md",
+      "target": "document:01_overview/1.3_concepts.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:01_overview/1.3_concepts.md",
+      "target": "document:01_overview/1.4_use_cases.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:01_overview/1.4_use_cases.md",
+      "target": "document:01_overview/summary.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:02_setup/README.md",
+      "target": "document:02_setup/2.1_requirements.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:02_setup/README.md",
+      "target": "document:02_setup/2.2_installation.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:02_setup/README.md",
+      "target": "document:02_setup/2.3_onboarding.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:02_setup/README.md",
+      "target": "document:02_setup/2.4_gateway_service.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:02_setup/README.md",
+      "target": "document:02_setup/summary.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:02_setup/2.2_installation.md",
+      "target": "document:02_setup/2.1_requirements.md",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "document:02_setup/2.3_onboarding.md",
+      "target": "document:02_setup/2.2_installation.md",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "document:02_setup/2.4_gateway_service.md",
+      "target": "document:02_setup/2.3_onboarding.md",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "document:02_setup/summary.md",
+      "target": "document:02_setup/2.1_requirements.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:02_setup/summary.md",
+      "target": "document:02_setup/2.2_installation.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:02_setup/summary.md",
+      "target": "document:02_setup/2.3_onboarding.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:02_setup/summary.md",
+      "target": "document:02_setup/2.4_gateway_service.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:03_minimal_loop/README.md",
+      "target": "document:03_minimal_loop/3.1_control_ui_webchat.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:03_minimal_loop/README.md",
+      "target": "document:03_minimal_loop/3.2_diagnostics.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:03_minimal_loop/README.md",
+      "target": "document:03_minimal_loop/3.3_agent_persona.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:03_minimal_loop/README.md",
+      "target": "document:03_minimal_loop/3.4_pairing_groups.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:03_minimal_loop/README.md",
+      "target": "document:03_minimal_loop/summary.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:03_minimal_loop/3.1_control_ui_webchat.md",
+      "target": "document:03_minimal_loop/3.2_diagnostics.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:03_minimal_loop/3.1_control_ui_webchat.md",
+      "target": "document:03_minimal_loop/3.4_pairing_groups.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:03_minimal_loop/3.3_agent_persona.md",
+      "target": "document:03_minimal_loop/3.2_diagnostics.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:03_minimal_loop/summary.md",
+      "target": "document:03_minimal_loop/3.1_control_ui_webchat.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:03_minimal_loop/summary.md",
+      "target": "document:03_minimal_loop/3.2_diagnostics.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:03_minimal_loop/summary.md",
+      "target": "document:03_minimal_loop/3.3_agent_persona.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:03_minimal_loop/summary.md",
+      "target": "document:03_minimal_loop/3.4_pairing_groups.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:04_config_models/README.md",
+      "target": "document:04_config_models/4.1_config_system.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:04_config_models/README.md",
+      "target": "document:04_config_models/4.2_provider_access.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:04_config_models/README.md",
+      "target": "document:04_config_models/4.3_model_selection.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:04_config_models/README.md",
+      "target": "document:04_config_models/4.4_failover.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:04_config_models/README.md",
+      "target": "document:04_config_models/summary.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:04_config_models/4.1_config_system.md",
+      "target": "document:04_config_models/4.2_provider_access.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:04_config_models/4.1_config_system.md",
+      "target": "document:04_config_models/4.3_model_selection.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:04_config_models/4.2_provider_access.md",
+      "target": "document:04_config_models/4.3_model_selection.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:04_config_models/4.2_provider_access.md",
+      "target": "document:04_config_models/4.4_failover.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:04_config_models/4.3_model_selection.md",
+      "target": "document:04_config_models/4.4_failover.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:04_config_models/summary.md",
+      "target": "document:04_config_models/4.1_config_system.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:04_config_models/summary.md",
+      "target": "document:04_config_models/4.2_provider_access.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:04_config_models/summary.md",
+      "target": "document:04_config_models/4.3_model_selection.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:04_config_models/summary.md",
+      "target": "document:04_config_models/4.4_failover.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:05_tools_skills/README.md",
+      "target": "document:05_tools_skills/5.1_tool_inventory.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:05_tools_skills/README.md",
+      "target": "document:05_tools_skills/5.2_tool_policy.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:05_tools_skills/README.md",
+      "target": "document:05_tools_skills/5.3_skills_plugins.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:05_tools_skills/README.md",
+      "target": "document:05_tools_skills/5.4_browser_nodes.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:05_tools_skills/README.md",
+      "target": "document:05_tools_skills/summary.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:05_tools_skills/5.1_tool_inventory.md",
+      "target": "document:05_tools_skills/5.2_tool_policy.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:05_tools_skills/5.2_tool_policy.md",
+      "target": "document:05_tools_skills/5.3_skills_plugins.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:05_tools_skills/5.2_tool_policy.md",
+      "target": "document:05_tools_skills/5.4_browser_nodes.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:05_tools_skills/5.3_skills_plugins.md",
+      "target": "document:05_tools_skills/5.2_tool_policy.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:05_tools_skills/5.3_skills_plugins.md",
+      "target": "document:05_tools_skills/5.4_browser_nodes.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:05_tools_skills/5.4_browser_nodes.md",
+      "target": "document:05_tools_skills/5.2_tool_policy.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:05_tools_skills/summary.md",
+      "target": "document:05_tools_skills/5.1_tool_inventory.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:05_tools_skills/summary.md",
+      "target": "document:05_tools_skills/5.2_tool_policy.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:05_tools_skills/summary.md",
+      "target": "document:05_tools_skills/5.3_skills_plugins.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:05_tools_skills/summary.md",
+      "target": "document:05_tools_skills/5.4_browser_nodes.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:06_context_memory/README.md",
+      "target": "document:06_context_memory/6.1_sessions.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:06_context_memory/README.md",
+      "target": "document:06_context_memory/6.2_context_building.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:06_context_memory/README.md",
+      "target": "document:06_context_memory/6.3_memory_mechanism.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:06_context_memory/README.md",
+      "target": "document:06_context_memory/6.4_compaction_pruning.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:06_context_memory/README.md",
+      "target": "document:06_context_memory/summary.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:06_context_memory/6.1_sessions.md",
+      "target": "document:06_context_memory/6.2_context_building.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:06_context_memory/6.1_sessions.md",
+      "target": "document:06_context_memory/6.4_compaction_pruning.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:06_context_memory/6.2_context_building.md",
+      "target": "document:06_context_memory/6.3_memory_mechanism.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:06_context_memory/6.2_context_building.md",
+      "target": "document:06_context_memory/6.4_compaction_pruning.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:06_context_memory/6.4_compaction_pruning.md",
+      "target": "document:06_context_memory/6.3_memory_mechanism.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:06_context_memory/summary.md",
+      "target": "document:06_context_memory/6.1_sessions.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:06_context_memory/summary.md",
+      "target": "document:06_context_memory/6.2_context_building.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:06_context_memory/summary.md",
+      "target": "document:06_context_memory/6.3_memory_mechanism.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:06_context_memory/summary.md",
+      "target": "document:06_context_memory/6.4_compaction_pruning.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:07_multi_agent/README.md",
+      "target": "document:07_multi_agent/7.1_telegram_whatsapp.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:07_multi_agent/README.md",
+      "target": "document:07_multi_agent/7.2_lark_integration.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:07_multi_agent/README.md",
+      "target": "document:07_multi_agent/7.3_routing_basics.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:07_multi_agent/README.md",
+      "target": "document:07_multi_agent/7.4_collaboration_patterns.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:07_multi_agent/README.md",
+      "target": "document:07_multi_agent/summary.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:07_multi_agent/7.1_telegram_whatsapp.md",
+      "target": "document:07_multi_agent/7.2_lark_integration.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:07_multi_agent/7.1_telegram_whatsapp.md",
+      "target": "document:07_multi_agent/7.3_routing_basics.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:07_multi_agent/7.2_lark_integration.md",
+      "target": "document:07_multi_agent/7.3_routing_basics.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:07_multi_agent/7.3_routing_basics.md",
+      "target": "document:07_multi_agent/7.4_collaboration_patterns.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:07_multi_agent/7.4_collaboration_patterns.md",
+      "target": "document:07_multi_agent/7.1_telegram_whatsapp.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:07_multi_agent/summary.md",
+      "target": "document:07_multi_agent/7.1_telegram_whatsapp.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:07_multi_agent/summary.md",
+      "target": "document:07_multi_agent/7.2_lark_integration.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:07_multi_agent/summary.md",
+      "target": "document:07_multi_agent/7.3_routing_basics.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:07_multi_agent/summary.md",
+      "target": "document:07_multi_agent/7.4_collaboration_patterns.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:08_automation_ops/README.md",
+      "target": "document:08_automation_ops/8.1_hooks.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:08_automation_ops/README.md",
+      "target": "document:08_automation_ops/8.2_cron_jobs.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:08_automation_ops/README.md",
+      "target": "document:08_automation_ops/8.3_heartbeat.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:08_automation_ops/README.md",
+      "target": "document:08_automation_ops/8.4_remote_access.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:08_automation_ops/README.md",
+      "target": "document:08_automation_ops/8.5_security_baseline.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:08_automation_ops/README.md",
+      "target": "document:08_automation_ops/summary.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:08_automation_ops/summary.md",
+      "target": "document:08_automation_ops/8.1_hooks.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:08_automation_ops/summary.md",
+      "target": "document:08_automation_ops/8.2_cron_jobs.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:08_automation_ops/summary.md",
+      "target": "document:08_automation_ops/8.3_heartbeat.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:08_automation_ops/summary.md",
+      "target": "document:08_automation_ops/8.4_remote_access.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:08_automation_ops/summary.md",
+      "target": "document:08_automation_ops/8.5_security_baseline.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:08_automation_ops/8.2_cron_jobs.md",
+      "target": "document:08_automation_ops/8.3_heartbeat.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:08_automation_ops/8.3_heartbeat.md",
+      "target": "document:08_automation_ops/8.2_cron_jobs.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:08_automation_ops/8.4_remote_access.md",
+      "target": "document:08_automation_ops/8.5_security_baseline.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:08_automation_ops/8.5_security_baseline.md",
+      "target": "document:08_automation_ops/8.1_hooks.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:08_automation_ops/8.5_security_baseline.md",
+      "target": "document:08_automation_ops/8.4_remote_access.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:09_gateway_protocol/README.md",
+      "target": "document:09_gateway_protocol/9.1_architecture_overview.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:09_gateway_protocol/README.md",
+      "target": "document:09_gateway_protocol/9.2_control_plane.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:09_gateway_protocol/README.md",
+      "target": "document:09_gateway_protocol/9.3_ws_handshake.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:09_gateway_protocol/README.md",
+      "target": "document:09_gateway_protocol/9.4_event_idempotency.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:09_gateway_protocol/README.md",
+      "target": "document:09_gateway_protocol/9.5_pairing_trust.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:09_gateway_protocol/README.md",
+      "target": "document:09_gateway_protocol/summary.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:09_gateway_protocol/summary.md",
+      "target": "document:09_gateway_protocol/9.1_architecture_overview.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:09_gateway_protocol/summary.md",
+      "target": "document:09_gateway_protocol/9.2_control_plane.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:09_gateway_protocol/summary.md",
+      "target": "document:09_gateway_protocol/9.3_ws_handshake.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:09_gateway_protocol/summary.md",
+      "target": "document:09_gateway_protocol/9.4_event_idempotency.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:09_gateway_protocol/summary.md",
+      "target": "document:09_gateway_protocol/9.5_pairing_trust.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:09_gateway_protocol/9.1_architecture_overview.md",
+      "target": "document:09_gateway_protocol/9.2_control_plane.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:09_gateway_protocol/9.1_architecture_overview.md",
+      "target": "document:09_gateway_protocol/9.5_pairing_trust.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:09_gateway_protocol/9.2_control_plane.md",
+      "target": "document:09_gateway_protocol/9.3_ws_handshake.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:09_gateway_protocol/9.2_control_plane.md",
+      "target": "document:09_gateway_protocol/9.5_pairing_trust.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:09_gateway_protocol/9.3_ws_handshake.md",
+      "target": "document:09_gateway_protocol/9.4_event_idempotency.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:09_gateway_protocol/9.3_ws_handshake.md",
+      "target": "document:09_gateway_protocol/9.5_pairing_trust.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:09_gateway_protocol/9.5_pairing_trust.md",
+      "target": "document:09_gateway_protocol/9.3_ws_handshake.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:10_agent_loop/README.md",
+      "target": "document:10_agent_loop/10.1_request_lifecycle.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:10_agent_loop/README.md",
+      "target": "document:10_agent_loop/10.2_pi_framework.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:10_agent_loop/README.md",
+      "target": "document:10_agent_loop/10.3_entry_queue.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:10_agent_loop/README.md",
+      "target": "document:10_agent_loop/10.4_prompt_assembly.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:10_agent_loop/README.md",
+      "target": "document:10_agent_loop/10.5_tool_execution.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:10_agent_loop/README.md",
+      "target": "document:10_agent_loop/10.6_streaming_retry.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:10_agent_loop/README.md",
+      "target": "document:10_agent_loop/summary.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:10_agent_loop/10.1_request_lifecycle.md",
+      "target": "document:10_agent_loop/10.2_pi_framework.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:10_agent_loop/10.1_request_lifecycle.md",
+      "target": "document:10_agent_loop/10.3_entry_queue.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:10_agent_loop/10.1_request_lifecycle.md",
+      "target": "document:10_agent_loop/10.4_prompt_assembly.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:10_agent_loop/10.1_request_lifecycle.md",
+      "target": "document:10_agent_loop/10.5_tool_execution.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:10_agent_loop/10.1_request_lifecycle.md",
+      "target": "document:10_agent_loop/10.6_streaming_retry.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:10_agent_loop/10.2_pi_framework.md",
+      "target": "document:10_agent_loop/10.3_entry_queue.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:10_agent_loop/10.2_pi_framework.md",
+      "target": "document:10_agent_loop/10.5_tool_execution.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:10_agent_loop/10.2_pi_framework.md",
+      "target": "document:10_agent_loop/10.6_streaming_retry.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:10_agent_loop/10.3_entry_queue.md",
+      "target": "document:10_agent_loop/10.4_prompt_assembly.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:10_agent_loop/10.4_prompt_assembly.md",
+      "target": "document:10_agent_loop/10.5_tool_execution.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:10_agent_loop/10.5_tool_execution.md",
+      "target": "document:10_agent_loop/10.6_streaming_retry.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:10_agent_loop/10.6_streaming_retry.md",
+      "target": "document:10_agent_loop/summary.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:10_agent_loop/summary.md",
+      "target": "document:10_agent_loop/10.1_request_lifecycle.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:10_agent_loop/summary.md",
+      "target": "document:10_agent_loop/10.2_pi_framework.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:10_agent_loop/summary.md",
+      "target": "document:10_agent_loop/10.3_entry_queue.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:10_agent_loop/summary.md",
+      "target": "document:10_agent_loop/10.4_prompt_assembly.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:10_agent_loop/summary.md",
+      "target": "document:10_agent_loop/10.5_tool_execution.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:10_agent_loop/summary.md",
+      "target": "document:10_agent_loop/10.6_streaming_retry.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:11_reliability_security/README.md",
+      "target": "document:11_reliability_security/11.1_auth_profiles.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:11_reliability_security/README.md",
+      "target": "document:11_reliability_security/11.2_rotation_cooldown.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:11_reliability_security/README.md",
+      "target": "document:11_reliability_security/11.3_fallback_rules.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:11_reliability_security/README.md",
+      "target": "document:11_reliability_security/11.4_guardrails.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:11_reliability_security/README.md",
+      "target": "document:11_reliability_security/summary.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:11_reliability_security/summary.md",
+      "target": "document:11_reliability_security/11.1_auth_profiles.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:11_reliability_security/summary.md",
+      "target": "document:11_reliability_security/11.2_rotation_cooldown.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:11_reliability_security/summary.md",
+      "target": "document:11_reliability_security/11.3_fallback_rules.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:11_reliability_security/summary.md",
+      "target": "document:11_reliability_security/11.4_guardrails.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:11_reliability_security/11.1_auth_profiles.md",
+      "target": "document:11_reliability_security/11.2_rotation_cooldown.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:11_reliability_security/11.1_auth_profiles.md",
+      "target": "document:11_reliability_security/11.4_guardrails.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:11_reliability_security/11.2_rotation_cooldown.md",
+      "target": "document:11_reliability_security/11.3_fallback_rules.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:11_reliability_security/11.3_fallback_rules.md",
+      "target": "document:11_reliability_security/11.2_rotation_cooldown.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:11_reliability_security/11.3_fallback_rules.md",
+      "target": "document:11_reliability_security/11.4_guardrails.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:11_reliability_security/11.4_guardrails.md",
+      "target": "document:11_reliability_security/11.1_auth_profiles.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:12_extension_engineering/README.md",
+      "target": "document:12_extension_engineering/12.1_plugin_architecture.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:12_extension_engineering/README.md",
+      "target": "document:12_extension_engineering/12.2_custom_tools.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:12_extension_engineering/README.md",
+      "target": "document:12_extension_engineering/12.3_testing_debugging.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:12_extension_engineering/README.md",
+      "target": "document:12_extension_engineering/12.4_production_blueprint.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:12_extension_engineering/README.md",
+      "target": "document:12_extension_engineering/12.5_framework_interoperability.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:12_extension_engineering/README.md",
+      "target": "document:12_extension_engineering/summary.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:12_extension_engineering/summary.md",
+      "target": "document:12_extension_engineering/12.1_plugin_architecture.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:12_extension_engineering/summary.md",
+      "target": "document:12_extension_engineering/12.2_custom_tools.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:12_extension_engineering/summary.md",
+      "target": "document:12_extension_engineering/12.3_testing_debugging.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:12_extension_engineering/summary.md",
+      "target": "document:12_extension_engineering/12.4_production_blueprint.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:12_extension_engineering/summary.md",
+      "target": "document:12_extension_engineering/12.5_framework_interoperability.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:12_extension_engineering/12.1_plugin_architecture.md",
+      "target": "document:12_extension_engineering/12.2_custom_tools.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:12_extension_engineering/12.1_plugin_architecture.md",
+      "target": "document:12_extension_engineering/12.3_testing_debugging.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:12_extension_engineering/12.2_custom_tools.md",
+      "target": "document:12_extension_engineering/12.3_testing_debugging.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:12_extension_engineering/12.2_custom_tools.md",
+      "target": "document:12_extension_engineering/12.4_production_blueprint.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:12_extension_engineering/12.3_testing_debugging.md",
+      "target": "document:12_extension_engineering/12.4_production_blueprint.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:12_extension_engineering/12.4_production_blueprint.md",
+      "target": "document:12_extension_engineering/12.1_plugin_architecture.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:12_extension_engineering/12.5_framework_interoperability.md",
+      "target": "document:12_extension_engineering/12.1_plugin_architecture.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:12_extension_engineering/12.5_framework_interoperability.md",
+      "target": "document:12_extension_engineering/12.2_custom_tools.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:13_practical_cases/README.md",
+      "target": "document:13_practical_cases/13.1_lark_slack_workbot.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:13_practical_cases/README.md",
+      "target": "document:13_practical_cases/13.2_customer_support_agent.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:13_practical_cases/README.md",
+      "target": "document:13_practical_cases/13.3_vertical_industry_cases.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:13_practical_cases/README.md",
+      "target": "document:13_practical_cases/summary.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:13_practical_cases/summary.md",
+      "target": "document:13_practical_cases/13.1_lark_slack_workbot.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:13_practical_cases/summary.md",
+      "target": "document:13_practical_cases/13.2_customer_support_agent.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:13_practical_cases/summary.md",
+      "target": "document:13_practical_cases/13.3_vertical_industry_cases.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:13_practical_cases/13.3_vertical_industry_cases.md",
+      "target": "document:13_practical_cases/13.1_lark_slack_workbot.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:13_practical_cases/13.3_vertical_industry_cases.md",
+      "target": "document:13_practical_cases/13.2_customer_support_agent.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:13_practical_cases/13.1_lark_slack_workbot.md",
+      "target": "document:13_practical_cases/13.2_customer_support_agent.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:14_performance_cost/README.md",
+      "target": "document:14_performance_cost/14.1_token_context_cost.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:14_performance_cost/README.md",
+      "target": "document:14_performance_cost/14.2_latency_throughput.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:14_performance_cost/README.md",
+      "target": "document:14_performance_cost/14.3_usage_budget.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:14_performance_cost/README.md",
+      "target": "document:14_performance_cost/14.4_budget_templates.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:14_performance_cost/README.md",
+      "target": "document:14_performance_cost/summary.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:14_performance_cost/summary.md",
+      "target": "document:14_performance_cost/14.1_token_context_cost.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:14_performance_cost/summary.md",
+      "target": "document:14_performance_cost/14.2_latency_throughput.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:14_performance_cost/summary.md",
+      "target": "document:14_performance_cost/14.3_usage_budget.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:14_performance_cost/summary.md",
+      "target": "document:14_performance_cost/14.4_budget_templates.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:14_performance_cost/14.1_token_context_cost.md",
+      "target": "document:14_performance_cost/14.2_latency_throughput.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:14_performance_cost/14.1_token_context_cost.md",
+      "target": "document:14_performance_cost/14.3_usage_budget.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:14_performance_cost/14.1_token_context_cost.md",
+      "target": "document:14_performance_cost/14.4_budget_templates.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:14_performance_cost/14.2_latency_throughput.md",
+      "target": "document:14_performance_cost/14.1_token_context_cost.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:14_performance_cost/14.2_latency_throughput.md",
+      "target": "document:14_performance_cost/14.3_usage_budget.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:14_performance_cost/14.3_usage_budget.md",
+      "target": "document:14_performance_cost/14.1_token_context_cost.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:14_performance_cost/14.3_usage_budget.md",
+      "target": "document:14_performance_cost/14.4_budget_templates.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:14_performance_cost/14.4_budget_templates.md",
+      "target": "document:14_performance_cost/14.3_usage_budget.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:15_troubleshooting_trees/README.md",
+      "target": "document:15_troubleshooting_trees/15.1_diagnostic_decision_trees.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:15_troubleshooting_trees/README.md",
+      "target": "document:15_troubleshooting_trees/15.2_high_concurrency_diagnosis.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:15_troubleshooting_trees/README.md",
+      "target": "document:15_troubleshooting_trees/summary.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:15_troubleshooting_trees/summary.md",
+      "target": "document:15_troubleshooting_trees/15.1_diagnostic_decision_trees.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:15_troubleshooting_trees/summary.md",
+      "target": "document:15_troubleshooting_trees/15.2_high_concurrency_diagnosis.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:15_troubleshooting_trees/15.2_high_concurrency_diagnosis.md",
+      "target": "document:15_troubleshooting_trees/15.1_diagnostic_decision_trees.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:16_claude_ecosystem/README.md",
+      "target": "document:16_claude_ecosystem/16.1_claude_integration.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:16_claude_ecosystem/README.md",
+      "target": "document:16_claude_ecosystem/16.2_agent_team_integration.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:16_claude_ecosystem/README.md",
+      "target": "document:16_claude_ecosystem/16.3_other_ecosystems.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:16_claude_ecosystem/README.md",
+      "target": "document:16_claude_ecosystem/summary.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:16_claude_ecosystem/summary.md",
+      "target": "document:16_claude_ecosystem/16.1_claude_integration.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:16_claude_ecosystem/summary.md",
+      "target": "document:16_claude_ecosystem/16.2_agent_team_integration.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:16_claude_ecosystem/summary.md",
+      "target": "document:16_claude_ecosystem/16.3_other_ecosystems.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:16_claude_ecosystem/16.1_claude_integration.md",
+      "target": "document:16_claude_ecosystem/16.2_agent_team_integration.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:16_claude_ecosystem/16.1_claude_integration.md",
+      "target": "document:16_claude_ecosystem/16.3_other_ecosystems.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:16_claude_ecosystem/16.2_agent_team_integration.md",
+      "target": "document:16_claude_ecosystem/16.1_claude_integration.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:16_claude_ecosystem/16.2_agent_team_integration.md",
+      "target": "document:16_claude_ecosystem/16.3_other_ecosystems.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:16_claude_ecosystem/16.3_other_ecosystems.md",
+      "target": "document:16_claude_ecosystem/16.1_claude_integration.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:16_claude_ecosystem/16.3_other_ecosystems.md",
+      "target": "document:16_claude_ecosystem/16.2_agent_team_integration.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "config:book.json",
+      "target": "document:README.md",
+      "type": "configures",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "config:book.json",
+      "target": "document:SUMMARY.md",
+      "type": "configures",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "document:README.md",
+      "target": "document:SUMMARY.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:README.md",
+      "target": "document:CONTRIBUTING.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:README_en.md",
+      "target": "document:README.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:README_en.md",
+      "target": "document:CONTRIBUTING.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "config:package.json",
+      "target": "config:book.json",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "document:appendix/README.md",
+      "target": "document:appendix/glossary.md",
+      "type": "documents",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:appendix/README.md",
+      "target": "document:appendix/config_templates.md",
+      "type": "documents",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:appendix/README.md",
+      "target": "document:appendix/troubleshooting_checklist.md",
+      "type": "documents",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:appendix/README.md",
+      "target": "document:appendix/api_reference.md",
+      "type": "documents",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:appendix/README.md",
+      "target": "document:appendix/command_cheatsheet.md",
+      "type": "documents",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:appendix/README.md",
+      "target": "document:appendix/version_mapping.md",
+      "type": "documents",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:appendix/README.md",
+      "target": "document:appendix/reading_list.md",
+      "type": "documents",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:appendix/README.md",
+      "target": "document:appendix/env_check.md",
+      "type": "documents",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:appendix/README.md",
+      "target": "document:appendix/naming_history.md",
+      "type": "documents",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:appendix/README.md",
+      "target": "document:appendix/volatile_facts.md",
+      "type": "documents",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:appendix/env_check.md",
+      "target": "document:appendix/volatile_facts.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:appendix/troubleshooting_checklist.md",
+      "target": "document:appendix/command_cheatsheet.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:appendix/config_templates.md",
+      "target": "document:appendix/version_mapping.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:appendix/api_reference.md",
+      "target": "document:appendix/command_cheatsheet.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:appendix/troubleshooting_checklist.md",
+      "target": "document:appendix/env_check.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:check_emphasis.py",
+      "target": "function:check_emphasis.py:_is_in_code_block",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:check_emphasis.py",
+      "target": "function:check_emphasis.py:_is_in_mermaid_block",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:check_emphasis.py",
+      "target": "function:check_emphasis.py:_neutralize_code",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:check_emphasis.py",
+      "target": "function:check_emphasis.py:_scan_runs",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:check_emphasis.py",
+      "target": "function:check_emphasis.py:_process_emphasis",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:check_emphasis.py",
+      "target": "function:check_emphasis.py:check_emphasis",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:check_emphasis.py",
+      "target": "function:check_emphasis.py:main",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:check_project_rules.py",
+      "target": "function:check_project_rules.py:check_volatile_facts",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:check_project_rules.py",
+      "target": "function:check_project_rules.py:strip_fenced_blocks",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:check_project_rules.py",
+      "target": "function:check_project_rules.py:check_fences",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:check_project_rules.py",
+      "target": "function:check_project_rules.py:check_links",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:check_project_rules.py",
+      "target": "function:check_project_rules.py:main",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:tests/test_build_pdf.py",
+      "target": "class:tests/test_build_pdf.py:BuildPdfTests",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:tests/test_cjk_typography.py",
+      "target": "function:tests/test_cjk_typography.py:mask",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:tests/test_cjk_typography.py",
+      "target": "function:tests/test_cjk_typography.py:prose_lines",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:tests/test_cjk_typography.py",
+      "target": "class:tests/test_cjk_typography.py:CjkTypographyTests",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:tests/test_html_list_rendering.py",
+      "target": "function:tests/test_html_list_rendering.py:_reader_pandoc_format",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:tests/test_html_list_rendering.py",
+      "target": "class:tests/test_html_list_rendering.py:HtmlListRenderingTests",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:tests/test_installation_contracts.py",
+      "target": "class:tests/test_installation_contracts.py:InstallationContractTests",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:tests/test_verify_artifacts.py",
+      "target": "class:tests/test_verify_artifacts.py:ArtifactVerifierTests",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:tests/test_workflow_security.py",
+      "target": "function:tests/test_workflow_security.py:workflow_step_script",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:tests/test_workflow_security.py",
+      "target": "function:tests/test_workflow_security.py:workflow_step_scripts_in_document_order",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:tests/test_workflow_security.py",
+      "target": "class:tests/test_workflow_security.py:WorkflowSecurityTests",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:tools/build_html_reader.py",
+      "target": "function:tools/build_html_reader.py:parse_summary",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:tools/build_html_reader.py",
+      "target": "function:tools/build_html_reader.py:process_file",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:tools/build_html_reader.py",
+      "target": "function:tools/build_html_reader.py:main",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:tools/build_pdf.py",
+      "target": "function:tools/build_pdf.py:terminate_process_tree",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:tools/build_pdf.py",
+      "target": "function:tools/build_pdf.py:build_once",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:tools/build_pdf.py",
+      "target": "function:tools/build_pdf.py:parse_args",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:tools/build_pdf.py",
+      "target": "function:tools/build_pdf.py:main",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:tools/render_mermaid.py",
+      "target": "function:tools/render_mermaid.py:render",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:tools/verify_artifacts.py",
+      "target": "function:tools/verify_artifacts.py:verify_html",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:tools/verify_artifacts.py",
+      "target": "function:tools/verify_artifacts.py:verify_pdf",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:tools/verify_artifacts.py",
+      "target": "function:tools/verify_artifacts.py:write_checksums",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:tools/verify_artifacts.py",
+      "target": "function:tools/verify_artifacts.py:verify_checksums",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:tools/verify_artifacts.py",
+      "target": "function:tools/verify_artifacts.py:parse_args",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:tools/verify_artifacts.py",
+      "target": "function:tools/verify_artifacts.py:main",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:check_emphasis.py",
+      "target": "function:check_emphasis.py:check_emphasis",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:check_emphasis.py",
+      "target": "function:check_emphasis.py:main",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:check_project_rules.py",
+      "target": "function:check_project_rules.py:check_volatile_facts",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:check_project_rules.py",
+      "target": "function:check_project_rules.py:strip_fenced_blocks",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:check_project_rules.py",
+      "target": "function:check_project_rules.py:check_fences",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:check_project_rules.py",
+      "target": "function:check_project_rules.py:check_links",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:check_project_rules.py",
+      "target": "function:check_project_rules.py:main",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:tests/test_build_pdf.py",
+      "target": "class:tests/test_build_pdf.py:BuildPdfTests",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:tests/test_cjk_typography.py",
+      "target": "function:tests/test_cjk_typography.py:mask",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:tests/test_cjk_typography.py",
+      "target": "function:tests/test_cjk_typography.py:prose_lines",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:tests/test_cjk_typography.py",
+      "target": "class:tests/test_cjk_typography.py:CjkTypographyTests",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:tests/test_html_list_rendering.py",
+      "target": "class:tests/test_html_list_rendering.py:HtmlListRenderingTests",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:tests/test_installation_contracts.py",
+      "target": "class:tests/test_installation_contracts.py:InstallationContractTests",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:tests/test_verify_artifacts.py",
+      "target": "class:tests/test_verify_artifacts.py:ArtifactVerifierTests",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:tests/test_workflow_security.py",
+      "target": "function:tests/test_workflow_security.py:workflow_step_script",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:tests/test_workflow_security.py",
+      "target": "function:tests/test_workflow_security.py:workflow_step_scripts_in_document_order",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:tests/test_workflow_security.py",
+      "target": "class:tests/test_workflow_security.py:WorkflowSecurityTests",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:tools/build_html_reader.py",
+      "target": "function:tools/build_html_reader.py:parse_summary",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:tools/build_html_reader.py",
+      "target": "function:tools/build_html_reader.py:process_file",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:tools/build_html_reader.py",
+      "target": "function:tools/build_html_reader.py:main",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:tools/build_pdf.py",
+      "target": "function:tools/build_pdf.py:terminate_process_tree",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:tools/build_pdf.py",
+      "target": "function:tools/build_pdf.py:build_once",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:tools/build_pdf.py",
+      "target": "function:tools/build_pdf.py:parse_args",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:tools/build_pdf.py",
+      "target": "function:tools/build_pdf.py:main",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:tools/render_mermaid.py",
+      "target": "function:tools/render_mermaid.py:render",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:tools/verify_artifacts.py",
+      "target": "function:tools/verify_artifacts.py:verify_html",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:tools/verify_artifacts.py",
+      "target": "function:tools/verify_artifacts.py:verify_pdf",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:tools/verify_artifacts.py",
+      "target": "function:tools/verify_artifacts.py:write_checksums",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:tools/verify_artifacts.py",
+      "target": "function:tools/verify_artifacts.py:verify_checksums",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:tools/verify_artifacts.py",
+      "target": "function:tools/verify_artifacts.py:parse_args",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:tools/verify_artifacts.py",
+      "target": "function:tools/verify_artifacts.py:main",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:tools/build_pdf.py",
+      "target": "file:tests/test_build_pdf.py",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:tools/verify_artifacts.py",
+      "target": "file:tests/test_verify_artifacts.py",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:tools/build_html_reader.py",
+      "target": "file:tests/test_html_list_rendering.py",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:tools/build_html_reader.py",
+      "target": "file:tools/render_mermaid.py",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "document:docs/superpowers/plans/2026-10-06-vietnamese-translation.md",
+      "target": "document:docs/superpowers/specs/2026-10-06-vietnamese-translation-design.md",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "document:docs/superpowers/plans/2026-10-06-vietnamese-translation.md",
+      "target": "file:check_project_rules.py",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:tests/test_cjk_typography.py",
+      "target": "file:check_project_rules.py",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:tests/test_cjk_typography.py",
+      "target": "file:check_emphasis.py",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:check_project_rules.py",
+      "target": "file:check_emphasis.py",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    }
+  ],
+  "nodes": [
+    {
+      "id": "pipeline:.github/workflows/auto-release.yml",
+      "name": "auto-release.yml",
+      "filePath": ".github/workflows/auto-release.yml",
+      "summary": "Automates building, testing, verifying, attesting provenance, and publishing PDF and HTML guide editions for tagged releases.",
+      "type": "pipeline"
+    },
+    {
+      "id": "pipeline:.github/workflows/ci.yaml",
+      "name": "ci.yaml",
+      "filePath": ".github/workflows/ci.yaml",
+      "summary": "Continuous integration workflow that executes project tests and rule checks, followed by building and verifying PDF and HTML guide editions on pull requests and pushes to main.",
+      "type": "pipeline"
+    },
+    {
+      "id": "pipeline:.github/workflows/dependabot-automerge.yml",
+      "name": "dependabot-automerge.yml",
+      "filePath": ".github/workflows/dependabot-automerge.yml",
+      "summary": "Automatically enables auto-merge for Dependabot pull requests targeting semver patch updates while leaving minor and major updates for manual review.",
+      "type": "pipeline"
+    },
+    {
+      "id": "pipeline:.github/workflows/identity-guard.yaml",
+      "name": "identity-guard.yaml",
+      "filePath": ".github/workflows/identity-guard.yaml",
+      "summary": "Server-side git audit workflow that inspects commit authors, committers, and Co-authored-by trailers to prevent AI assistant identities from entering repository history.",
+      "type": "pipeline"
+    },
+    {
+      "id": "pipeline:.github/workflows/preview-pdf.yml",
+      "name": "preview-pdf.yml",
+      "filePath": ".github/workflows/preview-pdf.yml",
+      "summary": "Builds, verifies, and publishes rolling preview editions of the PDF and HTML guides to a mutable preview-pdf release tag on push to main.",
+      "type": "pipeline"
+    },
+    {
+      "id": "document:01_overview/README.md",
+      "name": "README.md",
+      "filePath": "01_overview/README.md",
+      "summary": "Introduces Chapter 1 of the OpenClaw guide, providing a table of contents and learning objectives for understanding the local-first AI assistant.",
+      "type": "document"
+    },
+    {
+      "id": "document:01_overview/1.1_what_is_openclaw.md",
+      "name": "1.1_what_is_openclaw.md",
+      "filePath": "01_overview/1.1_what_is_openclaw.md",
+      "summary": "Explains OpenClaw's architecture using a smart intern metaphor, addressing isolated AI capabilities, multi-channel messaging, and system auditability.",
+      "type": "document"
+    },
+    {
+      "id": "document:01_overview/1.2_scenarios_comparison.md",
+      "name": "1.2_scenarios_comparison.md",
+      "filePath": "01_overview/1.2_scenarios_comparison.md",
+      "summary": "Compares OpenClaw with ChatGPT, Cursor, Zapier, and Dify, analyzing token cost implications and practical workload suitability.",
+      "type": "document"
+    },
+    {
+      "id": "document:01_overview/1.3_concepts.md",
+      "name": "1.3_concepts.md",
+      "filePath": "01_overview/1.3_concepts.md",
+      "summary": "Introduces the five core concepts of OpenClaw—Gateway, Agent, Tool, Session, and Node—mapping out the message lifecycle and chapter cross-references.",
+      "type": "document"
+    },
+    {
+      "id": "document:01_overview/1.4_use_cases.md",
+      "name": "1.4_use_cases.md",
+      "filePath": "01_overview/1.4_use_cases.md",
+      "summary": "Outlines typical OpenClaw deployment scenarios, including personal ChatOps, smart home automation, auditable memory systems, and security sandbox research.",
+      "type": "document"
+    },
+    {
+      "id": "document:01_overview/summary.md",
+      "name": "summary.md",
+      "filePath": "01_overview/summary.md",
+      "summary": "Summarizes the fundamental principles covered in Chapter 1, featuring comprehension review questions and a preview of the setup chapter.",
+      "type": "document"
+    },
+    {
+      "id": "document:02_setup/README.md",
+      "name": "README.md",
+      "filePath": "02_setup/README.md",
+      "summary": "Serves as the chapter roadmap and table of contents for Chapter 2, outlining the four-step setup sequence from prerequisites to gateway acceptance testing.",
+      "type": "document"
+    },
+    {
+      "id": "document:02_setup/2.1_requirements.md",
+      "name": "2.1_requirements.md",
+      "filePath": "02_setup/2.1_requirements.md",
+      "summary": "Specifies hardware, Node.js runtime, network connectivity, and API credential prerequisites for deploying OpenClaw.",
+      "type": "document"
+    },
+    {
+      "id": "document:02_setup/2.2_installation.md",
+      "name": "2.2_installation.md",
+      "filePath": "02_setup/2.2_installation.md",
+      "summary": "Guides users through OpenClaw installation using the one-line install script, npm, Docker, and source builds, alongside environment variable and path configurations.",
+      "type": "document"
+    },
+    {
+      "id": "document:02_setup/2.3_onboarding.md",
+      "name": "2.3_onboarding.md",
+      "filePath": "02_setup/2.3_onboarding.md",
+      "summary": "Explains how to run the interactive onboarding wizard to configure models, workspaces, and daemons while defining workspace bootstrap file roles.",
+      "type": "document"
+    },
+    {
+      "id": "document:02_setup/2.4_gateway_service.md",
+      "name": "2.4_gateway_service.md",
+      "filePath": "02_setup/2.4_gateway_service.md",
+      "summary": "Details OpenClaw Gateway daemon management, local health acceptance testing checklists, and layered troubleshooting architectures.",
+      "type": "document"
+    },
+    {
+      "id": "document:02_setup/summary.md",
+      "name": "summary.md",
+      "filePath": "02_setup/summary.md",
+      "summary": "Reviews key setup takeaways, provides a post-installation security and operational checklist, and previews Chapter 3 minimal loop topics.",
+      "type": "document"
+    },
+    {
+      "id": "document:03_minimal_loop/3.1_control_ui_webchat.md",
+      "name": "3.1_control_ui_webchat.md",
+      "filePath": "03_minimal_loop/3.1_control_ui_webchat.md",
+      "summary": "Details the Control UI web dashboard navigation structure and minimal loop verification workflow using local webchat. Guides testing Gateway health, streaming outputs, and initial connection barriers before integrating external channels.",
+      "type": "document"
+    },
+    {
+      "id": "document:03_minimal_loop/3.2_diagnostics.md",
+      "name": "3.2_diagnostics.md",
+      "filePath": "03_minimal_loop/3.2_diagnostics.md",
+      "summary": "Establishes a systematic 4-tier diagnostic methodology across process, channels, AI models, and structured logs. Provides diagnostic CLI commands including deep status probes and guided repair tools to pinpoint failures.",
+      "type": "document"
+    },
+    {
+      "id": "document:03_minimal_loop/3.3_agent_persona.md",
+      "name": "3.3_agent_persona.md",
+      "filePath": "03_minimal_loop/3.3_agent_persona.md",
+      "summary": "Explains how to craft executable initial system instructions and configure agent personas across workspace markdown files like AGENTS.md and SOUL.md. Covers goal convergence, boundary enforcement, and format constraints.",
+      "type": "document"
+    },
+    {
+      "id": "document:03_minimal_loop/3.4_pairing_groups.md",
+      "name": "3.4_pairing_groups.md",
+      "filePath": "03_minimal_loop/3.4_pairing_groups.md",
+      "summary": "Covers local access boundaries, device pairing approval workflows, and default channel policies for direct messages and group chats. Explains how 'block first, approve later' establishes the minimal trust perimeter.",
+      "type": "document"
+    },
+    {
+      "id": "document:03_minimal_loop/README.md",
+      "name": "README.md",
+      "filePath": "03_minimal_loop/README.md",
+      "summary": "Introduces Chapter 3 on rapid setup and the first live interactive session using a local minimal loop baseline. Outlines the chapter contents, learning objectives, and prerequisites.",
+      "type": "document"
+    },
+    {
+      "id": "document:03_minimal_loop/summary.md",
+      "name": "summary.md",
+      "filePath": "03_minimal_loop/summary.md",
+      "summary": "Summarizes the essential design principles and self-check criteria for validating a minimal local conversational baseline. Concludes Chapter 3 and outlines next steps for configuration and AI model integration.",
+      "type": "document"
+    },
+    {
+      "id": "document:04_config_models/README.md",
+      "name": "README.md",
+      "filePath": "04_config_models/README.md",
+      "summary": "Introduces Chapter 4 on configuration systems and model governance, establishing learning objectives for config explanation, safe auth rotation, multi-dimensional model evaluation, and failover design.",
+      "type": "document"
+    },
+    {
+      "id": "document:04_config_models/4.1_config_system.md",
+      "name": "4.1_config_system.md",
+      "filePath": "04_config_models/4.1_config_system.md",
+      "summary": "Explains the openclaw.json structure, scope boundaries between Gateway, Agent, Channel, and Tool levels, configuration precedence layering, and the four-part evidence chain for verifying active parameters.",
+      "type": "document"
+    },
+    {
+      "id": "document:04_config_models/4.2_provider_access.md",
+      "name": "4.2_provider_access.md",
+      "filePath": "04_config_models/4.2_provider_access.md",
+      "summary": "Covers model provider connection strategies and authentication, comparing built-in onboarding with custom proxy configurations, SecretRef pipelines, multi-key auth profiles, and rate-limit cooldown handling.",
+      "type": "document"
+    },
+    {
+      "id": "document:04_config_models/4.3_model_selection.md",
+      "name": "4.3_model_selection.md",
+      "filePath": "04_config_models/4.3_model_selection.md",
+      "summary": "Presents a four-dimensional decision framework balancing quality, cost, latency, and reliability, detailing primary model setup in agents.defaults.model, per-agent overrides, and regression testing protocols.",
+      "type": "document"
+    },
+    {
+      "id": "document:04_config_models/4.4_failover.md",
+      "name": "4.4_failover.md",
+      "filePath": "04_config_models/4.4_failover.md",
+      "summary": "Details fault classification mapping, fallback chain configuration via agents.defaults.model.fallbacks, coordination with bounded retries, auth-profile cooldown tiers, and fault-injection verification.",
+      "type": "document"
+    },
+    {
+      "id": "document:04_config_models/summary.md",
+      "name": "summary.md",
+      "filePath": "04_config_models/summary.md",
+      "summary": "Summarizes Chapter 4 core conclusions, provides a minimal viable configuration loop and standard verification commands, and includes a self-assessment checklist for model governance.",
+      "type": "document"
+    },
+    {
+      "id": "document:05_tools_skills/README.md",
+      "name": "README.md",
+      "filePath": "05_tools_skills/README.md",
+      "summary": "Introduces Chapter 5 on OpenClaw's Action Layer, establishing the architectural relationship between intent proposal, tool contracts, permission policies, and execution governance.",
+      "type": "document"
+    },
+    {
+      "id": "document:05_tools_skills/5.1_tool_inventory.md",
+      "name": "5.1_tool_inventory.md",
+      "filePath": "05_tools_skills/5.1_tool_inventory.md",
+      "summary": "Explores tool inventory engineering, covering tool contracts, failure semantics, read-only vs. mutating boundaries, tool chaining with error propagation, result injection, and execution replayability.",
+      "type": "document"
+    },
+    {
+      "id": "document:05_tools_skills/5.2_tool_policy.md",
+      "name": "5.2_tool_policy.md",
+      "filePath": "05_tools_skills/5.2_tool_policy.md",
+      "summary": "Explains tool policy enforcement including global allow/deny precedence, tool profiles, channel and sender-level layering, provider customizations, and sub-agent depth restrictions.",
+      "type": "document"
+    },
+    {
+      "id": "document:05_tools_skills/5.3_skills_plugins.md",
+      "name": "5.3_skills_plugins.md",
+      "filePath": "05_tools_skills/5.3_skills_plugins.md",
+      "summary": "Delineates the division of labor between Plugins for runtime capability extension and Skills for process standardization, while highlighting ClawHub supply-chain risks and review checklists.",
+      "type": "document"
+    },
+    {
+      "id": "document:05_tools_skills/5.4_browser_nodes.md",
+      "name": "5.4_browser_nodes.md",
+      "filePath": "05_tools_skills/5.4_browser_nodes.md",
+      "summary": "Covers browser automation governance, detailing isolation boundaries, a 4-tier capability hierarchy from search to vision, CLI operations, and structured troubleshooting workflows.",
+      "type": "document"
+    },
+    {
+      "id": "document:05_tools_skills/summary.md",
+      "name": "summary.md",
+      "filePath": "05_tools_skills/summary.md",
+      "summary": "Summarizes Chapter 5 key conclusions on runtime policy boundaries and tool governance, providing diagnostic self-test questions and practical automation scenarios.",
+      "type": "document"
+    },
+    {
+      "id": "document:06_context_memory/README.md",
+      "name": "README.md",
+      "filePath": "06_context_memory/README.md",
+      "summary": "Introduces Chapter 6 on sessions, context, and memory, establishing learning objectives for session isolation, multi-tier context budgeting, long-term memory retrieval, and compaction management.",
+      "type": "document"
+    },
+    {
+      "id": "document:06_context_memory/6.1_sessions.md",
+      "name": "6.1_sessions.md",
+      "filePath": "06_context_memory/6.1_sessions.md",
+      "summary": "Covers OpenClaw's session model and persistence layer, explaining session key resolution, thread and DM isolation boundaries, reset strategies, message queue modes, and session bleed troubleshooting.",
+      "type": "document"
+    },
+    {
+      "id": "document:06_context_memory/6.2_context_building.md",
+      "name": "6.2_context_building.md",
+      "filePath": "06_context_memory/6.2_context_building.md",
+      "summary": "Explains context assembly across four prioritized information tiers, token window budget allocation ratios, structured tool result injection, and pluggable context engines.",
+      "type": "document"
+    },
+    {
+      "id": "document:06_context_memory/6.3_memory_mechanism.md",
+      "name": "6.3_memory_mechanism.md",
+      "filePath": "06_context_memory/6.3_memory_mechanism.md",
+      "summary": "Details the dual-tier workspace memory architecture comprising MEMORY.md and daily logs, fact curation criteria, hybrid search with vector embedding indexing, and memory expiration.",
+      "type": "document"
+    },
+    {
+      "id": "document:06_context_memory/6.4_compaction_pruning.md",
+      "name": "6.4_compaction_pruning.md",
+      "filePath": "06_context_memory/6.4_compaction_pruning.md",
+      "summary": "Analyzes context governance for long conversations, contrasting ephemeral in-memory tool result pruning with persistent transcript compaction and pre-compaction memory flush triggers.",
+      "type": "document"
+    },
+    {
+      "id": "document:06_context_memory/summary.md",
+      "name": "summary.md",
+      "filePath": "06_context_memory/summary.md",
+      "summary": "Summarizes Chapter 6 with key conclusions on state ownership and token governance, an end-to-end trace walkthrough, self-check verification criteria, and a transition to multi-agent routing.",
+      "type": "document"
+    },
+    {
+      "id": "document:07_multi_agent/7.1_telegram_whatsapp.md",
+      "name": "7.1_telegram_whatsapp.md",
+      "filePath": "07_multi_agent/7.1_telegram_whatsapp.md",
+      "summary": "Covers channel onboarding and ingress governance for Telegram and WhatsApp, detailing direct-message and group policy segregation, token configurations, and multi-account isolation strategies.",
+      "type": "document"
+    },
+    {
+      "id": "document:07_multi_agent/7.2_lark_integration.md",
+      "name": "7.2_lark_integration.md",
+      "filePath": "07_multi_agent/7.2_lark_integration.md",
+      "summary": "Walks through enterprise bot onboarding for Lark/Feishu Open Platform, covering long connection WebSocket subscriptions, event dispatching, permission setups, and pairing verification.",
+      "type": "document"
+    },
+    {
+      "id": "document:07_multi_agent/7.3_routing_basics.md",
+      "name": "7.3_routing_basics.md",
+      "filePath": "07_multi_agent/7.3_routing_basics.md",
+      "summary": "Explains multi-agent routing mechanics, routing bindings precedence over natural intent routers, risk-gated entry point mappings, and workspace memory isolation.",
+      "type": "document"
+    },
+    {
+      "id": "document:07_multi_agent/7.4_collaboration_patterns.md",
+      "name": "7.4_collaboration_patterns.md",
+      "filePath": "07_multi_agent/7.4_collaboration_patterns.md",
+      "summary": "Details multi-agent collaboration topologies, contrasting isolated sub-agent task delegation via sessions_spawn with parallel fan-out via broadcast groups and message queue announce flows.",
+      "type": "document"
+    },
+    {
+      "id": "document:07_multi_agent/README.md",
+      "name": "README.md",
+      "filePath": "07_multi_agent/README.md",
+      "summary": "Introduces Chapter 7 on multi-channel message distribution and multi-agent collaboration, outlining channel policies, routing bindings, sandbox boundary enforcement, and chapter navigation.",
+      "type": "document"
+    },
+    {
+      "id": "document:07_multi_agent/summary.md",
+      "name": "summary.md",
+      "filePath": "07_multi_agent/summary.md",
+      "summary": "Summarizes Chapter 7 key architectural takeaways on deterministic agent ownership, channel policies, auditability, self-check verification questions, and multi-agent production use cases.",
+      "type": "document"
+    },
+    {
+      "id": "document:08_automation_ops/README.md",
+      "name": "README.md",
+      "filePath": "08_automation_ops/README.md",
+      "summary": "Serves as the chapter roadmap and table of contents for Chapter 8, introducing architectural governance across lifecycle hooks, cron jobs, heartbeat polling, remote access, and security baselines for 24/7 unattended operations.",
+      "type": "document"
+    },
+    {
+      "id": "document:08_automation_ops/8.1_hooks.md",
+      "name": "8.1_hooks.md",
+      "filePath": "08_automation_ops/8.1_hooks.md",
+      "summary": "Details OpenClaw lifecycle hooks and event interception points, establishing clear separation of cross-cutting governance concerns like rate limiting, auditing, and data masking while enforcing timeout, degradation, and idempotency constraints.",
+      "type": "document"
+    },
+    {
+      "id": "document:08_automation_ops/8.2_cron_jobs.md",
+      "name": "8.2_cron_jobs.md",
+      "filePath": "08_automation_ops/8.2_cron_jobs.md",
+      "summary": "Guides the design and scheduling of exact-time unattended tasks using built-in gateway cron and external crontab integration, emphasizing idempotency keys, non-overlapping locks, and error triage.",
+      "type": "document"
+    },
+    {
+      "id": "document:08_automation_ops/8.3_heartbeat.md",
+      "name": "8.3_heartbeat.md",
+      "filePath": "08_automation_ops/8.3_heartbeat.md",
+      "summary": "Explains OpenClaw's periodic heartbeat mechanism for batched polling and notify-on-demand alerting, dissecting the timer-to-delivery lifecycle, HEARTBEAT_OK protocol, active hours configuration, and token cost optimization.",
+      "type": "document"
+    },
+    {
+      "id": "document:08_automation_ops/8.4_remote_access.md",
+      "name": "8.4_remote_access.md",
+      "filePath": "08_automation_ops/8.4_remote_access.md",
+      "summary": "Architects secure remote management for OpenClaw instances using SSH port forwarding, Tailscale Serve private network tunnels, Zero Trust identity principles, and rclone file synchronization.",
+      "type": "document"
+    },
+    {
+      "id": "document:08_automation_ops/8.5_security_baseline.md",
+      "name": "8.5_security_baseline.md",
+      "filePath": "08_automation_ops/8.5_security_baseline.md",
+      "summary": "Establishes a verifiable defense-in-depth security baseline spanning ingress control, routing bindings, tool execution policies, and secret management with structured audit event logging.",
+      "type": "document"
+    },
+    {
+      "id": "document:08_automation_ops/summary.md",
+      "name": "summary.md",
+      "filePath": "08_automation_ops/summary.md",
+      "summary": "Summarizes key operational automation takeaways, provides a practical self-inspection checklist for production readiness, and showcases community deployment patterns.",
+      "type": "document"
+    },
+    {
+      "id": "document:09_gateway_protocol/9.1_architecture_overview.md",
+      "name": "9.1_architecture_overview.md",
+      "filePath": "09_gateway_protocol/9.1_architecture_overview.md",
+      "summary": "Presents the five-plane architectural framework (Control, Data, Context, Trust, and Visibility planes) for understanding Gateway responsibilities and module boundaries. Analyzes plane interactions, execution surface separation, and cross-plane diagnostic tracing.",
+      "type": "document"
+    },
+    {
+      "id": "document:09_gateway_protocol/9.2_control_plane.md",
+      "name": "9.2_control_plane.md",
+      "filePath": "09_gateway_protocol/9.2_control_plane.md",
+      "summary": "Explores the five core duties and boundaries of the Gateway Control Plane: connection attribution, routing, session lifecycle, policy enforcement, and circuit-breaking failover. Introduces layered approval architecture and practical openclaw.json configuration examples.",
+      "type": "document"
+    },
+    {
+      "id": "document:09_gateway_protocol/9.3_ws_handshake.md",
+      "name": "9.3_ws_handshake.md",
+      "filePath": "09_gateway_protocol/9.3_ws_handshake.md",
+      "summary": "Details the full lifecycle of persistent WebSocket connections, covering challenge-response authentication, device identity signatures, keepalive heartbeats, and exponential backoff reconnection. Clarifies the architectural distinction between transport-level connections and stateful sessions.",
+      "type": "document"
+    },
+    {
+      "id": "document:09_gateway_protocol/9.4_event_idempotency.md",
+      "name": "9.4_event_idempotency.md",
+      "filePath": "09_gateway_protocol/9.4_event_idempotency.md",
+      "summary": "Examines event idempotency, sequence ordering, and eventual consistency guarantees across distributed agent networks. Explains handling duplicate, lost, or unknown states via idempotency keys, sequence gap detection for snapshot refresh, and session-level mutex locking.",
+      "type": "document"
+    },
+    {
+      "id": "document:09_gateway_protocol/9.5_pairing_trust.md",
+      "name": "9.5_pairing_trust.md",
+      "filePath": "09_gateway_protocol/9.5_pairing_trust.md",
+      "summary": "Explains establishing local trust perimeters via device identity registration, nonce-based cryptographic challenge verification, and operator approval workflows. Distinguishes Control Plane device pairing from chat-level DM sender pairing, and outlines token rotation and emergency revocation mechanisms.",
+      "type": "document"
+    },
+    {
+      "id": "document:09_gateway_protocol/README.md",
+      "name": "README.md",
+      "filePath": "09_gateway_protocol/README.md",
+      "summary": "Introduces Chapter 9 on OpenClaw Gateway control plane responsibilities, WebSocket connection lifecycles, event consistency, and local device pairing trust. Outlines the chapter outline, pedagogical five-plane architectural framework, and core learning objectives.",
+      "type": "document"
+    },
+    {
+      "id": "document:09_gateway_protocol/summary.md",
+      "name": "summary.md",
+      "filePath": "09_gateway_protocol/summary.md",
+      "summary": "Summarizes Chapter 9 key conclusions on control plane arbitration, WebSocket lifecycle management, event idempotency, and device trust bootstrapping. Includes a self-check verification checklist and transitions to Chapter 10 agent loop mechanics.",
+      "type": "document"
+    },
+    {
+      "id": "document:10_agent_loop/10.1_request_lifecycle.md",
+      "name": "10.1_request_lifecycle.md",
+      "filePath": "10_agent_loop/10.1_request_lifecycle.md",
+      "summary": "Traces the complete end-to-end request lifecycle of an agent message and provides an outside-in layered diagnostic framework for isolating errors across gateway, agent, session, model, and tool tiers.",
+      "type": "document"
+    },
+    {
+      "id": "document:10_agent_loop/10.2_pi_framework.md",
+      "name": "10.2_pi_framework.md",
+      "filePath": "10_agent_loop/10.2_pi_framework.md",
+      "summary": "Analyzes OpenClaw's embedded integration of the Pi runtime engine, detailing session lifecycle management, custom tool injection, event subscription bridges, and dynamic system prompts.",
+      "type": "document"
+    },
+    {
+      "id": "document:10_agent_loop/10.3_entry_queue.md",
+      "name": "10.3_entry_queue.md",
+      "filePath": "10_agent_loop/10.3_entry_queue.md",
+      "summary": "Details ingress protocol normalization, replay deduplication barriers, and the pure TypeScript lane-based Command Queue governing session, global, and background execution concurrency.",
+      "type": "document"
+    },
+    {
+      "id": "document:10_agent_loop/10.4_prompt_assembly.md",
+      "name": "10.4_prompt_assembly.md",
+      "filePath": "10_agent_loop/10.4_prompt_assembly.md",
+      "summary": "Examines structured context assembly across four data tiers, token window budgeting with priority-based pruning, prompt persistence audits, and defense-in-depth against prompt injection attacks.",
+      "type": "document"
+    },
+    {
+      "id": "document:10_agent_loop/10.5_tool_execution.md",
+      "name": "10.5_tool_execution.md",
+      "filePath": "10_agent_loop/10.5_tool_execution.md",
+      "summary": "Explores the four-stage tool call lifecycle, static policy filtering, dynamic before_tool_call plugin interception hooks, loop detection, and result trimming injection.",
+      "type": "document"
+    },
+    {
+      "id": "document:10_agent_loop/10.6_streaming_retry.md",
+      "name": "10.6_streaming_retry.md",
+      "filePath": "10_agent_loop/10.6_streaming_retry.md",
+      "summary": "Explains the EmbeddedBlockChunker streaming engine with fence-aware markdown chunking, bounded request-level HTTP retry strategies, model failover sequences, and early termination controls.",
+      "type": "document"
+    },
+    {
+      "id": "document:10_agent_loop/README.md",
+      "name": "README.md",
+      "filePath": "10_agent_loop/README.md",
+      "summary": "Serves as the chapter navigation guide for the OpenClaw Agent Loop core, introducing foundational mental models, learning objectives, and reading advice.",
+      "type": "document"
+    },
+    {
+      "id": "document:10_agent_loop/summary.md",
+      "name": "summary.md",
+      "filePath": "10_agent_loop/summary.md",
+      "summary": "Summarizes the key architectural conclusions of Chapter 10, provides a self-assessment checklist across all agent loop mechanisms, and previews Chapter 11 on reliability and security.",
+      "type": "document"
+    },
+    {
+      "id": "document:11_reliability_security/11.1_auth_profiles.md",
+      "name": "11.1_auth_profiles.md",
+      "filePath": "11_reliability_security/11.1_auth_profiles.md",
+      "summary": "Defines the multi-key authentication object model and lifecycle in OpenClaw, covering auth profiles, selection order priority, session overrides, and runtime state tracking. Explains key isolation across environments, zero-downtime key rotation workflows, emergency credential leak response, and audit verification probes.",
+      "type": "document"
+    },
+    {
+      "id": "document:11_reliability_security/11.2_rotation_cooldown.md",
+      "name": "11.2_rotation_cooldown.md",
+      "filePath": "11_reliability_security/11.2_rotation_cooldown.md",
+      "summary": "Details the auth profile cooldown and temporary disablement mechanisms designed to prevent retry amplification during provider outages or rate limits. Explains failure count cooldown tiers, exponential backoff for billing failures, and runtime state tracking via auth-state.json.",
+      "type": "document"
+    },
+    {
+      "id": "document:11_reliability_security/11.3_fallback_rules.md",
+      "name": "11.3_fallback_rules.md",
+      "filePath": "11_reliability_security/11.3_fallback_rules.md",
+      "summary": "Establishes explainable model fallback chains and failure triage rules to ensure continuous operation without silent model switches. Covers sequential fallback tiers, context overflow bypass behaviors, half-open probing during cooldown, and fault injection verification techniques.",
+      "type": "document"
+    },
+    {
+      "id": "document:11_reliability_security/11.4_guardrails.md",
+      "name": "11.4_guardrails.md",
+      "filePath": "11_reliability_security/11.4_guardrails.md",
+      "summary": "Explains the four-layer defense-in-depth guardrail framework combining tool policies, sandbox container isolation, manual execution approvals, and audit logging. Demonstrates prompt injection mitigation, sensitive data masking, and health diagnostic commands.",
+      "type": "document"
+    },
+    {
+      "id": "document:11_reliability_security/README.md",
+      "name": "README.md",
+      "filePath": "11_reliability_security/README.md",
+      "summary": "Chapter roadmap and learning objectives for implementing reliability and security mechanisms in OpenClaw, introducing multi-key governance, cooldown mechanisms, model fallback chains, and defensive guardrails.",
+      "type": "document"
+    },
+    {
+      "id": "document:11_reliability_security/summary.md",
+      "name": "summary.md",
+      "filePath": "11_reliability_security/summary.md",
+      "summary": "Summarizes Chapter 11 key takeaways on explicit multi-key governance, explainable model fallbacks, cooldown circuit breaking, and four-tier guardrail defense. Provides a self-assessment checklist and introduces Chapter 12 on plugin engineering and production operations.",
+      "type": "document"
+    },
+    {
+      "id": "document:12_extension_engineering/README.md",
+      "name": "README.md",
+      "filePath": "12_extension_engineering/README.md",
+      "summary": "Introduces Chapter 12 on extension engineering and production operations, framing how OpenClaw evolves into an auditable and extensible enterprise platform. Contrasts developer extension mechanisms with Chapter 5's tool user perspective, summarizing plugin lifecycles, custom tools, testing pipelines, and production blueprints.",
+      "type": "document"
+    },
+    {
+      "id": "document:12_extension_engineering/12.1_plugin_architecture.md",
+      "name": "12.1_plugin_architecture.md",
+      "filePath": "12_extension_engineering/12.1_plugin_architecture.md",
+      "summary": "Details OpenClaw's native plugin architecture, manifest validation mechanics, and five execution modes across agent, message, tool, and gateway lifecycle hooks. Explains two-tier perimeter isolation combining plugin whitelists with tool policies, bundle compatibility with external ecosystems, and CLI diagnostic commands.",
+      "type": "document"
+    },
+    {
+      "id": "document:12_extension_engineering/12.2_custom_tools.md",
+      "name": "12.2_custom_tools.md",
+      "filePath": "12_extension_engineering/12.2_custom_tools.md",
+      "summary": "Provides technical guidance for designing and registering custom OpenClaw tools using TypeBox parameter schemas, structured reproducible outputs, and idempotency keys to bound side effects. Demonstrates policy layering where deny rules take precedence, sandbox execution for high-risk actions, and common design anti-patterns.",
+      "type": "document"
+    },
+    {
+      "id": "document:12_extension_engineering/12.3_testing_debugging.md",
+      "name": "12.3_testing_debugging.md",
+      "filePath": "12_extension_engineering/12.3_testing_debugging.md",
+      "summary": "Establishes a three-tier verification methodology for extensions spanning plugin loading, policy enforcement, and gateway ingress before end-to-end testing. Introduces snapshot baseline diffing, traceId replay for deterministic fault localization, and automated CI/CD canary release and rollback procedures.",
+      "type": "document"
+    },
+    {
+      "id": "document:12_extension_engineering/12.4_production_blueprint.md",
+      "name": "12.4_production_blueprint.md",
+      "filePath": "12_extension_engineering/12.4_production_blueprint.md",
+      "summary": "Defines a production blueprint for OpenClaw extensions, enforcing separation of code and configuration changes, three-tier security perimeters, and secret injection via SecretRef. Details emergency rollback runbooks, graceful degradation strategies, and operational KPIs with alert thresholds for gateway latency, resource usage, and tool health.",
+      "type": "document"
+    },
+    {
+      "id": "document:12_extension_engineering/12.5_framework_interoperability.md",
+      "name": "12.5_framework_interoperability.md",
+      "filePath": "12_extension_engineering/12.5_framework_interoperability.md",
+      "summary": "Analyzes interoperability between OpenClaw and frameworks like LangGraph and CrewAI across adapter, protocol, and data layers. Contrasts local embedded, remote service-based, and external bridge topologies, comparing OpenClaw's declarative gateway governance with external state-machine and multi-role orchestration engines.",
+      "type": "document"
+    },
+    {
+      "id": "document:12_extension_engineering/summary.md",
+      "name": "summary.md",
+      "filePath": "12_extension_engineering/summary.md",
+      "summary": "Summarizes Chapter 12 key takeaways on extension engineering, highlighting mandatory whitelists, policy-driven custom tool containment, layered verification, and standardized diagnostic replay. Provides a self-assessment production readiness checklist and previews practical enterprise case studies in Chapter 13.",
+      "type": "document"
+    },
+    {
+      "id": "document:13_practical_cases/13.1_lark_slack_workbot.md",
+      "name": "13.1_lark_slack_workbot.md",
+      "filePath": "13_practical_cases/13.1_lark_slack_workbot.md",
+      "summary": "Demonstrates building an enterprise Lark/Slack workgroup assistant for an engineering team, progressing from a minimal single-tool knowledge search loop to layered RBAC permission enforcement, GitHub PR analysis, Jira issue tracking, and scheduled cron summaries.",
+      "type": "document"
+    },
+    {
+      "id": "document:13_practical_cases/13.2_customer_support_agent.md",
+      "name": "13.2_customer_support_agent.md",
+      "filePath": "13_practical_cases/13.2_customer_support_agent.md",
+      "summary": "Details an enterprise customer support agent implementation for B2B SaaS, covering automated FAQ retrieval, sentiment-driven human escalation workflows, Zendesk ticket creation, pre-LLM PII masking, and multilingual policy configuration.",
+      "type": "document"
+    },
+    {
+      "id": "document:13_practical_cases/13.3_vertical_industry_cases.md",
+      "name": "13.3_vertical_industry_cases.md",
+      "filePath": "13_practical_cases/13.3_vertical_industry_cases.md",
+      "summary": "Provides a comparative reference contrasting agent architectures across four vertical sectors (Financial Research, Clinical Healthcare, Adaptive Education, and E-Commerce), examining regulatory compliance constraints (SOX, HIPAA, FERPA, PCI-DSS), human-in-the-loop review gates, and memory isolation.",
+      "type": "document"
+    },
+    {
+      "id": "document:13_practical_cases/README.md",
+      "name": "README.md",
+      "filePath": "13_practical_cases/README.md",
+      "summary": "Introduces Chapter 13 on practical real-world OpenClaw deployment cases, detailing the standardized five-stage evolutionary path from a minimal verification loop to production readiness across enterprise workbots, customer support, and vertical industry scenarios.",
+      "type": "document"
+    },
+    {
+      "id": "document:13_practical_cases/summary.md",
+      "name": "summary.md",
+      "filePath": "13_practical_cases/summary.md",
+      "summary": "Summarizes Chapter 13 key insights on progressive configuration, tool access controls, AI model tiering, and industry-specific adaptation vectors, providing transition guidance into performance tuning and operational troubleshooting chapters.",
+      "type": "document"
+    },
+    {
+      "id": "document:14_performance_cost/README.md",
+      "name": "README.md",
+      "filePath": "14_performance_cost/README.md",
+      "summary": "Serves as the chapter roadmap and table of contents for Chapter 14, introducing performance optimization and cost governance across token consumption, inference latency, usage observation, and budget planning.",
+      "type": "document"
+    },
+    {
+      "id": "document:14_performance_cost/14.1_token_context_cost.md",
+      "name": "14.1_token_context_cost.md",
+      "filePath": "14_performance_cost/14.1_token_context_cost.md",
+      "summary": "Analyzes the three-stage token lifecycle in agent conversations and details systematic optimization techniques for input and output tokens. Covers system prompt refinement, specialized per-agent tool allocation, dynamic context pruning, and automated transcript compaction.",
+      "type": "document"
+    },
+    {
+      "id": "document:14_performance_cost/14.2_latency_throughput.md",
+      "name": "14.2_latency_throughput.md",
+      "filePath": "14_performance_cost/14.2_latency_throughput.md",
+      "summary": "Establishes formal mathematical models for end-to-end latency decomposition across LLM inference, tool I/O, sandbox execution, and orchestration overhead. Formulates a structured multi-component cost equation and contrasts serial versus parallel multi-agent dispatch architectures.",
+      "type": "document"
+    },
+    {
+      "id": "document:14_performance_cost/14.3_usage_budget.md",
+      "name": "14.3_usage_budget.md",
+      "filePath": "14_performance_cost/14.3_usage_budget.md",
+      "summary": "Guides real-time token consumption observation and budget control using OpenClaw built-in commands like /status, /usage cost, and /compact alongside Dashboard metrics. Explains global and per-agent budget quotas, automated session pruning, model tiering fallbacks, and cost anomaly alerts.",
+      "type": "document"
+    },
+    {
+      "id": "document:14_performance_cost/14.4_budget_templates.md",
+      "name": "14.4_budget_templates.md",
+      "filePath": "14_performance_cost/14.4_budget_templates.md",
+      "summary": "Provides detailed monthly cost breakdowns and deployment budget templates across three distinct operating tiers: Personal/Small Team, Medium Scale/Startup, and Enterprise. Features a cost driver weight comparison matrix and a practical budget planning decision tree.",
+      "type": "document"
+    },
+    {
+      "id": "document:14_performance_cost/summary.md",
+      "name": "summary.md",
+      "filePath": "14_performance_cost/summary.md",
+      "summary": "Summarizes key operational takeaways from Chapter 14, provides a 6-point cost optimization audit checklist, and previews troubleshooting trees and ecosystem integration chapters.",
+      "type": "document"
+    },
+    {
+      "id": "document:15_troubleshooting_trees/README.md",
+      "name": "README.md",
+      "filePath": "15_troubleshooting_trees/README.md",
+      "summary": "Introduces Chapter 15 and outlines the directory structure for systematic troubleshooting decision trees, high-concurrency diagnostic paths, and operational best practices.",
+      "type": "document"
+    },
+    {
+      "id": "document:15_troubleshooting_trees/15.1_diagnostic_decision_trees.md",
+      "name": "15.1_diagnostic_decision_trees.md",
+      "filePath": "15_troubleshooting_trees/15.1_diagnostic_decision_trees.md",
+      "summary": "Establishes a 6-tier diagnostic decision tree framework covering startup, messaging gateway, model invocation, tool execution, session/memory, and performance degradation, guided by evidence chain hypothesis elimination.",
+      "type": "document"
+    },
+    {
+      "id": "document:15_troubleshooting_trees/15.2_high_concurrency_diagnosis.md",
+      "name": "15.2_high_concurrency_diagnosis.md",
+      "filePath": "15_troubleshooting_trees/15.2_high_concurrency_diagnosis.md",
+      "summary": "Provides diagnostic decision trees and mitigation strategies for high-concurrency production incidents, addressing HTTP 429 rate limiting, authentication expiration, token budget exhaustion, queue overflows, and cascading system failures.",
+      "type": "document"
+    },
+    {
+      "id": "document:15_troubleshooting_trees/summary.md",
+      "name": "summary.md",
+      "filePath": "15_troubleshooting_trees/summary.md",
+      "summary": "Summarizes the key concepts of Chapter 15, emphasizing binary triage, proactive health checks via openclaw doctor, high-concurrency circuit breakers, and scheduled operational auditing.",
+      "type": "document"
+    },
+    {
+      "id": "document:16_claude_ecosystem/README.md",
+      "name": "README.md",
+      "filePath": "16_claude_ecosystem/README.md",
+      "summary": "Serves as the chapter roadmap and table of contents for Chapter 16, introducing integration patterns for mainstream AI ecosystems including Anthropic Claude, Model Context Protocol (MCP), multi-agent orchestration, OpenAI, and local LLMs via Ollama.",
+      "type": "document"
+    },
+    {
+      "id": "document:16_claude_ecosystem/16.1_claude_integration.md",
+      "name": "16.1_claude_integration.md",
+      "filePath": "16_claude_ecosystem/16.1_claude_integration.md",
+      "summary": "Guides integration with the Anthropic Claude model family and external tool connectivity via the Model Context Protocol (MCP). Covers model tier selection from Haiku to Opus, Adaptive Thinking controls, 1M context token activation, stdio and Streamable HTTP MCP server configurations, and multi-provider failover chains.",
+      "type": "document"
+    },
+    {
+      "id": "document:16_claude_ecosystem/16.2_agent_team_integration.md",
+      "name": "16.2_agent_team_integration.md",
+      "filePath": "16_claude_ecosystem/16.2_agent_team_integration.md",
+      "summary": "Explains multi-agent collaboration architectures in OpenClaw using agentId, accountId, and channel bindings alongside task delegation via sessions_spawn. Compares sequential, parallel (fan-out/fan-in), and dynamic routing patterns, and outlines governance constraints and synergy with the Claude Agent SDK.",
+      "type": "document"
+    },
+    {
+      "id": "document:16_claude_ecosystem/16.3_other_ecosystems.md",
+      "name": "16.3_other_ecosystems.md",
+      "filePath": "16_claude_ecosystem/16.3_other_ecosystems.md",
+      "summary": "Covers connecting OpenAI models, Azure OpenAI Service, and local LLMs through Ollama, detailing multi-ecosystem hybrid strategies. Highlights native tool-calling requirements, hardware VRAM sizing guidelines, privacy-first offline fallbacks, and unified status inspection using CLI probe commands.",
+      "type": "document"
+    },
+    {
+      "id": "document:16_claude_ecosystem/summary.md",
+      "name": "summary.md",
+      "filePath": "16_claude_ecosystem/summary.md",
+      "summary": "Summarizes the core takeaways of Chapter 16 on standard model identifiers, MCP tool protocol advantages, dual multi-agent orchestration paths, and enterprise multi-ecosystem hybrid governance.",
+      "type": "document"
+    },
+    {
+      "id": "document:CONTRIBUTING.md",
+      "name": "CONTRIBUTING.md",
+      "filePath": "CONTRIBUTING.md",
+      "summary": "Outlines contributor guidelines, code of conduct, markdown formatting standards, and pull request workflows for the project.",
+      "type": "document"
+    },
+    {
+      "id": "document:README.md",
+      "name": "README.md",
+      "filePath": "README.md",
+      "summary": "Main documentation landing page providing an overview of the OpenClaw guide, key highlights, reading formats, quickstart steps, and role-based learning tracks.",
+      "type": "document"
+    },
+    {
+      "id": "document:README_en.md",
+      "name": "README_en.md",
+      "filePath": "README_en.md",
+      "summary": "English edition of the project overview introducing OpenClaw architecture highlights, local preview instructions, and guided reading tracks.",
+      "type": "document"
+    },
+    {
+      "id": "document:SUMMARY.md",
+      "name": "SUMMARY.md",
+      "filePath": "SUMMARY.md",
+      "summary": "GitBook table of contents defining the structural navigation across beginner fundamentals, advanced features, core principles, practical deployment, and appendices.",
+      "type": "document"
+    },
+    {
+      "id": "config:book.json",
+      "name": "book.json",
+      "filePath": "book.json",
+      "summary": "GitBook configuration file specifying book metadata, Vietnamese language setting, official sidebar links, and theme display settings.",
+      "type": "config"
+    },
+    {
+      "id": "config:package.json",
+      "name": "package.json",
+      "filePath": "package.json",
+      "summary": "NPM package manifest configuring test discovery scripts and development dependencies for Mermaid diagram compilation and browser automation.",
+      "type": "config"
+    },
+    {
+      "id": "document:appendix/README.md",
+      "name": "README.md",
+      "filePath": "appendix/README.md",
+      "summary": "Serves as the master index for the appendix section, cataloging and describing reference documents including glossaries, configuration templates, troubleshooting checklists, and CLI guides.",
+      "type": "document"
+    },
+    {
+      "id": "document:appendix/api_reference.md",
+      "name": "api_reference.md",
+      "filePath": "appendix/api_reference.md",
+      "summary": "Provides an entry-point quick reference for OpenClaw API and SDK integration, control plane documentation links, frontline CLI diagnostic commands, and WebSocket protocol guidance.",
+      "type": "document"
+    },
+    {
+      "id": "document:appendix/command_cheatsheet.md",
+      "name": "command_cheatsheet.md",
+      "filePath": "appendix/command_cheatsheet.md",
+      "summary": "Comprehensive CLI reference manual organizing OpenClaw commands across service operations, models, channels, plugins, skills, sandbox environments, and chat slash commands.",
+      "type": "document"
+    },
+    {
+      "id": "document:appendix/config_templates.md",
+      "name": "config_templates.md",
+      "filePath": "appendix/config_templates.md",
+      "summary": "Collection of standardized JSON5 configuration templates for OpenClaw Gateway spanning minimal local setups, channel integrations (WhatsApp, Telegram), tool governance, storage, and SKILL.md specs.",
+      "type": "document"
+    },
+    {
+      "id": "document:appendix/env_check.md",
+      "name": "env_check.md",
+      "filePath": "appendix/env_check.md",
+      "summary": "Diagnostic bash script and guide to verify core runtime prerequisites, including Node.js version constraints, Docker availability, and outbound network connectivity to model providers.",
+      "type": "document"
+    },
+    {
+      "id": "document:appendix/glossary.md",
+      "name": "glossary.md",
+      "filePath": "appendix/glossary.md",
+      "summary": "Defines core terminology and concepts for OpenClaw, categorized into foundational agent loop concepts, channel operations, and protocol/plugin extension architectures.",
+      "type": "document"
+    },
+    {
+      "id": "document:appendix/naming_history.md",
+      "name": "naming_history.md",
+      "filePath": "appendix/naming_history.md",
+      "summary": "Documents verifiable naming milestones and origins of the OpenClaw project and its continuous development led by Peter Steinberger.",
+      "type": "document"
+    },
+    {
+      "id": "document:appendix/reading_list.md",
+      "name": "reading_list.md",
+      "filePath": "appendix/reading_list.md",
+      "summary": "Curated bibliography compiling official OpenClaw documentation, foundational academic papers on autonomous LLM agents (ReAct, Toolformer), and related open-source ecosystems.",
+      "type": "document"
+    },
+    {
+      "id": "document:appendix/troubleshooting_checklist.md",
+      "name": "troubleshooting_checklist.md",
+      "filePath": "appendix/troubleshooting_checklist.md",
+      "summary": "Systematic step-by-step diagnostic checklist covering startup failures, channel issues, tool policy denials, AI model errors, and session memory faults.",
+      "type": "document"
+    },
+    {
+      "id": "document:appendix/version_mapping.md",
+      "name": "version_mapping.md",
+      "filePath": "appendix/version_mapping.md",
+      "summary": "Guides safe upgrades and schema migrations across OpenClaw CalVer releases, detailing changes in authentication profiles, agent defaults, channel policies, and diagnostic commands.",
+      "type": "document"
+    },
+    {
+      "id": "document:appendix/volatile_facts.md",
+      "name": "volatile_facts.md",
+      "filePath": "appendix/volatile_facts.md",
+      "summary": "Auditing ledger tracking rapidly changing facts such as supported Node.js version ranges, AI model releases, pricing tiers, and protocol specifications with TTL expiration dates.",
+      "type": "document"
+    },
+    {
+      "id": "config:.github/dependabot.yml",
+      "name": "dependabot.yml",
+      "filePath": ".github/dependabot.yml",
+      "summary": "GitHub Dependabot configuration that automates weekly version updates for GitHub Actions workflows.",
+      "type": "config"
+    },
+    {
+      "id": "config:.ua/config.json",
+      "name": "config.json",
+      "filePath": ".ua/config.json",
+      "summary": "Understand-Anything configuration file specifying English as the target output language for generated documentation and graphs.",
+      "type": "config"
+    },
+    {
+      "id": "file:check_emphasis.py",
+      "name": "check_emphasis.py",
+      "filePath": "check_emphasis.py",
+      "summary": "CJK-aware Markdown emphasis validator that detects broken bold and italic formatting caused by CommonMark flanking rules around CJK punctuation.",
+      "type": "file"
+    },
+    {
+      "id": "file:check_project_rules.py",
+      "name": "check_project_rules.py",
+      "filePath": "check_project_rules.py",
+      "summary": "Lightweight Markdown quality checker enforcing rules on volatile date facts, explicit code fence languages, and valid internal relative links.",
+      "type": "file"
+    },
+    {
+      "id": "document:docs/superpowers/plans/2026-10-06-vietnamese-translation.md",
+      "name": "2026-10-06-vietnamese-translation.md",
+      "filePath": "docs/superpowers/plans/2026-10-06-vietnamese-translation.md",
+      "summary": "Implementation plan outlining phased execution steps for translating all 112 book Markdown documents into Vietnamese while preserving syntax, links, and diagrams.",
+      "type": "document"
+    },
+    {
+      "id": "document:docs/superpowers/specs/2026-10-06-vietnamese-translation-design.md",
+      "name": "2026-10-06-vietnamese-translation-design.md",
+      "filePath": "docs/superpowers/specs/2026-10-06-vietnamese-translation-design.md",
+      "summary": "Technical design specification defining translation standards, terminology conventions, and in-place replacement strategy for the Vietnamese edition.",
+      "type": "document"
+    },
+    {
+      "id": "file:tests/test_build_pdf.py",
+      "name": "test_build_pdf.py",
+      "filePath": "tests/test_build_pdf.py",
+      "summary": "Unit test suite for tools/build_pdf.py validating bounded retries, log retention, timeout handling, and process group termination.",
+      "type": "file"
+    },
+    {
+      "id": "file:tests/test_cjk_typography.py",
+      "name": "test_cjk_typography.py",
+      "filePath": "tests/test_cjk_typography.py",
+      "summary": "Typography test suite enforcing spacing boundaries between CJK and Latin characters and full-width parentheses around CJK text.",
+      "type": "file"
+    },
+    {
+      "id": "file:tests/test_html_list_rendering.py",
+      "name": "test_html_list_rendering.py",
+      "filePath": "tests/test_html_list_rendering.py",
+      "summary": "Regression test ensuring Pandoc Markdown reader configuration enables lists without preceding blank lines to prevent list collapsing in mobile reader HTML.",
+      "type": "file"
+    },
+    {
+      "id": "file:tests/test_installation_contracts.py",
+      "name": "test_installation_contracts.py",
+      "filePath": "tests/test_installation_contracts.py",
+      "summary": "Contract tests verifying that the setup documentation specifies mandatory diagnostic commands, Node version constraints, and platform installation procedures.",
+      "type": "file"
+    },
+    {
+      "id": "file:tests/test_verify_artifacts.py",
+      "name": "test_verify_artifacts.py",
+      "filePath": "tests/test_verify_artifacts.py",
+      "summary": "Test suite verifying tools/verify_artifacts.py HTML title checks, PDF signature validation, and portable SHA-256 checksum manifest operations.",
+      "type": "file"
+    },
+    {
+      "id": "file:tests/test_workflow_security.py",
+      "name": "test_workflow_security.py",
+      "filePath": "tests/test_workflow_security.py",
+      "summary": "Security audit test suite validating GitHub Actions workflows for pinned action SHAs, least-privilege token permissions, artifact provenance, and secure preview releases.",
+      "type": "file"
+    },
+    {
+      "id": "file:tools/build_html_reader.py",
+      "name": "build_html_reader.py",
+      "filePath": "tools/build_html_reader.py",
+      "summary": "Build script producing a self-contained, GitBook-style mobile HTML reader featuring embedded CSS navigation, offline math rendering, and pre-rendered SVG Mermaid diagrams.",
+      "type": "file"
+    },
+    {
+      "id": "file:tools/build_pdf.py",
+      "name": "build_pdf.py",
+      "filePath": "tools/build_pdf.py",
+      "summary": "Robust PDF build wrapper providing bounded retries, attempt log capture, and process tree termination to prevent runaway headless browser processes.",
+      "type": "file"
+    },
+    {
+      "id": "file:tools/render_mermaid.py",
+      "name": "render_mermaid.py",
+      "filePath": "tools/render_mermaid.py",
+      "summary": "Diagram rendering script that scans book chapters for Mermaid code blocks and renders them into static SVG assets using mermaid-cli.",
+      "type": "file"
+    },
+    {
+      "id": "file:tools/verify_artifacts.py",
+      "name": "verify_artifacts.py",
+      "filePath": "tools/verify_artifacts.py",
+      "summary": "Artifact integrity verification tool that checks HTML document titles, validates PDF headers and metadata, and maintains sorted SHA-256 checksum manifests.",
+      "type": "file"
+    }
+  ]
+}

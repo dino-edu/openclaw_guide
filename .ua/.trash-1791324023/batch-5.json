@@ -1,0 +1,193 @@
+{
+  "nodes": [
+    {
+      "id": "document:04_config_models/README.md",
+      "type": "document",
+      "name": "README.md",
+      "filePath": "04_config_models/README.md",
+      "summary": "Introduces Chapter 4 on configuration systems and model governance, establishing learning objectives for config explanation, safe auth rotation, multi-dimensional model evaluation, and failover design.",
+      "tags": [
+        "documentation",
+        "overview",
+        "configuration",
+        "model-governance"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "document:04_config_models/4.1_config_system.md",
+      "type": "document",
+      "name": "4.1_config_system.md",
+      "filePath": "04_config_models/4.1_config_system.md",
+      "summary": "Explains the openclaw.json structure, scope boundaries between Gateway, Agent, Channel, and Tool levels, configuration precedence layering, and the four-part evidence chain for verifying active parameters.",
+      "tags": [
+        "configuration",
+        "precedence",
+        "scope-separation",
+        "verification",
+        "documentation"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "document:04_config_models/4.2_provider_access.md",
+      "type": "document",
+      "name": "4.2_provider_access.md",
+      "filePath": "04_config_models/4.2_provider_access.md",
+      "summary": "Covers model provider connection strategies and authentication, comparing built-in onboarding with custom proxy configurations, SecretRef pipelines, multi-key auth profiles, and rate-limit cooldown handling.",
+      "tags": [
+        "authentication",
+        "providers",
+        "api-keys",
+        "rate-limiting",
+        "documentation"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "document:04_config_models/4.3_model_selection.md",
+      "type": "document",
+      "name": "4.3_model_selection.md",
+      "filePath": "04_config_models/4.3_model_selection.md",
+      "summary": "Presents a four-dimensional decision framework balancing quality, cost, latency, and reliability, detailing primary model setup in agents.defaults.model, per-agent overrides, and regression testing protocols.",
+      "tags": [
+        "model-selection",
+        "benchmarking",
+        "configuration",
+        "decision-framework",
+        "documentation"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "document:04_config_models/4.4_failover.md",
+      "type": "document",
+      "name": "4.4_failover.md",
+      "filePath": "04_config_models/4.4_failover.md",
+      "summary": "Details fault classification mapping, fallback chain configuration via agents.defaults.model.fallbacks, coordination with bounded retries, auth-profile cooldown tiers, and fault-injection verification.",
+      "tags": [
+        "failover",
+        "fallback-chain",
+        "reliability",
+        "fault-tolerance",
+        "documentation"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "document:04_config_models/summary.md",
+      "type": "document",
+      "name": "summary.md",
+      "filePath": "04_config_models/summary.md",
+      "summary": "Summarizes Chapter 4 core conclusions, provides a minimal viable configuration loop and standard verification commands, and includes a self-assessment checklist for model governance.",
+      "tags": [
+        "summary",
+        "review",
+        "checklist",
+        "best-practices",
+        "documentation"
+      ],
+      "complexity": "simple"
+    }
+  ],
+  "edges": [
+    {
+      "source": "document:04_config_models/README.md",
+      "target": "document:04_config_models/4.1_config_system.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:04_config_models/README.md",
+      "target": "document:04_config_models/4.2_provider_access.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:04_config_models/README.md",
+      "target": "document:04_config_models/4.3_model_selection.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:04_config_models/README.md",
+      "target": "document:04_config_models/4.4_failover.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:04_config_models/README.md",
+      "target": "document:04_config_models/summary.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:04_config_models/4.1_config_system.md",
+      "target": "document:04_config_models/4.2_provider_access.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:04_config_models/4.1_config_system.md",
+      "target": "document:04_config_models/4.3_model_selection.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:04_config_models/4.2_provider_access.md",
+      "target": "document:04_config_models/4.3_model_selection.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:04_config_models/4.2_provider_access.md",
+      "target": "document:04_config_models/4.4_failover.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:04_config_models/4.3_model_selection.md",
+      "target": "document:04_config_models/4.4_failover.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:04_config_models/summary.md",
+      "target": "document:04_config_models/4.1_config_system.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:04_config_models/summary.md",
+      "target": "document:04_config_models/4.2_provider_access.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:04_config_models/summary.md",
+      "target": "document:04_config_models/4.3_model_selection.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:04_config_models/summary.md",
+      "target": "document:04_config_models/4.4_failover.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    }
+  ]
+}

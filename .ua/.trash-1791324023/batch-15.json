@@ -1,0 +1,221 @@
+{
+  "nodes": [
+    {
+      "id": "document:14_performance_cost/README.md",
+      "type": "document",
+      "name": "README.md",
+      "filePath": "14_performance_cost/README.md",
+      "summary": "Serves as the chapter roadmap and table of contents for Chapter 14, introducing performance optimization and cost governance across token consumption, inference latency, usage observation, and budget planning.",
+      "tags": [
+        "documentation",
+        "overview",
+        "entry-point",
+        "performance",
+        "cost-optimization"
+      ],
+      "complexity": "simple",
+      "languageNotes": "Outlines the chapter's four core dimensions: token consumption, inference latency, real-time usage observation, and multi-tier budget governance."
+    },
+    {
+      "id": "document:14_performance_cost/14.1_token_context_cost.md",
+      "type": "document",
+      "name": "14.1_token_context_cost.md",
+      "filePath": "14_performance_cost/14.1_token_context_cost.md",
+      "summary": "Analyzes the three-stage token lifecycle in agent conversations and details systematic optimization techniques for input and output tokens. Covers system prompt refinement, specialized per-agent tool allocation, dynamic context pruning, and automated transcript compaction.",
+      "tags": [
+        "documentation",
+        "token-optimization",
+        "context-management",
+        "prompt-engineering",
+        "compaction"
+      ],
+      "complexity": "moderate",
+      "languageNotes": "Examines token cost acceleration over multi-turn sessions and provides concrete openclaw.json configurations for contextPruning and compaction safeguard policies."
+    },
+    {
+      "id": "document:14_performance_cost/14.2_latency_throughput.md",
+      "type": "document",
+      "name": "14.2_latency_throughput.md",
+      "filePath": "14_performance_cost/14.2_latency_throughput.md",
+      "summary": "Establishes formal mathematical models for end-to-end latency decomposition across LLM inference, tool I/O, sandbox execution, and orchestration overhead. Formulates a structured multi-component cost equation and contrasts serial versus parallel multi-agent dispatch architectures.",
+      "tags": [
+        "documentation",
+        "latency-optimization",
+        "throughput",
+        "cost-modeling",
+        "multi-agent-orchestration"
+      ],
+      "complexity": "moderate",
+      "languageNotes": "Breaks down end-to-end request latency into LLM time-to-first-token, tool I/O critical paths, container sandbox lifecycles, and orchestration queue delays."
+    },
+    {
+      "id": "document:14_performance_cost/14.3_usage_budget.md",
+      "type": "document",
+      "name": "14.3_usage_budget.md",
+      "filePath": "14_performance_cost/14.3_usage_budget.md",
+      "summary": "Guides real-time token consumption observation and budget control using OpenClaw built-in commands like /status, /usage cost, and /compact alongside Dashboard metrics. Explains global and per-agent budget quotas, automated session pruning, model tiering fallbacks, and cost anomaly alerts.",
+      "tags": [
+        "documentation",
+        "usage-monitoring",
+        "budget-control",
+        "anomaly-detection",
+        "context-governance"
+      ],
+      "complexity": "moderate",
+      "languageNotes": "Details operational CLI tools (openclaw gateway usage-cost, /status, /usage cost) and outlines architecture for integrating external billing quotas with Prometheus alerts."
+    },
+    {
+      "id": "document:14_performance_cost/14.4_budget_templates.md",
+      "type": "document",
+      "name": "14.4_budget_templates.md",
+      "filePath": "14_performance_cost/14.4_budget_templates.md",
+      "summary": "Provides detailed monthly cost breakdowns and deployment budget templates across three distinct operating tiers: Personal/Small Team, Medium Scale/Startup, and Enterprise. Features a cost driver weight comparison matrix and a practical budget planning decision tree.",
+      "tags": [
+        "documentation",
+        "budget-templates",
+        "cost-estimation",
+        "deployment-tiers",
+        "infrastructure-planning"
+      ],
+      "complexity": "complex",
+      "languageNotes": "Analyzes monthly financial models from $39 SaaS hobby projects to $35,000 multi-region hybrid enterprise clusters, detailing LLM token, tool API, storage, and SRE labor ratios."
+    },
+    {
+      "id": "document:14_performance_cost/summary.md",
+      "type": "document",
+      "name": "summary.md",
+      "filePath": "14_performance_cost/summary.md",
+      "summary": "Summarizes key operational takeaways from Chapter 14, provides a 6-point cost optimization audit checklist, and previews troubleshooting trees and ecosystem integration chapters.",
+      "tags": [
+        "documentation",
+        "summary",
+        "checklist",
+        "cost-optimization",
+        "best-practices"
+      ],
+      "complexity": "simple",
+      "languageNotes": "Includes self-inspection checks for token baselines, prompt trimming, agent tool separation, compaction policies, fallback chains, and weekly cost audits."
+    }
+  ],
+  "edges": [
+    {
+      "source": "document:14_performance_cost/README.md",
+      "target": "document:14_performance_cost/14.1_token_context_cost.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:14_performance_cost/README.md",
+      "target": "document:14_performance_cost/14.2_latency_throughput.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:14_performance_cost/README.md",
+      "target": "document:14_performance_cost/14.3_usage_budget.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:14_performance_cost/README.md",
+      "target": "document:14_performance_cost/14.4_budget_templates.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:14_performance_cost/README.md",
+      "target": "document:14_performance_cost/summary.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:14_performance_cost/summary.md",
+      "target": "document:14_performance_cost/14.1_token_context_cost.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:14_performance_cost/summary.md",
+      "target": "document:14_performance_cost/14.2_latency_throughput.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:14_performance_cost/summary.md",
+      "target": "document:14_performance_cost/14.3_usage_budget.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:14_performance_cost/summary.md",
+      "target": "document:14_performance_cost/14.4_budget_templates.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:14_performance_cost/14.1_token_context_cost.md",
+      "target": "document:14_performance_cost/14.2_latency_throughput.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:14_performance_cost/14.1_token_context_cost.md",
+      "target": "document:14_performance_cost/14.3_usage_budget.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:14_performance_cost/14.1_token_context_cost.md",
+      "target": "document:14_performance_cost/14.4_budget_templates.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:14_performance_cost/14.2_latency_throughput.md",
+      "target": "document:14_performance_cost/14.1_token_context_cost.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:14_performance_cost/14.2_latency_throughput.md",
+      "target": "document:14_performance_cost/14.3_usage_budget.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:14_performance_cost/14.3_usage_budget.md",
+      "target": "document:14_performance_cost/14.1_token_context_cost.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:14_performance_cost/14.3_usage_budget.md",
+      "target": "document:14_performance_cost/14.4_budget_templates.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:14_performance_cost/14.4_budget_templates.md",
+      "target": "document:14_performance_cost/14.3_usage_budget.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    }
+  ]
+}

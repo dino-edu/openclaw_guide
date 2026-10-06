@@ -1,0 +1,2474 @@
+{
+  "version": "1.0.0",
+  "gitCommitHash": "a0bc41eec884f59a0c6fdaa437c059acf1137544",
+  "generatedAt": "2026-10-06T22:00:14.764Z",
+  "files": {
+    ".github/dependabot.yml": {
+      "filePath": ".github/dependabot.yml",
+      "contentHash": "5f29f0d2a3463664b9d08e737a8cab1c955d1607032de1d0b4aa0923b70920dc",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 15,
+      "hasStructuralAnalysis": false
+    },
+    ".github/workflows/auto-release.yml": {
+      "filePath": ".github/workflows/auto-release.yml",
+      "contentHash": "3984a4e8ac8ef1e0140973580be526aa34cdf6a16e2c8801b81ca6a3840219b1",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 185,
+      "hasStructuralAnalysis": false
+    },
+    ".github/workflows/ci.yaml": {
+      "filePath": ".github/workflows/ci.yaml",
+      "contentHash": "806fc057d9e6548474ff7b16d327bf3d9b1ef5305d8f2f28dff7f3741fede365",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 129,
+      "hasStructuralAnalysis": false
+    },
+    ".github/workflows/dependabot-automerge.yml": {
+      "filePath": ".github/workflows/dependabot-automerge.yml",
+      "contentHash": "ea7d33703c7ad033fd1c8592ecb8dc22dcc337d9e24d994ecc94bcbe3160bc28",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 32,
+      "hasStructuralAnalysis": false
+    },
+    ".github/workflows/identity-guard.yaml": {
+      "filePath": ".github/workflows/identity-guard.yaml",
+      "contentHash": "b1c9a7cafd878b41b8887d48a53c342795e63484f7a5aab20087fcf73bb887d3",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 138,
+      "hasStructuralAnalysis": false
+    },
+    ".github/workflows/preview-pdf.yml": {
+      "filePath": ".github/workflows/preview-pdf.yml",
+      "contentHash": "0ea9be7d72c699f0593f32d2ea199f04fccd91778e7075f044f1e9c79a5c49ea",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 242,
+      "hasStructuralAnalysis": false
+    },
+    ".ua/config.json": {
+      "filePath": ".ua/config.json",
+      "contentHash": "e6e1895a8e3cb71f76daebccd84c4fc9877d8a88fb75e476ca22a320e69d4995",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 2,
+      "hasStructuralAnalysis": false
+    },
+    "01_overview/1.1_what_is_openclaw.md": {
+      "filePath": "01_overview/1.1_what_is_openclaw.md",
+      "contentHash": "4c37b2a59ffc90cb0fcbb717493759ba532b0029b91d55a72744c527f057bb9a",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 92,
+      "hasStructuralAnalysis": false
+    },
+    "01_overview/1.2_scenarios_comparison.md": {
+      "filePath": "01_overview/1.2_scenarios_comparison.md",
+      "contentHash": "c1e331232558e7ace49147526863757b0a85133b05a59a765aa52dcd0a5f1379",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 34,
+      "hasStructuralAnalysis": false
+    },
+    "01_overview/1.3_concepts.md": {
+      "filePath": "01_overview/1.3_concepts.md",
+      "contentHash": "baa68a53db5c4fcf8808b5503a00bd5775497dcaf218d31b53cf68d3d362e43f",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 69,
+      "hasStructuralAnalysis": false
+    },
+    "01_overview/1.4_use_cases.md": {
+      "filePath": "01_overview/1.4_use_cases.md",
+      "contentHash": "5d5c51acde5320a1a4897c536b80799bdfd197b423cef3edfc63b0a2505aaee0",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 59,
+      "hasStructuralAnalysis": false
+    },
+    "01_overview/README.md": {
+      "filePath": "01_overview/README.md",
+      "contentHash": "c4fbf00f532faa0057f26ff4ba33e8916aac5dde6c029af46674009ee7d3fa7c",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 36,
+      "hasStructuralAnalysis": false
+    },
+    "01_overview/summary.md": {
+      "filePath": "01_overview/summary.md",
+      "contentHash": "e22a8c0bfbf67956c207dd39565ec157bffca1776b2d274c246694352f5052f3",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 26,
+      "hasStructuralAnalysis": false
+    },
+    "02_setup/2.1_requirements.md": {
+      "filePath": "02_setup/2.1_requirements.md",
+      "contentHash": "deb1634b33d23b1d75512bdec20099cacff814c526ff590c52586bf25ad6466e",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 55,
+      "hasStructuralAnalysis": false
+    },
+    "02_setup/2.2_installation.md": {
+      "filePath": "02_setup/2.2_installation.md",
+      "contentHash": "bc74dff21173fa5ca3534100a42be1bb7190c9e1f576a4689ca03d4256f216da",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 248,
+      "hasStructuralAnalysis": false
+    },
+    "02_setup/2.3_onboarding.md": {
+      "filePath": "02_setup/2.3_onboarding.md",
+      "contentHash": "51f99d8579f47b4482199932c3fd69f48c0ee3dc60a0660e886fd08ae934ca1f",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 87,
+      "hasStructuralAnalysis": false
+    },
+    "02_setup/2.4_gateway_service.md": {
+      "filePath": "02_setup/2.4_gateway_service.md",
+      "contentHash": "e743f36802352c8d0ef552101de0b315ca100241bdecf6c164013a1ebe31623c",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 134,
+      "hasStructuralAnalysis": false
+    },
+    "02_setup/README.md": {
+      "filePath": "02_setup/README.md",
+      "contentHash": "5217169bab4fdbbf49bcf07e26c45f823cd91b7a7edd7954f537462737a1e549",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 28,
+      "hasStructuralAnalysis": false
+    },
+    "02_setup/summary.md": {
+      "filePath": "02_setup/summary.md",
+      "contentHash": "a30f7f3b9668310f7026e1bd3149a5707d0ff92c16c86116e4d89f32ce555d75",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 25,
+      "hasStructuralAnalysis": false
+    },
+    "03_minimal_loop/3.1_control_ui_webchat.md": {
+      "filePath": "03_minimal_loop/3.1_control_ui_webchat.md",
+      "contentHash": "e8e8c95a8b139f8850d16ec9e1934318a635ce25f3567c0569fb030725f21aa4",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 145,
+      "hasStructuralAnalysis": false
+    },
+    "03_minimal_loop/3.2_diagnostics.md": {
+      "filePath": "03_minimal_loop/3.2_diagnostics.md",
+      "contentHash": "5caa787f21716d01fd76a4a12a9e469b9bccbbd8a28727a934fc50f2707dc0c5",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 93,
+      "hasStructuralAnalysis": false
+    },
+    "03_minimal_loop/3.3_agent_persona.md": {
+      "filePath": "03_minimal_loop/3.3_agent_persona.md",
+      "contentHash": "a009efa457462d282b4516017aa6879f349b383e4dc081567a3c473601147149",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 66,
+      "hasStructuralAnalysis": false
+    },
+    "03_minimal_loop/3.4_pairing_groups.md": {
+      "filePath": "03_minimal_loop/3.4_pairing_groups.md",
+      "contentHash": "c33816dd3c30242e7ad31b81808fb8da5a69272f707c8610826ffba195dfb701",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 79,
+      "hasStructuralAnalysis": false
+    },
+    "03_minimal_loop/README.md": {
+      "filePath": "03_minimal_loop/README.md",
+      "contentHash": "a9c4e737ffc212fe986165254d2e6d5a22bce4cf16193e3ca170a578586a6df0",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 39,
+      "hasStructuralAnalysis": false
+    },
+    "03_minimal_loop/summary.md": {
+      "filePath": "03_minimal_loop/summary.md",
+      "contentHash": "36b6b2162bda8fb9f1645b4ef147a541ca9d27122cd9c6a4dad6d34a09c09954",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 25,
+      "hasStructuralAnalysis": false
+    },
+    "04_config_models/4.1_config_system.md": {
+      "filePath": "04_config_models/4.1_config_system.md",
+      "contentHash": "ab2be0c4759900be91e752021a538bf05ae0338aa5f568ab35959991ab622554",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 109,
+      "hasStructuralAnalysis": false
+    },
+    "04_config_models/4.2_provider_access.md": {
+      "filePath": "04_config_models/4.2_provider_access.md",
+      "contentHash": "63cc3965fa9fb8c59758907a2dbc30e40f53e94b4795fb17a9f6aac1f9ce445a",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 328,
+      "hasStructuralAnalysis": false
+    },
+    "04_config_models/4.3_model_selection.md": {
+      "filePath": "04_config_models/4.3_model_selection.md",
+      "contentHash": "914abb6f5bef1301c9256db9544269ae647f0826f26c06f39f17c6a1dfc3a640",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 174,
+      "hasStructuralAnalysis": false
+    },
+    "04_config_models/4.4_failover.md": {
+      "filePath": "04_config_models/4.4_failover.md",
+      "contentHash": "535135b925bb39534f20ab1ac972a2fda9048b1daf484b5597c5cfab559ec597",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 79,
+      "hasStructuralAnalysis": false
+    },
+    "04_config_models/README.md": {
+      "filePath": "04_config_models/README.md",
+      "contentHash": "ba785a0d83cf4eedb4079173c0bacc41acbb1f840d730c7937847d4bcb0c6d4b",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 31,
+      "hasStructuralAnalysis": false
+    },
+    "04_config_models/summary.md": {
+      "filePath": "04_config_models/summary.md",
+      "contentHash": "e2f45f4991381886e7a31881b79888b9aaa9b8f09d6a7363cd2aa1b087867e8d",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 59,
+      "hasStructuralAnalysis": false
+    },
+    "05_tools_skills/5.1_tool_inventory.md": {
+      "filePath": "05_tools_skills/5.1_tool_inventory.md",
+      "contentHash": "888de53a03ddfee982b1be599252053fedef37cfa155d86b1982c205131756d7",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 161,
+      "hasStructuralAnalysis": false
+    },
+    "05_tools_skills/5.2_tool_policy.md": {
+      "filePath": "05_tools_skills/5.2_tool_policy.md",
+      "contentHash": "e00d265c9f0a450d0a83150ff563c513799ef459b3e1d5e1452474943ba1c6f2",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 201,
+      "hasStructuralAnalysis": false
+    },
+    "05_tools_skills/5.3_skills_plugins.md": {
+      "filePath": "05_tools_skills/5.3_skills_plugins.md",
+      "contentHash": "c7736215048ed49ed7ad468884e4d4e5b3af30fc2be8f5c36a15892c332ee703",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 141,
+      "hasStructuralAnalysis": false
+    },
+    "05_tools_skills/5.4_browser_nodes.md": {
+      "filePath": "05_tools_skills/5.4_browser_nodes.md",
+      "contentHash": "1491d14985890fd1bb0a69cda45298965d87e87b7db678eee24ee22e3ebfd8d7",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 115,
+      "hasStructuralAnalysis": false
+    },
+    "05_tools_skills/README.md": {
+      "filePath": "05_tools_skills/README.md",
+      "contentHash": "634d953f52a1aae2f3a6e46f8b558ca7d10b3dcf2ce729b35d75c278f37f5fbb",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 46,
+      "hasStructuralAnalysis": false
+    },
+    "05_tools_skills/summary.md": {
+      "filePath": "05_tools_skills/summary.md",
+      "contentHash": "af24ace7c616251049b3be26e3d276dde136bd4b3ab71077544ed38cb7ab8bbf",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 33,
+      "hasStructuralAnalysis": false
+    },
+    "06_context_memory/6.1_sessions.md": {
+      "filePath": "06_context_memory/6.1_sessions.md",
+      "contentHash": "106ab51b22033c2ff1371cc481db3652463f2e15f2380503f16a642870ade171",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 136,
+      "hasStructuralAnalysis": false
+    },
+    "06_context_memory/6.2_context_building.md": {
+      "filePath": "06_context_memory/6.2_context_building.md",
+      "contentHash": "a09e0bb154a518aa440f5d0d7ebb071103015ee07ace570ddc79c67b938b65c6",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 67,
+      "hasStructuralAnalysis": false
+    },
+    "06_context_memory/6.3_memory_mechanism.md": {
+      "filePath": "06_context_memory/6.3_memory_mechanism.md",
+      "contentHash": "58162a5083d99bc01f2528f643f3ac5488ae3a0c95af624a96dc79795bc005e3",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 100,
+      "hasStructuralAnalysis": false
+    },
+    "06_context_memory/6.4_compaction_pruning.md": {
+      "filePath": "06_context_memory/6.4_compaction_pruning.md",
+      "contentHash": "8c3ec182f828fd59c566eaa743b792bca20b6a9a898a766981de02fc30215346",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 128,
+      "hasStructuralAnalysis": false
+    },
+    "06_context_memory/README.md": {
+      "filePath": "06_context_memory/README.md",
+      "contentHash": "b7eefbc89c5446707f3654c17dc88acfc7485533cd4e1f979a3f8043dcc50744",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 34,
+      "hasStructuralAnalysis": false
+    },
+    "06_context_memory/summary.md": {
+      "filePath": "06_context_memory/summary.md",
+      "contentHash": "7de9e94e64b64f5e437ba390ff2515a8f127c36c7e1d71385c84b5b6a35b63e9",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 36,
+      "hasStructuralAnalysis": false
+    },
+    "07_multi_agent/7.1_telegram_whatsapp.md": {
+      "filePath": "07_multi_agent/7.1_telegram_whatsapp.md",
+      "contentHash": "217b479372ceb186ff1d613373fd2d2e769c3ea4bd0c2ae8ed8215ea3688a558",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 169,
+      "hasStructuralAnalysis": false
+    },
+    "07_multi_agent/7.2_lark_integration.md": {
+      "filePath": "07_multi_agent/7.2_lark_integration.md",
+      "contentHash": "d2b51afe771be677493dae8532fc24903d8eb6e2e1e547fd3cabc4d4b699dd41",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 132,
+      "hasStructuralAnalysis": false
+    },
+    "07_multi_agent/7.3_routing_basics.md": {
+      "filePath": "07_multi_agent/7.3_routing_basics.md",
+      "contentHash": "4ab183ac73ec056defa00725a01b95d593e058fe700beccc2c321fef764b46b9",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 234,
+      "hasStructuralAnalysis": false
+    },
+    "07_multi_agent/7.4_collaboration_patterns.md": {
+      "filePath": "07_multi_agent/7.4_collaboration_patterns.md",
+      "contentHash": "6c788871ebd211e0bfa0f7ce1cfd5fa26aa4c2a1d6ac845b2117fd70d39fa20f",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 227,
+      "hasStructuralAnalysis": false
+    },
+    "07_multi_agent/README.md": {
+      "filePath": "07_multi_agent/README.md",
+      "contentHash": "e83ad0ca37aa15e1462e6cddea460041c05ba561dc6135a7fd8583c58c6b4502",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 26,
+      "hasStructuralAnalysis": false
+    },
+    "07_multi_agent/summary.md": {
+      "filePath": "07_multi_agent/summary.md",
+      "contentHash": "38f6f201155902ef244f05ba6b5ac5e62f45af4106f329c18ae2f864c2449f21",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 28,
+      "hasStructuralAnalysis": false
+    },
+    "08_automation_ops/8.1_hooks.md": {
+      "filePath": "08_automation_ops/8.1_hooks.md",
+      "contentHash": "f6080fed49c5ca27ad595d04fdcb20b9661b0168ecab6c7691a6e3e37b2db83f",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 123,
+      "hasStructuralAnalysis": false
+    },
+    "08_automation_ops/8.2_cron_jobs.md": {
+      "filePath": "08_automation_ops/8.2_cron_jobs.md",
+      "contentHash": "ef465841ead03ba9256835521633572732750d7177e643825363771670ad0a92",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 146,
+      "hasStructuralAnalysis": false
+    },
+    "08_automation_ops/8.3_heartbeat.md": {
+      "filePath": "08_automation_ops/8.3_heartbeat.md",
+      "contentHash": "7fcc29a239b0e652438701e1b5771891ca91c6c4ec9305644ff21700f6b4a7ea",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 253,
+      "hasStructuralAnalysis": false
+    },
+    "08_automation_ops/8.4_remote_access.md": {
+      "filePath": "08_automation_ops/8.4_remote_access.md",
+      "contentHash": "bc9e52b63064d2611db59f9370ea23601d0271564e91c8ed7a6c8bf9cf6bb2c4",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 96,
+      "hasStructuralAnalysis": false
+    },
+    "08_automation_ops/8.5_security_baseline.md": {
+      "filePath": "08_automation_ops/8.5_security_baseline.md",
+      "contentHash": "8dbe1809f46db4f24e85803334b32510e26c0e8b3850e5014aab76fb199ea2e4",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 147,
+      "hasStructuralAnalysis": false
+    },
+    "08_automation_ops/README.md": {
+      "filePath": "08_automation_ops/README.md",
+      "contentHash": "2ea8da1ee57e952a07e2d57dcacc81dceefb1a273c1b25306a20529f8cfe339d",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 33,
+      "hasStructuralAnalysis": false
+    },
+    "08_automation_ops/summary.md": {
+      "filePath": "08_automation_ops/summary.md",
+      "contentHash": "641ce462af9cb145bca09d09bac4381955d3d3d5e3ca2e259a53987cebe46e7b",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 35,
+      "hasStructuralAnalysis": false
+    },
+    "09_gateway_protocol/9.1_architecture_overview.md": {
+      "filePath": "09_gateway_protocol/9.1_architecture_overview.md",
+      "contentHash": "5a58ec805444dc8b9406b7db6e233ab88565553a66d9bda886c11ee5fbfb2960",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 87,
+      "hasStructuralAnalysis": false
+    },
+    "09_gateway_protocol/9.2_control_plane.md": {
+      "filePath": "09_gateway_protocol/9.2_control_plane.md",
+      "contentHash": "ea8f2437d7e1f229676225b52ccbadb70c145cac99465bdab64d5c8b5b546523",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 163,
+      "hasStructuralAnalysis": false
+    },
+    "09_gateway_protocol/9.3_ws_handshake.md": {
+      "filePath": "09_gateway_protocol/9.3_ws_handshake.md",
+      "contentHash": "ac5ed3156ab882392146bc6ea33bba8ffa17ff778a046dc7b3f6ff20fe7b0500",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 120,
+      "hasStructuralAnalysis": false
+    },
+    "09_gateway_protocol/9.4_event_idempotency.md": {
+      "filePath": "09_gateway_protocol/9.4_event_idempotency.md",
+      "contentHash": "7a8165f57cd865eaf58650a5d057ff362fab9379d90f22fe2886a571dcfdc258",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 121,
+      "hasStructuralAnalysis": false
+    },
+    "09_gateway_protocol/9.5_pairing_trust.md": {
+      "filePath": "09_gateway_protocol/9.5_pairing_trust.md",
+      "contentHash": "c1ac0a4560ad98c12e15fffcef3f0df031ad7a2386b533cb0296e075730c35c2",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 100,
+      "hasStructuralAnalysis": false
+    },
+    "09_gateway_protocol/README.md": {
+      "filePath": "09_gateway_protocol/README.md",
+      "contentHash": "62b79ca25d7f5d34ee72a969cb0daf234be760c39ad3037eece4ace635770eb8",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 25,
+      "hasStructuralAnalysis": false
+    },
+    "09_gateway_protocol/summary.md": {
+      "filePath": "09_gateway_protocol/summary.md",
+      "contentHash": "4d361d9362bac8174a0aa5fa44fea3a36236552ce344ae8fae2b553a811e0926",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 26,
+      "hasStructuralAnalysis": false
+    },
+    "10_agent_loop/10.1_request_lifecycle.md": {
+      "filePath": "10_agent_loop/10.1_request_lifecycle.md",
+      "contentHash": "04ac87dce66601864bfc7cf82d060d709867581c45acb0c84035c991e73d74c4",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 98,
+      "hasStructuralAnalysis": false
+    },
+    "10_agent_loop/10.2_pi_framework.md": {
+      "filePath": "10_agent_loop/10.2_pi_framework.md",
+      "contentHash": "bd7d307821cb292b41f95d49bb3d42e7030c8cf4aaf580039335c81bc11ac96d",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 107,
+      "hasStructuralAnalysis": false
+    },
+    "10_agent_loop/10.3_entry_queue.md": {
+      "filePath": "10_agent_loop/10.3_entry_queue.md",
+      "contentHash": "9d28b42299c3149a6195f40cca615febfdfa35f4db007c5de58dab3dd2e490ba",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 99,
+      "hasStructuralAnalysis": false
+    },
+    "10_agent_loop/10.4_prompt_assembly.md": {
+      "filePath": "10_agent_loop/10.4_prompt_assembly.md",
+      "contentHash": "e086aee3a5efc5ba9cb5040dd9d8a498da272b1486827d27cae8e95655f6fc08",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 140,
+      "hasStructuralAnalysis": false
+    },
+    "10_agent_loop/10.5_tool_execution.md": {
+      "filePath": "10_agent_loop/10.5_tool_execution.md",
+      "contentHash": "99e42bc1efabdba8a95b352439d41920330cc32e0c5124cc54633204833ed51f",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 79,
+      "hasStructuralAnalysis": false
+    },
+    "10_agent_loop/10.6_streaming_retry.md": {
+      "filePath": "10_agent_loop/10.6_streaming_retry.md",
+      "contentHash": "3866c8a020a4bcbdbcc693e89ad614d3eb3ca60c0f635c4b606d0b6ce585574a",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 83,
+      "hasStructuralAnalysis": false
+    },
+    "10_agent_loop/README.md": {
+      "filePath": "10_agent_loop/README.md",
+      "contentHash": "34e508cd477f697fc8d6aa60e70bb0652c36a84f3e1a768c6bb98edc812c2d45",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 24,
+      "hasStructuralAnalysis": false
+    },
+    "10_agent_loop/summary.md": {
+      "filePath": "10_agent_loop/summary.md",
+      "contentHash": "fab950c355a19a95a6c2a5eadfea081e2e2c4176b2afcc2cd4bcd9d967fb12e6",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 28,
+      "hasStructuralAnalysis": false
+    },
+    "11_reliability_security/11.1_auth_profiles.md": {
+      "filePath": "11_reliability_security/11.1_auth_profiles.md",
+      "contentHash": "a499b04c998413ec3b3f6e6ca5d6ce152981cf4b6fbb50985733615649cca09a",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 120,
+      "hasStructuralAnalysis": false
+    },
+    "11_reliability_security/11.2_rotation_cooldown.md": {
+      "filePath": "11_reliability_security/11.2_rotation_cooldown.md",
+      "contentHash": "d4102566b88569a63a286e0556be26d55e3d07819616842539bcd8841c396d7c",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 98,
+      "hasStructuralAnalysis": false
+    },
+    "11_reliability_security/11.3_fallback_rules.md": {
+      "filePath": "11_reliability_security/11.3_fallback_rules.md",
+      "contentHash": "76b14a70633a80ff03acd1a59e0abb9c58a843eea00e2d4139d75ff11f2365c6",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 91,
+      "hasStructuralAnalysis": false
+    },
+    "11_reliability_security/11.4_guardrails.md": {
+      "filePath": "11_reliability_security/11.4_guardrails.md",
+      "contentHash": "127036953db32bb60b76590a3010a6f806b8eb57a4032ed2d73b8c2c8e4e15ea",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 108,
+      "hasStructuralAnalysis": false
+    },
+    "11_reliability_security/README.md": {
+      "filePath": "11_reliability_security/README.md",
+      "contentHash": "cdb305813cbd9efb7e4fec8005c22518583af4a21c073adfd3e96f8297484f22",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 26,
+      "hasStructuralAnalysis": false
+    },
+    "11_reliability_security/summary.md": {
+      "filePath": "11_reliability_security/summary.md",
+      "contentHash": "73fcc66cdc5e1eb46424c8dded8912276dbfb449ce42d635ef4f766743acfa8b",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 26,
+      "hasStructuralAnalysis": false
+    },
+    "12_extension_engineering/12.1_plugin_architecture.md": {
+      "filePath": "12_extension_engineering/12.1_plugin_architecture.md",
+      "contentHash": "b061005ee0626ad8ea4e078060f5c59deb0ba4bc2c61a64833cc449e52b10fad",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 220,
+      "hasStructuralAnalysis": false
+    },
+    "12_extension_engineering/12.2_custom_tools.md": {
+      "filePath": "12_extension_engineering/12.2_custom_tools.md",
+      "contentHash": "96ad86004697fa89ea49e98376b4965ec8cb81eb874dc37e1194362e873970c9",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 218,
+      "hasStructuralAnalysis": false
+    },
+    "12_extension_engineering/12.3_testing_debugging.md": {
+      "filePath": "12_extension_engineering/12.3_testing_debugging.md",
+      "contentHash": "711c231358c6683e9e53562c1e7c8cea61ed040b03218641362db88124170ee3",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 228,
+      "hasStructuralAnalysis": false
+    },
+    "12_extension_engineering/12.4_production_blueprint.md": {
+      "filePath": "12_extension_engineering/12.4_production_blueprint.md",
+      "contentHash": "ff0bb8e1ed06e0f80e4e2063c0f194a94e5fab3cafb5717ea9af20b4afc5a751",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 142,
+      "hasStructuralAnalysis": false
+    },
+    "12_extension_engineering/12.5_framework_interoperability.md": {
+      "filePath": "12_extension_engineering/12.5_framework_interoperability.md",
+      "contentHash": "5d0afc25c2eb2d222852e5e8ac215c2ff3aee435463e7ea409da4002f79d0731",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 132,
+      "hasStructuralAnalysis": false
+    },
+    "12_extension_engineering/README.md": {
+      "filePath": "12_extension_engineering/README.md",
+      "contentHash": "199baf532918634178f99207fb5312ee34593d4cea6acaedc981d530cab8eeb7",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 26,
+      "hasStructuralAnalysis": false
+    },
+    "12_extension_engineering/summary.md": {
+      "filePath": "12_extension_engineering/summary.md",
+      "contentHash": "4e947aef5b11164119b7b524a5ed3f540afffa2a739e1811b2039175fda8fc70",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 26,
+      "hasStructuralAnalysis": false
+    },
+    "13_practical_cases/13.1_lark_slack_workbot.md": {
+      "filePath": "13_practical_cases/13.1_lark_slack_workbot.md",
+      "contentHash": "4cb7d3464c848ebfcd85b3687d8ab531b491d22d2bed18456153a61a671948a5",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 168,
+      "hasStructuralAnalysis": false
+    },
+    "13_practical_cases/13.2_customer_support_agent.md": {
+      "filePath": "13_practical_cases/13.2_customer_support_agent.md",
+      "contentHash": "f1f1cf4429ac10a96592a427bb9607924fded311ae790d3a37fa5f05ebfa2d22",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 162,
+      "hasStructuralAnalysis": false
+    },
+    "13_practical_cases/13.3_vertical_industry_cases.md": {
+      "filePath": "13_practical_cases/13.3_vertical_industry_cases.md",
+      "contentHash": "2cdb4bf267796b0ee59398bdbfc313488677d31fcbd4c86d9103164815e134b4",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 55,
+      "hasStructuralAnalysis": false
+    },
+    "13_practical_cases/README.md": {
+      "filePath": "13_practical_cases/README.md",
+      "contentHash": "3654fee8e0ef4bf5d0b5569fb2b37357fc88a14f5b6f1a7f7baa6b9b031e284d",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 11,
+      "hasStructuralAnalysis": false
+    },
+    "13_practical_cases/summary.md": {
+      "filePath": "13_practical_cases/summary.md",
+      "contentHash": "f85a3a81eaabcc1bd8d269ecbe0eb6da9e91dd50910b7d3680ded0b33abb25c8",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 21,
+      "hasStructuralAnalysis": false
+    },
+    "14_performance_cost/14.1_token_context_cost.md": {
+      "filePath": "14_performance_cost/14.1_token_context_cost.md",
+      "contentHash": "74b943df7df6c480e802b7a981be33b090365b50e4a1a22609ebb62db52f84c0",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 221,
+      "hasStructuralAnalysis": false
+    },
+    "14_performance_cost/14.2_latency_throughput.md": {
+      "filePath": "14_performance_cost/14.2_latency_throughput.md",
+      "contentHash": "8479a4160bf7fe101a0e0aa780a3a44067202b30de02f052e2a15c21a9b5001c",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 195,
+      "hasStructuralAnalysis": false
+    },
+    "14_performance_cost/14.3_usage_budget.md": {
+      "filePath": "14_performance_cost/14.3_usage_budget.md",
+      "contentHash": "4b2d16f263138df469d5b11f5c65925592288b88c116e92bb2c701fcc7c378af",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 231,
+      "hasStructuralAnalysis": false
+    },
+    "14_performance_cost/14.4_budget_templates.md": {
+      "filePath": "14_performance_cost/14.4_budget_templates.md",
+      "contentHash": "9019ca39f9d21e83dee9a8a266df24ae739d622f5f2ce3dd8ec4908bce8d5709",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 257,
+      "hasStructuralAnalysis": false
+    },
+    "14_performance_cost/README.md": {
+      "filePath": "14_performance_cost/README.md",
+      "contentHash": "e65936751d8315d2670c2576845338cb45147ad112e3aef8ffd6043dd544ef08",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 14,
+      "hasStructuralAnalysis": false
+    },
+    "14_performance_cost/summary.md": {
+      "filePath": "14_performance_cost/summary.md",
+      "contentHash": "e23fe03f7f1860c1dbfedd6139e6f18a0dde0caa15f5a46ddc045d4918850882",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 32,
+      "hasStructuralAnalysis": false
+    },
+    "15_troubleshooting_trees/15.1_diagnostic_decision_trees.md": {
+      "filePath": "15_troubleshooting_trees/15.1_diagnostic_decision_trees.md",
+      "contentHash": "d5e8bd133d96ca627dcc625650b369c2b64578b494b05151a1d827d5c4c82f6a",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 468,
+      "hasStructuralAnalysis": false
+    },
+    "15_troubleshooting_trees/15.2_high_concurrency_diagnosis.md": {
+      "filePath": "15_troubleshooting_trees/15.2_high_concurrency_diagnosis.md",
+      "contentHash": "a93490774b7f92970a4a91029050914d2bbd43a3f5b405e35baefabab2371a60",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 270,
+      "hasStructuralAnalysis": false
+    },
+    "15_troubleshooting_trees/README.md": {
+      "filePath": "15_troubleshooting_trees/README.md",
+      "contentHash": "0794199383f003ff934f55a5ed47551c4c6bbc9fd85ec347ff843b5a3dde0c5c",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 12,
+      "hasStructuralAnalysis": false
+    },
+    "15_troubleshooting_trees/summary.md": {
+      "filePath": "15_troubleshooting_trees/summary.md",
+      "contentHash": "e40abd7dfa6b0e77392c2be9ef03bd8b3b39d6ea4154b73834c668406594ec51",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 19,
+      "hasStructuralAnalysis": false
+    },
+    "16_claude_ecosystem/16.1_claude_integration.md": {
+      "filePath": "16_claude_ecosystem/16.1_claude_integration.md",
+      "contentHash": "132391eea1e76bb8d5dde2ca5a457e5bf76c98a85d39ce36f72939d9c7d107c8",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 130,
+      "hasStructuralAnalysis": false
+    },
+    "16_claude_ecosystem/16.2_agent_team_integration.md": {
+      "filePath": "16_claude_ecosystem/16.2_agent_team_integration.md",
+      "contentHash": "4f10de945bfac20299a371f03b1ebb19d0a6b117148a65291fb4fb9553b38e99",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 143,
+      "hasStructuralAnalysis": false
+    },
+    "16_claude_ecosystem/16.3_other_ecosystems.md": {
+      "filePath": "16_claude_ecosystem/16.3_other_ecosystems.md",
+      "contentHash": "69fd8f48080d7d1cf6581da3fe0a54e09d06d09cb73f4b316ea595818f536d78",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 179,
+      "hasStructuralAnalysis": false
+    },
+    "16_claude_ecosystem/README.md": {
+      "filePath": "16_claude_ecosystem/README.md",
+      "contentHash": "0a0c6e24c5acb20fb64517c2de76e981d4dcb40b08037cb1d1011aaf267004bd",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 11,
+      "hasStructuralAnalysis": false
+    },
+    "16_claude_ecosystem/summary.md": {
+      "filePath": "16_claude_ecosystem/summary.md",
+      "contentHash": "166ba3089111d57a64ac783f92c420e57a33164bd8dcadbd1d7f3b9a028aebfe",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 20,
+      "hasStructuralAnalysis": false
+    },
+    "CONTRIBUTING.md": {
+      "filePath": "CONTRIBUTING.md",
+      "contentHash": "322b902fdeb9531dcbf644c746bf652483e949c18b79ae55e8714ab03515bffd",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 58,
+      "hasStructuralAnalysis": false
+    },
+    "README.md": {
+      "filePath": "README.md",
+      "contentHash": "2142367a1f1d1cba21e7f82f1396610d0c93c7d4034c59c3f8bb79bdf8f6dc87",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 117,
+      "hasStructuralAnalysis": false
+    },
+    "README_en.md": {
+      "filePath": "README_en.md",
+      "contentHash": "15b92e9551dfda4861a6f95000384c54aa7616712bb361ce448b384b3a5ddfa7",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 102,
+      "hasStructuralAnalysis": false
+    },
+    "SUMMARY.md": {
+      "filePath": "SUMMARY.md",
+      "contentHash": "ac8e207133fd8520dd10b7672d83cbabacba3edcb0eff9aa32f4a06e6c819385",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 128,
+      "hasStructuralAnalysis": false
+    },
+    "appendix/README.md": {
+      "filePath": "appendix/README.md",
+      "contentHash": "b6b6e899bc0b11413e3febea0bc83108039ecd9b2d7e8d856902b7919fb87c07",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 17,
+      "hasStructuralAnalysis": false
+    },
+    "appendix/api_reference.md": {
+      "filePath": "appendix/api_reference.md",
+      "contentHash": "f36d53f3c9dfe35ae66d2cea5c65e283b1af212ed6ea1fc0b2a858328e0d68e7",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 54,
+      "hasStructuralAnalysis": false
+    },
+    "appendix/command_cheatsheet.md": {
+      "filePath": "appendix/command_cheatsheet.md",
+      "contentHash": "94cf7678339d6c15149e3cff6035190397f7ceea478874199da0bb5104b6b5fb",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 309,
+      "hasStructuralAnalysis": false
+    },
+    "appendix/config_templates.md": {
+      "filePath": "appendix/config_templates.md",
+      "contentHash": "44dc5a203f79504c1d9c7b57f67d8e3f38032854756ccbd0dd8610958b735a21",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 231,
+      "hasStructuralAnalysis": false
+    },
+    "appendix/env_check.md": {
+      "filePath": "appendix/env_check.md",
+      "contentHash": "379fc16d0cff6c31d01672d3118aa1d011860f1817ba4c3caac52c7352a1feff",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 72,
+      "hasStructuralAnalysis": false
+    },
+    "appendix/glossary.md": {
+      "filePath": "appendix/glossary.md",
+      "contentHash": "ad20be10062cff0e9597bcb6f24166f112e56fb567748d3be5374a61819391d0",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 49,
+      "hasStructuralAnalysis": false
+    },
+    "appendix/naming_history.md": {
+      "filePath": "appendix/naming_history.md",
+      "contentHash": "80555734a868f9df4b652c28f3dc451801b75b99b63a0efe07c7a7f76b27898c",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 11,
+      "hasStructuralAnalysis": false
+    },
+    "appendix/reading_list.md": {
+      "filePath": "appendix/reading_list.md",
+      "contentHash": "ef8873c3e91ba74e1729435a15ead54b86aac165ee1122f7a25294d614068f90",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 65,
+      "hasStructuralAnalysis": false
+    },
+    "appendix/troubleshooting_checklist.md": {
+      "filePath": "appendix/troubleshooting_checklist.md",
+      "contentHash": "0580bad917602f9845d95fa3665baec28a35b0dc40b4c942e5e6b0fed1b39d8b",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 149,
+      "hasStructuralAnalysis": false
+    },
+    "appendix/version_mapping.md": {
+      "filePath": "appendix/version_mapping.md",
+      "contentHash": "f99b8217540ee25739d7615341b79c30442a50a31742eaefa0d6c4944578c86d",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 155,
+      "hasStructuralAnalysis": false
+    },
+    "appendix/volatile_facts.md": {
+      "filePath": "appendix/volatile_facts.md",
+      "contentHash": "39322fc252c91c1b9c2504f7bea97ef955a8072317cdec23daae81af02e01c7d",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 17,
+      "hasStructuralAnalysis": false
+    },
+    "book.json": {
+      "filePath": "book.json",
+      "contentHash": "04deb1ab1b99e6f48f15b7bda6bda81e1dc005f9e44a418829ff09749e7089ca",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 19,
+      "hasStructuralAnalysis": false
+    },
+    "check_emphasis.py": {
+      "filePath": "check_emphasis.py",
+      "contentHash": "47a4f0dcbde7a780a0b3057c401516a4b040f2ec38f4d91403ea342e43ae122a",
+      "functions": [
+        {
+          "name": "_fence_match",
+          "params": [
+            "line"
+          ],
+          "exported": true,
+          "lineCount": 2
+        },
+        {
+          "name": "_is_in_code_block",
+          "params": [
+            "lines",
+            "line_idx"
+          ],
+          "returnType": "bool",
+          "exported": true,
+          "lineCount": 14
+        },
+        {
+          "name": "_is_in_mermaid_block",
+          "params": [
+            "lines",
+            "line_idx"
+          ],
+          "returnType": "bool",
+          "exported": true,
+          "lineCount": 18
+        },
+        {
+          "name": "_is_punct",
+          "params": [
+            "ch"
+          ],
+          "returnType": "bool",
+          "exported": true,
+          "lineCount": 4
+        },
+        {
+          "name": "_is_space",
+          "params": [
+            "ch"
+          ],
+          "returnType": "bool",
+          "exported": true,
+          "lineCount": 2
+        },
+        {
+          "name": "_left_flanking",
+          "params": [
+            "prev_ch",
+            "next_ch"
+          ],
+          "returnType": "bool",
+          "exported": true,
+          "lineCount": 4
+        },
+        {
+          "name": "_right_flanking",
+          "params": [
+            "prev_ch",
+            "next_ch"
+          ],
+          "returnType": "bool",
+          "exported": true,
+          "lineCount": 4
+        },
+        {
+          "name": "_neutralize_code",
+          "params": [
+            "line"
+          ],
+          "returnType": "str",
+          "exported": true,
+          "lineCount": 12
+        },
+        {
+          "name": "_scan_runs",
+          "params": [
+            "line"
+          ],
+          "returnType": "list[dict]",
+          "exported": true,
+          "lineCount": 18
+        },
+        {
+          "name": "_process_emphasis",
+          "params": [
+            "runs"
+          ],
+          "returnType": "list[dict]",
+          "exported": true,
+          "lineCount": 34
+        },
+        {
+          "name": "_snippet",
+          "params": [
+            "line",
+            "pos",
+            "width"
+          ],
+          "returnType": "str",
+          "exported": true,
+          "lineCount": 4
+        },
+        {
+          "name": "check_emphasis",
+          "params": [
+            "line"
+          ],
+          "returnType": "list[str]",
+          "exported": true,
+          "lineCount": 43
+        },
+        {
+          "name": "iter_markdown_files",
+          "params": [],
+          "returnType": "list[Path]",
+          "exported": true,
+          "lineCount": 7
+        },
+        {
+          "name": "main",
+          "params": [],
+          "returnType": "int",
+          "exported": true,
+          "lineCount": 28
+        }
+      ],
+      "classes": [],
+      "imports": [
+        {
+          "source": "re",
+          "specifiers": [
+            "re"
+          ]
+        },
+        {
+          "source": "sys",
+          "specifiers": [
+            "sys"
+          ]
+        },
+        {
+          "source": "unicodedata",
+          "specifiers": [
+            "unicodedata"
+          ]
+        },
+        {
+          "source": "pathlib",
+          "specifiers": [
+            "Path"
+          ]
+        }
+      ],
+      "exports": [
+        "_fence_match",
+        "_is_in_code_block",
+        "_is_in_mermaid_block",
+        "_is_punct",
+        "_is_space",
+        "_left_flanking",
+        "_right_flanking",
+        "_neutralize_code",
+        "_scan_runs",
+        "_process_emphasis",
+        "_snippet",
+        "check_emphasis",
+        "iter_markdown_files",
+        "main"
+      ],
+      "totalLines": 275,
+      "hasStructuralAnalysis": true
+    },
+    "check_project_rules.py": {
+      "filePath": "check_project_rules.py",
+      "contentHash": "a507ede4e6eef7ebac821a56f56af94224246e9af2417a4886587b45a841b5e4",
+      "functions": [
+        {
+          "name": "check_volatile_facts",
+          "params": [
+            "filepath",
+            "today"
+          ],
+          "exported": true,
+          "lineCount": 57
+        },
+        {
+          "name": "iter_markdown_files",
+          "params": [],
+          "returnType": "list[Path]",
+          "exported": true,
+          "lineCount": 7
+        },
+        {
+          "name": "strip_fenced_blocks",
+          "params": [
+            "text"
+          ],
+          "returnType": "str",
+          "exported": true,
+          "lineCount": 21
+        },
+        {
+          "name": "check_fences",
+          "params": [
+            "path",
+            "text"
+          ],
+          "returnType": "list[str]",
+          "exported": true,
+          "lineCount": 21
+        },
+        {
+          "name": "is_local_target",
+          "params": [
+            "target"
+          ],
+          "returnType": "bool",
+          "exported": true,
+          "lineCount": 3
+        },
+        {
+          "name": "normalize_target",
+          "params": [
+            "raw_target"
+          ],
+          "returnType": "str",
+          "exported": true,
+          "lineCount": 5
+        },
+        {
+          "name": "check_links",
+          "params": [
+            "path",
+            "text"
+          ],
+          "returnType": "list[str]",
+          "exported": true,
+          "lineCount": 19
+        },
+        {
+          "name": "check_summary_links",
+          "params": [],
+          "returnType": "list[str]",
+          "exported": true,
+          "lineCount": 5
+        },
+        {
+          "name": "main",
+          "params": [],
+          "returnType": "int",
+          "exported": true,
+          "lineCount": 16
+        }
+      ],
+      "classes": [],
+      "imports": [
+        {
+          "source": "re",
+          "specifiers": [
+            "re"
+          ]
+        },
+        {
+          "source": "sys",
+          "specifiers": [
+            "sys"
+          ]
+        },
+        {
+          "source": "pathlib",
+          "specifiers": [
+            "Path"
+          ]
+        },
+        {
+          "source": "urllib.parse",
+          "specifiers": [
+            "unquote",
+            "urlparse"
+          ]
+        },
+        {
+          "source": "datetime",
+          "specifiers": [
+            "date",
+            "datetime",
+            "timedelta"
+          ]
+        }
+      ],
+      "exports": [
+        "check_volatile_facts",
+        "iter_markdown_files",
+        "strip_fenced_blocks",
+        "check_fences",
+        "is_local_target",
+        "normalize_target",
+        "check_links",
+        "check_summary_links",
+        "main"
+      ],
+      "totalLines": 205,
+      "hasStructuralAnalysis": true
+    },
+    "docs/superpowers/plans/2026-10-06-vietnamese-translation.md": {
+      "filePath": "docs/superpowers/plans/2026-10-06-vietnamese-translation.md",
+      "contentHash": "bc6d1e8d0891551bb6cc447f30da692e8350be6dbec9d0970ecfac0e9286f704",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 282,
+      "hasStructuralAnalysis": false
+    },
+    "docs/superpowers/specs/2026-10-06-vietnamese-translation-design.md": {
+      "filePath": "docs/superpowers/specs/2026-10-06-vietnamese-translation-design.md",
+      "contentHash": "ac1dd049654f22e21e004ad8004b992700181d056a5fd6a72e09d90937747e18",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 101,
+      "hasStructuralAnalysis": false
+    },
+    "package.json": {
+      "filePath": "package.json",
+      "contentHash": "292c0f6832131afc04fea0955fec6aa821d8c9a246069aed0857872847df6235",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 12,
+      "hasStructuralAnalysis": false
+    },
+    "tests/test_build_pdf.py": {
+      "filePath": "tests/test_build_pdf.py",
+      "contentHash": "f3b93e2c708871a3a93acda5d6371f6f3d764279e71357f4525e9824bd495d0e",
+      "functions": [],
+      "classes": [
+        {
+          "name": "BuildPdfTests",
+          "methods": [
+            "setUp",
+            "tearDown",
+            "run_builder",
+            "test_retries_once_then_succeeds",
+            "test_double_failure_keeps_both_attempt_logs",
+            "test_timeout_terminates_the_whole_process_group",
+            "test_success_without_output_is_a_failure"
+          ],
+          "properties": [],
+          "exported": true,
+          "lineCount": 105
+        }
+      ],
+      "imports": [
+        {
+          "source": "os",
+          "specifiers": [
+            "os"
+          ]
+        },
+        {
+          "source": "signal",
+          "specifiers": [
+            "signal"
+          ]
+        },
+        {
+          "source": "subprocess",
+          "specifiers": [
+            "subprocess"
+          ]
+        },
+        {
+          "source": "sys",
+          "specifiers": [
+            "sys"
+          ]
+        },
+        {
+          "source": "tempfile",
+          "specifiers": [
+            "tempfile"
+          ]
+        },
+        {
+          "source": "textwrap",
+          "specifiers": [
+            "textwrap"
+          ]
+        },
+        {
+          "source": "time",
+          "specifiers": [
+            "time"
+          ]
+        },
+        {
+          "source": "unittest",
+          "specifiers": [
+            "unittest"
+          ]
+        },
+        {
+          "source": "pathlib",
+          "specifiers": [
+            "Path"
+          ]
+        }
+      ],
+      "exports": [
+        "BuildPdfTests"
+      ],
+      "totalLines": 184,
+      "hasStructuralAnalysis": true
+    },
+    "tests/test_cjk_typography.py": {
+      "filePath": "tests/test_cjk_typography.py",
+      "contentHash": "d8e7e536e37760be40bb31f873282a4d4800e28ccf29963ac9216000749a2420",
+      "functions": [
+        {
+          "name": "mask",
+          "params": [
+            "line"
+          ],
+          "returnType": "str",
+          "exported": true,
+          "lineCount": 10
+        },
+        {
+          "name": "prose_lines",
+          "params": [
+            "text"
+          ],
+          "exported": true,
+          "lineCount": 21
+        },
+        {
+          "name": "markdown_files",
+          "params": [
+            "root"
+          ],
+          "exported": true,
+          "lineCount": 4
+        },
+        {
+          "name": "unspaced",
+          "params": [
+            "text"
+          ],
+          "exported": true,
+          "lineCount": 7
+        },
+        {
+          "name": "half_width_parens",
+          "params": [
+            "text"
+          ],
+          "exported": true,
+          "lineCount": 8
+        }
+      ],
+      "classes": [
+        {
+          "name": "CjkTypographyTests",
+          "methods": [
+            "test_cjk_and_latin_stay_apart",
+            "test_parens_holding_chinese_are_full_width",
+            "test_both_rules_can_actually_fail",
+            "test_latin_only_parens_are_left_alone",
+            "test_non_prose_regions_are_excluded",
+            "test_prices_are_not_mistaken_for_math",
+            "test_html_text_content_is_still_prose",
+            "test_a_table_row_is_not_an_html_tag",
+            "test_display_math_blocks_are_skipped_whole"
+          ],
+          "properties": [],
+          "exported": true,
+          "lineCount": 74
+        }
+      ],
+      "imports": [
+        {
+          "source": "re",
+          "specifiers": [
+            "re"
+          ]
+        },
+        {
+          "source": "unittest",
+          "specifiers": [
+            "unittest"
+          ]
+        },
+        {
+          "source": "pathlib",
+          "specifiers": [
+            "Path"
+          ]
+        }
+      ],
+      "exports": [
+        "mask",
+        "prose_lines",
+        "markdown_files",
+        "unspaced",
+        "half_width_parens",
+        "CjkTypographyTests"
+      ],
+      "totalLines": 208,
+      "hasStructuralAnalysis": true
+    },
+    "tests/test_html_list_rendering.py": {
+      "filePath": "tests/test_html_list_rendering.py",
+      "contentHash": "0c2914d3ebf4fcd7db81d4753989531fed27ce528ba646d61ef42866043adafc",
+      "functions": [
+        {
+          "name": "_reader_pandoc_format",
+          "params": [],
+          "returnType": "str",
+          "exported": true,
+          "lineCount": 26
+        }
+      ],
+      "classes": [
+        {
+          "name": "HtmlListRenderingTests",
+          "methods": [
+            "test_reader_declares_the_no_blank_line_list_extension",
+            "test_bold_lead_in_list_renders_as_ul_under_real_pandoc"
+          ],
+          "properties": [],
+          "exported": true,
+          "lineCount": 25
+        }
+      ],
+      "imports": [
+        {
+          "source": "re",
+          "specifiers": [
+            "re"
+          ]
+        },
+        {
+          "source": "shutil",
+          "specifiers": [
+            "shutil"
+          ]
+        },
+        {
+          "source": "subprocess",
+          "specifiers": [
+            "subprocess"
+          ]
+        },
+        {
+          "source": "unittest",
+          "specifiers": [
+            "unittest"
+          ]
+        },
+        {
+          "source": "pathlib",
+          "specifiers": [
+            "Path"
+          ]
+        }
+      ],
+      "exports": [
+        "_reader_pandoc_format",
+        "HtmlListRenderingTests"
+      ],
+      "totalLines": 86,
+      "hasStructuralAnalysis": true
+    },
+    "tests/test_installation_contracts.py": {
+      "filePath": "tests/test_installation_contracts.py",
+      "contentHash": "1b40c3c27c36f69486ee58d48fb5a7dfb0d7b5ed2427333664b9b4824957516b",
+      "functions": [],
+      "classes": [
+        {
+          "name": "InstallationContractTests",
+          "methods": [
+            "setUpClass",
+            "test_posix_diagnostics_cover_runtime_prefix_path_and_doctor",
+            "test_powershell_diagnostics_use_the_windows_global_prefix",
+            "test_windows_hub_and_wsl_commands_are_routed_to_the_chosen_environment"
+          ],
+          "properties": [],
+          "exported": true,
+          "lineCount": 54
+        }
+      ],
+      "imports": [
+        {
+          "source": "unittest",
+          "specifiers": [
+            "unittest"
+          ]
+        },
+        {
+          "source": "pathlib",
+          "specifiers": [
+            "Path"
+          ]
+        }
+      ],
+      "exports": [
+        "InstallationContractTests"
+      ],
+      "totalLines": 67,
+      "hasStructuralAnalysis": true
+    },
+    "tests/test_verify_artifacts.py": {
+      "filePath": "tests/test_verify_artifacts.py",
+      "contentHash": "23d0857b7dcf83a32086b85bfc571aaf9e8e3cdbca613638e5937e2c84605e46",
+      "functions": [
+        {
+          "name": "load_verifier",
+          "params": [],
+          "exported": true,
+          "lineCount": 9
+        }
+      ],
+      "classes": [
+        {
+          "name": "ArtifactVerifierTests",
+          "methods": [
+            "test_html_requires_a_nonempty_file_with_the_exact_title",
+            "test_pdf_requires_signature_and_exact_metadata_or_visible_title",
+            "test_checksum_manifest_is_sorted_portable_and_revalidated"
+          ],
+          "properties": [],
+          "exported": true,
+          "lineCount": 54
+        }
+      ],
+      "imports": [
+        {
+          "source": "importlib.util",
+          "specifiers": [
+            "importlib.util"
+          ]
+        },
+        {
+          "source": "tempfile",
+          "specifiers": [
+            "tempfile"
+          ]
+        },
+        {
+          "source": "unittest",
+          "specifiers": [
+            "unittest"
+          ]
+        },
+        {
+          "source": "pathlib",
+          "specifiers": [
+            "Path"
+          ]
+        },
+        {
+          "source": "unittest.mock",
+          "specifiers": [
+            "patch"
+          ]
+        }
+      ],
+      "exports": [
+        "load_verifier",
+        "ArtifactVerifierTests"
+      ],
+      "totalLines": 82,
+      "hasStructuralAnalysis": true
+    },
+    "tests/test_workflow_security.py": {
+      "filePath": "tests/test_workflow_security.py",
+      "contentHash": "3b7b7e8dcd4d71988912342f9c4e34312c12842f76afbb1f2424d7ef25018b9f",
+      "functions": [
+        {
+          "name": "job_block",
+          "params": [
+            "workflow_text",
+            "job_name"
+          ],
+          "exported": true,
+          "lineCount": 8
+        },
+        {
+          "name": "workflow_step_script",
+          "params": [
+            "workflow_text",
+            "step_name"
+          ],
+          "exported": true,
+          "lineCount": 11
+        },
+        {
+          "name": "workflow_step_scripts_in_document_order",
+          "params": [
+            "workflow_text",
+            "step_names"
+          ],
+          "exported": true,
+          "lineCount": 10
+        }
+      ],
+      "classes": [
+        {
+          "name": "WorkflowSecurityTests",
+          "methods": [
+            "test_inventory_actions_and_checkout_credentials_are_exact",
+            "test_jobs_use_minimum_permissions_and_verified_artifact_handoffs",
+            "test_dependencies_are_checksum_verified_and_mermaid_is_lockfile_backed",
+            "test_all_builds_reuse_bounded_pdf_builder_and_verify_pdf_html_sha",
+            "test_release_has_formal_provenance_for_every_verified_artifact",
+            "test_preview_publish_steps_follow_tag_release_asset_order",
+            "run_preview_scripts",
+            "test_mutable_preview_updates_existing_tag_and_release",
+            "test_mutable_preview_creates_only_on_explicit_not_found",
+            "test_preview_rejects_invalid_repository_and_sha_before_calling_gh",
+            "test_preview_tag_lookup_fails_closed_on_non_404_errors",
+            "test_preview_release_lookup_fails_closed_except_exact_not_found"
+          ],
+          "properties": [],
+          "exported": true,
+          "lineCount": 265
+        }
+      ],
+      "imports": [
+        {
+          "source": "json",
+          "specifiers": [
+            "json"
+          ]
+        },
+        {
+          "source": "os",
+          "specifiers": [
+            "os"
+          ]
+        },
+        {
+          "source": "re",
+          "specifiers": [
+            "re"
+          ]
+        },
+        {
+          "source": "subprocess",
+          "specifiers": [
+            "subprocess"
+          ]
+        },
+        {
+          "source": "tempfile",
+          "specifiers": [
+            "tempfile"
+          ]
+        },
+        {
+          "source": "textwrap",
+          "specifiers": [
+            "textwrap"
+          ]
+        },
+        {
+          "source": "unittest",
+          "specifiers": [
+            "unittest"
+          ]
+        },
+        {
+          "source": "pathlib",
+          "specifiers": [
+            "Path"
+          ]
+        }
+      ],
+      "exports": [
+        "job_block",
+        "workflow_step_script",
+        "workflow_step_scripts_in_document_order",
+        "WorkflowSecurityTests"
+      ],
+      "totalLines": 471,
+      "hasStructuralAnalysis": true
+    },
+    "tools/build_html_reader.py": {
+      "filePath": "tools/build_html_reader.py",
+      "contentHash": "9b4b52f8ecf6d257e92211242af090ec07c034cecfaf30f5b2b1a2e652072893",
+      "functions": [
+        {
+          "name": "esc",
+          "params": [
+            "s"
+          ],
+          "exported": true,
+          "lineCount": 1
+        },
+        {
+          "name": "escattr",
+          "params": [
+            "s"
+          ],
+          "exported": true,
+          "lineCount": 1
+        },
+        {
+          "name": "parse_summary",
+          "params": [
+            "book_dir"
+          ],
+          "exported": true,
+          "lineCount": 13
+        },
+        {
+          "name": "fix_inline_dollar",
+          "params": [
+            "text"
+          ],
+          "exported": true,
+          "lineCount": 9
+        },
+        {
+          "name": "process_file",
+          "params": [
+            "text",
+            "reldir",
+            "mermaid_store",
+            "path_to_id"
+          ],
+          "exported": true,
+          "lineCount": 27
+        },
+        {
+          "name": "main",
+          "params": [],
+          "exported": true,
+          "lineCount": 97
+        }
+      ],
+      "classes": [],
+      "imports": [
+        {
+          "source": "argparse",
+          "specifiers": [
+            "argparse"
+          ]
+        },
+        {
+          "source": "os",
+          "specifiers": [
+            "os"
+          ]
+        },
+        {
+          "source": "re",
+          "specifiers": [
+            "re"
+          ]
+        },
+        {
+          "source": "subprocess",
+          "specifiers": [
+            "subprocess"
+          ]
+        },
+        {
+          "source": "sys",
+          "specifiers": [
+            "sys"
+          ]
+        },
+        {
+          "source": "posixpath",
+          "specifiers": [
+            "posixpath"
+          ]
+        }
+      ],
+      "exports": [
+        "esc",
+        "escattr",
+        "parse_summary",
+        "fix_inline_dollar",
+        "process_file",
+        "main"
+      ],
+      "totalLines": 266,
+      "hasStructuralAnalysis": true
+    },
+    "tools/build_pdf.py": {
+      "filePath": "tools/build_pdf.py",
+      "contentHash": "baae5841a8f8ba4c0d3b0552e0835f210f5de52a944417cf7098e5940954f8af",
+      "functions": [
+        {
+          "name": "positive_float",
+          "params": [
+            "value"
+          ],
+          "returnType": "float",
+          "exported": true,
+          "lineCount": 5
+        },
+        {
+          "name": "nonnegative_float",
+          "params": [
+            "value"
+          ],
+          "returnType": "float",
+          "exported": true,
+          "lineCount": 5
+        },
+        {
+          "name": "append_log",
+          "params": [
+            "stream",
+            "message"
+          ],
+          "returnType": "None",
+          "exported": true,
+          "lineCount": 3
+        },
+        {
+          "name": "terminate_process_tree",
+          "params": [
+            "process",
+            "grace"
+          ],
+          "returnType": "None",
+          "exported": true,
+          "lineCount": 26
+        },
+        {
+          "name": "build_once",
+          "params": [
+            "command",
+            "output",
+            "log_path",
+            "timeout",
+            "terminate_grace"
+          ],
+          "returnType": "tuple[bool, str]",
+          "exported": true,
+          "lineCount": 41
+        },
+        {
+          "name": "parse_args",
+          "params": [],
+          "returnType": "argparse.Namespace",
+          "exported": true,
+          "lineCount": 10
+        },
+        {
+          "name": "main",
+          "params": [],
+          "returnType": "int",
+          "exported": true,
+          "lineCount": 35
+        }
+      ],
+      "classes": [],
+      "imports": [
+        {
+          "source": "argparse",
+          "specifiers": [
+            "argparse"
+          ]
+        },
+        {
+          "source": "os",
+          "specifiers": [
+            "os"
+          ]
+        },
+        {
+          "source": "signal",
+          "specifiers": [
+            "signal"
+          ]
+        },
+        {
+          "source": "subprocess",
+          "specifiers": [
+            "subprocess"
+          ]
+        },
+        {
+          "source": "sys",
+          "specifiers": [
+            "sys"
+          ]
+        },
+        {
+          "source": "time",
+          "specifiers": [
+            "time"
+          ]
+        },
+        {
+          "source": "pathlib",
+          "specifiers": [
+            "Path"
+          ]
+        }
+      ],
+      "exports": [
+        "positive_float",
+        "nonnegative_float",
+        "append_log",
+        "terminate_process_tree",
+        "build_once",
+        "parse_args",
+        "main"
+      ],
+      "totalLines": 159,
+      "hasStructuralAnalysis": true
+    },
+    "tools/render_mermaid.py": {
+      "filePath": "tools/render_mermaid.py",
+      "contentHash": "fa4c63ea69bfdea4f3d5dce7594c5958620e8a8abb62d1e3e1123d3068c29556",
+      "functions": [
+        {
+          "name": "render",
+          "params": [
+            "indices"
+          ],
+          "exported": true,
+          "lineCount": 10
+        },
+        {
+          "name": "done",
+          "params": [],
+          "exported": true,
+          "lineCount": 1
+        }
+      ],
+      "classes": [],
+      "imports": [
+        {
+          "source": "os",
+          "specifiers": [
+            "os"
+          ]
+        },
+        {
+          "source": "re",
+          "specifiers": [
+            "re"
+          ]
+        },
+        {
+          "source": "sys",
+          "specifiers": [
+            "sys"
+          ]
+        },
+        {
+          "source": "glob",
+          "specifiers": [
+            "glob"
+          ]
+        },
+        {
+          "source": "shutil",
+          "specifiers": [
+            "shutil"
+          ]
+        },
+        {
+          "source": "subprocess",
+          "specifiers": [
+            "subprocess"
+          ]
+        },
+        {
+          "source": "argparse",
+          "specifiers": [
+            "argparse"
+          ]
+        }
+      ],
+      "exports": [
+        "render",
+        "done"
+      ],
+      "totalLines": 85,
+      "hasStructuralAnalysis": true
+    },
+    "tools/verify_artifacts.py": {
+      "filePath": "tools/verify_artifacts.py",
+      "contentHash": "165496b8e5d9535eff3ff30918b36d781f22c04b332c5a100ebd828d38fa8672",
+      "functions": [
+        {
+          "name": "normalized_title",
+          "params": [
+            "value"
+          ],
+          "returnType": "str",
+          "exported": true,
+          "lineCount": 2
+        },
+        {
+          "name": "require_file",
+          "params": [
+            "path"
+          ],
+          "returnType": "None",
+          "exported": true,
+          "lineCount": 5
+        },
+        {
+          "name": "sha256_file",
+          "params": [
+            "path"
+          ],
+          "returnType": "str",
+          "exported": true,
+          "lineCount": 6
+        },
+        {
+          "name": "verify_html",
+          "params": [
+            "path",
+            "expected_title"
+          ],
+          "returnType": "None",
+          "exported": true,
+          "lineCount": 10
+        },
+        {
+          "name": "command_output",
+          "params": [
+            "command"
+          ],
+          "returnType": "str",
+          "exported": true,
+          "lineCount": 6
+        },
+        {
+          "name": "verify_pdf",
+          "params": [
+            "path",
+            "expected_title"
+          ],
+          "returnType": "None",
+          "exported": true,
+          "lineCount": 22
+        },
+        {
+          "name": "write_checksums",
+          "params": [
+            "paths",
+            "destination"
+          ],
+          "returnType": "None",
+          "exported": true,
+          "lineCount": 11
+        },
+        {
+          "name": "verify_checksums",
+          "params": [
+            "manifest"
+          ],
+          "returnType": "None",
+          "exported": true,
+          "lineCount": 18
+        },
+        {
+          "name": "parse_args",
+          "params": [],
+          "returnType": "argparse.Namespace",
+          "exported": true,
+          "lineCount": 10
+        },
+        {
+          "name": "main",
+          "params": [],
+          "returnType": "int",
+          "exported": true,
+          "lineCount": 22
+        }
+      ],
+      "classes": [
+        {
+          "name": "ArtifactVerificationError",
+          "methods": [],
+          "properties": [],
+          "exported": true,
+          "lineCount": 2
+        }
+      ],
+      "imports": [
+        {
+          "source": "argparse",
+          "specifiers": [
+            "argparse"
+          ]
+        },
+        {
+          "source": "hashlib",
+          "specifiers": [
+            "hashlib"
+          ]
+        },
+        {
+          "source": "html",
+          "specifiers": [
+            "html"
+          ]
+        },
+        {
+          "source": "re",
+          "specifiers": [
+            "re"
+          ]
+        },
+        {
+          "source": "shutil",
+          "specifiers": [
+            "shutil"
+          ]
+        },
+        {
+          "source": "subprocess",
+          "specifiers": [
+            "subprocess"
+          ]
+        },
+        {
+          "source": "sys",
+          "specifiers": [
+            "sys"
+          ]
+        },
+        {
+          "source": "pathlib",
+          "specifiers": [
+            "Path"
+          ]
+        }
+      ],
+      "exports": [
+        "ArtifactVerificationError",
+        "normalized_title",
+        "require_file",
+        "sha256_file",
+        "verify_html",
+        "command_output",
+        "verify_pdf",
+        "write_checksums",
+        "verify_checksums",
+        "parse_args",
+        "main"
+      ],
+      "totalLines": 154,
+      "hasStructuralAnalysis": true
+    }
+  }
+}

@@ -1,0 +1,194 @@
+{
+  "nodes": [
+    {
+      "id": "document:06_context_memory/README.md",
+      "type": "document",
+      "name": "README.md",
+      "filePath": "06_context_memory/README.md",
+      "summary": "Introduces Chapter 6 on sessions, context, and memory, establishing learning objectives for session isolation, multi-tier context budgeting, long-term memory retrieval, and compaction management.",
+      "tags": [
+        "documentation",
+        "overview",
+        "session-management",
+        "context-budget",
+        "memory-system"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "document:06_context_memory/6.1_sessions.md",
+      "type": "document",
+      "name": "6.1_sessions.md",
+      "filePath": "06_context_memory/6.1_sessions.md",
+      "summary": "Covers OpenClaw's session model and persistence layer, explaining session key resolution, thread and DM isolation boundaries, reset strategies, message queue modes, and session bleed troubleshooting.",
+      "tags": [
+        "session-management",
+        "persistence",
+        "session-key",
+        "message-queue",
+        "documentation"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "document:06_context_memory/6.2_context_building.md",
+      "type": "document",
+      "name": "6.2_context_building.md",
+      "filePath": "06_context_memory/6.2_context_building.md",
+      "summary": "Explains context assembly across four prioritized information tiers, token window budget allocation ratios, structured tool result injection, and pluggable context engines.",
+      "tags": [
+        "context-building",
+        "token-budget",
+        "prompt-assembly",
+        "priority-rules",
+        "documentation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "document:06_context_memory/6.3_memory_mechanism.md",
+      "type": "document",
+      "name": "6.3_memory_mechanism.md",
+      "filePath": "06_context_memory/6.3_memory_mechanism.md",
+      "summary": "Details the dual-tier workspace memory architecture comprising MEMORY.md and daily logs, fact curation criteria, hybrid search with vector embedding indexing, and memory expiration.",
+      "tags": [
+        "memory-system",
+        "vector-search",
+        "hybrid-search",
+        "knowledge-retrieval",
+        "documentation"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "document:06_context_memory/6.4_compaction_pruning.md",
+      "type": "document",
+      "name": "6.4_compaction_pruning.md",
+      "filePath": "06_context_memory/6.4_compaction_pruning.md",
+      "summary": "Analyzes context governance for long conversations, contrasting ephemeral in-memory tool result pruning with persistent transcript compaction and pre-compaction memory flush triggers.",
+      "tags": [
+        "context-pruning",
+        "compaction",
+        "memory-flush",
+        "session-lifecycle",
+        "documentation"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "document:06_context_memory/summary.md",
+      "type": "document",
+      "name": "summary.md",
+      "filePath": "06_context_memory/summary.md",
+      "summary": "Summarizes Chapter 6 with key conclusions on state ownership and token governance, an end-to-end trace walkthrough, self-check verification criteria, and a transition to multi-agent routing.",
+      "tags": [
+        "chapter-summary",
+        "end-to-end-flow",
+        "best-practices",
+        "checklist",
+        "documentation"
+      ],
+      "complexity": "simple"
+    }
+  ],
+  "edges": [
+    {
+      "source": "document:06_context_memory/README.md",
+      "target": "document:06_context_memory/6.1_sessions.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:06_context_memory/README.md",
+      "target": "document:06_context_memory/6.2_context_building.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:06_context_memory/README.md",
+      "target": "document:06_context_memory/6.3_memory_mechanism.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:06_context_memory/README.md",
+      "target": "document:06_context_memory/6.4_compaction_pruning.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:06_context_memory/README.md",
+      "target": "document:06_context_memory/summary.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:06_context_memory/6.1_sessions.md",
+      "target": "document:06_context_memory/6.2_context_building.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:06_context_memory/6.1_sessions.md",
+      "target": "document:06_context_memory/6.4_compaction_pruning.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:06_context_memory/6.2_context_building.md",
+      "target": "document:06_context_memory/6.3_memory_mechanism.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:06_context_memory/6.2_context_building.md",
+      "target": "document:06_context_memory/6.4_compaction_pruning.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:06_context_memory/6.4_compaction_pruning.md",
+      "target": "document:06_context_memory/6.3_memory_mechanism.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:06_context_memory/summary.md",
+      "target": "document:06_context_memory/6.1_sessions.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:06_context_memory/summary.md",
+      "target": "document:06_context_memory/6.2_context_building.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:06_context_memory/summary.md",
+      "target": "document:06_context_memory/6.3_memory_mechanism.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:06_context_memory/summary.md",
+      "target": "document:06_context_memory/6.4_compaction_pruning.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    }
+  ]
+}

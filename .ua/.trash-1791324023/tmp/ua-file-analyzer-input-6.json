@@ -1,0 +1,49 @@
+{
+  "projectRoot": "/Users/ngohongthai/Documents/openclaw_guide",
+  "batchFiles": [
+    {
+      "path": "05_tools_skills/5.1_tool_inventory.md",
+      "language": "markdown",
+      "sizeLines": 160,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "05_tools_skills/5.2_tool_policy.md",
+      "language": "markdown",
+      "sizeLines": 200,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "05_tools_skills/5.3_skills_plugins.md",
+      "language": "markdown",
+      "sizeLines": 140,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "05_tools_skills/5.4_browser_nodes.md",
+      "language": "markdown",
+      "sizeLines": 114,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "05_tools_skills/README.md",
+      "language": "markdown",
+      "sizeLines": 45,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "05_tools_skills/summary.md",
+      "language": "markdown",
+      "sizeLines": 32,
+      "fileCategory": "docs"
+    }
+  ],
+  "batchImportData": {
+    "05_tools_skills/5.1_tool_inventory.md": [],
+    "05_tools_skills/5.2_tool_policy.md": [],
+    "05_tools_skills/5.3_skills_plugins.md": [],
+    "05_tools_skills/5.4_browser_nodes.md": [],
+    "05_tools_skills/README.md": [],
+    "05_tools_skills/summary.md": []
+  }
+}

@@ -1,0 +1,49 @@
+{
+  "projectRoot": "/Users/ngohongthai/Documents/openclaw_guide",
+  "batchFiles": [
+    {
+      "path": "06_context_memory/6.1_sessions.md",
+      "language": "markdown",
+      "sizeLines": 135,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "06_context_memory/6.2_context_building.md",
+      "language": "markdown",
+      "sizeLines": 66,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "06_context_memory/6.3_memory_mechanism.md",
+      "language": "markdown",
+      "sizeLines": 99,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "06_context_memory/6.4_compaction_pruning.md",
+      "language": "markdown",
+      "sizeLines": 127,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "06_context_memory/README.md",
+      "language": "markdown",
+      "sizeLines": 33,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "06_context_memory/summary.md",
+      "language": "markdown",
+      "sizeLines": 35,
+      "fileCategory": "docs"
+    }
+  ],
+  "batchImportData": {
+    "06_context_memory/6.1_sessions.md": [],
+    "06_context_memory/6.2_context_building.md": [],
+    "06_context_memory/6.3_memory_mechanism.md": [],
+    "06_context_memory/6.4_compaction_pruning.md": [],
+    "06_context_memory/README.md": [],
+    "06_context_memory/summary.md": []
+  }
+}

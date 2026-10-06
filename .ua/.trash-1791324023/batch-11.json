@@ -1,0 +1,301 @@
+{
+  "nodes": [
+    {
+      "id": "document:10_agent_loop/10.1_request_lifecycle.md",
+      "type": "document",
+      "name": "10.1_request_lifecycle.md",
+      "filePath": "10_agent_loop/10.1_request_lifecycle.md",
+      "summary": "Traces the complete end-to-end request lifecycle of an agent message and provides an outside-in layered diagnostic framework for isolating errors across gateway, agent, session, model, and tool tiers.",
+      "tags": [
+        "request-lifecycle",
+        "layered-diagnosis",
+        "agent-loop",
+        "sequence-flow",
+        "documentation"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "document:10_agent_loop/10.2_pi_framework.md",
+      "type": "document",
+      "name": "10.2_pi_framework.md",
+      "filePath": "10_agent_loop/10.2_pi_framework.md",
+      "summary": "Analyzes OpenClaw's embedded integration of the Pi runtime engine, detailing session lifecycle management, custom tool injection, event subscription bridges, and dynamic system prompts.",
+      "tags": [
+        "pi-framework",
+        "embedded-integration",
+        "agent-runtime",
+        "event-subscription",
+        "documentation"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "document:10_agent_loop/10.3_entry_queue.md",
+      "type": "document",
+      "name": "10.3_entry_queue.md",
+      "filePath": "10_agent_loop/10.3_entry_queue.md",
+      "summary": "Details ingress protocol normalization, replay deduplication barriers, and the pure TypeScript lane-based Command Queue governing session, global, and background execution concurrency.",
+      "tags": [
+        "concurrency-control",
+        "command-queue",
+        "lane-queuing",
+        "idempotency",
+        "documentation"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "document:10_agent_loop/10.4_prompt_assembly.md",
+      "type": "document",
+      "name": "10.4_prompt_assembly.md",
+      "filePath": "10_agent_loop/10.4_prompt_assembly.md",
+      "summary": "Examines structured context assembly across four data tiers, token window budgeting with priority-based pruning, prompt persistence audits, and defense-in-depth against prompt injection attacks.",
+      "tags": [
+        "prompt-assembly",
+        "token-budgeting",
+        "prompt-injection",
+        "context-builder",
+        "documentation"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "document:10_agent_loop/10.5_tool_execution.md",
+      "type": "document",
+      "name": "10.5_tool_execution.md",
+      "filePath": "10_agent_loop/10.5_tool_execution.md",
+      "summary": "Explores the four-stage tool call lifecycle, static policy filtering, dynamic before_tool_call plugin interception hooks, loop detection, and result trimming injection.",
+      "tags": [
+        "tool-execution",
+        "policy-filtering",
+        "interception-hook",
+        "result-injection",
+        "documentation"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "document:10_agent_loop/10.6_streaming_retry.md",
+      "type": "document",
+      "name": "10.6_streaming_retry.md",
+      "filePath": "10_agent_loop/10.6_streaming_retry.md",
+      "summary": "Explains the EmbeddedBlockChunker streaming engine with fence-aware markdown chunking, bounded request-level HTTP retry strategies, model failover sequences, and early termination controls.",
+      "tags": [
+        "streaming",
+        "block-chunker",
+        "retry-strategy",
+        "model-failover",
+        "documentation"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "document:10_agent_loop/README.md",
+      "type": "document",
+      "name": "README.md",
+      "filePath": "10_agent_loop/README.md",
+      "summary": "Serves as the chapter navigation guide for the OpenClaw Agent Loop core, introducing foundational mental models, learning objectives, and reading advice.",
+      "tags": [
+        "entry-point",
+        "chapter-overview",
+        "agent-loop",
+        "architecture",
+        "documentation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "document:10_agent_loop/summary.md",
+      "type": "document",
+      "name": "summary.md",
+      "filePath": "10_agent_loop/summary.md",
+      "summary": "Summarizes the key architectural conclusions of Chapter 10, provides a self-assessment checklist across all agent loop mechanisms, and previews Chapter 11 on reliability and security.",
+      "tags": [
+        "chapter-summary",
+        "self-assessment",
+        "agent-loop",
+        "conclusions",
+        "documentation"
+      ],
+      "complexity": "simple"
+    }
+  ],
+  "edges": [
+    {
+      "source": "document:10_agent_loop/README.md",
+      "target": "document:10_agent_loop/10.1_request_lifecycle.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:10_agent_loop/README.md",
+      "target": "document:10_agent_loop/10.2_pi_framework.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:10_agent_loop/README.md",
+      "target": "document:10_agent_loop/10.3_entry_queue.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:10_agent_loop/README.md",
+      "target": "document:10_agent_loop/10.4_prompt_assembly.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:10_agent_loop/README.md",
+      "target": "document:10_agent_loop/10.5_tool_execution.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:10_agent_loop/README.md",
+      "target": "document:10_agent_loop/10.6_streaming_retry.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:10_agent_loop/README.md",
+      "target": "document:10_agent_loop/summary.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:10_agent_loop/10.1_request_lifecycle.md",
+      "target": "document:10_agent_loop/10.2_pi_framework.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:10_agent_loop/10.1_request_lifecycle.md",
+      "target": "document:10_agent_loop/10.3_entry_queue.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:10_agent_loop/10.1_request_lifecycle.md",
+      "target": "document:10_agent_loop/10.4_prompt_assembly.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:10_agent_loop/10.1_request_lifecycle.md",
+      "target": "document:10_agent_loop/10.5_tool_execution.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:10_agent_loop/10.1_request_lifecycle.md",
+      "target": "document:10_agent_loop/10.6_streaming_retry.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:10_agent_loop/10.2_pi_framework.md",
+      "target": "document:10_agent_loop/10.3_entry_queue.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:10_agent_loop/10.2_pi_framework.md",
+      "target": "document:10_agent_loop/10.5_tool_execution.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:10_agent_loop/10.2_pi_framework.md",
+      "target": "document:10_agent_loop/10.6_streaming_retry.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:10_agent_loop/10.3_entry_queue.md",
+      "target": "document:10_agent_loop/10.4_prompt_assembly.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:10_agent_loop/10.4_prompt_assembly.md",
+      "target": "document:10_agent_loop/10.5_tool_execution.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:10_agent_loop/10.5_tool_execution.md",
+      "target": "document:10_agent_loop/10.6_streaming_retry.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:10_agent_loop/10.6_streaming_retry.md",
+      "target": "document:10_agent_loop/summary.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:10_agent_loop/summary.md",
+      "target": "document:10_agent_loop/10.1_request_lifecycle.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:10_agent_loop/summary.md",
+      "target": "document:10_agent_loop/10.2_pi_framework.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:10_agent_loop/summary.md",
+      "target": "document:10_agent_loop/10.3_entry_queue.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:10_agent_loop/summary.md",
+      "target": "document:10_agent_loop/10.4_prompt_assembly.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:10_agent_loop/summary.md",
+      "target": "document:10_agent_loop/10.5_tool_execution.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:10_agent_loop/summary.md",
+      "target": "document:10_agent_loop/10.6_streaming_retry.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    }
+  ]
+}

@@ -1,0 +1,84 @@
+{
+  "projectRoot": "/Users/ngohongthai/Documents/openclaw_guide",
+  "batchFiles": [
+    {
+      "path": "appendix/README.md",
+      "language": "markdown",
+      "sizeLines": 16,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "appendix/api_reference.md",
+      "language": "markdown",
+      "sizeLines": 53,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "appendix/command_cheatsheet.md",
+      "language": "markdown",
+      "sizeLines": 308,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "appendix/config_templates.md",
+      "language": "markdown",
+      "sizeLines": 230,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "appendix/env_check.md",
+      "language": "markdown",
+      "sizeLines": 71,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "appendix/glossary.md",
+      "language": "markdown",
+      "sizeLines": 48,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "appendix/naming_history.md",
+      "language": "markdown",
+      "sizeLines": 10,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "appendix/reading_list.md",
+      "language": "markdown",
+      "sizeLines": 64,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "appendix/troubleshooting_checklist.md",
+      "language": "markdown",
+      "sizeLines": 148,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "appendix/version_mapping.md",
+      "language": "markdown",
+      "sizeLines": 154,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "appendix/volatile_facts.md",
+      "language": "markdown",
+      "sizeLines": 16,
+      "fileCategory": "docs"
+    }
+  ],
+  "batchImportData": {
+    "appendix/README.md": [],
+    "appendix/api_reference.md": [],
+    "appendix/command_cheatsheet.md": [],
+    "appendix/config_templates.md": [],
+    "appendix/env_check.md": [],
+    "appendix/glossary.md": [],
+    "appendix/naming_history.md": [],
+    "appendix/reading_list.md": [],
+    "appendix/troubleshooting_checklist.md": [],
+    "appendix/version_mapping.md": [],
+    "appendix/volatile_facts.md": []
+  }
+}

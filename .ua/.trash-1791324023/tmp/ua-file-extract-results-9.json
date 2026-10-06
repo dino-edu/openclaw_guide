@@ -1,0 +1,386 @@
+{
+  "scriptCompleted": true,
+  "filesAnalyzed": 7,
+  "filesSkipped": [],
+  "filesUnreadable": [],
+  "analysisOutcomes": {
+    "structure": {
+      "succeeded": 7,
+      "failed": 0
+    },
+    "callGraph": {
+      "succeeded": 0,
+      "failed": 0,
+      "skipped": 7
+    }
+  },
+  "results": [
+    {
+      "path": "08_automation_ops/8.1_hooks.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 122,
+      "nonEmptyLines": 90,
+      "sections": [
+        {
+          "heading": "8.1 Hooks Vòng đời & Các điểm xen sự kiện (Interception Points)",
+          "level": 2,
+          "line": 1
+        },
+        {
+          "heading": "8.1.1 Ranh giới trách nhiệm của Hooks",
+          "level": 3,
+          "line": 5
+        },
+        {
+          "heading": "8.1.2 Cơ chế Hook của OpenClaw & Cổng cấu hình hiện tại",
+          "level": 3,
+          "line": 15
+        },
+        {
+          "heading": "8.1.3 Mô hình điểm xen sự kiện: Định vị theo sự kiện chính thức, Ánh xạ trách nhiệm quản trị",
+          "level": 3,
+          "line": 50
+        },
+        {
+          "heading": "8.1.4 Các ràng buộc về tính ổn định: Timeout, Hạ cấp, Tính bất biến",
+          "level": 3,
+          "line": 83
+        },
+        {
+          "heading": "8.1.5 Sự kiện có cấu trúc: Đảm bảo tính kiểm toán và khả năng phát lại",
+          "level": 3,
+          "line": 93
+        },
+        {
+          "heading": "8.1.6 Nghiệm thu & Chẩn đoán sự cố",
+          "level": 3,
+          "line": 108
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 7
+      }
+    },
+    {
+      "path": "08_automation_ops/8.2_cron_jobs.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 145,
+      "nonEmptyLines": 106,
+      "sections": [
+        {
+          "heading": "8.2 Thiết kế tác vụ định kỳ & Chiến lược lên lịch (Cron jobs)",
+          "level": 2,
+          "line": 1
+        },
+        {
+          "heading": "8.2.1 Cron tích hợp sẵn: Điều phối gốc của Gateway",
+          "level": 3,
+          "line": 35
+        },
+        {
+          "heading": "8.2.2 Tích hợp Crontab bên ngoài",
+          "level": 3,
+          "line": 87
+        },
+        {
+          "heading": "8.2.3 Bốn ràng buộc kỹ thuật: Bất biến, Chống xung đột đè, Quan sát, Phục hồi",
+          "level": 3,
+          "line": 98
+        },
+        {
+          "heading": "8.2.4 Khóa bất biến & Phân luồng xử lý lỗi",
+          "level": 3,
+          "line": 114
+        },
+        {
+          "heading": "8.2.5 Nghiệm thu vận hành & Tuần tra định kỳ",
+          "level": 3,
+          "line": 127
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 6
+      }
+    },
+    {
+      "path": "08_automation_ops/8.3_heartbeat.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 252,
+      "nonEmptyLines": 193,
+      "sections": [
+        {
+          "heading": "8.3 Cơ chế Heartbeat: Tuần tra định kỳ & Chủ động thông báo",
+          "level": 2,
+          "line": 1
+        },
+        {
+          "heading": "8.3.1 Các khái niệm cốt lõi",
+          "level": 3,
+          "line": 14
+        },
+        {
+          "heading": "8.3.2 Vòng đời hoàn chỉnh: Từ bộ định thời Timer đến Chuyển phát tin nhắn",
+          "level": 3,
+          "line": 25
+        },
+        {
+          "heading": "8.3.3 Giao thức HEARTBEAT_OK & Các chế độ ngữ cảnh",
+          "level": 3,
+          "line": 53
+        },
+        {
+          "heading": "8.3.4 Chi tiết các trường cấu hình",
+          "level": 3,
+          "line": 66
+        },
+        {
+          "heading": "Phạm vi tác động & Mức độ ưu tiên",
+          "level": 4,
+          "line": 95
+        },
+        {
+          "heading": "8.3.5 Danh sách HEARTBEAT.md & Khung giờ hoạt động (Active Hours)",
+          "level": 3,
+          "line": 123
+        },
+        {
+          "heading": "Danh sách tuần tra HEARTBEAT.md",
+          "level": 4,
+          "line": 125
+        },
+        {
+          "heading": "Khung giờ hoạt động (Active Hours)",
+          "level": 4,
+          "line": 143
+        },
+        {
+          "heading": "8.3.6 Kiểm soát hiển thị kênh & Hệ thống sự kiện",
+          "level": 3,
+          "line": 156
+        },
+        {
+          "heading": "Kiểm soát độ hiển thị (Visibility)",
+          "level": 4,
+          "line": 158
+        },
+        {
+          "heading": "Hệ thống sự kiện Heartbeat",
+          "level": 4,
+          "line": 188
+        },
+        {
+          "heading": "8.3.7 Kích hoạt thủ công & Sự kiện hệ thống",
+          "level": 3,
+          "line": 202
+        },
+        {
+          "heading": "8.3.8 Bảng đối chiếu: Heartbeat vs Cron",
+          "level": 3,
+          "line": 216
+        },
+        {
+          "heading": "Các biện pháp tối ưu chi phí cho Heartbeat",
+          "level": 4,
+          "line": 229
+        },
+        {
+          "heading": "8.3.9 Tham khảo: Cơ chế vận hành nội bộ",
+          "level": 3,
+          "line": 240
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 16
+      }
+    },
+    {
+      "path": "08_automation_ops/8.4_remote_access.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 95,
+      "nonEmptyLines": 59,
+      "sections": [
+        {
+          "heading": "8.4 Truy cập từ xa: SSH, Tunnel nội mạng & Zero Trust",
+          "level": 2,
+          "line": 1
+        },
+        {
+          "heading": "8.4.1 Nguyên tắc cổng vào: Mặt phẳng quản trị mặc định không mở ra Internet công cộng",
+          "level": 3,
+          "line": 8
+        },
+        {
+          "heading": "8.4.2 Topo mạng khuyến nghị: Ưu tiên đường hầm chuyên dụng",
+          "level": 3,
+          "line": 16
+        },
+        {
+          "heading": "8.4.3 Danh tính & Phân quyền: Đặc quyền tối thiểu & Thông tin xác thực ngắn hạn",
+          "level": 3,
+          "line": 34
+        },
+        {
+          "heading": "8.4.4 Phương án đồng bộ tệp tin: Mang thành quả từ xa về máy cục bộ",
+          "level": 3,
+          "line": 42
+        },
+        {
+          "heading": "8.4.5 Tiếp quản trình duyệt từ xa: Node Host & KasmVNC",
+          "level": 3,
+          "line": 62
+        },
+        {
+          "heading": "8.4.6 Cơ chế ứng phó khẩn cấp: Thu hồi nhanh chóng & Cô lập tức thì",
+          "level": 3,
+          "line": 75
+        },
+        {
+          "heading": "8.4.7 Lệnh tuần tra đường cơ sở an toàn",
+          "level": 3,
+          "line": 85
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 8
+      }
+    },
+    {
+      "path": "08_automation_ops/8.5_security_baseline.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 146,
+      "nonEmptyLines": 113,
+      "sections": [
+        {
+          "heading": "8.5 Đường cơ sở bảo mật (Security Baseline) & Quy trình kiểm toán",
+          "level": 2,
+          "line": 1
+        },
+        {
+          "heading": "8.5.1 Phòng thủ chiều sâu: Phân tầng ranh giới và kiểm chứng từng tầng",
+          "level": 3,
+          "line": 5
+        },
+        {
+          "heading": "8.5.2 Bộ tứ sự kiện kiểm toán: Viết chuỗi nhân quả thành bản ghi có cấu trúc",
+          "level": 3,
+          "line": 67
+        },
+        {
+          "heading": "8.5.3 Quản trị khóa bí mật & Bán kính ảnh hưởng sự cố (Blast Radius)",
+          "level": 3,
+          "line": 82
+        },
+        {
+          "heading": "8.5.4 Bài học xương máu: Agent tự ý sửa cấu hình dẫn đến vòng lặp sập hệ thống",
+          "level": 3,
+          "line": 111
+        },
+        {
+          "heading": "8.5.5 Diễn tập & Kiểm thử hồi quy: Biến đường cơ sở an toàn thành một chu trình kiểm chứng định kỳ",
+          "level": 3,
+          "line": 130
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 6
+      }
+    },
+    {
+      "path": "08_automation_ops/README.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 32,
+      "nonEmptyLines": 23,
+      "sections": [
+        {
+          "heading": "Chương 8: Thực tiễn tự động hóa & An toàn vận hành",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "Mục lục hướng dẫn chương",
+          "level": 2,
+          "line": 17
+        },
+        {
+          "heading": "Mục tiêu học tập",
+          "level": 2,
+          "line": 26
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 3
+      }
+    },
+    {
+      "path": "08_automation_ops/summary.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 34,
+      "nonEmptyLines": 23,
+      "sections": [
+        {
+          "heading": "8.6 Tóm tắt chương",
+          "level": 2,
+          "line": 1
+        },
+        {
+          "heading": "8.6.1 Các kết luận trọng yếu",
+          "level": 3,
+          "line": 5
+        },
+        {
+          "heading": "8.6.2 Checklist tự kiểm tra",
+          "level": 3,
+          "line": 13
+        },
+        {
+          "heading": "8.6.3 Gợi ý ứng dụng thực tế từ cộng đồng",
+          "level": 3,
+          "line": 20
+        },
+        {
+          "heading": "8.6.4 Giới thiệu chương tiếp theo",
+          "level": 3,
+          "line": 27
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 5
+      }
+    }
+  ]
+}

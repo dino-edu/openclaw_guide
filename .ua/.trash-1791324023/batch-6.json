@@ -1,0 +1,201 @@
+{
+  "nodes": [
+    {
+      "id": "document:05_tools_skills/README.md",
+      "type": "document",
+      "name": "README.md",
+      "filePath": "05_tools_skills/README.md",
+      "summary": "Introduces Chapter 5 on OpenClaw's Action Layer, establishing the architectural relationship between intent proposal, tool contracts, permission policies, and execution governance.",
+      "tags": [
+        "documentation",
+        "overview",
+        "action-layer",
+        "tools",
+        "skills"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "document:05_tools_skills/5.1_tool_inventory.md",
+      "type": "document",
+      "name": "5.1_tool_inventory.md",
+      "filePath": "05_tools_skills/5.1_tool_inventory.md",
+      "summary": "Explores tool inventory engineering, covering tool contracts, failure semantics, read-only vs. mutating boundaries, tool chaining with error propagation, result injection, and execution replayability.",
+      "tags": [
+        "tool-inventory",
+        "tool-contracts",
+        "failure-semantics",
+        "observability",
+        "documentation"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "document:05_tools_skills/5.2_tool_policy.md",
+      "type": "document",
+      "name": "5.2_tool_policy.md",
+      "filePath": "05_tools_skills/5.2_tool_policy.md",
+      "summary": "Explains tool policy enforcement including global allow/deny precedence, tool profiles, channel and sender-level layering, provider customizations, and sub-agent depth restrictions.",
+      "tags": [
+        "tool-policy",
+        "permissions",
+        "access-control",
+        "least-privilege",
+        "documentation"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "document:05_tools_skills/5.3_skills_plugins.md",
+      "type": "document",
+      "name": "5.3_skills_plugins.md",
+      "filePath": "05_tools_skills/5.3_skills_plugins.md",
+      "summary": "Delineates the division of labor between Plugins for runtime capability extension and Skills for process standardization, while highlighting ClawHub supply-chain risks and review checklists.",
+      "tags": [
+        "plugins",
+        "skills",
+        "security",
+        "supply-chain",
+        "documentation"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "document:05_tools_skills/5.4_browser_nodes.md",
+      "type": "document",
+      "name": "5.4_browser_nodes.md",
+      "filePath": "05_tools_skills/5.4_browser_nodes.md",
+      "summary": "Covers browser automation governance, detailing isolation boundaries, a 4-tier capability hierarchy from search to vision, CLI operations, and structured troubleshooting workflows.",
+      "tags": [
+        "browser-tool",
+        "web-automation",
+        "security",
+        "troubleshooting",
+        "documentation"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "document:05_tools_skills/summary.md",
+      "type": "document",
+      "name": "summary.md",
+      "filePath": "05_tools_skills/summary.md",
+      "summary": "Summarizes Chapter 5 key conclusions on runtime policy boundaries and tool governance, providing diagnostic self-test questions and practical automation scenarios.",
+      "tags": [
+        "summary",
+        "review",
+        "checklist",
+        "best-practices",
+        "documentation"
+      ],
+      "complexity": "simple"
+    }
+  ],
+  "edges": [
+    {
+      "source": "document:05_tools_skills/README.md",
+      "target": "document:05_tools_skills/5.1_tool_inventory.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:05_tools_skills/README.md",
+      "target": "document:05_tools_skills/5.2_tool_policy.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:05_tools_skills/README.md",
+      "target": "document:05_tools_skills/5.3_skills_plugins.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:05_tools_skills/README.md",
+      "target": "document:05_tools_skills/5.4_browser_nodes.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:05_tools_skills/README.md",
+      "target": "document:05_tools_skills/summary.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:05_tools_skills/5.1_tool_inventory.md",
+      "target": "document:05_tools_skills/5.2_tool_policy.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:05_tools_skills/5.2_tool_policy.md",
+      "target": "document:05_tools_skills/5.3_skills_plugins.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:05_tools_skills/5.2_tool_policy.md",
+      "target": "document:05_tools_skills/5.4_browser_nodes.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:05_tools_skills/5.3_skills_plugins.md",
+      "target": "document:05_tools_skills/5.2_tool_policy.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:05_tools_skills/5.3_skills_plugins.md",
+      "target": "document:05_tools_skills/5.4_browser_nodes.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:05_tools_skills/5.4_browser_nodes.md",
+      "target": "document:05_tools_skills/5.2_tool_policy.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:05_tools_skills/summary.md",
+      "target": "document:05_tools_skills/5.1_tool_inventory.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:05_tools_skills/summary.md",
+      "target": "document:05_tools_skills/5.2_tool_policy.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:05_tools_skills/summary.md",
+      "target": "document:05_tools_skills/5.3_skills_plugins.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:05_tools_skills/summary.md",
+      "target": "document:05_tools_skills/5.4_browser_nodes.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    }
+  ]
+}

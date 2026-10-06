@@ -1,0 +1,119 @@
+{
+  "projectRoot": "/Users/ngohongthai/Documents/openclaw_guide",
+  "batchFiles": [
+    {
+      "path": ".github/dependabot.yml",
+      "language": "yaml",
+      "sizeLines": 14,
+      "fileCategory": "config"
+    },
+    {
+      "path": ".ua/config.json",
+      "language": "json",
+      "sizeLines": 1,
+      "fileCategory": "config"
+    },
+    {
+      "path": "check_emphasis.py",
+      "language": "python",
+      "sizeLines": 274,
+      "fileCategory": "code"
+    },
+    {
+      "path": "check_project_rules.py",
+      "language": "python",
+      "sizeLines": 204,
+      "fileCategory": "code"
+    },
+    {
+      "path": "docs/superpowers/plans/2026-10-06-vietnamese-translation.md",
+      "language": "markdown",
+      "sizeLines": 281,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "docs/superpowers/specs/2026-10-06-vietnamese-translation-design.md",
+      "language": "markdown",
+      "sizeLines": 100,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "tests/test_build_pdf.py",
+      "language": "python",
+      "sizeLines": 183,
+      "fileCategory": "code"
+    },
+    {
+      "path": "tests/test_cjk_typography.py",
+      "language": "python",
+      "sizeLines": 207,
+      "fileCategory": "code"
+    },
+    {
+      "path": "tests/test_html_list_rendering.py",
+      "language": "python",
+      "sizeLines": 85,
+      "fileCategory": "code"
+    },
+    {
+      "path": "tests/test_installation_contracts.py",
+      "language": "python",
+      "sizeLines": 66,
+      "fileCategory": "code"
+    },
+    {
+      "path": "tests/test_verify_artifacts.py",
+      "language": "python",
+      "sizeLines": 81,
+      "fileCategory": "code"
+    },
+    {
+      "path": "tests/test_workflow_security.py",
+      "language": "python",
+      "sizeLines": 470,
+      "fileCategory": "code"
+    },
+    {
+      "path": "tools/build_html_reader.py",
+      "language": "python",
+      "sizeLines": 265,
+      "fileCategory": "code"
+    },
+    {
+      "path": "tools/build_pdf.py",
+      "language": "python",
+      "sizeLines": 158,
+      "fileCategory": "code"
+    },
+    {
+      "path": "tools/render_mermaid.py",
+      "language": "python",
+      "sizeLines": 84,
+      "fileCategory": "code"
+    },
+    {
+      "path": "tools/verify_artifacts.py",
+      "language": "python",
+      "sizeLines": 153,
+      "fileCategory": "code"
+    }
+  ],
+  "batchImportData": {
+    ".github/dependabot.yml": [],
+    ".ua/config.json": [],
+    "check_emphasis.py": [],
+    "check_project_rules.py": [],
+    "docs/superpowers/plans/2026-10-06-vietnamese-translation.md": [],
+    "docs/superpowers/specs/2026-10-06-vietnamese-translation-design.md": [],
+    "tests/test_build_pdf.py": [],
+    "tests/test_cjk_typography.py": [],
+    "tests/test_html_list_rendering.py": [],
+    "tests/test_installation_contracts.py": [],
+    "tests/test_verify_artifacts.py": [],
+    "tests/test_workflow_security.py": [],
+    "tools/build_html_reader.py": [],
+    "tools/build_pdf.py": [],
+    "tools/render_mermaid.py": [],
+    "tools/verify_artifacts.py": []
+  }
+}

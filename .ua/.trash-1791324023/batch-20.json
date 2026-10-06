@@ -1,0 +1,1412 @@
+{
+  "nodes": [
+    {
+      "id": "config:.github/dependabot.yml",
+      "type": "config",
+      "name": "dependabot.yml",
+      "filePath": ".github/dependabot.yml",
+      "summary": "GitHub Dependabot configuration that automates weekly version updates for GitHub Actions workflows.",
+      "tags": [
+        "configuration",
+        "ci-cd",
+        "dependencies",
+        "github-actions"
+      ],
+      "complexity": "simple",
+      "languageNotes": "Dependabot v2 configuration file scoped to github-actions ecosystem on a weekly schedule."
+    },
+    {
+      "id": "config:.ua/config.json",
+      "type": "config",
+      "name": "config.json",
+      "filePath": ".ua/config.json",
+      "summary": "Understand-Anything configuration file specifying English as the target output language for generated documentation and graphs.",
+      "tags": [
+        "configuration",
+        "localization",
+        "settings"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:check_emphasis.py",
+      "type": "file",
+      "name": "check_emphasis.py",
+      "filePath": "check_emphasis.py",
+      "summary": "CJK-aware Markdown emphasis validator that detects broken bold and italic formatting caused by CommonMark flanking rules around CJK punctuation.",
+      "tags": [
+        "validation",
+        "markdown",
+        "typography",
+        "cjk",
+        "utility"
+      ],
+      "complexity": "complex",
+      "languageNotes": "Implements CommonMark left/right-flanking delimiter scanning with custom awareness of CJK punctuation boundaries."
+    },
+    {
+      "id": "function:check_emphasis.py:_is_in_code_block",
+      "type": "function",
+      "name": "_is_in_code_block",
+      "filePath": "check_emphasis.py",
+      "lineRange": [
+        55,
+        68
+      ],
+      "summary": "Determines whether a specified line index is enclosed within a fenced code block.",
+      "tags": [
+        "utility",
+        "markdown",
+        "parser"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:check_emphasis.py:_is_in_mermaid_block",
+      "type": "function",
+      "name": "_is_in_mermaid_block",
+      "filePath": "check_emphasis.py",
+      "lineRange": [
+        71,
+        88
+      ],
+      "summary": "Checks whether a line index falls inside a fenced Mermaid diagram block.",
+      "tags": [
+        "utility",
+        "markdown",
+        "parser"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:check_emphasis.py:_neutralize_code",
+      "type": "function",
+      "name": "_neutralize_code",
+      "filePath": "check_emphasis.py",
+      "lineRange": [
+        113,
+        124
+      ],
+      "summary": "Replaces inline backtick code spans with space placeholders so asterisks inside code are not mistaken for emphasis delimiters.",
+      "tags": [
+        "utility",
+        "sanitization",
+        "markdown"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:check_emphasis.py:_scan_runs",
+      "type": "function",
+      "name": "_scan_runs",
+      "filePath": "check_emphasis.py",
+      "lineRange": [
+        127,
+        144
+      ],
+      "summary": "Scans a line for consecutive delimiter character runs and calculates their flanking status based on adjacent characters.",
+      "tags": [
+        "utility",
+        "parser",
+        "tokenization"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:check_emphasis.py:_process_emphasis",
+      "type": "function",
+      "name": "_process_emphasis",
+      "filePath": "check_emphasis.py",
+      "lineRange": [
+        147,
+        180
+      ],
+      "summary": "Uses a delimiter stack algorithm to pair opening and closing emphasis runs, detecting unmatched or non-rendering markers.",
+      "tags": [
+        "parser",
+        "validation",
+        "algorithm"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:check_emphasis.py:check_emphasis",
+      "type": "function",
+      "name": "check_emphasis",
+      "filePath": "check_emphasis.py",
+      "lineRange": [
+        189,
+        231
+      ],
+      "summary": "Primary validation function checking a Markdown line for broken emphasis delimiters adjacent to CJK punctuation or letters.",
+      "tags": [
+        "validation",
+        "markdown",
+        "typography"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:check_emphasis.py:main",
+      "type": "function",
+      "name": "main",
+      "filePath": "check_emphasis.py",
+      "lineRange": [
+        243,
+        270
+      ],
+      "summary": "CLI command that traverses repository Markdown files, executes emphasis validation, and reports formatting errors.",
+      "tags": [
+        "entry-point",
+        "cli",
+        "validation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:check_project_rules.py",
+      "type": "file",
+      "name": "check_project_rules.py",
+      "filePath": "check_project_rules.py",
+      "summary": "Lightweight Markdown quality checker enforcing rules on volatile date facts, explicit code fence languages, and valid internal relative links.",
+      "tags": [
+        "validation",
+        "linter",
+        "markdown",
+        "links",
+        "ci-cd"
+      ],
+      "complexity": "complex",
+      "languageNotes": "Employs regex patterns across Markdown files to prevent link rot and outdated volatile benchmark statements."
+    },
+    {
+      "id": "function:check_project_rules.py:check_volatile_facts",
+      "type": "function",
+      "name": "check_volatile_facts",
+      "filePath": "check_project_rules.py",
+      "lineRange": [
+        31,
+        87
+      ],
+      "summary": "Checks Markdown content for volatile time statements and out-of-date model release years or benchmark claims.",
+      "tags": [
+        "validation",
+        "dates",
+        "compliance"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:check_project_rules.py:strip_fenced_blocks",
+      "type": "function",
+      "name": "strip_fenced_blocks",
+      "filePath": "check_project_rules.py",
+      "lineRange": [
+        99,
+        119
+      ],
+      "summary": "Strips fenced code blocks while preserving line numbering so link and date checks ignore code examples.",
+      "tags": [
+        "utility",
+        "markdown",
+        "parser"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:check_project_rules.py:check_fences",
+      "type": "function",
+      "name": "check_fences",
+      "filePath": "check_project_rules.py",
+      "lineRange": [
+        122,
+        142
+      ],
+      "summary": "Verifies that code fences declare an allowed language syntax tag and are properly balanced and closed.",
+      "tags": [
+        "validation",
+        "markdown",
+        "syntax"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:check_project_rules.py:check_links",
+      "type": "function",
+      "name": "check_links",
+      "filePath": "check_project_rules.py",
+      "lineRange": [
+        157,
+        175
+      ],
+      "summary": "Validates internal relative Markdown links and anchor targets to ensure referenced files and heading anchors exist.",
+      "tags": [
+        "validation",
+        "links",
+        "integrity"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:check_project_rules.py:main",
+      "type": "function",
+      "name": "main",
+      "filePath": "check_project_rules.py",
+      "lineRange": [
+        185,
+        200
+      ],
+      "summary": "Main entry point executing rule checks across all repository Markdown files and exiting with non-zero status on violations.",
+      "tags": [
+        "entry-point",
+        "cli",
+        "validation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "document:docs/superpowers/plans/2026-10-06-vietnamese-translation.md",
+      "type": "document",
+      "name": "2026-10-06-vietnamese-translation.md",
+      "filePath": "docs/superpowers/plans/2026-10-06-vietnamese-translation.md",
+      "summary": "Implementation plan outlining phased execution steps for translating all 112 book Markdown documents into Vietnamese while preserving syntax, links, and diagrams.",
+      "tags": [
+        "documentation",
+        "localization",
+        "planning",
+        "translation"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "document:docs/superpowers/specs/2026-10-06-vietnamese-translation-design.md",
+      "type": "document",
+      "name": "2026-10-06-vietnamese-translation-design.md",
+      "filePath": "docs/superpowers/specs/2026-10-06-vietnamese-translation-design.md",
+      "summary": "Technical design specification defining translation standards, terminology conventions, and in-place replacement strategy for the Vietnamese edition.",
+      "tags": [
+        "documentation",
+        "localization",
+        "specification",
+        "architecture"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:tests/test_build_pdf.py",
+      "type": "file",
+      "name": "test_build_pdf.py",
+      "filePath": "tests/test_build_pdf.py",
+      "summary": "Unit test suite for tools/build_pdf.py validating bounded retries, log retention, timeout handling, and process group termination.",
+      "tags": [
+        "test",
+        "pdf",
+        "process-management",
+        "retry-logic"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:tests/test_build_pdf.py:BuildPdfTests",
+      "type": "class",
+      "name": "BuildPdfTests",
+      "filePath": "tests/test_build_pdf.py",
+      "lineRange": [
+        75,
+        179
+      ],
+      "summary": "TestCase validating that PDF building succeeds after transient failure, captures attempt logs, terminates runaway processes, and asserts output existence.",
+      "tags": [
+        "test",
+        "pdf",
+        "process-management"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:tests/test_cjk_typography.py",
+      "type": "file",
+      "name": "test_cjk_typography.py",
+      "filePath": "tests/test_cjk_typography.py",
+      "summary": "Typography test suite enforcing spacing boundaries between CJK and Latin characters and full-width parentheses around CJK text.",
+      "tags": [
+        "test",
+        "typography",
+        "cjk",
+        "markdown",
+        "validation"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:tests/test_cjk_typography.py:mask",
+      "type": "function",
+      "name": "mask",
+      "filePath": "tests/test_cjk_typography.py",
+      "lineRange": [
+        71,
+        80
+      ],
+      "summary": "Replaces inline code blocks, URLs, and HTML entities with neutral mask characters to isolate prose for typography tests.",
+      "tags": [
+        "utility",
+        "sanitization",
+        "typography"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:tests/test_cjk_typography.py:prose_lines",
+      "type": "function",
+      "name": "prose_lines",
+      "filePath": "tests/test_cjk_typography.py",
+      "lineRange": [
+        83,
+        103
+      ],
+      "summary": "Extracts pure prose lines from Markdown text by skipping YAML front matter, fenced code blocks, tables, and math equations.",
+      "tags": [
+        "utility",
+        "parser",
+        "markdown"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:tests/test_cjk_typography.py:CjkTypographyTests",
+      "type": "class",
+      "name": "CjkTypographyTests",
+      "filePath": "tests/test_cjk_typography.py",
+      "lineRange": [
+        130,
+        203
+      ],
+      "summary": "Test cases asserting that prose adheres to CJK/Latin separation rules and full-width Chinese parenthesis requirements without false positives.",
+      "tags": [
+        "test",
+        "typography",
+        "cjk"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:tests/test_html_list_rendering.py",
+      "type": "file",
+      "name": "test_html_list_rendering.py",
+      "filePath": "tests/test_html_list_rendering.py",
+      "summary": "Regression test ensuring Pandoc Markdown reader configuration enables lists without preceding blank lines to prevent list collapsing in mobile reader HTML.",
+      "tags": [
+        "test",
+        "html",
+        "pandoc",
+        "rendering",
+        "regression"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:tests/test_html_list_rendering.py:_reader_pandoc_format",
+      "type": "function",
+      "name": "_reader_pandoc_format",
+      "filePath": "tests/test_html_list_rendering.py",
+      "lineRange": [
+        29,
+        54
+      ],
+      "summary": "Inspects build_html_reader.py to extract the configured pandoc markdown input format string and enabled extensions.",
+      "tags": [
+        "utility",
+        "parser",
+        "pandoc"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:tests/test_html_list_rendering.py:HtmlListRenderingTests",
+      "type": "class",
+      "name": "HtmlListRenderingTests",
+      "filePath": "tests/test_html_list_rendering.py",
+      "lineRange": [
+        57,
+        81
+      ],
+      "summary": "TestCase confirming that lists_without_preceding_blankline is declared and that bold-lead list structures render into HTML unordered lists.",
+      "tags": [
+        "test",
+        "html",
+        "pandoc"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:tests/test_installation_contracts.py",
+      "type": "file",
+      "name": "test_installation_contracts.py",
+      "filePath": "tests/test_installation_contracts.py",
+      "summary": "Contract tests verifying that the setup documentation specifies mandatory diagnostic commands, Node version constraints, and platform installation procedures.",
+      "tags": [
+        "test",
+        "documentation",
+        "contract",
+        "cli",
+        "setup"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:tests/test_installation_contracts.py:InstallationContractTests",
+      "type": "class",
+      "name": "InstallationContractTests",
+      "filePath": "tests/test_installation_contracts.py",
+      "lineRange": [
+        9,
+        62
+      ],
+      "summary": "Validates that installation documentation contains required POSIX diagnostic commands, Windows global npm prefixes, and WSL routing instructions.",
+      "tags": [
+        "test",
+        "documentation",
+        "contract"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:tests/test_verify_artifacts.py",
+      "type": "file",
+      "name": "test_verify_artifacts.py",
+      "filePath": "tests/test_verify_artifacts.py",
+      "summary": "Test suite verifying tools/verify_artifacts.py HTML title checks, PDF signature validation, and portable SHA-256 checksum manifest operations.",
+      "tags": [
+        "test",
+        "artifacts",
+        "checksum",
+        "verification"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:tests/test_verify_artifacts.py:ArtifactVerifierTests",
+      "type": "class",
+      "name": "ArtifactVerifierTests",
+      "filePath": "tests/test_verify_artifacts.py",
+      "lineRange": [
+        24,
+        77
+      ],
+      "summary": "TestCase checking that HTML title validation, PDF header signature checks, and sorted SHA-256 manifest verification behave correctly.",
+      "tags": [
+        "test",
+        "verification",
+        "checksum"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:tests/test_workflow_security.py",
+      "type": "file",
+      "name": "test_workflow_security.py",
+      "filePath": "tests/test_workflow_security.py",
+      "summary": "Security audit test suite validating GitHub Actions workflows for pinned action SHAs, least-privilege token permissions, artifact provenance, and secure preview releases.",
+      "tags": [
+        "test",
+        "security",
+        "ci-cd",
+        "github-actions",
+        "audit"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:tests/test_workflow_security.py:workflow_step_script",
+      "type": "function",
+      "name": "workflow_step_script",
+      "filePath": "tests/test_workflow_security.py",
+      "lineRange": [
+        177,
+        187
+      ],
+      "summary": "Extracts the shell script content of a named step from a workflow YAML string.",
+      "tags": [
+        "utility",
+        "yaml",
+        "github-actions"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:tests/test_workflow_security.py:workflow_step_scripts_in_document_order",
+      "type": "function",
+      "name": "workflow_step_scripts_in_document_order",
+      "filePath": "tests/test_workflow_security.py",
+      "lineRange": [
+        190,
+        199
+      ],
+      "summary": "Extracts multiple named step scripts from workflow text in their strict document appearance order.",
+      "tags": [
+        "utility",
+        "yaml",
+        "github-actions"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:tests/test_workflow_security.py:WorkflowSecurityTests",
+      "type": "class",
+      "name": "WorkflowSecurityTests",
+      "filePath": "tests/test_workflow_security.py",
+      "lineRange": [
+        202,
+        466
+      ],
+      "summary": "TestCase asserting that GitHub workflows use verified action digests, minimum permissions, checksum-verified binaries, and secure release procedures.",
+      "tags": [
+        "test",
+        "security",
+        "github-actions"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:tools/build_html_reader.py",
+      "type": "file",
+      "name": "build_html_reader.py",
+      "filePath": "tools/build_html_reader.py",
+      "summary": "Build script producing a self-contained, GitBook-style mobile HTML reader featuring embedded CSS navigation, offline math rendering, and pre-rendered SVG Mermaid diagrams.",
+      "tags": [
+        "build-system",
+        "html",
+        "pandoc",
+        "mobile-reader",
+        "utility"
+      ],
+      "complexity": "complex",
+      "languageNotes": "Integrates Pandoc for Markdown to HTML compilation, replacing Mermaid code blocks with pre-rendered SVGs and inlining mobile-responsive CSS."
+    },
+    {
+      "id": "function:tools/build_html_reader.py:parse_summary",
+      "type": "function",
+      "name": "parse_summary",
+      "filePath": "tools/build_html_reader.py",
+      "lineRange": [
+        16,
+        28
+      ],
+      "summary": "Parses SUMMARY.md to extract ordered chapter definitions, section names, and relative file targets.",
+      "tags": [
+        "parser",
+        "markdown",
+        "gitbook"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:tools/build_html_reader.py:process_file",
+      "type": "function",
+      "name": "process_file",
+      "filePath": "tools/build_html_reader.py",
+      "lineRange": [
+        40,
+        66
+      ],
+      "summary": "Pre-processes chapter Markdown, extracting Mermaid diagrams into placeholders and rewriting relative document links to anchor IDs.",
+      "tags": [
+        "preprocessing",
+        "markdown",
+        "mermaid"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:tools/build_html_reader.py:main",
+      "type": "function",
+      "name": "main",
+      "filePath": "tools/build_html_reader.py",
+      "lineRange": [
+        166,
+        262
+      ],
+      "summary": "CLI entry point coordinating chapter conversion via Pandoc, substituting SVG diagrams, assembling navigation, and outputting standalone HTML.",
+      "tags": [
+        "entry-point",
+        "cli",
+        "build-system"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:tools/build_pdf.py",
+      "type": "file",
+      "name": "build_pdf.py",
+      "filePath": "tools/build_pdf.py",
+      "summary": "Robust PDF build wrapper providing bounded retries, attempt log capture, and process tree termination to prevent runaway headless browser processes.",
+      "tags": [
+        "build-system",
+        "pdf",
+        "process-management",
+        "retry-logic"
+      ],
+      "complexity": "moderate",
+      "languageNotes": "Uses process groups with os.killpg to ensure complete cleanup of descendant browser processes upon timeout."
+    },
+    {
+      "id": "function:tools/build_pdf.py:terminate_process_tree",
+      "type": "function",
+      "name": "terminate_process_tree",
+      "filePath": "tools/build_pdf.py",
+      "lineRange": [
+        37,
+        62
+      ],
+      "summary": "Kills a subprocess and all child processes within its process group using SIGTERM followed by SIGKILL after a grace period.",
+      "tags": [
+        "utility",
+        "process-management",
+        "cleanup"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:tools/build_pdf.py:build_once",
+      "type": "function",
+      "name": "build_once",
+      "filePath": "tools/build_pdf.py",
+      "lineRange": [
+        65,
+        105
+      ],
+      "summary": "Executes a single invocation of the PDF build command, streaming stdout/stderr to a log file with timeout management.",
+      "tags": [
+        "build-system",
+        "subprocess",
+        "logging"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:tools/build_pdf.py:parse_args",
+      "type": "function",
+      "name": "parse_args",
+      "filePath": "tools/build_pdf.py",
+      "lineRange": [
+        108,
+        117
+      ],
+      "summary": "Parses CLI flags for PDF building including command arguments, target output, log paths, retries, and timeout thresholds.",
+      "tags": [
+        "cli",
+        "arguments",
+        "configuration"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:tools/build_pdf.py:main",
+      "type": "function",
+      "name": "main",
+      "filePath": "tools/build_pdf.py",
+      "lineRange": [
+        120,
+        154
+      ],
+      "summary": "Main loop managing bounded retry attempts for PDF generation, checking generated file non-emptiness, and handling failures.",
+      "tags": [
+        "entry-point",
+        "cli",
+        "build-system"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:tools/render_mermaid.py",
+      "type": "file",
+      "name": "render_mermaid.py",
+      "filePath": "tools/render_mermaid.py",
+      "summary": "Diagram rendering script that scans book chapters for Mermaid code blocks and renders them into static SVG assets using mermaid-cli.",
+      "tags": [
+        "utility",
+        "mermaid",
+        "svg",
+        "diagrams",
+        "puppeteer"
+      ],
+      "complexity": "moderate",
+      "languageNotes": "Renders diagrams in batches via headless Chrome with error tolerance so partial builds still succeed."
+    },
+    {
+      "id": "function:tools/render_mermaid.py:render",
+      "type": "function",
+      "name": "render",
+      "filePath": "tools/render_mermaid.py",
+      "lineRange": [
+        55,
+        64
+      ],
+      "summary": "Invokes mmdc CLI in a chunked batch to render extracted Mermaid definitions to SVG files.",
+      "tags": [
+        "rendering",
+        "mermaid",
+        "cli"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:tools/verify_artifacts.py",
+      "type": "file",
+      "name": "verify_artifacts.py",
+      "filePath": "tools/verify_artifacts.py",
+      "summary": "Artifact integrity verification tool that checks HTML document titles, validates PDF headers and metadata, and maintains sorted SHA-256 checksum manifests.",
+      "tags": [
+        "verification",
+        "checksum",
+        "integrity",
+        "pdf",
+        "html"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:tools/verify_artifacts.py:verify_html",
+      "type": "function",
+      "name": "verify_html",
+      "filePath": "tools/verify_artifacts.py",
+      "lineRange": [
+        39,
+        48
+      ],
+      "summary": "Validates that a generated HTML file exists, is non-empty, and contains the required publication title.",
+      "tags": [
+        "verification",
+        "html",
+        "integrity"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:tools/verify_artifacts.py:verify_pdf",
+      "type": "function",
+      "name": "verify_pdf",
+      "filePath": "tools/verify_artifacts.py",
+      "lineRange": [
+        59,
+        80
+      ],
+      "summary": "Validates that a generated PDF matches PDF header specifications, qpdf metadata, and contains the expected title.",
+      "tags": [
+        "verification",
+        "pdf",
+        "integrity"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:tools/verify_artifacts.py:write_checksums",
+      "type": "function",
+      "name": "write_checksums",
+      "filePath": "tools/verify_artifacts.py",
+      "lineRange": [
+        83,
+        93
+      ],
+      "summary": "Calculates SHA-256 hashes for build output files and writes a sorted, portable checksums.sha256 manifest file.",
+      "tags": [
+        "checksum",
+        "sha256",
+        "manifest"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:tools/verify_artifacts.py:verify_checksums",
+      "type": "function",
+      "name": "verify_checksums",
+      "filePath": "tools/verify_artifacts.py",
+      "lineRange": [
+        96,
+        113
+      ],
+      "summary": "Reads a SHA-256 checksum manifest and verifies that current file hashes match recorded digests.",
+      "tags": [
+        "verification",
+        "checksum",
+        "integrity"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:tools/verify_artifacts.py:parse_args",
+      "type": "function",
+      "name": "parse_args",
+      "filePath": "tools/verify_artifacts.py",
+      "lineRange": [
+        116,
+        125
+      ],
+      "summary": "Parses CLI arguments for artifact checking, checksum writing, and checksum validation modes.",
+      "tags": [
+        "cli",
+        "arguments",
+        "configuration"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:tools/verify_artifacts.py:main",
+      "type": "function",
+      "name": "main",
+      "filePath": "tools/verify_artifacts.py",
+      "lineRange": [
+        128,
+        149
+      ],
+      "summary": "CLI entry point running artifact verifications, writing checksum manifests, or re-verifying manifest digests.",
+      "tags": [
+        "entry-point",
+        "cli",
+        "verification"
+      ],
+      "complexity": "simple"
+    }
+  ],
+  "edges": [
+    {
+      "source": "file:check_emphasis.py",
+      "target": "function:check_emphasis.py:_is_in_code_block",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:check_emphasis.py",
+      "target": "function:check_emphasis.py:_is_in_mermaid_block",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:check_emphasis.py",
+      "target": "function:check_emphasis.py:_neutralize_code",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:check_emphasis.py",
+      "target": "function:check_emphasis.py:_scan_runs",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:check_emphasis.py",
+      "target": "function:check_emphasis.py:_process_emphasis",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:check_emphasis.py",
+      "target": "function:check_emphasis.py:check_emphasis",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:check_emphasis.py",
+      "target": "function:check_emphasis.py:main",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:check_project_rules.py",
+      "target": "function:check_project_rules.py:check_volatile_facts",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:check_project_rules.py",
+      "target": "function:check_project_rules.py:strip_fenced_blocks",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:check_project_rules.py",
+      "target": "function:check_project_rules.py:check_fences",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:check_project_rules.py",
+      "target": "function:check_project_rules.py:check_links",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:check_project_rules.py",
+      "target": "function:check_project_rules.py:main",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:tests/test_build_pdf.py",
+      "target": "class:tests/test_build_pdf.py:BuildPdfTests",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:tests/test_cjk_typography.py",
+      "target": "function:tests/test_cjk_typography.py:mask",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:tests/test_cjk_typography.py",
+      "target": "function:tests/test_cjk_typography.py:prose_lines",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:tests/test_cjk_typography.py",
+      "target": "class:tests/test_cjk_typography.py:CjkTypographyTests",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:tests/test_html_list_rendering.py",
+      "target": "function:tests/test_html_list_rendering.py:_reader_pandoc_format",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:tests/test_html_list_rendering.py",
+      "target": "class:tests/test_html_list_rendering.py:HtmlListRenderingTests",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:tests/test_installation_contracts.py",
+      "target": "class:tests/test_installation_contracts.py:InstallationContractTests",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:tests/test_verify_artifacts.py",
+      "target": "class:tests/test_verify_artifacts.py:ArtifactVerifierTests",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:tests/test_workflow_security.py",
+      "target": "function:tests/test_workflow_security.py:workflow_step_script",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:tests/test_workflow_security.py",
+      "target": "function:tests/test_workflow_security.py:workflow_step_scripts_in_document_order",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:tests/test_workflow_security.py",
+      "target": "class:tests/test_workflow_security.py:WorkflowSecurityTests",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:tools/build_html_reader.py",
+      "target": "function:tools/build_html_reader.py:parse_summary",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:tools/build_html_reader.py",
+      "target": "function:tools/build_html_reader.py:process_file",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:tools/build_html_reader.py",
+      "target": "function:tools/build_html_reader.py:main",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:tools/build_pdf.py",
+      "target": "function:tools/build_pdf.py:terminate_process_tree",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:tools/build_pdf.py",
+      "target": "function:tools/build_pdf.py:build_once",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:tools/build_pdf.py",
+      "target": "function:tools/build_pdf.py:parse_args",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:tools/build_pdf.py",
+      "target": "function:tools/build_pdf.py:main",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:tools/render_mermaid.py",
+      "target": "function:tools/render_mermaid.py:render",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:tools/verify_artifacts.py",
+      "target": "function:tools/verify_artifacts.py:verify_html",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:tools/verify_artifacts.py",
+      "target": "function:tools/verify_artifacts.py:verify_pdf",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:tools/verify_artifacts.py",
+      "target": "function:tools/verify_artifacts.py:write_checksums",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:tools/verify_artifacts.py",
+      "target": "function:tools/verify_artifacts.py:verify_checksums",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:tools/verify_artifacts.py",
+      "target": "function:tools/verify_artifacts.py:parse_args",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:tools/verify_artifacts.py",
+      "target": "function:tools/verify_artifacts.py:main",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:check_emphasis.py",
+      "target": "function:check_emphasis.py:check_emphasis",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:check_emphasis.py",
+      "target": "function:check_emphasis.py:main",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:check_project_rules.py",
+      "target": "function:check_project_rules.py:check_volatile_facts",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:check_project_rules.py",
+      "target": "function:check_project_rules.py:strip_fenced_blocks",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:check_project_rules.py",
+      "target": "function:check_project_rules.py:check_fences",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:check_project_rules.py",
+      "target": "function:check_project_rules.py:check_links",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:check_project_rules.py",
+      "target": "function:check_project_rules.py:main",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:tests/test_build_pdf.py",
+      "target": "class:tests/test_build_pdf.py:BuildPdfTests",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:tests/test_cjk_typography.py",
+      "target": "function:tests/test_cjk_typography.py:mask",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:tests/test_cjk_typography.py",
+      "target": "function:tests/test_cjk_typography.py:prose_lines",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:tests/test_cjk_typography.py",
+      "target": "class:tests/test_cjk_typography.py:CjkTypographyTests",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:tests/test_html_list_rendering.py",
+      "target": "class:tests/test_html_list_rendering.py:HtmlListRenderingTests",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:tests/test_installation_contracts.py",
+      "target": "class:tests/test_installation_contracts.py:InstallationContractTests",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:tests/test_verify_artifacts.py",
+      "target": "class:tests/test_verify_artifacts.py:ArtifactVerifierTests",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:tests/test_workflow_security.py",
+      "target": "function:tests/test_workflow_security.py:workflow_step_script",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:tests/test_workflow_security.py",
+      "target": "function:tests/test_workflow_security.py:workflow_step_scripts_in_document_order",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:tests/test_workflow_security.py",
+      "target": "class:tests/test_workflow_security.py:WorkflowSecurityTests",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:tools/build_html_reader.py",
+      "target": "function:tools/build_html_reader.py:parse_summary",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:tools/build_html_reader.py",
+      "target": "function:tools/build_html_reader.py:process_file",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:tools/build_html_reader.py",
+      "target": "function:tools/build_html_reader.py:main",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:tools/build_pdf.py",
+      "target": "function:tools/build_pdf.py:terminate_process_tree",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:tools/build_pdf.py",
+      "target": "function:tools/build_pdf.py:build_once",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:tools/build_pdf.py",
+      "target": "function:tools/build_pdf.py:parse_args",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:tools/build_pdf.py",
+      "target": "function:tools/build_pdf.py:main",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:tools/render_mermaid.py",
+      "target": "function:tools/render_mermaid.py:render",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:tools/verify_artifacts.py",
+      "target": "function:tools/verify_artifacts.py:verify_html",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:tools/verify_artifacts.py",
+      "target": "function:tools/verify_artifacts.py:verify_pdf",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:tools/verify_artifacts.py",
+      "target": "function:tools/verify_artifacts.py:write_checksums",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:tools/verify_artifacts.py",
+      "target": "function:tools/verify_artifacts.py:verify_checksums",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:tools/verify_artifacts.py",
+      "target": "function:tools/verify_artifacts.py:parse_args",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:tools/verify_artifacts.py",
+      "target": "function:tools/verify_artifacts.py:main",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:tools/build_pdf.py",
+      "target": "file:tests/test_build_pdf.py",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:tools/verify_artifacts.py",
+      "target": "file:tests/test_verify_artifacts.py",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:tools/build_html_reader.py",
+      "target": "file:tests/test_html_list_rendering.py",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:tools/build_html_reader.py",
+      "target": "file:tools/render_mermaid.py",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "document:docs/superpowers/plans/2026-10-06-vietnamese-translation.md",
+      "target": "document:docs/superpowers/specs/2026-10-06-vietnamese-translation-design.md",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "document:docs/superpowers/plans/2026-10-06-vietnamese-translation.md",
+      "target": "file:check_project_rules.py",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:tests/test_cjk_typography.py",
+      "target": "file:check_project_rules.py",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:tests/test_cjk_typography.py",
+      "target": "file:check_emphasis.py",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:check_project_rules.py",
+      "target": "file:check_emphasis.py",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    }
+  ]
+}

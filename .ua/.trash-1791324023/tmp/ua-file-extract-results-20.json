@@ -1,0 +1,5770 @@
+{
+  "scriptCompleted": true,
+  "filesAnalyzed": 16,
+  "filesSkipped": [],
+  "filesUnreadable": [],
+  "analysisOutcomes": {
+    "structure": {
+      "succeeded": 16,
+      "failed": 0
+    },
+    "callGraph": {
+      "succeeded": 12,
+      "failed": 0,
+      "skipped": 4
+    }
+  },
+  "results": [
+    {
+      "path": ".github/dependabot.yml",
+      "language": "yaml",
+      "fileCategory": "config",
+      "totalLines": 14,
+      "nonEmptyLines": 14,
+      "sections": [
+        {
+          "heading": "version",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "updates",
+          "level": 1,
+          "line": 2
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 2
+      }
+    },
+    {
+      "path": ".ua/config.json",
+      "language": "json",
+      "fileCategory": "config",
+      "totalLines": 1,
+      "nonEmptyLines": 1,
+      "sections": [
+        {
+          "heading": "outputLanguage",
+          "level": 1,
+          "line": 1
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 1
+      }
+    },
+    {
+      "path": "check_emphasis.py",
+      "language": "python",
+      "fileCategory": "code",
+      "totalLines": 274,
+      "nonEmptyLines": 232,
+      "functions": [
+        {
+          "name": "_fence_match",
+          "startLine": 51,
+          "endLine": 52,
+          "params": [
+            "line"
+          ]
+        },
+        {
+          "name": "_is_in_code_block",
+          "startLine": 55,
+          "endLine": 68,
+          "params": [
+            "lines",
+            "line_idx"
+          ]
+        },
+        {
+          "name": "_is_in_mermaid_block",
+          "startLine": 71,
+          "endLine": 88,
+          "params": [
+            "lines",
+            "line_idx"
+          ]
+        },
+        {
+          "name": "_is_punct",
+          "startLine": 91,
+          "endLine": 94,
+          "params": [
+            "ch"
+          ]
+        },
+        {
+          "name": "_is_space",
+          "startLine": 97,
+          "endLine": 98,
+          "params": [
+            "ch"
+          ]
+        },
+        {
+          "name": "_left_flanking",
+          "startLine": 101,
+          "endLine": 104,
+          "params": [
+            "prev_ch",
+            "next_ch"
+          ]
+        },
+        {
+          "name": "_right_flanking",
+          "startLine": 107,
+          "endLine": 110,
+          "params": [
+            "prev_ch",
+            "next_ch"
+          ]
+        },
+        {
+          "name": "_neutralize_code",
+          "startLine": 113,
+          "endLine": 124,
+          "params": [
+            "line"
+          ]
+        },
+        {
+          "name": "_scan_runs",
+          "startLine": 127,
+          "endLine": 144,
+          "params": [
+            "line"
+          ]
+        },
+        {
+          "name": "_process_emphasis",
+          "startLine": 147,
+          "endLine": 180,
+          "params": [
+            "runs"
+          ]
+        },
+        {
+          "name": "_snippet",
+          "startLine": 183,
+          "endLine": 186,
+          "params": [
+            "line",
+            "pos",
+            "width"
+          ]
+        },
+        {
+          "name": "check_emphasis",
+          "startLine": 189,
+          "endLine": 231,
+          "params": [
+            "line"
+          ]
+        },
+        {
+          "name": "iter_markdown_files",
+          "startLine": 234,
+          "endLine": 240,
+          "params": []
+        },
+        {
+          "name": "main",
+          "startLine": 243,
+          "endLine": 270,
+          "params": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "_fence_match",
+          "line": 51,
+          "isDefault": false
+        },
+        {
+          "name": "_is_in_code_block",
+          "line": 55,
+          "isDefault": false
+        },
+        {
+          "name": "_is_in_mermaid_block",
+          "line": 71,
+          "isDefault": false
+        },
+        {
+          "name": "_is_punct",
+          "line": 91,
+          "isDefault": false
+        },
+        {
+          "name": "_is_space",
+          "line": 97,
+          "isDefault": false
+        },
+        {
+          "name": "_left_flanking",
+          "line": 101,
+          "isDefault": false
+        },
+        {
+          "name": "_right_flanking",
+          "line": 107,
+          "isDefault": false
+        },
+        {
+          "name": "_neutralize_code",
+          "line": 113,
+          "isDefault": false
+        },
+        {
+          "name": "_scan_runs",
+          "line": 127,
+          "isDefault": false
+        },
+        {
+          "name": "_process_emphasis",
+          "line": 147,
+          "isDefault": false
+        },
+        {
+          "name": "_snippet",
+          "line": 183,
+          "isDefault": false
+        },
+        {
+          "name": "check_emphasis",
+          "line": 189,
+          "isDefault": false
+        },
+        {
+          "name": "iter_markdown_files",
+          "line": 234,
+          "isDefault": false
+        },
+        {
+          "name": "main",
+          "line": 243,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "_fence_match",
+          "callee": "FENCE_RE.match",
+          "lineNumber": 52
+        },
+        {
+          "caller": "_is_in_code_block",
+          "callee": "range",
+          "lineNumber": 58
+        },
+        {
+          "caller": "_is_in_code_block",
+          "callee": "_fence_match",
+          "lineNumber": 59
+        },
+        {
+          "caller": "_is_in_code_block",
+          "callee": "match.group",
+          "lineNumber": 62
+        },
+        {
+          "caller": "_is_in_code_block",
+          "callee": "len",
+          "lineNumber": 63
+        },
+        {
+          "caller": "_is_in_mermaid_block",
+          "callee": "range",
+          "lineNumber": 75
+        },
+        {
+          "caller": "_is_in_mermaid_block",
+          "callee": "_fence_match",
+          "lineNumber": 76
+        },
+        {
+          "caller": "_is_in_mermaid_block",
+          "callee": "match.group",
+          "lineNumber": 79
+        },
+        {
+          "caller": "_is_in_mermaid_block",
+          "callee": "len",
+          "lineNumber": 80
+        },
+        {
+          "caller": "_is_in_mermaid_block",
+          "callee": "match.group(2).strip().split",
+          "lineNumber": 83
+        },
+        {
+          "caller": "_is_in_mermaid_block",
+          "callee": "match.group(2).strip",
+          "lineNumber": 83
+        },
+        {
+          "caller": "_is_in_mermaid_block",
+          "callee": "match.group",
+          "lineNumber": 83
+        },
+        {
+          "caller": "_is_in_mermaid_block",
+          "callee": "bool",
+          "lineNumber": 84
+        },
+        {
+          "caller": "_is_in_mermaid_block",
+          "callee": "lang_parts[0].lower",
+          "lineNumber": 84
+        },
+        {
+          "caller": "_is_punct",
+          "callee": "unicodedata.category",
+          "lineNumber": 93
+        },
+        {
+          "caller": "_is_space",
+          "callee": "ch.isspace",
+          "lineNumber": 98
+        },
+        {
+          "caller": "_left_flanking",
+          "callee": "_is_space",
+          "lineNumber": 102
+        },
+        {
+          "caller": "_left_flanking",
+          "callee": "_is_punct",
+          "lineNumber": 104
+        },
+        {
+          "caller": "_left_flanking",
+          "callee": "_is_space",
+          "lineNumber": 104
+        },
+        {
+          "caller": "_left_flanking",
+          "callee": "_is_punct",
+          "lineNumber": 104
+        },
+        {
+          "caller": "_right_flanking",
+          "callee": "_is_space",
+          "lineNumber": 108
+        },
+        {
+          "caller": "_right_flanking",
+          "callee": "_is_punct",
+          "lineNumber": 110
+        },
+        {
+          "caller": "_right_flanking",
+          "callee": "_is_space",
+          "lineNumber": 110
+        },
+        {
+          "caller": "_right_flanking",
+          "callee": "_is_punct",
+          "lineNumber": 110
+        },
+        {
+          "caller": "repl",
+          "callee": "match.group(0).replace",
+          "lineNumber": 120
+        },
+        {
+          "caller": "repl",
+          "callee": "match.group",
+          "lineNumber": 120
+        },
+        {
+          "caller": "_neutralize_code",
+          "callee": "re.sub",
+          "lineNumber": 123
+        },
+        {
+          "caller": "_scan_runs",
+          "callee": "ASTERISK_RUN_RE.finditer",
+          "lineNumber": 129
+        },
+        {
+          "caller": "_scan_runs",
+          "callee": "match.start",
+          "lineNumber": 130
+        },
+        {
+          "caller": "_scan_runs",
+          "callee": "match.start",
+          "lineNumber": 130
+        },
+        {
+          "caller": "_scan_runs",
+          "callee": "match.end",
+          "lineNumber": 131
+        },
+        {
+          "caller": "_scan_runs",
+          "callee": "match.end",
+          "lineNumber": 131
+        },
+        {
+          "caller": "_scan_runs",
+          "callee": "len",
+          "lineNumber": 131
+        },
+        {
+          "caller": "_scan_runs",
+          "callee": "runs.append",
+          "lineNumber": 132
+        },
+        {
+          "caller": "_scan_runs",
+          "callee": "match.start",
+          "lineNumber": 134
+        },
+        {
+          "caller": "_scan_runs",
+          "callee": "len",
+          "lineNumber": 135
+        },
+        {
+          "caller": "_scan_runs",
+          "callee": "match.group",
+          "lineNumber": 135
+        },
+        {
+          "caller": "_scan_runs",
+          "callee": "len",
+          "lineNumber": 136
+        },
+        {
+          "caller": "_scan_runs",
+          "callee": "match.group",
+          "lineNumber": 136
+        },
+        {
+          "caller": "_scan_runs",
+          "callee": "len",
+          "lineNumber": 137
+        },
+        {
+          "caller": "_scan_runs",
+          "callee": "match.group",
+          "lineNumber": 137
+        },
+        {
+          "caller": "_scan_runs",
+          "callee": "_left_flanking",
+          "lineNumber": 140
+        },
+        {
+          "caller": "_scan_runs",
+          "callee": "_right_flanking",
+          "lineNumber": 141
+        },
+        {
+          "caller": "_process_emphasis",
+          "callee": "len",
+          "lineNumber": 151
+        },
+        {
+          "caller": "_process_emphasis",
+          "callee": "range",
+          "lineNumber": 157
+        },
+        {
+          "caller": "_process_emphasis",
+          "callee": "range",
+          "lineNumber": 176
+        },
+        {
+          "caller": "_snippet",
+          "callee": "len",
+          "lineNumber": 185
+        },
+        {
+          "caller": "_snippet",
+          "callee": "max",
+          "lineNumber": 186
+        },
+        {
+          "caller": "check_emphasis",
+          "callee": "_neutralize_code",
+          "lineNumber": 191
+        },
+        {
+          "caller": "check_emphasis",
+          "callee": "BULLET_RE.sub",
+          "lineNumber": 192
+        },
+        {
+          "caller": "check_emphasis",
+          "callee": "m.group",
+          "lineNumber": 192
+        },
+        {
+          "caller": "check_emphasis",
+          "callee": "m.group",
+          "lineNumber": 192
+        },
+        {
+          "caller": "check_emphasis",
+          "callee": "_scan_runs",
+          "lineNumber": 196
+        },
+        {
+          "caller": "check_emphasis",
+          "callee": "len",
+          "lineNumber": 201
+        },
+        {
+          "caller": "check_emphasis",
+          "callee": "enumerate",
+          "lineNumber": 202
+        },
+        {
+          "caller": "check_emphasis",
+          "callee": "_is_space",
+          "lineNumber": 206
+        },
+        {
+          "caller": "check_emphasis",
+          "callee": "issues.append",
+          "lineNumber": 209
+        },
+        {
+          "caller": "check_emphasis",
+          "callee": "_snippet",
+          "lineNumber": 210
+        },
+        {
+          "caller": "check_emphasis",
+          "callee": "_is_space",
+          "lineNumber": 215
+        },
+        {
+          "caller": "check_emphasis",
+          "callee": "issues.append",
+          "lineNumber": 218
+        },
+        {
+          "caller": "check_emphasis",
+          "callee": "_snippet",
+          "lineNumber": 219
+        },
+        {
+          "caller": "check_emphasis",
+          "callee": "_process_emphasis",
+          "lineNumber": 224
+        },
+        {
+          "caller": "check_emphasis",
+          "callee": "len",
+          "lineNumber": 225
+        },
+        {
+          "caller": "check_emphasis",
+          "callee": "any",
+          "lineNumber": 227
+        },
+        {
+          "caller": "check_emphasis",
+          "callee": "CJK_RE.search",
+          "lineNumber": 228
+        },
+        {
+          "caller": "check_emphasis",
+          "callee": "issues.append",
+          "lineNumber": 230
+        },
+        {
+          "caller": "check_emphasis",
+          "callee": "_snippet",
+          "lineNumber": 230
+        },
+        {
+          "caller": "iter_markdown_files",
+          "callee": "ROOT.rglob",
+          "lineNumber": 236
+        },
+        {
+          "caller": "iter_markdown_files",
+          "callee": "any",
+          "lineNumber": 237
+        },
+        {
+          "caller": "iter_markdown_files",
+          "callee": "path.relative_to",
+          "lineNumber": 237
+        },
+        {
+          "caller": "iter_markdown_files",
+          "callee": "files.append",
+          "lineNumber": 239
+        },
+        {
+          "caller": "iter_markdown_files",
+          "callee": "sorted",
+          "lineNumber": 240
+        },
+        {
+          "caller": "main",
+          "callee": "iter_markdown_files",
+          "lineNumber": 244
+        },
+        {
+          "caller": "main",
+          "callee": "print",
+          "lineNumber": 246
+        },
+        {
+          "caller": "main",
+          "callee": "path.read_text(encoding=\"utf-8\", errors=\"ignore\").split",
+          "lineNumber": 251
+        },
+        {
+          "caller": "main",
+          "callee": "path.read_text",
+          "lineNumber": 251
+        },
+        {
+          "caller": "main",
+          "callee": "issues.append",
+          "lineNumber": 253
+        },
+        {
+          "caller": "main",
+          "callee": "path.relative_to",
+          "lineNumber": 253
+        },
+        {
+          "caller": "main",
+          "callee": "enumerate",
+          "lineNumber": 255
+        },
+        {
+          "caller": "main",
+          "callee": "_is_in_code_block",
+          "lineNumber": 256
+        },
+        {
+          "caller": "main",
+          "callee": "_is_in_mermaid_block",
+          "lineNumber": 256
+        },
+        {
+          "caller": "main",
+          "callee": "check_emphasis",
+          "lineNumber": 258
+        },
+        {
+          "caller": "main",
+          "callee": "issues.append",
+          "lineNumber": 259
+        },
+        {
+          "caller": "main",
+          "callee": "path.relative_to",
+          "lineNumber": 259
+        },
+        {
+          "caller": "main",
+          "callee": "print",
+          "lineNumber": 262
+        },
+        {
+          "caller": "main",
+          "callee": "\"\\n\".join",
+          "lineNumber": 262
+        },
+        {
+          "caller": "main",
+          "callee": "print",
+          "lineNumber": 263
+        },
+        {
+          "caller": "main",
+          "callee": "len",
+          "lineNumber": 264
+        },
+        {
+          "caller": "main",
+          "callee": "len",
+          "lineNumber": 264
+        },
+        {
+          "caller": "main",
+          "callee": "print",
+          "lineNumber": 269
+        },
+        {
+          "caller": "main",
+          "callee": "len",
+          "lineNumber": 269
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 14,
+        "functionCount": 14,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "check_project_rules.py",
+      "language": "python",
+      "fileCategory": "code",
+      "totalLines": 204,
+      "nonEmptyLines": 171,
+      "functions": [
+        {
+          "name": "check_volatile_facts",
+          "startLine": 31,
+          "endLine": 87,
+          "params": [
+            "filepath",
+            "today"
+          ]
+        },
+        {
+          "name": "iter_markdown_files",
+          "startLine": 90,
+          "endLine": 96,
+          "params": []
+        },
+        {
+          "name": "strip_fenced_blocks",
+          "startLine": 99,
+          "endLine": 119,
+          "params": [
+            "text"
+          ]
+        },
+        {
+          "name": "check_fences",
+          "startLine": 122,
+          "endLine": 142,
+          "params": [
+            "path",
+            "text"
+          ]
+        },
+        {
+          "name": "is_local_target",
+          "startLine": 145,
+          "endLine": 147,
+          "params": [
+            "target"
+          ]
+        },
+        {
+          "name": "normalize_target",
+          "startLine": 150,
+          "endLine": 154,
+          "params": [
+            "raw_target"
+          ]
+        },
+        {
+          "name": "check_links",
+          "startLine": 157,
+          "endLine": 175,
+          "params": [
+            "path",
+            "text"
+          ]
+        },
+        {
+          "name": "check_summary_links",
+          "startLine": 178,
+          "endLine": 182,
+          "params": []
+        },
+        {
+          "name": "main",
+          "startLine": 185,
+          "endLine": 200,
+          "params": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "check_volatile_facts",
+          "line": 31,
+          "isDefault": false
+        },
+        {
+          "name": "iter_markdown_files",
+          "line": 90,
+          "isDefault": false
+        },
+        {
+          "name": "strip_fenced_blocks",
+          "line": 99,
+          "isDefault": false
+        },
+        {
+          "name": "check_fences",
+          "line": 122,
+          "isDefault": false
+        },
+        {
+          "name": "is_local_target",
+          "line": 145,
+          "isDefault": false
+        },
+        {
+          "name": "normalize_target",
+          "line": 150,
+          "isDefault": false
+        },
+        {
+          "name": "check_links",
+          "line": 157,
+          "isDefault": false
+        },
+        {
+          "name": "check_summary_links",
+          "line": 178,
+          "isDefault": false
+        },
+        {
+          "name": "main",
+          "line": 185,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "check_volatile_facts",
+          "callee": "Path",
+          "lineNumber": 33
+        },
+        {
+          "caller": "check_volatile_facts",
+          "callee": "date.today",
+          "lineNumber": 34
+        },
+        {
+          "caller": "check_volatile_facts",
+          "callee": "path.read_text",
+          "lineNumber": 38
+        },
+        {
+          "caller": "check_volatile_facts",
+          "callee": "re.search",
+          "lineNumber": 42
+        },
+        {
+          "caller": "check_volatile_facts",
+          "callee": "datetime.strptime(metadata.group(1), \"%Y-%m-%d\").date",
+          "lineNumber": 54
+        },
+        {
+          "caller": "check_volatile_facts",
+          "callee": "datetime.strptime",
+          "lineNumber": 54
+        },
+        {
+          "caller": "check_volatile_facts",
+          "callee": "metadata.group",
+          "lineNumber": 54
+        },
+        {
+          "caller": "check_volatile_facts",
+          "callee": "datetime.strptime(metadata.group(2), \"%Y-%m-%d\").date",
+          "lineNumber": 55
+        },
+        {
+          "caller": "check_volatile_facts",
+          "callee": "datetime.strptime",
+          "lineNumber": 55
+        },
+        {
+          "caller": "check_volatile_facts",
+          "callee": "metadata.group",
+          "lineNumber": 55
+        },
+        {
+          "caller": "check_volatile_facts",
+          "callee": "int",
+          "lineNumber": 56
+        },
+        {
+          "caller": "check_volatile_facts",
+          "callee": "metadata.group",
+          "lineNumber": 56
+        },
+        {
+          "caller": "check_volatile_facts",
+          "callee": "timedelta",
+          "lineNumber": 60
+        },
+        {
+          "caller": "check_volatile_facts",
+          "callee": "issues.append",
+          "lineNumber": 61
+        },
+        {
+          "caller": "check_volatile_facts",
+          "callee": "issues.append",
+          "lineNumber": 65
+        },
+        {
+          "caller": "check_volatile_facts",
+          "callee": "issues.append",
+          "lineNumber": 69
+        },
+        {
+          "caller": "check_volatile_facts",
+          "callee": "re.findall",
+          "lineNumber": 73
+        },
+        {
+          "caller": "check_volatile_facts",
+          "callee": "issues.append",
+          "lineNumber": 78
+        },
+        {
+          "caller": "check_volatile_facts",
+          "callee": "issues.append",
+          "lineNumber": 81
+        },
+        {
+          "caller": "check_volatile_facts",
+          "callee": "issues.append",
+          "lineNumber": 83
+        },
+        {
+          "caller": "iter_markdown_files",
+          "callee": "ROOT.rglob",
+          "lineNumber": 92
+        },
+        {
+          "caller": "iter_markdown_files",
+          "callee": "any",
+          "lineNumber": 93
+        },
+        {
+          "caller": "iter_markdown_files",
+          "callee": "path.relative_to",
+          "lineNumber": 93
+        },
+        {
+          "caller": "iter_markdown_files",
+          "callee": "files.append",
+          "lineNumber": 95
+        },
+        {
+          "caller": "iter_markdown_files",
+          "callee": "sorted",
+          "lineNumber": 96
+        },
+        {
+          "caller": "strip_fenced_blocks",
+          "callee": "text.splitlines",
+          "lineNumber": 104
+        },
+        {
+          "caller": "strip_fenced_blocks",
+          "callee": "FENCE_RE.match",
+          "lineNumber": 105
+        },
+        {
+          "caller": "strip_fenced_blocks",
+          "callee": "match.group",
+          "lineNumber": 107
+        },
+        {
+          "caller": "strip_fenced_blocks",
+          "callee": "len",
+          "lineNumber": 109
+        },
+        {
+          "caller": "strip_fenced_blocks",
+          "callee": "output.append",
+          "lineNumber": 116
+        },
+        {
+          "caller": "strip_fenced_blocks",
+          "callee": "output.append",
+          "lineNumber": 118
+        },
+        {
+          "caller": "strip_fenced_blocks",
+          "callee": "\"\\n\".join",
+          "lineNumber": 119
+        },
+        {
+          "caller": "check_fences",
+          "callee": "enumerate",
+          "lineNumber": 125
+        },
+        {
+          "caller": "check_fences",
+          "callee": "text.splitlines",
+          "lineNumber": 125
+        },
+        {
+          "caller": "check_fences",
+          "callee": "FENCE_RE.match",
+          "lineNumber": 126
+        },
+        {
+          "caller": "check_fences",
+          "callee": "match.group",
+          "lineNumber": 129
+        },
+        {
+          "caller": "check_fences",
+          "callee": "len",
+          "lineNumber": 131
+        },
+        {
+          "caller": "check_fences",
+          "callee": "stack.append",
+          "lineNumber": 133
+        },
+        {
+          "caller": "check_fences",
+          "callee": "stack.pop",
+          "lineNumber": 137
+        },
+        {
+          "caller": "check_fences",
+          "callee": "stack.append",
+          "lineNumber": 139
+        },
+        {
+          "caller": "check_fences",
+          "callee": "issues.append",
+          "lineNumber": 141
+        },
+        {
+          "caller": "check_fences",
+          "callee": "path.relative_to",
+          "lineNumber": 141
+        },
+        {
+          "caller": "is_local_target",
+          "callee": "urlparse",
+          "lineNumber": 146
+        },
+        {
+          "caller": "is_local_target",
+          "callee": "target.startswith",
+          "lineNumber": 147
+        },
+        {
+          "caller": "normalize_target",
+          "callee": "raw_target.strip",
+          "lineNumber": 151
+        },
+        {
+          "caller": "normalize_target",
+          "callee": "target.count",
+          "lineNumber": 152
+        },
+        {
+          "caller": "normalize_target",
+          "callee": "target.split",
+          "lineNumber": 153
+        },
+        {
+          "caller": "normalize_target",
+          "callee": "unquote",
+          "lineNumber": 154
+        },
+        {
+          "caller": "normalize_target",
+          "callee": "target.split",
+          "lineNumber": 154
+        },
+        {
+          "caller": "check_links",
+          "callee": "strip_fenced_blocks",
+          "lineNumber": 159
+        },
+        {
+          "caller": "check_links",
+          "callee": "LINK_RE.finditer",
+          "lineNumber": 160
+        },
+        {
+          "caller": "check_links",
+          "callee": "match.group(2).strip",
+          "lineNumber": 161
+        },
+        {
+          "caller": "check_links",
+          "callee": "match.group",
+          "lineNumber": 161
+        },
+        {
+          "caller": "check_links",
+          "callee": "normalize_target",
+          "lineNumber": 162
+        },
+        {
+          "caller": "check_links",
+          "callee": "is_local_target",
+          "lineNumber": 163
+        },
+        {
+          "caller": "check_links",
+          "callee": "(path.parent / target).resolve",
+          "lineNumber": 165
+        },
+        {
+          "caller": "check_links",
+          "callee": "target_path.relative_to",
+          "lineNumber": 167
+        },
+        {
+          "caller": "check_links",
+          "callee": "target_path.exists",
+          "lineNumber": 170
+        },
+        {
+          "caller": "check_links",
+          "callee": "body[: match.start()].count",
+          "lineNumber": 171
+        },
+        {
+          "caller": "check_links",
+          "callee": "match.start",
+          "lineNumber": 171
+        },
+        {
+          "caller": "check_links",
+          "callee": "issues.append",
+          "lineNumber": 172
+        },
+        {
+          "caller": "check_links",
+          "callee": "path.relative_to",
+          "lineNumber": 173
+        },
+        {
+          "caller": "check_summary_links",
+          "callee": "summary.exists",
+          "lineNumber": 180
+        },
+        {
+          "caller": "check_summary_links",
+          "callee": "check_links",
+          "lineNumber": 182
+        },
+        {
+          "caller": "check_summary_links",
+          "callee": "summary.read_text",
+          "lineNumber": 182
+        },
+        {
+          "caller": "main",
+          "callee": "iter_markdown_files",
+          "lineNumber": 187
+        },
+        {
+          "caller": "main",
+          "callee": "path.read_text",
+          "lineNumber": 189
+        },
+        {
+          "caller": "main",
+          "callee": "issues.extend",
+          "lineNumber": 190
+        },
+        {
+          "caller": "main",
+          "callee": "check_fences",
+          "lineNumber": 190
+        },
+        {
+          "caller": "main",
+          "callee": "issues.extend",
+          "lineNumber": 191
+        },
+        {
+          "caller": "main",
+          "callee": "check_links",
+          "lineNumber": 191
+        },
+        {
+          "caller": "main",
+          "callee": "issues.extend",
+          "lineNumber": 192
+        },
+        {
+          "caller": "main",
+          "callee": "check_summary_links",
+          "lineNumber": 192
+        },
+        {
+          "caller": "main",
+          "callee": "issues.extend",
+          "lineNumber": 193
+        },
+        {
+          "caller": "main",
+          "callee": "check_volatile_facts",
+          "lineNumber": 193
+        },
+        {
+          "caller": "main",
+          "callee": "print",
+          "lineNumber": 196
+        },
+        {
+          "caller": "main",
+          "callee": "\"\\n\".join",
+          "lineNumber": 196
+        },
+        {
+          "caller": "main",
+          "callee": "sorted",
+          "lineNumber": 196
+        },
+        {
+          "caller": "main",
+          "callee": "set",
+          "lineNumber": 196
+        },
+        {
+          "caller": "main",
+          "callee": "print",
+          "lineNumber": 197
+        },
+        {
+          "caller": "main",
+          "callee": "len",
+          "lineNumber": 197
+        },
+        {
+          "caller": "main",
+          "callee": "set",
+          "lineNumber": 197
+        },
+        {
+          "caller": "main",
+          "callee": "len",
+          "lineNumber": 197
+        },
+        {
+          "caller": "main",
+          "callee": "print",
+          "lineNumber": 199
+        },
+        {
+          "caller": "main",
+          "callee": "len",
+          "lineNumber": 199
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 9,
+        "functionCount": 9,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "docs/superpowers/plans/2026-10-06-vietnamese-translation.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 281,
+      "nonEmptyLines": 203,
+      "sections": [
+        {
+          "heading": "Kế hoạch thực thi Việt hóa toàn diện kho tài liệu 《OpenClaw 入门到精通》",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "Global Constraints",
+          "level": 2,
+          "line": 13
+        },
+        {
+          "heading": "Review Focus",
+          "level": 2,
+          "line": 21
+        },
+        {
+          "heading": "Task 0: Thiết lập nền tảng cấu hình, điều hướng và bộ test",
+          "level": 3,
+          "line": 31
+        },
+        {
+          "heading": "Task 1: Chuyển ngữ Phần I - Cơ sở nhập môn (Chương 01 – 04)",
+          "level": 3,
+          "line": 70
+        },
+        {
+          "heading": "Task 2: Chuyển ngữ Phần II - Tính năng nâng cao (Chương 05 – 08)",
+          "level": 3,
+          "line": 107
+        },
+        {
+          "heading": "Task 3: Chuyển ngữ Phần III - Nguyên lý lõi & Kỹ thuật triển khai (Chương 09 – 12)",
+          "level": 3,
+          "line": 144
+        },
+        {
+          "heading": "Task 4: Chuyển ngữ Phần IV - Thực chiến & Tối ưu (Chương 13 – 16)",
+          "level": 3,
+          "line": 181
+        },
+        {
+          "heading": "Task 5: Chuyển ngữ Phụ lục (Appendix A – J)",
+          "level": 3,
+          "line": 218
+        },
+        {
+          "heading": "Task 6: Rà soát tính nhất quán toàn diện & Nghiệm thu xuất bản",
+          "level": 3,
+          "line": 252
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 10
+      }
+    },
+    {
+      "path": "docs/superpowers/specs/2026-10-06-vietnamese-translation-design.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 100,
+      "nonEmptyLines": 81,
+      "sections": [
+        {
+          "heading": "Thiết kế Việt hóa toàn diện kho tài liệu 《OpenClaw 入门到精通》",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "1. Bối cảnh & Mục tiêu",
+          "level": 2,
+          "line": 10
+        },
+        {
+          "heading": "1.1 Hiện trạng",
+          "level": 3,
+          "line": 12
+        },
+        {
+          "heading": "1.2 Mục tiêu đạt được (Goals)",
+          "level": 3,
+          "line": 18
+        },
+        {
+          "heading": "2. Quy chuẩn văn phong & Bảng thuật ngữ (Style Guide & Glossary)",
+          "level": 2,
+          "line": 30
+        },
+        {
+          "heading": "2.1 Quy tắc hành văn",
+          "level": 3,
+          "line": 32
+        },
+        {
+          "heading": "2.2 Bảng ánh xạ thuật ngữ cốt lõi (Core Glossary)",
+          "level": 3,
+          "line": 38
+        },
+        {
+          "heading": "3. Kế hoạch phân kỳ thực thi (Phased Execution Plan)",
+          "level": 2,
+          "line": 56
+        },
+        {
+          "heading": "Bước 0: Nền tảng cấu hình & Điều hướng (4 file)",
+          "level": 3,
+          "line": 58
+        },
+        {
+          "heading": "Chặng 1: Phần I - Cơ sở nhập môn (Chương 01 – 04, 24 file)",
+          "level": 3,
+          "line": 64
+        },
+        {
+          "heading": "Chặng 2: Phần II - Tính năng nâng cao (Chương 05 – 08, 24 file)",
+          "level": 3,
+          "line": 70
+        },
+        {
+          "heading": "Chặng 3: Phần III - Nguyên lý lõi & Kỹ thuật triển khai (Chương 09 – 12, 25 file)",
+          "level": 3,
+          "line": 76
+        },
+        {
+          "heading": "Chặng 4: Phần IV - Thực chiến, Tối ưu & Phụ lục (Chương 13 – 16 + Appendix, 35 file)",
+          "level": 3,
+          "line": 82
+        },
+        {
+          "heading": "4. Kiểm soát chất lượng & Kiểm thử (Verification & QA)",
+          "level": 2,
+          "line": 91
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 14
+      }
+    },
+    {
+      "path": "tests/test_build_pdf.py",
+      "language": "python",
+      "fileCategory": "code",
+      "totalLines": 183,
+      "nonEmptyLines": 157,
+      "classes": [
+        {
+          "name": "BuildPdfTests",
+          "startLine": 75,
+          "endLine": 179,
+          "methods": [
+            "setUp",
+            "tearDown",
+            "run_builder",
+            "test_retries_once_then_succeeds",
+            "test_double_failure_keeps_both_attempt_logs",
+            "test_timeout_terminates_the_whole_process_group",
+            "test_success_without_output_is_a_failure"
+          ],
+          "properties": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "BuildPdfTests",
+          "line": 75,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "setUp",
+          "callee": "tempfile.TemporaryDirectory",
+          "lineNumber": 77
+        },
+        {
+          "caller": "setUp",
+          "callee": "Path",
+          "lineNumber": 78
+        },
+        {
+          "caller": "setUp",
+          "callee": "self.bin_dir.mkdir",
+          "lineNumber": 80
+        },
+        {
+          "caller": "setUp",
+          "callee": "self.fake_mdpress.write_text",
+          "lineNumber": 82
+        },
+        {
+          "caller": "setUp",
+          "callee": "self.fake_mdpress.chmod",
+          "lineNumber": 83
+        },
+        {
+          "caller": "tearDown",
+          "callee": "self.child_pid.exists",
+          "lineNumber": 91
+        },
+        {
+          "caller": "tearDown",
+          "callee": "os.kill",
+          "lineNumber": 93
+        },
+        {
+          "caller": "tearDown",
+          "callee": "int",
+          "lineNumber": 93
+        },
+        {
+          "caller": "tearDown",
+          "callee": "self.child_pid.read_text",
+          "lineNumber": 93
+        },
+        {
+          "caller": "tearDown",
+          "callee": "self.temp.cleanup",
+          "lineNumber": 96
+        },
+        {
+          "caller": "run_builder",
+          "callee": "os.environ.copy",
+          "lineNumber": 99
+        },
+        {
+          "caller": "run_builder",
+          "callee": "env.update",
+          "lineNumber": 100
+        },
+        {
+          "caller": "run_builder",
+          "callee": "env.get",
+          "lineNumber": 102
+        },
+        {
+          "caller": "run_builder",
+          "callee": "str",
+          "lineNumber": 104
+        },
+        {
+          "caller": "run_builder",
+          "callee": "str",
+          "lineNumber": 105
+        },
+        {
+          "caller": "run_builder",
+          "callee": "str",
+          "lineNumber": 106
+        },
+        {
+          "caller": "run_builder",
+          "callee": "subprocess.run",
+          "lineNumber": 109
+        },
+        {
+          "caller": "run_builder",
+          "callee": "str",
+          "lineNumber": 112
+        },
+        {
+          "caller": "run_builder",
+          "callee": "str",
+          "lineNumber": 114
+        },
+        {
+          "caller": "run_builder",
+          "callee": "str",
+          "lineNumber": 116
+        },
+        {
+          "caller": "run_builder",
+          "callee": "str",
+          "lineNumber": 118
+        },
+        {
+          "caller": "run_builder",
+          "callee": "str",
+          "lineNumber": 120
+        },
+        {
+          "caller": "run_builder",
+          "callee": "str",
+          "lineNumber": 124
+        },
+        {
+          "caller": "test_retries_once_then_succeeds",
+          "callee": "self.run_builder",
+          "lineNumber": 134
+        },
+        {
+          "caller": "test_retries_once_then_succeeds",
+          "callee": "self.assertEqual",
+          "lineNumber": 136
+        },
+        {
+          "caller": "test_retries_once_then_succeeds",
+          "callee": "self.assertTrue",
+          "lineNumber": 137
+        },
+        {
+          "caller": "test_retries_once_then_succeeds",
+          "callee": "self.output.is_file",
+          "lineNumber": 137
+        },
+        {
+          "caller": "test_retries_once_then_succeeds",
+          "callee": "self.assertEqual",
+          "lineNumber": 138
+        },
+        {
+          "caller": "test_retries_once_then_succeeds",
+          "callee": "self.state.read_text",
+          "lineNumber": 138
+        },
+        {
+          "caller": "test_retries_once_then_succeeds",
+          "callee": "self.assertIn",
+          "lineNumber": 139
+        },
+        {
+          "caller": "test_retries_once_then_succeeds",
+          "callee": "(self.logs / \"attempt-1.log\").read_text",
+          "lineNumber": 139
+        },
+        {
+          "caller": "test_retries_once_then_succeeds",
+          "callee": "self.assertIn",
+          "lineNumber": 140
+        },
+        {
+          "caller": "test_retries_once_then_succeeds",
+          "callee": "(self.logs / \"attempt-2.log\").read_text",
+          "lineNumber": 140
+        },
+        {
+          "caller": "test_double_failure_keeps_both_attempt_logs",
+          "callee": "self.run_builder",
+          "lineNumber": 143
+        },
+        {
+          "caller": "test_double_failure_keeps_both_attempt_logs",
+          "callee": "self.assertNotEqual",
+          "lineNumber": 145
+        },
+        {
+          "caller": "test_double_failure_keeps_both_attempt_logs",
+          "callee": "self.assertFalse",
+          "lineNumber": 146
+        },
+        {
+          "caller": "test_double_failure_keeps_both_attempt_logs",
+          "callee": "self.output.exists",
+          "lineNumber": 146
+        },
+        {
+          "caller": "test_double_failure_keeps_both_attempt_logs",
+          "callee": "self.assertTrue",
+          "lineNumber": 149
+        },
+        {
+          "caller": "test_double_failure_keeps_both_attempt_logs",
+          "callee": "first_log.is_file",
+          "lineNumber": 149
+        },
+        {
+          "caller": "test_double_failure_keeps_both_attempt_logs",
+          "callee": "self.assertTrue",
+          "lineNumber": 150
+        },
+        {
+          "caller": "test_double_failure_keeps_both_attempt_logs",
+          "callee": "second_log.is_file",
+          "lineNumber": 150
+        },
+        {
+          "caller": "test_double_failure_keeps_both_attempt_logs",
+          "callee": "self.assertIn",
+          "lineNumber": 151
+        },
+        {
+          "caller": "test_double_failure_keeps_both_attempt_logs",
+          "callee": "first_log.read_text",
+          "lineNumber": 151
+        },
+        {
+          "caller": "test_double_failure_keeps_both_attempt_logs",
+          "callee": "self.assertIn",
+          "lineNumber": 152
+        },
+        {
+          "caller": "test_double_failure_keeps_both_attempt_logs",
+          "callee": "second_log.read_text",
+          "lineNumber": 152
+        },
+        {
+          "caller": "test_double_failure_keeps_both_attempt_logs",
+          "callee": "self.assertIn",
+          "lineNumber": 153
+        },
+        {
+          "caller": "test_double_failure_keeps_both_attempt_logs",
+          "callee": "str",
+          "lineNumber": 153
+        },
+        {
+          "caller": "test_double_failure_keeps_both_attempt_logs",
+          "callee": "self.assertIn",
+          "lineNumber": 154
+        },
+        {
+          "caller": "test_double_failure_keeps_both_attempt_logs",
+          "callee": "str",
+          "lineNumber": 154
+        },
+        {
+          "caller": "test_timeout_terminates_the_whole_process_group",
+          "callee": "time.monotonic",
+          "lineNumber": 158
+        },
+        {
+          "caller": "test_timeout_terminates_the_whole_process_group",
+          "callee": "self.run_builder",
+          "lineNumber": 159
+        },
+        {
+          "caller": "test_timeout_terminates_the_whole_process_group",
+          "callee": "self.assertNotEqual",
+          "lineNumber": 161
+        },
+        {
+          "caller": "test_timeout_terminates_the_whole_process_group",
+          "callee": "self.assertLess",
+          "lineNumber": 162
+        },
+        {
+          "caller": "test_timeout_terminates_the_whole_process_group",
+          "callee": "time.monotonic",
+          "lineNumber": 162
+        },
+        {
+          "caller": "test_timeout_terminates_the_whole_process_group",
+          "callee": "self.assertTrue",
+          "lineNumber": 163
+        },
+        {
+          "caller": "test_timeout_terminates_the_whole_process_group",
+          "callee": "self.child_pid.is_file",
+          "lineNumber": 163
+        },
+        {
+          "caller": "test_timeout_terminates_the_whole_process_group",
+          "callee": "time.monotonic",
+          "lineNumber": 164
+        },
+        {
+          "caller": "test_timeout_terminates_the_whole_process_group",
+          "callee": "time.monotonic",
+          "lineNumber": 165
+        },
+        {
+          "caller": "test_timeout_terminates_the_whole_process_group",
+          "callee": "self.child_terminated.exists",
+          "lineNumber": 165
+        },
+        {
+          "caller": "test_timeout_terminates_the_whole_process_group",
+          "callee": "time.sleep",
+          "lineNumber": 166
+        },
+        {
+          "caller": "test_timeout_terminates_the_whole_process_group",
+          "callee": "self.assertEqual",
+          "lineNumber": 167
+        },
+        {
+          "caller": "test_timeout_terminates_the_whole_process_group",
+          "callee": "self.child_terminated.read_text",
+          "lineNumber": 167
+        },
+        {
+          "caller": "test_timeout_terminates_the_whole_process_group",
+          "callee": "self.assertIn",
+          "lineNumber": 168
+        },
+        {
+          "caller": "test_timeout_terminates_the_whole_process_group",
+          "callee": "(self.logs / \"attempt-1.log\").read_text",
+          "lineNumber": 168
+        },
+        {
+          "caller": "test_success_without_output_is_a_failure",
+          "callee": "self.run_builder",
+          "lineNumber": 171
+        },
+        {
+          "caller": "test_success_without_output_is_a_failure",
+          "callee": "self.assertNotEqual",
+          "lineNumber": 173
+        },
+        {
+          "caller": "test_success_without_output_is_a_failure",
+          "callee": "self.assertFalse",
+          "lineNumber": 174
+        },
+        {
+          "caller": "test_success_without_output_is_a_failure",
+          "callee": "self.output.exists",
+          "lineNumber": 174
+        },
+        {
+          "caller": "test_success_without_output_is_a_failure",
+          "callee": "self.assertIn",
+          "lineNumber": 175
+        },
+        {
+          "caller": "test_success_without_output_is_a_failure",
+          "callee": "self.assertIn",
+          "lineNumber": 176
+        },
+        {
+          "caller": "test_success_without_output_is_a_failure",
+          "callee": "(self.logs / \"attempt-1.log\").read_text",
+          "lineNumber": 178
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "tests/test_cjk_typography.py",
+      "language": "python",
+      "fileCategory": "code",
+      "totalLines": 207,
+      "nonEmptyLines": 172,
+      "functions": [
+        {
+          "name": "mask",
+          "startLine": 71,
+          "endLine": 80,
+          "params": [
+            "line"
+          ]
+        },
+        {
+          "name": "prose_lines",
+          "startLine": 83,
+          "endLine": 103,
+          "params": [
+            "text"
+          ]
+        },
+        {
+          "name": "markdown_files",
+          "startLine": 106,
+          "endLine": 109,
+          "params": [
+            "root"
+          ]
+        },
+        {
+          "name": "unspaced",
+          "startLine": 112,
+          "endLine": 118,
+          "params": [
+            "text"
+          ]
+        },
+        {
+          "name": "half_width_parens",
+          "startLine": 121,
+          "endLine": 128,
+          "params": [
+            "text"
+          ]
+        }
+      ],
+      "classes": [
+        {
+          "name": "CjkTypographyTests",
+          "startLine": 130,
+          "endLine": 203,
+          "methods": [
+            "test_cjk_and_latin_stay_apart",
+            "test_parens_holding_chinese_are_full_width",
+            "test_both_rules_can_actually_fail",
+            "test_latin_only_parens_are_left_alone",
+            "test_non_prose_regions_are_excluded",
+            "test_prices_are_not_mistaken_for_math",
+            "test_html_text_content_is_still_prose",
+            "test_a_table_row_is_not_an_html_tag",
+            "test_display_math_blocks_are_skipped_whole"
+          ],
+          "properties": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "mask",
+          "line": 71,
+          "isDefault": false
+        },
+        {
+          "name": "prose_lines",
+          "line": 83,
+          "isDefault": false
+        },
+        {
+          "name": "markdown_files",
+          "line": 106,
+          "isDefault": false
+        },
+        {
+          "name": "unspaced",
+          "line": 112,
+          "isDefault": false
+        },
+        {
+          "name": "half_width_parens",
+          "line": 121,
+          "isDefault": false
+        },
+        {
+          "name": "CjkTypographyTests",
+          "line": 130,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "repl",
+          "callee": "chr",
+          "lineNumber": 76
+        },
+        {
+          "caller": "mask",
+          "callee": "pattern.sub",
+          "lineNumber": 79
+        },
+        {
+          "caller": "prose_lines",
+          "callee": "text.split",
+          "lineNumber": 84
+        },
+        {
+          "caller": "prose_lines",
+          "callee": "bool",
+          "lineNumber": 85
+        },
+        {
+          "caller": "prose_lines",
+          "callee": "lines[0].strip",
+          "lineNumber": 85
+        },
+        {
+          "caller": "prose_lines",
+          "callee": "enumerate",
+          "lineNumber": 88
+        },
+        {
+          "caller": "prose_lines",
+          "callee": "line.strip",
+          "lineNumber": 90
+        },
+        {
+          "caller": "prose_lines",
+          "callee": "FENCE.match",
+          "lineNumber": 93
+        },
+        {
+          "caller": "prose_lines",
+          "callee": "MATH_BLOCK.match",
+          "lineNumber": 98
+        },
+        {
+          "caller": "prose_lines",
+          "callee": "LINK_DEF.match",
+          "lineNumber": 101
+        },
+        {
+          "caller": "markdown_files",
+          "callee": "sorted",
+          "lineNumber": 107
+        },
+        {
+          "caller": "markdown_files",
+          "callee": "root.rglob",
+          "lineNumber": 107
+        },
+        {
+          "caller": "markdown_files",
+          "callee": "SKIP_DIRS.isdisjoint",
+          "lineNumber": 108
+        },
+        {
+          "caller": "markdown_files",
+          "callee": "path.relative_to",
+          "lineNumber": 108
+        },
+        {
+          "caller": "unspaced",
+          "callee": "re.search",
+          "lineNumber": 114
+        },
+        {
+          "caller": "unspaced",
+          "callee": "prose_lines",
+          "lineNumber": 116
+        },
+        {
+          "caller": "unspaced",
+          "callee": "ADJACENT.finditer",
+          "lineNumber": 117
+        },
+        {
+          "caller": "unspaced",
+          "callee": "mask",
+          "lineNumber": 117
+        },
+        {
+          "caller": "unspaced",
+          "callee": "match.group",
+          "lineNumber": 118
+        },
+        {
+          "caller": "unspaced",
+          "callee": "line.strip",
+          "lineNumber": 118
+        },
+        {
+          "caller": "half_width_parens",
+          "callee": "re.search",
+          "lineNumber": 123
+        },
+        {
+          "caller": "half_width_parens",
+          "callee": "prose_lines",
+          "lineNumber": 125
+        },
+        {
+          "caller": "half_width_parens",
+          "callee": "HALF_PAREN.finditer",
+          "lineNumber": 126
+        },
+        {
+          "caller": "half_width_parens",
+          "callee": "mask",
+          "lineNumber": 126
+        },
+        {
+          "caller": "half_width_parens",
+          "callee": "re.search",
+          "lineNumber": 127
+        },
+        {
+          "caller": "half_width_parens",
+          "callee": "match.group",
+          "lineNumber": 127
+        },
+        {
+          "caller": "half_width_parens",
+          "callee": "match.group",
+          "lineNumber": 128
+        },
+        {
+          "caller": "half_width_parens",
+          "callee": "line.strip",
+          "lineNumber": 128
+        },
+        {
+          "caller": "test_cjk_and_latin_stay_apart",
+          "callee": "path.relative_to",
+          "lineNumber": 133
+        },
+        {
+          "caller": "test_cjk_and_latin_stay_apart",
+          "callee": "markdown_files",
+          "lineNumber": 134
+        },
+        {
+          "caller": "test_cjk_and_latin_stay_apart",
+          "callee": "unspaced",
+          "lineNumber": 135
+        },
+        {
+          "caller": "test_cjk_and_latin_stay_apart",
+          "callee": "path.read_text",
+          "lineNumber": 135
+        },
+        {
+          "caller": "test_cjk_and_latin_stay_apart",
+          "callee": "self.assertEqual",
+          "lineNumber": 137
+        },
+        {
+          "caller": "test_cjk_and_latin_stay_apart",
+          "callee": "\"\\n\".join",
+          "lineNumber": 138
+        },
+        {
+          "caller": "test_parens_holding_chinese_are_full_width",
+          "callee": "path.relative_to",
+          "lineNumber": 143
+        },
+        {
+          "caller": "test_parens_holding_chinese_are_full_width",
+          "callee": "markdown_files",
+          "lineNumber": 144
+        },
+        {
+          "caller": "test_parens_holding_chinese_are_full_width",
+          "callee": "half_width_parens",
+          "lineNumber": 145
+        },
+        {
+          "caller": "test_parens_holding_chinese_are_full_width",
+          "callee": "path.read_text",
+          "lineNumber": 145
+        },
+        {
+          "caller": "test_parens_holding_chinese_are_full_width",
+          "callee": "self.assertEqual",
+          "lineNumber": 147
+        },
+        {
+          "caller": "test_parens_holding_chinese_are_full_width",
+          "callee": "\"\\n\".join",
+          "lineNumber": 148
+        },
+        {
+          "caller": "test_both_rules_can_actually_fail",
+          "callee": "self.assertEqual",
+          "lineNumber": 153
+        },
+        {
+          "caller": "test_both_rules_can_actually_fail",
+          "callee": "list",
+          "lineNumber": 153
+        },
+        {
+          "caller": "test_both_rules_can_actually_fail",
+          "callee": "unspaced",
+          "lineNumber": 153
+        },
+        {
+          "caller": "test_both_rules_can_actually_fail",
+          "callee": "self.assertEqual",
+          "lineNumber": 154
+        },
+        {
+          "caller": "test_both_rules_can_actually_fail",
+          "callee": "list",
+          "lineNumber": 156
+        },
+        {
+          "caller": "test_both_rules_can_actually_fail",
+          "callee": "unspaced",
+          "lineNumber": 156
+        },
+        {
+          "caller": "test_both_rules_can_actually_fail",
+          "callee": "self.assertEqual",
+          "lineNumber": 158
+        },
+        {
+          "caller": "test_both_rules_can_actually_fail",
+          "callee": "list",
+          "lineNumber": 158
+        },
+        {
+          "caller": "test_both_rules_can_actually_fail",
+          "callee": "unspaced",
+          "lineNumber": 158
+        },
+        {
+          "caller": "test_both_rules_can_actually_fail",
+          "callee": "self.assertEqual",
+          "lineNumber": 159
+        },
+        {
+          "caller": "test_both_rules_can_actually_fail",
+          "callee": "list",
+          "lineNumber": 159
+        },
+        {
+          "caller": "test_both_rules_can_actually_fail",
+          "callee": "half_width_parens",
+          "lineNumber": 159
+        },
+        {
+          "caller": "test_both_rules_can_actually_fail",
+          "callee": "self.assertEqual",
+          "lineNumber": 160
+        },
+        {
+          "caller": "test_both_rules_can_actually_fail",
+          "callee": "list",
+          "lineNumber": 162
+        },
+        {
+          "caller": "test_both_rules_can_actually_fail",
+          "callee": "half_width_parens",
+          "lineNumber": 162
+        },
+        {
+          "caller": "test_latin_only_parens_are_left_alone",
+          "callee": "self.assertEqual",
+          "lineNumber": 171
+        },
+        {
+          "caller": "test_latin_only_parens_are_left_alone",
+          "callee": "list",
+          "lineNumber": 171
+        },
+        {
+          "caller": "test_latin_only_parens_are_left_alone",
+          "callee": "half_width_parens",
+          "lineNumber": 171
+        },
+        {
+          "caller": "test_non_prose_regions_are_excluded",
+          "callee": "self.assertEqual",
+          "lineNumber": 183
+        },
+        {
+          "caller": "test_non_prose_regions_are_excluded",
+          "callee": "list",
+          "lineNumber": 183
+        },
+        {
+          "caller": "test_non_prose_regions_are_excluded",
+          "callee": "unspaced",
+          "lineNumber": 183
+        },
+        {
+          "caller": "test_non_prose_regions_are_excluded",
+          "callee": "self.assertEqual",
+          "lineNumber": 184
+        },
+        {
+          "caller": "test_non_prose_regions_are_excluded",
+          "callee": "list",
+          "lineNumber": 184
+        },
+        {
+          "caller": "test_non_prose_regions_are_excluded",
+          "callee": "half_width_parens",
+          "lineNumber": 184
+        },
+        {
+          "caller": "test_prices_are_not_mistaken_for_math",
+          "callee": "self.assertEqual",
+          "lineNumber": 189
+        },
+        {
+          "caller": "test_prices_are_not_mistaken_for_math",
+          "callee": "line.strip",
+          "lineNumber": 189
+        },
+        {
+          "caller": "test_prices_are_not_mistaken_for_math",
+          "callee": "list",
+          "lineNumber": 189
+        },
+        {
+          "caller": "test_prices_are_not_mistaken_for_math",
+          "callee": "unspaced",
+          "lineNumber": 189
+        },
+        {
+          "caller": "test_html_text_content_is_still_prose",
+          "callee": "self.assertEqual",
+          "lineNumber": 192
+        },
+        {
+          "caller": "test_html_text_content_is_still_prose",
+          "callee": "list",
+          "lineNumber": 194
+        },
+        {
+          "caller": "test_html_text_content_is_still_prose",
+          "callee": "unspaced",
+          "lineNumber": 194
+        },
+        {
+          "caller": "test_a_table_row_is_not_an_html_tag",
+          "callee": "self.assertEqual",
+          "lineNumber": 199
+        },
+        {
+          "caller": "test_a_table_row_is_not_an_html_tag",
+          "callee": "line.strip",
+          "lineNumber": 199
+        },
+        {
+          "caller": "test_a_table_row_is_not_an_html_tag",
+          "callee": "list",
+          "lineNumber": 199
+        },
+        {
+          "caller": "test_a_table_row_is_not_an_html_tag",
+          "callee": "unspaced",
+          "lineNumber": 199
+        },
+        {
+          "caller": "test_display_math_blocks_are_skipped_whole",
+          "callee": "self.assertEqual",
+          "lineNumber": 203
+        },
+        {
+          "caller": "test_display_math_blocks_are_skipped_whole",
+          "callee": "list",
+          "lineNumber": 203
+        },
+        {
+          "caller": "test_display_math_blocks_are_skipped_whole",
+          "callee": "unspaced",
+          "lineNumber": 203
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 6,
+        "functionCount": 5,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "tests/test_html_list_rendering.py",
+      "language": "python",
+      "fileCategory": "code",
+      "totalLines": 85,
+      "nonEmptyLines": 71,
+      "functions": [
+        {
+          "name": "_reader_pandoc_format",
+          "startLine": 29,
+          "endLine": 54,
+          "params": []
+        }
+      ],
+      "classes": [
+        {
+          "name": "HtmlListRenderingTests",
+          "startLine": 57,
+          "endLine": 81,
+          "methods": [
+            "test_reader_declares_the_no_blank_line_list_extension",
+            "test_bold_lead_in_list_renders_as_ul_under_real_pandoc"
+          ],
+          "properties": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "_reader_pandoc_format",
+          "line": 29,
+          "isDefault": false
+        },
+        {
+          "name": "HtmlListRenderingTests",
+          "line": 57,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "_reader_pandoc_format",
+          "callee": "READER.read_text",
+          "lineNumber": 37
+        },
+        {
+          "caller": "_reader_pandoc_format",
+          "callee": "sources.is_file",
+          "lineNumber": 39
+        },
+        {
+          "caller": "_reader_pandoc_format",
+          "callee": "texts.append",
+          "lineNumber": 40
+        },
+        {
+          "caller": "_reader_pandoc_format",
+          "callee": "sources.read_text",
+          "lineNumber": 40
+        },
+        {
+          "caller": "_reader_pandoc_format",
+          "callee": "re.search",
+          "lineNumber": 49
+        },
+        {
+          "caller": "_reader_pandoc_format",
+          "callee": "m.group",
+          "lineNumber": 51
+        },
+        {
+          "caller": "_reader_pandoc_format",
+          "callee": "\"\".join",
+          "lineNumber": 53
+        },
+        {
+          "caller": "_reader_pandoc_format",
+          "callee": "re.findall",
+          "lineNumber": 53
+        },
+        {
+          "caller": "_reader_pandoc_format",
+          "callee": "AssertionError",
+          "lineNumber": 54
+        },
+        {
+          "caller": "test_reader_declares_the_no_blank_line_list_extension",
+          "callee": "_reader_pandoc_format",
+          "lineNumber": 59
+        },
+        {
+          "caller": "test_reader_declares_the_no_blank_line_list_extension",
+          "callee": "self.assertIn",
+          "lineNumber": 60
+        },
+        {
+          "caller": "test_bold_lead_in_list_renders_as_ul_under_real_pandoc",
+          "callee": "shutil.which",
+          "lineNumber": 69
+        },
+        {
+          "caller": "test_bold_lead_in_list_renders_as_ul_under_real_pandoc",
+          "callee": "self.skipTest",
+          "lineNumber": 71
+        },
+        {
+          "caller": "test_bold_lead_in_list_renders_as_ul_under_real_pandoc",
+          "callee": "_reader_pandoc_format",
+          "lineNumber": 72
+        },
+        {
+          "caller": "test_bold_lead_in_list_renders_as_ul_under_real_pandoc",
+          "callee": "subprocess.run",
+          "lineNumber": 73
+        },
+        {
+          "caller": "test_bold_lead_in_list_renders_as_ul_under_real_pandoc",
+          "callee": "self.assertIn",
+          "lineNumber": 80
+        },
+        {
+          "caller": "test_bold_lead_in_list_renders_as_ul_under_real_pandoc",
+          "callee": "self.assertEqual",
+          "lineNumber": 81
+        },
+        {
+          "caller": "test_bold_lead_in_list_renders_as_ul_under_real_pandoc",
+          "callee": "out.count",
+          "lineNumber": 81
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 2,
+        "functionCount": 1,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "tests/test_installation_contracts.py",
+      "language": "python",
+      "fileCategory": "code",
+      "totalLines": 66,
+      "nonEmptyLines": 56,
+      "classes": [
+        {
+          "name": "InstallationContractTests",
+          "startLine": 9,
+          "endLine": 62,
+          "methods": [
+            "setUpClass",
+            "test_posix_diagnostics_cover_runtime_prefix_path_and_doctor",
+            "test_powershell_diagnostics_use_the_windows_global_prefix",
+            "test_windows_hub_and_wsl_commands_are_routed_to_the_chosen_environment"
+          ],
+          "properties": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "InstallationContractTests",
+          "line": 9,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "setUpClass",
+          "callee": "INSTALLATION.read_text",
+          "lineNumber": 12
+        },
+        {
+          "caller": "test_posix_diagnostics_cover_runtime_prefix_path_and_doctor",
+          "callee": "self.subTest",
+          "lineNumber": 27
+        },
+        {
+          "caller": "test_posix_diagnostics_cover_runtime_prefix_path_and_doctor",
+          "callee": "self.assertIn",
+          "lineNumber": 28
+        },
+        {
+          "caller": "test_posix_diagnostics_cover_runtime_prefix_path_and_doctor",
+          "callee": "self.assertIn",
+          "lineNumber": 30
+        },
+        {
+          "caller": "test_posix_diagnostics_cover_runtime_prefix_path_and_doctor",
+          "callee": "self.assertIn",
+          "lineNumber": 31
+        },
+        {
+          "caller": "test_posix_diagnostics_cover_runtime_prefix_path_and_doctor",
+          "callee": "self.assertNotIn",
+          "lineNumber": 32
+        },
+        {
+          "caller": "test_posix_diagnostics_cover_runtime_prefix_path_and_doctor",
+          "callee": "self.assertIn",
+          "lineNumber": 33
+        },
+        {
+          "caller": "test_powershell_diagnostics_use_the_windows_global_prefix",
+          "callee": "self.subTest",
+          "lineNumber": 46
+        },
+        {
+          "caller": "test_powershell_diagnostics_use_the_windows_global_prefix",
+          "callee": "self.assertIn",
+          "lineNumber": 47
+        },
+        {
+          "caller": "test_windows_hub_and_wsl_commands_are_routed_to_the_chosen_environment",
+          "callee": "self.subTest",
+          "lineNumber": 61
+        },
+        {
+          "caller": "test_windows_hub_and_wsl_commands_are_routed_to_the_chosen_environment",
+          "callee": "self.assertIn",
+          "lineNumber": 62
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "tests/test_verify_artifacts.py",
+      "language": "python",
+      "fileCategory": "code",
+      "totalLines": 81,
+      "nonEmptyLines": 66,
+      "functions": [
+        {
+          "name": "load_verifier",
+          "startLine": 13,
+          "endLine": 21,
+          "params": []
+        }
+      ],
+      "classes": [
+        {
+          "name": "ArtifactVerifierTests",
+          "startLine": 24,
+          "endLine": 77,
+          "methods": [
+            "test_html_requires_a_nonempty_file_with_the_exact_title",
+            "test_pdf_requires_signature_and_exact_metadata_or_visible_title",
+            "test_checksum_manifest_is_sorted_portable_and_revalidated"
+          ],
+          "properties": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "load_verifier",
+          "line": 13,
+          "isDefault": false
+        },
+        {
+          "name": "ArtifactVerifierTests",
+          "line": 24,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "load_verifier",
+          "callee": "VERIFIER_PATH.is_file",
+          "lineNumber": 14
+        },
+        {
+          "caller": "load_verifier",
+          "callee": "AssertionError",
+          "lineNumber": 15
+        },
+        {
+          "caller": "load_verifier",
+          "callee": "importlib.util.spec_from_file_location",
+          "lineNumber": 16
+        },
+        {
+          "caller": "load_verifier",
+          "callee": "AssertionError",
+          "lineNumber": 18
+        },
+        {
+          "caller": "load_verifier",
+          "callee": "importlib.util.module_from_spec",
+          "lineNumber": 19
+        },
+        {
+          "caller": "load_verifier",
+          "callee": "spec.loader.exec_module",
+          "lineNumber": 20
+        },
+        {
+          "caller": "test_html_requires_a_nonempty_file_with_the_exact_title",
+          "callee": "load_verifier",
+          "lineNumber": 26
+        },
+        {
+          "caller": "test_html_requires_a_nonempty_file_with_the_exact_title",
+          "callee": "tempfile.TemporaryDirectory",
+          "lineNumber": 27
+        },
+        {
+          "caller": "test_html_requires_a_nonempty_file_with_the_exact_title",
+          "callee": "Path",
+          "lineNumber": 28
+        },
+        {
+          "caller": "test_html_requires_a_nonempty_file_with_the_exact_title",
+          "callee": "html.write_text",
+          "lineNumber": 30
+        },
+        {
+          "caller": "test_html_requires_a_nonempty_file_with_the_exact_title",
+          "callee": "verifier.verify_html",
+          "lineNumber": 34
+        },
+        {
+          "caller": "test_html_requires_a_nonempty_file_with_the_exact_title",
+          "callee": "html.write_text",
+          "lineNumber": 36
+        },
+        {
+          "caller": "test_html_requires_a_nonempty_file_with_the_exact_title",
+          "callee": "self.assertRaises",
+          "lineNumber": 37
+        },
+        {
+          "caller": "test_html_requires_a_nonempty_file_with_the_exact_title",
+          "callee": "verifier.verify_html",
+          "lineNumber": 38
+        },
+        {
+          "caller": "test_html_requires_a_nonempty_file_with_the_exact_title",
+          "callee": "html.write_text",
+          "lineNumber": 40
+        },
+        {
+          "caller": "test_html_requires_a_nonempty_file_with_the_exact_title",
+          "callee": "self.assertRaises",
+          "lineNumber": 41
+        },
+        {
+          "caller": "test_html_requires_a_nonempty_file_with_the_exact_title",
+          "callee": "verifier.verify_html",
+          "lineNumber": 42
+        },
+        {
+          "caller": "test_pdf_requires_signature_and_exact_metadata_or_visible_title",
+          "callee": "load_verifier",
+          "lineNumber": 45
+        },
+        {
+          "caller": "test_pdf_requires_signature_and_exact_metadata_or_visible_title",
+          "callee": "tempfile.TemporaryDirectory",
+          "lineNumber": 46
+        },
+        {
+          "caller": "test_pdf_requires_signature_and_exact_metadata_or_visible_title",
+          "callee": "Path",
+          "lineNumber": 47
+        },
+        {
+          "caller": "test_pdf_requires_signature_and_exact_metadata_or_visible_title",
+          "callee": "pdf.write_bytes",
+          "lineNumber": 48
+        },
+        {
+          "caller": "test_pdf_requires_signature_and_exact_metadata_or_visible_title",
+          "callee": "patch.object",
+          "lineNumber": 49
+        },
+        {
+          "caller": "test_pdf_requires_signature_and_exact_metadata_or_visible_title",
+          "callee": "patch.object",
+          "lineNumber": 49
+        },
+        {
+          "caller": "test_pdf_requires_signature_and_exact_metadata_or_visible_title",
+          "callee": "verifier.verify_pdf",
+          "lineNumber": 54
+        },
+        {
+          "caller": "test_pdf_requires_signature_and_exact_metadata_or_visible_title",
+          "callee": "pdf.write_bytes",
+          "lineNumber": 56
+        },
+        {
+          "caller": "test_pdf_requires_signature_and_exact_metadata_or_visible_title",
+          "callee": "self.assertRaises",
+          "lineNumber": 57
+        },
+        {
+          "caller": "test_pdf_requires_signature_and_exact_metadata_or_visible_title",
+          "callee": "verifier.verify_pdf",
+          "lineNumber": 58
+        },
+        {
+          "caller": "test_checksum_manifest_is_sorted_portable_and_revalidated",
+          "callee": "load_verifier",
+          "lineNumber": 61
+        },
+        {
+          "caller": "test_checksum_manifest_is_sorted_portable_and_revalidated",
+          "callee": "tempfile.TemporaryDirectory",
+          "lineNumber": 62
+        },
+        {
+          "caller": "test_checksum_manifest_is_sorted_portable_and_revalidated",
+          "callee": "Path",
+          "lineNumber": 63
+        },
+        {
+          "caller": "test_checksum_manifest_is_sorted_portable_and_revalidated",
+          "callee": "pdf.write_bytes",
+          "lineNumber": 67
+        },
+        {
+          "caller": "test_checksum_manifest_is_sorted_portable_and_revalidated",
+          "callee": "html.write_bytes",
+          "lineNumber": 68
+        },
+        {
+          "caller": "test_checksum_manifest_is_sorted_portable_and_revalidated",
+          "callee": "verifier.write_checksums",
+          "lineNumber": 70
+        },
+        {
+          "caller": "test_checksum_manifest_is_sorted_portable_and_revalidated",
+          "callee": "manifest.read_text(encoding=\"utf-8\").splitlines",
+          "lineNumber": 71
+        },
+        {
+          "caller": "test_checksum_manifest_is_sorted_portable_and_revalidated",
+          "callee": "manifest.read_text",
+          "lineNumber": 71
+        },
+        {
+          "caller": "test_checksum_manifest_is_sorted_portable_and_revalidated",
+          "callee": "self.assertEqual",
+          "lineNumber": 72
+        },
+        {
+          "caller": "test_checksum_manifest_is_sorted_portable_and_revalidated",
+          "callee": "line.split",
+          "lineNumber": 72
+        },
+        {
+          "caller": "test_checksum_manifest_is_sorted_portable_and_revalidated",
+          "callee": "verifier.verify_checksums",
+          "lineNumber": 73
+        },
+        {
+          "caller": "test_checksum_manifest_is_sorted_portable_and_revalidated",
+          "callee": "pdf.write_bytes",
+          "lineNumber": 75
+        },
+        {
+          "caller": "test_checksum_manifest_is_sorted_portable_and_revalidated",
+          "callee": "self.assertRaises",
+          "lineNumber": 76
+        },
+        {
+          "caller": "test_checksum_manifest_is_sorted_portable_and_revalidated",
+          "callee": "verifier.verify_checksums",
+          "lineNumber": 77
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 2,
+        "functionCount": 1,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "tests/test_workflow_security.py",
+      "language": "python",
+      "fileCategory": "code",
+      "totalLines": 470,
+      "nonEmptyLines": 428,
+      "functions": [
+        {
+          "name": "job_block",
+          "startLine": 167,
+          "endLine": 174,
+          "params": [
+            "workflow_text",
+            "job_name"
+          ]
+        },
+        {
+          "name": "workflow_step_script",
+          "startLine": 177,
+          "endLine": 187,
+          "params": [
+            "workflow_text",
+            "step_name"
+          ]
+        },
+        {
+          "name": "workflow_step_scripts_in_document_order",
+          "startLine": 190,
+          "endLine": 199,
+          "params": [
+            "workflow_text",
+            "step_names"
+          ]
+        }
+      ],
+      "classes": [
+        {
+          "name": "WorkflowSecurityTests",
+          "startLine": 202,
+          "endLine": 466,
+          "methods": [
+            "test_inventory_actions_and_checkout_credentials_are_exact",
+            "test_jobs_use_minimum_permissions_and_verified_artifact_handoffs",
+            "test_dependencies_are_checksum_verified_and_mermaid_is_lockfile_backed",
+            "test_all_builds_reuse_bounded_pdf_builder_and_verify_pdf_html_sha",
+            "test_release_has_formal_provenance_for_every_verified_artifact",
+            "test_preview_publish_steps_follow_tag_release_asset_order",
+            "run_preview_scripts",
+            "test_mutable_preview_updates_existing_tag_and_release",
+            "test_mutable_preview_creates_only_on_explicit_not_found",
+            "test_preview_rejects_invalid_repository_and_sha_before_calling_gh",
+            "test_preview_tag_lookup_fails_closed_on_non_404_errors",
+            "test_preview_release_lookup_fails_closed_except_exact_not_found"
+          ],
+          "properties": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "job_block",
+          "line": 167,
+          "isDefault": false
+        },
+        {
+          "name": "workflow_step_script",
+          "line": 177,
+          "isDefault": false
+        },
+        {
+          "name": "workflow_step_scripts_in_document_order",
+          "line": 190,
+          "isDefault": false
+        },
+        {
+          "name": "WorkflowSecurityTests",
+          "line": 202,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "job_block",
+          "callee": "re.search",
+          "lineNumber": 168
+        },
+        {
+          "caller": "job_block",
+          "callee": "re.escape",
+          "lineNumber": 169
+        },
+        {
+          "caller": "job_block",
+          "callee": "AssertionError",
+          "lineNumber": 173
+        },
+        {
+          "caller": "job_block",
+          "callee": "match.group",
+          "lineNumber": 174
+        },
+        {
+          "caller": "workflow_step_script",
+          "callee": "AssertionError",
+          "lineNumber": 180
+        },
+        {
+          "caller": "workflow_step_script",
+          "callee": "workflow_text.index",
+          "lineNumber": 181
+        },
+        {
+          "caller": "workflow_step_script",
+          "callee": "len",
+          "lineNumber": 181
+        },
+        {
+          "caller": "workflow_step_script",
+          "callee": "workflow_text.index",
+          "lineNumber": 183
+        },
+        {
+          "caller": "workflow_step_script",
+          "callee": "len",
+          "lineNumber": 183
+        },
+        {
+          "caller": "workflow_step_script",
+          "callee": "workflow_text.find",
+          "lineNumber": 184
+        },
+        {
+          "caller": "workflow_step_script",
+          "callee": "len",
+          "lineNumber": 186
+        },
+        {
+          "caller": "workflow_step_script",
+          "callee": "textwrap.dedent",
+          "lineNumber": 187
+        },
+        {
+          "caller": "workflow_step_scripts_in_document_order",
+          "callee": "AssertionError",
+          "lineNumber": 194
+        },
+        {
+          "caller": "workflow_step_scripts_in_document_order",
+          "callee": "sorted",
+          "lineNumber": 195
+        },
+        {
+          "caller": "workflow_step_scripts_in_document_order",
+          "callee": "workflow_text.index",
+          "lineNumber": 197
+        },
+        {
+          "caller": "workflow_step_scripts_in_document_order",
+          "callee": "tuple",
+          "lineNumber": 199
+        },
+        {
+          "caller": "workflow_step_scripts_in_document_order",
+          "callee": "workflow_step_script",
+          "lineNumber": 199
+        },
+        {
+          "caller": "test_inventory_actions_and_checkout_credentials_are_exact",
+          "callee": "self.assertEqual",
+          "lineNumber": 204
+        },
+        {
+          "caller": "test_inventory_actions_and_checkout_credentials_are_exact",
+          "callee": "self.subTest",
+          "lineNumber": 216
+        },
+        {
+          "caller": "test_inventory_actions_and_checkout_credentials_are_exact",
+          "callee": "workflow.read_text",
+          "lineNumber": 217
+        },
+        {
+          "caller": "test_inventory_actions_and_checkout_credentials_are_exact",
+          "callee": "self.assertRegex",
+          "lineNumber": 218
+        },
+        {
+          "caller": "test_inventory_actions_and_checkout_credentials_are_exact",
+          "callee": "text.split",
+          "lineNumber": 218
+        },
+        {
+          "caller": "test_inventory_actions_and_checkout_credentials_are_exact",
+          "callee": "line.strip",
+          "lineNumber": 219
+        },
+        {
+          "caller": "test_inventory_actions_and_checkout_credentials_are_exact",
+          "callee": "text.splitlines",
+          "lineNumber": 219
+        },
+        {
+          "caller": "test_inventory_actions_and_checkout_credentials_are_exact",
+          "callee": "self.assertGreater",
+          "lineNumber": 220
+        },
+        {
+          "caller": "test_inventory_actions_and_checkout_credentials_are_exact",
+          "callee": "len",
+          "lineNumber": 220
+        },
+        {
+          "caller": "test_inventory_actions_and_checkout_credentials_are_exact",
+          "callee": "re.search",
+          "lineNumber": 222
+        },
+        {
+          "caller": "test_inventory_actions_and_checkout_credentials_are_exact",
+          "callee": "self.assertIsNotNone",
+          "lineNumber": 227
+        },
+        {
+          "caller": "test_inventory_actions_and_checkout_credentials_are_exact",
+          "callee": "match.group",
+          "lineNumber": 228
+        },
+        {
+          "caller": "test_inventory_actions_and_checkout_credentials_are_exact",
+          "callee": "self.assertIn",
+          "lineNumber": 229
+        },
+        {
+          "caller": "test_inventory_actions_and_checkout_credentials_are_exact",
+          "callee": "observed.setdefault(action, set()).add",
+          "lineNumber": 230
+        },
+        {
+          "caller": "test_inventory_actions_and_checkout_credentials_are_exact",
+          "callee": "observed.setdefault",
+          "lineNumber": 230
+        },
+        {
+          "caller": "test_inventory_actions_and_checkout_credentials_are_exact",
+          "callee": "set",
+          "lineNumber": 230
+        },
+        {
+          "caller": "test_inventory_actions_and_checkout_credentials_are_exact",
+          "callee": "match.group",
+          "lineNumber": 231
+        },
+        {
+          "caller": "test_inventory_actions_and_checkout_credentials_are_exact",
+          "callee": "match.group",
+          "lineNumber": 231
+        },
+        {
+          "caller": "test_inventory_actions_and_checkout_credentials_are_exact",
+          "callee": "text.index",
+          "lineNumber": 234
+        },
+        {
+          "caller": "test_inventory_actions_and_checkout_credentials_are_exact",
+          "callee": "self.assertIn",
+          "lineNumber": 235
+        },
+        {
+          "caller": "test_inventory_actions_and_checkout_credentials_are_exact",
+          "callee": "sorted",
+          "lineNumber": 241
+        },
+        {
+          "caller": "test_inventory_actions_and_checkout_credentials_are_exact",
+          "callee": "observed.items",
+          "lineNumber": 241
+        },
+        {
+          "caller": "test_inventory_actions_and_checkout_credentials_are_exact",
+          "callee": "self.subTest",
+          "lineNumber": 242
+        },
+        {
+          "caller": "test_inventory_actions_and_checkout_credentials_are_exact",
+          "callee": "self.assertEqual",
+          "lineNumber": 243
+        },
+        {
+          "caller": "test_inventory_actions_and_checkout_credentials_are_exact",
+          "callee": "len",
+          "lineNumber": 244
+        },
+        {
+          "caller": "test_inventory_actions_and_checkout_credentials_are_exact",
+          "callee": "sorted",
+          "lineNumber": 246
+        },
+        {
+          "caller": "test_jobs_use_minimum_permissions_and_verified_artifact_handoffs",
+          "callee": "(WORKFLOW_DIR / \"ci.yaml\").read_text",
+          "lineNumber": 250
+        },
+        {
+          "caller": "test_jobs_use_minimum_permissions_and_verified_artifact_handoffs",
+          "callee": "(WORKFLOW_DIR / \"auto-release.yml\").read_text",
+          "lineNumber": 251
+        },
+        {
+          "caller": "test_jobs_use_minimum_permissions_and_verified_artifact_handoffs",
+          "callee": "(WORKFLOW_DIR / \"preview-pdf.yml\").read_text",
+          "lineNumber": 252
+        },
+        {
+          "caller": "test_jobs_use_minimum_permissions_and_verified_artifact_handoffs",
+          "callee": "(WORKFLOW_DIR / \"dependabot-automerge.yml\").read_text",
+          "lineNumber": 253
+        },
+        {
+          "caller": "test_jobs_use_minimum_permissions_and_verified_artifact_handoffs",
+          "callee": "self.assertIn",
+          "lineNumber": 255
+        },
+        {
+          "caller": "test_jobs_use_minimum_permissions_and_verified_artifact_handoffs",
+          "callee": "job_block",
+          "lineNumber": 255
+        },
+        {
+          "caller": "test_jobs_use_minimum_permissions_and_verified_artifact_handoffs",
+          "callee": "job_block",
+          "lineNumber": 256
+        },
+        {
+          "caller": "test_jobs_use_minimum_permissions_and_verified_artifact_handoffs",
+          "callee": "job_block",
+          "lineNumber": 257
+        },
+        {
+          "caller": "test_jobs_use_minimum_permissions_and_verified_artifact_handoffs",
+          "callee": "job_block",
+          "lineNumber": 258
+        },
+        {
+          "caller": "test_jobs_use_minimum_permissions_and_verified_artifact_handoffs",
+          "callee": "job_block",
+          "lineNumber": 259
+        },
+        {
+          "caller": "test_jobs_use_minimum_permissions_and_verified_artifact_handoffs",
+          "callee": "self.assertIn",
+          "lineNumber": 262
+        },
+        {
+          "caller": "test_jobs_use_minimum_permissions_and_verified_artifact_handoffs",
+          "callee": "self.assertNotIn",
+          "lineNumber": 263
+        },
+        {
+          "caller": "test_jobs_use_minimum_permissions_and_verified_artifact_handoffs",
+          "callee": "self.assertIn",
+          "lineNumber": 264
+        },
+        {
+          "caller": "test_jobs_use_minimum_permissions_and_verified_artifact_handoffs",
+          "callee": "self.assertIn",
+          "lineNumber": 266
+        },
+        {
+          "caller": "test_jobs_use_minimum_permissions_and_verified_artifact_handoffs",
+          "callee": "self.assertIn",
+          "lineNumber": 267
+        },
+        {
+          "caller": "test_jobs_use_minimum_permissions_and_verified_artifact_handoffs",
+          "callee": "self.assertIn",
+          "lineNumber": 268
+        },
+        {
+          "caller": "test_jobs_use_minimum_permissions_and_verified_artifact_handoffs",
+          "callee": "self.assertIn",
+          "lineNumber": 269
+        },
+        {
+          "caller": "test_jobs_use_minimum_permissions_and_verified_artifact_handoffs",
+          "callee": "self.assertIn",
+          "lineNumber": 270
+        },
+        {
+          "caller": "test_jobs_use_minimum_permissions_and_verified_artifact_handoffs",
+          "callee": "self.assertIn",
+          "lineNumber": 272
+        },
+        {
+          "caller": "test_jobs_use_minimum_permissions_and_verified_artifact_handoffs",
+          "callee": "self.assertIn",
+          "lineNumber": 273
+        },
+        {
+          "caller": "test_jobs_use_minimum_permissions_and_verified_artifact_handoffs",
+          "callee": "self.assertNotIn",
+          "lineNumber": 274
+        },
+        {
+          "caller": "test_jobs_use_minimum_permissions_and_verified_artifact_handoffs",
+          "callee": "self.assertNotIn",
+          "lineNumber": 275
+        },
+        {
+          "caller": "test_jobs_use_minimum_permissions_and_verified_artifact_handoffs",
+          "callee": "self.assertIn",
+          "lineNumber": 276
+        },
+        {
+          "caller": "test_jobs_use_minimum_permissions_and_verified_artifact_handoffs",
+          "callee": "self.assertNotIn",
+          "lineNumber": 277
+        },
+        {
+          "caller": "test_jobs_use_minimum_permissions_and_verified_artifact_handoffs",
+          "callee": "self.assertNotIn",
+          "lineNumber": 278
+        },
+        {
+          "caller": "test_jobs_use_minimum_permissions_and_verified_artifact_handoffs",
+          "callee": "self.assertIn",
+          "lineNumber": 279
+        },
+        {
+          "caller": "test_jobs_use_minimum_permissions_and_verified_artifact_handoffs",
+          "callee": "self.assertIn",
+          "lineNumber": 280
+        },
+        {
+          "caller": "test_jobs_use_minimum_permissions_and_verified_artifact_handoffs",
+          "callee": "self.assertNotIn",
+          "lineNumber": 282
+        },
+        {
+          "caller": "test_jobs_use_minimum_permissions_and_verified_artifact_handoffs",
+          "callee": "job_block",
+          "lineNumber": 284
+        },
+        {
+          "caller": "test_jobs_use_minimum_permissions_and_verified_artifact_handoffs",
+          "callee": "self.assertIn",
+          "lineNumber": 285
+        },
+        {
+          "caller": "test_jobs_use_minimum_permissions_and_verified_artifact_handoffs",
+          "callee": "self.assertIn",
+          "lineNumber": 286
+        },
+        {
+          "caller": "test_dependencies_are_checksum_verified_and_mermaid_is_lockfile_backed",
+          "callee": "self.assertTrue",
+          "lineNumber": 291
+        },
+        {
+          "caller": "test_dependencies_are_checksum_verified_and_mermaid_is_lockfile_backed",
+          "callee": "package_path.is_file",
+          "lineNumber": 291
+        },
+        {
+          "caller": "test_dependencies_are_checksum_verified_and_mermaid_is_lockfile_backed",
+          "callee": "self.assertTrue",
+          "lineNumber": 292
+        },
+        {
+          "caller": "test_dependencies_are_checksum_verified_and_mermaid_is_lockfile_backed",
+          "callee": "lock_path.is_file",
+          "lineNumber": 292
+        },
+        {
+          "caller": "test_dependencies_are_checksum_verified_and_mermaid_is_lockfile_backed",
+          "callee": "json.loads",
+          "lineNumber": 293
+        },
+        {
+          "caller": "test_dependencies_are_checksum_verified_and_mermaid_is_lockfile_backed",
+          "callee": "package_path.read_text",
+          "lineNumber": 293
+        },
+        {
+          "caller": "test_dependencies_are_checksum_verified_and_mermaid_is_lockfile_backed",
+          "callee": "self.assertEqual",
+          "lineNumber": 294
+        },
+        {
+          "caller": "test_dependencies_are_checksum_verified_and_mermaid_is_lockfile_backed",
+          "callee": "self.assertEqual",
+          "lineNumber": 295
+        },
+        {
+          "caller": "test_dependencies_are_checksum_verified_and_mermaid_is_lockfile_backed",
+          "callee": "json.loads",
+          "lineNumber": 296
+        },
+        {
+          "caller": "test_dependencies_are_checksum_verified_and_mermaid_is_lockfile_backed",
+          "callee": "lock_path.read_text",
+          "lineNumber": 296
+        },
+        {
+          "caller": "test_dependencies_are_checksum_verified_and_mermaid_is_lockfile_backed",
+          "callee": "self.assertEqual",
+          "lineNumber": 297
+        },
+        {
+          "caller": "test_dependencies_are_checksum_verified_and_mermaid_is_lockfile_backed",
+          "callee": "self.assertEqual",
+          "lineNumber": 301
+        },
+        {
+          "caller": "test_dependencies_are_checksum_verified_and_mermaid_is_lockfile_backed",
+          "callee": "self.assertNotIn",
+          "lineNumber": 302
+        },
+        {
+          "caller": "test_dependencies_are_checksum_verified_and_mermaid_is_lockfile_backed",
+          "callee": "(ROOT / \".gitignore\").read_text",
+          "lineNumber": 302
+        },
+        {
+          "caller": "test_dependencies_are_checksum_verified_and_mermaid_is_lockfile_backed",
+          "callee": "self.subTest",
+          "lineNumber": 305
+        },
+        {
+          "caller": "test_dependencies_are_checksum_verified_and_mermaid_is_lockfile_backed",
+          "callee": "workflow.read_text",
+          "lineNumber": 306
+        },
+        {
+          "caller": "test_dependencies_are_checksum_verified_and_mermaid_is_lockfile_backed",
+          "callee": "self.assertIn",
+          "lineNumber": 307
+        },
+        {
+          "caller": "test_dependencies_are_checksum_verified_and_mermaid_is_lockfile_backed",
+          "callee": "self.assertNotRegex",
+          "lineNumber": 308
+        },
+        {
+          "caller": "test_dependencies_are_checksum_verified_and_mermaid_is_lockfile_backed",
+          "callee": "self.assertIn",
+          "lineNumber": 309
+        },
+        {
+          "caller": "test_dependencies_are_checksum_verified_and_mermaid_is_lockfile_backed",
+          "callee": "self.assertIn",
+          "lineNumber": 310
+        },
+        {
+          "caller": "test_dependencies_are_checksum_verified_and_mermaid_is_lockfile_backed",
+          "callee": "self.assertIn",
+          "lineNumber": 311
+        },
+        {
+          "caller": "test_dependencies_are_checksum_verified_and_mermaid_is_lockfile_backed",
+          "callee": "self.assertIn",
+          "lineNumber": 312
+        },
+        {
+          "caller": "test_dependencies_are_checksum_verified_and_mermaid_is_lockfile_backed",
+          "callee": "self.assertIn",
+          "lineNumber": 313
+        },
+        {
+          "caller": "test_dependencies_are_checksum_verified_and_mermaid_is_lockfile_backed",
+          "callee": "self.assertIn",
+          "lineNumber": 314
+        },
+        {
+          "caller": "test_all_builds_reuse_bounded_pdf_builder_and_verify_pdf_html_sha",
+          "callee": "(ROOT / \"tools\" / \"build_pdf.py\").read_text",
+          "lineNumber": 317
+        },
+        {
+          "caller": "test_all_builds_reuse_bounded_pdf_builder_and_verify_pdf_html_sha",
+          "callee": "(ROOT / \"tools\" / \"render_mermaid.py\").read_text",
+          "lineNumber": 318
+        },
+        {
+          "caller": "test_all_builds_reuse_bounded_pdf_builder_and_verify_pdf_html_sha",
+          "callee": "self.assertNotIn",
+          "lineNumber": 319
+        },
+        {
+          "caller": "test_all_builds_reuse_bounded_pdf_builder_and_verify_pdf_html_sha",
+          "callee": "self.assertNotIn",
+          "lineNumber": 320
+        },
+        {
+          "caller": "test_all_builds_reuse_bounded_pdf_builder_and_verify_pdf_html_sha",
+          "callee": "self.subTest",
+          "lineNumber": 322
+        },
+        {
+          "caller": "test_all_builds_reuse_bounded_pdf_builder_and_verify_pdf_html_sha",
+          "callee": "workflow.read_text",
+          "lineNumber": 323
+        },
+        {
+          "caller": "test_all_builds_reuse_bounded_pdf_builder_and_verify_pdf_html_sha",
+          "callee": "self.assertIn",
+          "lineNumber": 324
+        },
+        {
+          "caller": "test_all_builds_reuse_bounded_pdf_builder_and_verify_pdf_html_sha",
+          "callee": "self.assertNotRegex",
+          "lineNumber": 325
+        },
+        {
+          "caller": "test_all_builds_reuse_bounded_pdf_builder_and_verify_pdf_html_sha",
+          "callee": "self.assertIn",
+          "lineNumber": 326
+        },
+        {
+          "caller": "test_all_builds_reuse_bounded_pdf_builder_and_verify_pdf_html_sha",
+          "callee": "self.assertNotIn",
+          "lineNumber": 327
+        },
+        {
+          "caller": "test_all_builds_reuse_bounded_pdf_builder_and_verify_pdf_html_sha",
+          "callee": "self.assertIn",
+          "lineNumber": 328
+        },
+        {
+          "caller": "test_all_builds_reuse_bounded_pdf_builder_and_verify_pdf_html_sha",
+          "callee": "self.assertIn",
+          "lineNumber": 329
+        },
+        {
+          "caller": "test_all_builds_reuse_bounded_pdf_builder_and_verify_pdf_html_sha",
+          "callee": "self.assertIn",
+          "lineNumber": 330
+        },
+        {
+          "caller": "test_all_builds_reuse_bounded_pdf_builder_and_verify_pdf_html_sha",
+          "callee": "self.assertIn",
+          "lineNumber": 331
+        },
+        {
+          "caller": "test_all_builds_reuse_bounded_pdf_builder_and_verify_pdf_html_sha",
+          "callee": "self.assertIn",
+          "lineNumber": 332
+        },
+        {
+          "caller": "test_all_builds_reuse_bounded_pdf_builder_and_verify_pdf_html_sha",
+          "callee": "self.assertIn",
+          "lineNumber": 333
+        },
+        {
+          "caller": "test_all_builds_reuse_bounded_pdf_builder_and_verify_pdf_html_sha",
+          "callee": "self.assertIn",
+          "lineNumber": 334
+        },
+        {
+          "caller": "test_all_builds_reuse_bounded_pdf_builder_and_verify_pdf_html_sha",
+          "callee": "self.assertIn",
+          "lineNumber": 335
+        },
+        {
+          "caller": "test_all_builds_reuse_bounded_pdf_builder_and_verify_pdf_html_sha",
+          "callee": "self.assertNotIn",
+          "lineNumber": 336
+        },
+        {
+          "caller": "test_release_has_formal_provenance_for_every_verified_artifact",
+          "callee": "(WORKFLOW_DIR / \"auto-release.yml\").read_text",
+          "lineNumber": 339
+        },
+        {
+          "caller": "test_release_has_formal_provenance_for_every_verified_artifact",
+          "callee": "job_block",
+          "lineNumber": 340
+        },
+        {
+          "caller": "test_release_has_formal_provenance_for_every_verified_artifact",
+          "callee": "job_block",
+          "lineNumber": 341
+        },
+        {
+          "caller": "test_release_has_formal_provenance_for_every_verified_artifact",
+          "callee": "self.assertNotIn",
+          "lineNumber": 343
+        },
+        {
+          "caller": "test_release_has_formal_provenance_for_every_verified_artifact",
+          "callee": "self.assertRegex",
+          "lineNumber": 344
+        },
+        {
+          "caller": "test_release_has_formal_provenance_for_every_verified_artifact",
+          "callee": "self.assertIn",
+          "lineNumber": 348
+        },
+        {
+          "caller": "test_release_has_formal_provenance_for_every_verified_artifact",
+          "callee": "self.assertIn",
+          "lineNumber": 349
+        },
+        {
+          "caller": "test_release_has_formal_provenance_for_every_verified_artifact",
+          "callee": "self.assertIn",
+          "lineNumber": 350
+        },
+        {
+          "caller": "test_release_has_formal_provenance_for_every_verified_artifact",
+          "callee": "self.assertIn",
+          "lineNumber": 351
+        },
+        {
+          "caller": "test_release_has_formal_provenance_for_every_verified_artifact",
+          "callee": "self.assertLess",
+          "lineNumber": 352
+        },
+        {
+          "caller": "test_release_has_formal_provenance_for_every_verified_artifact",
+          "callee": "publish.index",
+          "lineNumber": 352
+        },
+        {
+          "caller": "test_release_has_formal_provenance_for_every_verified_artifact",
+          "callee": "publish.index",
+          "lineNumber": 352
+        },
+        {
+          "caller": "test_preview_publish_steps_follow_tag_release_asset_order",
+          "callee": "(WORKFLOW_DIR / \"preview-pdf.yml\").read_text",
+          "lineNumber": 355
+        },
+        {
+          "caller": "test_preview_publish_steps_follow_tag_release_asset_order",
+          "callee": "self.assertIn",
+          "lineNumber": 361
+        },
+        {
+          "caller": "test_preview_publish_steps_follow_tag_release_asset_order",
+          "callee": "preview.index",
+          "lineNumber": 362
+        },
+        {
+          "caller": "test_preview_publish_steps_follow_tag_release_asset_order",
+          "callee": "preview.index",
+          "lineNumber": 363
+        },
+        {
+          "caller": "test_preview_publish_steps_follow_tag_release_asset_order",
+          "callee": "preview.index",
+          "lineNumber": 364
+        },
+        {
+          "caller": "test_preview_publish_steps_follow_tag_release_asset_order",
+          "callee": "self.assertLess",
+          "lineNumber": 365
+        },
+        {
+          "caller": "test_preview_publish_steps_follow_tag_release_asset_order",
+          "callee": "self.assertLess",
+          "lineNumber": 366
+        },
+        {
+          "caller": "run_preview_scripts",
+          "callee": "(WORKFLOW_DIR / \"preview-pdf.yml\").read_text",
+          "lineNumber": 369
+        },
+        {
+          "caller": "run_preview_scripts",
+          "callee": "workflow_step_scripts_in_document_order",
+          "lineNumber": 370
+        },
+        {
+          "caller": "run_preview_scripts",
+          "callee": "tempfile.TemporaryDirectory",
+          "lineNumber": 374
+        },
+        {
+          "caller": "run_preview_scripts",
+          "callee": "Path",
+          "lineNumber": 375
+        },
+        {
+          "caller": "run_preview_scripts",
+          "callee": "fake_gh.write_text",
+          "lineNumber": 377
+        },
+        {
+          "caller": "run_preview_scripts",
+          "callee": "fake_gh.chmod",
+          "lineNumber": 378
+        },
+        {
+          "caller": "run_preview_scripts",
+          "callee": "os.environ.copy",
+          "lineNumber": 380
+        },
+        {
+          "caller": "run_preview_scripts",
+          "callee": "env.update",
+          "lineNumber": 381
+        },
+        {
+          "caller": "run_preview_scripts",
+          "callee": "env.get",
+          "lineNumber": 383
+        },
+        {
+          "caller": "run_preview_scripts",
+          "callee": "str",
+          "lineNumber": 384
+        },
+        {
+          "caller": "run_preview_scripts",
+          "callee": "subprocess.run",
+          "lineNumber": 394
+        },
+        {
+          "caller": "run_preview_scripts",
+          "callee": "log.exists",
+          "lineNumber": 404
+        },
+        {
+          "caller": "run_preview_scripts",
+          "callee": "json.loads",
+          "lineNumber": 405
+        },
+        {
+          "caller": "run_preview_scripts",
+          "callee": "log.read_text().splitlines",
+          "lineNumber": 405
+        },
+        {
+          "caller": "run_preview_scripts",
+          "callee": "log.read_text",
+          "lineNumber": 405
+        },
+        {
+          "caller": "test_mutable_preview_updates_existing_tag_and_release",
+          "callee": "self.run_preview_scripts",
+          "lineNumber": 409
+        },
+        {
+          "caller": "test_mutable_preview_updates_existing_tag_and_release",
+          "callee": "self.assertEqual",
+          "lineNumber": 410
+        },
+        {
+          "caller": "test_mutable_preview_updates_existing_tag_and_release",
+          "callee": "self.assertEqual",
+          "lineNumber": 411
+        },
+        {
+          "caller": "test_mutable_preview_creates_only_on_explicit_not_found",
+          "callee": "self.run_preview_scripts",
+          "lineNumber": 417
+        },
+        {
+          "caller": "test_mutable_preview_creates_only_on_explicit_not_found",
+          "callee": "self.assertEqual",
+          "lineNumber": 418
+        },
+        {
+          "caller": "test_mutable_preview_creates_only_on_explicit_not_found",
+          "callee": "self.assertEqual",
+          "lineNumber": 419
+        },
+        {
+          "caller": "test_mutable_preview_creates_only_on_explicit_not_found",
+          "callee": "self.assertNotIn",
+          "lineNumber": 423
+        },
+        {
+          "caller": "test_preview_rejects_invalid_repository_and_sha_before_calling_gh",
+          "callee": "self.subTest",
+          "lineNumber": 431
+        },
+        {
+          "caller": "test_preview_rejects_invalid_repository_and_sha_before_calling_gh",
+          "callee": "self.run_preview_scripts",
+          "lineNumber": 432
+        },
+        {
+          "caller": "test_preview_rejects_invalid_repository_and_sha_before_calling_gh",
+          "callee": "self.assertNotEqual",
+          "lineNumber": 435
+        },
+        {
+          "caller": "test_preview_rejects_invalid_repository_and_sha_before_calling_gh",
+          "callee": "self.assertEqual",
+          "lineNumber": 436
+        },
+        {
+          "caller": "test_preview_rejects_invalid_repository_and_sha_before_calling_gh",
+          "callee": "self.assertIn",
+          "lineNumber": 437
+        },
+        {
+          "caller": "test_preview_tag_lookup_fails_closed_on_non_404_errors",
+          "callee": "self.subTest",
+          "lineNumber": 441
+        },
+        {
+          "caller": "test_preview_tag_lookup_fails_closed_on_non_404_errors",
+          "callee": "self.run_preview_scripts",
+          "lineNumber": 442
+        },
+        {
+          "caller": "test_preview_tag_lookup_fails_closed_on_non_404_errors",
+          "callee": "self.assertNotEqual",
+          "lineNumber": 443
+        },
+        {
+          "caller": "test_preview_tag_lookup_fails_closed_on_non_404_errors",
+          "callee": "self.assertEqual",
+          "lineNumber": 444
+        },
+        {
+          "caller": "test_preview_tag_lookup_fails_closed_on_non_404_errors",
+          "callee": "scenario.endswith",
+          "lineNumber": 445
+        },
+        {
+          "caller": "test_preview_tag_lookup_fails_closed_on_non_404_errors",
+          "callee": "scenario.removeprefix",
+          "lineNumber": 445
+        },
+        {
+          "caller": "test_preview_tag_lookup_fails_closed_on_non_404_errors",
+          "callee": "self.assertIn",
+          "lineNumber": 446
+        },
+        {
+          "caller": "test_preview_release_lookup_fails_closed_except_exact_not_found",
+          "callee": "self.subTest",
+          "lineNumber": 458
+        },
+        {
+          "caller": "test_preview_release_lookup_fails_closed_except_exact_not_found",
+          "callee": "self.run_preview_scripts",
+          "lineNumber": 459
+        },
+        {
+          "caller": "test_preview_release_lookup_fails_closed_except_exact_not_found",
+          "callee": "self.assertNotEqual",
+          "lineNumber": 460
+        },
+        {
+          "caller": "test_preview_release_lookup_fails_closed_except_exact_not_found",
+          "callee": "self.assertEqual",
+          "lineNumber": 461
+        },
+        {
+          "caller": "test_preview_release_lookup_fails_closed_except_exact_not_found",
+          "callee": "scenario.endswith",
+          "lineNumber": 465
+        },
+        {
+          "caller": "test_preview_release_lookup_fails_closed_except_exact_not_found",
+          "callee": "scenario.rsplit",
+          "lineNumber": 465
+        },
+        {
+          "caller": "test_preview_release_lookup_fails_closed_except_exact_not_found",
+          "callee": "self.assertIn",
+          "lineNumber": 466
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 4,
+        "functionCount": 3,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "tools/build_html_reader.py",
+      "language": "python",
+      "fileCategory": "code",
+      "totalLines": 265,
+      "nonEmptyLines": 250,
+      "functions": [
+        {
+          "name": "esc",
+          "startLine": 13,
+          "endLine": 13,
+          "params": [
+            "s"
+          ]
+        },
+        {
+          "name": "escattr",
+          "startLine": 14,
+          "endLine": 14,
+          "params": [
+            "s"
+          ]
+        },
+        {
+          "name": "parse_summary",
+          "startLine": 16,
+          "endLine": 28,
+          "params": [
+            "book_dir"
+          ]
+        },
+        {
+          "name": "fix_inline_dollar",
+          "startLine": 30,
+          "endLine": 38,
+          "params": [
+            "text"
+          ]
+        },
+        {
+          "name": "process_file",
+          "startLine": 40,
+          "endLine": 66,
+          "params": [
+            "text",
+            "reldir",
+            "mermaid_store",
+            "path_to_id"
+          ]
+        },
+        {
+          "name": "main",
+          "startLine": 166,
+          "endLine": 262,
+          "params": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "esc",
+          "line": 13,
+          "isDefault": false
+        },
+        {
+          "name": "escattr",
+          "line": 14,
+          "isDefault": false
+        },
+        {
+          "name": "parse_summary",
+          "line": 16,
+          "isDefault": false
+        },
+        {
+          "name": "fix_inline_dollar",
+          "line": 30,
+          "isDefault": false
+        },
+        {
+          "name": "process_file",
+          "line": 40,
+          "isDefault": false
+        },
+        {
+          "name": "main",
+          "line": 166,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "esc",
+          "callee": "s.replace(\"&\",\"&amp;\").replace(\"<\",\"&lt;\").replace",
+          "lineNumber": 13
+        },
+        {
+          "caller": "esc",
+          "callee": "s.replace(\"&\",\"&amp;\").replace",
+          "lineNumber": 13
+        },
+        {
+          "caller": "esc",
+          "callee": "s.replace",
+          "lineNumber": 13
+        },
+        {
+          "caller": "escattr",
+          "callee": "s.replace(\"&\",\"&amp;\").replace('\"',\"&quot;\").replace",
+          "lineNumber": 14
+        },
+        {
+          "caller": "escattr",
+          "callee": "s.replace(\"&\",\"&amp;\").replace",
+          "lineNumber": 14
+        },
+        {
+          "caller": "escattr",
+          "callee": "s.replace",
+          "lineNumber": 14
+        },
+        {
+          "caller": "parse_summary",
+          "callee": "set",
+          "lineNumber": 17
+        },
+        {
+          "caller": "parse_summary",
+          "callee": "open",
+          "lineNumber": 18
+        },
+        {
+          "caller": "parse_summary",
+          "callee": "os.path.join",
+          "lineNumber": 18
+        },
+        {
+          "caller": "parse_summary",
+          "callee": "re.match",
+          "lineNumber": 20
+        },
+        {
+          "caller": "parse_summary",
+          "callee": "items.append",
+          "lineNumber": 21
+        },
+        {
+          "caller": "parse_summary",
+          "callee": "m.group",
+          "lineNumber": 21
+        },
+        {
+          "caller": "parse_summary",
+          "callee": "re.match",
+          "lineNumber": 22
+        },
+        {
+          "caller": "parse_summary",
+          "callee": "m.group",
+          "lineNumber": 24
+        },
+        {
+          "caller": "parse_summary",
+          "callee": "m.group(2).strip",
+          "lineNumber": 24
+        },
+        {
+          "caller": "parse_summary",
+          "callee": "m.group",
+          "lineNumber": 24
+        },
+        {
+          "caller": "parse_summary",
+          "callee": "m.group(3).strip",
+          "lineNumber": 24
+        },
+        {
+          "caller": "parse_summary",
+          "callee": "m.group",
+          "lineNumber": 24
+        },
+        {
+          "caller": "parse_summary",
+          "callee": "path.endswith",
+          "lineNumber": 25
+        },
+        {
+          "caller": "parse_summary",
+          "callee": "os.path.isfile",
+          "lineNumber": 25
+        },
+        {
+          "caller": "parse_summary",
+          "callee": "os.path.join",
+          "lineNumber": 25
+        },
+        {
+          "caller": "parse_summary",
+          "callee": "seen.add",
+          "lineNumber": 26
+        },
+        {
+          "caller": "parse_summary",
+          "callee": "items.append",
+          "lineNumber": 27
+        },
+        {
+          "caller": "parse_summary",
+          "callee": "min",
+          "lineNumber": 27
+        },
+        {
+          "caller": "parse_summary",
+          "callee": "len",
+          "lineNumber": 27
+        },
+        {
+          "caller": "parse_summary",
+          "callee": "indent.replace",
+          "lineNumber": 27
+        },
+        {
+          "caller": "repl",
+          "callee": "m.start",
+          "lineNumber": 32
+        },
+        {
+          "caller": "repl",
+          "callee": "m.end",
+          "lineNumber": 32
+        },
+        {
+          "caller": "repl",
+          "callee": "m.group",
+          "lineNumber": 32
+        },
+        {
+          "caller": "repl",
+          "callee": "m.group",
+          "lineNumber": 33
+        },
+        {
+          "caller": "repl",
+          "callee": "text.rfind",
+          "lineNumber": 34
+        },
+        {
+          "caller": "repl",
+          "callee": "text.find",
+          "lineNumber": 35
+        },
+        {
+          "caller": "repl",
+          "callee": "len",
+          "lineNumber": 35
+        },
+        {
+          "caller": "repl",
+          "callee": "text[ls:s].strip",
+          "lineNumber": 36
+        },
+        {
+          "caller": "repl",
+          "callee": "text[e:le].strip",
+          "lineNumber": 36
+        },
+        {
+          "caller": "repl",
+          "callee": "m.group",
+          "lineNumber": 36
+        },
+        {
+          "caller": "repl",
+          "callee": "inner.strip",
+          "lineNumber": 37
+        },
+        {
+          "caller": "fix_inline_dollar",
+          "callee": "re.sub",
+          "lineNumber": 38
+        },
+        {
+          "caller": "grab",
+          "callee": "len",
+          "lineNumber": 42
+        },
+        {
+          "caller": "grab",
+          "callee": "mermaid_store.append",
+          "lineNumber": 42
+        },
+        {
+          "caller": "grab",
+          "callee": "m.group",
+          "lineNumber": 42
+        },
+        {
+          "caller": "process_file",
+          "callee": "re.sub",
+          "lineNumber": 44
+        },
+        {
+          "caller": "process_file",
+          "callee": "fix_inline_dollar",
+          "lineNumber": 45
+        },
+        {
+          "caller": "process_file",
+          "callee": "re.sub",
+          "lineNumber": 46
+        },
+        {
+          "caller": "process_file",
+          "callee": "re.sub",
+          "lineNumber": 47
+        },
+        {
+          "caller": "process_file",
+          "callee": "re.sub",
+          "lineNumber": 48
+        },
+        {
+          "caller": "md_img",
+          "callee": "m.group",
+          "lineNumber": 50
+        },
+        {
+          "caller": "md_img",
+          "callee": "m.group(2).strip",
+          "lineNumber": 50
+        },
+        {
+          "caller": "md_img",
+          "callee": "m.group",
+          "lineNumber": 50
+        },
+        {
+          "caller": "md_img",
+          "callee": "url.startswith",
+          "lineNumber": 51
+        },
+        {
+          "caller": "md_img",
+          "callee": "m.group",
+          "lineNumber": 51
+        },
+        {
+          "caller": "md_img",
+          "callee": "posixpath.normpath",
+          "lineNumber": 52
+        },
+        {
+          "caller": "md_img",
+          "callee": "posixpath.join",
+          "lineNumber": 52
+        },
+        {
+          "caller": "process_file",
+          "callee": "re.sub",
+          "lineNumber": 53
+        },
+        {
+          "caller": "html_img",
+          "callee": "m.group",
+          "lineNumber": 55
+        },
+        {
+          "caller": "html_img",
+          "callee": "src.startswith",
+          "lineNumber": 56
+        },
+        {
+          "caller": "html_img",
+          "callee": "m.group",
+          "lineNumber": 56
+        },
+        {
+          "caller": "html_img",
+          "callee": "m.group(0).replace",
+          "lineNumber": 57
+        },
+        {
+          "caller": "html_img",
+          "callee": "m.group",
+          "lineNumber": 57
+        },
+        {
+          "caller": "html_img",
+          "callee": "posixpath.normpath",
+          "lineNumber": 57
+        },
+        {
+          "caller": "html_img",
+          "callee": "posixpath.join",
+          "lineNumber": 57
+        },
+        {
+          "caller": "process_file",
+          "callee": "re.sub",
+          "lineNumber": 58
+        },
+        {
+          "caller": "md_link",
+          "callee": "m.group",
+          "lineNumber": 60
+        },
+        {
+          "caller": "md_link",
+          "callee": "m.group(2).strip",
+          "lineNumber": 60
+        },
+        {
+          "caller": "md_link",
+          "callee": "m.group",
+          "lineNumber": 60
+        },
+        {
+          "caller": "md_link",
+          "callee": "target.split",
+          "lineNumber": 61
+        },
+        {
+          "caller": "md_link",
+          "callee": "target.endswith",
+          "lineNumber": 62
+        },
+        {
+          "caller": "md_link",
+          "callee": "m.group",
+          "lineNumber": 62
+        },
+        {
+          "caller": "md_link",
+          "callee": "path_to_id.get",
+          "lineNumber": 63
+        },
+        {
+          "caller": "md_link",
+          "callee": "posixpath.normpath",
+          "lineNumber": 63
+        },
+        {
+          "caller": "md_link",
+          "callee": "posixpath.join",
+          "lineNumber": 63
+        },
+        {
+          "caller": "md_link",
+          "callee": "m.group",
+          "lineNumber": 64
+        },
+        {
+          "caller": "process_file",
+          "callee": "re.sub",
+          "lineNumber": 65
+        },
+        {
+          "caller": "main",
+          "callee": "argparse.ArgumentParser",
+          "lineNumber": 167
+        },
+        {
+          "caller": "main",
+          "callee": "ap.add_argument",
+          "lineNumber": 168
+        },
+        {
+          "caller": "main",
+          "callee": "ap.add_argument",
+          "lineNumber": 169
+        },
+        {
+          "caller": "main",
+          "callee": "ap.add_argument",
+          "lineNumber": 170
+        },
+        {
+          "caller": "main",
+          "callee": "ap.add_argument",
+          "lineNumber": 171
+        },
+        {
+          "caller": "main",
+          "callee": "ap.parse_args",
+          "lineNumber": 172
+        },
+        {
+          "caller": "main",
+          "callee": "os.path.abspath",
+          "lineNumber": 173
+        },
+        {
+          "caller": "main",
+          "callee": "parse_summary",
+          "lineNumber": 175
+        },
+        {
+          "caller": "main",
+          "callee": "page_meta.append",
+          "lineNumber": 180
+        },
+        {
+          "caller": "main",
+          "callee": "posixpath.normpath",
+          "lineNumber": 181
+        },
+        {
+          "caller": "main",
+          "callee": "open",
+          "lineNumber": 188
+        },
+        {
+          "caller": "main",
+          "callee": "os.path.join",
+          "lineNumber": 188
+        },
+        {
+          "caller": "main",
+          "callee": "f.read",
+          "lineNumber": 188
+        },
+        {
+          "caller": "main",
+          "callee": "process_file",
+          "lineNumber": 189
+        },
+        {
+          "caller": "main",
+          "callee": "posixpath.dirname",
+          "lineNumber": 189
+        },
+        {
+          "caller": "main",
+          "callee": "chunks.append",
+          "lineNumber": 190
+        },
+        {
+          "caller": "main",
+          "callee": "\"\\n\".join",
+          "lineNumber": 191
+        },
+        {
+          "caller": "main",
+          "callee": "print",
+          "lineNumber": 192
+        },
+        {
+          "caller": "main",
+          "callee": "len",
+          "lineNumber": 192
+        },
+        {
+          "caller": "main",
+          "callee": "len",
+          "lineNumber": 192
+        },
+        {
+          "caller": "main",
+          "callee": "range",
+          "lineNumber": 196
+        },
+        {
+          "caller": "main",
+          "callee": "len",
+          "lineNumber": 196
+        },
+        {
+          "caller": "main",
+          "callee": "os.path.join",
+          "lineNumber": 197
+        },
+        {
+          "caller": "main",
+          "callee": "os.path.isfile",
+          "lineNumber": 198
+        },
+        {
+          "caller": "main",
+          "callee": "os.path.getsize",
+          "lineNumber": 198
+        },
+        {
+          "caller": "main",
+          "callee": "open(p, encoding=\"utf-8\").read",
+          "lineNumber": 199
+        },
+        {
+          "caller": "main",
+          "callee": "open",
+          "lineNumber": 199
+        },
+        {
+          "caller": "main",
+          "callee": "s.find",
+          "lineNumber": 200
+        },
+        {
+          "caller": "main",
+          "callee": "s.replace",
+          "lineNumber": 201
+        },
+        {
+          "caller": "main",
+          "callee": "svgs.append",
+          "lineNumber": 202
+        },
+        {
+          "caller": "main",
+          "callee": "svgs.append",
+          "lineNumber": 205
+        },
+        {
+          "caller": "main",
+          "callee": "esc",
+          "lineNumber": 205
+        },
+        {
+          "caller": "main",
+          "callee": "print",
+          "lineNumber": 206
+        },
+        {
+          "caller": "main",
+          "callee": "len",
+          "lineNumber": 206
+        },
+        {
+          "caller": "main",
+          "callee": "sb.append",
+          "lineNumber": 211
+        },
+        {
+          "caller": "main",
+          "callee": "esc",
+          "lineNumber": 211
+        },
+        {
+          "caller": "main",
+          "callee": "sb.append",
+          "lineNumber": 214
+        },
+        {
+          "caller": "main",
+          "callee": "esc",
+          "lineNumber": 214
+        },
+        {
+          "caller": "main",
+          "callee": "sb.append",
+          "lineNumber": 215
+        },
+        {
+          "caller": "main",
+          "callee": "\"\".join",
+          "lineNumber": 215
+        },
+        {
+          "caller": "main",
+          "callee": "os.path.join",
+          "lineNumber": 217
+        },
+        {
+          "caller": "main",
+          "callee": "open",
+          "lineNumber": 219
+        },
+        {
+          "caller": "main",
+          "callee": "f.write",
+          "lineNumber": 219
+        },
+        {
+          "caller": "main",
+          "callee": "open",
+          "lineNumber": 220
+        },
+        {
+          "caller": "main",
+          "callee": "f.write",
+          "lineNumber": 220
+        },
+        {
+          "caller": "main",
+          "callee": "print",
+          "lineNumber": 224
+        },
+        {
+          "caller": "main",
+          "callee": "subprocess.run",
+          "lineNumber": 225
+        },
+        {
+          "caller": "main",
+          "callee": "os.path.exists",
+          "lineNumber": 226
+        },
+        {
+          "caller": "main",
+          "callee": "os.remove",
+          "lineNumber": 226
+        },
+        {
+          "caller": "main",
+          "callee": "print",
+          "lineNumber": 228
+        },
+        {
+          "caller": "main",
+          "callee": "sys.exit",
+          "lineNumber": 228
+        },
+        {
+          "caller": "main",
+          "callee": "open",
+          "lineNumber": 230
+        },
+        {
+          "caller": "main",
+          "callee": "f.read",
+          "lineNumber": 230
+        },
+        {
+          "caller": "mrepl",
+          "callee": "int",
+          "lineNumber": 232
+        },
+        {
+          "caller": "mrepl",
+          "callee": "m.group",
+          "lineNumber": 232
+        },
+        {
+          "caller": "main",
+          "callee": "re.sub",
+          "lineNumber": 233
+        },
+        {
+          "caller": "main",
+          "callee": "re.sub",
+          "lineNumber": 234
+        },
+        {
+          "caller": "main",
+          "callee": "re.search",
+          "lineNumber": 236
+        },
+        {
+          "caller": "main",
+          "callee": "re.split",
+          "lineNumber": 237
+        },
+        {
+          "caller": "main",
+          "callee": "mm.group",
+          "lineNumber": 237
+        },
+        {
+          "caller": "navhtml",
+          "callee": "out.append",
+          "lineNumber": 242
+        },
+        {
+          "caller": "navhtml",
+          "callee": "esc",
+          "lineNumber": 242
+        },
+        {
+          "caller": "navhtml",
+          "callee": "out.append",
+          "lineNumber": 243
+        },
+        {
+          "caller": "navhtml",
+          "callee": "len",
+          "lineNumber": 244
+        },
+        {
+          "caller": "navhtml",
+          "callee": "out.append",
+          "lineNumber": 246
+        },
+        {
+          "caller": "navhtml",
+          "callee": "esc",
+          "lineNumber": 246
+        },
+        {
+          "caller": "navhtml",
+          "callee": "out.append",
+          "lineNumber": 247
+        },
+        {
+          "caller": "navhtml",
+          "callee": "\"\".join",
+          "lineNumber": 247
+        },
+        {
+          "caller": "main",
+          "callee": "range",
+          "lineNumber": 249
+        },
+        {
+          "caller": "main",
+          "callee": "len",
+          "lineNumber": 249
+        },
+        {
+          "caller": "main",
+          "callee": "[pm[0] for pm in page_meta].index",
+          "lineNumber": 251
+        },
+        {
+          "caller": "main",
+          "callee": "pages_html.append",
+          "lineNumber": 252
+        },
+        {
+          "caller": "main",
+          "callee": "escattr",
+          "lineNumber": 252
+        },
+        {
+          "caller": "main",
+          "callee": "navhtml",
+          "lineNumber": 252
+        },
+        {
+          "caller": "main",
+          "callee": "mm.group",
+          "lineNumber": 253
+        },
+        {
+          "caller": "main",
+          "callee": "\"\".join",
+          "lineNumber": 253
+        },
+        {
+          "caller": "main",
+          "callee": "mm.group",
+          "lineNumber": 253
+        },
+        {
+          "caller": "main",
+          "callee": "mm.start",
+          "lineNumber": 254
+        },
+        {
+          "caller": "main",
+          "callee": "mm.end",
+          "lineNumber": 254
+        },
+        {
+          "caller": "main",
+          "callee": "html.replace",
+          "lineNumber": 255
+        },
+        {
+          "caller": "main",
+          "callee": "len",
+          "lineNumber": 257
+        },
+        {
+          "caller": "main",
+          "callee": "re.findall",
+          "lineNumber": 257
+        },
+        {
+          "caller": "main",
+          "callee": "open",
+          "lineNumber": 258
+        },
+        {
+          "caller": "main",
+          "callee": "f.write",
+          "lineNumber": 258
+        },
+        {
+          "caller": "main",
+          "callee": "os.path.getsize",
+          "lineNumber": 259
+        },
+        {
+          "caller": "main",
+          "callee": "html.count",
+          "lineNumber": 260
+        },
+        {
+          "caller": "main",
+          "callee": "html.count",
+          "lineNumber": 260
+        },
+        {
+          "caller": "main",
+          "callee": "html.count",
+          "lineNumber": 260
+        },
+        {
+          "caller": "main",
+          "callee": "print",
+          "lineNumber": 261
+        },
+        {
+          "caller": "main",
+          "callee": "len",
+          "lineNumber": 261
+        },
+        {
+          "caller": "main",
+          "callee": "print",
+          "lineNumber": 262
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 6,
+        "functionCount": 6,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "tools/build_pdf.py",
+      "language": "python",
+      "fileCategory": "code",
+      "totalLines": 158,
+      "nonEmptyLines": 128,
+      "functions": [
+        {
+          "name": "positive_float",
+          "startLine": 18,
+          "endLine": 22,
+          "params": [
+            "value"
+          ]
+        },
+        {
+          "name": "nonnegative_float",
+          "startLine": 25,
+          "endLine": 29,
+          "params": [
+            "value"
+          ]
+        },
+        {
+          "name": "append_log",
+          "startLine": 32,
+          "endLine": 34,
+          "params": [
+            "stream",
+            "message"
+          ]
+        },
+        {
+          "name": "terminate_process_tree",
+          "startLine": 37,
+          "endLine": 62,
+          "params": [
+            "process",
+            "grace"
+          ]
+        },
+        {
+          "name": "build_once",
+          "startLine": 65,
+          "endLine": 105,
+          "params": [
+            "command",
+            "output",
+            "log_path",
+            "timeout",
+            "terminate_grace"
+          ]
+        },
+        {
+          "name": "parse_args",
+          "startLine": 108,
+          "endLine": 117,
+          "params": []
+        },
+        {
+          "name": "main",
+          "startLine": 120,
+          "endLine": 154,
+          "params": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "positive_float",
+          "line": 18,
+          "isDefault": false
+        },
+        {
+          "name": "nonnegative_float",
+          "line": 25,
+          "isDefault": false
+        },
+        {
+          "name": "append_log",
+          "line": 32,
+          "isDefault": false
+        },
+        {
+          "name": "terminate_process_tree",
+          "line": 37,
+          "isDefault": false
+        },
+        {
+          "name": "build_once",
+          "line": 65,
+          "isDefault": false
+        },
+        {
+          "name": "parse_args",
+          "line": 108,
+          "isDefault": false
+        },
+        {
+          "name": "main",
+          "line": 120,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "positive_float",
+          "callee": "float",
+          "lineNumber": 19
+        },
+        {
+          "caller": "positive_float",
+          "callee": "argparse.ArgumentTypeError",
+          "lineNumber": 21
+        },
+        {
+          "caller": "nonnegative_float",
+          "callee": "float",
+          "lineNumber": 26
+        },
+        {
+          "caller": "nonnegative_float",
+          "callee": "argparse.ArgumentTypeError",
+          "lineNumber": 28
+        },
+        {
+          "caller": "append_log",
+          "callee": "stream.write",
+          "lineNumber": 33
+        },
+        {
+          "caller": "append_log",
+          "callee": "stream.flush",
+          "lineNumber": 34
+        },
+        {
+          "caller": "terminate_process_tree",
+          "callee": "process.terminate",
+          "lineNumber": 41
+        },
+        {
+          "caller": "terminate_process_tree",
+          "callee": "process.wait",
+          "lineNumber": 43
+        },
+        {
+          "caller": "terminate_process_tree",
+          "callee": "process.kill",
+          "lineNumber": 45
+        },
+        {
+          "caller": "terminate_process_tree",
+          "callee": "process.wait",
+          "lineNumber": 46
+        },
+        {
+          "caller": "terminate_process_tree",
+          "callee": "os.killpg",
+          "lineNumber": 50
+        },
+        {
+          "caller": "terminate_process_tree",
+          "callee": "process.wait",
+          "lineNumber": 52
+        },
+        {
+          "caller": "terminate_process_tree",
+          "callee": "process.wait",
+          "lineNumber": 56
+        },
+        {
+          "caller": "terminate_process_tree",
+          "callee": "os.killpg",
+          "lineNumber": 59
+        },
+        {
+          "caller": "terminate_process_tree",
+          "callee": "process.wait",
+          "lineNumber": 62
+        },
+        {
+          "caller": "build_once",
+          "callee": "output.unlink",
+          "lineNumber": 72
+        },
+        {
+          "caller": "build_once",
+          "callee": "log_path.open",
+          "lineNumber": 73
+        },
+        {
+          "caller": "build_once",
+          "callee": "subprocess.Popen",
+          "lineNumber": 75
+        },
+        {
+          "caller": "build_once",
+          "callee": "append_log",
+          "lineNumber": 84
+        },
+        {
+          "caller": "build_once",
+          "callee": "process.wait",
+          "lineNumber": 88
+        },
+        {
+          "caller": "build_once",
+          "callee": "append_log",
+          "lineNumber": 91
+        },
+        {
+          "caller": "build_once",
+          "callee": "terminate_process_tree",
+          "lineNumber": 92
+        },
+        {
+          "caller": "build_once",
+          "callee": "append_log",
+          "lineNumber": 97
+        },
+        {
+          "caller": "build_once",
+          "callee": "output.is_file",
+          "lineNumber": 100
+        },
+        {
+          "caller": "build_once",
+          "callee": "output.stat",
+          "lineNumber": 100
+        },
+        {
+          "caller": "build_once",
+          "callee": "append_log",
+          "lineNumber": 102
+        },
+        {
+          "caller": "parse_args",
+          "callee": "argparse.ArgumentParser",
+          "lineNumber": 109
+        },
+        {
+          "caller": "parse_args",
+          "callee": "parser.add_argument",
+          "lineNumber": 110
+        },
+        {
+          "caller": "parse_args",
+          "callee": "parser.add_argument",
+          "lineNumber": 111
+        },
+        {
+          "caller": "parse_args",
+          "callee": "parser.add_argument",
+          "lineNumber": 112
+        },
+        {
+          "caller": "parse_args",
+          "callee": "parser.add_argument",
+          "lineNumber": 113
+        },
+        {
+          "caller": "parse_args",
+          "callee": "range",
+          "lineNumber": 113
+        },
+        {
+          "caller": "parse_args",
+          "callee": "parser.add_argument",
+          "lineNumber": 114
+        },
+        {
+          "caller": "parse_args",
+          "callee": "parser.add_argument",
+          "lineNumber": 115
+        },
+        {
+          "caller": "parse_args",
+          "callee": "parser.add_argument",
+          "lineNumber": 116
+        },
+        {
+          "caller": "parse_args",
+          "callee": "parser.parse_args",
+          "lineNumber": 117
+        },
+        {
+          "caller": "main",
+          "callee": "parse_args",
+          "lineNumber": 121
+        },
+        {
+          "caller": "main",
+          "callee": "args.output.resolve",
+          "lineNumber": 122
+        },
+        {
+          "caller": "main",
+          "callee": "output.parent.mkdir",
+          "lineNumber": 123
+        },
+        {
+          "caller": "main",
+          "callee": "(args.log_dir or output.parent / \"build-logs\").resolve",
+          "lineNumber": 124
+        },
+        {
+          "caller": "main",
+          "callee": "log_dir.mkdir",
+          "lineNumber": 125
+        },
+        {
+          "caller": "main",
+          "callee": "str",
+          "lineNumber": 126
+        },
+        {
+          "caller": "main",
+          "callee": "range",
+          "lineNumber": 129
+        },
+        {
+          "caller": "main",
+          "callee": "build_once",
+          "lineNumber": 131
+        },
+        {
+          "caller": "main",
+          "callee": "print",
+          "lineNumber": 139
+        },
+        {
+          "caller": "main",
+          "callee": "failures.append",
+          "lineNumber": 142
+        },
+        {
+          "caller": "main",
+          "callee": "print",
+          "lineNumber": 143
+        },
+        {
+          "caller": "main",
+          "callee": "time.sleep",
+          "lineNumber": 148
+        },
+        {
+          "caller": "main",
+          "callee": "output.unlink",
+          "lineNumber": 150
+        },
+        {
+          "caller": "main",
+          "callee": "print",
+          "lineNumber": 151
+        },
+        {
+          "caller": "main",
+          "callee": "print",
+          "lineNumber": 153
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 7,
+        "functionCount": 7,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "tools/render_mermaid.py",
+      "language": "python",
+      "fileCategory": "code",
+      "totalLines": 84,
+      "nonEmptyLines": 76,
+      "functions": [
+        {
+          "name": "render",
+          "startLine": 55,
+          "endLine": 64,
+          "params": [
+            "indices"
+          ]
+        },
+        {
+          "name": "done",
+          "startLine": 66,
+          "endLine": 66,
+          "params": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "render",
+          "line": 55,
+          "isDefault": false
+        },
+        {
+          "name": "done",
+          "line": 66,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "render",
+          "callee": "os.path.join",
+          "lineNumber": 56
+        },
+        {
+          "caller": "render",
+          "callee": "open(cm, \"w\", encoding=\"utf-8\").write",
+          "lineNumber": 57
+        },
+        {
+          "caller": "render",
+          "callee": "open",
+          "lineNumber": 57
+        },
+        {
+          "caller": "render",
+          "callee": "\"\\n\".join",
+          "lineNumber": 57
+        },
+        {
+          "caller": "render",
+          "callee": "subprocess.run",
+          "lineNumber": 58
+        },
+        {
+          "caller": "render",
+          "callee": "os.path.join",
+          "lineNumber": 58
+        },
+        {
+          "caller": "render",
+          "callee": "enumerate",
+          "lineNumber": 60
+        },
+        {
+          "caller": "render",
+          "callee": "os.path.join",
+          "lineNumber": 61
+        },
+        {
+          "caller": "render",
+          "callee": "os.path.isfile",
+          "lineNumber": 62
+        },
+        {
+          "caller": "render",
+          "callee": "os.path.getsize",
+          "lineNumber": 62
+        },
+        {
+          "caller": "render",
+          "callee": "os.replace",
+          "lineNumber": 63
+        },
+        {
+          "caller": "render",
+          "callee": "os.path.join",
+          "lineNumber": 63
+        },
+        {
+          "caller": "render",
+          "callee": "glob.glob",
+          "lineNumber": 64
+        },
+        {
+          "caller": "render",
+          "callee": "os.path.join",
+          "lineNumber": 64
+        },
+        {
+          "caller": "render",
+          "callee": "os.remove",
+          "lineNumber": 64
+        },
+        {
+          "caller": "done",
+          "callee": "len",
+          "lineNumber": 66
+        },
+        {
+          "caller": "done",
+          "callee": "range",
+          "lineNumber": 66
+        },
+        {
+          "caller": "done",
+          "callee": "os.path.isfile",
+          "lineNumber": 66
+        },
+        {
+          "caller": "done",
+          "callee": "os.path.join",
+          "lineNumber": 66
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 2,
+        "functionCount": 2,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "tools/verify_artifacts.py",
+      "language": "python",
+      "fileCategory": "code",
+      "totalLines": 153,
+      "nonEmptyLines": 124,
+      "functions": [
+        {
+          "name": "normalized_title",
+          "startLine": 20,
+          "endLine": 21,
+          "params": [
+            "value"
+          ]
+        },
+        {
+          "name": "require_file",
+          "startLine": 24,
+          "endLine": 28,
+          "params": [
+            "path"
+          ]
+        },
+        {
+          "name": "sha256_file",
+          "startLine": 31,
+          "endLine": 36,
+          "params": [
+            "path"
+          ]
+        },
+        {
+          "name": "verify_html",
+          "startLine": 39,
+          "endLine": 48,
+          "params": [
+            "path",
+            "expected_title"
+          ]
+        },
+        {
+          "name": "command_output",
+          "startLine": 51,
+          "endLine": 56,
+          "params": [
+            "command"
+          ]
+        },
+        {
+          "name": "verify_pdf",
+          "startLine": 59,
+          "endLine": 80,
+          "params": [
+            "path",
+            "expected_title"
+          ]
+        },
+        {
+          "name": "write_checksums",
+          "startLine": 83,
+          "endLine": 93,
+          "params": [
+            "paths",
+            "destination"
+          ]
+        },
+        {
+          "name": "verify_checksums",
+          "startLine": 96,
+          "endLine": 113,
+          "params": [
+            "manifest"
+          ]
+        },
+        {
+          "name": "parse_args",
+          "startLine": 116,
+          "endLine": 125,
+          "params": []
+        },
+        {
+          "name": "main",
+          "startLine": 128,
+          "endLine": 149,
+          "params": []
+        }
+      ],
+      "classes": [
+        {
+          "name": "ArtifactVerificationError",
+          "startLine": 16,
+          "endLine": 17,
+          "methods": [],
+          "properties": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "ArtifactVerificationError",
+          "line": 16,
+          "isDefault": false
+        },
+        {
+          "name": "normalized_title",
+          "line": 20,
+          "isDefault": false
+        },
+        {
+          "name": "require_file",
+          "line": 24,
+          "isDefault": false
+        },
+        {
+          "name": "sha256_file",
+          "line": 31,
+          "isDefault": false
+        },
+        {
+          "name": "verify_html",
+          "line": 39,
+          "isDefault": false
+        },
+        {
+          "name": "command_output",
+          "line": 51,
+          "isDefault": false
+        },
+        {
+          "name": "verify_pdf",
+          "line": 59,
+          "isDefault": false
+        },
+        {
+          "name": "write_checksums",
+          "line": 83,
+          "isDefault": false
+        },
+        {
+          "name": "verify_checksums",
+          "line": 96,
+          "isDefault": false
+        },
+        {
+          "name": "parse_args",
+          "line": 116,
+          "isDefault": false
+        },
+        {
+          "name": "main",
+          "line": 128,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "normalized_title",
+          "callee": "\" \".join",
+          "lineNumber": 21
+        },
+        {
+          "caller": "normalized_title",
+          "callee": "html.unescape(value).split",
+          "lineNumber": 21
+        },
+        {
+          "caller": "normalized_title",
+          "callee": "html.unescape",
+          "lineNumber": 21
+        },
+        {
+          "caller": "require_file",
+          "callee": "path.is_file",
+          "lineNumber": 25
+        },
+        {
+          "caller": "require_file",
+          "callee": "ArtifactVerificationError",
+          "lineNumber": 26
+        },
+        {
+          "caller": "require_file",
+          "callee": "path.stat",
+          "lineNumber": 27
+        },
+        {
+          "caller": "require_file",
+          "callee": "ArtifactVerificationError",
+          "lineNumber": 28
+        },
+        {
+          "caller": "sha256_file",
+          "callee": "hashlib.sha256",
+          "lineNumber": 32
+        },
+        {
+          "caller": "sha256_file",
+          "callee": "path.open",
+          "lineNumber": 33
+        },
+        {
+          "caller": "sha256_file",
+          "callee": "iter",
+          "lineNumber": 34
+        },
+        {
+          "caller": "sha256_file",
+          "callee": "stream.read",
+          "lineNumber": 34
+        },
+        {
+          "caller": "sha256_file",
+          "callee": "digest.update",
+          "lineNumber": 35
+        },
+        {
+          "caller": "sha256_file",
+          "callee": "digest.hexdigest",
+          "lineNumber": 36
+        },
+        {
+          "caller": "verify_html",
+          "callee": "require_file",
+          "lineNumber": 40
+        },
+        {
+          "caller": "verify_html",
+          "callee": "path.read_text",
+          "lineNumber": 41
+        },
+        {
+          "caller": "verify_html",
+          "callee": "re.search",
+          "lineNumber": 42
+        },
+        {
+          "caller": "verify_html",
+          "callee": "normalized_title",
+          "lineNumber": 43
+        },
+        {
+          "caller": "verify_html",
+          "callee": "match.group",
+          "lineNumber": 43
+        },
+        {
+          "caller": "verify_html",
+          "callee": "normalized_title",
+          "lineNumber": 44
+        },
+        {
+          "caller": "verify_html",
+          "callee": "ArtifactVerificationError",
+          "lineNumber": 46
+        },
+        {
+          "caller": "command_output",
+          "callee": "subprocess.run",
+          "lineNumber": 52
+        },
+        {
+          "caller": "command_output",
+          "callee": "(result.stderr or result.stdout).strip",
+          "lineNumber": 54
+        },
+        {
+          "caller": "command_output",
+          "callee": "ArtifactVerificationError",
+          "lineNumber": 55
+        },
+        {
+          "caller": "command_output",
+          "callee": "' '.join",
+          "lineNumber": 55
+        },
+        {
+          "caller": "verify_pdf",
+          "callee": "require_file",
+          "lineNumber": 60
+        },
+        {
+          "caller": "verify_pdf",
+          "callee": "path.read_bytes().startswith",
+          "lineNumber": 61
+        },
+        {
+          "caller": "verify_pdf",
+          "callee": "path.read_bytes",
+          "lineNumber": 61
+        },
+        {
+          "caller": "verify_pdf",
+          "callee": "ArtifactVerificationError",
+          "lineNumber": 62
+        },
+        {
+          "caller": "verify_pdf",
+          "callee": "shutil.which",
+          "lineNumber": 63
+        },
+        {
+          "caller": "verify_pdf",
+          "callee": "shutil.which",
+          "lineNumber": 63
+        },
+        {
+          "caller": "verify_pdf",
+          "callee": "ArtifactVerificationError",
+          "lineNumber": 64
+        },
+        {
+          "caller": "verify_pdf",
+          "callee": "normalized_title",
+          "lineNumber": 66
+        },
+        {
+          "caller": "verify_pdf",
+          "callee": "command_output",
+          "lineNumber": 67
+        },
+        {
+          "caller": "verify_pdf",
+          "callee": "str",
+          "lineNumber": 67
+        },
+        {
+          "caller": "verify_pdf",
+          "callee": "re.search",
+          "lineNumber": 68
+        },
+        {
+          "caller": "verify_pdf",
+          "callee": "normalized_title",
+          "lineNumber": 69
+        },
+        {
+          "caller": "verify_pdf",
+          "callee": "match.group",
+          "lineNumber": 69
+        },
+        {
+          "caller": "verify_pdf",
+          "callee": "normalized_title",
+          "lineNumber": 73
+        },
+        {
+          "caller": "verify_pdf",
+          "callee": "command_output",
+          "lineNumber": 74
+        },
+        {
+          "caller": "verify_pdf",
+          "callee": "str",
+          "lineNumber": 74
+        },
+        {
+          "caller": "verify_pdf",
+          "callee": "ArtifactVerificationError",
+          "lineNumber": 77
+        },
+        {
+          "caller": "write_checksums",
+          "callee": "destination.parent.mkdir",
+          "lineNumber": 84
+        },
+        {
+          "caller": "write_checksums",
+          "callee": "sorted",
+          "lineNumber": 86
+        },
+        {
+          "caller": "write_checksums",
+          "callee": "require_file",
+          "lineNumber": 87
+        },
+        {
+          "caller": "write_checksums",
+          "callee": "path.parent.resolve",
+          "lineNumber": 88
+        },
+        {
+          "caller": "write_checksums",
+          "callee": "destination.parent.resolve",
+          "lineNumber": 88
+        },
+        {
+          "caller": "write_checksums",
+          "callee": "ArtifactVerificationError",
+          "lineNumber": 89
+        },
+        {
+          "caller": "write_checksums",
+          "callee": "lines.append",
+          "lineNumber": 92
+        },
+        {
+          "caller": "write_checksums",
+          "callee": "sha256_file",
+          "lineNumber": 92
+        },
+        {
+          "caller": "write_checksums",
+          "callee": "destination.write_text",
+          "lineNumber": 93
+        },
+        {
+          "caller": "write_checksums",
+          "callee": "\"\".join",
+          "lineNumber": 93
+        },
+        {
+          "caller": "verify_checksums",
+          "callee": "require_file",
+          "lineNumber": 97
+        },
+        {
+          "caller": "verify_checksums",
+          "callee": "set",
+          "lineNumber": 98
+        },
+        {
+          "caller": "verify_checksums",
+          "callee": "enumerate",
+          "lineNumber": 99
+        },
+        {
+          "caller": "verify_checksums",
+          "callee": "manifest.read_text(encoding=\"utf-8\").splitlines",
+          "lineNumber": 99
+        },
+        {
+          "caller": "verify_checksums",
+          "callee": "manifest.read_text",
+          "lineNumber": 99
+        },
+        {
+          "caller": "verify_checksums",
+          "callee": "re.fullmatch",
+          "lineNumber": 100
+        },
+        {
+          "caller": "verify_checksums",
+          "callee": "ArtifactVerificationError",
+          "lineNumber": 102
+        },
+        {
+          "caller": "verify_checksums",
+          "callee": "match.groups",
+          "lineNumber": 103
+        },
+        {
+          "caller": "verify_checksums",
+          "callee": "ArtifactVerificationError",
+          "lineNumber": 105
+        },
+        {
+          "caller": "verify_checksums",
+          "callee": "seen.add",
+          "lineNumber": 106
+        },
+        {
+          "caller": "verify_checksums",
+          "callee": "require_file",
+          "lineNumber": 108
+        },
+        {
+          "caller": "verify_checksums",
+          "callee": "sha256_file",
+          "lineNumber": 109
+        },
+        {
+          "caller": "verify_checksums",
+          "callee": "ArtifactVerificationError",
+          "lineNumber": 111
+        },
+        {
+          "caller": "parse_args",
+          "callee": "argparse.ArgumentParser",
+          "lineNumber": 117
+        },
+        {
+          "caller": "parse_args",
+          "callee": "parser.add_argument",
+          "lineNumber": 118
+        },
+        {
+          "caller": "parse_args",
+          "callee": "parser.add_argument",
+          "lineNumber": 119
+        },
+        {
+          "caller": "parse_args",
+          "callee": "parser.add_argument",
+          "lineNumber": 120
+        },
+        {
+          "caller": "parse_args",
+          "callee": "parser.add_argument",
+          "lineNumber": 121
+        },
+        {
+          "caller": "parse_args",
+          "callee": "parser.parse_args",
+          "lineNumber": 122
+        },
+        {
+          "caller": "parse_args",
+          "callee": "parser.error",
+          "lineNumber": 124
+        },
+        {
+          "caller": "main",
+          "callee": "parse_args",
+          "lineNumber": 129
+        },
+        {
+          "caller": "main",
+          "callee": "verify_pdf",
+          "lineNumber": 133
+        },
+        {
+          "caller": "main",
+          "callee": "artifacts.append",
+          "lineNumber": 134
+        },
+        {
+          "caller": "main",
+          "callee": "verify_html",
+          "lineNumber": 136
+        },
+        {
+          "caller": "main",
+          "callee": "artifacts.append",
+          "lineNumber": 137
+        },
+        {
+          "caller": "main",
+          "callee": "write_checksums",
+          "lineNumber": 139
+        },
+        {
+          "caller": "main",
+          "callee": "verify_checksums",
+          "lineNumber": 140
+        },
+        {
+          "caller": "main",
+          "callee": "print",
+          "lineNumber": 142
+        },
+        {
+          "caller": "main",
+          "callee": "print",
+          "lineNumber": 146
+        },
+        {
+          "caller": "main",
+          "callee": "print",
+          "lineNumber": 148
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 11,
+        "functionCount": 10,
+        "classCount": 1
+      }
+    }
+  ]
+}

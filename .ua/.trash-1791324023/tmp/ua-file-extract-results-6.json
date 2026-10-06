@@ -1,0 +1,290 @@
+{
+  "scriptCompleted": true,
+  "filesAnalyzed": 6,
+  "filesSkipped": [],
+  "filesUnreadable": [],
+  "analysisOutcomes": {
+    "structure": {
+      "succeeded": 6,
+      "failed": 0
+    },
+    "callGraph": {
+      "succeeded": 0,
+      "failed": 0,
+      "skipped": 6
+    }
+  },
+  "results": [
+    {
+      "path": "05_tools_skills/5.1_tool_inventory.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 160,
+      "nonEmptyLines": 119,
+      "sections": [
+        {
+          "heading": "5.1 Danh mục Tool & Mô hình gọi thực thi",
+          "level": 2,
+          "line": 1
+        },
+        {
+          "heading": "5.1.1 Rà soát danh mục công cụ: Nguồn gốc, Phân nhóm & Bảng đối soát",
+          "level": 3,
+          "line": 5
+        },
+        {
+          "heading": "5.1.2 Bản chất của công cụ: Hợp đồng, Ranh giới & Ngữ nghĩa thất bại",
+          "level": 3,
+          "line": 33
+        },
+        {
+          "heading": "5.1.3 Các mô hình gọi công cụ: Truy vấn chỉ đọc, Ghi có tác dụng phụ, Điều phối dạng chuỗi",
+          "level": 3,
+          "line": 67
+        },
+        {
+          "heading": "5.1.4 Nguyên tắc bơm ngược kết quả (Result Injection): Biến dữ liệu thô thành bằng chứng có thể tái sử dụng",
+          "level": 3,
+          "line": 124
+        },
+        {
+          "heading": "5.1.5 Khả năng quan sát (Observability): Làm thế nào để một lượt gọi công cụ có thể tái hiện và phát lại",
+          "level": 3,
+          "line": 151
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 6
+      }
+    },
+    {
+      "path": "05_tools_skills/5.2_tool_policy.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 200,
+      "nonEmptyLines": 149,
+      "sections": [
+        {
+          "heading": "5.2 Chính sách Tool: Cho phép, từ chối & Phân tầng chính sách",
+          "level": 2,
+          "line": 1
+        },
+        {
+          "heading": "5.2.1 Cấu trúc chính sách công cụ chính thức: Bốn khối cốt lõi",
+          "level": 3,
+          "line": 8
+        },
+        {
+          "heading": "5.2.2 Bảng tra cứu nhanh khái niệm công cụ & Chính sách",
+          "level": 3,
+          "line": 19
+        },
+        {
+          "heading": "5.2.3 Ngữ nghĩa allow/deny: Ký tự đại diện Wildcard & Thứ tự ưu tiên",
+          "level": 3,
+          "line": 41
+        },
+        {
+          "heading": "5.2.4 Quản trị công cụ phân tầng theo Kênh và Nhóm chat",
+          "level": 3,
+          "line": 96
+        },
+        {
+          "heading": "5.2.5 Tùy biến chính sách công cụ theo Nhà cung cấp mô hình",
+          "level": 3,
+          "line": 138
+        },
+        {
+          "heading": "5.2.6 Giới hạn công cụ đối với Sub-agent: Thu hẹp phân tầng theo độ sâu",
+          "level": 3,
+          "line": 156
+        },
+        {
+          "heading": "5.2.7 Nghiệm thu & Kiểm thử hồi quy: Khép kín bằng chứng cấu hình và bằng chứng log",
+          "level": 3,
+          "line": 185
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 8
+      }
+    },
+    {
+      "path": "05_tools_skills/5.3_skills_plugins.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 140,
+      "nonEmptyLines": 95,
+      "sections": [
+        {
+          "heading": "5.3 Cơ chế Skill: Cố định chỉ thị dựa trên thư viện tích hợp",
+          "level": 2,
+          "line": 1
+        },
+        {
+          "heading": "5.3.1 Định vị & Phân công: Plugin mở rộng năng lực, Skill chuẩn hóa phương pháp",
+          "level": 3,
+          "line": 8
+        },
+        {
+          "heading": "5.3.2 Quản trị Plugin: Cài đặt, Kích hoạt, Danh sách trắng & Tự kiểm tra",
+          "level": 3,
+          "line": 23
+        },
+        {
+          "heading": "5.3.3 Tệp Skill & Kho kỹ năng công cộng: Cạm bẫy chuỗi cung ứng đằng sau sự tiện lợi",
+          "level": 3,
+          "line": 53
+        },
+        {
+          "heading": "Cảnh giác với rủi ro hệ sinh thái: Xem tệp SKILL.md như một bề mặt tấn công tiềm ẩn",
+          "level": 4,
+          "line": 109
+        },
+        {
+          "heading": "5.3.4 Khuyến nghị quản trị: Dùng Tool Policy làm ranh giới, Dùng Skill để nâng cao tính ổn định",
+          "level": 3,
+          "line": 133
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 6
+      }
+    },
+    {
+      "path": "05_tools_skills/5.4_browser_nodes.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 114,
+      "nonEmptyLines": 78,
+      "sections": [
+        {
+          "heading": "5.4 Công cụ trình duyệt (Browser Tool) & Tự động hóa web",
+          "level": 2,
+          "line": 1
+        },
+        {
+          "heading": "5.4.1 Ranh giới an toàn: Ưu tiên cô lập, xem trạng thái đăng nhập là thông tin nhạy cảm",
+          "level": 3,
+          "line": 5
+        },
+        {
+          "heading": "5.4.2 Năng lực & Chính sách: Biến thao tác web thành công cụ có ranh giới",
+          "level": 3,
+          "line": 21
+        },
+        {
+          "heading": "5.4.3 Phân tầng năng lực trình duyệt: 4 cấp độ từ tìm kiếm đến thị giác",
+          "level": 3,
+          "line": 29
+        },
+        {
+          "heading": "5.4.4 Các câu lệnh thông dụng: Khởi động, Kiểm tra & Mở trang web",
+          "level": 3,
+          "line": 63
+        },
+        {
+          "heading": "5.4.5 Phối hợp với công cụ Web: Ưu tiên công cụ đọc, chỉ dùng trình duyệt khi bắt buộc",
+          "level": 3,
+          "line": 85
+        },
+        {
+          "heading": "5.4.6 Nghiệm thu & Xử lý sự cố: Dùng lệnh trạng thái và nhật ký log để định vị phân tầng",
+          "level": 3,
+          "line": 96
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 7
+      }
+    },
+    {
+      "path": "05_tools_skills/README.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 45,
+      "nonEmptyLines": 31,
+      "sections": [
+        {
+          "heading": "Chương 5: Hệ thống Tool, Skill và Plugin",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "Sơ đồ toàn cảnh",
+          "level": 2,
+          "line": 18
+        },
+        {
+          "heading": "Mục lục hướng dẫn chương",
+          "level": 2,
+          "line": 35
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 3
+      }
+    },
+    {
+      "path": "05_tools_skills/summary.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 32,
+      "nonEmptyLines": 21,
+      "sections": [
+        {
+          "heading": "5.5 Tóm tắt chương",
+          "level": 2,
+          "line": 1
+        },
+        {
+          "heading": "5.5.1 Các kết luận trọng yếu",
+          "level": 3,
+          "line": 5
+        },
+        {
+          "heading": "5.5.2 Câu hỏi tự kiểm tra",
+          "level": 3,
+          "line": 12
+        },
+        {
+          "heading": "5.5.3 Gợi ý ứng dụng thực tế từ cộng đồng",
+          "level": 3,
+          "line": 18
+        },
+        {
+          "heading": "5.5.4 Giới thiệu chương tiếp theo",
+          "level": 3,
+          "line": 25
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 5
+      }
+    }
+  ]
+}

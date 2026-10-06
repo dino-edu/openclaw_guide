@@ -1,0 +1,139 @@
+{
+  "nodes": [
+    {
+      "id": "document:CONTRIBUTING.md",
+      "type": "document",
+      "name": "CONTRIBUTING.md",
+      "filePath": "CONTRIBUTING.md",
+      "summary": "Outlines contributor guidelines, code of conduct, markdown formatting standards, and pull request workflows for the project.",
+      "tags": [
+        "documentation",
+        "contributing",
+        "guidelines",
+        "pull-request"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "document:README.md",
+      "type": "document",
+      "name": "README.md",
+      "filePath": "README.md",
+      "summary": "Main documentation landing page providing an overview of the OpenClaw guide, key highlights, reading formats, quickstart steps, and role-based learning tracks.",
+      "tags": [
+        "documentation",
+        "entry-point",
+        "overview",
+        "quickstart"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "document:README_en.md",
+      "type": "document",
+      "name": "README_en.md",
+      "filePath": "README_en.md",
+      "summary": "English edition of the project overview introducing OpenClaw architecture highlights, local preview instructions, and guided reading tracks.",
+      "tags": [
+        "documentation",
+        "overview",
+        "quickstart",
+        "translation"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "document:SUMMARY.md",
+      "type": "document",
+      "name": "SUMMARY.md",
+      "filePath": "SUMMARY.md",
+      "summary": "GitBook table of contents defining the structural navigation across beginner fundamentals, advanced features, core principles, practical deployment, and appendices.",
+      "tags": [
+        "documentation",
+        "table-of-contents",
+        "navigation",
+        "book-structure"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "config:book.json",
+      "type": "config",
+      "name": "book.json",
+      "filePath": "book.json",
+      "summary": "GitBook configuration file specifying book metadata, Vietnamese language setting, official sidebar links, and theme display settings.",
+      "tags": [
+        "configuration",
+        "gitbook",
+        "documentation",
+        "metadata"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "config:package.json",
+      "type": "config",
+      "name": "package.json",
+      "filePath": "package.json",
+      "summary": "NPM package manifest configuring test discovery scripts and development dependencies for Mermaid diagram compilation and browser automation.",
+      "tags": [
+        "configuration",
+        "package-manifest",
+        "dependencies",
+        "build-system"
+      ],
+      "complexity": "simple"
+    }
+  ],
+  "edges": [
+    {
+      "source": "config:book.json",
+      "target": "document:README.md",
+      "type": "configures",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "config:book.json",
+      "target": "document:SUMMARY.md",
+      "type": "configures",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "document:README.md",
+      "target": "document:SUMMARY.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:README.md",
+      "target": "document:CONTRIBUTING.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:README_en.md",
+      "target": "document:README.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:README_en.md",
+      "target": "document:CONTRIBUTING.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "config:package.json",
+      "target": "config:book.json",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    }
+  ]
+}

@@ -1,0 +1,151 @@
+{
+  "nodes": [
+    {
+      "id": "document:13_practical_cases/13.1_lark_slack_workbot.md",
+      "type": "document",
+      "name": "13.1_lark_slack_workbot.md",
+      "filePath": "13_practical_cases/13.1_lark_slack_workbot.md",
+      "summary": "Demonstrates building an enterprise Lark/Slack workgroup assistant for an engineering team, progressing from a minimal single-tool knowledge search loop to layered RBAC permission enforcement, GitHub PR analysis, Jira issue tracking, and scheduled cron summaries.",
+      "tags": [
+        "workgroup-bot",
+        "lark-integration",
+        "slack-bot",
+        "rbac",
+        "cron-job"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "document:13_practical_cases/13.2_customer_support_agent.md",
+      "type": "document",
+      "name": "13.2_customer_support_agent.md",
+      "filePath": "13_practical_cases/13.2_customer_support_agent.md",
+      "summary": "Details an enterprise customer support agent implementation for B2B SaaS, covering automated FAQ retrieval, sentiment-driven human escalation workflows, Zendesk ticket creation, pre-LLM PII masking, and multilingual policy configuration.",
+      "tags": [
+        "customer-support",
+        "faq-automation",
+        "escalation-triggers",
+        "pii-masking",
+        "zendesk-integration"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "document:13_practical_cases/13.3_vertical_industry_cases.md",
+      "type": "document",
+      "name": "13.3_vertical_industry_cases.md",
+      "filePath": "13_practical_cases/13.3_vertical_industry_cases.md",
+      "summary": "Provides a comparative reference contrasting agent architectures across four vertical sectors (Financial Research, Clinical Healthcare, Adaptive Education, and E-Commerce), examining regulatory compliance constraints (SOX, HIPAA, FERPA, PCI-DSS), human-in-the-loop review gates, and memory isolation.",
+      "tags": [
+        "vertical-industries",
+        "regulatory-compliance",
+        "human-in-the-loop",
+        "data-isolation",
+        "domain-adaptation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "document:13_practical_cases/README.md",
+      "type": "document",
+      "name": "README.md",
+      "filePath": "13_practical_cases/README.md",
+      "summary": "Introduces Chapter 13 on practical real-world OpenClaw deployment cases, detailing the standardized five-stage evolutionary path from a minimal verification loop to production readiness across enterprise workbots, customer support, and vertical industry scenarios.",
+      "tags": [
+        "chapter-overview",
+        "practical-cases",
+        "case-studies",
+        "deployment-methodology",
+        "documentation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "document:13_practical_cases/summary.md",
+      "type": "document",
+      "name": "summary.md",
+      "filePath": "13_practical_cases/summary.md",
+      "summary": "Summarizes Chapter 13 key insights on progressive configuration, tool access controls, AI model tiering, and industry-specific adaptation vectors, providing transition guidance into performance tuning and operational troubleshooting chapters.",
+      "tags": [
+        "chapter-summary",
+        "best-practices",
+        "progressive-configuration",
+        "model-tiering",
+        "documentation"
+      ],
+      "complexity": "simple"
+    }
+  ],
+  "edges": [
+    {
+      "source": "document:13_practical_cases/README.md",
+      "target": "document:13_practical_cases/13.1_lark_slack_workbot.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:13_practical_cases/README.md",
+      "target": "document:13_practical_cases/13.2_customer_support_agent.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:13_practical_cases/README.md",
+      "target": "document:13_practical_cases/13.3_vertical_industry_cases.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:13_practical_cases/README.md",
+      "target": "document:13_practical_cases/summary.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:13_practical_cases/summary.md",
+      "target": "document:13_practical_cases/13.1_lark_slack_workbot.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:13_practical_cases/summary.md",
+      "target": "document:13_practical_cases/13.2_customer_support_agent.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:13_practical_cases/summary.md",
+      "target": "document:13_practical_cases/13.3_vertical_industry_cases.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:13_practical_cases/13.3_vertical_industry_cases.md",
+      "target": "document:13_practical_cases/13.1_lark_slack_workbot.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:13_practical_cases/13.3_vertical_industry_cases.md",
+      "target": "document:13_practical_cases/13.2_customer_support_agent.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:13_practical_cases/13.1_lark_slack_workbot.md",
+      "target": "document:13_practical_cases/13.2_customer_support_agent.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    }
+  ]
+}

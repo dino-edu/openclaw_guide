@@ -1,0 +1,360 @@
+{
+  "scriptCompleted": true,
+  "filesAnalyzed": 6,
+  "filesSkipped": [],
+  "filesUnreadable": [],
+  "analysisOutcomes": {
+    "structure": {
+      "succeeded": 6,
+      "failed": 0
+    },
+    "callGraph": {
+      "succeeded": 0,
+      "failed": 0,
+      "skipped": 6
+    }
+  },
+  "results": [
+    {
+      "path": "CONTRIBUTING.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 57,
+      "nonEmptyLines": 39,
+      "sections": [
+        {
+          "heading": "Hướng dẫn đóng góp: Contributing",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "1. Quy chuẩn ứng xử",
+          "level": 2,
+          "line": 5
+        },
+        {
+          "heading": "2. Cấu trúc tài liệu & Quy chuẩn định dạng",
+          "level": 2,
+          "line": 9
+        },
+        {
+          "heading": "2.1 Chạy kiểm tra tại máy cục bộ",
+          "level": 3,
+          "line": 13
+        },
+        {
+          "heading": "2.2 Quy ước định dạng Markdown",
+          "level": 3,
+          "line": 21
+        },
+        {
+          "heading": "3. Quy chuẩn gửi Pull Request (PR)",
+          "level": 2,
+          "line": 36
+        },
+        {
+          "heading": "4. Các định hướng đóng góp ưu tiên",
+          "level": 2,
+          "line": 47
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 7
+      }
+    },
+    {
+      "path": "README.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 116,
+      "nonEmptyLines": 80,
+      "sections": [
+        {
+          "heading": "OpenClaw: Từ Nhập Môn Đến Tinh Thông",
+          "level": 1,
+          "line": 5
+        },
+        {
+          "heading": "Điểm nổi bật của cuốn sách",
+          "level": 2,
+          "line": 19
+        },
+        {
+          "heading": "Đối tượng độc giả & Kiến thức nền tảng",
+          "level": 2,
+          "line": 25
+        },
+        {
+          "heading": "Cấu trúc tổng thể của cuốn sách",
+          "level": 2,
+          "line": 30
+        },
+        {
+          "heading": "Phương thức đọc sách",
+          "level": 2,
+          "line": 40
+        },
+        {
+          "heading": "Đọc trực tuyến",
+          "level": 3,
+          "line": 42
+        },
+        {
+          "heading": "Tải bản đọc ngoại tuyến (Offline)",
+          "level": 3,
+          "line": 47
+        },
+        {
+          "heading": "Xem trước tại máy cục bộ (Local Preview)",
+          "level": 3,
+          "line": 51
+        },
+        {
+          "heading": "5 phút bắt đầu nhanh",
+          "level": 2,
+          "line": 62
+        },
+        {
+          "heading": "Lộ trình học tập theo vai trò",
+          "level": 2,
+          "line": 72
+        },
+        {
+          "heading": "Tài liệu khuyến nghị tham khảo thêm",
+          "level": 2,
+          "line": 96
+        },
+        {
+          "heading": "Đóng góp & Phản hồi",
+          "level": 2,
+          "line": 110
+        },
+        {
+          "heading": "Giấy phép bản quyền",
+          "level": 2,
+          "line": 114
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 13
+      }
+    },
+    {
+      "path": "README_en.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 101,
+      "nonEmptyLines": 67,
+      "sections": [
+        {
+          "heading": "OpenClaw: Beginner to Expert",
+          "level": 1,
+          "line": 5
+        },
+        {
+          "heading": "Highlights",
+          "level": 2,
+          "line": 19
+        },
+        {
+          "heading": "Target Audience & Prerequisites",
+          "level": 2,
+          "line": 27
+        },
+        {
+          "heading": "Book Structure",
+          "level": 2,
+          "line": 32
+        },
+        {
+          "heading": "How to Read",
+          "level": 2,
+          "line": 42
+        },
+        {
+          "heading": "Online",
+          "level": 3,
+          "line": 44
+        },
+        {
+          "heading": "Local Preview",
+          "level": 3,
+          "line": 49
+        },
+        {
+          "heading": "5-Minute Quick Start",
+          "level": 2,
+          "line": 60
+        },
+        {
+          "heading": "Learning Paths",
+          "level": 2,
+          "line": 70
+        },
+        {
+          "heading": "Related Books",
+          "level": 2,
+          "line": 81
+        },
+        {
+          "heading": "Contributing",
+          "level": 2,
+          "line": 95
+        },
+        {
+          "heading": "License",
+          "level": 2,
+          "line": 99
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 12
+      }
+    },
+    {
+      "path": "SUMMARY.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 127,
+      "nonEmptyLines": 116,
+      "sections": [
+        {
+          "heading": "Mục lục",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "Phần I: Cơ sở nhập môn",
+          "level": 2,
+          "line": 6
+        },
+        {
+          "heading": "Phần II: Tính năng nâng cao",
+          "level": 2,
+          "line": 33
+        },
+        {
+          "heading": "Phần III: Nguyên lý lõi & Kỹ thuật triển khai",
+          "level": 2,
+          "line": 61
+        },
+        {
+          "heading": "Phần IV: Hướng dẫn thực chiến & Tối ưu chuyên sâu",
+          "level": 2,
+          "line": 92
+        },
+        {
+          "heading": "Phụ lục",
+          "level": 2,
+          "line": 115
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 6
+      }
+    },
+    {
+      "path": "book.json",
+      "language": "json",
+      "fileCategory": "config",
+      "totalLines": 18,
+      "nonEmptyLines": 18,
+      "sections": [
+        {
+          "heading": "title",
+          "level": 1,
+          "line": 2
+        },
+        {
+          "heading": "description",
+          "level": 1,
+          "line": 3
+        },
+        {
+          "heading": "language",
+          "level": 1,
+          "line": 4
+        },
+        {
+          "heading": "author",
+          "level": 1,
+          "line": 5
+        },
+        {
+          "heading": "root",
+          "level": 1,
+          "line": 6
+        },
+        {
+          "heading": "links",
+          "level": 1,
+          "line": 7
+        },
+        {
+          "heading": "pluginsConfig",
+          "level": 1,
+          "line": 13
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 7
+      }
+    },
+    {
+      "path": "package.json",
+      "language": "json",
+      "fileCategory": "config",
+      "totalLines": 11,
+      "nonEmptyLines": 11,
+      "sections": [
+        {
+          "heading": "name",
+          "level": 1,
+          "line": 2
+        },
+        {
+          "heading": "private",
+          "level": 1,
+          "line": 3
+        },
+        {
+          "heading": "scripts",
+          "level": 1,
+          "line": 4
+        },
+        {
+          "heading": "devDependencies",
+          "level": 1,
+          "line": 7
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 4
+      }
+    }
+  ]
+}

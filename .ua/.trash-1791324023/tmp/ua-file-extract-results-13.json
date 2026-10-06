@@ -1,0 +1,386 @@
+{
+  "scriptCompleted": true,
+  "filesAnalyzed": 7,
+  "filesSkipped": [],
+  "filesUnreadable": [],
+  "analysisOutcomes": {
+    "structure": {
+      "succeeded": 7,
+      "failed": 0
+    },
+    "callGraph": {
+      "succeeded": 0,
+      "failed": 0,
+      "skipped": 7
+    }
+  },
+  "results": [
+    {
+      "path": "12_extension_engineering/12.1_plugin_architecture.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 219,
+      "nonEmptyLines": 167,
+      "sections": [
+        {
+          "heading": "12.1 Hệ thống phát triển Plugin: Cơ chế kỹ thuật cho mở rộng tùy biến",
+          "level": 2,
+          "line": 1
+        },
+        {
+          "heading": "12.1.1 Bản chất của Plugin: Module TypeScript/JavaScript thường trực trong tiến trình",
+          "level": 3,
+          "line": 5
+        },
+        {
+          "heading": "12.1.2 Cấu hình & Kích hoạt: entries, enabled, config và load.paths",
+          "level": 3,
+          "line": 19
+        },
+        {
+          "heading": "12.1.3 Ranh giới an toàn: Sự hiệp đồng giữa Danh sách trắng Plugin và Chính sách công cụ",
+          "level": 3,
+          "line": 48
+        },
+        {
+          "heading": "12.1.4 Kiến trúc Hook: Cơ chế vận hành hạt nhân của Plugin",
+          "level": 3,
+          "line": 95
+        },
+        {
+          "heading": "Nhóm Hook vòng đời Agent",
+          "level": 4,
+          "line": 101
+        },
+        {
+          "heading": "Nhóm Hook xử lý tin nhắn",
+          "level": 4,
+          "line": 116
+        },
+        {
+          "heading": "Nhóm Hook gọi công cụ",
+          "level": 4,
+          "line": 127
+        },
+        {
+          "heading": "Nhóm Hook Sub-agent & Gateway",
+          "level": 4,
+          "line": 135
+        },
+        {
+          "heading": "12.1.5 Thị trường Plugin & Khả năng tương thích Bundle",
+          "level": 3,
+          "line": 184
+        },
+        {
+          "heading": "12.1.6 Nghiệm thu & Chẩn đoán sự cố: Quy trình khép kín bằng lệnh chuyên dụng",
+          "level": 3,
+          "line": 202
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 11
+      }
+    },
+    {
+      "path": "12_extension_engineering/12.2_custom_tools.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 217,
+      "nonEmptyLines": 177,
+      "sections": [
+        {
+          "heading": "12.2 Tự tạo Tool tùy biến: Cô lập tác dụng phụ trong ranh giới kiểm soát",
+          "level": 2,
+          "line": 1
+        },
+        {
+          "heading": "12.2.1 Nguyên tắc tối thiểu của Custom Tool: Đầu vào kiểm chứng được, Đầu ra phát lại được",
+          "level": 3,
+          "line": 5
+        },
+        {
+          "heading": "Ba phản mẫu thiết kế (Anti-patterns) điển hình",
+          "level": 4,
+          "line": 15
+        },
+        {
+          "heading": "12.2.2 Đưa công cụ vào Chính sách: Quy tắc phân tầng & Từ chối ưu tiên",
+          "level": 3,
+          "line": 31
+        },
+        {
+          "heading": "Cú pháp TypeScript khi đăng ký Công cụ",
+          "level": 4,
+          "line": 62
+        },
+        {
+          "heading": "12.2.3 Quản lý phiên bản công cụ & Vòng đời",
+          "level": 3,
+          "line": 115
+        },
+        {
+          "heading": "12.2.4 Phối hợp & Điều phối chuỗi công cụ (Orchestration)",
+          "level": 3,
+          "line": 154
+        },
+        {
+          "heading": "12.2.5 Cách ly thực thi cho các công cụ có độ rủi ro cao",
+          "level": 3,
+          "line": 198
+        },
+        {
+          "heading": "12.2.6 Nghiệm thu & Chẩn đoán sự cố",
+          "level": 3,
+          "line": 206
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 9
+      }
+    },
+    {
+      "path": "12_extension_engineering/12.3_testing_debugging.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 227,
+      "nonEmptyLines": 175,
+      "sections": [
+        {
+          "heading": "12.3 Kiểm thử & Gỡ lỗi (Debugging): Biến tiện ích mở rộng thành quy trình có thể tái hiện",
+          "level": 2,
+          "line": 1
+        },
+        {
+          "heading": "12.3.1 Phạm vi nghiệm thu: Xác minh phân tầng thay vì nhảy cóc sang End-to-End",
+          "level": 3,
+          "line": 5
+        },
+        {
+          "heading": "12.3.2 Bộ lệnh tự kiểm tra tối thiểu: doctor trước, status tiếp theo, rồi đến các đầu dò probe",
+          "level": 3,
+          "line": 31
+        },
+        {
+          "heading": "12.3.3 Kiểm thử bản chụp (Snapshot Testing): Đối chiếu đường cơ sở giữa cấu hình và hành vi",
+          "level": 3,
+          "line": 44
+        },
+        {
+          "heading": "12.3.4 Phát lại để định vị lỗi: Tái hiện chuỗi yêu cầu theo traceId",
+          "level": 3,
+          "line": 102
+        },
+        {
+          "heading": "12.3.5 Đường ống kiểm thử tự động: Xác minh tiện ích mở rộng trong CI/CD",
+          "level": 3,
+          "line": 113
+        },
+        {
+          "heading": "12.3.6 Phát hành thử nghiệm Canary & Hoàn tác Rollback",
+          "level": 3,
+          "line": 221
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 7
+      }
+    },
+    {
+      "path": "12_extension_engineering/12.4_production_blueprint.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 141,
+      "nonEmptyLines": 105,
+      "sections": [
+        {
+          "heading": "12.4 Bản thiết kế sản xuất (Production Blueprint): Kiểm soát khả năng mở rộng",
+          "level": 2,
+          "line": 1
+        },
+        {
+          "heading": "12.4.1 Phát hành & Hoàn tác: Cấu hình là Mã nguồn, Bật tắt là Công tắc",
+          "level": 3,
+          "line": 5
+        },
+        {
+          "heading": "12.4.2 Đường cơ sở an toàn: Danh sách trắng, Từ chối ưu tiên & Nạp khóa qua biến môi trường",
+          "level": 3,
+          "line": 16
+        },
+        {
+          "heading": "12.4.3 Độ tin cậy & Hạ cấp phục vụ: Biến không khả dụng thành khả dụng",
+          "level": 3,
+          "line": 26
+        },
+        {
+          "heading": "12.4.4 Checklist triển khai sản xuất",
+          "level": 3,
+          "line": 34
+        },
+        {
+          "heading": "12.4.5 Giám sát môi trường sản xuất: Chỉ số then chốt (KPI) & Ngưỡng cảnh báo",
+          "level": 3,
+          "line": 69
+        },
+        {
+          "heading": "12.4.6 Danh mục nghiệm thu vận hành: Biến \"Chạy được\" thành \"Chứng minh được\"",
+          "level": 3,
+          "line": 126
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 7
+      }
+    },
+    {
+      "path": "12_extension_engineering/12.5_framework_interoperability.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 131,
+      "nonEmptyLines": 95,
+      "sections": [
+        {
+          "heading": "12.5 Hướng dẫn tương tác liên framework (Framework Interoperability)",
+          "level": 2,
+          "line": 1
+        },
+        {
+          "heading": "12.5.1 Vì sao lại cần tương tác liên framework",
+          "level": 3,
+          "line": 5
+        },
+        {
+          "heading": "12.5.2 Kiến trúc 3 tầng của tương tác liên framework",
+          "level": 3,
+          "line": 15
+        },
+        {
+          "heading": "12.5.3 Ba mô hình triển khai điển hình",
+          "level": 3,
+          "line": 41
+        },
+        {
+          "heading": "1. Tương tác nhúng cục bộ (Local Embedded)",
+          "level": 4,
+          "line": 45
+        },
+        {
+          "heading": "2. Tương tác dạng dịch vụ từ xa (Remote Service-based)",
+          "level": 4,
+          "line": 52
+        },
+        {
+          "heading": "3. Tương tác dạng cầu nối framework ngoài (External Framework Bridge)",
+          "level": 4,
+          "line": 59
+        },
+        {
+          "heading": "12.5.4 Sự khác biệt then chốt giữa OpenClaw và các Framework khác",
+          "level": 3,
+          "line": 66
+        },
+        {
+          "heading": "12.5.5 Giao thức & Mô hình dữ liệu: A2A chỉ là một trong nhiều lựa chọn",
+          "level": 3,
+          "line": 87
+        },
+        {
+          "heading": "12.5.6 Lộ trình di trú & Lời khuyên ra quyết định",
+          "level": 3,
+          "line": 119
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 10
+      }
+    },
+    {
+      "path": "12_extension_engineering/README.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 25,
+      "nonEmptyLines": 18,
+      "sections": [
+        {
+          "heading": "Chương 12: Mở rộng Plugin & Vận hành sản xuất",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "Mục lục hướng dẫn chương",
+          "level": 2,
+          "line": 8
+        },
+        {
+          "heading": "Mục tiêu học tập",
+          "level": 2,
+          "line": 19
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 3
+      }
+    },
+    {
+      "path": "12_extension_engineering/summary.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 25,
+      "nonEmptyLines": 16,
+      "sections": [
+        {
+          "heading": "12.6 Tóm tắt chương",
+          "level": 2,
+          "line": 1
+        },
+        {
+          "heading": "12.6.1 Các kết luận trọng yếu",
+          "level": 3,
+          "line": 5
+        },
+        {
+          "heading": "12.6.2 Checklist tự kiểm tra",
+          "level": 3,
+          "line": 12
+        },
+        {
+          "heading": "12.6.3 Giới thiệu chương tiếp theo",
+          "level": 3,
+          "line": 18
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 4
+      }
+    }
+  ]
+}

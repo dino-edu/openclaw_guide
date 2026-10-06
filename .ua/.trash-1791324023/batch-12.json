@@ -1,0 +1,201 @@
+{
+  "nodes": [
+    {
+      "id": "document:11_reliability_security/11.1_auth_profiles.md",
+      "type": "document",
+      "name": "11.1_auth_profiles.md",
+      "filePath": "11_reliability_security/11.1_auth_profiles.md",
+      "summary": "Defines the multi-key authentication object model and lifecycle in OpenClaw, covering auth profiles, selection order priority, session overrides, and runtime state tracking. Explains key isolation across environments, zero-downtime key rotation workflows, emergency credential leak response, and audit verification probes.",
+      "tags": [
+        "authentication",
+        "auth-profiles",
+        "key-rotation",
+        "security",
+        "documentation"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "document:11_reliability_security/11.2_rotation_cooldown.md",
+      "type": "document",
+      "name": "11.2_rotation_cooldown.md",
+      "filePath": "11_reliability_security/11.2_rotation_cooldown.md",
+      "summary": "Details the auth profile cooldown and temporary disablement mechanisms designed to prevent retry amplification during provider outages or rate limits. Explains failure count cooldown tiers, exponential backoff for billing failures, and runtime state tracking via auth-state.json.",
+      "tags": [
+        "cooldown",
+        "rate-limiting",
+        "backoff",
+        "fault-tolerance",
+        "documentation"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "document:11_reliability_security/11.3_fallback_rules.md",
+      "type": "document",
+      "name": "11.3_fallback_rules.md",
+      "filePath": "11_reliability_security/11.3_fallback_rules.md",
+      "summary": "Establishes explainable model fallback chains and failure triage rules to ensure continuous operation without silent model switches. Covers sequential fallback tiers, context overflow bypass behaviors, half-open probing during cooldown, and fault injection verification techniques.",
+      "tags": [
+        "model-fallback",
+        "failover",
+        "error-triage",
+        "high-availability",
+        "documentation"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "document:11_reliability_security/11.4_guardrails.md",
+      "type": "document",
+      "name": "11.4_guardrails.md",
+      "filePath": "11_reliability_security/11.4_guardrails.md",
+      "summary": "Explains the four-layer defense-in-depth guardrail framework combining tool policies, sandbox container isolation, manual execution approvals, and audit logging. Demonstrates prompt injection mitigation, sensitive data masking, and health diagnostic commands.",
+      "tags": [
+        "guardrails",
+        "tool-policy",
+        "sandbox",
+        "audit-logging",
+        "documentation"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "document:11_reliability_security/README.md",
+      "type": "document",
+      "name": "README.md",
+      "filePath": "11_reliability_security/README.md",
+      "summary": "Chapter roadmap and learning objectives for implementing reliability and security mechanisms in OpenClaw, introducing multi-key governance, cooldown mechanisms, model fallback chains, and defensive guardrails.",
+      "tags": [
+        "overview",
+        "roadmap",
+        "reliability",
+        "security",
+        "documentation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "document:11_reliability_security/summary.md",
+      "type": "document",
+      "name": "summary.md",
+      "filePath": "11_reliability_security/summary.md",
+      "summary": "Summarizes Chapter 11 key takeaways on explicit multi-key governance, explainable model fallbacks, cooldown circuit breaking, and four-tier guardrail defense. Provides a self-assessment checklist and introduces Chapter 12 on plugin engineering and production operations.",
+      "tags": [
+        "chapter-summary",
+        "checklist",
+        "best-practices",
+        "reliability",
+        "documentation"
+      ],
+      "complexity": "simple"
+    }
+  ],
+  "edges": [
+    {
+      "source": "document:11_reliability_security/README.md",
+      "target": "document:11_reliability_security/11.1_auth_profiles.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:11_reliability_security/README.md",
+      "target": "document:11_reliability_security/11.2_rotation_cooldown.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:11_reliability_security/README.md",
+      "target": "document:11_reliability_security/11.3_fallback_rules.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:11_reliability_security/README.md",
+      "target": "document:11_reliability_security/11.4_guardrails.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:11_reliability_security/README.md",
+      "target": "document:11_reliability_security/summary.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:11_reliability_security/summary.md",
+      "target": "document:11_reliability_security/11.1_auth_profiles.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:11_reliability_security/summary.md",
+      "target": "document:11_reliability_security/11.2_rotation_cooldown.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:11_reliability_security/summary.md",
+      "target": "document:11_reliability_security/11.3_fallback_rules.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:11_reliability_security/summary.md",
+      "target": "document:11_reliability_security/11.4_guardrails.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:11_reliability_security/11.1_auth_profiles.md",
+      "target": "document:11_reliability_security/11.2_rotation_cooldown.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:11_reliability_security/11.1_auth_profiles.md",
+      "target": "document:11_reliability_security/11.4_guardrails.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:11_reliability_security/11.2_rotation_cooldown.md",
+      "target": "document:11_reliability_security/11.3_fallback_rules.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:11_reliability_security/11.3_fallback_rules.md",
+      "target": "document:11_reliability_security/11.2_rotation_cooldown.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:11_reliability_security/11.3_fallback_rules.md",
+      "target": "document:11_reliability_security/11.4_guardrails.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:11_reliability_security/11.4_guardrails.md",
+      "target": "document:11_reliability_security/11.1_auth_profiles.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    }
+  ]
+}

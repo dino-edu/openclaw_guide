@@ -1,0 +1,144 @@
+{
+  "nodes": [
+    {
+      "id": "document:03_minimal_loop/3.1_control_ui_webchat.md",
+      "type": "document",
+      "name": "3.1_control_ui_webchat.md",
+      "filePath": "03_minimal_loop/3.1_control_ui_webchat.md",
+      "summary": "Details the Control UI web dashboard navigation structure and minimal loop verification workflow using local webchat. Guides testing Gateway health, streaming outputs, and initial connection barriers before integrating external channels.",
+      "tags": ["dashboard", "webchat", "control-ui", "troubleshooting", "documentation"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "document:03_minimal_loop/3.2_diagnostics.md",
+      "type": "document",
+      "name": "3.2_diagnostics.md",
+      "filePath": "03_minimal_loop/3.2_diagnostics.md",
+      "summary": "Establishes a systematic 4-tier diagnostic methodology across process, channels, AI models, and structured logs. Provides diagnostic CLI commands including deep status probes and guided repair tools to pinpoint failures.",
+      "tags": ["diagnostics", "cli", "logging", "troubleshooting", "documentation"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "document:03_minimal_loop/3.3_agent_persona.md",
+      "type": "document",
+      "name": "3.3_agent_persona.md",
+      "filePath": "03_minimal_loop/3.3_agent_persona.md",
+      "summary": "Explains how to craft executable initial system instructions and configure agent personas across workspace markdown files like AGENTS.md and SOUL.md. Covers goal convergence, boundary enforcement, and format constraints.",
+      "tags": ["agent-persona", "system-prompts", "workspace-config", "best-practices", "documentation"],
+      "complexity": "simple"
+    },
+    {
+      "id": "document:03_minimal_loop/3.4_pairing_groups.md",
+      "type": "document",
+      "name": "3.4_pairing_groups.md",
+      "filePath": "03_minimal_loop/3.4_pairing_groups.md",
+      "summary": "Covers local access boundaries, device pairing approval workflows, and default channel policies for direct messages and group chats. Explains how 'block first, approve later' establishes the minimal trust perimeter.",
+      "tags": ["device-pairing", "access-control", "security", "channel-policy", "documentation"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "document:03_minimal_loop/README.md",
+      "type": "document",
+      "name": "README.md",
+      "filePath": "03_minimal_loop/README.md",
+      "summary": "Introduces Chapter 3 on rapid setup and the first live interactive session using a local minimal loop baseline. Outlines the chapter contents, learning objectives, and prerequisites.",
+      "tags": ["chapter-overview", "minimal-loop", "getting-started", "entry-point", "documentation"],
+      "complexity": "simple"
+    },
+    {
+      "id": "document:03_minimal_loop/summary.md",
+      "type": "document",
+      "name": "summary.md",
+      "filePath": "03_minimal_loop/summary.md",
+      "summary": "Summarizes the essential design principles and self-check criteria for validating a minimal local conversational baseline. Concludes Chapter 3 and outlines next steps for configuration and AI model integration.",
+      "tags": ["chapter-summary", "checklist", "review", "minimal-loop", "documentation"],
+      "complexity": "simple"
+    }
+  ],
+  "edges": [
+    {
+      "source": "document:03_minimal_loop/README.md",
+      "target": "document:03_minimal_loop/3.1_control_ui_webchat.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:03_minimal_loop/README.md",
+      "target": "document:03_minimal_loop/3.2_diagnostics.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:03_minimal_loop/README.md",
+      "target": "document:03_minimal_loop/3.3_agent_persona.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:03_minimal_loop/README.md",
+      "target": "document:03_minimal_loop/3.4_pairing_groups.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:03_minimal_loop/README.md",
+      "target": "document:03_minimal_loop/summary.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:03_minimal_loop/3.1_control_ui_webchat.md",
+      "target": "document:03_minimal_loop/3.2_diagnostics.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:03_minimal_loop/3.1_control_ui_webchat.md",
+      "target": "document:03_minimal_loop/3.4_pairing_groups.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:03_minimal_loop/3.3_agent_persona.md",
+      "target": "document:03_minimal_loop/3.2_diagnostics.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:03_minimal_loop/summary.md",
+      "target": "document:03_minimal_loop/3.1_control_ui_webchat.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:03_minimal_loop/summary.md",
+      "target": "document:03_minimal_loop/3.2_diagnostics.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:03_minimal_loop/summary.md",
+      "target": "document:03_minimal_loop/3.3_agent_persona.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:03_minimal_loop/summary.md",
+      "target": "document:03_minimal_loop/3.4_pairing_groups.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    }
+  ]
+}

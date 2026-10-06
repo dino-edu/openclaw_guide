@@ -1,0 +1,42 @@
+{
+  "projectRoot": "/Users/ngohongthai/Documents/openclaw_guide",
+  "batchFiles": [
+    {
+      "path": "16_claude_ecosystem/16.1_claude_integration.md",
+      "language": "markdown",
+      "sizeLines": 129,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "16_claude_ecosystem/16.2_agent_team_integration.md",
+      "language": "markdown",
+      "sizeLines": 142,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "16_claude_ecosystem/16.3_other_ecosystems.md",
+      "language": "markdown",
+      "sizeLines": 178,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "16_claude_ecosystem/README.md",
+      "language": "markdown",
+      "sizeLines": 10,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "16_claude_ecosystem/summary.md",
+      "language": "markdown",
+      "sizeLines": 19,
+      "fileCategory": "docs"
+    }
+  ],
+  "batchImportData": {
+    "16_claude_ecosystem/16.1_claude_integration.md": [],
+    "16_claude_ecosystem/16.2_agent_team_integration.md": [],
+    "16_claude_ecosystem/16.3_other_ecosystems.md": [],
+    "16_claude_ecosystem/README.md": [],
+    "16_claude_ecosystem/summary.md": []
+  }
+}

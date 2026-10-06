@@ -1,0 +1,49 @@
+{
+  "projectRoot": "/Users/ngohongthai/Documents/openclaw_guide",
+  "batchFiles": [
+    {
+      "path": "14_performance_cost/14.1_token_context_cost.md",
+      "language": "markdown",
+      "sizeLines": 220,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "14_performance_cost/14.2_latency_throughput.md",
+      "language": "markdown",
+      "sizeLines": 194,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "14_performance_cost/14.3_usage_budget.md",
+      "language": "markdown",
+      "sizeLines": 230,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "14_performance_cost/14.4_budget_templates.md",
+      "language": "markdown",
+      "sizeLines": 256,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "14_performance_cost/README.md",
+      "language": "markdown",
+      "sizeLines": 13,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "14_performance_cost/summary.md",
+      "language": "markdown",
+      "sizeLines": 31,
+      "fileCategory": "docs"
+    }
+  ],
+  "batchImportData": {
+    "14_performance_cost/14.1_token_context_cost.md": [],
+    "14_performance_cost/14.2_latency_throughput.md": [],
+    "14_performance_cost/14.3_usage_budget.md": [],
+    "14_performance_cost/14.4_budget_templates.md": [],
+    "14_performance_cost/README.md": [],
+    "14_performance_cost/summary.md": []
+  }
+}

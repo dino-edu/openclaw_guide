@@ -1,0 +1,285 @@
+{
+  "scriptCompleted": true,
+  "filesAnalyzed": 6,
+  "filesSkipped": [],
+  "filesUnreadable": [],
+  "analysisOutcomes": {
+    "structure": {
+      "succeeded": 6,
+      "failed": 0
+    },
+    "callGraph": {
+      "succeeded": 0,
+      "failed": 0,
+      "skipped": 6
+    }
+  },
+  "results": [
+    {
+      "path": "02_setup/2.1_requirements.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 54,
+      "nonEmptyLines": 35,
+      "sections": [
+        {
+          "heading": "2.1 Yêu cầu hệ thống & Kiểm tra trước khi chạy",
+          "level": 2,
+          "line": 1
+        },
+        {
+          "heading": "2.1.1 Yêu cầu môi trường & Phần cứng",
+          "level": 3,
+          "line": 7
+        },
+        {
+          "heading": "2.1.2 Kiểm tra kết nối mạng",
+          "level": 3,
+          "line": 20
+        },
+        {
+          "heading": "2.1.3 Phân quyền tài khoản & Đồng bộ thời gian hệ thống",
+          "level": 3,
+          "line": 39
+        },
+        {
+          "heading": "2.1.4 Chuẩn bị thông tin tài khoản & Khóa API",
+          "level": 3,
+          "line": 44
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 5
+      }
+    },
+    {
+      "path": "02_setup/2.2_installation.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 247,
+      "nonEmptyLines": 167,
+      "sections": [
+        {
+          "heading": "2.2 Cài đặt OpenClaw",
+          "level": 2,
+          "line": 1
+        },
+        {
+          "heading": "2.2.1 Phương thức cài đặt khuyến nghị: Script một dòng lệnh",
+          "level": 3,
+          "line": 7
+        },
+        {
+          "heading": "2.2.2 Xác minh kết quả cài đặt",
+          "level": 3,
+          "line": 49
+        },
+        {
+          "heading": "Chẩn đoán trên macOS / Linux / WSL (POSIX shell)",
+          "level": 4,
+          "line": 60
+        },
+        {
+          "heading": "Chẩn đoán trên Windows PowerShell",
+          "level": 4,
+          "line": 81
+        },
+        {
+          "heading": "Ranh giới định tuyến giữa Windows Hub và WSL2",
+          "level": 4,
+          "line": 98
+        },
+        {
+          "heading": "2.2.3 Các phương thức cài đặt thay thế",
+          "level": 3,
+          "line": 113
+        },
+        {
+          "heading": "1. Cài đặt qua npm",
+          "level": 4,
+          "line": 140
+        },
+        {
+          "heading": "2. Cài đặt qua Docker",
+          "level": 4,
+          "line": 162
+        },
+        {
+          "heading": "3. Các phương thức khác (Build mã nguồn, Podman, Nix, Ansible)",
+          "level": 4,
+          "line": 214
+        },
+        {
+          "heading": "2.2.4 Biến môi trường & Ghi đè đường dẫn",
+          "level": 3,
+          "line": 218
+        },
+        {
+          "heading": "2.2.5 Nâng cấp phiên bản & Chiến lược quản trị",
+          "level": 3,
+          "line": 230
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 12
+      }
+    },
+    {
+      "path": "02_setup/2.3_onboarding.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 86,
+      "nonEmptyLines": 60,
+      "sections": [
+        {
+          "heading": "2.3 Wizard khởi tạo & Cấu hình vòng đầu",
+          "level": 2,
+          "line": 1
+        },
+        {
+          "heading": "2.3.1 Chạy wizard khởi tạo",
+          "level": 3,
+          "line": 9
+        },
+        {
+          "heading": "2.3.2 Phân tích các mục cấu hình trong Wizard & Kinh nghiệm tránh bẫy",
+          "level": 3,
+          "line": 23
+        },
+        {
+          "heading": "2.3.3 Tổng quan các tệp tin trong Workspace",
+          "level": 3,
+          "line": 38
+        },
+        {
+          "heading": "2.3.4 Tiêu chuẩn nghiệm thu vòng đầu",
+          "level": 3,
+          "line": 72
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 5
+      }
+    },
+    {
+      "path": "02_setup/2.4_gateway_service.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 133,
+      "nonEmptyLines": 85,
+      "sections": [
+        {
+          "heading": "2.4 Dịch vụ Gateway daemon & Nghiệm thu tính khả dụng",
+          "level": 2,
+          "line": 1
+        },
+        {
+          "heading": "2.4.1 Kiểm tra trước khi khởi động & Chạy thử ở tiền cảnh (Foreground)",
+          "level": 3,
+          "line": 7
+        },
+        {
+          "heading": "2.4.2 Quản lý dịch vụ chạy ngầm & Kiểm tra trạng thái",
+          "level": 3,
+          "line": 26
+        },
+        {
+          "heading": "2.4.3 Checklist nghiệm thu tính khả dụng tối thiểu",
+          "level": 3,
+          "line": 50
+        },
+        {
+          "heading": "2.4.4 Sơ đồ kiến trúc chẩn đoán phân tầng",
+          "level": 3,
+          "line": 114
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 5
+      }
+    },
+    {
+      "path": "02_setup/README.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 27,
+      "nonEmptyLines": 18,
+      "sections": [
+        {
+          "heading": "Chương 2: Chuẩn bị môi trường & Cài đặt triển khai",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "Mục lục hướng dẫn chương",
+          "level": 2,
+          "line": 7
+        },
+        {
+          "heading": "Mục tiêu học tập",
+          "level": 2,
+          "line": 17
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 3
+      }
+    },
+    {
+      "path": "02_setup/summary.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 24,
+      "nonEmptyLines": 15,
+      "sections": [
+        {
+          "heading": "2.5 Tóm tắt chương",
+          "level": 2,
+          "line": 1
+        },
+        {
+          "heading": "2.5.1 Các kết luận trọng yếu",
+          "level": 3,
+          "line": 5
+        },
+        {
+          "heading": "2.5.2 Câu hỏi tự kiểm tra",
+          "level": 3,
+          "line": 12
+        },
+        {
+          "heading": "2.5.3 Giới thiệu chương tiếp theo",
+          "level": 3,
+          "line": 18
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 4
+      }
+    }
+  ]
+}

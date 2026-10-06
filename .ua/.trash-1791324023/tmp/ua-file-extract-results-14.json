@@ -1,0 +1,239 @@
+{
+  "scriptCompleted": true,
+  "filesAnalyzed": 5,
+  "filesSkipped": [],
+  "filesUnreadable": [],
+  "analysisOutcomes": {
+    "structure": {
+      "succeeded": 5,
+      "failed": 0
+    },
+    "callGraph": {
+      "succeeded": 0,
+      "failed": 0,
+      "skipped": 5
+    }
+  },
+  "results": [
+    {
+      "path": "13_practical_cases/13.1_lark_slack_workbot.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 167,
+      "nonEmptyLines": 132,
+      "sections": [
+        {
+          "heading": "13.1 Tình huống thực tế: Trợ lý công việc nhóm Lark/Slack cho doanh nghiệp",
+          "level": 2,
+          "line": 1
+        },
+        {
+          "heading": "13.1.1 Định nghĩa bài toán & Ràng buộc kịch bản",
+          "level": 3,
+          "line": 3
+        },
+        {
+          "heading": "13.1.2 Vòng lặp tối thiểu: Chạy thông luồng đơn công cụ trên một kênh duy nhất",
+          "level": 3,
+          "line": 14
+        },
+        {
+          "heading": "13.1.3 Bóc tách cấu hình phân tầng",
+          "level": 3,
+          "line": 72
+        },
+        {
+          "heading": "1. Bổ sung công cụ: Phân tích GitHub PR & Quản lý Ticket Jira",
+          "level": 4,
+          "line": 76
+        },
+        {
+          "heading": "2. Kiểm soát phân quyền: Chính sách truy cập dựa trên vai trò (RBAC)",
+          "level": 4,
+          "line": 110
+        },
+        {
+          "heading": "3. Bổ sung tác vụ định kỳ: Bản tóm tắt PR hàng ngày",
+          "level": 4,
+          "line": 121
+        },
+        {
+          "heading": "13.1.4 Checklist nghiệm thu & Các điểm sự cố thường gặp",
+          "level": 3,
+          "line": 142
+        },
+        {
+          "heading": "13.1.5 Mở rộng lên môi trường sản xuất cần bổ sung những gì",
+          "level": 3,
+          "line": 160
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 9
+      }
+    },
+    {
+      "path": "13_practical_cases/13.2_customer_support_agent.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 161,
+      "nonEmptyLines": 125,
+      "sections": [
+        {
+          "heading": "13.2 Tình huống thực tế: Agent hỗ trợ khách hàng",
+          "level": 2,
+          "line": 1
+        },
+        {
+          "heading": "13.2.1 Định nghĩa bài toán & Ràng buộc kịch bản",
+          "level": 3,
+          "line": 3
+        },
+        {
+          "heading": "13.2.2 Vòng lặp tối thiểu: Chạy thông luồng đơn công cụ trên một kênh duy nhất",
+          "level": 3,
+          "line": 20
+        },
+        {
+          "heading": "13.2.3 Bóc tách cấu hình phân tầng",
+          "level": 3,
+          "line": 54
+        },
+        {
+          "heading": "Quy tắc kích hoạt chuyển giao (Escalation Triggers)",
+          "level": 4,
+          "line": 56
+        },
+        {
+          "heading": "Tích hợp Ticket Zendesk",
+          "level": 4,
+          "line": 85
+        },
+        {
+          "heading": "Xử lý làm mờ thông tin định danh cá nhân (PII Masking)",
+          "level": 4,
+          "line": 103
+        },
+        {
+          "heading": "Chiến lược hỗ trợ đa ngôn ngữ",
+          "level": 4,
+          "line": 127
+        },
+        {
+          "heading": "13.2.4 Checklist nghiệm thu & Các điểm sự cố thường gặp",
+          "level": 3,
+          "line": 138
+        },
+        {
+          "heading": "13.2.5 Mở rộng lên môi trường sản xuất",
+          "level": 3,
+          "line": 156
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 10
+      }
+    },
+    {
+      "path": "13_practical_cases/13.3_vertical_industry_cases.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 54,
+      "nonEmptyLines": 39,
+      "sections": [
+        {
+          "heading": "13.3 Ứng dụng ngành dọc: Đối chiếu kịch bản & Sự khác biệt trọng yếu",
+          "level": 2,
+          "line": 1
+        },
+        {
+          "heading": "13.3.1 Tổng quan đối chiếu 4 ngành dọc điển hình",
+          "level": 3,
+          "line": 5
+        },
+        {
+          "heading": "13.3.2 Khác biệt về tuân thủ pháp lý: Những cạm bẫy dễ vấp ngã nhất theo từng ngành",
+          "level": 3,
+          "line": 16
+        },
+        {
+          "heading": "13.3.3 Checklist thích ứng từ giải pháp tổng quát sang giải pháp ngành dọc",
+          "level": 3,
+          "line": 46
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 4
+      }
+    },
+    {
+      "path": "13_practical_cases/README.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 10,
+      "nonEmptyLines": 7,
+      "sections": [
+        {
+          "heading": "Chương 13: Tuyển tập tình huống thực chiến",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "Mục lục hướng dẫn chương",
+          "level": 2,
+          "line": 5
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 2
+      }
+    },
+    {
+      "path": "13_practical_cases/summary.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 20,
+      "nonEmptyLines": 12,
+      "sections": [
+        {
+          "heading": "13.4 Tóm tắt chương",
+          "level": 2,
+          "line": 1
+        },
+        {
+          "heading": "Điểm lại các ý chính",
+          "level": 3,
+          "line": 5
+        },
+        {
+          "heading": "Bước tiếp theo",
+          "level": 3,
+          "line": 14
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 3
+      }
+    }
+  ]
+}

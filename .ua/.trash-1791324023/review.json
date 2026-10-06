@@ -1,0 +1,30 @@
+{
+  "issues": [],
+  "warnings": [
+    "Node 'config:.github/dependabot.yml' has no edges (orphan)",
+    "Node 'config:.ua/config.json' has no edges (orphan)"
+  ],
+  "stats": {
+    "totalNodes": 172,
+    "totalEdges": 335,
+    "totalLayers": 10,
+    "tourSteps": 12,
+    "nodeTypes": {
+      "pipeline": 5,
+      "document": 114,
+      "config": 4,
+      "file": 12,
+      "function": 31,
+      "class": 6
+    },
+    "edgeTypes": {
+      "related": 245,
+      "depends_on": 7,
+      "configures": 2,
+      "documents": 10,
+      "contains": 37,
+      "exports": 31,
+      "tested_by": 3
+    }
+  }
+}

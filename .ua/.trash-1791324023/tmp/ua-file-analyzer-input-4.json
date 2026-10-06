@@ -1,0 +1,49 @@
+{
+  "projectRoot": "/Users/ngohongthai/Documents/openclaw_guide",
+  "batchFiles": [
+    {
+      "path": "03_minimal_loop/3.1_control_ui_webchat.md",
+      "language": "markdown",
+      "sizeLines": 144,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "03_minimal_loop/3.2_diagnostics.md",
+      "language": "markdown",
+      "sizeLines": 92,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "03_minimal_loop/3.3_agent_persona.md",
+      "language": "markdown",
+      "sizeLines": 65,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "03_minimal_loop/3.4_pairing_groups.md",
+      "language": "markdown",
+      "sizeLines": 78,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "03_minimal_loop/README.md",
+      "language": "markdown",
+      "sizeLines": 38,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "03_minimal_loop/summary.md",
+      "language": "markdown",
+      "sizeLines": 24,
+      "fileCategory": "docs"
+    }
+  ],
+  "batchImportData": {
+    "03_minimal_loop/3.1_control_ui_webchat.md": [],
+    "03_minimal_loop/3.2_diagnostics.md": [],
+    "03_minimal_loop/3.3_agent_persona.md": [],
+    "03_minimal_loop/3.4_pairing_groups.md": [],
+    "03_minimal_loop/README.md": [],
+    "03_minimal_loop/summary.md": []
+  }
+}

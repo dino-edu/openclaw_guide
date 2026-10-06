@@ -1,0 +1,1740 @@
+{
+  "scriptCompleted": true,
+  "entryPointCandidates": [
+    {
+      "id": "document:README.md",
+      "score": 5,
+      "name": "README.md",
+      "type": "document",
+      "summary": "Main documentation landing page providing an overview of the OpenClaw guide, key highlights, reading formats, quickstart steps, and role-based learning tracks."
+    },
+    {
+      "id": "file:tests/test_cjk_typography.py",
+      "score": 3,
+      "name": "test_cjk_typography.py",
+      "type": "file",
+      "summary": "Typography test suite enforcing spacing boundaries between CJK and Latin characters and full-width parentheses around CJK text."
+    },
+    {
+      "id": "file:tests/test_workflow_security.py",
+      "score": 3,
+      "name": "test_workflow_security.py",
+      "type": "file",
+      "summary": "Security audit test suite validating GitHub Actions workflows for pinned action SHAs, least-privilege token permissions, artifact provenance, and secure preview releases."
+    },
+    {
+      "id": "file:tools/build_html_reader.py",
+      "score": 3,
+      "name": "build_html_reader.py",
+      "type": "file",
+      "summary": "Build script producing a self-contained, GitBook-style mobile HTML reader featuring embedded CSS navigation, offline math rendering, and pre-rendered SVG Mermaid diagrams."
+    },
+    {
+      "id": "file:tools/build_pdf.py",
+      "score": 3,
+      "name": "build_pdf.py",
+      "type": "file",
+      "summary": "Robust PDF build wrapper providing bounded retries, attempt log capture, and process tree termination to prevent runaway headless browser processes."
+    }
+  ],
+  "fanInRanking": [
+    {
+      "id": "document:05_tools_skills/5.2_tool_policy.md",
+      "fanIn": 5,
+      "name": "5.2_tool_policy.md"
+    },
+    {
+      "id": "document:09_gateway_protocol/9.5_pairing_trust.md",
+      "fanIn": 5,
+      "name": "9.5_pairing_trust.md"
+    },
+    {
+      "id": "document:10_agent_loop/10.5_tool_execution.md",
+      "fanIn": 5,
+      "name": "10.5_tool_execution.md"
+    },
+    {
+      "id": "document:10_agent_loop/10.6_streaming_retry.md",
+      "fanIn": 5,
+      "name": "10.6_streaming_retry.md"
+    },
+    {
+      "id": "document:14_performance_cost/14.3_usage_budget.md",
+      "fanIn": 5,
+      "name": "14.3_usage_budget.md"
+    },
+    {
+      "id": "document:03_minimal_loop/3.2_diagnostics.md",
+      "fanIn": 4,
+      "name": "3.2_diagnostics.md"
+    },
+    {
+      "id": "document:04_config_models/4.3_model_selection.md",
+      "fanIn": 4,
+      "name": "4.3_model_selection.md"
+    },
+    {
+      "id": "document:04_config_models/4.4_failover.md",
+      "fanIn": 4,
+      "name": "4.4_failover.md"
+    },
+    {
+      "id": "document:05_tools_skills/5.4_browser_nodes.md",
+      "fanIn": 4,
+      "name": "5.4_browser_nodes.md"
+    },
+    {
+      "id": "document:06_context_memory/6.3_memory_mechanism.md",
+      "fanIn": 4,
+      "name": "6.3_memory_mechanism.md"
+    },
+    {
+      "id": "document:06_context_memory/6.4_compaction_pruning.md",
+      "fanIn": 4,
+      "name": "6.4_compaction_pruning.md"
+    },
+    {
+      "id": "document:07_multi_agent/7.3_routing_basics.md",
+      "fanIn": 4,
+      "name": "7.3_routing_basics.md"
+    },
+    {
+      "id": "document:09_gateway_protocol/9.3_ws_handshake.md",
+      "fanIn": 4,
+      "name": "9.3_ws_handshake.md"
+    },
+    {
+      "id": "document:10_agent_loop/10.3_entry_queue.md",
+      "fanIn": 4,
+      "name": "10.3_entry_queue.md"
+    },
+    {
+      "id": "document:10_agent_loop/10.4_prompt_assembly.md",
+      "fanIn": 4,
+      "name": "10.4_prompt_assembly.md"
+    },
+    {
+      "id": "document:11_reliability_security/11.2_rotation_cooldown.md",
+      "fanIn": 4,
+      "name": "11.2_rotation_cooldown.md"
+    },
+    {
+      "id": "document:11_reliability_security/11.4_guardrails.md",
+      "fanIn": 4,
+      "name": "11.4_guardrails.md"
+    },
+    {
+      "id": "document:12_extension_engineering/12.1_plugin_architecture.md",
+      "fanIn": 4,
+      "name": "12.1_plugin_architecture.md"
+    },
+    {
+      "id": "document:12_extension_engineering/12.2_custom_tools.md",
+      "fanIn": 4,
+      "name": "12.2_custom_tools.md"
+    },
+    {
+      "id": "document:12_extension_engineering/12.3_testing_debugging.md",
+      "fanIn": 4,
+      "name": "12.3_testing_debugging.md"
+    }
+  ],
+  "fanOutRanking": [
+    {
+      "id": "file:tools/verify_artifacts.py",
+      "fanOut": 13,
+      "name": "verify_artifacts.py"
+    },
+    {
+      "id": "file:check_project_rules.py",
+      "fanOut": 11,
+      "name": "check_project_rules.py"
+    },
+    {
+      "id": "document:appendix/README.md",
+      "fanOut": 10,
+      "name": "README.md"
+    },
+    {
+      "id": "file:check_emphasis.py",
+      "fanOut": 9,
+      "name": "check_emphasis.py"
+    },
+    {
+      "id": "file:tools/build_pdf.py",
+      "fanOut": 9,
+      "name": "build_pdf.py"
+    },
+    {
+      "id": "file:tests/test_cjk_typography.py",
+      "fanOut": 8,
+      "name": "test_cjk_typography.py"
+    },
+    {
+      "id": "file:tools/build_html_reader.py",
+      "fanOut": 8,
+      "name": "build_html_reader.py"
+    },
+    {
+      "id": "document:10_agent_loop/README.md",
+      "fanOut": 7,
+      "name": "README.md"
+    },
+    {
+      "id": "document:08_automation_ops/README.md",
+      "fanOut": 6,
+      "name": "README.md"
+    },
+    {
+      "id": "document:09_gateway_protocol/README.md",
+      "fanOut": 6,
+      "name": "README.md"
+    },
+    {
+      "id": "document:10_agent_loop/summary.md",
+      "fanOut": 6,
+      "name": "summary.md"
+    },
+    {
+      "id": "document:12_extension_engineering/README.md",
+      "fanOut": 6,
+      "name": "README.md"
+    },
+    {
+      "id": "file:tests/test_workflow_security.py",
+      "fanOut": 6,
+      "name": "test_workflow_security.py"
+    },
+    {
+      "id": "document:01_overview/README.md",
+      "fanOut": 5,
+      "name": "README.md"
+    },
+    {
+      "id": "document:02_setup/README.md",
+      "fanOut": 5,
+      "name": "README.md"
+    },
+    {
+      "id": "document:03_minimal_loop/README.md",
+      "fanOut": 5,
+      "name": "README.md"
+    },
+    {
+      "id": "document:04_config_models/README.md",
+      "fanOut": 5,
+      "name": "README.md"
+    },
+    {
+      "id": "document:05_tools_skills/README.md",
+      "fanOut": 5,
+      "name": "README.md"
+    },
+    {
+      "id": "document:06_context_memory/README.md",
+      "fanOut": 5,
+      "name": "README.md"
+    },
+    {
+      "id": "document:07_multi_agent/README.md",
+      "fanOut": 5,
+      "name": "README.md"
+    }
+  ],
+  "bfsTraversal": {
+    "startNode": "file:tests/test_cjk_typography.py",
+    "order": [
+      "file:tests/test_cjk_typography.py"
+    ],
+    "depthMap": {
+      "file:tests/test_cjk_typography.py": 0
+    },
+    "byDepth": {
+      "0": [
+        "file:tests/test_cjk_typography.py"
+      ]
+    }
+  },
+  "nonCodeFiles": {
+    "documentation": [
+      {
+        "id": "document:01_overview/README.md",
+        "name": "README.md",
+        "type": "document",
+        "summary": "Introduces Chapter 1 of the OpenClaw guide, providing a table of contents and learning objectives for understanding the local-first AI assistant."
+      },
+      {
+        "id": "document:01_overview/1.1_what_is_openclaw.md",
+        "name": "1.1_what_is_openclaw.md",
+        "type": "document",
+        "summary": "Explains OpenClaw's architecture using a smart intern metaphor, addressing isolated AI capabilities, multi-channel messaging, and system auditability."
+      },
+      {
+        "id": "document:01_overview/1.2_scenarios_comparison.md",
+        "name": "1.2_scenarios_comparison.md",
+        "type": "document",
+        "summary": "Compares OpenClaw with ChatGPT, Cursor, Zapier, and Dify, analyzing token cost implications and practical workload suitability."
+      },
+      {
+        "id": "document:01_overview/1.3_concepts.md",
+        "name": "1.3_concepts.md",
+        "type": "document",
+        "summary": "Introduces the five core concepts of OpenClaw—Gateway, Agent, Tool, Session, and Node—mapping out the message lifecycle and chapter cross-references."
+      },
+      {
+        "id": "document:01_overview/1.4_use_cases.md",
+        "name": "1.4_use_cases.md",
+        "type": "document",
+        "summary": "Outlines typical OpenClaw deployment scenarios, including personal ChatOps, smart home automation, auditable memory systems, and security sandbox research."
+      },
+      {
+        "id": "document:01_overview/summary.md",
+        "name": "summary.md",
+        "type": "document",
+        "summary": "Summarizes the fundamental principles covered in Chapter 1, featuring comprehension review questions and a preview of the setup chapter."
+      },
+      {
+        "id": "document:02_setup/README.md",
+        "name": "README.md",
+        "type": "document",
+        "summary": "Serves as the chapter roadmap and table of contents for Chapter 2, outlining the four-step setup sequence from prerequisites to gateway acceptance testing."
+      },
+      {
+        "id": "document:02_setup/2.1_requirements.md",
+        "name": "2.1_requirements.md",
+        "type": "document",
+        "summary": "Specifies hardware, Node.js runtime, network connectivity, and API credential prerequisites for deploying OpenClaw."
+      },
+      {
+        "id": "document:02_setup/2.2_installation.md",
+        "name": "2.2_installation.md",
+        "type": "document",
+        "summary": "Guides users through OpenClaw installation using the one-line install script, npm, Docker, and source builds, alongside environment variable and path configurations."
+      },
+      {
+        "id": "document:02_setup/2.3_onboarding.md",
+        "name": "2.3_onboarding.md",
+        "type": "document",
+        "summary": "Explains how to run the interactive onboarding wizard to configure models, workspaces, and daemons while defining workspace bootstrap file roles."
+      },
+      {
+        "id": "document:02_setup/2.4_gateway_service.md",
+        "name": "2.4_gateway_service.md",
+        "type": "document",
+        "summary": "Details OpenClaw Gateway daemon management, local health acceptance testing checklists, and layered troubleshooting architectures."
+      },
+      {
+        "id": "document:02_setup/summary.md",
+        "name": "summary.md",
+        "type": "document",
+        "summary": "Reviews key setup takeaways, provides a post-installation security and operational checklist, and previews Chapter 3 minimal loop topics."
+      },
+      {
+        "id": "document:03_minimal_loop/3.1_control_ui_webchat.md",
+        "name": "3.1_control_ui_webchat.md",
+        "type": "document",
+        "summary": "Details the Control UI web dashboard navigation structure and minimal loop verification workflow using local webchat. Guides testing Gateway health, streaming outputs, and initial connection barriers before integrating external channels."
+      },
+      {
+        "id": "document:03_minimal_loop/3.2_diagnostics.md",
+        "name": "3.2_diagnostics.md",
+        "type": "document",
+        "summary": "Establishes a systematic 4-tier diagnostic methodology across process, channels, AI models, and structured logs. Provides diagnostic CLI commands including deep status probes and guided repair tools to pinpoint failures."
+      },
+      {
+        "id": "document:03_minimal_loop/3.3_agent_persona.md",
+        "name": "3.3_agent_persona.md",
+        "type": "document",
+        "summary": "Explains how to craft executable initial system instructions and configure agent personas across workspace markdown files like AGENTS.md and SOUL.md. Covers goal convergence, boundary enforcement, and format constraints."
+      },
+      {
+        "id": "document:03_minimal_loop/3.4_pairing_groups.md",
+        "name": "3.4_pairing_groups.md",
+        "type": "document",
+        "summary": "Covers local access boundaries, device pairing approval workflows, and default channel policies for direct messages and group chats. Explains how 'block first, approve later' establishes the minimal trust perimeter."
+      },
+      {
+        "id": "document:03_minimal_loop/README.md",
+        "name": "README.md",
+        "type": "document",
+        "summary": "Introduces Chapter 3 on rapid setup and the first live interactive session using a local minimal loop baseline. Outlines the chapter contents, learning objectives, and prerequisites."
+      },
+      {
+        "id": "document:03_minimal_loop/summary.md",
+        "name": "summary.md",
+        "type": "document",
+        "summary": "Summarizes the essential design principles and self-check criteria for validating a minimal local conversational baseline. Concludes Chapter 3 and outlines next steps for configuration and AI model integration."
+      },
+      {
+        "id": "document:04_config_models/README.md",
+        "name": "README.md",
+        "type": "document",
+        "summary": "Introduces Chapter 4 on configuration systems and model governance, establishing learning objectives for config explanation, safe auth rotation, multi-dimensional model evaluation, and failover design."
+      },
+      {
+        "id": "document:04_config_models/4.1_config_system.md",
+        "name": "4.1_config_system.md",
+        "type": "document",
+        "summary": "Explains the openclaw.json structure, scope boundaries between Gateway, Agent, Channel, and Tool levels, configuration precedence layering, and the four-part evidence chain for verifying active parameters."
+      },
+      {
+        "id": "document:04_config_models/4.2_provider_access.md",
+        "name": "4.2_provider_access.md",
+        "type": "document",
+        "summary": "Covers model provider connection strategies and authentication, comparing built-in onboarding with custom proxy configurations, SecretRef pipelines, multi-key auth profiles, and rate-limit cooldown handling."
+      },
+      {
+        "id": "document:04_config_models/4.3_model_selection.md",
+        "name": "4.3_model_selection.md",
+        "type": "document",
+        "summary": "Presents a four-dimensional decision framework balancing quality, cost, latency, and reliability, detailing primary model setup in agents.defaults.model, per-agent overrides, and regression testing protocols."
+      },
+      {
+        "id": "document:04_config_models/4.4_failover.md",
+        "name": "4.4_failover.md",
+        "type": "document",
+        "summary": "Details fault classification mapping, fallback chain configuration via agents.defaults.model.fallbacks, coordination with bounded retries, auth-profile cooldown tiers, and fault-injection verification."
+      },
+      {
+        "id": "document:04_config_models/summary.md",
+        "name": "summary.md",
+        "type": "document",
+        "summary": "Summarizes Chapter 4 core conclusions, provides a minimal viable configuration loop and standard verification commands, and includes a self-assessment checklist for model governance."
+      },
+      {
+        "id": "document:05_tools_skills/README.md",
+        "name": "README.md",
+        "type": "document",
+        "summary": "Introduces Chapter 5 on OpenClaw's Action Layer, establishing the architectural relationship between intent proposal, tool contracts, permission policies, and execution governance."
+      },
+      {
+        "id": "document:05_tools_skills/5.1_tool_inventory.md",
+        "name": "5.1_tool_inventory.md",
+        "type": "document",
+        "summary": "Explores tool inventory engineering, covering tool contracts, failure semantics, read-only vs. mutating boundaries, tool chaining with error propagation, result injection, and execution replayability."
+      },
+      {
+        "id": "document:05_tools_skills/5.2_tool_policy.md",
+        "name": "5.2_tool_policy.md",
+        "type": "document",
+        "summary": "Explains tool policy enforcement including global allow/deny precedence, tool profiles, channel and sender-level layering, provider customizations, and sub-agent depth restrictions."
+      },
+      {
+        "id": "document:05_tools_skills/5.3_skills_plugins.md",
+        "name": "5.3_skills_plugins.md",
+        "type": "document",
+        "summary": "Delineates the division of labor between Plugins for runtime capability extension and Skills for process standardization, while highlighting ClawHub supply-chain risks and review checklists."
+      },
+      {
+        "id": "document:05_tools_skills/5.4_browser_nodes.md",
+        "name": "5.4_browser_nodes.md",
+        "type": "document",
+        "summary": "Covers browser automation governance, detailing isolation boundaries, a 4-tier capability hierarchy from search to vision, CLI operations, and structured troubleshooting workflows."
+      },
+      {
+        "id": "document:05_tools_skills/summary.md",
+        "name": "summary.md",
+        "type": "document",
+        "summary": "Summarizes Chapter 5 key conclusions on runtime policy boundaries and tool governance, providing diagnostic self-test questions and practical automation scenarios."
+      },
+      {
+        "id": "document:06_context_memory/README.md",
+        "name": "README.md",
+        "type": "document",
+        "summary": "Introduces Chapter 6 on sessions, context, and memory, establishing learning objectives for session isolation, multi-tier context budgeting, long-term memory retrieval, and compaction management."
+      },
+      {
+        "id": "document:06_context_memory/6.1_sessions.md",
+        "name": "6.1_sessions.md",
+        "type": "document",
+        "summary": "Covers OpenClaw's session model and persistence layer, explaining session key resolution, thread and DM isolation boundaries, reset strategies, message queue modes, and session bleed troubleshooting."
+      },
+      {
+        "id": "document:06_context_memory/6.2_context_building.md",
+        "name": "6.2_context_building.md",
+        "type": "document",
+        "summary": "Explains context assembly across four prioritized information tiers, token window budget allocation ratios, structured tool result injection, and pluggable context engines."
+      },
+      {
+        "id": "document:06_context_memory/6.3_memory_mechanism.md",
+        "name": "6.3_memory_mechanism.md",
+        "type": "document",
+        "summary": "Details the dual-tier workspace memory architecture comprising MEMORY.md and daily logs, fact curation criteria, hybrid search with vector embedding indexing, and memory expiration."
+      },
+      {
+        "id": "document:06_context_memory/6.4_compaction_pruning.md",
+        "name": "6.4_compaction_pruning.md",
+        "type": "document",
+        "summary": "Analyzes context governance for long conversations, contrasting ephemeral in-memory tool result pruning with persistent transcript compaction and pre-compaction memory flush triggers."
+      },
+      {
+        "id": "document:06_context_memory/summary.md",
+        "name": "summary.md",
+        "type": "document",
+        "summary": "Summarizes Chapter 6 with key conclusions on state ownership and token governance, an end-to-end trace walkthrough, self-check verification criteria, and a transition to multi-agent routing."
+      },
+      {
+        "id": "document:07_multi_agent/7.1_telegram_whatsapp.md",
+        "name": "7.1_telegram_whatsapp.md",
+        "type": "document",
+        "summary": "Covers channel onboarding and ingress governance for Telegram and WhatsApp, detailing direct-message and group policy segregation, token configurations, and multi-account isolation strategies."
+      },
+      {
+        "id": "document:07_multi_agent/7.2_lark_integration.md",
+        "name": "7.2_lark_integration.md",
+        "type": "document",
+        "summary": "Walks through enterprise bot onboarding for Lark/Feishu Open Platform, covering long connection WebSocket subscriptions, event dispatching, permission setups, and pairing verification."
+      },
+      {
+        "id": "document:07_multi_agent/7.3_routing_basics.md",
+        "name": "7.3_routing_basics.md",
+        "type": "document",
+        "summary": "Explains multi-agent routing mechanics, routing bindings precedence over natural intent routers, risk-gated entry point mappings, and workspace memory isolation."
+      },
+      {
+        "id": "document:07_multi_agent/7.4_collaboration_patterns.md",
+        "name": "7.4_collaboration_patterns.md",
+        "type": "document",
+        "summary": "Details multi-agent collaboration topologies, contrasting isolated sub-agent task delegation via sessions_spawn with parallel fan-out via broadcast groups and message queue announce flows."
+      },
+      {
+        "id": "document:07_multi_agent/README.md",
+        "name": "README.md",
+        "type": "document",
+        "summary": "Introduces Chapter 7 on multi-channel message distribution and multi-agent collaboration, outlining channel policies, routing bindings, sandbox boundary enforcement, and chapter navigation."
+      },
+      {
+        "id": "document:07_multi_agent/summary.md",
+        "name": "summary.md",
+        "type": "document",
+        "summary": "Summarizes Chapter 7 key architectural takeaways on deterministic agent ownership, channel policies, auditability, self-check verification questions, and multi-agent production use cases."
+      },
+      {
+        "id": "document:08_automation_ops/README.md",
+        "name": "README.md",
+        "type": "document",
+        "summary": "Serves as the chapter roadmap and table of contents for Chapter 8, introducing architectural governance across lifecycle hooks, cron jobs, heartbeat polling, remote access, and security baselines for 24/7 unattended operations."
+      },
+      {
+        "id": "document:08_automation_ops/8.1_hooks.md",
+        "name": "8.1_hooks.md",
+        "type": "document",
+        "summary": "Details OpenClaw lifecycle hooks and event interception points, establishing clear separation of cross-cutting governance concerns like rate limiting, auditing, and data masking while enforcing timeout, degradation, and idempotency constraints."
+      },
+      {
+        "id": "document:08_automation_ops/8.2_cron_jobs.md",
+        "name": "8.2_cron_jobs.md",
+        "type": "document",
+        "summary": "Guides the design and scheduling of exact-time unattended tasks using built-in gateway cron and external crontab integration, emphasizing idempotency keys, non-overlapping locks, and error triage."
+      },
+      {
+        "id": "document:08_automation_ops/8.3_heartbeat.md",
+        "name": "8.3_heartbeat.md",
+        "type": "document",
+        "summary": "Explains OpenClaw's periodic heartbeat mechanism for batched polling and notify-on-demand alerting, dissecting the timer-to-delivery lifecycle, HEARTBEAT_OK protocol, active hours configuration, and token cost optimization."
+      },
+      {
+        "id": "document:08_automation_ops/8.4_remote_access.md",
+        "name": "8.4_remote_access.md",
+        "type": "document",
+        "summary": "Architects secure remote management for OpenClaw instances using SSH port forwarding, Tailscale Serve private network tunnels, Zero Trust identity principles, and rclone file synchronization."
+      },
+      {
+        "id": "document:08_automation_ops/8.5_security_baseline.md",
+        "name": "8.5_security_baseline.md",
+        "type": "document",
+        "summary": "Establishes a verifiable defense-in-depth security baseline spanning ingress control, routing bindings, tool execution policies, and secret management with structured audit event logging."
+      },
+      {
+        "id": "document:08_automation_ops/summary.md",
+        "name": "summary.md",
+        "type": "document",
+        "summary": "Summarizes key operational automation takeaways, provides a practical self-inspection checklist for production readiness, and showcases community deployment patterns."
+      },
+      {
+        "id": "document:09_gateway_protocol/9.1_architecture_overview.md",
+        "name": "9.1_architecture_overview.md",
+        "type": "document",
+        "summary": "Presents the five-plane architectural framework (Control, Data, Context, Trust, and Visibility planes) for understanding Gateway responsibilities and module boundaries. Analyzes plane interactions, execution surface separation, and cross-plane diagnostic tracing."
+      },
+      {
+        "id": "document:09_gateway_protocol/9.2_control_plane.md",
+        "name": "9.2_control_plane.md",
+        "type": "document",
+        "summary": "Explores the five core duties and boundaries of the Gateway Control Plane: connection attribution, routing, session lifecycle, policy enforcement, and circuit-breaking failover. Introduces layered approval architecture and practical openclaw.json configuration examples."
+      },
+      {
+        "id": "document:09_gateway_protocol/9.3_ws_handshake.md",
+        "name": "9.3_ws_handshake.md",
+        "type": "document",
+        "summary": "Details the full lifecycle of persistent WebSocket connections, covering challenge-response authentication, device identity signatures, keepalive heartbeats, and exponential backoff reconnection. Clarifies the architectural distinction between transport-level connections and stateful sessions."
+      },
+      {
+        "id": "document:09_gateway_protocol/9.4_event_idempotency.md",
+        "name": "9.4_event_idempotency.md",
+        "type": "document",
+        "summary": "Examines event idempotency, sequence ordering, and eventual consistency guarantees across distributed agent networks. Explains handling duplicate, lost, or unknown states via idempotency keys, sequence gap detection for snapshot refresh, and session-level mutex locking."
+      },
+      {
+        "id": "document:09_gateway_protocol/9.5_pairing_trust.md",
+        "name": "9.5_pairing_trust.md",
+        "type": "document",
+        "summary": "Explains establishing local trust perimeters via device identity registration, nonce-based cryptographic challenge verification, and operator approval workflows. Distinguishes Control Plane device pairing from chat-level DM sender pairing, and outlines token rotation and emergency revocation mechanisms."
+      },
+      {
+        "id": "document:09_gateway_protocol/README.md",
+        "name": "README.md",
+        "type": "document",
+        "summary": "Introduces Chapter 9 on OpenClaw Gateway control plane responsibilities, WebSocket connection lifecycles, event consistency, and local device pairing trust. Outlines the chapter outline, pedagogical five-plane architectural framework, and core learning objectives."
+      },
+      {
+        "id": "document:09_gateway_protocol/summary.md",
+        "name": "summary.md",
+        "type": "document",
+        "summary": "Summarizes Chapter 9 key conclusions on control plane arbitration, WebSocket lifecycle management, event idempotency, and device trust bootstrapping. Includes a self-check verification checklist and transitions to Chapter 10 agent loop mechanics."
+      },
+      {
+        "id": "document:10_agent_loop/10.1_request_lifecycle.md",
+        "name": "10.1_request_lifecycle.md",
+        "type": "document",
+        "summary": "Traces the complete end-to-end request lifecycle of an agent message and provides an outside-in layered diagnostic framework for isolating errors across gateway, agent, session, model, and tool tiers."
+      },
+      {
+        "id": "document:10_agent_loop/10.2_pi_framework.md",
+        "name": "10.2_pi_framework.md",
+        "type": "document",
+        "summary": "Analyzes OpenClaw's embedded integration of the Pi runtime engine, detailing session lifecycle management, custom tool injection, event subscription bridges, and dynamic system prompts."
+      },
+      {
+        "id": "document:10_agent_loop/10.3_entry_queue.md",
+        "name": "10.3_entry_queue.md",
+        "type": "document",
+        "summary": "Details ingress protocol normalization, replay deduplication barriers, and the pure TypeScript lane-based Command Queue governing session, global, and background execution concurrency."
+      },
+      {
+        "id": "document:10_agent_loop/10.4_prompt_assembly.md",
+        "name": "10.4_prompt_assembly.md",
+        "type": "document",
+        "summary": "Examines structured context assembly across four data tiers, token window budgeting with priority-based pruning, prompt persistence audits, and defense-in-depth against prompt injection attacks."
+      },
+      {
+        "id": "document:10_agent_loop/10.5_tool_execution.md",
+        "name": "10.5_tool_execution.md",
+        "type": "document",
+        "summary": "Explores the four-stage tool call lifecycle, static policy filtering, dynamic before_tool_call plugin interception hooks, loop detection, and result trimming injection."
+      },
+      {
+        "id": "document:10_agent_loop/10.6_streaming_retry.md",
+        "name": "10.6_streaming_retry.md",
+        "type": "document",
+        "summary": "Explains the EmbeddedBlockChunker streaming engine with fence-aware markdown chunking, bounded request-level HTTP retry strategies, model failover sequences, and early termination controls."
+      },
+      {
+        "id": "document:10_agent_loop/README.md",
+        "name": "README.md",
+        "type": "document",
+        "summary": "Serves as the chapter navigation guide for the OpenClaw Agent Loop core, introducing foundational mental models, learning objectives, and reading advice."
+      },
+      {
+        "id": "document:10_agent_loop/summary.md",
+        "name": "summary.md",
+        "type": "document",
+        "summary": "Summarizes the key architectural conclusions of Chapter 10, provides a self-assessment checklist across all agent loop mechanisms, and previews Chapter 11 on reliability and security."
+      },
+      {
+        "id": "document:11_reliability_security/11.1_auth_profiles.md",
+        "name": "11.1_auth_profiles.md",
+        "type": "document",
+        "summary": "Defines the multi-key authentication object model and lifecycle in OpenClaw, covering auth profiles, selection order priority, session overrides, and runtime state tracking. Explains key isolation across environments, zero-downtime key rotation workflows, emergency credential leak response, and audit verification probes."
+      },
+      {
+        "id": "document:11_reliability_security/11.2_rotation_cooldown.md",
+        "name": "11.2_rotation_cooldown.md",
+        "type": "document",
+        "summary": "Details the auth profile cooldown and temporary disablement mechanisms designed to prevent retry amplification during provider outages or rate limits. Explains failure count cooldown tiers, exponential backoff for billing failures, and runtime state tracking via auth-state.json."
+      },
+      {
+        "id": "document:11_reliability_security/11.3_fallback_rules.md",
+        "name": "11.3_fallback_rules.md",
+        "type": "document",
+        "summary": "Establishes explainable model fallback chains and failure triage rules to ensure continuous operation without silent model switches. Covers sequential fallback tiers, context overflow bypass behaviors, half-open probing during cooldown, and fault injection verification techniques."
+      },
+      {
+        "id": "document:11_reliability_security/11.4_guardrails.md",
+        "name": "11.4_guardrails.md",
+        "type": "document",
+        "summary": "Explains the four-layer defense-in-depth guardrail framework combining tool policies, sandbox container isolation, manual execution approvals, and audit logging. Demonstrates prompt injection mitigation, sensitive data masking, and health diagnostic commands."
+      },
+      {
+        "id": "document:11_reliability_security/README.md",
+        "name": "README.md",
+        "type": "document",
+        "summary": "Chapter roadmap and learning objectives for implementing reliability and security mechanisms in OpenClaw, introducing multi-key governance, cooldown mechanisms, model fallback chains, and defensive guardrails."
+      },
+      {
+        "id": "document:11_reliability_security/summary.md",
+        "name": "summary.md",
+        "type": "document",
+        "summary": "Summarizes Chapter 11 key takeaways on explicit multi-key governance, explainable model fallbacks, cooldown circuit breaking, and four-tier guardrail defense. Provides a self-assessment checklist and introduces Chapter 12 on plugin engineering and production operations."
+      },
+      {
+        "id": "document:12_extension_engineering/README.md",
+        "name": "README.md",
+        "type": "document",
+        "summary": "Introduces Chapter 12 on extension engineering and production operations, framing how OpenClaw evolves into an auditable and extensible enterprise platform. Contrasts developer extension mechanisms with Chapter 5's tool user perspective, summarizing plugin lifecycles, custom tools, testing pipelines, and production blueprints."
+      },
+      {
+        "id": "document:12_extension_engineering/12.1_plugin_architecture.md",
+        "name": "12.1_plugin_architecture.md",
+        "type": "document",
+        "summary": "Details OpenClaw's native plugin architecture, manifest validation mechanics, and five execution modes across agent, message, tool, and gateway lifecycle hooks. Explains two-tier perimeter isolation combining plugin whitelists with tool policies, bundle compatibility with external ecosystems, and CLI diagnostic commands."
+      },
+      {
+        "id": "document:12_extension_engineering/12.2_custom_tools.md",
+        "name": "12.2_custom_tools.md",
+        "type": "document",
+        "summary": "Provides technical guidance for designing and registering custom OpenClaw tools using TypeBox parameter schemas, structured reproducible outputs, and idempotency keys to bound side effects. Demonstrates policy layering where deny rules take precedence, sandbox execution for high-risk actions, and common design anti-patterns."
+      },
+      {
+        "id": "document:12_extension_engineering/12.3_testing_debugging.md",
+        "name": "12.3_testing_debugging.md",
+        "type": "document",
+        "summary": "Establishes a three-tier verification methodology for extensions spanning plugin loading, policy enforcement, and gateway ingress before end-to-end testing. Introduces snapshot baseline diffing, traceId replay for deterministic fault localization, and automated CI/CD canary release and rollback procedures."
+      },
+      {
+        "id": "document:12_extension_engineering/12.4_production_blueprint.md",
+        "name": "12.4_production_blueprint.md",
+        "type": "document",
+        "summary": "Defines a production blueprint for OpenClaw extensions, enforcing separation of code and configuration changes, three-tier security perimeters, and secret injection via SecretRef. Details emergency rollback runbooks, graceful degradation strategies, and operational KPIs with alert thresholds for gateway latency, resource usage, and tool health."
+      },
+      {
+        "id": "document:12_extension_engineering/12.5_framework_interoperability.md",
+        "name": "12.5_framework_interoperability.md",
+        "type": "document",
+        "summary": "Analyzes interoperability between OpenClaw and frameworks like LangGraph and CrewAI across adapter, protocol, and data layers. Contrasts local embedded, remote service-based, and external bridge topologies, comparing OpenClaw's declarative gateway governance with external state-machine and multi-role orchestration engines."
+      },
+      {
+        "id": "document:12_extension_engineering/summary.md",
+        "name": "summary.md",
+        "type": "document",
+        "summary": "Summarizes Chapter 12 key takeaways on extension engineering, highlighting mandatory whitelists, policy-driven custom tool containment, layered verification, and standardized diagnostic replay. Provides a self-assessment production readiness checklist and previews practical enterprise case studies in Chapter 13."
+      },
+      {
+        "id": "document:13_practical_cases/13.1_lark_slack_workbot.md",
+        "name": "13.1_lark_slack_workbot.md",
+        "type": "document",
+        "summary": "Demonstrates building an enterprise Lark/Slack workgroup assistant for an engineering team, progressing from a minimal single-tool knowledge search loop to layered RBAC permission enforcement, GitHub PR analysis, Jira issue tracking, and scheduled cron summaries."
+      },
+      {
+        "id": "document:13_practical_cases/13.2_customer_support_agent.md",
+        "name": "13.2_customer_support_agent.md",
+        "type": "document",
+        "summary": "Details an enterprise customer support agent implementation for B2B SaaS, covering automated FAQ retrieval, sentiment-driven human escalation workflows, Zendesk ticket creation, pre-LLM PII masking, and multilingual policy configuration."
+      },
+      {
+        "id": "document:13_practical_cases/13.3_vertical_industry_cases.md",
+        "name": "13.3_vertical_industry_cases.md",
+        "type": "document",
+        "summary": "Provides a comparative reference contrasting agent architectures across four vertical sectors (Financial Research, Clinical Healthcare, Adaptive Education, and E-Commerce), examining regulatory compliance constraints (SOX, HIPAA, FERPA, PCI-DSS), human-in-the-loop review gates, and memory isolation."
+      },
+      {
+        "id": "document:13_practical_cases/README.md",
+        "name": "README.md",
+        "type": "document",
+        "summary": "Introduces Chapter 13 on practical real-world OpenClaw deployment cases, detailing the standardized five-stage evolutionary path from a minimal verification loop to production readiness across enterprise workbots, customer support, and vertical industry scenarios."
+      },
+      {
+        "id": "document:13_practical_cases/summary.md",
+        "name": "summary.md",
+        "type": "document",
+        "summary": "Summarizes Chapter 13 key insights on progressive configuration, tool access controls, AI model tiering, and industry-specific adaptation vectors, providing transition guidance into performance tuning and operational troubleshooting chapters."
+      },
+      {
+        "id": "document:14_performance_cost/README.md",
+        "name": "README.md",
+        "type": "document",
+        "summary": "Serves as the chapter roadmap and table of contents for Chapter 14, introducing performance optimization and cost governance across token consumption, inference latency, usage observation, and budget planning."
+      },
+      {
+        "id": "document:14_performance_cost/14.1_token_context_cost.md",
+        "name": "14.1_token_context_cost.md",
+        "type": "document",
+        "summary": "Analyzes the three-stage token lifecycle in agent conversations and details systematic optimization techniques for input and output tokens. Covers system prompt refinement, specialized per-agent tool allocation, dynamic context pruning, and automated transcript compaction."
+      },
+      {
+        "id": "document:14_performance_cost/14.2_latency_throughput.md",
+        "name": "14.2_latency_throughput.md",
+        "type": "document",
+        "summary": "Establishes formal mathematical models for end-to-end latency decomposition across LLM inference, tool I/O, sandbox execution, and orchestration overhead. Formulates a structured multi-component cost equation and contrasts serial versus parallel multi-agent dispatch architectures."
+      },
+      {
+        "id": "document:14_performance_cost/14.3_usage_budget.md",
+        "name": "14.3_usage_budget.md",
+        "type": "document",
+        "summary": "Guides real-time token consumption observation and budget control using OpenClaw built-in commands like /status, /usage cost, and /compact alongside Dashboard metrics. Explains global and per-agent budget quotas, automated session pruning, model tiering fallbacks, and cost anomaly alerts."
+      },
+      {
+        "id": "document:14_performance_cost/14.4_budget_templates.md",
+        "name": "14.4_budget_templates.md",
+        "type": "document",
+        "summary": "Provides detailed monthly cost breakdowns and deployment budget templates across three distinct operating tiers: Personal/Small Team, Medium Scale/Startup, and Enterprise. Features a cost driver weight comparison matrix and a practical budget planning decision tree."
+      },
+      {
+        "id": "document:14_performance_cost/summary.md",
+        "name": "summary.md",
+        "type": "document",
+        "summary": "Summarizes key operational takeaways from Chapter 14, provides a 6-point cost optimization audit checklist, and previews troubleshooting trees and ecosystem integration chapters."
+      },
+      {
+        "id": "document:15_troubleshooting_trees/README.md",
+        "name": "README.md",
+        "type": "document",
+        "summary": "Introduces Chapter 15 and outlines the directory structure for systematic troubleshooting decision trees, high-concurrency diagnostic paths, and operational best practices."
+      },
+      {
+        "id": "document:15_troubleshooting_trees/15.1_diagnostic_decision_trees.md",
+        "name": "15.1_diagnostic_decision_trees.md",
+        "type": "document",
+        "summary": "Establishes a 6-tier diagnostic decision tree framework covering startup, messaging gateway, model invocation, tool execution, session/memory, and performance degradation, guided by evidence chain hypothesis elimination."
+      },
+      {
+        "id": "document:15_troubleshooting_trees/15.2_high_concurrency_diagnosis.md",
+        "name": "15.2_high_concurrency_diagnosis.md",
+        "type": "document",
+        "summary": "Provides diagnostic decision trees and mitigation strategies for high-concurrency production incidents, addressing HTTP 429 rate limiting, authentication expiration, token budget exhaustion, queue overflows, and cascading system failures."
+      },
+      {
+        "id": "document:15_troubleshooting_trees/summary.md",
+        "name": "summary.md",
+        "type": "document",
+        "summary": "Summarizes the key concepts of Chapter 15, emphasizing binary triage, proactive health checks via openclaw doctor, high-concurrency circuit breakers, and scheduled operational auditing."
+      },
+      {
+        "id": "document:16_claude_ecosystem/README.md",
+        "name": "README.md",
+        "type": "document",
+        "summary": "Serves as the chapter roadmap and table of contents for Chapter 16, introducing integration patterns for mainstream AI ecosystems including Anthropic Claude, Model Context Protocol (MCP), multi-agent orchestration, OpenAI, and local LLMs via Ollama."
+      },
+      {
+        "id": "document:16_claude_ecosystem/16.1_claude_integration.md",
+        "name": "16.1_claude_integration.md",
+        "type": "document",
+        "summary": "Guides integration with the Anthropic Claude model family and external tool connectivity via the Model Context Protocol (MCP). Covers model tier selection from Haiku to Opus, Adaptive Thinking controls, 1M context token activation, stdio and Streamable HTTP MCP server configurations, and multi-provider failover chains."
+      },
+      {
+        "id": "document:16_claude_ecosystem/16.2_agent_team_integration.md",
+        "name": "16.2_agent_team_integration.md",
+        "type": "document",
+        "summary": "Explains multi-agent collaboration architectures in OpenClaw using agentId, accountId, and channel bindings alongside task delegation via sessions_spawn. Compares sequential, parallel (fan-out/fan-in), and dynamic routing patterns, and outlines governance constraints and synergy with the Claude Agent SDK."
+      },
+      {
+        "id": "document:16_claude_ecosystem/16.3_other_ecosystems.md",
+        "name": "16.3_other_ecosystems.md",
+        "type": "document",
+        "summary": "Covers connecting OpenAI models, Azure OpenAI Service, and local LLMs through Ollama, detailing multi-ecosystem hybrid strategies. Highlights native tool-calling requirements, hardware VRAM sizing guidelines, privacy-first offline fallbacks, and unified status inspection using CLI probe commands."
+      },
+      {
+        "id": "document:16_claude_ecosystem/summary.md",
+        "name": "summary.md",
+        "type": "document",
+        "summary": "Summarizes the core takeaways of Chapter 16 on standard model identifiers, MCP tool protocol advantages, dual multi-agent orchestration paths, and enterprise multi-ecosystem hybrid governance."
+      },
+      {
+        "id": "document:CONTRIBUTING.md",
+        "name": "CONTRIBUTING.md",
+        "type": "document",
+        "summary": "Outlines contributor guidelines, code of conduct, markdown formatting standards, and pull request workflows for the project."
+      },
+      {
+        "id": "document:README.md",
+        "name": "README.md",
+        "type": "document",
+        "summary": "Main documentation landing page providing an overview of the OpenClaw guide, key highlights, reading formats, quickstart steps, and role-based learning tracks."
+      },
+      {
+        "id": "document:README_en.md",
+        "name": "README_en.md",
+        "type": "document",
+        "summary": "English edition of the project overview introducing OpenClaw architecture highlights, local preview instructions, and guided reading tracks."
+      },
+      {
+        "id": "document:SUMMARY.md",
+        "name": "SUMMARY.md",
+        "type": "document",
+        "summary": "GitBook table of contents defining the structural navigation across beginner fundamentals, advanced features, core principles, practical deployment, and appendices."
+      },
+      {
+        "id": "document:appendix/README.md",
+        "name": "README.md",
+        "type": "document",
+        "summary": "Serves as the master index for the appendix section, cataloging and describing reference documents including glossaries, configuration templates, troubleshooting checklists, and CLI guides."
+      },
+      {
+        "id": "document:appendix/api_reference.md",
+        "name": "api_reference.md",
+        "type": "document",
+        "summary": "Provides an entry-point quick reference for OpenClaw API and SDK integration, control plane documentation links, frontline CLI diagnostic commands, and WebSocket protocol guidance."
+      },
+      {
+        "id": "document:appendix/command_cheatsheet.md",
+        "name": "command_cheatsheet.md",
+        "type": "document",
+        "summary": "Comprehensive CLI reference manual organizing OpenClaw commands across service operations, models, channels, plugins, skills, sandbox environments, and chat slash commands."
+      },
+      {
+        "id": "document:appendix/config_templates.md",
+        "name": "config_templates.md",
+        "type": "document",
+        "summary": "Collection of standardized JSON5 configuration templates for OpenClaw Gateway spanning minimal local setups, channel integrations (WhatsApp, Telegram), tool governance, storage, and SKILL.md specs."
+      },
+      {
+        "id": "document:appendix/env_check.md",
+        "name": "env_check.md",
+        "type": "document",
+        "summary": "Diagnostic bash script and guide to verify core runtime prerequisites, including Node.js version constraints, Docker availability, and outbound network connectivity to model providers."
+      },
+      {
+        "id": "document:appendix/glossary.md",
+        "name": "glossary.md",
+        "type": "document",
+        "summary": "Defines core terminology and concepts for OpenClaw, categorized into foundational agent loop concepts, channel operations, and protocol/plugin extension architectures."
+      },
+      {
+        "id": "document:appendix/naming_history.md",
+        "name": "naming_history.md",
+        "type": "document",
+        "summary": "Documents verifiable naming milestones and origins of the OpenClaw project and its continuous development led by Peter Steinberger."
+      },
+      {
+        "id": "document:appendix/reading_list.md",
+        "name": "reading_list.md",
+        "type": "document",
+        "summary": "Curated bibliography compiling official OpenClaw documentation, foundational academic papers on autonomous LLM agents (ReAct, Toolformer), and related open-source ecosystems."
+      },
+      {
+        "id": "document:appendix/troubleshooting_checklist.md",
+        "name": "troubleshooting_checklist.md",
+        "type": "document",
+        "summary": "Systematic step-by-step diagnostic checklist covering startup failures, channel issues, tool policy denials, AI model errors, and session memory faults."
+      },
+      {
+        "id": "document:appendix/version_mapping.md",
+        "name": "version_mapping.md",
+        "type": "document",
+        "summary": "Guides safe upgrades and schema migrations across OpenClaw CalVer releases, detailing changes in authentication profiles, agent defaults, channel policies, and diagnostic commands."
+      },
+      {
+        "id": "document:appendix/volatile_facts.md",
+        "name": "volatile_facts.md",
+        "type": "document",
+        "summary": "Auditing ledger tracking rapidly changing facts such as supported Node.js version ranges, AI model releases, pricing tiers, and protocol specifications with TTL expiration dates."
+      },
+      {
+        "id": "document:docs/superpowers/plans/2026-10-06-vietnamese-translation.md",
+        "name": "2026-10-06-vietnamese-translation.md",
+        "type": "document",
+        "summary": "Implementation plan outlining phased execution steps for translating all 112 book Markdown documents into Vietnamese while preserving syntax, links, and diagrams."
+      },
+      {
+        "id": "document:docs/superpowers/specs/2026-10-06-vietnamese-translation-design.md",
+        "name": "2026-10-06-vietnamese-translation-design.md",
+        "type": "document",
+        "summary": "Technical design specification defining translation standards, terminology conventions, and in-place replacement strategy for the Vietnamese edition."
+      }
+    ],
+    "infrastructure": [
+      {
+        "id": "pipeline:.github/workflows/auto-release.yml",
+        "name": "auto-release.yml",
+        "type": "pipeline",
+        "summary": "Automates building, testing, verifying, attesting provenance, and publishing PDF and HTML guide editions for tagged releases."
+      },
+      {
+        "id": "pipeline:.github/workflows/ci.yaml",
+        "name": "ci.yaml",
+        "type": "pipeline",
+        "summary": "Continuous integration workflow that executes project tests and rule checks, followed by building and verifying PDF and HTML guide editions on pull requests and pushes to main."
+      },
+      {
+        "id": "pipeline:.github/workflows/dependabot-automerge.yml",
+        "name": "dependabot-automerge.yml",
+        "type": "pipeline",
+        "summary": "Automatically enables auto-merge for Dependabot pull requests targeting semver patch updates while leaving minor and major updates for manual review."
+      },
+      {
+        "id": "pipeline:.github/workflows/identity-guard.yaml",
+        "name": "identity-guard.yaml",
+        "type": "pipeline",
+        "summary": "Server-side git audit workflow that inspects commit authors, committers, and Co-authored-by trailers to prevent AI assistant identities from entering repository history."
+      },
+      {
+        "id": "pipeline:.github/workflows/preview-pdf.yml",
+        "name": "preview-pdf.yml",
+        "type": "pipeline",
+        "summary": "Builds, verifies, and publishes rolling preview editions of the PDF and HTML guides to a mutable preview-pdf release tag on push to main."
+      }
+    ],
+    "data": [],
+    "config": [
+      {
+        "id": "config:book.json",
+        "name": "book.json",
+        "type": "config",
+        "summary": "GitBook configuration file specifying book metadata, Vietnamese language setting, official sidebar links, and theme display settings."
+      },
+      {
+        "id": "config:package.json",
+        "name": "package.json",
+        "type": "config",
+        "summary": "NPM package manifest configuring test discovery scripts and development dependencies for Mermaid diagram compilation and browser automation."
+      },
+      {
+        "id": "config:.github/dependabot.yml",
+        "name": "dependabot.yml",
+        "type": "config",
+        "summary": "GitHub Dependabot configuration that automates weekly version updates for GitHub Actions workflows."
+      },
+      {
+        "id": "config:.ua/config.json",
+        "name": "config.json",
+        "type": "config",
+        "summary": "Understand-Anything configuration file specifying English as the target output language for generated documentation and graphs."
+      }
+    ]
+  },
+  "clusters": [],
+  "layers": {
+    "count": 10,
+    "list": [
+      {
+        "id": "layer:ci-cd",
+        "name": "CI/CD & Release Automation",
+        "description": "GitHub Actions workflows for automated guide building, PDF preview generation, release attestation, and dependency management."
+      },
+      {
+        "id": "layer:config",
+        "name": "Project & Build Configuration",
+        "description": "Configuration files defining project dependencies, package manifests, HonKit book build settings, and Dependabot rules."
+      },
+      {
+        "id": "layer:tooling",
+        "name": "Build Tooling & Rule Verification",
+        "description": "Python utility scripts for rendering Mermaid diagrams, compiling PDF and HTML book formats, verifying build artifacts, and enforcing formatting rules."
+      },
+      {
+        "id": "layer:test",
+        "name": "Testing & Quality Assurance",
+        "description": "Automated test suite validating PDF generation, CJK typography rendering, list layout formatting, installation contracts, and workflow security."
+      },
+      {
+        "id": "layer:documentation",
+        "name": "Project Documentation & Editorial Specs",
+        "description": "Repository-level documentation, bilingual README overviews, contribution guidelines, navigation table of contents, and localization design specs."
+      },
+      {
+        "id": "layer:fundamentals",
+        "name": "Guide Part I: Fundamentals & Getting Started",
+        "description": "Introductory guide chapters covering OpenClaw core concepts, environment prerequisites, installation workflows, initial onboarding, minimal interaction loops, and model configuration."
+      },
+      {
+        "id": "layer:subsystems",
+        "name": "Guide Part II: Subsystems & Operational Features",
+        "description": "Advanced feature chapters detailing tool inventories, execution policies, session memory lifecycle, multi-agent chat integrations (Telegram, WhatsApp, Lark), cron scheduling, and operational security baselines."
+      },
+      {
+        "id": "layer:architecture",
+        "name": "Guide Part III: Core Architecture & Runtime Internals",
+        "description": "In-depth technical chapters exploring the 5-plane Gateway protocol, agent loop request execution lifecycle, multi-key auth and cooldown reliability, guardrails, and plugin extension engineering."
+      },
+      {
+        "id": "layer:production-cases",
+        "name": "Guide Part IV: Enterprise Practice & Optimization",
+        "description": "Production-focused chapters covering enterprise use cases, token budget and latency optimization, diagnostic decision trees, and multi-agent AI ecosystem integrations."
+      },
+      {
+        "id": "layer:reference",
+        "name": "Reference Material & Appendices",
+        "description": "Comprehensive reference material providing quick-lookup command cheatsheets, configuration templates, API and SDK references, glossary definitions, and troubleshooting checklists."
+      }
+    ]
+  },
+  "nodeSummaryIndex": {
+    "pipeline:.github/workflows/auto-release.yml": {
+      "name": "auto-release.yml",
+      "type": "pipeline",
+      "summary": "Automates building, testing, verifying, attesting provenance, and publishing PDF and HTML guide editions for tagged releases."
+    },
+    "pipeline:.github/workflows/ci.yaml": {
+      "name": "ci.yaml",
+      "type": "pipeline",
+      "summary": "Continuous integration workflow that executes project tests and rule checks, followed by building and verifying PDF and HTML guide editions on pull requests and pushes to main."
+    },
+    "pipeline:.github/workflows/dependabot-automerge.yml": {
+      "name": "dependabot-automerge.yml",
+      "type": "pipeline",
+      "summary": "Automatically enables auto-merge for Dependabot pull requests targeting semver patch updates while leaving minor and major updates for manual review."
+    },
+    "pipeline:.github/workflows/identity-guard.yaml": {
+      "name": "identity-guard.yaml",
+      "type": "pipeline",
+      "summary": "Server-side git audit workflow that inspects commit authors, committers, and Co-authored-by trailers to prevent AI assistant identities from entering repository history."
+    },
+    "pipeline:.github/workflows/preview-pdf.yml": {
+      "name": "preview-pdf.yml",
+      "type": "pipeline",
+      "summary": "Builds, verifies, and publishes rolling preview editions of the PDF and HTML guides to a mutable preview-pdf release tag on push to main."
+    },
+    "document:01_overview/README.md": {
+      "name": "README.md",
+      "type": "document",
+      "summary": "Introduces Chapter 1 of the OpenClaw guide, providing a table of contents and learning objectives for understanding the local-first AI assistant."
+    },
+    "document:01_overview/1.1_what_is_openclaw.md": {
+      "name": "1.1_what_is_openclaw.md",
+      "type": "document",
+      "summary": "Explains OpenClaw's architecture using a smart intern metaphor, addressing isolated AI capabilities, multi-channel messaging, and system auditability."
+    },
+    "document:01_overview/1.2_scenarios_comparison.md": {
+      "name": "1.2_scenarios_comparison.md",
+      "type": "document",
+      "summary": "Compares OpenClaw with ChatGPT, Cursor, Zapier, and Dify, analyzing token cost implications and practical workload suitability."
+    },
+    "document:01_overview/1.3_concepts.md": {
+      "name": "1.3_concepts.md",
+      "type": "document",
+      "summary": "Introduces the five core concepts of OpenClaw—Gateway, Agent, Tool, Session, and Node—mapping out the message lifecycle and chapter cross-references."
+    },
+    "document:01_overview/1.4_use_cases.md": {
+      "name": "1.4_use_cases.md",
+      "type": "document",
+      "summary": "Outlines typical OpenClaw deployment scenarios, including personal ChatOps, smart home automation, auditable memory systems, and security sandbox research."
+    },
+    "document:01_overview/summary.md": {
+      "name": "summary.md",
+      "type": "document",
+      "summary": "Summarizes the fundamental principles covered in Chapter 1, featuring comprehension review questions and a preview of the setup chapter."
+    },
+    "document:02_setup/README.md": {
+      "name": "README.md",
+      "type": "document",
+      "summary": "Serves as the chapter roadmap and table of contents for Chapter 2, outlining the four-step setup sequence from prerequisites to gateway acceptance testing."
+    },
+    "document:02_setup/2.1_requirements.md": {
+      "name": "2.1_requirements.md",
+      "type": "document",
+      "summary": "Specifies hardware, Node.js runtime, network connectivity, and API credential prerequisites for deploying OpenClaw."
+    },
+    "document:02_setup/2.2_installation.md": {
+      "name": "2.2_installation.md",
+      "type": "document",
+      "summary": "Guides users through OpenClaw installation using the one-line install script, npm, Docker, and source builds, alongside environment variable and path configurations."
+    },
+    "document:02_setup/2.3_onboarding.md": {
+      "name": "2.3_onboarding.md",
+      "type": "document",
+      "summary": "Explains how to run the interactive onboarding wizard to configure models, workspaces, and daemons while defining workspace bootstrap file roles."
+    },
+    "document:02_setup/2.4_gateway_service.md": {
+      "name": "2.4_gateway_service.md",
+      "type": "document",
+      "summary": "Details OpenClaw Gateway daemon management, local health acceptance testing checklists, and layered troubleshooting architectures."
+    },
+    "document:02_setup/summary.md": {
+      "name": "summary.md",
+      "type": "document",
+      "summary": "Reviews key setup takeaways, provides a post-installation security and operational checklist, and previews Chapter 3 minimal loop topics."
+    },
+    "document:03_minimal_loop/3.1_control_ui_webchat.md": {
+      "name": "3.1_control_ui_webchat.md",
+      "type": "document",
+      "summary": "Details the Control UI web dashboard navigation structure and minimal loop verification workflow using local webchat. Guides testing Gateway health, streaming outputs, and initial connection barriers before integrating external channels."
+    },
+    "document:03_minimal_loop/3.2_diagnostics.md": {
+      "name": "3.2_diagnostics.md",
+      "type": "document",
+      "summary": "Establishes a systematic 4-tier diagnostic methodology across process, channels, AI models, and structured logs. Provides diagnostic CLI commands including deep status probes and guided repair tools to pinpoint failures."
+    },
+    "document:03_minimal_loop/3.3_agent_persona.md": {
+      "name": "3.3_agent_persona.md",
+      "type": "document",
+      "summary": "Explains how to craft executable initial system instructions and configure agent personas across workspace markdown files like AGENTS.md and SOUL.md. Covers goal convergence, boundary enforcement, and format constraints."
+    },
+    "document:03_minimal_loop/3.4_pairing_groups.md": {
+      "name": "3.4_pairing_groups.md",
+      "type": "document",
+      "summary": "Covers local access boundaries, device pairing approval workflows, and default channel policies for direct messages and group chats. Explains how 'block first, approve later' establishes the minimal trust perimeter."
+    },
+    "document:03_minimal_loop/README.md": {
+      "name": "README.md",
+      "type": "document",
+      "summary": "Introduces Chapter 3 on rapid setup and the first live interactive session using a local minimal loop baseline. Outlines the chapter contents, learning objectives, and prerequisites."
+    },
+    "document:03_minimal_loop/summary.md": {
+      "name": "summary.md",
+      "type": "document",
+      "summary": "Summarizes the essential design principles and self-check criteria for validating a minimal local conversational baseline. Concludes Chapter 3 and outlines next steps for configuration and AI model integration."
+    },
+    "document:04_config_models/README.md": {
+      "name": "README.md",
+      "type": "document",
+      "summary": "Introduces Chapter 4 on configuration systems and model governance, establishing learning objectives for config explanation, safe auth rotation, multi-dimensional model evaluation, and failover design."
+    },
+    "document:04_config_models/4.1_config_system.md": {
+      "name": "4.1_config_system.md",
+      "type": "document",
+      "summary": "Explains the openclaw.json structure, scope boundaries between Gateway, Agent, Channel, and Tool levels, configuration precedence layering, and the four-part evidence chain for verifying active parameters."
+    },
+    "document:04_config_models/4.2_provider_access.md": {
+      "name": "4.2_provider_access.md",
+      "type": "document",
+      "summary": "Covers model provider connection strategies and authentication, comparing built-in onboarding with custom proxy configurations, SecretRef pipelines, multi-key auth profiles, and rate-limit cooldown handling."
+    },
+    "document:04_config_models/4.3_model_selection.md": {
+      "name": "4.3_model_selection.md",
+      "type": "document",
+      "summary": "Presents a four-dimensional decision framework balancing quality, cost, latency, and reliability, detailing primary model setup in agents.defaults.model, per-agent overrides, and regression testing protocols."
+    },
+    "document:04_config_models/4.4_failover.md": {
+      "name": "4.4_failover.md",
+      "type": "document",
+      "summary": "Details fault classification mapping, fallback chain configuration via agents.defaults.model.fallbacks, coordination with bounded retries, auth-profile cooldown tiers, and fault-injection verification."
+    },
+    "document:04_config_models/summary.md": {
+      "name": "summary.md",
+      "type": "document",
+      "summary": "Summarizes Chapter 4 core conclusions, provides a minimal viable configuration loop and standard verification commands, and includes a self-assessment checklist for model governance."
+    },
+    "document:05_tools_skills/README.md": {
+      "name": "README.md",
+      "type": "document",
+      "summary": "Introduces Chapter 5 on OpenClaw's Action Layer, establishing the architectural relationship between intent proposal, tool contracts, permission policies, and execution governance."
+    },
+    "document:05_tools_skills/5.1_tool_inventory.md": {
+      "name": "5.1_tool_inventory.md",
+      "type": "document",
+      "summary": "Explores tool inventory engineering, covering tool contracts, failure semantics, read-only vs. mutating boundaries, tool chaining with error propagation, result injection, and execution replayability."
+    },
+    "document:05_tools_skills/5.2_tool_policy.md": {
+      "name": "5.2_tool_policy.md",
+      "type": "document",
+      "summary": "Explains tool policy enforcement including global allow/deny precedence, tool profiles, channel and sender-level layering, provider customizations, and sub-agent depth restrictions."
+    },
+    "document:05_tools_skills/5.3_skills_plugins.md": {
+      "name": "5.3_skills_plugins.md",
+      "type": "document",
+      "summary": "Delineates the division of labor between Plugins for runtime capability extension and Skills for process standardization, while highlighting ClawHub supply-chain risks and review checklists."
+    },
+    "document:05_tools_skills/5.4_browser_nodes.md": {
+      "name": "5.4_browser_nodes.md",
+      "type": "document",
+      "summary": "Covers browser automation governance, detailing isolation boundaries, a 4-tier capability hierarchy from search to vision, CLI operations, and structured troubleshooting workflows."
+    },
+    "document:05_tools_skills/summary.md": {
+      "name": "summary.md",
+      "type": "document",
+      "summary": "Summarizes Chapter 5 key conclusions on runtime policy boundaries and tool governance, providing diagnostic self-test questions and practical automation scenarios."
+    },
+    "document:06_context_memory/README.md": {
+      "name": "README.md",
+      "type": "document",
+      "summary": "Introduces Chapter 6 on sessions, context, and memory, establishing learning objectives for session isolation, multi-tier context budgeting, long-term memory retrieval, and compaction management."
+    },
+    "document:06_context_memory/6.1_sessions.md": {
+      "name": "6.1_sessions.md",
+      "type": "document",
+      "summary": "Covers OpenClaw's session model and persistence layer, explaining session key resolution, thread and DM isolation boundaries, reset strategies, message queue modes, and session bleed troubleshooting."
+    },
+    "document:06_context_memory/6.2_context_building.md": {
+      "name": "6.2_context_building.md",
+      "type": "document",
+      "summary": "Explains context assembly across four prioritized information tiers, token window budget allocation ratios, structured tool result injection, and pluggable context engines."
+    },
+    "document:06_context_memory/6.3_memory_mechanism.md": {
+      "name": "6.3_memory_mechanism.md",
+      "type": "document",
+      "summary": "Details the dual-tier workspace memory architecture comprising MEMORY.md and daily logs, fact curation criteria, hybrid search with vector embedding indexing, and memory expiration."
+    },
+    "document:06_context_memory/6.4_compaction_pruning.md": {
+      "name": "6.4_compaction_pruning.md",
+      "type": "document",
+      "summary": "Analyzes context governance for long conversations, contrasting ephemeral in-memory tool result pruning with persistent transcript compaction and pre-compaction memory flush triggers."
+    },
+    "document:06_context_memory/summary.md": {
+      "name": "summary.md",
+      "type": "document",
+      "summary": "Summarizes Chapter 6 with key conclusions on state ownership and token governance, an end-to-end trace walkthrough, self-check verification criteria, and a transition to multi-agent routing."
+    },
+    "document:07_multi_agent/7.1_telegram_whatsapp.md": {
+      "name": "7.1_telegram_whatsapp.md",
+      "type": "document",
+      "summary": "Covers channel onboarding and ingress governance for Telegram and WhatsApp, detailing direct-message and group policy segregation, token configurations, and multi-account isolation strategies."
+    },
+    "document:07_multi_agent/7.2_lark_integration.md": {
+      "name": "7.2_lark_integration.md",
+      "type": "document",
+      "summary": "Walks through enterprise bot onboarding for Lark/Feishu Open Platform, covering long connection WebSocket subscriptions, event dispatching, permission setups, and pairing verification."
+    },
+    "document:07_multi_agent/7.3_routing_basics.md": {
+      "name": "7.3_routing_basics.md",
+      "type": "document",
+      "summary": "Explains multi-agent routing mechanics, routing bindings precedence over natural intent routers, risk-gated entry point mappings, and workspace memory isolation."
+    },
+    "document:07_multi_agent/7.4_collaboration_patterns.md": {
+      "name": "7.4_collaboration_patterns.md",
+      "type": "document",
+      "summary": "Details multi-agent collaboration topologies, contrasting isolated sub-agent task delegation via sessions_spawn with parallel fan-out via broadcast groups and message queue announce flows."
+    },
+    "document:07_multi_agent/README.md": {
+      "name": "README.md",
+      "type": "document",
+      "summary": "Introduces Chapter 7 on multi-channel message distribution and multi-agent collaboration, outlining channel policies, routing bindings, sandbox boundary enforcement, and chapter navigation."
+    },
+    "document:07_multi_agent/summary.md": {
+      "name": "summary.md",
+      "type": "document",
+      "summary": "Summarizes Chapter 7 key architectural takeaways on deterministic agent ownership, channel policies, auditability, self-check verification questions, and multi-agent production use cases."
+    },
+    "document:08_automation_ops/README.md": {
+      "name": "README.md",
+      "type": "document",
+      "summary": "Serves as the chapter roadmap and table of contents for Chapter 8, introducing architectural governance across lifecycle hooks, cron jobs, heartbeat polling, remote access, and security baselines for 24/7 unattended operations."
+    },
+    "document:08_automation_ops/8.1_hooks.md": {
+      "name": "8.1_hooks.md",
+      "type": "document",
+      "summary": "Details OpenClaw lifecycle hooks and event interception points, establishing clear separation of cross-cutting governance concerns like rate limiting, auditing, and data masking while enforcing timeout, degradation, and idempotency constraints."
+    },
+    "document:08_automation_ops/8.2_cron_jobs.md": {
+      "name": "8.2_cron_jobs.md",
+      "type": "document",
+      "summary": "Guides the design and scheduling of exact-time unattended tasks using built-in gateway cron and external crontab integration, emphasizing idempotency keys, non-overlapping locks, and error triage."
+    },
+    "document:08_automation_ops/8.3_heartbeat.md": {
+      "name": "8.3_heartbeat.md",
+      "type": "document",
+      "summary": "Explains OpenClaw's periodic heartbeat mechanism for batched polling and notify-on-demand alerting, dissecting the timer-to-delivery lifecycle, HEARTBEAT_OK protocol, active hours configuration, and token cost optimization."
+    },
+    "document:08_automation_ops/8.4_remote_access.md": {
+      "name": "8.4_remote_access.md",
+      "type": "document",
+      "summary": "Architects secure remote management for OpenClaw instances using SSH port forwarding, Tailscale Serve private network tunnels, Zero Trust identity principles, and rclone file synchronization."
+    },
+    "document:08_automation_ops/8.5_security_baseline.md": {
+      "name": "8.5_security_baseline.md",
+      "type": "document",
+      "summary": "Establishes a verifiable defense-in-depth security baseline spanning ingress control, routing bindings, tool execution policies, and secret management with structured audit event logging."
+    },
+    "document:08_automation_ops/summary.md": {
+      "name": "summary.md",
+      "type": "document",
+      "summary": "Summarizes key operational automation takeaways, provides a practical self-inspection checklist for production readiness, and showcases community deployment patterns."
+    },
+    "document:09_gateway_protocol/9.1_architecture_overview.md": {
+      "name": "9.1_architecture_overview.md",
+      "type": "document",
+      "summary": "Presents the five-plane architectural framework (Control, Data, Context, Trust, and Visibility planes) for understanding Gateway responsibilities and module boundaries. Analyzes plane interactions, execution surface separation, and cross-plane diagnostic tracing."
+    },
+    "document:09_gateway_protocol/9.2_control_plane.md": {
+      "name": "9.2_control_plane.md",
+      "type": "document",
+      "summary": "Explores the five core duties and boundaries of the Gateway Control Plane: connection attribution, routing, session lifecycle, policy enforcement, and circuit-breaking failover. Introduces layered approval architecture and practical openclaw.json configuration examples."
+    },
+    "document:09_gateway_protocol/9.3_ws_handshake.md": {
+      "name": "9.3_ws_handshake.md",
+      "type": "document",
+      "summary": "Details the full lifecycle of persistent WebSocket connections, covering challenge-response authentication, device identity signatures, keepalive heartbeats, and exponential backoff reconnection. Clarifies the architectural distinction between transport-level connections and stateful sessions."
+    },
+    "document:09_gateway_protocol/9.4_event_idempotency.md": {
+      "name": "9.4_event_idempotency.md",
+      "type": "document",
+      "summary": "Examines event idempotency, sequence ordering, and eventual consistency guarantees across distributed agent networks. Explains handling duplicate, lost, or unknown states via idempotency keys, sequence gap detection for snapshot refresh, and session-level mutex locking."
+    },
+    "document:09_gateway_protocol/9.5_pairing_trust.md": {
+      "name": "9.5_pairing_trust.md",
+      "type": "document",
+      "summary": "Explains establishing local trust perimeters via device identity registration, nonce-based cryptographic challenge verification, and operator approval workflows. Distinguishes Control Plane device pairing from chat-level DM sender pairing, and outlines token rotation and emergency revocation mechanisms."
+    },
+    "document:09_gateway_protocol/README.md": {
+      "name": "README.md",
+      "type": "document",
+      "summary": "Introduces Chapter 9 on OpenClaw Gateway control plane responsibilities, WebSocket connection lifecycles, event consistency, and local device pairing trust. Outlines the chapter outline, pedagogical five-plane architectural framework, and core learning objectives."
+    },
+    "document:09_gateway_protocol/summary.md": {
+      "name": "summary.md",
+      "type": "document",
+      "summary": "Summarizes Chapter 9 key conclusions on control plane arbitration, WebSocket lifecycle management, event idempotency, and device trust bootstrapping. Includes a self-check verification checklist and transitions to Chapter 10 agent loop mechanics."
+    },
+    "document:10_agent_loop/10.1_request_lifecycle.md": {
+      "name": "10.1_request_lifecycle.md",
+      "type": "document",
+      "summary": "Traces the complete end-to-end request lifecycle of an agent message and provides an outside-in layered diagnostic framework for isolating errors across gateway, agent, session, model, and tool tiers."
+    },
+    "document:10_agent_loop/10.2_pi_framework.md": {
+      "name": "10.2_pi_framework.md",
+      "type": "document",
+      "summary": "Analyzes OpenClaw's embedded integration of the Pi runtime engine, detailing session lifecycle management, custom tool injection, event subscription bridges, and dynamic system prompts."
+    },
+    "document:10_agent_loop/10.3_entry_queue.md": {
+      "name": "10.3_entry_queue.md",
+      "type": "document",
+      "summary": "Details ingress protocol normalization, replay deduplication barriers, and the pure TypeScript lane-based Command Queue governing session, global, and background execution concurrency."
+    },
+    "document:10_agent_loop/10.4_prompt_assembly.md": {
+      "name": "10.4_prompt_assembly.md",
+      "type": "document",
+      "summary": "Examines structured context assembly across four data tiers, token window budgeting with priority-based pruning, prompt persistence audits, and defense-in-depth against prompt injection attacks."
+    },
+    "document:10_agent_loop/10.5_tool_execution.md": {
+      "name": "10.5_tool_execution.md",
+      "type": "document",
+      "summary": "Explores the four-stage tool call lifecycle, static policy filtering, dynamic before_tool_call plugin interception hooks, loop detection, and result trimming injection."
+    },
+    "document:10_agent_loop/10.6_streaming_retry.md": {
+      "name": "10.6_streaming_retry.md",
+      "type": "document",
+      "summary": "Explains the EmbeddedBlockChunker streaming engine with fence-aware markdown chunking, bounded request-level HTTP retry strategies, model failover sequences, and early termination controls."
+    },
+    "document:10_agent_loop/README.md": {
+      "name": "README.md",
+      "type": "document",
+      "summary": "Serves as the chapter navigation guide for the OpenClaw Agent Loop core, introducing foundational mental models, learning objectives, and reading advice."
+    },
+    "document:10_agent_loop/summary.md": {
+      "name": "summary.md",
+      "type": "document",
+      "summary": "Summarizes the key architectural conclusions of Chapter 10, provides a self-assessment checklist across all agent loop mechanisms, and previews Chapter 11 on reliability and security."
+    },
+    "document:11_reliability_security/11.1_auth_profiles.md": {
+      "name": "11.1_auth_profiles.md",
+      "type": "document",
+      "summary": "Defines the multi-key authentication object model and lifecycle in OpenClaw, covering auth profiles, selection order priority, session overrides, and runtime state tracking. Explains key isolation across environments, zero-downtime key rotation workflows, emergency credential leak response, and audit verification probes."
+    },
+    "document:11_reliability_security/11.2_rotation_cooldown.md": {
+      "name": "11.2_rotation_cooldown.md",
+      "type": "document",
+      "summary": "Details the auth profile cooldown and temporary disablement mechanisms designed to prevent retry amplification during provider outages or rate limits. Explains failure count cooldown tiers, exponential backoff for billing failures, and runtime state tracking via auth-state.json."
+    },
+    "document:11_reliability_security/11.3_fallback_rules.md": {
+      "name": "11.3_fallback_rules.md",
+      "type": "document",
+      "summary": "Establishes explainable model fallback chains and failure triage rules to ensure continuous operation without silent model switches. Covers sequential fallback tiers, context overflow bypass behaviors, half-open probing during cooldown, and fault injection verification techniques."
+    },
+    "document:11_reliability_security/11.4_guardrails.md": {
+      "name": "11.4_guardrails.md",
+      "type": "document",
+      "summary": "Explains the four-layer defense-in-depth guardrail framework combining tool policies, sandbox container isolation, manual execution approvals, and audit logging. Demonstrates prompt injection mitigation, sensitive data masking, and health diagnostic commands."
+    },
+    "document:11_reliability_security/README.md": {
+      "name": "README.md",
+      "type": "document",
+      "summary": "Chapter roadmap and learning objectives for implementing reliability and security mechanisms in OpenClaw, introducing multi-key governance, cooldown mechanisms, model fallback chains, and defensive guardrails."
+    },
+    "document:11_reliability_security/summary.md": {
+      "name": "summary.md",
+      "type": "document",
+      "summary": "Summarizes Chapter 11 key takeaways on explicit multi-key governance, explainable model fallbacks, cooldown circuit breaking, and four-tier guardrail defense. Provides a self-assessment checklist and introduces Chapter 12 on plugin engineering and production operations."
+    },
+    "document:12_extension_engineering/README.md": {
+      "name": "README.md",
+      "type": "document",
+      "summary": "Introduces Chapter 12 on extension engineering and production operations, framing how OpenClaw evolves into an auditable and extensible enterprise platform. Contrasts developer extension mechanisms with Chapter 5's tool user perspective, summarizing plugin lifecycles, custom tools, testing pipelines, and production blueprints."
+    },
+    "document:12_extension_engineering/12.1_plugin_architecture.md": {
+      "name": "12.1_plugin_architecture.md",
+      "type": "document",
+      "summary": "Details OpenClaw's native plugin architecture, manifest validation mechanics, and five execution modes across agent, message, tool, and gateway lifecycle hooks. Explains two-tier perimeter isolation combining plugin whitelists with tool policies, bundle compatibility with external ecosystems, and CLI diagnostic commands."
+    },
+    "document:12_extension_engineering/12.2_custom_tools.md": {
+      "name": "12.2_custom_tools.md",
+      "type": "document",
+      "summary": "Provides technical guidance for designing and registering custom OpenClaw tools using TypeBox parameter schemas, structured reproducible outputs, and idempotency keys to bound side effects. Demonstrates policy layering where deny rules take precedence, sandbox execution for high-risk actions, and common design anti-patterns."
+    },
+    "document:12_extension_engineering/12.3_testing_debugging.md": {
+      "name": "12.3_testing_debugging.md",
+      "type": "document",
+      "summary": "Establishes a three-tier verification methodology for extensions spanning plugin loading, policy enforcement, and gateway ingress before end-to-end testing. Introduces snapshot baseline diffing, traceId replay for deterministic fault localization, and automated CI/CD canary release and rollback procedures."
+    },
+    "document:12_extension_engineering/12.4_production_blueprint.md": {
+      "name": "12.4_production_blueprint.md",
+      "type": "document",
+      "summary": "Defines a production blueprint for OpenClaw extensions, enforcing separation of code and configuration changes, three-tier security perimeters, and secret injection via SecretRef. Details emergency rollback runbooks, graceful degradation strategies, and operational KPIs with alert thresholds for gateway latency, resource usage, and tool health."
+    },
+    "document:12_extension_engineering/12.5_framework_interoperability.md": {
+      "name": "12.5_framework_interoperability.md",
+      "type": "document",
+      "summary": "Analyzes interoperability between OpenClaw and frameworks like LangGraph and CrewAI across adapter, protocol, and data layers. Contrasts local embedded, remote service-based, and external bridge topologies, comparing OpenClaw's declarative gateway governance with external state-machine and multi-role orchestration engines."
+    },
+    "document:12_extension_engineering/summary.md": {
+      "name": "summary.md",
+      "type": "document",
+      "summary": "Summarizes Chapter 12 key takeaways on extension engineering, highlighting mandatory whitelists, policy-driven custom tool containment, layered verification, and standardized diagnostic replay. Provides a self-assessment production readiness checklist and previews practical enterprise case studies in Chapter 13."
+    },
+    "document:13_practical_cases/13.1_lark_slack_workbot.md": {
+      "name": "13.1_lark_slack_workbot.md",
+      "type": "document",
+      "summary": "Demonstrates building an enterprise Lark/Slack workgroup assistant for an engineering team, progressing from a minimal single-tool knowledge search loop to layered RBAC permission enforcement, GitHub PR analysis, Jira issue tracking, and scheduled cron summaries."
+    },
+    "document:13_practical_cases/13.2_customer_support_agent.md": {
+      "name": "13.2_customer_support_agent.md",
+      "type": "document",
+      "summary": "Details an enterprise customer support agent implementation for B2B SaaS, covering automated FAQ retrieval, sentiment-driven human escalation workflows, Zendesk ticket creation, pre-LLM PII masking, and multilingual policy configuration."
+    },
+    "document:13_practical_cases/13.3_vertical_industry_cases.md": {
+      "name": "13.3_vertical_industry_cases.md",
+      "type": "document",
+      "summary": "Provides a comparative reference contrasting agent architectures across four vertical sectors (Financial Research, Clinical Healthcare, Adaptive Education, and E-Commerce), examining regulatory compliance constraints (SOX, HIPAA, FERPA, PCI-DSS), human-in-the-loop review gates, and memory isolation."
+    },
+    "document:13_practical_cases/README.md": {
+      "name": "README.md",
+      "type": "document",
+      "summary": "Introduces Chapter 13 on practical real-world OpenClaw deployment cases, detailing the standardized five-stage evolutionary path from a minimal verification loop to production readiness across enterprise workbots, customer support, and vertical industry scenarios."
+    },
+    "document:13_practical_cases/summary.md": {
+      "name": "summary.md",
+      "type": "document",
+      "summary": "Summarizes Chapter 13 key insights on progressive configuration, tool access controls, AI model tiering, and industry-specific adaptation vectors, providing transition guidance into performance tuning and operational troubleshooting chapters."
+    },
+    "document:14_performance_cost/README.md": {
+      "name": "README.md",
+      "type": "document",
+      "summary": "Serves as the chapter roadmap and table of contents for Chapter 14, introducing performance optimization and cost governance across token consumption, inference latency, usage observation, and budget planning."
+    },
+    "document:14_performance_cost/14.1_token_context_cost.md": {
+      "name": "14.1_token_context_cost.md",
+      "type": "document",
+      "summary": "Analyzes the three-stage token lifecycle in agent conversations and details systematic optimization techniques for input and output tokens. Covers system prompt refinement, specialized per-agent tool allocation, dynamic context pruning, and automated transcript compaction."
+    },
+    "document:14_performance_cost/14.2_latency_throughput.md": {
+      "name": "14.2_latency_throughput.md",
+      "type": "document",
+      "summary": "Establishes formal mathematical models for end-to-end latency decomposition across LLM inference, tool I/O, sandbox execution, and orchestration overhead. Formulates a structured multi-component cost equation and contrasts serial versus parallel multi-agent dispatch architectures."
+    },
+    "document:14_performance_cost/14.3_usage_budget.md": {
+      "name": "14.3_usage_budget.md",
+      "type": "document",
+      "summary": "Guides real-time token consumption observation and budget control using OpenClaw built-in commands like /status, /usage cost, and /compact alongside Dashboard metrics. Explains global and per-agent budget quotas, automated session pruning, model tiering fallbacks, and cost anomaly alerts."
+    },
+    "document:14_performance_cost/14.4_budget_templates.md": {
+      "name": "14.4_budget_templates.md",
+      "type": "document",
+      "summary": "Provides detailed monthly cost breakdowns and deployment budget templates across three distinct operating tiers: Personal/Small Team, Medium Scale/Startup, and Enterprise. Features a cost driver weight comparison matrix and a practical budget planning decision tree."
+    },
+    "document:14_performance_cost/summary.md": {
+      "name": "summary.md",
+      "type": "document",
+      "summary": "Summarizes key operational takeaways from Chapter 14, provides a 6-point cost optimization audit checklist, and previews troubleshooting trees and ecosystem integration chapters."
+    },
+    "document:15_troubleshooting_trees/README.md": {
+      "name": "README.md",
+      "type": "document",
+      "summary": "Introduces Chapter 15 and outlines the directory structure for systematic troubleshooting decision trees, high-concurrency diagnostic paths, and operational best practices."
+    },
+    "document:15_troubleshooting_trees/15.1_diagnostic_decision_trees.md": {
+      "name": "15.1_diagnostic_decision_trees.md",
+      "type": "document",
+      "summary": "Establishes a 6-tier diagnostic decision tree framework covering startup, messaging gateway, model invocation, tool execution, session/memory, and performance degradation, guided by evidence chain hypothesis elimination."
+    },
+    "document:15_troubleshooting_trees/15.2_high_concurrency_diagnosis.md": {
+      "name": "15.2_high_concurrency_diagnosis.md",
+      "type": "document",
+      "summary": "Provides diagnostic decision trees and mitigation strategies for high-concurrency production incidents, addressing HTTP 429 rate limiting, authentication expiration, token budget exhaustion, queue overflows, and cascading system failures."
+    },
+    "document:15_troubleshooting_trees/summary.md": {
+      "name": "summary.md",
+      "type": "document",
+      "summary": "Summarizes the key concepts of Chapter 15, emphasizing binary triage, proactive health checks via openclaw doctor, high-concurrency circuit breakers, and scheduled operational auditing."
+    },
+    "document:16_claude_ecosystem/README.md": {
+      "name": "README.md",
+      "type": "document",
+      "summary": "Serves as the chapter roadmap and table of contents for Chapter 16, introducing integration patterns for mainstream AI ecosystems including Anthropic Claude, Model Context Protocol (MCP), multi-agent orchestration, OpenAI, and local LLMs via Ollama."
+    },
+    "document:16_claude_ecosystem/16.1_claude_integration.md": {
+      "name": "16.1_claude_integration.md",
+      "type": "document",
+      "summary": "Guides integration with the Anthropic Claude model family and external tool connectivity via the Model Context Protocol (MCP). Covers model tier selection from Haiku to Opus, Adaptive Thinking controls, 1M context token activation, stdio and Streamable HTTP MCP server configurations, and multi-provider failover chains."
+    },
+    "document:16_claude_ecosystem/16.2_agent_team_integration.md": {
+      "name": "16.2_agent_team_integration.md",
+      "type": "document",
+      "summary": "Explains multi-agent collaboration architectures in OpenClaw using agentId, accountId, and channel bindings alongside task delegation via sessions_spawn. Compares sequential, parallel (fan-out/fan-in), and dynamic routing patterns, and outlines governance constraints and synergy with the Claude Agent SDK."
+    },
+    "document:16_claude_ecosystem/16.3_other_ecosystems.md": {
+      "name": "16.3_other_ecosystems.md",
+      "type": "document",
+      "summary": "Covers connecting OpenAI models, Azure OpenAI Service, and local LLMs through Ollama, detailing multi-ecosystem hybrid strategies. Highlights native tool-calling requirements, hardware VRAM sizing guidelines, privacy-first offline fallbacks, and unified status inspection using CLI probe commands."
+    },
+    "document:16_claude_ecosystem/summary.md": {
+      "name": "summary.md",
+      "type": "document",
+      "summary": "Summarizes the core takeaways of Chapter 16 on standard model identifiers, MCP tool protocol advantages, dual multi-agent orchestration paths, and enterprise multi-ecosystem hybrid governance."
+    },
+    "document:CONTRIBUTING.md": {
+      "name": "CONTRIBUTING.md",
+      "type": "document",
+      "summary": "Outlines contributor guidelines, code of conduct, markdown formatting standards, and pull request workflows for the project."
+    },
+    "document:README.md": {
+      "name": "README.md",
+      "type": "document",
+      "summary": "Main documentation landing page providing an overview of the OpenClaw guide, key highlights, reading formats, quickstart steps, and role-based learning tracks."
+    },
+    "document:README_en.md": {
+      "name": "README_en.md",
+      "type": "document",
+      "summary": "English edition of the project overview introducing OpenClaw architecture highlights, local preview instructions, and guided reading tracks."
+    },
+    "document:SUMMARY.md": {
+      "name": "SUMMARY.md",
+      "type": "document",
+      "summary": "GitBook table of contents defining the structural navigation across beginner fundamentals, advanced features, core principles, practical deployment, and appendices."
+    },
+    "config:book.json": {
+      "name": "book.json",
+      "type": "config",
+      "summary": "GitBook configuration file specifying book metadata, Vietnamese language setting, official sidebar links, and theme display settings."
+    },
+    "config:package.json": {
+      "name": "package.json",
+      "type": "config",
+      "summary": "NPM package manifest configuring test discovery scripts and development dependencies for Mermaid diagram compilation and browser automation."
+    },
+    "document:appendix/README.md": {
+      "name": "README.md",
+      "type": "document",
+      "summary": "Serves as the master index for the appendix section, cataloging and describing reference documents including glossaries, configuration templates, troubleshooting checklists, and CLI guides."
+    },
+    "document:appendix/api_reference.md": {
+      "name": "api_reference.md",
+      "type": "document",
+      "summary": "Provides an entry-point quick reference for OpenClaw API and SDK integration, control plane documentation links, frontline CLI diagnostic commands, and WebSocket protocol guidance."
+    },
+    "document:appendix/command_cheatsheet.md": {
+      "name": "command_cheatsheet.md",
+      "type": "document",
+      "summary": "Comprehensive CLI reference manual organizing OpenClaw commands across service operations, models, channels, plugins, skills, sandbox environments, and chat slash commands."
+    },
+    "document:appendix/config_templates.md": {
+      "name": "config_templates.md",
+      "type": "document",
+      "summary": "Collection of standardized JSON5 configuration templates for OpenClaw Gateway spanning minimal local setups, channel integrations (WhatsApp, Telegram), tool governance, storage, and SKILL.md specs."
+    },
+    "document:appendix/env_check.md": {
+      "name": "env_check.md",
+      "type": "document",
+      "summary": "Diagnostic bash script and guide to verify core runtime prerequisites, including Node.js version constraints, Docker availability, and outbound network connectivity to model providers."
+    },
+    "document:appendix/glossary.md": {
+      "name": "glossary.md",
+      "type": "document",
+      "summary": "Defines core terminology and concepts for OpenClaw, categorized into foundational agent loop concepts, channel operations, and protocol/plugin extension architectures."
+    },
+    "document:appendix/naming_history.md": {
+      "name": "naming_history.md",
+      "type": "document",
+      "summary": "Documents verifiable naming milestones and origins of the OpenClaw project and its continuous development led by Peter Steinberger."
+    },
+    "document:appendix/reading_list.md": {
+      "name": "reading_list.md",
+      "type": "document",
+      "summary": "Curated bibliography compiling official OpenClaw documentation, foundational academic papers on autonomous LLM agents (ReAct, Toolformer), and related open-source ecosystems."
+    },
+    "document:appendix/troubleshooting_checklist.md": {
+      "name": "troubleshooting_checklist.md",
+      "type": "document",
+      "summary": "Systematic step-by-step diagnostic checklist covering startup failures, channel issues, tool policy denials, AI model errors, and session memory faults."
+    },
+    "document:appendix/version_mapping.md": {
+      "name": "version_mapping.md",
+      "type": "document",
+      "summary": "Guides safe upgrades and schema migrations across OpenClaw CalVer releases, detailing changes in authentication profiles, agent defaults, channel policies, and diagnostic commands."
+    },
+    "document:appendix/volatile_facts.md": {
+      "name": "volatile_facts.md",
+      "type": "document",
+      "summary": "Auditing ledger tracking rapidly changing facts such as supported Node.js version ranges, AI model releases, pricing tiers, and protocol specifications with TTL expiration dates."
+    },
+    "config:.github/dependabot.yml": {
+      "name": "dependabot.yml",
+      "type": "config",
+      "summary": "GitHub Dependabot configuration that automates weekly version updates for GitHub Actions workflows."
+    },
+    "config:.ua/config.json": {
+      "name": "config.json",
+      "type": "config",
+      "summary": "Understand-Anything configuration file specifying English as the target output language for generated documentation and graphs."
+    },
+    "file:check_emphasis.py": {
+      "name": "check_emphasis.py",
+      "type": "file",
+      "summary": "CJK-aware Markdown emphasis validator that detects broken bold and italic formatting caused by CommonMark flanking rules around CJK punctuation."
+    },
+    "file:check_project_rules.py": {
+      "name": "check_project_rules.py",
+      "type": "file",
+      "summary": "Lightweight Markdown quality checker enforcing rules on volatile date facts, explicit code fence languages, and valid internal relative links."
+    },
+    "document:docs/superpowers/plans/2026-10-06-vietnamese-translation.md": {
+      "name": "2026-10-06-vietnamese-translation.md",
+      "type": "document",
+      "summary": "Implementation plan outlining phased execution steps for translating all 112 book Markdown documents into Vietnamese while preserving syntax, links, and diagrams."
+    },
+    "document:docs/superpowers/specs/2026-10-06-vietnamese-translation-design.md": {
+      "name": "2026-10-06-vietnamese-translation-design.md",
+      "type": "document",
+      "summary": "Technical design specification defining translation standards, terminology conventions, and in-place replacement strategy for the Vietnamese edition."
+    },
+    "file:tests/test_build_pdf.py": {
+      "name": "test_build_pdf.py",
+      "type": "file",
+      "summary": "Unit test suite for tools/build_pdf.py validating bounded retries, log retention, timeout handling, and process group termination."
+    },
+    "file:tests/test_cjk_typography.py": {
+      "name": "test_cjk_typography.py",
+      "type": "file",
+      "summary": "Typography test suite enforcing spacing boundaries between CJK and Latin characters and full-width parentheses around CJK text."
+    },
+    "file:tests/test_html_list_rendering.py": {
+      "name": "test_html_list_rendering.py",
+      "type": "file",
+      "summary": "Regression test ensuring Pandoc Markdown reader configuration enables lists without preceding blank lines to prevent list collapsing in mobile reader HTML."
+    },
+    "file:tests/test_installation_contracts.py": {
+      "name": "test_installation_contracts.py",
+      "type": "file",
+      "summary": "Contract tests verifying that the setup documentation specifies mandatory diagnostic commands, Node version constraints, and platform installation procedures."
+    },
+    "file:tests/test_verify_artifacts.py": {
+      "name": "test_verify_artifacts.py",
+      "type": "file",
+      "summary": "Test suite verifying tools/verify_artifacts.py HTML title checks, PDF signature validation, and portable SHA-256 checksum manifest operations."
+    },
+    "file:tests/test_workflow_security.py": {
+      "name": "test_workflow_security.py",
+      "type": "file",
+      "summary": "Security audit test suite validating GitHub Actions workflows for pinned action SHAs, least-privilege token permissions, artifact provenance, and secure preview releases."
+    },
+    "file:tools/build_html_reader.py": {
+      "name": "build_html_reader.py",
+      "type": "file",
+      "summary": "Build script producing a self-contained, GitBook-style mobile HTML reader featuring embedded CSS navigation, offline math rendering, and pre-rendered SVG Mermaid diagrams."
+    },
+    "file:tools/build_pdf.py": {
+      "name": "build_pdf.py",
+      "type": "file",
+      "summary": "Robust PDF build wrapper providing bounded retries, attempt log capture, and process tree termination to prevent runaway headless browser processes."
+    },
+    "file:tools/render_mermaid.py": {
+      "name": "render_mermaid.py",
+      "type": "file",
+      "summary": "Diagram rendering script that scans book chapters for Mermaid code blocks and renders them into static SVG assets using mermaid-cli."
+    },
+    "file:tools/verify_artifacts.py": {
+      "name": "verify_artifacts.py",
+      "type": "file",
+      "summary": "Artifact integrity verification tool that checks HTML document titles, validates PDF headers and metadata, and maintains sorted SHA-256 checksum manifests."
+    }
+  },
+  "totalNodes": 135,
+  "totalEdges": 335
+}

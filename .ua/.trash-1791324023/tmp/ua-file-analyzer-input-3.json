@@ -1,0 +1,49 @@
+{
+  "projectRoot": "/Users/ngohongthai/Documents/openclaw_guide",
+  "batchFiles": [
+    {
+      "path": "02_setup/2.1_requirements.md",
+      "language": "markdown",
+      "sizeLines": 54,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "02_setup/2.2_installation.md",
+      "language": "markdown",
+      "sizeLines": 247,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "02_setup/2.3_onboarding.md",
+      "language": "markdown",
+      "sizeLines": 86,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "02_setup/2.4_gateway_service.md",
+      "language": "markdown",
+      "sizeLines": 133,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "02_setup/README.md",
+      "language": "markdown",
+      "sizeLines": 27,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "02_setup/summary.md",
+      "language": "markdown",
+      "sizeLines": 24,
+      "fileCategory": "docs"
+    }
+  ],
+  "batchImportData": {
+    "02_setup/2.1_requirements.md": [],
+    "02_setup/2.2_installation.md": [],
+    "02_setup/2.3_onboarding.md": [],
+    "02_setup/2.4_gateway_service.md": [],
+    "02_setup/README.md": [],
+    "02_setup/summary.md": []
+  }
+}

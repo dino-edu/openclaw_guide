@@ -1,0 +1,122 @@
+[
+  {
+    "order": 1,
+    "title": "Project Overview and Navigation",
+    "description": "Start with README.md and SUMMARY.md to understand the scope, target audience, and structure of the OpenClaw guide. As a comprehensive guide for a local-first AI assistant, the repository organizes content across beginner fundamentals, runtime architecture, and production deployment. The book configuration in book.json defines the official navigation sidebar and build settings that structure the entire multi-format documentation suite.",
+    "nodeIds": [
+      "document:README.md",
+      "document:SUMMARY.md",
+      "config:book.json"
+    ],
+    "languageLesson": "GitBook configuration files (book.json) declare book metadata, plugin dependencies, and multilingual sidebar navigation rules used by static site generators."
+  },
+  {
+    "order": 2,
+    "title": "Foundational Concepts and Primitives",
+    "description": "Building on the project roadmap, Chapter 1 introduces OpenClaw's primary mental models and architectural abstractions. It frames OpenClaw as an extensible, local-first assistant and formalizes its five core primitives: Gateway, Agent, Tool, Session, and Node. This foundational vocabulary establishes the conceptual contracts that govern how downstream subsystems interact and process user requests.",
+    "nodeIds": [
+      "document:01_overview/1.1_what_is_openclaw.md",
+      "document:01_overview/1.3_concepts.md"
+    ]
+  },
+  {
+    "order": 3,
+    "title": "Installation Workflows and Contracts",
+    "description": "Moving from concepts to concrete setup, Chapter 2 guides users through prerequisites, local daemon management, and Gateway service health acceptance tests. Crucially, the repository pairs user-facing installation docs with an automated test suite in test_installation_contracts.py. This contract test ensures that documented commands, Node.js version constraints, and diagnostic steps stay strictly synchronized with actual software requirements.",
+    "nodeIds": [
+      "document:02_setup/2.2_installation.md",
+      "document:02_setup/2.4_gateway_service.md",
+      "file:tests/test_installation_contracts.py"
+    ],
+    "languageLesson": "Contract testing against documentation files validates that setup instructions, flags, and version bounds do not drift from working reality."
+  },
+  {
+    "order": 4,
+    "title": "Action Layer and Tool Policy",
+    "description": "With the Gateway service established, Chapter 5 examines OpenClaw's Action Layer, which bridges conversational intent with local system execution. It details tool contract definitions, failure semantics, and the separation between read-only observations and state-mutating actions. The chapter also outlines how tool policies enforce allow/deny precedence and execution permissions across channels to keep autonomous actions strictly governed.",
+    "nodeIds": [
+      "document:05_tools_skills/5.1_tool_inventory.md",
+      "document:05_tools_skills/5.2_tool_policy.md"
+    ]
+  },
+  {
+    "order": 5,
+    "title": "Session Lifecycle and Memory",
+    "description": "Executing tools across long conversations requires robust state management. Chapter 6 explores OpenClaw's session model, thread-level DM isolation, and its dual-tier workspace memory architecture. By separating durable workspace facts in MEMORY.md from transient daily conversation logs, OpenClaw enables continuous contextual awareness while actively bounding prompt token growth.",
+    "nodeIds": [
+      "document:06_context_memory/6.1_sessions.md",
+      "document:06_context_memory/6.3_memory_mechanism.md"
+    ]
+  },
+  {
+    "order": 6,
+    "title": "Gateway Protocol and Control Plane",
+    "description": "Diving into core runtime architecture, Chapter 9 formalizes the five-plane Gateway architecture separating Control, Data, Context, Trust, and Visibility concerns. The Gateway control plane arbitrates client WebSocket handshakes, maintains challenge-response authentication, and guarantees event idempotency across distributed agent nodes. This protocol forms the central communication backbone uniting external chat clients with local agent processes.",
+    "nodeIds": [
+      "document:09_gateway_protocol/9.1_architecture_overview.md",
+      "document:09_gateway_protocol/9.2_control_plane.md",
+      "document:09_gateway_protocol/9.3_ws_handshake.md"
+    ]
+  },
+  {
+    "order": 7,
+    "title": "Agent Loop Runtime Execution",
+    "description": "Tracing an incoming message through the Gateway brings us to Chapter 10, the engine of the agent runtime loop. This chapter details end-to-end request handling: ingress queueing, four-tier context window assembly, four-stage tool call interception, and response streaming. It highlights defensive runtime components such as the EmbeddedBlockChunker streaming engine for markdown code blocks and bounded HTTP retry mechanisms.",
+    "nodeIds": [
+      "document:10_agent_loop/10.1_request_lifecycle.md",
+      "document:10_agent_loop/10.5_tool_execution.md",
+      "document:10_agent_loop/10.6_streaming_retry.md"
+    ]
+  },
+  {
+    "order": 8,
+    "title": "Reliability, Fallbacks, and Guardrails",
+    "description": "To maintain resilience under production workloads, Chapter 11 introduces multi-key authentication governance and defensive guardrails. It establishes auth profile rotation, circuit-breaker cooldowns to prevent retry storms, and four-layer defense-in-depth security combining sandboxing and static policy checks. These patterns ensure explainable model fallbacks without silent failures or security compromises.",
+    "nodeIds": [
+      "document:11_reliability_security/11.1_auth_profiles.md",
+      "document:11_reliability_security/11.2_rotation_cooldown.md",
+      "document:11_reliability_security/11.4_guardrails.md"
+    ]
+  },
+  {
+    "order": 9,
+    "title": "Diagram Pre-rendering and HTML Reader",
+    "description": "Having explored the architectural guide content, we now examine the build tooling that compiles and formats the book. The repository includes render_mermaid.py to scan chapters and pre-render dynamic Mermaid diagrams into standalone SVG assets using mermaid-cli. Next, build_html_reader.py bundles the chapters into a self-contained, mobile-friendly HTML reader with offline math rendering and embedded CSS navigation.",
+    "nodeIds": [
+      "file:tools/render_mermaid.py",
+      "file:tools/build_html_reader.py"
+    ],
+    "languageLesson": "Pre-rendering Mermaid code blocks into static SVGs during build time eliminates client-side rendering latency and external CDN dependencies."
+  },
+  {
+    "order": 10,
+    "title": "Resilient PDF Compilation Engine",
+    "description": "Complementing the HTML reader, the build system provides a robust PDF compilation pipeline in build_pdf.py. Because headless browser printing frequently suffers from memory leaks and hung processes, the script implements bounded retries, detailed attempt logging, and POSIX process tree termination. Accompanying unit tests in test_build_pdf.py ensure that timeouts and process group kills behave reliably under simulated failures.",
+    "nodeIds": [
+      "file:tools/build_pdf.py",
+      "file:tests/test_build_pdf.py"
+    ],
+    "languageLesson": "In Python, terminating headless browser subtrees requires process group killing (os.killpg) to prevent orphaned renderer processes from consuming server memory."
+  },
+  {
+    "order": 11,
+    "title": "Typography and Rule Verification",
+    "description": "Publishing professional multilingual documentation requires strict formatting standards. The repository uses check_emphasis.py and check_project_rules.py to catch CommonMark syntax quirks around CJK punctuation, forbid volatile dates, and verify relative markdown links. The typography test suite in test_cjk_typography.py mechanically enforces character spacing boundaries and full-width punctuation across all chapters.",
+    "nodeIds": [
+      "file:check_emphasis.py",
+      "file:check_project_rules.py",
+      "file:tests/test_cjk_typography.py"
+    ]
+  },
+  {
+    "order": 12,
+    "title": "Artifact Integrity and CI/CD Security",
+    "description": "The final stage links publication tooling, security auditing, and continuous deployment into an automated release pipeline. Before guides are published, verify_artifacts.py inspects document titles, PDF headers, and SHA-256 manifests, while ci.yaml runs automated tests and builds. Additionally, test_workflow_security.py audits GitHub Actions definitions to enforce immutable commit SHA pinning and minimal token permissions across all workflows.",
+    "nodeIds": [
+      "file:tools/verify_artifacts.py",
+      "pipeline:.github/workflows/ci.yaml",
+      "file:tests/test_workflow_security.py"
+    ],
+    "languageLesson": "Securing CI/CD pipelines requires pinning GitHub Actions to immutable full-length commit SHAs and granting GITHUB_TOKEN minimal read-only permissions by default."
+  }
+]

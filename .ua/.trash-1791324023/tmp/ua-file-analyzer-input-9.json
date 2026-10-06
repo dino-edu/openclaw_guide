@@ -1,0 +1,56 @@
+{
+  "projectRoot": "/Users/ngohongthai/Documents/openclaw_guide",
+  "batchFiles": [
+    {
+      "path": "08_automation_ops/8.1_hooks.md",
+      "language": "markdown",
+      "sizeLines": 122,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "08_automation_ops/8.2_cron_jobs.md",
+      "language": "markdown",
+      "sizeLines": 145,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "08_automation_ops/8.3_heartbeat.md",
+      "language": "markdown",
+      "sizeLines": 252,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "08_automation_ops/8.4_remote_access.md",
+      "language": "markdown",
+      "sizeLines": 95,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "08_automation_ops/8.5_security_baseline.md",
+      "language": "markdown",
+      "sizeLines": 146,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "08_automation_ops/README.md",
+      "language": "markdown",
+      "sizeLines": 32,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "08_automation_ops/summary.md",
+      "language": "markdown",
+      "sizeLines": 34,
+      "fileCategory": "docs"
+    }
+  ],
+  "batchImportData": {
+    "08_automation_ops/8.1_hooks.md": [],
+    "08_automation_ops/8.2_cron_jobs.md": [],
+    "08_automation_ops/8.3_heartbeat.md": [],
+    "08_automation_ops/8.4_remote_access.md": [],
+    "08_automation_ops/8.5_security_baseline.md": [],
+    "08_automation_ops/README.md": [],
+    "08_automation_ops/summary.md": []
+  }
+}

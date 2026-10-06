@@ -1,0 +1,238 @@
+{
+  "scriptCompleted": true,
+  "filesAnalyzed": 4,
+  "filesSkipped": [],
+  "filesUnreadable": [],
+  "analysisOutcomes": {
+    "structure": {
+      "succeeded": 4,
+      "failed": 0
+    },
+    "callGraph": {
+      "succeeded": 0,
+      "failed": 0,
+      "skipped": 4
+    }
+  },
+  "results": [
+    {
+      "path": "15_troubleshooting_trees/15.1_diagnostic_decision_trees.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 467,
+      "nonEmptyLines": 390,
+      "sections": [
+        {
+          "heading": "15.1 Chẩn đoán sự cố thường gặp theo phân tầng",
+          "level": 2,
+          "line": 1
+        },
+        {
+          "heading": "15.1.1 Khung chẩn đoán tổng thể: Phân tầng trước, Chọn cây sau",
+          "level": 3,
+          "line": 5
+        },
+        {
+          "heading": "15.1.2 Phương pháp chuỗi bằng chứng: Lệnh dùng để loại trừ giả thuyết",
+          "level": 3,
+          "line": 30
+        },
+        {
+          "heading": "15.1.3 Tầng khởi động: Cây quyết định chẩn đoán lỗi khởi động thất bại",
+          "level": 3,
+          "line": 45
+        },
+        {
+          "heading": "15.1.4 Tầng cổng vào tin nhắn: Cây quyết định chẩn đoán tin nhắn không tiếp nhận được",
+          "level": 3,
+          "line": 93
+        },
+        {
+          "heading": "15.1.5 Tầng gọi mô hình AI: Cây quyết định chẩn đoán bất thường khi gọi mô hình",
+          "level": 3,
+          "line": 161
+        },
+        {
+          "heading": "15.1.6 Tầng thực thi công cụ: Cây quyết định chẩn đoán thực thi công cụ thất bại",
+          "level": 3,
+          "line": 241
+        },
+        {
+          "heading": "15.1.7 Tầng phiên & bộ nhớ: Cây quyết định chẩn đoán bất thường phiên và bộ nhớ",
+          "level": 3,
+          "line": 308
+        },
+        {
+          "heading": "15.1.8 Tầng hiệu năng: Cây quyết định chẩn đoán suy giảm hiệu năng",
+          "level": 3,
+          "line": 378
+        },
+        {
+          "heading": "15.1.9 Sự cố xuyên tầng & Lộ trình leo thang",
+          "level": 3,
+          "line": 430
+        },
+        {
+          "heading": "15.1.10 Lệnh chẩn đoán nhanh tham khảo",
+          "level": 3,
+          "line": 443
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 11
+      }
+    },
+    {
+      "path": "15_troubleshooting_trees/15.2_high_concurrency_diagnosis.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 269,
+      "nonEmptyLines": 204,
+      "sections": [
+        {
+          "heading": "15.2 Cây quyết định chẩn đoán lỗi tải cao & Hướng dẫn tối ưu",
+          "level": 2,
+          "line": 1
+        },
+        {
+          "heading": "15.2.1 Các loại sự cố phổ biến trong kịch bản tải cao & Tổng quan chẩn đoán",
+          "level": 3,
+          "line": 5
+        },
+        {
+          "heading": "15.2.2 Cây quyết định chẩn đoán sự cố tải cao",
+          "level": 3,
+          "line": 19
+        },
+        {
+          "heading": "15.2.3 Các lộ trình chẩn đoán & Phương án xử lý",
+          "level": 3,
+          "line": 44
+        },
+        {
+          "heading": "Lộ trình 1: Giới hạn tần suất (Lỗi HTTP 429 Rate Limiting)",
+          "level": 4,
+          "line": 46
+        },
+        {
+          "heading": "Lộ trình 2: Xác thực thất bại (Lỗi HTTP 401/403)",
+          "level": 4,
+          "line": 78
+        },
+        {
+          "heading": "Lộ trình 3: Cạn kiệt ngân sách Token",
+          "level": 4,
+          "line": 113
+        },
+        {
+          "heading": "Lộ trình 4: Ùn tắc hàng đợi & Sự cố đổ vỡ dây chuyền (Cascading Failure)",
+          "level": 4,
+          "line": 142
+        },
+        {
+          "heading": "Lộ trình 5: Điểm nghẽn tài nguyên (CPU / RAM tăng vọt)",
+          "level": 4,
+          "line": 170
+        },
+        {
+          "heading": "15.2.4 Phân tích các ca sự cố thực tế",
+          "level": 3,
+          "line": 191
+        },
+        {
+          "heading": "Ca 1: Lưu lượng đột biến kích hoạt Rate Limit",
+          "level": 4,
+          "line": 193
+        },
+        {
+          "heading": "Ca 2: Khóa API Key đột ngột hết hạn",
+          "level": 4,
+          "line": 214
+        },
+        {
+          "heading": "Ca 3: Cạn kiệt ngân sách Token",
+          "level": 4,
+          "line": 232
+        },
+        {
+          "heading": "15.2.5 Cách ly Agent & Điều phối hạn mức Token giữa các Agent",
+          "level": 3,
+          "line": 255
+        },
+        {
+          "heading": "15.2.6 Các nguyên tắc vận hành cốt tử",
+          "level": 3,
+          "line": 263
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 15
+      }
+    },
+    {
+      "path": "15_troubleshooting_trees/README.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 11,
+      "nonEmptyLines": 7,
+      "sections": [
+        {
+          "heading": "Chương 15: Cây quyết định chẩn đoán sự cố",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "Mục lục hướng dẫn chương",
+          "level": 2,
+          "line": 7
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 2
+      }
+    },
+    {
+      "path": "15_troubleshooting_trees/summary.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 18,
+      "nonEmptyLines": 11,
+      "sections": [
+        {
+          "heading": "15.3 Tóm tắt chương",
+          "level": 2,
+          "line": 1
+        },
+        {
+          "heading": "Điểm lại các ý chính",
+          "level": 3,
+          "line": 5
+        },
+        {
+          "heading": "Bước tiếp theo",
+          "level": 3,
+          "line": 12
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 3
+      }
+    }
+  ]
+}

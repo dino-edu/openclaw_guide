@@ -1,0 +1,251 @@
+{
+  "nodes": [
+    {
+      "id": "document:12_extension_engineering/README.md",
+      "type": "document",
+      "name": "README.md",
+      "filePath": "12_extension_engineering/README.md",
+      "summary": "Introduces Chapter 12 on extension engineering and production operations, framing how OpenClaw evolves into an auditable and extensible enterprise platform. Contrasts developer extension mechanisms with Chapter 5's tool user perspective, summarizing plugin lifecycles, custom tools, testing pipelines, and production blueprints.",
+      "tags": [
+        "chapter-overview",
+        "extension-engineering",
+        "production-operations",
+        "roadmap",
+        "documentation"
+      ],
+      "complexity": "simple",
+      "languageNotes": "Serves as the chapter navigation hub and pedagogical roadmap outlining core developer competencies."
+    },
+    {
+      "id": "document:12_extension_engineering/12.1_plugin_architecture.md",
+      "type": "document",
+      "name": "12.1_plugin_architecture.md",
+      "filePath": "12_extension_engineering/12.1_plugin_architecture.md",
+      "summary": "Details OpenClaw's native plugin architecture, manifest validation mechanics, and five execution modes across agent, message, tool, and gateway lifecycle hooks. Explains two-tier perimeter isolation combining plugin whitelists with tool policies, bundle compatibility with external ecosystems, and CLI diagnostic commands.",
+      "tags": [
+        "plugin-architecture",
+        "hook-system",
+        "manifest-validation",
+        "whitelist-policy",
+        "documentation"
+      ],
+      "complexity": "moderate",
+      "languageNotes": "Explains in-process TypeScript runtime extensions, JSON schema pre-validation via openclaw.plugin.json, and five hook execution modes including claim and synchronous hooks."
+    },
+    {
+      "id": "document:12_extension_engineering/12.2_custom_tools.md",
+      "type": "document",
+      "name": "12.2_custom_tools.md",
+      "filePath": "12_extension_engineering/12.2_custom_tools.md",
+      "summary": "Provides technical guidance for designing and registering custom OpenClaw tools using TypeBox parameter schemas, structured reproducible outputs, and idempotency keys to bound side effects. Demonstrates policy layering where deny rules take precedence, sandbox execution for high-risk actions, and common design anti-patterns.",
+      "tags": [
+        "custom-tools",
+        "tool-policy",
+        "typebox-schema",
+        "sandbox-isolation",
+        "documentation"
+      ],
+      "complexity": "moderate",
+      "languageNotes": "Covers TypeBox schema validation, tool registration via api.registerTool, and denying high-risk runtime tool execution across specific chat channels."
+    },
+    {
+      "id": "document:12_extension_engineering/12.3_testing_debugging.md",
+      "type": "document",
+      "name": "12.3_testing_debugging.md",
+      "filePath": "12_extension_engineering/12.3_testing_debugging.md",
+      "summary": "Establishes a three-tier verification methodology for extensions spanning plugin loading, policy enforcement, and gateway ingress before end-to-end testing. Introduces snapshot baseline diffing, traceId replay for deterministic fault localization, and automated CI/CD canary release and rollback procedures.",
+      "tags": [
+        "testing-debugging",
+        "snapshot-testing",
+        "trace-replay",
+        "canary-release",
+        "documentation"
+      ],
+      "complexity": "moderate",
+      "languageNotes": "Features automated snapshot diff scripts, jq log filtering for behavioral baselines, and layered diagnostic CLI commands."
+    },
+    {
+      "id": "document:12_extension_engineering/12.4_production_blueprint.md",
+      "type": "document",
+      "name": "12.4_production_blueprint.md",
+      "filePath": "12_extension_engineering/12.4_production_blueprint.md",
+      "summary": "Defines a production blueprint for OpenClaw extensions, enforcing separation of code and configuration changes, three-tier security perimeters, and secret injection via SecretRef. Details emergency rollback runbooks, graceful degradation strategies, and operational KPIs with alert thresholds for gateway latency, resource usage, and tool health.",
+      "tags": [
+        "production-blueprint",
+        "operational-governance",
+        "security-baseline",
+        "rollback-runbook",
+        "documentation"
+      ],
+      "complexity": "moderate",
+      "languageNotes": "Focuses on separating code releases from configuration toggle rollouts, log masking, circuit breakers, and event loop lag monitoring."
+    },
+    {
+      "id": "document:12_extension_engineering/12.5_framework_interoperability.md",
+      "type": "document",
+      "name": "12.5_framework_interoperability.md",
+      "filePath": "12_extension_engineering/12.5_framework_interoperability.md",
+      "summary": "Analyzes interoperability between OpenClaw and frameworks like LangGraph and CrewAI across adapter, protocol, and data layers. Contrasts local embedded, remote service-based, and external bridge topologies, comparing OpenClaw's declarative gateway governance with external state-machine and multi-role orchestration engines.",
+      "tags": [
+        "framework-interoperability",
+        "langgraph",
+        "crewai",
+        "protocol-adapter",
+        "documentation"
+      ],
+      "complexity": "moderate",
+      "languageNotes": "Deconstructs three-layer interop architecture across adapter, protocol (A2A/MCP/RPC), and data models (unified message/state/tool results)."
+    },
+    {
+      "id": "document:12_extension_engineering/summary.md",
+      "type": "document",
+      "name": "summary.md",
+      "filePath": "12_extension_engineering/summary.md",
+      "summary": "Summarizes Chapter 12 key takeaways on extension engineering, highlighting mandatory whitelists, policy-driven custom tool containment, layered verification, and standardized diagnostic replay. Provides a self-assessment production readiness checklist and previews practical enterprise case studies in Chapter 13.",
+      "tags": [
+        "chapter-summary",
+        "self-checklist",
+        "production-readiness",
+        "key-takeaways",
+        "documentation"
+      ],
+      "complexity": "simple",
+      "languageNotes": "Synthesizes chapter conclusions into an actionable checklist spanning plugin toggles, sandbox boundaries, and deterministic diagnosis."
+    }
+  ],
+  "edges": [
+    {
+      "source": "document:12_extension_engineering/README.md",
+      "target": "document:12_extension_engineering/12.1_plugin_architecture.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:12_extension_engineering/README.md",
+      "target": "document:12_extension_engineering/12.2_custom_tools.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:12_extension_engineering/README.md",
+      "target": "document:12_extension_engineering/12.3_testing_debugging.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:12_extension_engineering/README.md",
+      "target": "document:12_extension_engineering/12.4_production_blueprint.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:12_extension_engineering/README.md",
+      "target": "document:12_extension_engineering/12.5_framework_interoperability.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:12_extension_engineering/README.md",
+      "target": "document:12_extension_engineering/summary.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:12_extension_engineering/summary.md",
+      "target": "document:12_extension_engineering/12.1_plugin_architecture.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:12_extension_engineering/summary.md",
+      "target": "document:12_extension_engineering/12.2_custom_tools.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:12_extension_engineering/summary.md",
+      "target": "document:12_extension_engineering/12.3_testing_debugging.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:12_extension_engineering/summary.md",
+      "target": "document:12_extension_engineering/12.4_production_blueprint.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:12_extension_engineering/summary.md",
+      "target": "document:12_extension_engineering/12.5_framework_interoperability.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:12_extension_engineering/12.1_plugin_architecture.md",
+      "target": "document:12_extension_engineering/12.2_custom_tools.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:12_extension_engineering/12.1_plugin_architecture.md",
+      "target": "document:12_extension_engineering/12.3_testing_debugging.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:12_extension_engineering/12.2_custom_tools.md",
+      "target": "document:12_extension_engineering/12.3_testing_debugging.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:12_extension_engineering/12.2_custom_tools.md",
+      "target": "document:12_extension_engineering/12.4_production_blueprint.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:12_extension_engineering/12.3_testing_debugging.md",
+      "target": "document:12_extension_engineering/12.4_production_blueprint.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:12_extension_engineering/12.4_production_blueprint.md",
+      "target": "document:12_extension_engineering/12.1_plugin_architecture.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:12_extension_engineering/12.5_framework_interoperability.md",
+      "target": "document:12_extension_engineering/12.1_plugin_architecture.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:12_extension_engineering/12.5_framework_interoperability.md",
+      "target": "document:12_extension_engineering/12.2_custom_tools.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    }
+  ]
+}

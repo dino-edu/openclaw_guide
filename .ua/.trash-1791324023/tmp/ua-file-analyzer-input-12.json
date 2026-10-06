@@ -1,0 +1,49 @@
+{
+  "projectRoot": "/Users/ngohongthai/Documents/openclaw_guide",
+  "batchFiles": [
+    {
+      "path": "11_reliability_security/11.1_auth_profiles.md",
+      "language": "markdown",
+      "sizeLines": 119,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "11_reliability_security/11.2_rotation_cooldown.md",
+      "language": "markdown",
+      "sizeLines": 97,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "11_reliability_security/11.3_fallback_rules.md",
+      "language": "markdown",
+      "sizeLines": 90,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "11_reliability_security/11.4_guardrails.md",
+      "language": "markdown",
+      "sizeLines": 107,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "11_reliability_security/README.md",
+      "language": "markdown",
+      "sizeLines": 25,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "11_reliability_security/summary.md",
+      "language": "markdown",
+      "sizeLines": 25,
+      "fileCategory": "docs"
+    }
+  ],
+  "batchImportData": {
+    "11_reliability_security/11.1_auth_profiles.md": [],
+    "11_reliability_security/11.2_rotation_cooldown.md": [],
+    "11_reliability_security/11.3_fallback_rules.md": [],
+    "11_reliability_security/11.4_guardrails.md": [],
+    "11_reliability_security/README.md": [],
+    "11_reliability_security/summary.md": []
+  }
+}

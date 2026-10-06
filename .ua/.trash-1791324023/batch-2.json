@@ -1,0 +1,160 @@
+{
+  "nodes": [
+    {
+      "id": "document:01_overview/README.md",
+      "type": "document",
+      "name": "README.md",
+      "filePath": "01_overview/README.md",
+      "summary": "Introduces Chapter 1 of the OpenClaw guide, providing a table of contents and learning objectives for understanding the local-first AI assistant.",
+      "tags": [
+        "documentation",
+        "overview",
+        "entry-point",
+        "learning-guide"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "document:01_overview/1.1_what_is_openclaw.md",
+      "type": "document",
+      "name": "1.1_what_is_openclaw.md",
+      "filePath": "01_overview/1.1_what_is_openclaw.md",
+      "summary": "Explains OpenClaw's architecture using a smart intern metaphor, addressing isolated AI capabilities, multi-channel messaging, and system auditability.",
+      "tags": [
+        "documentation",
+        "architecture",
+        "overview",
+        "local-first"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "document:01_overview/1.2_scenarios_comparison.md",
+      "type": "document",
+      "name": "1.2_scenarios_comparison.md",
+      "filePath": "01_overview/1.2_scenarios_comparison.md",
+      "summary": "Compares OpenClaw with ChatGPT, Cursor, Zapier, and Dify, analyzing token cost implications and practical workload suitability.",
+      "tags": [
+        "documentation",
+        "comparison",
+        "token-cost",
+        "decision-guide"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "document:01_overview/1.3_concepts.md",
+      "type": "document",
+      "name": "1.3_concepts.md",
+      "filePath": "01_overview/1.3_concepts.md",
+      "summary": "Introduces the five core concepts of OpenClaw—Gateway, Agent, Tool, Session, and Node—mapping out the message lifecycle and chapter cross-references.",
+      "tags": [
+        "documentation",
+        "architecture",
+        "core-concepts",
+        "control-plane"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "document:01_overview/1.4_use_cases.md",
+      "type": "document",
+      "name": "1.4_use_cases.md",
+      "filePath": "01_overview/1.4_use_cases.md",
+      "summary": "Outlines typical OpenClaw deployment scenarios, including personal ChatOps, smart home automation, auditable memory systems, and security sandbox research.",
+      "tags": [
+        "documentation",
+        "use-cases",
+        "chatops",
+        "automation"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "document:01_overview/summary.md",
+      "type": "document",
+      "name": "summary.md",
+      "filePath": "01_overview/summary.md",
+      "summary": "Summarizes the fundamental principles covered in Chapter 1, featuring comprehension review questions and a preview of the setup chapter.",
+      "tags": [
+        "documentation",
+        "chapter-summary",
+        "review",
+        "learning-guide"
+      ],
+      "complexity": "simple"
+    }
+  ],
+  "edges": [
+    {
+      "source": "document:01_overview/README.md",
+      "target": "document:01_overview/1.1_what_is_openclaw.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:01_overview/README.md",
+      "target": "document:01_overview/1.2_scenarios_comparison.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:01_overview/README.md",
+      "target": "document:01_overview/1.3_concepts.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:01_overview/README.md",
+      "target": "document:01_overview/1.4_use_cases.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:01_overview/README.md",
+      "target": "document:01_overview/summary.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:01_overview/1.1_what_is_openclaw.md",
+      "target": "document:01_overview/1.2_scenarios_comparison.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:01_overview/1.1_what_is_openclaw.md",
+      "target": "document:01_overview/1.3_concepts.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:01_overview/1.2_scenarios_comparison.md",
+      "target": "document:01_overview/1.3_concepts.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:01_overview/1.3_concepts.md",
+      "target": "document:01_overview/1.4_use_cases.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:01_overview/1.4_use_cases.md",
+      "target": "document:01_overview/summary.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    }
+  ]
+}

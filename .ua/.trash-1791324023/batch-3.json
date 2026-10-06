@@ -1,0 +1,179 @@
+{
+  "nodes": [
+    {
+      "id": "document:02_setup/README.md",
+      "type": "document",
+      "name": "README.md",
+      "filePath": "02_setup/README.md",
+      "summary": "Serves as the chapter roadmap and table of contents for Chapter 2, outlining the four-step setup sequence from prerequisites to gateway acceptance testing.",
+      "tags": [
+        "documentation",
+        "overview",
+        "entry-point",
+        "installation"
+      ],
+      "complexity": "simple",
+      "languageNotes": "Markdown chapter landing page outlining learning goals and platform scope across macOS, Linux, and Windows WSL2."
+    },
+    {
+      "id": "document:02_setup/2.1_requirements.md",
+      "type": "document",
+      "name": "2.1_requirements.md",
+      "filePath": "02_setup/2.1_requirements.md",
+      "summary": "Specifies hardware, Node.js runtime, network connectivity, and API credential prerequisites for deploying OpenClaw.",
+      "tags": [
+        "documentation",
+        "requirements",
+        "prerequisites",
+        "configuration"
+      ],
+      "complexity": "simple",
+      "languageNotes": "Highlights the strict requirement for Node 24.16+ or Node 26.1+ due to node:sqlite NUL byte truncation defects in older releases."
+    },
+    {
+      "id": "document:02_setup/2.2_installation.md",
+      "type": "document",
+      "name": "2.2_installation.md",
+      "filePath": "02_setup/2.2_installation.md",
+      "summary": "Guides users through OpenClaw installation using the one-line install script, npm, Docker, and source builds, alongside environment variable and path configurations.",
+      "tags": [
+        "documentation",
+        "installation",
+        "deployment",
+        "docker"
+      ],
+      "complexity": "moderate",
+      "languageNotes": "Details platform-specific shell setup, WSL2 network routing boundaries, and reversible upgrade workflows."
+    },
+    {
+      "id": "document:02_setup/2.3_onboarding.md",
+      "type": "document",
+      "name": "2.3_onboarding.md",
+      "filePath": "02_setup/2.3_onboarding.md",
+      "summary": "Explains how to run the interactive onboarding wizard to configure models, workspaces, and daemons while defining workspace bootstrap file roles.",
+      "tags": [
+        "documentation",
+        "configuration",
+        "onboarding",
+        "workspace"
+      ],
+      "complexity": "moderate",
+      "languageNotes": "Clarifies workspace lifecycle files including AGENTS.md, IDENTITY.md, USER.md, SOUL.md, and heartbeat routines."
+    },
+    {
+      "id": "document:02_setup/2.4_gateway_service.md",
+      "type": "document",
+      "name": "2.4_gateway_service.md",
+      "filePath": "02_setup/2.4_gateway_service.md",
+      "summary": "Details OpenClaw Gateway daemon management, local health acceptance testing checklists, and layered troubleshooting architectures.",
+      "tags": [
+        "documentation",
+        "infrastructure",
+        "troubleshooting",
+        "monitoring"
+      ],
+      "complexity": "moderate",
+      "languageNotes": "Outlines a four-tier diagnostic decision tree spanning environment, control plane, execution chain, and remote API networking."
+    },
+    {
+      "id": "document:02_setup/summary.md",
+      "type": "document",
+      "name": "summary.md",
+      "filePath": "02_setup/summary.md",
+      "summary": "Reviews key setup takeaways, provides a post-installation security and operational checklist, and previews Chapter 3 minimal loop topics.",
+      "tags": [
+        "documentation",
+        "summary",
+        "checklist",
+        "best-practices"
+      ],
+      "complexity": "simple"
+    }
+  ],
+  "edges": [
+    {
+      "source": "document:02_setup/README.md",
+      "target": "document:02_setup/2.1_requirements.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:02_setup/README.md",
+      "target": "document:02_setup/2.2_installation.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:02_setup/README.md",
+      "target": "document:02_setup/2.3_onboarding.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:02_setup/README.md",
+      "target": "document:02_setup/2.4_gateway_service.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:02_setup/README.md",
+      "target": "document:02_setup/summary.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:02_setup/2.2_installation.md",
+      "target": "document:02_setup/2.1_requirements.md",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "document:02_setup/2.3_onboarding.md",
+      "target": "document:02_setup/2.2_installation.md",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "document:02_setup/2.4_gateway_service.md",
+      "target": "document:02_setup/2.3_onboarding.md",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "document:02_setup/summary.md",
+      "target": "document:02_setup/2.1_requirements.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:02_setup/summary.md",
+      "target": "document:02_setup/2.2_installation.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:02_setup/summary.md",
+      "target": "document:02_setup/2.3_onboarding.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:02_setup/summary.md",
+      "target": "document:02_setup/2.4_gateway_service.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    }
+  ]
+}

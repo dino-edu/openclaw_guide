@@ -1,0 +1,42 @@
+{
+  "projectRoot": "/Users/ngohongthai/Documents/openclaw_guide",
+  "batchFiles": [
+    {
+      "path": "13_practical_cases/13.1_lark_slack_workbot.md",
+      "language": "markdown",
+      "sizeLines": 167,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "13_practical_cases/13.2_customer_support_agent.md",
+      "language": "markdown",
+      "sizeLines": 161,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "13_practical_cases/13.3_vertical_industry_cases.md",
+      "language": "markdown",
+      "sizeLines": 54,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "13_practical_cases/README.md",
+      "language": "markdown",
+      "sizeLines": 10,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "13_practical_cases/summary.md",
+      "language": "markdown",
+      "sizeLines": 20,
+      "fileCategory": "docs"
+    }
+  ],
+  "batchImportData": {
+    "13_practical_cases/13.1_lark_slack_workbot.md": [],
+    "13_practical_cases/13.2_customer_support_agent.md": [],
+    "13_practical_cases/13.3_vertical_industry_cases.md": [],
+    "13_practical_cases/README.md": [],
+    "13_practical_cases/summary.md": []
+  }
+}

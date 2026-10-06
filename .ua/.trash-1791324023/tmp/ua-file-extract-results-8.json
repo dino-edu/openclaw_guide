@@ -1,0 +1,275 @@
+{
+  "scriptCompleted": true,
+  "filesAnalyzed": 6,
+  "filesSkipped": [],
+  "filesUnreadable": [],
+  "analysisOutcomes": {
+    "structure": {
+      "succeeded": 6,
+      "failed": 0
+    },
+    "callGraph": {
+      "succeeded": 0,
+      "failed": 0,
+      "skipped": 6
+    }
+  },
+  "results": [
+    {
+      "path": "07_multi_agent/7.1_telegram_whatsapp.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 168,
+      "nonEmptyLines": 127,
+      "sections": [
+        {
+          "heading": "7.1 Kết nối kênh liên lạc & Quản trị cổng vào (Telegram, WhatsApp)",
+          "level": 2,
+          "line": 1
+        },
+        {
+          "heading": "7.1.1 Nguyên tắc đầu tiên của quản trị cổng vào: Tách biệt Chat riêng và Chat nhóm",
+          "level": 3,
+          "line": 30
+        },
+        {
+          "heading": "7.1.2 Telegram: Bot Token và chính sách Chat riêng / Chat nhóm",
+          "level": 3,
+          "line": 36
+        },
+        {
+          "heading": "7.1.3 WhatsApp: Ưu tiên thu hẹp bề mặt kích hoạt",
+          "level": 3,
+          "line": 68
+        },
+        {
+          "heading": "7.1.4 Cách ly đa tài khoản: Tách biệt cổng nội bộ và cổng bên ngoài",
+          "level": 3,
+          "line": 111
+        },
+        {
+          "heading": "7.1.5 Nghiệm thu & Chẩn đoán sự cố: Thăm dò trước, Phát lại sau",
+          "level": 3,
+          "line": 148
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 6
+      }
+    },
+    {
+      "path": "07_multi_agent/7.2_lark_integration.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 131,
+      "nonEmptyLines": 103,
+      "sections": [
+        {
+          "heading": "7.2 Hướng dẫn kết nối Lark/Feishu: Đưa Bot trò chuyện trong nhóm làm việc",
+          "level": 2,
+          "line": 1
+        },
+        {
+          "heading": "7.2.1 Trình tự tổng thể & Cảnh báo cạm bẫy",
+          "level": 3,
+          "line": 8
+        },
+        {
+          "heading": "7.2.2 Cấu hình ứng dụng trên Nền tảng mở Lark/Feishu",
+          "level": 3,
+          "line": 56
+        },
+        {
+          "heading": "7.2.3 Hoàn tất liên kết phía OpenClaw",
+          "level": 3,
+          "line": 98
+        },
+        {
+          "heading": "7.2.4 Bật đăng ký sự kiện & Thực hiện phiên đối thoại đầu tiên trên Lark",
+          "level": 3,
+          "line": 124
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 5
+      }
+    },
+    {
+      "path": "07_multi_agent/7.3_routing_basics.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 233,
+      "nonEmptyLines": 183,
+      "sections": [
+        {
+          "heading": "7.3 Cơ sở định tuyến (Routing): Từ đơn Agent đến đa Agent",
+          "level": 2,
+          "line": 1
+        },
+        {
+          "heading": "7.3.1 Bài toán cốt lõi mà định tuyến giải quyết: Quyền sở hữu, Thẩm quyền & Cách ly trạng thái",
+          "level": 3,
+          "line": 5
+        },
+        {
+          "heading": "7.3.2 Chuỗi ra quyết định: Khớp ràng buộc trước, định tuyến sau; trúng ràng buộc thì tiếp quản ngay",
+          "level": 3,
+          "line": 14
+        },
+        {
+          "heading": "7.3.3 Triển khai Ràng buộc định tuyến (Bindings): Dùng quy tắc tối thiểu cố định cổng rủi ro vào Agent kiểm soát",
+          "level": 3,
+          "line": 36
+        },
+        {
+          "heading": "Ví dụ cấu hình đa Agent hoàn chỉnh",
+          "level": 4,
+          "line": 87
+        },
+        {
+          "heading": "7.3.4 Khả năng quan sát & Chống mất kiểm soát: Ghi lý do định tuyến vào Log",
+          "level": 3,
+          "line": 183
+        },
+        {
+          "heading": "7.3.5 Không gian làm việc, Bộ nhớ & Trạng thái phiên: Hiểu ranh giới thực sự của sự \"Cách ly\"",
+          "level": 3,
+          "line": 197
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 7
+      }
+    },
+    {
+      "path": "07_multi_agent/7.4_collaboration_patterns.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 226,
+      "nonEmptyLines": 176,
+      "sections": [
+        {
+          "heading": "7.4 Mô hình cộng tác: Sub-agent (Agent phụ) & Nhóm broadcast",
+          "level": 2,
+          "line": 1
+        },
+        {
+          "heading": "7.4.1 Sub-agent: Dùng `sessions_spawn` để phái sinh phiên làm việc độc lập",
+          "level": 3,
+          "line": 25
+        },
+        {
+          "heading": "7.4.2 Nhóm Broadcast: Để một tin nhắn kích hoạt đồng thời nhiều Agent",
+          "level": 3,
+          "line": 58
+        },
+        {
+          "heading": "7.4.3 Hàng đợi tin nhắn & Thông báo hồi đáp (Announce Step): `messages.queue`",
+          "level": 3,
+          "line": 89
+        },
+        {
+          "heading": "7.4.4 Khung cấu hình mẫu: Cụm cộng tác tối thiểu chạy được",
+          "level": 3,
+          "line": 137
+        },
+        {
+          "heading": "7.4.5 Nghiệm thu & Chẩn đoán sự cố: 3 bước tuần tự",
+          "level": 3,
+          "line": 200
+        },
+        {
+          "heading": "7.4.6 Tóm tắt mục",
+          "level": 3,
+          "line": 219
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 7
+      }
+    },
+    {
+      "path": "07_multi_agent/README.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 25,
+      "nonEmptyLines": 17,
+      "sections": [
+        {
+          "heading": "Chương 7: Phân phối đa kênh & Đa Agent cộng tác",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "Mục lục hướng dẫn chương",
+          "level": 2,
+          "line": 19
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 2
+      }
+    },
+    {
+      "path": "07_multi_agent/summary.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 27,
+      "nonEmptyLines": 18,
+      "sections": [
+        {
+          "heading": "7.5 Tóm tắt chương",
+          "level": 2,
+          "line": 1
+        },
+        {
+          "heading": "7.5.1 Các kết luận trọng yếu",
+          "level": 3,
+          "line": 5
+        },
+        {
+          "heading": "7.5.2 Checklist tự kiểm tra",
+          "level": 3,
+          "line": 12
+        },
+        {
+          "heading": "7.5.3 Gợi ý ứng dụng thực tế từ cộng đồng",
+          "level": 3,
+          "line": 18
+        },
+        {
+          "heading": "7.5.4 Giới thiệu chương tiếp theo",
+          "level": 3,
+          "line": 25
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 5
+      }
+    }
+  ]
+}

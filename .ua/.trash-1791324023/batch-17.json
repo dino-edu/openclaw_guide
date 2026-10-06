@@ -1,0 +1,177 @@
+{
+  "nodes": [
+    {
+      "id": "document:16_claude_ecosystem/README.md",
+      "type": "document",
+      "name": "README.md",
+      "filePath": "16_claude_ecosystem/README.md",
+      "summary": "Serves as the chapter roadmap and table of contents for Chapter 16, introducing integration patterns for mainstream AI ecosystems including Anthropic Claude, Model Context Protocol (MCP), multi-agent orchestration, OpenAI, and local LLMs via Ollama.",
+      "tags": [
+        "documentation",
+        "overview",
+        "entry-point",
+        "ecosystem-integration",
+        "ai-models"
+      ],
+      "complexity": "simple",
+      "languageNotes": "Outlines the chapter's coverage across Claude model integration, MCP tool extensibility, multi-agent collaboration architectures, and hybrid multi-provider deployment."
+    },
+    {
+      "id": "document:16_claude_ecosystem/16.1_claude_integration.md",
+      "type": "document",
+      "name": "16.1_claude_integration.md",
+      "filePath": "16_claude_ecosystem/16.1_claude_integration.md",
+      "summary": "Guides integration with the Anthropic Claude model family and external tool connectivity via the Model Context Protocol (MCP). Covers model tier selection from Haiku to Opus, Adaptive Thinking controls, 1M context token activation, stdio and Streamable HTTP MCP server configurations, and multi-provider failover chains.",
+      "tags": [
+        "documentation",
+        "claude-integration",
+        "mcp-protocol",
+        "anthropic",
+        "tool-integration"
+      ],
+      "complexity": "moderate",
+      "languageNotes": "Details Claude model tiers up to Opus 5.5, MCP server integration over stdio and Streamable HTTP, and multi-cloud fallback routing using Anthropic Vertex."
+    },
+    {
+      "id": "document:16_claude_ecosystem/16.2_agent_team_integration.md",
+      "type": "document",
+      "name": "16.2_agent_team_integration.md",
+      "filePath": "16_claude_ecosystem/16.2_agent_team_integration.md",
+      "summary": "Explains multi-agent collaboration architectures in OpenClaw using agentId, accountId, and channel bindings alongside task delegation via sessions_spawn. Compares sequential, parallel (fan-out/fan-in), and dynamic routing patterns, and outlines governance constraints and synergy with the Claude Agent SDK.",
+      "tags": [
+        "documentation",
+        "multi-agent-orchestration",
+        "agent-delegation",
+        "bindings",
+        "agent-collaboration"
+      ],
+      "complexity": "moderate",
+      "languageNotes": "Examines architectural trade-offs between static Gateway routing via bindings and dynamic subagent delegation via sessions_spawn, highlighting token isolation and timeout circuit breakers."
+    },
+    {
+      "id": "document:16_claude_ecosystem/16.3_other_ecosystems.md",
+      "type": "document",
+      "name": "16.3_other_ecosystems.md",
+      "filePath": "16_claude_ecosystem/16.3_other_ecosystems.md",
+      "summary": "Covers connecting OpenAI models, Azure OpenAI Service, and local LLMs through Ollama, detailing multi-ecosystem hybrid strategies. Highlights native tool-calling requirements, hardware VRAM sizing guidelines, privacy-first offline fallbacks, and unified status inspection using CLI probe commands.",
+      "tags": [
+        "documentation",
+        "openai-integration",
+        "local-llm",
+        "ollama",
+        "hybrid-strategy"
+      ],
+      "complexity": "moderate",
+      "languageNotes": "Warns against pointing OpenClaw to Ollama's OpenAI-compatible /v1 endpoint to preserve native tool calling, and provides VRAM hardware allocation reference tables."
+    },
+    {
+      "id": "document:16_claude_ecosystem/summary.md",
+      "type": "document",
+      "name": "summary.md",
+      "filePath": "16_claude_ecosystem/summary.md",
+      "summary": "Summarizes the core takeaways of Chapter 16 on standard model identifiers, MCP tool protocol advantages, dual multi-agent orchestration paths, and enterprise multi-ecosystem hybrid governance.",
+      "tags": [
+        "documentation",
+        "summary",
+        "best-practices",
+        "ecosystem-governance",
+        "architecture"
+      ],
+      "complexity": "simple",
+      "languageNotes": "Recaps architectural conclusions regarding model onboarding, stdio/HTTP MCP servers, agent delegation depth limits, and production multi-provider monitoring."
+    }
+  ],
+  "edges": [
+    {
+      "source": "document:16_claude_ecosystem/README.md",
+      "target": "document:16_claude_ecosystem/16.1_claude_integration.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:16_claude_ecosystem/README.md",
+      "target": "document:16_claude_ecosystem/16.2_agent_team_integration.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:16_claude_ecosystem/README.md",
+      "target": "document:16_claude_ecosystem/16.3_other_ecosystems.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:16_claude_ecosystem/README.md",
+      "target": "document:16_claude_ecosystem/summary.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:16_claude_ecosystem/summary.md",
+      "target": "document:16_claude_ecosystem/16.1_claude_integration.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:16_claude_ecosystem/summary.md",
+      "target": "document:16_claude_ecosystem/16.2_agent_team_integration.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:16_claude_ecosystem/summary.md",
+      "target": "document:16_claude_ecosystem/16.3_other_ecosystems.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:16_claude_ecosystem/16.1_claude_integration.md",
+      "target": "document:16_claude_ecosystem/16.2_agent_team_integration.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:16_claude_ecosystem/16.1_claude_integration.md",
+      "target": "document:16_claude_ecosystem/16.3_other_ecosystems.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:16_claude_ecosystem/16.2_agent_team_integration.md",
+      "target": "document:16_claude_ecosystem/16.1_claude_integration.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:16_claude_ecosystem/16.2_agent_team_integration.md",
+      "target": "document:16_claude_ecosystem/16.3_other_ecosystems.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:16_claude_ecosystem/16.3_other_ecosystems.md",
+      "target": "document:16_claude_ecosystem/16.1_claude_integration.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:16_claude_ecosystem/16.3_other_ecosystems.md",
+      "target": "document:16_claude_ecosystem/16.2_agent_team_integration.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    }
+  ]
+}

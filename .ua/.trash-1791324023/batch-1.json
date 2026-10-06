@@ -1,0 +1,127 @@
+{
+  "nodes": [
+    {
+      "id": "pipeline:.github/workflows/auto-release.yml",
+      "type": "pipeline",
+      "name": "auto-release.yml",
+      "filePath": ".github/workflows/auto-release.yml",
+      "summary": "Automates building, testing, verifying, attesting provenance, and publishing PDF and HTML guide editions for tagged releases.",
+      "tags": [
+        "ci-cd",
+        "deployment",
+        "release-automation",
+        "artifact-verification",
+        "github-actions"
+      ],
+      "complexity": "moderate",
+      "languageNotes": "Uses GitHub Actions with checksum verification for binary dependencies, artifact provenance attestation, and release asset publishing."
+    },
+    {
+      "id": "pipeline:.github/workflows/ci.yaml",
+      "type": "pipeline",
+      "name": "ci.yaml",
+      "filePath": ".github/workflows/ci.yaml",
+      "summary": "Continuous integration workflow that executes project tests and rule checks, followed by building and verifying PDF and HTML guide editions on pull requests and pushes to main.",
+      "tags": [
+        "ci-cd",
+        "testing",
+        "validation",
+        "artifact-verification",
+        "github-actions"
+      ],
+      "complexity": "moderate",
+      "languageNotes": "Orchestrates testing via unittest and custom Python rule checkers, followed by doc build verification using mdPress and Pandoc."
+    },
+    {
+      "id": "pipeline:.github/workflows/dependabot-automerge.yml",
+      "type": "pipeline",
+      "name": "dependabot-automerge.yml",
+      "filePath": ".github/workflows/dependabot-automerge.yml",
+      "summary": "Automatically enables auto-merge for Dependabot pull requests targeting semver patch updates while leaving minor and major updates for manual review.",
+      "tags": [
+        "ci-cd",
+        "automation",
+        "dependabot",
+        "dependency-management",
+        "github-actions"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "pipeline:.github/workflows/identity-guard.yaml",
+      "type": "pipeline",
+      "name": "identity-guard.yaml",
+      "filePath": ".github/workflows/identity-guard.yaml",
+      "summary": "Server-side git audit workflow that inspects commit authors, committers, and Co-authored-by trailers to prevent AI assistant identities from entering repository history.",
+      "tags": [
+        "ci-cd",
+        "security",
+        "git-audit",
+        "compliance",
+        "github-actions"
+      ],
+      "complexity": "moderate",
+      "languageNotes": "Implements strict regex-based git log stream inspection with fail-closed semantics across push and pull request events."
+    },
+    {
+      "id": "pipeline:.github/workflows/preview-pdf.yml",
+      "type": "pipeline",
+      "name": "preview-pdf.yml",
+      "filePath": ".github/workflows/preview-pdf.yml",
+      "summary": "Builds, verifies, and publishes rolling preview editions of the PDF and HTML guides to a mutable preview-pdf release tag on push to main.",
+      "tags": [
+        "ci-cd",
+        "deployment",
+        "preview-release",
+        "artifact-verification",
+        "github-actions"
+      ],
+      "complexity": "complex",
+      "languageNotes": "Manages mutable preview releases via GitHub API and CLI with concurrency grouping and checksum validation."
+    }
+  ],
+  "edges": [
+    {
+      "source": "pipeline:.github/workflows/auto-release.yml",
+      "target": "pipeline:.github/workflows/preview-pdf.yml",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "pipeline:.github/workflows/preview-pdf.yml",
+      "target": "pipeline:.github/workflows/auto-release.yml",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "pipeline:.github/workflows/ci.yaml",
+      "target": "pipeline:.github/workflows/preview-pdf.yml",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "pipeline:.github/workflows/ci.yaml",
+      "target": "pipeline:.github/workflows/auto-release.yml",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "pipeline:.github/workflows/dependabot-automerge.yml",
+      "target": "pipeline:.github/workflows/ci.yaml",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "pipeline:.github/workflows/identity-guard.yaml",
+      "target": "pipeline:.github/workflows/ci.yaml",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    }
+  ]
+}

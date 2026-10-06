@@ -1,0 +1,158 @@
+{
+  "nodes": [
+    {
+      "id": "document:07_multi_agent/7.1_telegram_whatsapp.md",
+      "type": "document",
+      "name": "7.1_telegram_whatsapp.md",
+      "filePath": "07_multi_agent/7.1_telegram_whatsapp.md",
+      "summary": "Covers channel onboarding and ingress governance for Telegram and WhatsApp, detailing direct-message and group policy segregation, token configurations, and multi-account isolation strategies.",
+      "tags": ["channel-policy", "telegram", "whatsapp", "ingress-governance", "documentation"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "document:07_multi_agent/7.2_lark_integration.md",
+      "type": "document",
+      "name": "7.2_lark_integration.md",
+      "filePath": "07_multi_agent/7.2_lark_integration.md",
+      "summary": "Walks through enterprise bot onboarding for Lark/Feishu Open Platform, covering long connection WebSocket subscriptions, event dispatching, permission setups, and pairing verification.",
+      "tags": ["lark", "feishu", "event-subscription", "enterprise-chat", "documentation"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "document:07_multi_agent/7.3_routing_basics.md",
+      "type": "document",
+      "name": "7.3_routing_basics.md",
+      "filePath": "07_multi_agent/7.3_routing_basics.md",
+      "summary": "Explains multi-agent routing mechanics, routing bindings precedence over natural intent routers, risk-gated entry point mappings, and workspace memory isolation.",
+      "tags": ["routing", "multi-agent", "bindings", "isolation", "documentation"],
+      "complexity": "complex"
+    },
+    {
+      "id": "document:07_multi_agent/7.4_collaboration_patterns.md",
+      "type": "document",
+      "name": "7.4_collaboration_patterns.md",
+      "filePath": "07_multi_agent/7.4_collaboration_patterns.md",
+      "summary": "Details multi-agent collaboration topologies, contrasting isolated sub-agent task delegation via sessions_spawn with parallel fan-out via broadcast groups and message queue announce flows.",
+      "tags": ["sub-agents", "broadcast-groups", "collaboration", "task-delegation", "documentation"],
+      "complexity": "complex"
+    },
+    {
+      "id": "document:07_multi_agent/README.md",
+      "type": "document",
+      "name": "README.md",
+      "filePath": "07_multi_agent/README.md",
+      "summary": "Introduces Chapter 7 on multi-channel message distribution and multi-agent collaboration, outlining channel policies, routing bindings, sandbox boundary enforcement, and chapter navigation.",
+      "tags": ["chapter-overview", "multi-agent", "channel-governance", "entry-point", "documentation"],
+      "complexity": "simple"
+    },
+    {
+      "id": "document:07_multi_agent/summary.md",
+      "type": "document",
+      "name": "summary.md",
+      "filePath": "07_multi_agent/summary.md",
+      "summary": "Summarizes Chapter 7 key architectural takeaways on deterministic agent ownership, channel policies, auditability, self-check verification questions, and multi-agent production use cases.",
+      "tags": ["chapter-summary", "checklist", "review", "multi-agent", "documentation"],
+      "complexity": "simple"
+    }
+  ],
+  "edges": [
+    {
+      "source": "document:07_multi_agent/README.md",
+      "target": "document:07_multi_agent/7.1_telegram_whatsapp.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:07_multi_agent/README.md",
+      "target": "document:07_multi_agent/7.2_lark_integration.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:07_multi_agent/README.md",
+      "target": "document:07_multi_agent/7.3_routing_basics.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:07_multi_agent/README.md",
+      "target": "document:07_multi_agent/7.4_collaboration_patterns.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:07_multi_agent/README.md",
+      "target": "document:07_multi_agent/summary.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:07_multi_agent/7.1_telegram_whatsapp.md",
+      "target": "document:07_multi_agent/7.2_lark_integration.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:07_multi_agent/7.1_telegram_whatsapp.md",
+      "target": "document:07_multi_agent/7.3_routing_basics.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:07_multi_agent/7.2_lark_integration.md",
+      "target": "document:07_multi_agent/7.3_routing_basics.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:07_multi_agent/7.3_routing_basics.md",
+      "target": "document:07_multi_agent/7.4_collaboration_patterns.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:07_multi_agent/7.4_collaboration_patterns.md",
+      "target": "document:07_multi_agent/7.1_telegram_whatsapp.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:07_multi_agent/summary.md",
+      "target": "document:07_multi_agent/7.1_telegram_whatsapp.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:07_multi_agent/summary.md",
+      "target": "document:07_multi_agent/7.2_lark_integration.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:07_multi_agent/summary.md",
+      "target": "document:07_multi_agent/7.3_routing_basics.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:07_multi_agent/summary.md",
+      "target": "document:07_multi_agent/7.4_collaboration_patterns.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    }
+  ]
+}

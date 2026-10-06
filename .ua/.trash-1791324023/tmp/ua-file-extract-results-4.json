@@ -1,0 +1,245 @@
+{
+  "scriptCompleted": true,
+  "filesAnalyzed": 6,
+  "filesSkipped": [],
+  "filesUnreadable": [],
+  "analysisOutcomes": {
+    "structure": {
+      "succeeded": 6,
+      "failed": 0
+    },
+    "callGraph": {
+      "succeeded": 0,
+      "failed": 0,
+      "skipped": 6
+    }
+  },
+  "results": [
+    {
+      "path": "03_minimal_loop/3.1_control_ui_webchat.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 144,
+      "nonEmptyLines": 97,
+      "sections": [
+        {
+          "heading": "3.1 Bảng điều khiển & Chat nhanh qua giao diện Webchat",
+          "level": 2,
+          "line": 1
+        },
+        {
+          "heading": "3.1.1 Tại sao nên bắt đầu từ Dashboard và Control UI Chat",
+          "level": 3,
+          "line": 5
+        },
+        {
+          "heading": "3.1.2 Mở Dashboard: Cổng kết nối, lối vào & Các rào cản thường gặp",
+          "level": 3,
+          "line": 14
+        },
+        {
+          "heading": "Cấu trúc thanh điều hướng bên trái",
+          "level": 4,
+          "line": 21
+        },
+        {
+          "heading": "3.1.3 Tương tác và xuất luồng trên Control UI Chat: Thấy rõ tiến trình giúp gỡ lỗi dễ dàng hơn",
+          "level": 3,
+          "line": 83
+        },
+        {
+          "heading": "3.1.4 Các ca kiểm thử vòng lặp tối thiểu (Minimal Loop Test Cases)",
+          "level": 3,
+          "line": 105
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 6
+      }
+    },
+    {
+      "path": "03_minimal_loop/3.2_diagnostics.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 92,
+      "nonEmptyLines": 64,
+      "sections": [
+        {
+          "heading": "3.2 Các lệnh chẩn đoán thông dụng & Xử lý sự cố qua Logs",
+          "level": 2,
+          "line": 1
+        },
+        {
+          "heading": "3.2.1 Trình tự chẩn đoán 4 tầng & Các thao tác bổ trợ",
+          "level": 3,
+          "line": 7
+        },
+        {
+          "heading": "3.2.2 Các câu lệnh ví dụ",
+          "level": 3,
+          "line": 33
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 3
+      }
+    },
+    {
+      "path": "03_minimal_loop/3.3_agent_persona.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 65,
+      "nonEmptyLines": 42,
+      "sections": [
+        {
+          "heading": "3.3 Chỉ thị ban đầu & Cấu hình vai trò cho Agent (Persona)",
+          "level": 2,
+          "line": 1
+        },
+        {
+          "heading": "3.3.1 Mẫu chỉ thị tối thiểu (Minimal Instruction Template)",
+          "level": 3,
+          "line": 7
+        },
+        {
+          "heading": "3.3.2 Thiết lập chỉ thị trong các tệp Workspace",
+          "level": 3,
+          "line": 18
+        },
+        {
+          "heading": "3.3.3 Chỉ thị tốt vs Chỉ thị kém",
+          "level": 3,
+          "line": 43
+        },
+        {
+          "heading": "3.3.4 Xác minh chỉ thị đã có hiệu lực",
+          "level": 3,
+          "line": 53
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 5
+      }
+    },
+    {
+      "path": "03_minimal_loop/3.4_pairing_groups.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 78,
+      "nonEmptyLines": 55,
+      "sections": [
+        {
+          "heading": "3.4 Ranh giới truy cập cục bộ & Phê duyệt thiết bị (Pairing)",
+          "level": 2,
+          "line": 1
+        },
+        {
+          "heading": "3.4.1 Phê duyệt thiết bị: Ranh giới tin cậy tối thiểu",
+          "level": 3,
+          "line": 5
+        },
+        {
+          "heading": "3.4.2 Hành vi mặc định đối với Chat riêng (DM) và Chat nhóm",
+          "level": 3,
+          "line": 37
+        },
+        {
+          "heading": "3.4.3 Chẩn đoán nhanh: Phê duyệt thiết bị & Kích hoạt tin nhắn",
+          "level": 3,
+          "line": 64
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 4
+      }
+    },
+    {
+      "path": "03_minimal_loop/README.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 38,
+      "nonEmptyLines": 26,
+      "sections": [
+        {
+          "heading": "Chương 3: Bắt đầu nhanh & Thực chiến phiên hội thoại đầu tiên",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "Mục lục hướng dẫn chương",
+          "level": 2,
+          "line": 17
+        },
+        {
+          "heading": "Mục tiêu học tập",
+          "level": 2,
+          "line": 27
+        },
+        {
+          "heading": "Điều kiện tiên quyết",
+          "level": 2,
+          "line": 35
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 4
+      }
+    },
+    {
+      "path": "03_minimal_loop/summary.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 24,
+      "nonEmptyLines": 15,
+      "sections": [
+        {
+          "heading": "3.5 Tóm tắt chương",
+          "level": 2,
+          "line": 1
+        },
+        {
+          "heading": "3.5.1 Các nguyên tắc thiết kế trọng yếu",
+          "level": 3,
+          "line": 5
+        },
+        {
+          "heading": "3.5.2 Checklist tự kiểm tra",
+          "level": 3,
+          "line": 14
+        },
+        {
+          "heading": "3.5.3 Giới thiệu chương tiếp theo",
+          "level": 3,
+          "line": 22
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 4
+      }
+    }
+  ]
+}

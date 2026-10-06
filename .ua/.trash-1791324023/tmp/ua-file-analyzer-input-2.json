@@ -1,0 +1,49 @@
+{
+  "projectRoot": "/Users/ngohongthai/Documents/openclaw_guide",
+  "batchFiles": [
+    {
+      "path": "01_overview/1.1_what_is_openclaw.md",
+      "language": "markdown",
+      "sizeLines": 91,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "01_overview/1.2_scenarios_comparison.md",
+      "language": "markdown",
+      "sizeLines": 33,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "01_overview/1.3_concepts.md",
+      "language": "markdown",
+      "sizeLines": 68,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "01_overview/1.4_use_cases.md",
+      "language": "markdown",
+      "sizeLines": 58,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "01_overview/README.md",
+      "language": "markdown",
+      "sizeLines": 35,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "01_overview/summary.md",
+      "language": "markdown",
+      "sizeLines": 25,
+      "fileCategory": "docs"
+    }
+  ],
+  "batchImportData": {
+    "01_overview/1.1_what_is_openclaw.md": [],
+    "01_overview/1.2_scenarios_comparison.md": [],
+    "01_overview/1.3_concepts.md": [],
+    "01_overview/1.4_use_cases.md": [],
+    "01_overview/README.md": [],
+    "01_overview/summary.md": []
+  }
+}

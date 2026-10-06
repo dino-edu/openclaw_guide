@@ -1,0 +1,63 @@
+{
+  "projectRoot": "/Users/ngohongthai/Documents/openclaw_guide",
+  "batchFiles": [
+    {
+      "path": "10_agent_loop/10.1_request_lifecycle.md",
+      "language": "markdown",
+      "sizeLines": 97,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "10_agent_loop/10.2_pi_framework.md",
+      "language": "markdown",
+      "sizeLines": 106,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "10_agent_loop/10.3_entry_queue.md",
+      "language": "markdown",
+      "sizeLines": 98,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "10_agent_loop/10.4_prompt_assembly.md",
+      "language": "markdown",
+      "sizeLines": 139,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "10_agent_loop/10.5_tool_execution.md",
+      "language": "markdown",
+      "sizeLines": 78,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "10_agent_loop/10.6_streaming_retry.md",
+      "language": "markdown",
+      "sizeLines": 82,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "10_agent_loop/README.md",
+      "language": "markdown",
+      "sizeLines": 23,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "10_agent_loop/summary.md",
+      "language": "markdown",
+      "sizeLines": 27,
+      "fileCategory": "docs"
+    }
+  ],
+  "batchImportData": {
+    "10_agent_loop/10.1_request_lifecycle.md": [],
+    "10_agent_loop/10.2_pi_framework.md": [],
+    "10_agent_loop/10.3_entry_queue.md": [],
+    "10_agent_loop/10.4_prompt_assembly.md": [],
+    "10_agent_loop/10.5_tool_execution.md": [],
+    "10_agent_loop/10.6_streaming_retry.md": [],
+    "10_agent_loop/README.md": [],
+    "10_agent_loop/summary.md": []
+  }
+}

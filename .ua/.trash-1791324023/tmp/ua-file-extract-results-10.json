@@ -1,0 +1,391 @@
+{
+  "scriptCompleted": true,
+  "filesAnalyzed": 7,
+  "filesSkipped": [],
+  "filesUnreadable": [],
+  "analysisOutcomes": {
+    "structure": {
+      "succeeded": 7,
+      "failed": 0
+    },
+    "callGraph": {
+      "succeeded": 0,
+      "failed": 0,
+      "skipped": 7
+    }
+  },
+  "results": [
+    {
+      "path": "09_gateway_protocol/9.1_architecture_overview.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 86,
+      "nonEmptyLines": 58,
+      "sections": [
+        {
+          "heading": "9.1 Toàn cảnh kiến trúc & Khung 5 mặt phẳng (5-Plane Framework)",
+          "level": 2,
+          "line": 1
+        },
+        {
+          "heading": "9.1.1 Quan sát Gateway qua lăng kính 5 mặt phẳng",
+          "level": 3,
+          "line": 7
+        },
+        {
+          "heading": "9.1.2 Trách nhiệm chi tiết của Mặt phẳng điều khiển (Control Plane)",
+          "level": 3,
+          "line": 21
+        },
+        {
+          "heading": "9.1.3 Mặt phẳng dữ liệu & Thực thi công cụ",
+          "level": 3,
+          "line": 33
+        },
+        {
+          "heading": "9.1.4 Mặt phẳng ngữ cảnh & Quản trị trạng thái",
+          "level": 3,
+          "line": 42
+        },
+        {
+          "heading": "9.1.5 Mặt phẳng vùng tin cậy & Đảm bảo an toàn",
+          "level": 3,
+          "line": 50
+        },
+        {
+          "heading": "9.1.6 Mặt phẳng khả năng quan sát & Chẩn đoán hệ thống",
+          "level": 3,
+          "line": 59
+        },
+        {
+          "heading": "9.1.7 Ví dụ về sự cộng tác nhịp nhàng giữa các mặt phẳng",
+          "level": 3,
+          "line": 68
+        },
+        {
+          "heading": "9.1.8 Tầm quan trọng của khung kiến trúc 5 mặt phẳng",
+          "level": 3,
+          "line": 81
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 9
+      }
+    },
+    {
+      "path": "09_gateway_protocol/9.2_control_plane.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 162,
+      "nonEmptyLines": 132,
+      "sections": [
+        {
+          "heading": "9.2 Trách nhiệm & Ranh giới của mặt phẳng điều khiển (Control Plane)",
+          "level": 2,
+          "line": 1
+        },
+        {
+          "heading": "9.2.1 Năm trọng trách lớn & Ranh giới trách nhiệm",
+          "level": 3,
+          "line": 5
+        },
+        {
+          "heading": "1. Xác thực kết nối & Xác minh quyền sở hữu (Attribution)",
+          "level": 4,
+          "line": 9
+        },
+        {
+          "heading": "2. Định tuyến & Phân phối (Routing & Dispatch)",
+          "level": 4,
+          "line": 20
+        },
+        {
+          "heading": "3. Quản lý phiên & Trạng thái (Session Management)",
+          "level": 4,
+          "line": 31
+        },
+        {
+          "heading": "4. Thực thi chính sách & Kiểm tra ràng buộc (Policy Enforcement)",
+          "level": 4,
+          "line": 42
+        },
+        {
+          "heading": "5. Phục hồi sự cố & Chiến lược ngắt mạch (Failover & Circuit Breaking)",
+          "level": 4,
+          "line": 54
+        },
+        {
+          "heading": "9.2.2 Mẫu thiết kế của Control Plane: Phê duyệt phân tầng (Layered Approval)",
+          "level": 3,
+          "line": 66
+        },
+        {
+          "heading": "9.2.3 Ranh giới phân tích kỹ thuật giữa Control Plane và Data Plane",
+          "level": 3,
+          "line": 86
+        },
+        {
+          "heading": "9.2.4 Ví dụ cấu hình thực tế",
+          "level": 3,
+          "line": 102
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 10
+      }
+    },
+    {
+      "path": "09_gateway_protocol/9.3_ws_handshake.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 119,
+      "nonEmptyLines": 86,
+      "sections": [
+        {
+          "heading": "9.3 Vòng đời kết nối: Bắt tay (Handshake), Xác thực & Heartbeat",
+          "level": 2,
+          "line": 1
+        },
+        {
+          "heading": "9.3.1 Vì sao lại chọn WebSocket",
+          "level": 3,
+          "line": 5
+        },
+        {
+          "heading": "9.3.2 Quy trình bắt tay WebSocket & Xác thực Challenge-Response",
+          "level": 3,
+          "line": 13
+        },
+        {
+          "heading": "9.3.3 Phân công giữa các loại Token và Danh tính thiết bị",
+          "level": 3,
+          "line": 47
+        },
+        {
+          "heading": "9.3.4 Cơ chế giữ kết nối nhịp tim (Keepalive & Heartbeat)",
+          "level": 3,
+          "line": 59
+        },
+        {
+          "heading": "9.3.5 Phục hồi ngoại lệ & Chiến lược kết nối lại",
+          "level": 3,
+          "line": 72
+        },
+        {
+          "heading": "Chiến lược lùi thời gian số mũ (Exponential Backoff)",
+          "level": 4,
+          "line": 76
+        },
+        {
+          "heading": "Khôi phục trạng thái sau khi kết nối lại",
+          "level": 4,
+          "line": 97
+        },
+        {
+          "heading": "9.3.6 Sự khác biệt mấu chốt giữa Kết nối (Connection) và Phiên (Session)",
+          "level": 3,
+          "line": 101
+        },
+        {
+          "heading": "9.3.7 Tóm tắt mục",
+          "level": 3,
+          "line": 113
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 10
+      }
+    },
+    {
+      "path": "09_gateway_protocol/9.4_event_idempotency.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 120,
+      "nonEmptyLines": 92,
+      "sections": [
+        {
+          "heading": "9.4 Tính bất biến của sự kiện (Idempotency) & Bảo đảm nhất quán",
+          "level": 2,
+          "line": 1
+        },
+        {
+          "heading": "9.4.1 Vì sao phải xử lý tình huống Trùng lặp, Thất lạc và Trạng thái bất định",
+          "level": 3,
+          "line": 5
+        },
+        {
+          "heading": "9.4.2 Ba cấp độ của tính bất biến (Idempotency)",
+          "level": 3,
+          "line": 29
+        },
+        {
+          "heading": "9.4.3 Khóa bất biến (Idempotency Key)",
+          "level": 3,
+          "line": 35
+        },
+        {
+          "heading": "9.4.4 Bảo đảm thứ tự sự kiện (Event Ordering)",
+          "level": 3,
+          "line": 89
+        },
+        {
+          "heading": "9.4.5 Thiết kế nhiều tầng bảo đảm tính nhất quán",
+          "level": 3,
+          "line": 106
+        },
+        {
+          "heading": "9.4.6 Tóm tắt mục",
+          "level": 3,
+          "line": 115
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 7
+      }
+    },
+    {
+      "path": "09_gateway_protocol/9.5_pairing_trust.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 99,
+      "nonEmptyLines": 73,
+      "sections": [
+        {
+          "heading": "9.5 Ghép nối kênh & Thiết lập vùng tin cậy cục bộ",
+          "level": 2,
+          "line": 1
+        },
+        {
+          "heading": "9.5.1 Sự cần thiết của việc ghép nối (Pairing)",
+          "level": 3,
+          "line": 5
+        },
+        {
+          "heading": "9.5.2 Quy trình dẫn dắt vùng tin cậy của Control Plane",
+          "level": 3,
+          "line": 16
+        },
+        {
+          "heading": "9.5.3 Trình tự thiết lập vùng tin cậy của Control Plane",
+          "level": 3,
+          "line": 31
+        },
+        {
+          "heading": "9.5.4 Phân biệt giữa Ghép nối Control Plane và Ghép nối DM lịch sử",
+          "level": 3,
+          "line": 65
+        },
+        {
+          "heading": "9.5.5 Xoay tua và Thu hồi Token (Rotation & Revocation)",
+          "level": 3,
+          "line": 77
+        },
+        {
+          "heading": "Xoay tua Token",
+          "level": 4,
+          "line": 79
+        },
+        {
+          "heading": "Thu hồi Token khẩn cấp",
+          "level": 4,
+          "line": 86
+        },
+        {
+          "heading": "9.5.6 Tóm tắt mục",
+          "level": 3,
+          "line": 93
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 9
+      }
+    },
+    {
+      "path": "09_gateway_protocol/README.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 24,
+      "nonEmptyLines": 17,
+      "sections": [
+        {
+          "heading": "Chương 9: Mặt phẳng điều khiển Gateway & Cơ chế giao thức",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "Mục lục hướng dẫn chương",
+          "level": 2,
+          "line": 7
+        },
+        {
+          "heading": "Mục tiêu học tập",
+          "level": 2,
+          "line": 18
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 3
+      }
+    },
+    {
+      "path": "09_gateway_protocol/summary.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 25,
+      "nonEmptyLines": 16,
+      "sections": [
+        {
+          "heading": "9.6 Tóm tắt chương",
+          "level": 2,
+          "line": 1
+        },
+        {
+          "heading": "9.6.1 Các kết luận trọng yếu",
+          "level": 3,
+          "line": 5
+        },
+        {
+          "heading": "9.6.2 Checklist tự kiểm tra",
+          "level": 3,
+          "line": 12
+        },
+        {
+          "heading": "9.6.3 Giới thiệu chương tiếp theo",
+          "level": 3,
+          "line": 18
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 4
+      }
+    }
+  ]
+}

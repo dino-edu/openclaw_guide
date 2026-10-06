@@ -1,0 +1,56 @@
+{
+  "projectRoot": "/Users/ngohongthai/Documents/openclaw_guide",
+  "batchFiles": [
+    {
+      "path": "12_extension_engineering/12.1_plugin_architecture.md",
+      "language": "markdown",
+      "sizeLines": 219,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "12_extension_engineering/12.2_custom_tools.md",
+      "language": "markdown",
+      "sizeLines": 217,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "12_extension_engineering/12.3_testing_debugging.md",
+      "language": "markdown",
+      "sizeLines": 227,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "12_extension_engineering/12.4_production_blueprint.md",
+      "language": "markdown",
+      "sizeLines": 141,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "12_extension_engineering/12.5_framework_interoperability.md",
+      "language": "markdown",
+      "sizeLines": 131,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "12_extension_engineering/README.md",
+      "language": "markdown",
+      "sizeLines": 25,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "12_extension_engineering/summary.md",
+      "language": "markdown",
+      "sizeLines": 25,
+      "fileCategory": "docs"
+    }
+  ],
+  "batchImportData": {
+    "12_extension_engineering/12.1_plugin_architecture.md": [],
+    "12_extension_engineering/12.2_custom_tools.md": [],
+    "12_extension_engineering/12.3_testing_debugging.md": [],
+    "12_extension_engineering/12.4_production_blueprint.md": [],
+    "12_extension_engineering/12.5_framework_interoperability.md": [],
+    "12_extension_engineering/README.md": [],
+    "12_extension_engineering/summary.md": []
+  }
+}

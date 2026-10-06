@@ -1,0 +1,510 @@
+{
+  "scriptCompleted": true,
+  "filesAnalyzed": 11,
+  "filesSkipped": [],
+  "filesUnreadable": [],
+  "analysisOutcomes": {
+    "structure": {
+      "succeeded": 11,
+      "failed": 0
+    },
+    "callGraph": {
+      "succeeded": 0,
+      "failed": 0,
+      "skipped": 11
+    }
+  },
+  "results": [
+    {
+      "path": "appendix/README.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 16,
+      "nonEmptyLines": 13,
+      "sections": [
+        {
+          "heading": "Phụ lục: Tài liệu tham khảo & Tra cứu nhanh",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "Mục lục phụ lục",
+          "level": 2,
+          "line": 5
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 2
+      }
+    },
+    {
+      "path": "appendix/api_reference.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 53,
+      "nonEmptyLines": 36,
+      "sections": [
+        {
+          "heading": "Phụ lục D: Tham chiếu API & SDK (API Reference)",
+          "level": 2,
+          "line": 1
+        },
+        {
+          "heading": "D.1 Cổng vào Mặt phẳng điều khiển (Tài liệu chính thức)",
+          "level": 3,
+          "line": 5
+        },
+        {
+          "heading": "D.2 Cụm lệnh CLI xử lý sự cố tuyến đầu",
+          "level": 3,
+          "line": 15
+        },
+        {
+          "heading": "D.3 Tài liệu tham khảo WebSocket & Luồng sự kiện",
+          "level": 3,
+          "line": 31
+        },
+        {
+          "heading": "D.4 Lời khuyên khi tích hợp SDK",
+          "level": 3,
+          "line": 45
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 5
+      }
+    },
+    {
+      "path": "appendix/command_cheatsheet.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 308,
+      "nonEmptyLines": 251,
+      "sections": [
+        {
+          "heading": "Phụ lục E: Sổ tay tra cứu lệnh nhanh",
+          "level": 2,
+          "line": 1
+        },
+        {
+          "heading": "E.1 Thao tác cơ sở & Quản lý dịch vụ",
+          "level": 3,
+          "line": 7
+        },
+        {
+          "heading": "E.2 Cài đặt, Khởi tạo & Cấu hình",
+          "level": 3,
+          "line": 24
+        },
+        {
+          "heading": "E.3 Chẩn đoán & Xử lý sự cố",
+          "level": 3,
+          "line": 40
+        },
+        {
+          "heading": "E.4 Quản lý Mô hình AI",
+          "level": 3,
+          "line": 63
+        },
+        {
+          "heading": "E.5 Quản lý Kênh liên lạc (Channels)",
+          "level": 3,
+          "line": 75
+        },
+        {
+          "heading": "E.6 Plugin & Kỹ năng (Skills)",
+          "level": 3,
+          "line": 89
+        },
+        {
+          "heading": "E.7 Quản trị Gateway",
+          "level": 3,
+          "line": 115
+        },
+        {
+          "heading": "E.8 Hộp cát (Sandbox) & Trình duyệt (Browser)",
+          "level": 3,
+          "line": 129
+        },
+        {
+          "heading": "E.9 Tin nhắn & Ghép nối (Pairing)",
+          "level": 3,
+          "line": 159
+        },
+        {
+          "heading": "E.10 Tự động hóa & Vận hành (Automations & Ops)",
+          "level": 3,
+          "line": 187
+        },
+        {
+          "heading": "E.11 Các câu lệnh gạch chéo trong khung chat (Slash Commands)",
+          "level": 3,
+          "line": 235
+        },
+        {
+          "heading": "E.12 Tra cứu các đường dẫn tệp tin trọng yếu",
+          "level": 3,
+          "line": 286
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 13
+      }
+    },
+    {
+      "path": "appendix/config_templates.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 230,
+      "nonEmptyLines": 177,
+      "sections": [
+        {
+          "heading": "Phụ lục B: Bản mẫu cấu hình & Ví dụ (Config Templates)",
+          "level": 2,
+          "line": 1
+        },
+        {
+          "heading": "B.1 Vị trí tệp cấu hình & Định dạng",
+          "level": 3,
+          "line": 5
+        },
+        {
+          "heading": "B.2 Cấu hình tối thiểu khả dụng (Chế độ Local + Xác thực qua Web)",
+          "level": 3,
+          "line": 14
+        },
+        {
+          "heading": "B.3 Mẫu an toàn khởi đầu cho WhatsApp (Ghép nối + Danh sách trắng + Cổng nhóm chat)",
+          "level": 3,
+          "line": 59
+        },
+        {
+          "heading": "B.4 Mẫu tối thiểu cho Telegram (Đơn tài khoản)",
+          "level": 3,
+          "line": 95
+        },
+        {
+          "heading": "B.5 Mẫu Quản trị Công cụ (Tool Governance)",
+          "level": 3,
+          "line": 117
+        },
+        {
+          "heading": "B.6 Mẫu Lưu trữ Bền vững & Bộ nhớ",
+          "level": 3,
+          "line": 149
+        },
+        {
+          "heading": "B.7 Mẫu Tệp Kỹ năng (SKILL.md)",
+          "level": 3,
+          "line": 183
+        },
+        {
+          "heading": "B.8 Hướng dẫn sử dụng & Khuyến nghị nghiệm thu",
+          "level": 3,
+          "line": 212
+        },
+        {
+          "heading": "B.9 Bảng ánh xạ di trú các trường cấu hình lịch sử",
+          "level": 3,
+          "line": 220
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 10
+      }
+    },
+    {
+      "path": "appendix/env_check.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 71,
+      "nonEmptyLines": 63,
+      "sections": [
+        {
+          "heading": "Phụ lục H: Công cụ tự kiểm tra môi trường (Env Check)",
+          "level": 2,
+          "line": 1
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 1
+      }
+    },
+    {
+      "path": "appendix/glossary.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 48,
+      "nonEmptyLines": 41,
+      "sections": [
+        {
+          "heading": "Phụ lục A: Bảng thuật ngữ (Glossary)",
+          "level": 2,
+          "line": 1
+        },
+        {
+          "heading": "A.1 Thuật ngữ cốt lõi",
+          "level": 3,
+          "line": 5
+        },
+        {
+          "heading": "A.2 Thuật ngữ Kênh & Vận hành (Channels & Ops)",
+          "level": 3,
+          "line": 26
+        },
+        {
+          "heading": "A.3 Thuật ngữ Mở rộng & Tích hợp (Extensions & Integration)",
+          "level": 3,
+          "line": 38
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 4
+      }
+    },
+    {
+      "path": "appendix/naming_history.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 10,
+      "nonEmptyLines": 6,
+      "sections": [
+        {
+          "heading": "Phụ lục I: Lịch sử tiến hóa tên gọi OpenClaw",
+          "level": 2,
+          "line": 1
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 1
+      }
+    },
+    {
+      "path": "appendix/reading_list.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 64,
+      "nonEmptyLines": 51,
+      "sections": [
+        {
+          "heading": "Phụ lục G: Danh mục tài liệu đọc thêm & Tham khảo (Reading List)",
+          "level": 2,
+          "line": 1
+        },
+        {
+          "heading": "G.1 Tài liệu cốt lõi chính thức",
+          "level": 3,
+          "line": 5
+        },
+        {
+          "heading": "G.2 Các bài báo khoa học & Tổng quan lý thuyết",
+          "level": 3,
+          "line": 29
+        },
+        {
+          "heading": "G.3 Sách bổ trợ & Các dự án liên quan",
+          "level": 3,
+          "line": 40
+        },
+        {
+          "heading": "Tài liệu tham khảo theo từng chương",
+          "level": 3,
+          "line": 58
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 5
+      }
+    },
+    {
+      "path": "appendix/troubleshooting_checklist.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 148,
+      "nonEmptyLines": 104,
+      "sections": [
+        {
+          "heading": "Phụ lục C: Bảng kiểm tra xử lý sự cố (Troubleshooting Checklist)",
+          "level": 2,
+          "line": 1
+        },
+        {
+          "heading": "C.1 Kiểm tra lỗi khởi động thất bại",
+          "level": 3,
+          "line": 5
+        },
+        {
+          "heading": "C.2 Kiểm tra sự cố kênh liên lạc",
+          "level": 3,
+          "line": 35
+        },
+        {
+          "heading": "C.3 Kiểm tra sự cố công cụ (Tool)",
+          "level": 3,
+          "line": 59
+        },
+        {
+          "heading": "C.4 Kiểm tra sự cố mô hình AI",
+          "level": 3,
+          "line": 84
+        },
+        {
+          "heading": "C.5 Kiểm tra sự cố Phiên & Bộ nhớ",
+          "level": 3,
+          "line": 109
+        },
+        {
+          "heading": "C.6 Tái kiểm chứng & Quy trình khép kín",
+          "level": 3,
+          "line": 139
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 7
+      }
+    },
+    {
+      "path": "appendix/version_mapping.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 154,
+      "nonEmptyLines": 110,
+      "sections": [
+        {
+          "heading": "Phụ lục F: Bản đồ phiên bản & Hướng dẫn nâng cấp (Version Mapping)",
+          "level": 2,
+          "line": 1
+        },
+        {
+          "heading": "F.1 Cơ chế đánh số phiên bản (Versioning Scheme)",
+          "level": 3,
+          "line": 8
+        },
+        {
+          "heading": "F.2 Tổng quan các họ Schema hiện hành",
+          "level": 3,
+          "line": 23
+        },
+        {
+          "heading": "F.3 Tư duy di trú từ cấu trúc cũ sang cấu trúc mới",
+          "level": 3,
+          "line": 39
+        },
+        {
+          "heading": "F.4 Cảnh báo những tư duy cấu hình đã lỗi thời",
+          "level": 3,
+          "line": 53
+        },
+        {
+          "heading": "F.5 Các câu lệnh di trú khả dụng",
+          "level": 3,
+          "line": 64
+        },
+        {
+          "heading": "Lệnh `openclaw doctor`",
+          "level": 4,
+          "line": 66
+        },
+        {
+          "heading": "Lệnh `openclaw config`",
+          "level": 4,
+          "line": 76
+        },
+        {
+          "heading": "Lệnh `openclaw secrets`",
+          "level": 4,
+          "line": 88
+        },
+        {
+          "heading": "F.6 Quy trình nâng cấp khuyến nghị",
+          "level": 3,
+          "line": 100
+        },
+        {
+          "heading": "Các bước thực hiện nhanh:",
+          "level": 4,
+          "line": 104
+        },
+        {
+          "heading": "Quy trình hoàn tác khẩn cấp (Rollback):",
+          "level": 4,
+          "line": 127
+        },
+        {
+          "heading": "F.7 Các hạng mục ưu tiên kiểm tra lại sau khi nâng cấp",
+          "level": 3,
+          "line": 135
+        },
+        {
+          "heading": "F.8 Tóm tắt phụ lục",
+          "level": 3,
+          "line": 143
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 14
+      }
+    },
+    {
+      "path": "appendix/volatile_facts.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 16,
+      "nonEmptyLines": 13,
+      "sections": [
+        {
+          "heading": "Phụ lục J: Bảng đối soát các dữ kiện biến động nhanh (Volatile Facts)",
+          "level": 2,
+          "line": 1
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 1
+      }
+    }
+  ]
+}

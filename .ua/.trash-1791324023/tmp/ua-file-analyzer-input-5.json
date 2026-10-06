@@ -1,0 +1,49 @@
+{
+  "projectRoot": "/Users/ngohongthai/Documents/openclaw_guide",
+  "batchFiles": [
+    {
+      "path": "04_config_models/4.1_config_system.md",
+      "language": "markdown",
+      "sizeLines": 108,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "04_config_models/4.2_provider_access.md",
+      "language": "markdown",
+      "sizeLines": 327,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "04_config_models/4.3_model_selection.md",
+      "language": "markdown",
+      "sizeLines": 173,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "04_config_models/4.4_failover.md",
+      "language": "markdown",
+      "sizeLines": 78,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "04_config_models/README.md",
+      "language": "markdown",
+      "sizeLines": 30,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "04_config_models/summary.md",
+      "language": "markdown",
+      "sizeLines": 58,
+      "fileCategory": "docs"
+    }
+  ],
+  "batchImportData": {
+    "04_config_models/4.1_config_system.md": [],
+    "04_config_models/4.2_provider_access.md": [],
+    "04_config_models/4.3_model_selection.md": [],
+    "04_config_models/4.4_failover.md": [],
+    "04_config_models/README.md": [],
+    "04_config_models/summary.md": []
+  }
+}

@@ -1,0 +1,275 @@
+{
+  "nodes": [
+    {
+      "id": "document:appendix/README.md",
+      "type": "document",
+      "name": "README.md",
+      "filePath": "appendix/README.md",
+      "summary": "Serves as the master index for the appendix section, cataloging and describing reference documents including glossaries, configuration templates, troubleshooting checklists, and CLI guides.",
+      "tags": [
+        "documentation",
+        "entry-point",
+        "appendix",
+        "index",
+        "overview"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "document:appendix/api_reference.md",
+      "type": "document",
+      "name": "api_reference.md",
+      "filePath": "appendix/api_reference.md",
+      "summary": "Provides an entry-point quick reference for OpenClaw API and SDK integration, control plane documentation links, frontline CLI diagnostic commands, and WebSocket protocol guidance.",
+      "tags": [
+        "documentation",
+        "api-reference",
+        "sdk",
+        "websocket",
+        "diagnostics"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "document:appendix/command_cheatsheet.md",
+      "type": "document",
+      "name": "command_cheatsheet.md",
+      "filePath": "appendix/command_cheatsheet.md",
+      "summary": "Comprehensive CLI reference manual organizing OpenClaw commands across service operations, models, channels, plugins, skills, sandbox environments, and chat slash commands.",
+      "tags": [
+        "documentation",
+        "cli",
+        "cheatsheet",
+        "operations",
+        "troubleshooting"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "document:appendix/config_templates.md",
+      "type": "document",
+      "name": "config_templates.md",
+      "filePath": "appendix/config_templates.md",
+      "summary": "Collection of standardized JSON5 configuration templates for OpenClaw Gateway spanning minimal local setups, channel integrations (WhatsApp, Telegram), tool governance, storage, and SKILL.md specs.",
+      "tags": [
+        "configuration",
+        "templates",
+        "gateway",
+        "json5",
+        "governance"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "document:appendix/env_check.md",
+      "type": "document",
+      "name": "env_check.md",
+      "filePath": "appendix/env_check.md",
+      "summary": "Diagnostic bash script and guide to verify core runtime prerequisites, including Node.js version constraints, Docker availability, and outbound network connectivity to model providers.",
+      "tags": [
+        "diagnostics",
+        "environment",
+        "prerequisites",
+        "script",
+        "verification"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "document:appendix/glossary.md",
+      "type": "document",
+      "name": "glossary.md",
+      "filePath": "appendix/glossary.md",
+      "summary": "Defines core terminology and concepts for OpenClaw, categorized into foundational agent loop concepts, channel operations, and protocol/plugin extension architectures.",
+      "tags": [
+        "documentation",
+        "glossary",
+        "terminology",
+        "concepts",
+        "architecture"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "document:appendix/naming_history.md",
+      "type": "document",
+      "name": "naming_history.md",
+      "filePath": "appendix/naming_history.md",
+      "summary": "Documents verifiable naming milestones and origins of the OpenClaw project and its continuous development led by Peter Steinberger.",
+      "tags": [
+        "documentation",
+        "history",
+        "milestones",
+        "project-origin"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "document:appendix/reading_list.md",
+      "type": "document",
+      "name": "reading_list.md",
+      "filePath": "appendix/reading_list.md",
+      "summary": "Curated bibliography compiling official OpenClaw documentation, foundational academic papers on autonomous LLM agents (ReAct, Toolformer), and related open-source ecosystems.",
+      "tags": [
+        "documentation",
+        "bibliography",
+        "research-papers",
+        "learning",
+        "references"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "document:appendix/troubleshooting_checklist.md",
+      "type": "document",
+      "name": "troubleshooting_checklist.md",
+      "filePath": "appendix/troubleshooting_checklist.md",
+      "summary": "Systematic step-by-step diagnostic checklist covering startup failures, channel issues, tool policy denials, AI model errors, and session memory faults.",
+      "tags": [
+        "troubleshooting",
+        "diagnostics",
+        "checklist",
+        "debugging",
+        "operations"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "document:appendix/version_mapping.md",
+      "type": "document",
+      "name": "version_mapping.md",
+      "filePath": "appendix/version_mapping.md",
+      "summary": "Guides safe upgrades and schema migrations across OpenClaw CalVer releases, detailing changes in authentication profiles, agent defaults, channel policies, and diagnostic commands.",
+      "tags": [
+        "documentation",
+        "versioning",
+        "migration",
+        "calver",
+        "schema"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "document:appendix/volatile_facts.md",
+      "type": "document",
+      "name": "volatile_facts.md",
+      "filePath": "appendix/volatile_facts.md",
+      "summary": "Auditing ledger tracking rapidly changing facts such as supported Node.js version ranges, AI model releases, pricing tiers, and protocol specifications with TTL expiration dates.",
+      "tags": [
+        "documentation",
+        "audit",
+        "compatibility",
+        "models",
+        "specifications"
+      ],
+      "complexity": "simple"
+    }
+  ],
+  "edges": [
+    {
+      "source": "document:appendix/README.md",
+      "target": "document:appendix/glossary.md",
+      "type": "documents",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:appendix/README.md",
+      "target": "document:appendix/config_templates.md",
+      "type": "documents",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:appendix/README.md",
+      "target": "document:appendix/troubleshooting_checklist.md",
+      "type": "documents",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:appendix/README.md",
+      "target": "document:appendix/api_reference.md",
+      "type": "documents",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:appendix/README.md",
+      "target": "document:appendix/command_cheatsheet.md",
+      "type": "documents",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:appendix/README.md",
+      "target": "document:appendix/version_mapping.md",
+      "type": "documents",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:appendix/README.md",
+      "target": "document:appendix/reading_list.md",
+      "type": "documents",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:appendix/README.md",
+      "target": "document:appendix/env_check.md",
+      "type": "documents",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:appendix/README.md",
+      "target": "document:appendix/naming_history.md",
+      "type": "documents",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:appendix/README.md",
+      "target": "document:appendix/volatile_facts.md",
+      "type": "documents",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:appendix/env_check.md",
+      "target": "document:appendix/volatile_facts.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:appendix/troubleshooting_checklist.md",
+      "target": "document:appendix/command_cheatsheet.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:appendix/config_templates.md",
+      "target": "document:appendix/version_mapping.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:appendix/api_reference.md",
+      "target": "document:appendix/command_cheatsheet.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:appendix/troubleshooting_checklist.md",
+      "target": "document:appendix/env_check.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    }
+  ]
+}

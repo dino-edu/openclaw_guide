@@ -1,0 +1,111 @@
+{
+  "nodes": [
+    {
+      "id": "document:15_troubleshooting_trees/README.md",
+      "type": "document",
+      "name": "README.md",
+      "filePath": "15_troubleshooting_trees/README.md",
+      "summary": "Introduces Chapter 15 and outlines the directory structure for systematic troubleshooting decision trees, high-concurrency diagnostic paths, and operational best practices.",
+      "tags": [
+        "documentation",
+        "troubleshooting",
+        "decision-trees",
+        "overview",
+        "entry-point"
+      ],
+      "complexity": "simple",
+      "languageNotes": "Serves as the chapter roadmap linking to layered troubleshooting trees, high-concurrency diagnosis, and appendix checklists."
+    },
+    {
+      "id": "document:15_troubleshooting_trees/15.1_diagnostic_decision_trees.md",
+      "type": "document",
+      "name": "15.1_diagnostic_decision_trees.md",
+      "filePath": "15_troubleshooting_trees/15.1_diagnostic_decision_trees.md",
+      "summary": "Establishes a 6-tier diagnostic decision tree framework covering startup, messaging gateway, model invocation, tool execution, session/memory, and performance degradation, guided by evidence chain hypothesis elimination.",
+      "tags": [
+        "troubleshooting",
+        "decision-trees",
+        "diagnostics",
+        "documentation",
+        "operations"
+      ],
+      "complexity": "complex",
+      "languageNotes": "Details Mermaid-based binary triage decision trees for 6 distinct architectural layers, pairing each branch with specific CLI verification commands."
+    },
+    {
+      "id": "document:15_troubleshooting_trees/15.2_high_concurrency_diagnosis.md",
+      "type": "document",
+      "name": "15.2_high_concurrency_diagnosis.md",
+      "filePath": "15_troubleshooting_trees/15.2_high_concurrency_diagnosis.md",
+      "summary": "Provides diagnostic decision trees and mitigation strategies for high-concurrency production incidents, addressing HTTP 429 rate limiting, authentication expiration, token budget exhaustion, queue overflows, and cascading system failures.",
+      "tags": [
+        "troubleshooting",
+        "high-concurrency",
+        "rate-limiting",
+        "optimization",
+        "documentation"
+      ],
+      "complexity": "complex",
+      "languageNotes": "Covers five targeted diagnostic routes, real-world post-mortems, circuit breaking, token rate limits, and exponential backoff retry policies."
+    },
+    {
+      "id": "document:15_troubleshooting_trees/summary.md",
+      "type": "document",
+      "name": "summary.md",
+      "filePath": "15_troubleshooting_trees/summary.md",
+      "summary": "Summarizes the key concepts of Chapter 15, emphasizing binary triage, proactive health checks via openclaw doctor, high-concurrency circuit breakers, and scheduled operational auditing.",
+      "tags": [
+        "summary",
+        "troubleshooting",
+        "best-practices",
+        "documentation"
+      ],
+      "complexity": "simple",
+      "languageNotes": "Recaps binary triage rules, openclaw doctor --deep diagnostic routines, and operational health metrics before pointing to Chapter 16."
+    }
+  ],
+  "edges": [
+    {
+      "source": "document:15_troubleshooting_trees/README.md",
+      "target": "document:15_troubleshooting_trees/15.1_diagnostic_decision_trees.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:15_troubleshooting_trees/README.md",
+      "target": "document:15_troubleshooting_trees/15.2_high_concurrency_diagnosis.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:15_troubleshooting_trees/README.md",
+      "target": "document:15_troubleshooting_trees/summary.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:15_troubleshooting_trees/summary.md",
+      "target": "document:15_troubleshooting_trees/15.1_diagnostic_decision_trees.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:15_troubleshooting_trees/summary.md",
+      "target": "document:15_troubleshooting_trees/15.2_high_concurrency_diagnosis.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:15_troubleshooting_trees/15.2_high_concurrency_diagnosis.md",
+      "target": "document:15_troubleshooting_trees/15.1_diagnostic_decision_trees.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    }
+  ]
+}

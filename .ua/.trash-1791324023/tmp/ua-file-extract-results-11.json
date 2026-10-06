@@ -1,0 +1,357 @@
+{
+  "scriptCompleted": true,
+  "filesAnalyzed": 8,
+  "filesSkipped": [],
+  "filesUnreadable": [],
+  "analysisOutcomes": {
+    "structure": {
+      "succeeded": 8,
+      "failed": 0
+    },
+    "callGraph": {
+      "succeeded": 0,
+      "failed": 0,
+      "skipped": 8
+    }
+  },
+  "results": [
+    {
+      "path": "10_agent_loop/10.1_request_lifecycle.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 97,
+      "nonEmptyLines": 74,
+      "sections": [
+        {
+          "heading": "10.1 Vòng đời luân chuyển yêu cầu & Chẩn đoán theo tầng",
+          "level": 2,
+          "line": 1
+        },
+        {
+          "heading": "10.1.1 Theo vết vòng đời hoàn chỉnh của một tin nhắn",
+          "level": 3,
+          "line": 7
+        },
+        {
+          "heading": "10.1.2 Chẩn đoán phân tầng: Khi phát sinh lỗi thì kiểm tra từ đâu?",
+          "level": 3,
+          "line": 50
+        },
+        {
+          "heading": "10.1.3 Sơ đồ chuỗi tin nhắn End-to-End (Khung nhìn toàn cục)",
+          "level": 3,
+          "line": 69
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 4
+      }
+    },
+    {
+      "path": "10_agent_loop/10.2_pi_framework.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 106,
+      "nonEmptyLines": 78,
+      "sections": [
+        {
+          "heading": "10.2 Nền tảng thực thi π & Tích hợp nhúng (Embedded Integration)",
+          "level": 2,
+          "line": 1
+        },
+        {
+          "heading": "10.2.1 Động cơ và Vỏ bọc: Định vị giữa Pi và OpenClaw",
+          "level": 3,
+          "line": 7
+        },
+        {
+          "heading": "10.2.2 Tích hợp nhúng: OpenClaw tiếp quản Pi như thế nào",
+          "level": 3,
+          "line": 19
+        },
+        {
+          "heading": "10.2.3 Cơ chế hướng sự kiện & Vòng lặp Agent Loop",
+          "level": 3,
+          "line": 61
+        },
+        {
+          "heading": "10.2.4 Cơ chế sinh Prompt hệ thống động (Dynamic System Prompt)",
+          "level": 3,
+          "line": 90
+        },
+        {
+          "heading": "10.2.5 Độ bền vững của Runtime: Phân tích cú pháp luồng & Phục hồi lỗi",
+          "level": 3,
+          "line": 96
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 6
+      }
+    },
+    {
+      "path": "10_agent_loop/10.3_entry_queue.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 98,
+      "nonEmptyLines": 67,
+      "sections": [
+        {
+          "heading": "10.3 Cổng vào, xếp hàng & Kiểm soát đồng thời (Concurrency Control)",
+          "level": 2,
+          "line": 1
+        },
+        {
+          "heading": "10.3.1 Chuẩn hóa giao thức: Từ dữ liệu kênh dị thể thành sự kiện thống nhất",
+          "level": 3,
+          "line": 5
+        },
+        {
+          "heading": "10.3.2 Kiểm soát tính bất biến: Chặn đứng thảm họa phát lại (Replay)",
+          "level": 3,
+          "line": 32
+        },
+        {
+          "heading": "10.3.3 Command Queue: Hàng đợi phân làn bằng TypeScript thuần túy",
+          "level": 3,
+          "line": 41
+        },
+        {
+          "heading": "10.3.4 Áp lực ngược (Backpressure) & Timeout: Hạ cấp hệ thống trong tầm kiểm soát",
+          "level": 3,
+          "line": 75
+        },
+        {
+          "heading": "10.3.5 Chẩn đoán chuỗi xử lý dựa trên nhật ký Log",
+          "level": 3,
+          "line": 85
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 6
+      }
+    },
+    {
+      "path": "10_agent_loop/10.4_prompt_assembly.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 139,
+      "nonEmptyLines": 98,
+      "sections": [
+        {
+          "heading": "10.4 Lắp ráp Prompt & Phòng thủ tấn công chèn (Prompt Injection)",
+          "level": 2,
+          "line": 1
+        },
+        {
+          "heading": "10.4.1 Lắp ráp ngữ cảnh có cấu trúc: Bơm phân tầng thay vì nối chuỗi thủ công",
+          "level": 3,
+          "line": 8
+        },
+        {
+          "heading": "10.4.2 Ngân sách ngữ cảnh & Cắt tỉa: Quản trị cửa sổ Token",
+          "level": 3,
+          "line": 40
+        },
+        {
+          "heading": "10.4.3 Lưu đĩa Prompt & Kiểm toán: Biến đầu vào thành bằng chứng có thể đối soát",
+          "level": 3,
+          "line": 69
+        },
+        {
+          "heading": "10.4.4 Phòng thủ tấn công chèn (Prompt Injection): Cách ly nội dung không đáng tin cậy",
+          "level": 3,
+          "line": 95
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 5
+      }
+    },
+    {
+      "path": "10_agent_loop/10.5_tool_execution.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 78,
+      "nonEmptyLines": 52,
+      "sections": [
+        {
+          "heading": "10.5 Thực thi Tool & Bơm ngược kết quả (Result Injection)",
+          "level": 2,
+          "line": 1
+        },
+        {
+          "heading": "10.5.1 Bản chất của công cụ: Hàm có thể gọi kèm chữ ký kiểu dữ liệu (Type Signatures)",
+          "level": 3,
+          "line": 7
+        },
+        {
+          "heading": "10.5.2 Hook before_tool_call: Điểm chặn động ở cấp Plugin",
+          "level": 3,
+          "line": 33
+        },
+        {
+          "heading": "10.5.3 Hệ thống chặn: Bọc lót bằng rào chắn chính sách thay vì phó thác cho prompt",
+          "level": 3,
+          "line": 42
+        },
+        {
+          "heading": "10.5.4 Bơm kết quả & Chống lãng quên: Cắt tỉa kết quả công cụ kích thước lớn",
+          "level": 3,
+          "line": 54
+        },
+        {
+          "heading": "10.5.5 Phương pháp chẩn đoán sự cố: Truy vết dựa trên nhật ký sự kiện",
+          "level": 3,
+          "line": 64
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 6
+      }
+    },
+    {
+      "path": "10_agent_loop/10.6_streaming_retry.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 82,
+      "nonEmptyLines": 53,
+      "sections": [
+        {
+          "heading": "10.6 Luồng xuất (Streaming), Thử lại (Retry) & Kết thúc sớm",
+          "level": 2,
+          "line": 1
+        },
+        {
+          "heading": "10.6.1 Cơ chế nội bộ của xuất dạng luồng: Block Chunker",
+          "level": 3,
+          "line": 5
+        },
+        {
+          "heading": "Ưu tiên phân đoạn & Khả năng nhận biết rào chắn Markdown (Fence-aware)",
+          "level": 4,
+          "line": 12
+        },
+        {
+          "heading": "Thời điểm xả bộ đệm (Buffer Flush)",
+          "level": 4,
+          "line": 24
+        },
+        {
+          "heading": "10.6.2 Ý nghĩa kỹ thuật của xuất dạng luồng: Biến trạng thái trung gian thành sự thật có thể quan sát",
+          "level": 3,
+          "line": 34
+        },
+        {
+          "heading": "10.6.3 Chiến lược thử lại (Retry): Thử lại cấp yêu cầu & Phục hồi cấp lượt thử",
+          "level": 3,
+          "line": 44
+        },
+        {
+          "heading": "10.6.4 Tổng quan cơ chế chuyển đổi dự phòng mô hình (Model Failover)",
+          "level": 3,
+          "line": 57
+        },
+        {
+          "heading": "10.6.5 Chấm dứt sớm (Early Termination) & Ngân sách tài nguyên",
+          "level": 3,
+          "line": 66
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 8
+      }
+    },
+    {
+      "path": "10_agent_loop/README.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 23,
+      "nonEmptyLines": 15,
+      "sections": [
+        {
+          "heading": "Chương 10: Phân tích nhân vòng lặp Agent Loop",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "Mục tiêu học tập của chương",
+          "level": 2,
+          "line": 9
+        },
+        {
+          "heading": "Lời khuyên khi đọc",
+          "level": 2,
+          "line": 21
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 3
+      }
+    },
+    {
+      "path": "10_agent_loop/summary.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 27,
+      "nonEmptyLines": 18,
+      "sections": [
+        {
+          "heading": "10.7 Tóm tắt chương",
+          "level": 2,
+          "line": 1
+        },
+        {
+          "heading": "10.7.1 Các kết luận trọng yếu",
+          "level": 3,
+          "line": 5
+        },
+        {
+          "heading": "10.7.2 Checklist tự kiểm tra",
+          "level": 3,
+          "line": 13
+        },
+        {
+          "heading": "10.7.3 Giới thiệu chương tiếp theo",
+          "level": 3,
+          "line": 20
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 4
+      }
+    }
+  ]
+}

@@ -1,0 +1,56 @@
+{
+  "projectRoot": "/Users/ngohongthai/Documents/openclaw_guide",
+  "batchFiles": [
+    {
+      "path": "09_gateway_protocol/9.1_architecture_overview.md",
+      "language": "markdown",
+      "sizeLines": 86,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "09_gateway_protocol/9.2_control_plane.md",
+      "language": "markdown",
+      "sizeLines": 162,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "09_gateway_protocol/9.3_ws_handshake.md",
+      "language": "markdown",
+      "sizeLines": 119,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "09_gateway_protocol/9.4_event_idempotency.md",
+      "language": "markdown",
+      "sizeLines": 120,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "09_gateway_protocol/9.5_pairing_trust.md",
+      "language": "markdown",
+      "sizeLines": 99,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "09_gateway_protocol/README.md",
+      "language": "markdown",
+      "sizeLines": 24,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "09_gateway_protocol/summary.md",
+      "language": "markdown",
+      "sizeLines": 25,
+      "fileCategory": "docs"
+    }
+  ],
+  "batchImportData": {
+    "09_gateway_protocol/9.1_architecture_overview.md": [],
+    "09_gateway_protocol/9.2_control_plane.md": [],
+    "09_gateway_protocol/9.3_ws_handshake.md": [],
+    "09_gateway_protocol/9.4_event_idempotency.md": [],
+    "09_gateway_protocol/9.5_pairing_trust.md": [],
+    "09_gateway_protocol/README.md": [],
+    "09_gateway_protocol/summary.md": []
+  }
+}

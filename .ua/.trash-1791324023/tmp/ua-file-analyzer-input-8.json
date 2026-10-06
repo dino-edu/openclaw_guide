@@ -1,0 +1,49 @@
+{
+  "projectRoot": "/Users/ngohongthai/Documents/openclaw_guide",
+  "batchFiles": [
+    {
+      "path": "07_multi_agent/7.1_telegram_whatsapp.md",
+      "language": "markdown",
+      "sizeLines": 168,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "07_multi_agent/7.2_lark_integration.md",
+      "language": "markdown",
+      "sizeLines": 131,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "07_multi_agent/7.3_routing_basics.md",
+      "language": "markdown",
+      "sizeLines": 233,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "07_multi_agent/7.4_collaboration_patterns.md",
+      "language": "markdown",
+      "sizeLines": 226,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "07_multi_agent/README.md",
+      "language": "markdown",
+      "sizeLines": 25,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "07_multi_agent/summary.md",
+      "language": "markdown",
+      "sizeLines": 27,
+      "fileCategory": "docs"
+    }
+  ],
+  "batchImportData": {
+    "07_multi_agent/7.1_telegram_whatsapp.md": [],
+    "07_multi_agent/7.2_lark_integration.md": [],
+    "07_multi_agent/7.3_routing_basics.md": [],
+    "07_multi_agent/7.4_collaboration_patterns.md": [],
+    "07_multi_agent/README.md": [],
+    "07_multi_agent/summary.md": []
+  }
+}

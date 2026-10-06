@@ -1,0 +1,42 @@
+{
+  "projectRoot": "/Users/ngohongthai/Documents/openclaw_guide",
+  "batchFiles": [
+    {
+      "path": ".github/workflows/auto-release.yml",
+      "language": "yaml",
+      "sizeLines": 184,
+      "fileCategory": "infra"
+    },
+    {
+      "path": ".github/workflows/ci.yaml",
+      "language": "yaml",
+      "sizeLines": 128,
+      "fileCategory": "infra"
+    },
+    {
+      "path": ".github/workflows/dependabot-automerge.yml",
+      "language": "yaml",
+      "sizeLines": 31,
+      "fileCategory": "infra"
+    },
+    {
+      "path": ".github/workflows/identity-guard.yaml",
+      "language": "yaml",
+      "sizeLines": 137,
+      "fileCategory": "infra"
+    },
+    {
+      "path": ".github/workflows/preview-pdf.yml",
+      "language": "yaml",
+      "sizeLines": 241,
+      "fileCategory": "infra"
+    }
+  ],
+  "batchImportData": {
+    ".github/workflows/auto-release.yml": [],
+    ".github/workflows/ci.yaml": [],
+    ".github/workflows/dependabot-automerge.yml": [],
+    ".github/workflows/identity-guard.yaml": [],
+    ".github/workflows/preview-pdf.yml": []
+  }
+}
