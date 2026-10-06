@@ -1,27 +1,27 @@
-## 7.5 本章小结
+## 7.5 Tóm tắt chương
 
-第七章把多渠道接入与多智能体协作落到确定性边界：渠道策略收敛触发面，渠道绑定与路由绑定收敛所有权，工具策略与沙箱约束收敛可执行能力，并通过探针与结构化日志提供可回放排障路径。
+Chương 7 đã đưa việc kết nối đa kênh và đa Agent cộng tác về các ranh giới xác định: Chính sách kênh thu hẹp bề mặt kích hoạt, ràng buộc kênh và ràng buộc định tuyến xác định rõ quyền sở hữu, chính sách công cụ và hộp cát Sandbox kiểm soát năng lực thực thi, kết hợp với các đầu dò và log có cấu trúc để cung cấp lộ trình chẩn đoán có thể phát lại được.
 
-### 7.5.1 关键结论
+### 7.5.1 Các kết luận trọng yếu
 
-1. 路由的工程目标是唯一所有者与可解释理由，并能用日志回放复现。
-2. 渠道治理应从私聊、群聊策略开始，默认以门控与允许列表收敛触发面。
-3. 多账号与绑定用于进一步隔离入口职责并固定高确定性来源，降低误触发与越权风险。
-4. 协作模式应以可审计与可回放为约束，避免在高风险能力上引入不可解释分支。
+1. Mục tiêu kỹ thuật của định tuyến là xác định **một chủ sở hữu duy nhất** kèm lý do có thể giải thích được, và có thể tái hiện qua phát lại nhật ký log.
+2. Quản trị kênh phải bắt đầu từ chính sách Chat riêng và Chat nhóm, mặc định dùng cổng kiểm soát và danh sách cho phép (Allowlist) để thu hẹp bề mặt kích hoạt.
+3. Đa tài khoản và Bindings dùng để phân tách sâu hơn trách nhiệm của từng cổng vào và cố định các nguồn có tính xác định cao, giảm thiểu rủi ro kích hoạt nhầm hoặc vượt quyền.
+4. Các mô hình cộng tác (Sub-agent, Broadcast) bắt buộc phải tuân thủ tính kiểm toán và khả năng phát lại, tránh tạo ra các nhánh xử lý không thể giải thích đối với các năng lực có độ rủi ro cao.
 
-### 7.5.2 读者自检
+### 7.5.2 Checklist tự kiểm tra
 
-- 是否能对任意一条消息回答：由谁接管、依据是什么、失败如何回放？
-- 是否为群聊配置了提及门控与允许列表，并验证其生效？
-- 是否能用 `channels capabilities` 与 `agents list --bindings` 解释一次入口治理结果？
+- [ ] Đối với một tin nhắn bất kỳ, bạn có thể giải thích: Ai tiếp quản xử lý, căn cứ vào đâu, và khi thất bại thì phát lại kiểm tra như thế nào không?
+- [ ] Bạn đã cấu hình điều kiện tag tên (@) và danh sách trắng cho các nhóm chat, đồng thời xác minh tính hiệu lực chưa?
+- [ ] Bạn có thể dùng `channels capabilities` và `agents list --bindings` để giải thích kết quả quản trị của một cổng vào cụ thể không?
 
-### 7.5.3 社区实战启发
+### 7.5.3 Gợi ý ứng dụng thực tế từ cộng đồng
 
-一旦配置了合理的路由网与沙箱策略，多智能体协作能大幅延伸业务边界：
-- **全渠道私人助理**：配置多渠道路由，同时接管任意常用聊天软件的收件箱，无论从何处发消息，都能获得一致的服务体验。
-- **多角色流水线生产**：配置一组专家智能体协作——如“大纲规划员”、“内容扩写员”及“排版校对员”各司其职，上下游自动流转素材草稿。
-- **7×24 智能分诊台**：将入口流量依据来意自动派发至不同节点。高风险的系统操作交给强力推理模型加白名单沙箱，普通闲聊路由至低成本模型。
+Khi đã thiết lập mạng lưới định tuyến hợp lý và chính sách Sandbox an toàn, sự cộng tác của đa Agent sẽ mở rộng đáng kể ranh giới nghiệp vụ:
+- **Trợ lý cá nhân đa kênh toàn năng**: Cấu hình định tuyến tiếp quản đồng thời hòm thư Telegram, WhatsApp, Lark; bất kể bạn nhắn tin từ đâu, trải nghiệm phục vụ đều đồng nhất và liền mạch.
+- **Dây chuyền sản xuất nội dung đa vai trò**: Cấu hình một nhóm Agent chuyên gia cộng tác — ví dụ "Chuyên viên lập dàn ý", "Biên tập viên mở rộng nội dung" và "Biên tập viên hiệu đính", dữ liệu bản thảo tự động luân chuyển giữa các khâu.
+- **Bàn phân loại thông minh 24/7**: Phân luồng lưu lượng truy cập dựa trên ý định của người dùng. Các thao tác kỹ thuật rủi ro cao được giao cho mô hình suy luận mạnh kèm Sandbox danh sách trắng, các cuộc hội thoại thông thường định tuyến sang mô hình chi phí thấp.
 
-### 7.5.4 下一章预告
+### 7.5.4 Giới thiệu chương tiếp theo
 
-[第八章](../08_automation_ops/README.md)进入自动化与运维：自检、定时作业、远程访问与安全基线，目标是把系统从“能用”推进到“可长期运行”。
+[Chương 8](../08_automation_ops/README.md) sẽ đưa chúng ta vào Tự động hóa và Vận hành (Ops): Tự kiểm tra, Tác vụ định kỳ (Cron jobs), Cơ chế nhịp tim (Heartbeat), Truy cập từ xa và Đường cơ sở bảo mật, hướng tới mục tiêu đưa hệ thống từ "chạy được" lên mức "vận hành bền vững lâu dài".

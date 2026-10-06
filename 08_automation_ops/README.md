@@ -1,34 +1,32 @@
-# 第八章 自动化与运维安全实践
+# Chương 8: Thực tiễn tự động hóa & An toàn vận hành
 
-前面几章，你已经学会了在本地开发、多渠道接入、配置管理。现在，你的 OpenClaw 要升级到“后台 7×24 无人值守”的状态。这一步看似简单（加一个 cron？），但实际上涉及架构级别的决策：哪些任务该在哪个时间点执行，失败时如何自愈，以及如何确保数月后出了问题还能快速定位根因。
+Ở các chương trước, bạn đã học cách phát triển trên máy cục bộ, kết nối đa kênh và quản lý cấu hình. Bây giờ, OpenClaw của bạn sẽ được nâng cấp lên trạng thái "Chạy ngầm 24/7 không cần người trực". Bước đi này thoạt nhìn rất đơn giản (chỉ cần thêm một cron job?), nhưng thực tế lại liên quan đến các quyết định ở cấp kiến trúc: Tác vụ nào nên chạy vào thời điểm nào, khi thất bại thì tự phục hồi ra sao, và làm thế nào để nhiều tháng sau khi xảy ra sự cố, bạn vẫn có thể nhanh chóng định vị nguyên nhân gốc rễ.
 
-本章的核心哲学是“在架构层面内建治理能力，而不是在业务逻辑里硬编码补丁”。这意味着：
+Triết lý cốt lõi của chương này là "Tích hợp sẵn năng lực quản trị ở cấp kiến trúc, thay vì vá víu cứng nhắc bằng mã lệnh nghiệp vụ". Điều này có nghĩa là:
 
-**一个简洁的决策框架胜过一百行 if-else。** 本章首先帮你定位 Cron（精确时间点任务）、Heartbeat（周期性巡检）、Task Flow（可追踪任务流）与 Standing Orders（长期指令）的选择逻辑；后续小节重点展开 Hooks、Cron、Heartbeat、远程访问与安全基线，Task Flow 和 Standing Orders 作为选型边界引用官方专题文档。
+**Một khung ra quyết định súc tích giá trị hơn cả trăm dòng lệnh if-else.** Chương này trước hết giúp bạn định vị logic lựa chọn giữa Cron (tác vụ mốc thời gian chính xác), Heartbeat (tuần tra định kỳ gom cụm), Task Flow (luồng tác vụ có thể theo vết) và Standing Orders (chỉ thị thường trực); các mục tiếp theo sẽ đi sâu vào Hooks, Cron, Heartbeat, Truy cập từ xa và Đường cơ sở bảo mật.
 
-长期可运行需要在架构层面将以下五个维度的治理能力内建：
+Để hệ thống có thể vận hành bền bỉ lâu dài, bạn cần tích hợp sẵn năng lực quản trị trên 5 chiều kích:
 
-- **可插入的生命周期治理（Hooks）**：在 Gateway、session、agent、message 等具体事件上解耦并注入自定义的过滤、审计与管控逻辑，避免业务代码的无限膨胀。
-- **可调度的无人值守作业（Cron Jobs）**：对于“每天下午 3 点生成报告”“每周一发送摘要”这类**精确时间**要求的任务，用 Cron 定义，确保幂等与失败自愈。
-- **周期性感知与主动通知（Heartbeat）**：对于“每 30 分钟检查一遍邮箱，有紧急邮件就通知我”这类**按需触发**的巡检，用 Heartbeat 机制，让一轮轮询批量处理多个检查项，而不是每个检查项都写独立的 Cron。
-- **可审计的安全基线体系**：摆脱单纯“事后翻查日志”的窘境，建立基于“事件、主体、动作、证据”四元组的结构化审计模型，让系统的每一次关键写入都可溯源、可复盘。
-- **可运维的远程访问控制**：在“可达”与“不暴露”之间找到平衡，通过零信任架构重塑远程入口，建立强身份认证、最小权限分配与可快速吊销的应急响应通道。
+- **Quản trị vòng đời có thể cắm ghép (Hooks)**: Tách rời và bơm logic lọc, kiểm toán và kiểm soát tùy biến vào các sự kiện cụ thể của Gateway, session, agent, message, tránh để mã nguồn nghiệp vụ phình to vô hạn.
+- **Tác vụ không người trực có thể lên lịch (Cron Jobs)**: Đối với các tác vụ yêu cầu **mốc thời gian chính xác** như "Đúng 15h hàng ngày sinh báo cáo", "Đúng 8h sáng thứ Hai gửi bản tóm tắt", hãy định nghĩa bằng Cron để đảm bảo tính bất biến (Idempotency) và khả năng tự phục hồi khi thất bại.
+- **Cơ chế nhịp tim nhận biết định kỳ & Chủ động thông báo (Heartbeat)**: Đối với các tác vụ tuần tra **kích hoạt theo nhu cầu** như "Cứ 30 phút kiểm tra hòm thư một lần, có thư khẩn cấp thì báo cho tôi", hãy dùng Heartbeat để một vòng quét xử lý hàng loạt nhiều mục kiểm tra, thay vì viết hàng chục cron job rời rạc.
+- **Hệ thống đường cơ sở an toàn có thể kiểm toán**: Thoát khỏi tình cảnh bế tắc "chỉ biết lục tìm log sau khi sự cố đã xong", thiết lập mô hình kiểm toán có cấu trúc dựa trên bộ tứ "Sự kiện, Chủ thể, Hành động, Bằng chứng", giúp mọi thao tác ghi quan trọng đều có thể truy nguyên và phát lại.
+- **Kiểm soát truy cập từ xa an toàn**: Tìm điểm cân bằng hoàn hảo giữa "Có thể kết nối đến" và "Không bị lộ ra ngoài Internet", tái định hình cổng vào từ xa qua kiến trúc Zero Trust, thiết lập xác thực mạnh mẽ, cấp quyền tối thiểu và kênh ứng cứu khẩn cấp có thể thu hồi tức thì.
 
-## 本章内容导读
+## Mục lục hướng dẫn chương
 
-本章包括以下几个小节：
+- **[8.1 Vòng đời Hooks & Các điểm xen sự kiện (Interception Points)](8.1_hooks.md)**: Bơm logic tùy biến vào các mắt xích then chốt trong chuỗi thực thi, tách rời mã nghiệp vụ và mã hệ thống.
+- **[8.2 Thiết kế tác vụ định kỳ & Chiến lược lên lịch (Cron jobs)](8.2_cron_jobs.md)**: Thiết kế các cron job chạy nền có tính bất biến và trong tầm kiểm soát, giúp hệ thống tự động hóa ngay cả khi không có người trực.
+- **[8.3 Cơ chế Heartbeat: Tuần tra định kỳ & Chủ động thông báo](8.3_heartbeat.md)**: Mổ xẻ chi tiết thành phần điều phối nhịp tim tích hợp sẵn của OpenClaw, từ bộ định thời timer đến vòng đời chuyển phát tin nhắn.
+- **[8.4 Truy cập từ xa: SSH, Tunnel nội mạng & Zero Trust](8.4_remote_access.md)**: Cân bằng giữa "khả năng kết nối" và "không để lộ cổng", xây dựng kênh truy cập từ xa an toàn tuyệt đối.
+- **[8.5 Đường cơ sở bảo mật (Security Baseline) & Quy trình kiểm toán](8.5_security_baseline.md)**: Thiết lập cơ chế kiểm toán có cấu trúc, giúp mọi thao tác quan trọng đều có thể truy vết và phát lại.
+- **[8.6 Tóm tắt chương](summary.md)**: Các kết luận trọng yếu và bài tập tự kiểm tra.
 
-- **[8.1 Hooks 生命周期与事件切入点](8.1_hooks.md)**：在核心执行链路的关键节点注入自定义逻辑，解耦业务代码与系统代码。
-- **[8.2 定时作业设计与调度策略](8.2_cron_jobs.md)**：设计幂等、可控的后台定时任务，让系统在无人值守时也能自动执行。
-- **[8.3 Heartbeat 心跳机制：周期性巡检与主动通知](8.3_heartbeat.md)**：深入解析 OpenClaw 内建的心跳调度原语，从定时器到消息投递的完整生命周期。
-- **[8.4 远程访问：SSH、内网穿透与零信任](8.4_remote_access.md)**：在“可达”与“不暴露”之间找到平衡，建立安全的远程访问通道。
-- **[8.5 安全基线与审计流程](8.5_security_baseline.md)**：建立结构化审计机制，让系统的每一次关键写入都可溯源、可复盘。
-- **[8.6 本章小结](summary.md)**：关键结论与读者自检。
+## Mục tiêu học tập
 
-## 学习目标
-
-完成本章的阅读后，你将能够：
-1. **设计生命周期**：在关键节点注入自定义逻辑，扩展系统能力。
-2. **实现自动化**：设计安全、可预期的定时作业。
-3. **保障安全**：通过零信任原则管理远程访问。
-4. **建立审计**：让系统的每一个重要操作都可追溯。
+Sau khi hoàn thành chương này, bạn sẽ có thể:
+1. **Thiết kế vòng đời**: Bơm logic tùy biến vào các mắt xích trọng yếu, mở rộng năng lực hệ thống một cách tao nhã.
+2. **Hiện thực hóa tự động hóa**: Thiết kế các tác vụ định kỳ an toàn, có thể dự đoán được.
+3. **Bảo đảm an toàn bảo mật**: Quản lý truy cập từ xa theo nguyên tắc Zero Trust.
+4. **Thiết lập quy trình kiểm toán**: Giúp mọi thao tác quan trọng trong hệ thống đều có thể truy vết minh bạch.

@@ -1,34 +1,34 @@
-## 8.6 本章小结
+## 8.6 Tóm tắt chương
 
-本章围绕自动化运维与安全基线，给出了把 OpenClaw 从“能跑”推进到“可控、可审计、可回放”的关键做法。
+Chương 8 xoay quanh tự động hóa vận hành và đường cơ sở an toàn, cung cấp các phương pháp mấu chốt để đưa OpenClaw từ mức "chạy được" tiến lên "trong tầm kiểm soát, có thể kiểm toán và có thể phát lại".
 
-### 8.6.1 关键结论
+### 8.6.1 Các kết luận trọng yếu
 
-1. Hooks 用于解耦治理逻辑：输入、执行、输出三段各有边界，Hook 自身必须受约束（超时、降级、幂等）。
-2. 定时作业以幂等与防重入为底线：重复执行不产生重复副作用，失败按类型分流。
-3. Heartbeat 以“有事才通知”为原则：一个心跳轮次批量处理多个巡检项，`HEARTBEAT_OK` 协议避免信息轰炸，活跃时段和可见性控制进一步降噪。
-4. 远程访问以最小暴露为原则：管理面默认不公开，凭据可快速吊销，访问链路可审计。
-5. 安全基线以分层边界与可验证完整流程为核心：用 `doctor`、`status --deep`、`logs --follow --json` 把排障从经验活变成可验证流程。
+1. **Hooks dùng để tách rời logic quản trị**: Tầng đầu vào, tầng thực thi và tầng đầu ra đều có ranh giới rõ ràng; bản thân Hook bắt buộc phải chịu các ràng buộc nghiêm ngặt (Timeout, Hạ cấp, Tính bất biến).
+2. **Tác vụ định kỳ (Cron) lấy tính bất biến và chống chạy đè làm ranh giới tối thiểu**: Chạy lặp lại không sinh tác dụng phụ trùng lặp, thất bại được phân luồng xử lý theo đúng loại lỗi.
+3. **Heartbeat vận hành theo nguyên tắc "Có việc mới thông báo"**: Một vòng nhịp tim quét hàng loạt nhiều mục tuần tra, giao thức `HEARTBEAT_OK` triệt tiêu tình trạng dội bom tin nhắn, khung giờ hoạt động (Active Hours) và kiểm soát hiển thị giúp giảm nhiễu tối đa.
+4. **Truy cập từ xa tuân thủ nguyên tắc tối thiểu hóa phơi nhiễm**: Mặt phẳng quản trị mặc định không mở ra Internet công cộng, thông tin xác thực có thể thu hồi tức thì, toàn bộ chuỗi truy cập có thể kiểm toán.
+5. **Đường cơ sở an toàn lấy phòng thủ phân tầng và quy trình kiểm chứng làm cốt lõi**: Sử dụng `doctor`, `status --deep`, `logs --follow --json` để biến việc xử lý sự cố từ dựa vào kinh nghiệm cảm tính thành một quy trình có thể kiểm chứng được.
 
-### 8.6.2 读者自检
+### 8.6.2 Checklist tự kiểm tra
 
-- 是否为关键 Hook 定义了超时与降级策略，并验证其在异常流量下的表现？
-- 定时作业是否具备幂等键与防重入机制，失败后是否有明确的分流与升级路径？
-- Heartbeat 清单（HEARTBEAT.md）是否足够精简？是否配置了 activeHours 避免深夜骚扰？
-- 远程管理入口是否具备可快速吊销的强身份认证，访问链路是否可审计？
+- [ ] Bạn đã định nghĩa chiến lược timeout và hạ cấp cho các Hook trọng yếu, đồng thời xác minh hành vi của chúng dưới lưu lượng bất thường chưa?
+- [ ] Các tác vụ định kỳ đã có khóa bất biến (Idempotency Key) và cơ chế chống chạy đè chưa? Khi gặp lỗi đã có lộ trình phân luồng và leo thang rõ ràng chưa?
+- [ ] Danh sách kiểm tra `HEARTBEAT.md` đã đủ tinh gọn chưa? Bạn đã cấu hình `activeHours` để tránh làm phiền vào đêm khuya chưa?
+- [ ] Cổng quản trị từ xa đã được trang bị xác thực mạnh có thể thu hồi tức thì và chuỗi truy cập có thể kiểm toán minh bạch chưa?
 
-### 8.6.3 社区实战启发
+### 8.6.3 Gợi ý ứng dụng thực tế từ cộng đồng
 
-只有加上自动化运维，系统才能真正“无人值守”地运转，比如：
-- **具备自愈能力的服务器控制节点**：利用内部 Hooks 监听 OpenClaw 命令、会话与 Gateway 生命周期事件，或用插件决策 Hooks 在特定链路上拦截/审批；底层容器和宿主机异常仍应由系统监控、cron 或外部运维工具触发处理。
-- **预测市场自动跟单**：利用高频定时作业调度，轮询指定的市场数据 API，在满足策略指标时自动调用执行器完成相关逻辑。
-- **低代码平台编排驱动**：将 OpenClaw 的能力封为 Webhook，结合诸如 n8n 等低代码工作流引擎，驱动整条企业级自动化流水线。
+Chỉ khi được trang bị năng lực tự động hóa vận hành, hệ thống mới thực sự vận hành "không cần người trực 24/7", ví dụ:
+- **Node điều khiển máy chủ có khả năng tự phục hồi**: Sử dụng Hooks nội bộ để giám sát các sự kiện vòng đời của lệnh, phiên và Gateway, hoặc dùng Plugin Decision Hook để chặn/phê duyệt thao tác; các sự cố của container và OS bên dưới được kích hoạt xử lý qua giám sát hệ thống hoặc cron.
+- **Tự động theo dõi thị trường tài chính**: Sử dụng tác vụ định kỳ tần suất cao để thăm dò API dữ liệu thị trường, tự động kích hoạt bộ thực thi khi các chỉ số chạm ngưỡng chiến lược.
+- **Điều phối liên kết nền tảng Low-code**: Đóng gói năng lực OpenClaw thành Webhook, kết hợp với các workflow engine như n8n để vận hành cả một chuỗi tự động hóa cấp doanh nghiệp.
 
-### 8.6.4 下一章预告
+### 8.6.4 Giới thiệu chương tiếp theo
 
-[第九章](../09_gateway_protocol/README.md)进入网关控制平面与协议机制，解释控制面如何承载会话、事件与幂等语义。
+[Chương 9](../09_gateway_protocol/README.md) sẽ đưa chúng ta vào Mặt phẳng điều khiển Gateway và Cơ chế giao thức: Giải thích cách thức Control Plane gánh vác các ngữ nghĩa về phiên, sự kiện và tính bất biến.
 
 ---
 
 > [!NOTE]
-> 发现错误或有改进建议？欢迎提交 [Issue](https://github.com/yeasy/openclaw_guide/issues) 或 [PR](https://github.com/yeasy/openclaw_guide/pulls)。
+> Phát hiện lỗi hoặc có đề xuất cải tiến? Hoan nghênh bạn gửi [Issue](https://github.com/yeasy/openclaw_guide/issues) hoặc [Pull Request](https://github.com/yeasy/openclaw_guide/pulls).
