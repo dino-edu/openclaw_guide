@@ -37,6 +37,7 @@ SKIP_DIRS = {
     "mcp_cache",
     "node_modules",
     "output",
+    "docs",
 }
 
 FENCE_RE = re.compile(r"^[ \t]{0,3}(?:>[ \t]?)*(`{3,}|~{3,})(.*)$")

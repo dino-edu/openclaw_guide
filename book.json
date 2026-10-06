@@ -1,12 +1,12 @@
 {
-  "title": "《OpenClaw 入门到精通》",
-  "description": "OpenClaw 入门到精通",
-  "language": "zh-hans",
+  "title": "OpenClaw: Từ Nhập Môn Đến Tinh Thông",
+  "description": "Cẩm nang hướng dẫn toàn diện OpenClaw từ nhập môn đến tinh thông",
+  "language": "vi",
   "author": "yeasy",
   "root": ".",
   "links": {
     "sidebar": {
-      "OpenClaw 官方文档": "https://docs.openclaw.ai/",
+      "Tài liệu chính thức OpenClaw": "https://docs.openclaw.ai/",
       "OpenClaw GitHub": "https://github.com/openclaw/openclaw"
     }
   },

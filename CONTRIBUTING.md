@@ -1,58 +1,57 @@
-# 贡献指南：Contributing
+# Hướng dẫn đóng góp: Contributing
 
-感谢您对《OpenClaw 从入门到精通》的关注与支持！我们欢迎一切形式的贡献：勘误、修补、新增内容或补充样例。在提交贡献之前，请仔细阅读以下指南，以确保您的 PR 或 Issue 能被顺利合并。
+Cảm ơn bạn đã quan tâm và đồng hành cùng dự án cẩm nang *OpenClaw: Từ Nhập Môn Đến Tinh Thông*! Chúng tôi luôn hoan nghênh mọi đóng góp: sửa lỗi chính tả, cải thiện câu từ, bổ sung nội dung thực tiễn hoặc hoàn thiện các cấu hình mẫu. Trước khi gửi đóng góp, vui lòng đọc kỹ hướng dẫn dưới đây để bảo đảm Pull Request (PR) hoặc Issue của bạn được xử lý thuận tiện nhất.
 
-## 一、行为准则
+## 1. Quy chuẩn ứng xử
 
-本项目遵循开放与包容的社区准则。参与贡献即表明您同意对所有人员和见解保持尊重与友善，并以建设性的方式进行沟通。
+Dự án tuân thủ các quy tắc cộng đồng cởi mở và văn minh. Khi tham gia đóng góp, bạn đồng thuận giữ tinh thần tôn trọng, thân thiện và giao tiếp trên tinh thần xây dựng với tất cả các thành viên.
 
-## 二、文档结构与排版规范
+## 2. Cấu trúc tài liệu & Quy chuẩn định dạng
 
-本项目是一本严格遵循格式要求的 Markdown 技术书籍，所有的文档必须符合下文列出的格式与排版规范。在提交 PR 之前，请务必执行校验脚本。
+Tài liệu được xây dựng dưới dạng sách kỹ thuật Markdown với các yêu cầu định dạng chặt chẽ. Toàn bộ nội dung cần tuân thủ quy chuẩn dưới đây. Trước khi tạo PR, hãy chạy các script kiểm tra cục bộ.
 
-### 1. 运行本地检查
+### 2.1 Chạy kiểm tra tại máy cục bộ
 
-在提交之前，建议在本地运行以下检查：
+Trước khi commit/push, hãy chạy các lệnh kiểm tra sau:
 
-- **项目规则验证**：运行 `python3 check_project_rules.py` 检查本书的标题、链接、图片、摘要和格式约定。
-- **mdPress 构建验证**：运行 `mdpress build --format site --output _site` 确保本地编译正常，没有内部死链。
+- **Kiểm tra quy tắc dự án**: Chạy `python3 check_project_rules.py` để rà soát tiêu đề, liên kết, hình ảnh và cú pháp code block.
+- **Kiểm tra toàn bộ test suite**: Chạy `pytest` để xác minh tính toàn vẹn của dự án.
+- **Kiểm tra build mdPress**: Chạy `mdpress build --format site --output _site` để đảm bảo tài liệu biên dịch mượt mà và không có liên kết chết.
 
-### 2. Markdown 格式约定
+### 2.2 Quy ước định dạng Markdown
 
-- **JSON 与 JSON5**：
-  - 如果代码块为标准的 JSON（可用于 `JSON.parse()` 的无注释、强引号、无尾逗号），请使用 ````json````。
-  - **重要约定**：但凡配置示例中带有 `// 注释`，**请使用 ````jsonc````** 标签（JSON with Comments）。`json5` 标签在当前默认高亮链路中不稳定，容易引发渲染或高亮告警。如果配置示例使用了无引号 Key 或尾部逗号等 JSON5 特性，建议改写为标准 JSON 并将注释放在 `jsonc` 代码块中。
-- **引用格式**：
-  - 请使用标准的 Markdown 语法。对于中英文混排，在需要加粗或使用内联代码时，标记边界周围不需要手动加空格（脚本会自动检查是否合规，例如：`支持**核心流**操作` 优于 `支持 **核心流** 操作`，后者可能有空格解析问题）。
-- **图片与回退**：
-  - 作者强烈推荐使用 Mermaid 写流程与架构图 ````mermaid````。在书写 Mermaid 标签下的 node 内容时，严格使用英文半角的双引号 `"`.
-  - 图片与其说明标签之间必须有一个空行，例如：
+- **Khối JSON và JSONC**:
+  - Với các đoạn mã JSON chuẩn (không chứa chú thích, có thể parse bằng `JSON.parse()`), hãy dùng thẻ ````json````.
+  - **Quy ước quan trọng**: Nếu đoạn mã cấu hình có chứa `// chú thích`, **bắt buộc dùng thẻ ````jsonc````** (JSON with Comments). Tránh dùng `json5` vì chuỗi highlight mặc định có thể không ổn định.
+- **Sơ đồ Mermaid**:
+  - Khuyến khích sử dụng cú pháp ````mermaid```` để vẽ sơ đồ luồng và kiến trúc. Các nhãn văn bản bên trong nút Mermaid phải được bọc trong dấu ngoặc kép nửa góc chuẩn Anh `"`.
+- **Hình ảnh và chú thích**:
+  - Giữa hình ảnh và thẻ chú thích phải có một dòng trống:
     ```text
-    ![描述](cover.jpg)
+    ![Mô tả ảnh](cover.jpg)
 
-    图 X-Y：说明文字
+    Hình X-Y: Nội dung chú thích hình ảnh
     ```
-- **标点符号**：
-  - 书籍正文部分必须使用中文全角引号 `“ ”` 和 `‘ ’`，代码块内严格保持使用半角引号。
 
-## 三、PR 提交规范
+## 3. Quy chuẩn gửi Pull Request (PR)
 
-1. **分支管理**：尽量在功能分支上提交改动（如 `fix-typo-ch10` 或 `feature-new-config-guide`）。
-2. **提交信息规范 (Commit Messages)**：请用动名词开头并尽量准确描述，例如：
-   - Fix: 修正 10.1 章节的断链与错别字
-   - Doc: 添加对 v2026.3.0 版本迁移的说明附录
-3. **PR 描述**：
-   - 如果是修复已有 Issue，在 PR 描述带上 `Fixes #XXX`。
-   - 对格式调整的 PR，请说明是否已经在本地通过 `mdpress build --format site --output _site` 的校验。
+1. **Quản lý nhánh**: Nên tạo nhánh tính năng/sửa đổi riêng biệt (ví dụ: `fix-typo-ch10` hoặc `feature-new-config-guide`).
+2. **Quy chuẩn thông điệp Commit (Conventional Commits)**:
+   - `fix: sửa lỗi liên kết và chính tả trong chương 10.1`
+   - `docs: bổ sung hướng dẫn di trú phiên bản mới trong phụ lục`
+   - `feat: bổ sung kịch bản cấu hình Telegram mới`
+3. **Mô tả PR**:
+   - Nêu rõ vấn đề được giải quyết. Nếu liên quan đến Issue đã có, hãy ghi `Fixes #XXX`.
+   - Xác nhận đã vượt qua các bài kiểm tra tự động tại local (`pytest`, `check_project_rules.py`).
 
-## 四、贡献范围与方向
+## 4. Các định hướng đóng góp ưu tiên
 
-如果您想贡献但不知从何入手，欢迎关注以下范围：
+Nếu bạn muốn đóng góp nhưng chưa biết bắt đầu từ đâu, dưới đây là những phần luôn được đón nhận:
 
-- **错别字/语病修改**：直接提交 PR（不要太零碎，最好按功能或章节打包）。
-- **排障案例与配置示例**：非常欢迎为第 13 章的附录添加排查案例，尤其是关于 Telegram/WhatsApp 的配置填坑项。
-- **缺失内容的补充**：如果某节只有 TODO 或者不完整，可以提出大纲通过 Issue 沟通后编写。
+- **Cải thiện hành văn / sửa lỗi chính tả**: Đóng góp bản dịch mượt mà hơn, tự nhiên hơn cho cộng đồng người Việt.
+- **Bổ sung tình huống thực tế & kinh nghiệm xử lý lỗi**: Bổ sung kinh nghiệm triển khai thực chiến tại Chương 13 và 15, đặc biệt là các kinh nghiệm kết nối bot Telegram/WhatsApp/Lark.
+- **Cập nhật dữ kiện công nghệ mới**: Góp ý bổ sung các thay đổi khi OpenClaw ra mắt phiên bản mới.
 
 ---
 
-感谢您协助我们让这本书变得更好！遇到问题请随时在 [Issue 面板](https://github.com/yeasy/openclaw_guide/issues) 发起讨论。
+Cảm ơn bạn đã chung tay giúp cuốn cẩm nang ngày càng hoàn thiện và hữu ích hơn cho cộng đồng công nghệ Việt Nam! Nếu có bất kỳ câu hỏi nào, hãy mở thảo luận tại [Khu vực Issue](https://github.com/yeasy/openclaw_guide/issues).

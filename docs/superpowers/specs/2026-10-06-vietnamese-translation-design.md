@@ -77,7 +77,7 @@ Kho tài liệu hiện tại gồm 112 file Markdown (~12.500 dòng, hơn 410.00
 - `09_gateway_protocol/`: Kiến trúc Gateway, 5 mặt phẳng (Planes), kết nối WebSocket, tính bất biến, ghép nối kênh (6 file).
 - `10_agent_loop/`: Nhân vòng lặp Agent Loop, nền tảng pi, hàng đợi & concurrency, ráp Prompt & chống injection, stream & retry (7 file).
 - `11_reliability_security/`: Đa khóa xác thực, cooldown hạ nhiệt lỗi, fallback model, guardrails an toàn (5 file).
-- `12_extension_engineering/`: Kiến trúc plugin, viết custom tool cô lập副作用, kiểm thử & debug, blueprint vận hành (6 file).
+- `12_extension_engineering/`: Kiến trúc plugin, viết custom tool cô lập tác dụng phụ (side effects), kiểm thử & debug, blueprint vận hành (6 file).
 
 ### Chặng 4: Phần IV - Thực chiến, Tối ưu & Phụ lục (Chương 13 – 16 + Appendix, 35 file)
 - `13_practical_cases/`: Case study Bot Lark/Slack, Bot CSKH, kịch bản ngành dọc (5 file).

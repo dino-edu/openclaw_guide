@@ -46,3 +46,4 @@ check_consistency.py
 check_structure.py
 format_scanner.py
 .fuse_hidden*
+.superpowers/

@@ -2,115 +2,115 @@
 
 <div align="center">
 
-# 《OpenClaw 入门到精通》
+# OpenClaw: Từ Nhập Môn Đến Tinh Thông
 
 [![License: CC BY 4.0](https://img.shields.io/badge/License-CC%20BY%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by/4.0/)
 [![GitHub stars](https://img.shields.io/github/stars/yeasy/openclaw_guide?style=social)](https://github.com/yeasy/openclaw_guide)
 [![Release](https://img.shields.io/github/release/yeasy/openclaw_guide.svg)](https://github.com/yeasy/openclaw_guide/releases)
-[![Online Reading](https://img.shields.io/badge/在线阅读-GitBook-brightgreen)](https://yeasy.gitbook.io/openclaw_guide)
-[![PDF](https://img.shields.io/badge/PDF-下载-orange)](https://github.com/yeasy/openclaw_guide/releases/latest)
+[![Online Reading](https://img.shields.io/badge/Đọc_trực_tuyến-GitBook-brightgreen)](https://yeasy.gitbook.io/openclaw_guide)
+[![PDF](https://img.shields.io/badge/PDF-Tải_về-orange)](https://github.com/yeasy/openclaw_guide/releases/latest)
 
-> **[OpenClaw](https://github.com/openclaw/openclaw) 是一款开源本地优先的个人 AI 助手系统**，由 Peter Steinberger 创建。本书结合最佳实践，提供从入门到应用的全流程指南，并深度解构其底层的运行机制和实现原理。
+> **[OpenClaw](https://github.com/openclaw/openclaw) là hệ thống trợ lý AI cá nhân mã nguồn mở ưu tiên chạy cục bộ (local-first)**, được sáng lập bởi Peter Steinberger. Cuốn sách này kết hợp các thực tiễn tốt nhất, cung cấp cẩm nang toàn diện từ bước nhập môn đến ứng dụng chuyên sâu, đồng thời mổ xẻ chi tiết cơ chế vận hành và nguyên lý hiện thực hóa ở tầng lõi.
 
 <img src="cover.jpg" alt="OpenClaw Guide Cover" width="300" />
 
 </div>
 
-## 本书特色
+## Điểm nổi bật của cuốn sách
 
-- **实战导向**：从零到一搭建最小闭环，提供可直接复用的配置模板
-- **机制剖析**：深入解析 Gateway、Agent Loop、工具系统、会话与记忆等核心机制
-- **生产就绪**：聚焦可靠性、安全加固、运行监控与故障排查
+- **Thực chiến định hướng**: Xây dựng vòng lặp tối thiểu từ con số 0, cung cấp các mẫu cấu hình có thể tái sử dụng ngay.
+- **Mổ xẻ cơ chế lõi**: Phân tích chuyên sâu Gateway, Agent Loop, hệ thống công cụ (Tools), phiên làm việc (Sessions) và bộ nhớ (Memory).
+- **Sẵn sàng cho sản xuất (Production-ready)**: Tập trung vào độ tin cậy, gia cố an toàn bảo mật, giám sát vận hành và quy trình chẩn đoán sự cố.
 
-## 目标读者与前置要求
+## Đối tượng độc giả & Kiến thức nền tảng
 
-- **目标读者**：对 AI 智能体感兴趣的个人用户、AI 应用开发者、大模型落地工程师、系统架构师等。
-- **前置基础**：阅读本书需要了解基本的后端开发常识（如 Node.js 或 Python 基础），并对大语言模型 (LLM) 和 AI 智能体有初步概念。可参考 [《零基础学 AI》](https://yeasy.gitbook.io/ai_beginner_guide) 和 [《智能体 AI 权威指南》](https://yeasy.gitbook.io/agentic_ai_guide) 建立基础。
+- **Đối tượng độc giả**: Người dùng cá nhân đam mê AI Agent, nhà phát triển ứng dụng AI, kỹ sư triển khai mô hình lớn (LLM Engineers), kiến trúc sư giải pháp hệ thống.
+- **Kiến thức yêu cầu**: Độc giả cần nắm vững kiến thức phát triển phần mềm cơ bản (như Node.js hoặc Python) và hiểu các khái niệm sơ khởi về mô hình ngôn ngữ lớn (LLM) và AI Agent. Bạn có thể tham khảo [《Học AI từ số 0》](https://yeasy.gitbook.io/ai_beginner_guide) và [《Cẩm nang chuẩn mực về Agentic AI》](https://yeasy.gitbook.io/agentic_ai_guide) để củng cố nền tảng.
 
-## 全书结构
+## Cấu trúc tổng thể của cuốn sách
 
-| 部分 | 章节 | 内容概要 |
-|------|------|----------|
-| 第一部分：基础入门 | 第 1–4 章 | 全景概览、环境搭建、首次会话、配置与模型接入 |
-| 第二部分：进阶使用 | 第 5–8 章 | 工具与技能、上下文记忆、多智能体协作、自动化运维 |
-| 第三部分：实现原理与工程落地 | 第 9–12 章 | Gateway 协议、Agent Loop 内核、可靠性机制、插件扩展 |
-| 第四部分：实战与优化深度指南 | 第 13–16 章 | 实战案例、性能与成本优化、故障排查决策树、主流 AI 生态集成 |
-| 附录 | — | 术语表、配置模板与样例、故障排查检查单、API 与 SDK 参考、命令速查手册、版本映射与升级指南、延伸阅读与参考资料、环境自检工具、命名演进史、快变事实核验表 |
+| Phần | Chương | Nội dung tóm lược |
+|------|--------|-------------------|
+| Phần I: Cơ sở nhập môn | Chương 1–4 | Toàn cảnh kiến trúc, dựng môi trường, phiên chat đầu tiên, cấu hình & tích hợp mô hình |
+| Phần II: Tính năng nâng cao | Chương 5–8 | Hệ thống Tool & Skill, ngữ cảnh & bộ nhớ, đa Agent cộng tác, tự động hóa vận hành |
+| Phần III: Nguyên lý lõi & Kỹ thuật triển khai | Chương 9–12 | Giao thức Gateway, nhân Agent Loop, cơ chế tin cậy & an toàn, mở rộng Plugin |
+| Phần IV: Thực chiến & Tối ưu chuyên sâu | Chương 13–16 | Tình huống thực tế, tối ưu hiệu năng & chi phí, cây quyết định sự cố, tích hợp hệ sinh thái AI |
+| Phụ lục | — | Bảng thuật ngữ, cấu hình mẫu, checklist sự cố, API/SDK reference, tra cứu lệnh nhanh, bản đồ phiên bản, tài liệu đọc thêm, script tự kiểm tra môi trường, lịch sử đổi tên, bảng đối soát dữ kiện nhanh |
 
-## 阅读方式
+## Phương thức đọc sách
 
-### 在线阅读
+### Đọc trực tuyến
 
-- [GitBook 在线版本](https://yeasy.gitbook.io/openclaw_guide/)
-- [从第一章开始阅读](01_overview/README.md)
+- [Phiên bản trực tuyến trên GitBook](https://yeasy.gitbook.io/openclaw_guide/)
+- [Bắt đầu đọc từ Chương 1](01_overview/README.md)
 
-### 下载离线版本
+### Tải bản đọc ngoại tuyến (Offline)
 
-本书提供 PDF 版本供离线阅读，可前往 [GitHub Releases](https://github.com/yeasy/openclaw_guide/releases/latest) 页面下载最新版本。
+Sách hỗ trợ định dạng PDF để đọc offline. Bạn có thể truy cập trang [GitHub Releases](https://github.com/yeasy/openclaw_guide/releases/latest) để tải phiên bản mới nhất.
 
-### 本地预览
+### Xem trước tại máy cục bộ (Local Preview)
 
-本仓库当前使用 mdPress 构建，本地预览建议直接使用仓库脚本：
+Kho tài liệu sử dụng mdPress để xây dựng. Để xem trước trên máy local:
 
 ```bash
 brew tap yeasy/tap && brew install mdpress
 mdpress serve
 ```
 
-如果你偏好其他 Markdown 预览器，也可以作为辅助工具使用，但它们并不是本仓库的标准构建链。
+Nếu bạn quen dùng các công cụ xem trước Markdown khác, hoàn toàn có thể sử dụng hỗ trợ, tuy nhiên mdPress vẫn là chuỗi build chuẩn của kho sách.
 
-## 五分钟快速上手
+## 5 phút bắt đầu nhanh
 
-还没用过 OpenClaw？只需三步即可体验：
+Chưa từng dùng OpenClaw? Chỉ với 3 bước đơn giản:
 
-1. **安装**（1 分钟）：`curl -fsSL https://openclaw.ai/install.sh | bash -s -- --no-onboard`（受管控环境建议先下载并审阅脚本，或采用官方手动/npm 安装路径）
-2. **初始化**（2 分钟）：`openclaw onboard --install-daemon` → 按向导完成首次配置并安装后台服务
-3. **对话**（2 分钟）：运行 `openclaw dashboard`，在浏览器打开的 Control UI 聊天页输入“你好”，收到 AI 回复即成功 🎉
+1. **Cài đặt** (1 phút): `curl -fsSL https://openclaw.ai/install.sh | bash -s -- --no-onboard` (trong môi trường mạng doanh nghiệp khuyên dùng tải về kiểm tra script trước hoặc cài đặt thủ công qua npm).
+2. **Khởi tạo** (2 phút): `openclaw onboard --install-daemon` → Làm theo hướng dẫn trên màn hình để cấu hình ban đầu và cài đặt dịch vụ nền.
+3. **Trò chuyện** (2 phút): Chạy `openclaw dashboard`, mở giao diện Control UI trên trình duyệt, gõ "Xin chào", nhận được phản hồi từ AI là bạn đã thành công 🎉
 
-详见 [第二章：环境搭建](02_setup/README.md) 和 [第三章：首次会话](03_minimal_loop/README.md)。
+Xem chi tiết tại [Chương 2: Chuẩn bị môi trường & Cài đặt](02_setup/README.md) và [Chương 3: Phiên hội thoại đầu tiên](03_minimal_loop/README.md).
 
-## 学习路线图
+## Lộ trình học tập theo vai trò
 
-不同角色的读者可以按需选择阅读路径：
+Mỗi nhóm độc giả có thể chủ động chọn lộ trình phù hợp với mục tiêu:
 
 ```mermaid
 graph LR
-    START["开始"] --> Q{"你的角色？"}
-    Q -->|"个人玩家<br/>想快速用起来"| P1["第1章 概览<br/>→ 第2-3章 安装与首次会话<br/>→ 第5章 工具与技能<br/>→ 第7章 渠道接入"]
-    Q -->|"应用开发者<br/>想深度定制"| P2["第1-4章 基础<br/>→ 第5-7章 工具/记忆/多智能体<br/>→ 第12章 插件扩展"]
-    Q -->|"企业运维<br/>想生产部署"| P3["第2-3章 快速上手<br/>→ 第8章 自动化运维<br/>→ 第11章 可靠性与安全<br/>→ 第14-15章 优化与排障"]
-    Q -->|"架构师<br/>想理解原理"| P4["第1章 概览<br/>→ 第9-10章 Gateway与Agent Loop<br/>→ 第12章 扩展工程<br/>→ 第16章 AI生态集成"]
-    P1 --> ADV["进阶：按需选读其余章节"]
+    START["Bắt đầu"] --> Q{"Vai trò của bạn?"}
+    Q -->|"Người dùng cá nhân<br/>Muốn dùng ngay"| P1["Chương 1 Tổng quan<br/>→ Chương 2-3 Cài đặt & Chat đầu tiên<br/>→ Chương 5 Tool & Skill<br/>→ Chương 7 Kết nối kênh"]
+    Q -->|"Lập trình viên ứng dụng<br/>Muốn tùy biến sâu"| P2["Chương 1-4 Nền tảng<br/>→ Chương 5-7 Tool/Memory/Đa Agent<br/>→ Chương 12 Mở rộng plugin"]
+    Q -->|"Kỹ sư DevOps / Ops<br/>Muốn triển khai sản xuất"| P3["Chương 2-3 Bắt đầu nhanh<br/>→ Chương 8 Tự động hóa vận hành<br/>→ Chương 11 An toàn & Tin cậy<br/>→ Chương 14-15 Tối ưu & Chẩn đoán"]
+    Q -->|"Kiến trúc sư hệ thống<br/>Muốn hiểu sâu nguyên lý"| P4["Chương 1 Tổng quan<br/>→ Chương 9-10 Gateway & Agent Loop<br/>→ Chương 12 Kỹ thuật mở rộng<br/>→ Chương 16 Tích hợp hệ sinh thái"]
+    P1 --> ADV["Nâng cao: Chọn đọc các chương khác theo nhu cầu"]
     P2 --> ADV
     P3 --> ADV
     P4 --> ADV
 ```
 
-| 角色 | 核心章节 | 预计用时 | 学完能做什么 |
-|------|---------|---------|------------|
-| 个人玩家 | 1→2→3→5→7 | 3-4 小时 | 搭建个人 WhatsApp/Telegram AI 助手 |
-| 应用开发者 | 1-7→12 | 8-10 小时 | 开发自定义工具、技能和多智能体系统 |
-| 企业运维 | 2→3→8→11→14→15 | 6-8 小时 | 生产环境部署、安全加固与故障排查 |
-| 架构师 | 1→9→10→12→16 | 6-8 小时 | 理解底层原理，设计企业级智能体架构 |
+| Vai trò | Các chương trọng tâm | Thời lượng ước tính | Mục tiêu đạt được |
+|---------|---------------------|----------------------|-------------------|
+| Người dùng cá nhân | 1→2→3→5→7 | 3–4 giờ | Dựng trợ lý AI cá nhân trên WhatsApp/Telegram |
+| Lập trình viên ứng dụng | 1–7→12 | 8–10 giờ | Viết Tool, Skill tùy biến và hệ thống đa Agent |
+| Kỹ sư vận hành (DevOps) | 2→3→8→11→14→15 | 6–8 giờ | Triển khai môi trường sản xuất, gia cố bảo mật và xử lý sự cố |
+| Kiến trúc sư hệ thống | 1→9→10→12→16 | 6–8 giờ | Nắm vững tầng lõi, thiết kế kiến trúc Agent cấp doanh nghiệp |
 
-## 推荐阅读
+## Tài liệu khuyến nghị tham khảo thêm
 
-本书是 AI 技术丛书的一部分。以下书籍与本书形成互补：
+Cuốn sách này nằm trong bộ sách công nghệ AI. Các cuốn sách dưới đây bổ trợ mật thiết cho nội dung sách:
 
-| 书名 | 与本书的关系 |
-|------|------------|
-| [《零基础学 AI》](https://yeasy.gitbook.io/ai_beginner_guide) | AI 零基础入门，适合缺乏 AI 背景的读者 |
-| [《大模型提示词工程指南》](https://yeasy.gitbook.io/prompt_engineering_guide) | 智能体提示词设计的理论基础 |
-| [《大模型上下文工程权威指南》](https://yeasy.gitbook.io/context_engineering_guide) | 智能体的上下文管理与记忆架构设计 |
-| [《Claude 技术指南》](https://yeasy.gitbook.io/claude_guide) | Claude 的 MCP 协议、工具使用与 Agentic Coding |
-| [《智能体 AI 权威指南》](https://yeasy.gitbook.io/agentic_ai_guide) | 智能体的通用架构与多智能体协作模式 |
-| [《大模型安全权威指南》](https://yeasy.gitbook.io/ai_security_guide) | 智能体系统的安全设计与攻防实践 |
-| [《大模型原理与架构》](https://yeasy.gitbook.io/llm_internals) | 深入理解大语言模型底层逻辑与架构 |
+| Tên sách | Mối liên hệ với cuốn sách này |
+|----------|-------------------------------|
+| [《Học AI từ số 0》](https://yeasy.gitbook.io/ai_beginner_guide) | Nhập môn AI từ nền tảng, phù hợp cho người mới bắt đầu |
+| [《Cẩm nang Prompt Engineering cho mô hình lớn》](https://yeasy.gitbook.io/prompt_engineering_guide) | Cơ sở lý thuyết về thiết kế prompt cho Agent |
+| [《Cẩm nang thẩm quyền về Context Engineering》](https://yeasy.gitbook.io/context_engineering_guide) | Quản lý ngữ cảnh và kiến trúc bộ nhớ cho AI Agent |
+| [《Hướng dẫn kỹ thuật Claude》](https://yeasy.gitbook.io/claude_guide) | Giao thức MCP của Claude, sử dụng Tool và Agentic Coding |
+| [《Cẩm nang thẩm quyền về Agentic AI》](https://yeasy.gitbook.io/agentic_ai_guide) | Kiến trúc tổng quát của Agent và mô hình đa Agent cộng tác |
+| [《Cẩm nang thẩm quyền về Bảo mật Mô hình lớn》](https://yeasy.gitbook.io/ai_security_guide) | Thiết kế an toàn và phòng thủ tấn công cho hệ thống Agent |
+| [《Nguyên lý và Kiến trúc Mô hình lớn》](https://yeasy.gitbook.io/llm_internals) | Hiểu sâu kiến trúc và cơ chế bên dưới của mô hình ngôn ngữ lớn |
 
-## 贡献与反馈
+## Đóng góp & Phản hồi
 
-欢迎提交 [Issue](https://github.com/yeasy/openclaw_guide/issues) 或 [PR](https://github.com/yeasy/openclaw_guide/pulls)，尤其欢迎：错别字修正、失效链接修复、实践案例补充与可复用模板。
+Mọi đóng góp thông qua [Issue](https://github.com/yeasy/openclaw_guide/issues) hoặc [Pull Request](https://github.com/yeasy/openclaw_guide/pulls) đều rất được hoan nghênh. Đặc biệt là: sửa lỗi chính tả, khắc phục link hỏng, bổ sung tình huống thực tế và chia sẻ template cấu hình.
 
-## 许可证
+## Giấy phép bản quyền
 
-本书采用 [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/) 授权。
+Cuốn sách được phát hành dưới giấy phép [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/).

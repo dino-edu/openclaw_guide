@@ -39,7 +39,7 @@ import unittest
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
-SKIP_DIRS = {".git", "_book", "node_modules", ".obsidian", "output", ".agent", "_site"}
+SKIP_DIRS = {".git", "_book", "node_modules", ".obsidian", "output", ".agent", "_site", "docs"}
 
 PUA_FIRST = 0xE000
 PUA = "\\ue000-\\uf8ff"
@@ -111,6 +111,8 @@ def markdown_files(root: Path = ROOT):
 
 def unspaced(text: str):
     """RULE 1 violations."""
+    if not re.search(f"[{CJK}]", text):
+        return
     for number, line in prose_lines(text):
         for match in ADJACENT.finditer(mask(line)):
             yield number, match.group(0), line.strip()[:100]
@@ -118,11 +120,12 @@ def unspaced(text: str):
 
 def half_width_parens(text: str):
     """RULE 2 violations."""
+    if not re.search(f"[{CJK}]", text):
+        return
     for number, line in prose_lines(text):
         for match in HALF_PAREN.finditer(mask(line)):
             if re.search(f"[{CJK}]", match.group(0)):
                 yield number, match.group(0)[:40], line.strip()[:100]
-
 
 class CjkTypographyTests(unittest.TestCase):
     def test_cjk_and_latin_stay_apart(self) -> None:

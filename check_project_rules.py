@@ -19,6 +19,7 @@ SKIP_DIRS = {
     "_site",
     "dist",
     "node_modules",
+    "docs",
 }
 LINK_RE = re.compile(r"(!?)\[[^\]]*\]\(([^)\s]+(?:\s+\"[^\"]*\")?)\)")
 FENCE_RE = re.compile(r"^\s*(`{3,}|~{3,})")
