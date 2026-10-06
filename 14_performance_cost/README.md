@@ -1,13 +1,13 @@
-# 第十四章 性能与成本优化实战
+# Chương 14: Thực chiến tối ưu hiệu năng & Chi phí
 
-本章从 Token 消耗、推理延迟、用量观测与预算治理四个维度，提供基于 OpenClaw 内置观测能力、provider 限额和外部治理机制的系统化优化方案，帮助在保持服务质量的前提下有效降低运行成本。
+Chương này tiếp cận từ 4 chiều kích: Tiêu thụ Token, Độ trễ suy luận, Quan sát lượng dùng và Quản trị ngân sách, cung cấp phương án tối ưu hóa có hệ thống dựa trên năng lực quan sát tích hợp sẵn của OpenClaw, hạn mức của nhà cung cấp và các cơ chế quản trị ngoài, giúp bạn cắt giảm chi phí vận hành hiệu quả trong khi vẫn duy trì chất lượng dịch vụ cao nhất.
 
-## 本章内容导读
+## Mục lục hướng dẫn chương
 
-本章包括以下几个小节，从 Token 消耗、形式化延迟与成本模型、实时预算控制、到规模化部署模板，提供系统化的性能与成本优化方案：
+Chương này bao gồm các mục sau:
 
-- **[14.1 Token 与上下文成本](14.1_token_context_cost.md)**：Token 流向分析、系统提示精简、上下文压缩策略（Compaction 与 Pruning）、模型分层选择。
-- **[14.2 延迟与吞吐优化](14.2_latency_throughput.md)**：形式化延迟模型分解（LLM + 工具 + 沙箱 + 编排），多智能体场景的延迟累积，结构化成本模型。
-- **[14.3 OpenClaw 的用量观测与预算控制](14.3_usage_budget.md)**：内置用量命令（`/status`、`/usage cost`、`/compact`）、Dashboard Usage 视图，以及 provider 限额、外部监控或插件治理。
-- **[14.4 不同规模部署预算模板](14.4_budget_templates.md)**：个人、中等、企业三种场景的成本要素分解与预算规划模板。
-- **[14.5 本章小结](summary.md)**：关键结论与优化检查清单。
+- **[14.1 Chi phí Token & Chi phí ngữ cảnh (Context Cost)](14.1_token_context_cost.md)**: Phân tích luồng tiêu thụ Token, tinh gọn Prompt hệ thống, chiến lược nén và cắt tỉa ngữ cảnh (Compaction & Pruning), phân tầng lựa chọn mô hình.
+- **[14.2 Tối ưu hóa độ trễ (Latency) & Băng thông xử lý (Throughput)](14.2_latency_throughput.md)**: Mô hình hóa phân rã độ trễ (LLM + Công cụ + Sandbox + Điều phối), sự tích lũy độ trễ trong hệ thống đa Agent, mô hình chi phí có cấu trúc.
+- **[14.3 Quan sát mức tiêu thụ & Kiểm soát ngân sách trên OpenClaw](14.3_usage_budget.md)**: Các lệnh đo lường tích hợp (`/status`, `/usage cost`, `/compact`), khung nhìn Dashboard Usage, cùng cơ chế hạn mức provider, giám sát ngoài và plugin quản trị.
+- **[14.4 Mẫu ngân sách triển khai cho các quy mô khác nhau](14.4_budget_templates.md)**: Bóc tách các yếu tố chi phí và bảng dự toán ngân sách cho 3 quy mô: Cá nhân, Nhóm vừa, và Doanh nghiệp.
+- **[14.5 Tóm tắt chương](summary.md)**: Các kết luận trọng yếu và checklist tối ưu hóa.

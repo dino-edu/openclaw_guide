@@ -1,13 +1,11 @@
-# 第十五章 故障诊断决策
+# Chương 15: Cây quyết định chẩn đoán sự cố
 
-本章通过决策树的形式，提供系统化的故障排查流程，帮助快速定位和解决 OpenClaw 运行中的常见问题。
+Chương này thông qua hình thức các cây quyết định (Decision Trees) để cung cấp quy trình chẩn đoán sự cố có hệ thống, giúp bạn nhanh chóng định vị và giải quyết các vấn đề thường gặp trong quá trình vận hành OpenClaw.
 
-> 快速参考：[附录 C 排障检查清单](../appendix/troubleshooting_checklist.md)提供按故障类型分类的速查表，[附录 E 命令速查表](../appendix/command_cheatsheet.md)列出所有诊断命令的完整语法。
+> Tra cứu nhanh: [Phụ lục C: Bảng kiểm tra xử lý sự cố](../appendix/troubleshooting_checklist.md) cung cấp bảng tra cứu nhanh theo loại sự cố; [Phụ lục E: Sổ tay tra cứu lệnh nhanh](../appendix/command_cheatsheet.md) liệt kê đầy đủ cú pháp của toàn bộ câu lệnh chẩn đoán.
 
-## 本章内容导读
+## Mục lục hướng dẫn chương
 
-本章包括以下几个小节：
-
-- **[15.1 常见故障的分层诊断](15.1_diagnostic_decision_trees.md)**：覆盖启动失败、消息接收、模型调用、工具执行、会话内存和性能退化六大类故障的分层诊断路径。
-- **[15.2 高并发故障诊断决策树与优化指南](15.2_high_concurrency_diagnosis.md)**：针对并发限制、连接池耗尽、队列堆积和级联故障等高并发特有场景。
-- **[15.3 本章小结](summary.md)**：诊断最佳实践与自检清单。
+- **[15.1 Chẩn đoán sự cố thường gặp theo phân tầng](15.1_diagnostic_decision_trees.md)**: Bao phủ lộ trình chẩn đoán phân tầng cho 6 nhóm sự cố lớn: Lỗi khởi động, Tiếp nhận tin nhắn, Gọi mô hình AI, Thực thi công cụ, Bộ nhớ phiên và Suy giảm hiệu năng.
+- **[15.2 Cây quyết định chẩn đoán lỗi tải cao & Hướng dẫn tối ưu](15.2_high_concurrency_diagnosis.md)**: Chuyên sâu cho các kịch bản tải cao: Giới hạn đồng thời, cạn kiệt connection pool, ùn tắc hàng đợi và sự cố đổ vỡ dây chuyền (Cascading failures).
+- **[15.3 Tóm tắt chương](summary.md)**: Các thực hành chẩn đoán tốt nhất và checklist tự kiểm tra.

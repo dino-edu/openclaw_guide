@@ -1,18 +1,18 @@
-## 15.3 本章小结
+## 15.3 Tóm tắt chương
 
-本章以决策树的形式，提供了覆盖启动失败、消息接收、模型调用、工具执行、会话内存和性能退化六大类故障的系统化排查流程。
+Chương 15 thông qua các cây quyết định đã cung cấp quy trình chẩn đoán có hệ thống cho 6 nhóm sự cố lớn: Lỗi khởi động, Tiếp nhận tin nhắn, Gọi mô hình AI, Thực thi công cụ, Bộ nhớ phiên và Suy giảm hiệu năng.
 
-### 要点回顾
+### Điểm lại các ý chính
 
-- **二分法诊断**：每棵决策树都采用“是/否”分支逐步缩小范围，每个分支对应可执行的 CLI 命令，最终导向具体解决方案。
-- **`openclaw doctor` 优先**：`doctor` 是配置校验、迁移与修复入口；`--deep` 主要增加对额外 Gateway 安装和系统服务的扫描，不应把它理解成“所有问题的一键深度探测”。
-- **高并发场景**：并发限制、连接池耗尽、队列堆积和级联故障需要专门的诊断路径，重点关注限流配置与熔断机制。
-- **预防重于修复**：建议每周运行 `openclaw doctor` 与 `openclaw status --all`，每天监控延迟和错误率，每月进行日志与权限审计；`doctor --deep` / `gateway status --deep` 更适合怀疑重复服务或系统级残留时使用。
+- **Chẩn đoán nhị phân (Binary Triage)**: Mỗi cây quyết định đều dùng nhánh Có/Không để từng bước thu hẹp phạm vi, mỗi nhánh gắn liền với một câu lệnh CLI cụ thể và dẫn tới giải pháp dứt điểm.
+- **Ưu tiên `openclaw doctor`**: Lệnh `doctor` là cửa ngõ kiểm tra cấu hình, di trú và sửa chữa; cờ `--deep` bổ sung thêm việc quét các bản cài đặt Gateway phụ và dịch vụ hệ thống.
+- **Kịch bản tải cao**: Giới hạn đồng thời, cạn kiệt connection pool, ùn tắc hàng đợi và sự cố sập dây chuyền đòi hỏi các lộ trình chẩn đoán chuyên sâu, tập trung vào cấu hình rate limit và cơ chế ngắt mạch (Circuit Breaker).
+- **Phòng bệnh hơn chữa bệnh**: Khuyến nghị định kỳ chạy `openclaw doctor` và `openclaw status --all`, theo dõi độ trễ và tỷ lệ lỗi hàng ngày, kiểm toán quyền hạn hàng tháng.
 
-### 下一步
+### Bước tiếp theo
 
-第十六章将介绍与 Claude 生态的深度集成，附录提供命令速查手册和故障排查检查单。
+[Chương 16](../16_claude_ecosystem/README.md) sẽ đi sâu vào việc tích hợp toàn diện với hệ sinh thái AI, và các Phụ lục tiếp theo cung cấp Sổ tay tra cứu lệnh nhanh cùng Bảng kiểm tra xử lý sự cố.
 
 ---
 
-> **发现错误或有改进建议？** 欢迎提交 [Issue](https://github.com/yeasy/openclaw_guide/issues) 或 [PR](https://github.com/yeasy/openclaw_guide/pulls)。
+> **Phát hiện lỗi hoặc có đề xuất cải tiến?** Hoan nghênh bạn gửi [Issue](https://github.com/yeasy/openclaw_guide/issues) hoặc [Pull Request](https://github.com/yeasy/openclaw_guide/pulls).

@@ -1,31 +1,31 @@
-## 14.5 本章小结
+## 14.5 Tóm tắt chương
 
-> **注**：本章定价数据基于各供应商官方 API 定价。AI 模型定价变化频繁，请以各供应商官方定价页面为准：
-> - [Anthropic 官方定价](https://platform.claude.com/docs/en/about-claude/pricing)
-> - [OpenAI 官方定价](https://openai.com/api/pricing/)
+> **Lưu ý**: Dữ liệu giá cước trong chương này căn cứ theo bảng giá API chính thức của các nhà cung cấp. Giá mô hình AI có sự biến động thường xuyên, vui lòng đối soát trực tiếp tại:
+> - [Bảng giá chính thức của Anthropic](https://platform.claude.com/docs/en/about-claude/pricing)
+> - [Bảng giá chính thức của OpenAI](https://openai.com/api/pricing/)
 
-本章从 Token 消耗、推理延迟、用量观测和部署预算四个维度，提供了基于 OpenClaw 内置观测能力、provider 限额与外部治理机制的性能优化与成本控制方案。
+Chương 14 đã tiếp cận từ 4 chiều kích: Tiêu thụ Token, Độ trễ suy luận, Quan sát lượng dùng và Quy hoạch ngân sách, cung cấp phương án tối ưu hóa hiệu năng và kiểm soát chi phí vững chắc.
 
-### 要点回顾
+### Điểm lại các ý chính
 
-- **Token 与上下文成本**（14.1）：通过系统提示精简、按 Agent 分配工具定义、`compaction` 与 `contextPruning` 配置实现上下文压缩，配合 `agents.defaults.model.primary` / `agents.defaults.model.fallbacks`，或 `agents.entries.*.model.primary` / `fallbacks` 进行模型分级。
-- **延迟与吞吐优化**（14.2）：延迟由 LLM 推理、工具 I/O、沙箱执行、编排器开销四段构成；通过模型回退链、工具并行化、`/trace on` 与 `openclaw logs --follow --json` 回放来定位瓶颈。
-- **用量观测与预算控制**（14.3）：使用 `/status`、`/usage cost`、`openclaw gateway usage-cost`、`/compact` 等交互/CLI 命令与 Dashboard Usage 页面监控 Token 与成本；硬预算和告警应结合 provider 控制台、外部监控或插件治理。
-- **部署预算模板**（14.4）：个人场景月均 $60–90、团队场景 $600–900、企业场景 $10K–50K，核心变量是模型选择和日均会话量。
+- **Chi phí Token & Ngữ cảnh** (14.1): Tinh gọn prompt hệ thống, phân bổ công cụ theo Agent, nén ngữ cảnh qua `compaction` và `contextPruning`, kết hợp phân tầng mô hình qua `agents.defaults.model.primary` / `fallbacks`.
+- **Tối ưu độ trễ & Thông lượng** (14.2): Độ trễ cấu thành từ 4 đoạn: Suy luận LLM, I/O công cụ, Thực thi Sandbox và Chi phí điều phối; tối ưu qua chuỗi fallback, song song hóa công cụ và dùng `/trace on` kết hợp `logs --follow --json` để định vị điểm nghẽn.
+- **Quan sát mức tiêu thụ & Kiểm soát ngân sách** (14.3): Dùng các lệnh `/status`, `/usage cost`, `openclaw gateway usage-cost`, `/compact` và trang Usage trên Dashboard để theo dõi chi phí; kết hợp trần chi tiêu cứng trên trang quản trị của provider.
+- **Bản mẫu ngân sách triển khai** (14.4): Dự toán theo 3 quy mô Cá nhân (~$39–75/tháng), Nhóm vừa (~$1100–1500/tháng), và Doanh nghiệp lớn (~$27K–35K/tháng).
 
-### 优化检查清单
+### Checklist tối ưu hóa
 
-1. 是否已通过 `/usage cost`、`openclaw gateway usage-cost` 或 Dashboard Usage 建立 Token / 成本基线，并用 `openclaw status --usage` 补充 provider 配额窗口证据？
-2. 系统提示是否已精简到必要最小集？
-3. 是否为不同 Agent 配置了差异化的工具集和模型？
-4. `compaction` 和 `contextPruning` 策略是否已启用并调优？
-5. 模型回退链是否已配置，避免单点故障？
-6. 是否有定期的成本审计流程？
+1. Bạn đã thiết lập đường cơ sở Token/Chi phí qua `/usage cost`, `openclaw gateway usage-cost` hoặc trang Usage trên Dashboard chưa?
+2. Prompt hệ thống đã được tinh gọn về mức tối thiểu cần thiết chưa?
+3. Các Agent đã được phân bổ công cụ và mô hình khác biệt hóa theo đúng chức năng chưa?
+4. Chiến lược `compaction` và `contextPruning` đã được kích hoạt và tinh chỉnh hợp lý chưa?
+5. Chuỗi fallback mô hình đã được thiết lập để loại bỏ điểm nghẽn đơn lẻ chưa?
+6. Bạn đã có quy trình kiểm toán chi phí định kỳ hàng tuần chưa?
 
-### 下一步
+### Bước tiếp theo
 
-第十五章将提供常见故障的诊断决策树，第十六章介绍与 Claude 生态的深度集成。
+[Chương 15](../15_troubleshooting_trees/README.md) sẽ cung cấp Cây quyết định chẩn đoán các sự cố thường gặp, và [Chương 16](../16_claude_ecosystem/README.md) giới thiệu việc tích hợp chuyên sâu với hệ sinh thái AI.
 
 ---
 
-> **发现错误或有改进建议？** 欢迎提交 [Issue](https://github.com/yeasy/openclaw_guide/issues) 或 [PR](https://github.com/yeasy/openclaw_guide/pulls)。
+> **Phát hiện lỗi hoặc có đề xuất cải tiến?** Hoan nghênh bạn gửi [Issue](https://github.com/yeasy/openclaw_guide/issues) hoặc [Pull Request](https://github.com/yeasy/openclaw_guide/pulls).

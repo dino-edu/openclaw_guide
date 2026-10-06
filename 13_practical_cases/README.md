@@ -1,12 +1,10 @@
-# 第十三章 实战案例集锦
+# Chương 13: Tuyển tập tình huống thực chiến
 
-本章通过两个说明性设计骨架和一份垂直行业对照表，演示 OpenClaw 从最小能力闭环到生产部署的渐进式落地流程。案例中的配置与插件片段用于拆解设计思路，不应视为可直接复制运行的完整实现。每个案例遵循统一的五段式结构：问题定义 → 最小循环 → 分层配置拆解 → 验收清单与故障点 → 生产扩展指引。
+Chương này thông qua 2 bộ khung thiết kế thị phạm và một bảng đối chiếu ngành dọc chuyên sâu để minh họa quy trình triển khai tiệm tiến của OpenClaw từ vòng lặp tối thiểu cho tới môi trường sản xuất thực tế. Các đoạn cấu hình và mã plugin trong các tình huống được dùng để phân tích tư duy thiết kế kiến trúc, không nên xem là mã nguồn đóng gói sẵn có thể copy-paste chạy ngay. Mỗi tình huống thực chiến đều tuân thủ cấu trúc 5 giai đoạn chuẩn mực: Định nghĩa bài toán → Vòng lặp tối thiểu → Bóc tách cấu hình phân tầng → Checklist nghiệm thu & Điểm sự cố → Chỉ dẫn mở rộng sản xuất.
 
-## 本章内容导读
+## Mục lục hướng dẫn chương
 
-本章包括以下几个小节：
-
-- **[13.1 实战案例：企业飞书群工作助手](13.1_lark_slack_workbot.md)**：30 人工程团队的群内智能助手，从最小 `openclaw.json` 开始逐层叠加权限、工具与审计能力。
-- **[13.2 实战案例：客户支持智能体](13.2_customer_support_agent.md)**：B2B SaaS 客户支持场景，从 FAQ 自动回复逐步扩展到工单升级、PII 脱敏与多语言支持。
-- **[13.3 垂直行业应用：场景对照与关键差异](13.3_vertical_industry_cases.md)**：金融、医疗、教育、电商四个行业的合规要求、审核卡点与适配清单对照。
-- **[13.4 本章小结](summary.md)**：要点回顾与下一步衔接。
+- **[13.1 Tình huống thực tế: Trợ lý công việc nhóm Lark/Slack cho doanh nghiệp](13.1_lark_slack_workbot.md)**: Trợ lý thông minh cho đội ngũ kỹ thuật 30 người, bắt đầu từ tệp `openclaw.json` tối giản rồi lần lượt chồng lớp phân quyền, công cụ và năng lực kiểm toán.
+- **[13.2 Tình huống thực tế: Agent hỗ trợ khách hàng](13.2_customer_support_agent.md)**: Kịch bản CSKH cho sản phẩm B2B SaaS, từ tự động trả lời FAQ mở rộng dần sang tạo ticket leo thang, làm mờ thông tin cá nhân (PII Masking) và hỗ trợ đa ngôn ngữ.
+- **[13.3 Ứng dụng ngành dọc: Đối chiếu kịch bản & Sự khác biệt trọng yếu](13.3_vertical_industry_cases.md)**: Đối chiếu yêu cầu tuân thủ, trạm kiểm duyệt an toàn và checklist thích ứng của 4 ngành: Tài chính, Y tế, Giáo dục và Thương mại điện tử.
+- **[13.4 Tóm tắt chương](summary.md)**: Điểm lại các ý chính và liên kết sang chương tiếp theo.
