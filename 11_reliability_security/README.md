@@ -1,25 +1,25 @@
-# 第十一章 可靠性与安全机制实现
+# Chương 11: Hiện thực hóa cơ chế tin cậy & An toàn
 
-本章聚焦把“能跑”加固为“能长期稳定运行”：多密钥治理与可追溯的认证选择、模型失败时的回退与冷却止血、以及工具策略、沙箱与审计的联动防护。通过本章，你将学会在供应商抖动、限流或密钥失效时，让 OpenClaw 系统仍然保持可控、可恢复、可追溯的能力。
+Chương này tập trung vào việc gia cố hệ thống từ "chạy được" tiến lên "vận hành ổn định bền bỉ lâu dài": Quản trị đa khóa và lựa chọn xác thực có thể truy vết, chuỗi fallback mô hình và cơ chế làm nguội (Cooldown) để cầm máu khi sự cố xảy ra, cùng sự phối hợp phòng thủ chặt chẽ giữa Chính sách công cụ, Hộp cát Sandbox và Kiểm toán. Qua chương này, bạn sẽ học được cách duy trì năng lực kiểm soát, tự phục hồi và truy vết của OpenClaw ngay cả khi nhà cung cấp bị rung lắc, chạm rate limit hay khóa API đột ngột hết hạn.
 
-## 本章内容导读
+## Mục lục hướng dẫn chương
 
-本章包括以下几个小节：
+Chương này bao gồm các mục sau:
 
-- **[11.1 多密钥治理：认证档案、环境轮换与 auth order](11.1_auth_profiles.md)**：落地多密钥与环境注入，建立可轮换、可灰度、可回滚的密钥治理流程。
-- **[11.2 冷却与禁用：故障窗口内的止血机制](11.2_rotation_cooldown.md)**：配置并验证 auth-profile 冷却、临时禁用与运行层止血机制，避免故障窗口内反复失败。
-- **[11.3 模型回退链路与错误分流](11.3_fallback_rules.md)**：建立回退的证据链：触发原因、命中规则、回退路径与恢复策略都能在日志中对账。
-- **[11.4 防护栏：工具策略、沙箱、审批与审计联动](11.4_guardrails.md)**：用工具策略、沙箱与审批收敛高风险能力，并把允许与拒绝都变成可解释事件，便于审计与复盘。
-- **[11.5 本章小结](summary.md)**：关键结论与读者自检。
+- **[11.1 Quản trị đa khóa: Hồ sơ xác thực (Auth Profiles), Xoay tua môi trường & Thứ tự xác thực (auth.order)](11.1_auth_profiles.md)**: Triển khai đa khóa và nạp biến môi trường, xây dựng quy trình quản trị khóa có thể xoay tua, triển khai thử nghiệm từng phần và hoàn tác nhanh chóng.
+- **[11.2 Làm nguội & Vô hiệu hóa (Cooldown): Cơ chế ngăn chặn lỗi lan rộng](11.2_rotation_cooldown.md)**: Cấu hình và xác minh cơ chế cooldown của auth-profile, vô hiệu hóa tạm thời và cầm máu ở tầng runtime, tránh việc thất bại lặp đi lặp lại trong khung giờ sự cố.
+- **[11.3 Chuỗi dự phòng mô hình (Fallback Chain) & Phân luồng xử lý lỗi](11.3_fallback_rules.md)**: Thiết lập chuỗi bằng chứng fallback: Lý do kích hoạt, quy tắc đã khớp, đường dẫn fallback và chiến lược phục hồi đều có thể đối soát minh bạch trong log.
+- **[11.4 Hàng rào bảo vệ (Guardrails): Liên kết Tool Policy, Sandbox, Phê duyệt & Kiểm toán](11.4_guardrails.md)**: Dùng chính sách công cụ, sandbox và phê duyệt để thu hẹp các năng lực rủi ro cao, biến mọi quyết định cho phép hay từ chối thành các sự kiện có thể giải thích được phục vụ kiểm toán.
+- **[11.5 Tóm tắt chương](summary.md)**: Các kết luận trọng yếu và bài tập tự kiểm tra.
 
-## 学习目标
+## Mục tiêu học tập
 
-完成本章的阅读后，你将能够：
-1. **管理密钥**：实施多密钥治理，支持轮换与灰度。
-2. **应对故障**：设计故障时的冷却与转移策略。
-3. **建立回退链路**：设计分层的模型回退策略，提高整体可用性。
-4. **防护系统**：用工具策略与沙箱保护高风险能力，并通过审计追溯每一步操作。
+Sau khi hoàn thành chương này, bạn sẽ có thể:
+1. **Quản trị khóa**: Thực thi quản trị đa khóa, hỗ trợ xoay tua và phát hành thử nghiệm an toàn.
+2. **Ứng phó sự cố**: Thiết kế chiến lược làm nguội và chuyển đổi luồng khi phát sinh lỗi.
+3. **Thiết lập chuỗi dự phòng**: Thiết kế chiến lược fallback mô hình phân tầng, nâng cao tính khả dụng tổng thể.
+4. **Bảo vệ hệ thống**: Dùng chính sách công cụ và sandbox để bảo vệ các năng lực rủi ro cao, đồng thời theo vết từng bước thao tác qua kiểm toán.
 
-## 阅读建议
+## Lời khuyên khi đọc
 
-阅读时建议打开本地配置文件与结构化日志，一边改一边用探针与故障注入做验收，而不是只凭“感觉更安全/更稳定”。
+Khi đọc, bạn nên mở sẵn tệp cấu hình cục bộ và nhật ký log có cấu trúc, vừa đọc vừa dùng các đầu dò và kỹ thuật bơm lỗi để trực tiếp nghiệm thu, thay vì chỉ phán đoán "cảm thấy an toàn hơn".

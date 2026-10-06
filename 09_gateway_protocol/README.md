@@ -1,24 +1,24 @@
-# 第九章 Gateway 控制平面与协议机制
+# Chương 9: Mặt phẳng điều khiển Gateway & Cơ chế giao thức
 
-本章切换到系统内核视角，讨论 OpenClaw Gateway 的控制平面职责、连接生命周期、事件一致性与设备配对及信任建立。通过本章，你将理解一个健壮的 Gateway 如何通过精心设计的协议与状态机，让分布式智能体系统变得“可预测、可恢复、可审计”。
+Chương này chuyển hướng sang góc nhìn nhân hệ thống (System Kernel), bàn về trách nhiệm của mặt phẳng điều khiển (Control Plane) của OpenClaw Gateway, vòng đời kết nối, tính nhất quán của sự kiện cùng cơ chế ghép nối thiết bị và thiết lập vùng tin cậy. Qua chương này, bạn sẽ hiểu được cách một Gateway vững chắc thông qua các giao thức và máy trạng thái (State Machine) được thiết kế tinh vi giúp cho hệ thống Agent phân tán trở nên "có thể dự đoán, có thể phục hồi và có thể kiểm toán".
 
-理解这一章的价值在于：同样的模型能力，在不同控制平面设计下会呈现完全不同的稳定性与安全性。
+Giá trị của chương này nằm ở chỗ: Cùng một năng lực mô hình AI, nhưng đặt dưới các thiết kế mặt phẳng điều khiển khác nhau sẽ mang lại độ ổn định và an toàn hoàn toàn khác biệt.
 
-## 本章内容导读
+## Mục lục hướng dẫn chương
 
-本章包括以下几个小节：
+Chương này bao gồm các mục sau:
 
-- **[9.1 架构全景与五平面框架](9.1_architecture_overview.md)**：用五平面架构（控制、数据、上下文、信任、可观测性）建立统一的系统设计视角。
-- **[9.2 控制平面职责与边界](9.2_control_plane.md)**：深入控制平面的五大职责——认证、路由、会话管理、策略执行与故障恢复。
-- **[9.3 连接生命周期：握手、认证与心跳](9.3_ws_handshake.md)**：理解 WebSocket 长连接的完整生命周期、握手、认证与保活机制。
-- **[9.4 事件幂等与一致性保障](9.4_event_idempotency.md)**：掌握事件驱动系统的幂等与一致性：用 `idempotencyKey` 处理副作用重试，用 `seq` gap 触发状态刷新。
-- **[9.5 渠道配对与本地信任建立](9.5_pairing_trust.md)**：理解渠道 sender 配对、设备配对与 setup code / bootstrap token 的边界，以及吊销与轮换的治理方法。
-- **[9.6 本章小结](summary.md)**：关键结论与读者自检。
+- **[9.1 Toàn cảnh kiến trúc & Khung 5 mặt phẳng (5-Plane Framework)](9.1_architecture_overview.md)**: Sử dụng kiến trúc 5 mặt phẳng (Điều khiển, Dữ liệu, Ngữ cảnh, Vùng tin cậy, Khả năng quan sát) để xây dựng góc nhìn thiết kế hệ thống thống nhất.
+- **[9.2 Trách nhiệm & Ranh giới của mặt phẳng điều khiển (Control Plane)](9.2_control_plane.md)**: Đi sâu vào 5 trọng trách lớn của Control Plane — Xác thực, Định tuyến, Quản lý phiên, Thực thi chính sách và Phục hồi sự cố.
+- **[9.3 Vòng đời kết nối: Bắt tay (Handshake), Xác thực & Heartbeat](9.3_ws_handshake.md)**: Hiểu trọn vẹn vòng đời của kết nối dài WebSocket, quá trình bắt tay, cơ chế xác thực và duy trì kết nối (Keepalive).
+- **[9.4 Tính bất biến của sự kiện (Idempotency) & Bảo đảm nhất quán](9.4_event_idempotency.md)**: Làm chủ tính bất biến và tính nhất quán trong hệ thống hướng sự kiện: Dùng `idempotencyKey` xử lý thử lại tác vụ có tác dụng phụ, dùng khoảng trống `seq` gap để kích hoạt làm mới trạng thái.
+- **[9.5 Ghép nối kênh & Thiết lập vùng tin cậy cục bộ](9.5_pairing_trust.md)**: Hiểu rõ ranh giới giữa ghép nối người gửi trên kênh chat, ghép nối thiết bị ngoại vi và mã thiết lập (setup code / bootstrap token), cùng phương pháp quản trị thu hồi và xoay tua.
+- **[9.6 Tóm tắt chương](summary.md)**: Các kết luận trọng yếu và bài tập tự kiểm tra.
 
-## 学习目标
+## Mục tiêu học tập
 
-完成本章的阅读后，你将能够：
-1. **理解架构**：从控制平面的视角看 Gateway 的整体设计。
-2. **掌握协议**：理解 WebSocket 连接的完整生命周期。
-3. **保障一致性**：设计事件驱动系统中的幂等与一致性机制。
-4. **建立信任**：通过设备配对与密钥管理建立安全的信任基础。
+Sau khi hoàn thành chương này, bạn sẽ có thể:
+1. **Hiểu sâu kiến trúc**: Nhìn nhận thiết kế tổng thể của Gateway dưới lăng kính mặt phẳng điều khiển.
+2. **Làm chủ giao thức**: Nắm vững vòng đời hoàn chỉnh của kết nối WebSocket.
+3. **Bảo đảm tính nhất quán**: Thiết kế cơ chế bất biến và nhất quán trong hệ thống hướng sự kiện.
+4. **Thiết lập vùng tin cậy**: Xây dựng nền tảng an toàn thông qua ghép nối thiết bị và quản lý khóa.

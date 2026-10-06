@@ -1,25 +1,25 @@
-## 9.6 本章小结
+## 9.6 Tóm tắt chương
 
-第九章用控制平面视角解释稳定性：连接与认证是入口闸门，事件幂等是可靠基础，配对与信任是本地安全起点。
+Chương 9 đã dùng góc nhìn mặt phẳng điều khiển (Control Plane) để giải thích bài toán về tính ổn định: Kết nối và xác thực là cổng kiểm soát đầu vào, tính bất biến của sự kiện là nền tảng của độ tin cậy, ghép nối và thiết lập vùng tin cậy là điểm khởi đầu cho an toàn bảo mật.
 
-### 9.6.1 关键结论
+### 9.6.1 Các kết luận trọng yếu
 
-- Gateway 的价值在裁决：归属、权限、审计三条不变量决定系统上限。
-- WebSocket 长连接必须治理生命周期：心跳、重连、恢复、背压与关闭原因。
-- 重复、丢失和未知状态都要处理：`idempotencyKey` 让副作用重试安全，`seq` gap 提醒客户端刷新快照。
-- 配对是信任引导：必须具备授权范围、生命周期、吊销与轮换。
+- **Giá trị cốt lõi của Gateway nằm ở sự phán quyết**: Ba bất biến Quy thuộc quyền sở hữu, Thẩm quyền phân quyền, và Trách nhiệm kiểm toán quyết định giới hạn trần của toàn bộ hệ thống.
+- **Kết nối dài WebSocket bắt buộc phải quản trị vòng đời chặt chẽ**: Nhịp tim Keepalive, thuật toán kết nối lại, khôi phục trạng thái, áp lực ngược (Backpressure) và mã lý do đóng kết nối.
+- **Cả ba trạng thái Trùng lặp, Thất lạc và Bất định đều phải có phương án xử lý**: Khóa `idempotencyKey` giúp việc thử lại các tác vụ có tác dụng phụ diễn ra an toàn, khoảng trống `seq` gap nhắc nhở client chủ động làm mới snapshot.
+- **Ghép nối (Pairing) là quá trình dẫn dắt vùng tin cậy**: Bắt buộc phải có phạm vi ủy quyền rõ ràng, vòng đời xác định, cùng cơ chế thu hồi và xoay tua an toàn.
 
-### 9.6.2 读者自检
+### 9.6.2 Checklist tự kiểm tra
 
-- 是否能说明一条消息从渠道进入到会话归属与路由的证据链？
-- 是否能说明重连后如何避免重复订阅与重复执行？
-- 是否具备吊销与轮换演练流程，并能在限定时间内完成？
+- [ ] Bạn có thể giải thích chuỗi bằng chứng của một tin nhắn từ khi đi vào từ kênh chat cho đến khi được định tuyến và quy thuộc vào phiên làm việc không?
+- [ ] Bạn có thể giải thích cách thức hệ thống ngăn chặn việc đăng ký lặp và thực thi lặp sau khi kết nối lại WebSocket không?
+- [ ] Bạn đã chuẩn bị sẵn quy trình diễn tập xoay tua và thu hồi token, đồng thời có thể hoàn thành trong khung thời gian giới hạn chưa?
 
-### 9.6.3 下一章预告
+### 9.6.3 Giới thiệu chương tiếp theo
 
-[第十章](../10_agent_loop/README.md)进入 Agent Loop 运行内核，拆解排队、提示组装、工具执行与流式输出的实现机制。
+[Chương 10](../10_agent_loop/README.md) sẽ đưa chúng ta vào sâu bên trong Nhân vòng lặp Agent Loop: Bóc tách cơ chế xếp hàng, lắp ráp prompt, thực thi công cụ và xuất dữ liệu dạng luồng (Streaming).
 
 ---
 
 > [!NOTE]
-> 发现错误或有改进建议？欢迎提交 [Issue](https://github.com/yeasy/openclaw_guide/issues) 或 [PR](https://github.com/yeasy/openclaw_guide/pulls)。
+> Phát hiện lỗi hoặc có đề xuất cải tiến? Hoan nghênh bạn gửi [Issue](https://github.com/yeasy/openclaw_guide/issues) hoặc [Pull Request](https://github.com/yeasy/openclaw_guide/pulls).

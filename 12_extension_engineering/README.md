@@ -1,25 +1,25 @@
-# 第十二章 插件扩展与生产落地
+# Chương 12: Mở rộng Plugin & Vận hành sản xuất
 
-本章回答如何把 OpenClaw 用成长期可演进的平台能力。主线是插件体系与工具治理：插件如何启停与白名单化，工具如何纳入策略约束，扩展如何通过自检、探针与日志做成可回放完整流程，并最终形成可上线、可回滚的生产落地方案。通过本章，你将学会如何在保持稳定性的前提下，灵活地扩展 OpenClaw 的能力。
+Chương này trả lời cho câu hỏi làm thế nào để biến OpenClaw thành một năng lực nền tảng có thể tiến hóa lâu dài. Mạch chính là hệ thống Plugin và quản trị công cụ: Plugin được bật/tắt và quản lý danh sách trắng ra sao, công cụ được đưa vào ranh giới chính sách như thế nào, tiện ích mở rộng được kiểm chứng qua tự kiểm tra, đầu dò probe và nhật ký log để trở thành một quy trình có thể phát lại ra sao, và cuối cùng hình thành phương án đưa lên môi trường sản xuất có thể phát hành và hoàn tác an toàn. Qua chương này, bạn sẽ học được cách mở rộng năng lực linh hoạt cho OpenClaw trong khi vẫn duy trì sự ổn định tối đa.
 
 > [!NOTE]
-> **与第五章的关系**：[第五章](../05_tools_skills/README.md)从使用者视角介绍工具系统的通识基础（工具分类、策略语义、技能与插件的协同定位）；本章从扩展开发者视角深入插件的工程机制（Hook 架构、生命周期、Manifest 校验），并聚焦生产落地（灰度上线、监控告警、部署检查清单、回滚流程）。如果你尚未阅读第五章，建议先了解工具策略的基本概念再进入本章。
+> **Mối liên hệ với Chương 5**: [Chương 5](../05_tools_skills/README.md) tiếp cận dưới góc nhìn của người sử dụng để giới thiệu nền tảng công cụ (phân loại công cụ, ngữ nghĩa chính sách, sự bổ trợ giữa Skill và Plugin); còn chương này tiếp cận dưới góc nhìn của lập trình viên mở rộng để đi sâu vào cơ chế kỹ thuật của Plugin (kiến trúc Hook, vòng đời, kiểm tra Manifest), đồng thời tập trung vào việc vận hành sản xuất (phát hành thử nghiệm Canary, giám sát cảnh báo, checklist triển khai, quy trình hoàn tác Rollback).
 
-## 本章内容导读
+## Mục lục hướng dẫn chương
 
-本章包括以下几个小节：
+Chương này bao gồm các mục sau:
 
-- **[12.1 插件开发体系：自定义扩展的工程机制](12.1_plugin_architecture.md)**：理解插件体系的配置、启用与安全边界。
-- **[12.2 自定义工具：把副作用关进可控边界](12.2_custom_tools.md)**：掌握自定义工具的治理方法，将副作用收敛到确定性策略中。
-- **[12.3 测试与调试：把扩展做成可回放的工程完整流程](12.3_testing_debugging.md)**：建立扩展的测试、调试与灰度回滚流程。
-- **[12.4 生产落地蓝图：扩展可控化](12.4_production_blueprint.md)**：形成生产落地清单，使扩展可控、可审计、可回放。
-- **[12.5 主流框架互操作性指南](12.5_framework_interoperability.md)**：掌握与其他主流框架的互操作性，扩大生态联动。
-- **[12.6 本章小结](summary.md)**：关键结论与读者自检。
+- **[12.1 Hệ thống phát triển Plugin: Cơ chế kỹ thuật cho mở rộng tùy biến](12.1_plugin_architecture.md)**: Hiểu cơ chế cấu hình, kích hoạt và ranh giới an toàn của hệ sinh thái Plugin.
+- **[12.2 Tự tạo Tool tùy biến: Cô lập tác dụng phụ trong ranh giới kiểm soát](12.2_custom_tools.md)**: Làm chủ phương pháp quản trị công cụ tự viết, thu hẹp các tác dụng phụ vào chính sách xác định.
+- **[12.3 Kiểm thử & Gỡ lỗi (Debugging): Biến tiện ích mở rộng thành quy trình có thể tái hiện](12.3_testing_debugging.md)**: Xây dựng quy trình kiểm thử, gỡ lỗi và hoàn tác cho các tiện ích mở rộng.
+- **[12.4 Bản thiết kế sản xuất (Production Blueprint): Kiểm soát khả năng mở rộng](12.4_production_blueprint.md)**: Thiết lập danh mục nghiệm thu sản xuất, giúp tiện ích mở rộng luôn trong tầm kiểm soát, có thể kiểm toán và phát lại được.
+- **[12.5 Hướng dẫn tương tác liên framework (Framework Interoperability)](12.5_framework_interoperability.md)**: Nắm vững khả năng tương tác với các framework AI chủ lưu khác, mở rộng hệ sinh thái liên kết.
+- **[12.6 Tóm tắt chương](summary.md)**: Các kết luận trọng yếu và bài tập tự kiểm tra.
 
-## 学习目标
+## Mục tiêu học tập
 
-完成本章的阅读后，你将能够：
-1. **开发插件**：理解插件开发的整个工程体系。
-2. **编写工具**：设计安全、可控的自定义工具。
-3. **测试扩展**：建立完整的测试与调试流程。
-4. **上线部署**：从开发到生产的完整交付流程。
+Sau khi hoàn thành chương này, bạn sẽ có thể:
+1. **Phát triển Plugin**: Nắm vững toàn bộ hệ thống kỹ thuật để xây dựng một Plugin hoàn chỉnh.
+2. **Viết công cụ tùy biến**: Thiết kế các Custom Tool an toàn, trong tầm kiểm soát.
+3. **Kiểm thử tiện ích mở rộng**: Xây dựng quy trình kiểm thử và gỡ lỗi khép kín.
+4. **Triển khai sản xuất**: Làm chủ quy trình bàn giao từ môi trường phát triển lên môi trường sản xuất thực tế.

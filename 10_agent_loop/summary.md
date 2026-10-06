@@ -1,27 +1,27 @@
-## 10.7 本章小结
+## 10.7 Tóm tắt chương
 
-本章从底层视角拆解了 Agent Loop 的运行内核，揭示了 OpenClaw 如何通过嵌入式集成 pi 运行底座、分道排队、结构化提示词装配与工具策略过滤来实现可靠的智能体执行链路。
+Chương 10 đã bóc tách nhân vận hành của Agent Loop từ góc nhìn tầng dưới, hé lộ cách thức OpenClaw thông qua việc tích hợp nhúng nền tảng pi, hàng đợi phân làn, lắp ráp prompt có cấu trúc và lọc chính sách công cụ để hiện thực hóa một chuỗi thực thi Agent đáng tin cậy.
 
-### 10.7.1 关键结论
+### 10.7.1 Các kết luận trọng yếu
 
-- **嵌入式集成 pi 运行时**：OpenClaw 通过 `runEmbeddedPiAgent()` 将 pi SDK 直接嵌入进程，围绕 `activeSession.prompt()` 与事件订阅获得可控推理循环能力，同时通过工具组合与过滤、动态 System Prompt 和自定义 `ModelRegistry` 实现企业级控制。
-- **纯 TypeScript 分道排队**：Command Queue 不依赖 Redis 等外部中间件，通过会话道串行化、全局道并发控制和后台道隔离，在单节点即可实现完整的并发治理。
-- **提示词是结构化工程产物**：提示词的构建是分层装配过程——系统约束、工具描述、上下文历史与用户输入各自隔离，在 Token 预算内按优先级裁剪，并可通过 hooks、cache trace 或 trajectory 记录做采样审计。
-- **工具调用是策略驱动的受控执行**：工具调用经过策略过滤（`tools.allow`/`tools.deny`）和 `before_tool_call` 钩子双重拦截，结果回注时经过裁剪防止上下文淹没。
-- **流式输出与有界重试保障长任务可靠性**：EmbeddedBlockChunker 实现围栏感知的智能切分；渠道/SDK 层按单次请求重试，embedded run 层可在受控预算内从 transcript 状态恢复当前 attempt；模型故障切换通过认证档案轮转与回退链路两阶段实现。
+- **Tích hợp nhúng pi runtime**: OpenClaw nhúng trực tiếp pi SDK vào tiến trình thông qua `runEmbeddedPiAgent()`, xoay quanh `activeSession.prompt()` và cơ chế đăng ký sự kiện để sở hữu năng lực vòng lặp suy luận có thể kiểm soát; đồng thời thông qua bộ lọc công cụ, Prompt hệ thống động và `ModelRegistry` tùy biến để mang lại khả năng quản trị cấp doanh nghiệp.
+- **Hàng đợi phân làn bằng TypeScript thuần túy**: Command Queue không phụ thuộc Redis hay middleware ngoài; thông qua việc tuần tự hóa làn phiên, kiểm soát đồng thời làn toàn cục và cách ly làn chạy ngầm, hệ thống đạt được năng lực quản trị đồng thời trọn vẹn ngay trên một node đơn lẻ.
+- **Prompt là sản phẩm kỹ thuật có cấu trúc**: Xây dựng prompt là một quy trình lắp ráp phân tầng — Ràng buộc hệ thống, Mô tả công cụ, Lịch sử ngữ cảnh và Đầu vào người dùng được cách ly độc lập, cắt tỉa theo độ ưu tiên trong ngân sách Token, và có thể lấy mẫu kiểm toán qua hooks hoặc cache trace.
+- **Gọi công cụ là sự thực thi bị kiểm soát bởi chính sách**: Lượt gọi công cụ trải qua hai tầng kiểm soát chặt chẽ gồm bộ lọc chính sách (`tools.allow`/`tools.deny`) và hook `before_tool_call`; kết quả khi bơm ngược lại được cắt tỉa để chống ngập lụt ngữ cảnh.
+- **Xuất luồng & Thử lại có giới hạn bảo đảm độ tin cậy của tác vụ dài**: EmbeddedBlockChunker hiện thực hóa việc phân đoạn khối thông minh có nhận biết rào chắn Markdown; phía kênh/SDK thử lại trên từng yêu cầu HTTP đơn lẻ; cơ chế failover mô hình diễn ra qua 2 giai đoạn: Xoay tua hồ sơ xác thực và Kích hoạt chuỗi fallback.
 
-### 10.7.2 读者自检
+### 10.7.2 Checklist tự kiểm tra
 
-- 能否描述 OpenClaw 嵌入 pi 运行时的四个关键接口（会话管理、工具注入、事件订阅、模型注册表）？
-- 能否解释 Command Queue 的三种道（会话道、全局道、后台道）各自的并发语义？
-- 提示词装配是否采用了分层隔离机制，并对外部不可信内容进行了结构化标签包裹？
-- 是否理解工具调用从提议到策略过滤再到结果回注的完整链路？
+- [ ] Bạn có thể mô tả 4 giao diện then chốt khi OpenClaw nhúng pi runtime (Quản lý phiên, Bơm công cụ, Đăng ký sự kiện, Sổ đăng ký mô hình) không?
+- [ ] Bạn có thể giải thích ngữ nghĩa đồng thời của 3 làn trong Command Queue (Làn phiên, Làn toàn cục, Làn chạy ngầm) không?
+- [ ] Việc lắp ráp prompt đã áp dụng cơ chế cách ly phân tầng và bọc thẻ cách ly cấu trúc cho nội dung không đáng tin cậy từ bên ngoài chưa?
+- [ ] Bạn đã nắm vững chuỗi mắt xích hoàn chỉnh của lượt gọi công cụ từ đề xuất ý định → lọc chính sách → thực thi → bơm ngược kết quả chưa?
 
-### 10.7.3 下一章预告
+### 10.7.3 Giới thiệu chương tiếp theo
 
-在理解了 Agent Loop 内核的执行链路后，[第十一章](../11_reliability_security/README.md)将聚焦系统的可靠性与安全加固：多密钥治理与认证轮换、模型回退与冷却止血、以及工具策略与沙箱的联动防护，确保即使模型产生越权意图，系统仍能在执行层实施确定性拦截。
+Sau khi đã nắm vững chuỗi thực thi của nhân Agent Loop, [Chương 11](../11_reliability_security/README.md) sẽ tập trung vào Độ tin cậy và Gia cố an toàn: Quản trị đa khóa và xoay tua xác thực, chuỗi fallback mô hình và cơ chế làm nguội hạ nhiệt sự cố, cùng liên kết phòng thủ giữa chính sách công cụ và môi trường Sandbox, bảo đảm ngay cả khi mô hình nảy sinh ý định vượt quyền thì hệ thống vẫn chặn đứng được ở tầng thực thi.
 
 ---
 
 > [!NOTE]
-> 发现错误或有改进建议？欢迎提交 [Issue](https://github.com/yeasy/openclaw_guide/issues) 或 [PR](https://github.com/yeasy/openclaw_guide/pulls)。
+> Phát hiện lỗi hoặc có đề xuất cải tiến? Hoan nghênh bạn gửi [Issue](https://github.com/yeasy/openclaw_guide/issues) hoặc [Pull Request](https://github.com/yeasy/openclaw_guide/pulls).

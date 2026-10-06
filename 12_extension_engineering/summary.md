@@ -1,25 +1,25 @@
-## 12.6 本章小结
+## 12.6 Tóm tắt chương
 
-本章以插件体系为扩展主线，强调用确定性策略把扩展能力收敛到可控边界，并用自检、探针与结构化日志把扩展变更做成可回放完整流程。
+Chương 12 lấy hệ thống Plugin làm mạch chính cho việc mở rộng, nhấn mạnh việc sử dụng các chính sách xác định để thu hẹp năng lực mở rộng vào ranh giới có thể kiểm soát, đồng thời dùng các câu lệnh tự kiểm tra, đầu dò probe và nhật ký log có cấu trúc để biến các thay đổi mở rộng thành một quy trình kỹ thuật hoàn chỉnh có thể phát lại được.
 
-### 12.6.1 关键结论
+### 12.6.1 Các kết luận trọng yếu
 
-1. 插件扩展必须配合白名单与显式启停开关，才能在生产中快速灰度与回滚。
-2. 自定义工具的风险控制应落在工具策略与执行域隔离上，而不是落在提示词约束上。
-3. 扩展测试应分层验收：插件层、策略层、入口层逐步合并，避免端到端失败时无法定位。
-4. 生产落地应固化自检与探针命令，并通过结构化日志按 traceId 回放链路。
+1. **Mở rộng Plugin bắt buộc phải đi kèm Danh sách trắng (Whitelist) và công tắc Bật/Tắt tường minh**, từ đó mới có thể phát hành thử nghiệm Canary và hoàn tác khẩn cấp nhanh chóng trong sản xuất.
+2. **Kiểm soát rủi ro của Custom Tool phải nằm ở Chính sách công cụ và sự cô lập vùng thực thi (Sandbox)**, tuyệt đối không phó thác cho câu chữ trong prompt.
+3. **Kiểm thử tiện ích mở rộng phải nghiệm thu phân tầng**: Tầng Plugin → Tầng Chính sách → Tầng Cổng vào rồi mới đến End-to-End, tránh tình trạng lỗi toàn cục không thể khoanh vùng.
+4. **Triển khai sản xuất phải chuẩn hóa bộ lệnh tự kiểm tra**: Kết hợp với log có cấu trúc để phát lại chuỗi xử lý theo `traceId`.
 
-### 12.6.2 读者自检
+### 12.6.2 Checklist tự kiểm tra
 
-- 插件是否具备显式启停、白名单约束与可回滚配置？
-- 高风险工具是否默认拒绝，并只在受控智能体与受控入口下允许？
-- 是否能用一组固定命令复现并定位一次扩展相关故障？
+- [ ] Các plugin đã có công tắc bật tắt rõ ràng, ràng buộc danh sách trắng và cấu hình có thể hoàn tác chưa?
+- [ ] Các công cụ có độ rủi ro cao đã mặc định bị từ chối, và chỉ được mở ra ở các cổng vào và Agent được kiểm soát chưa?
+- [ ] Bạn có thể dùng một bộ lệnh cố định để tái hiện và định vị chính xác một sự cố liên quan đến tiện ích mở rộng không?
 
-### 12.6.3 下一章衔接
+### 12.6.3 Giới thiệu chương tiếp theo
 
-[下一章](../13_practical_cases/README.md)进入实战案例集锦，通过企业工作助手、客户支持智能体等完整案例，把前 12 章的方法论串联为可复现的落地流程。
+[Chương 13](../13_practical_cases/README.md) sẽ đưa chúng ta vào Tuyển tập tình huống thực chiến: Thông qua các ca điển hình như Trợ lý công việc doanh nghiệp, Agent hỗ trợ khách hàng tự động..., xâu chuỗi toàn bộ phương pháp luận của 12 chương trước thành một quy trình ứng dụng thực tế có thể tái lập được.
 
 ---
 
 > [!NOTE]
-> 发现错误或有改进建议？欢迎提交 [Issue](https://github.com/yeasy/openclaw_guide/issues) 或 [PR](https://github.com/yeasy/openclaw_guide/pulls)。
+> Phát hiện lỗi hoặc có đề xuất cải tiến? Hoan nghênh bạn gửi [Issue](https://github.com/yeasy/openclaw_guide/issues) hoặc [Pull Request](https://github.com/yeasy/openclaw_guide/pulls).

@@ -1,23 +1,23 @@
-# 第十章 Agent Loop 运行内核剖析
+# Chương 10: Phân tích nhân vòng lặp Agent Loop
 
-本章聚焦 Agent Loop 的执行主链：请求如何进入、上下文如何组装、工具如何被调度、结果如何流式返回。理解这条主链，是深入架构设计、定位复杂故障与优化执行效率的关键所在。
+Chương này tập trung vào chuỗi thực thi chính của Agent Loop: Yêu cầu đi vào hệ thống như thế nào, ngữ cảnh được lắp ráp ra sao, công cụ được điều phối như thế nào, và kết quả được trả về dạng luồng (Streaming) ra sao. Nắm vững chuỗi thực thi chính này là chìa khóa để đi sâu vào thiết kế kiến trúc, chẩn đoán các lỗi phức tạp và tối ưu hóa hiệu năng thực thi.
 
-在深入代码细节之前，我们需要先建立一个心智模型：**OpenClaw 通过嵌入式集成将 π（pi）运行底座的极简执行骨架纳入自身进程，在此基础上叠加渠道适配、工具策略、分道排队等企业级能力，形成完整的智能体运行时。**
+Trước khi đi sâu vào chi tiết mã nguồn, chúng ta cần xây dựng một mô hình tư duy: **OpenClaw thông qua việc tích hợp nhúng đã đưa bộ khung thực thi tối giản của nền tảng π (pi) vào chính tiến trình của mình, từ đó chồng lớp thêm các năng lực cấp doanh nghiệp như thích ứng kênh liên lạc, chính sách công cụ, hàng đợi phân làn... để tạo thành một môi trường Agent Runtime hoàn chỉnh.**
 
-本章围绕上述架构底座的执行链路展开，依次剖析每个核心组件的运作原理与工程设计。
+Chương này đi sâu vào chuỗi thực thi của kiến trúc nền tảng nói trên, lần lượt bóc tách nguyên lý vận hành và thiết kế kỹ thuật của từng thành phần cốt lõi.
 
-## 本章学习目标
+## Mục tiêu học tập của chương
 
-本章内容将涵盖以下核心机制，包括排队控制、提示词工程、工具调度以及流式输出管理。
+Nội dung chương sẽ bao quát các cơ chế cốt lõi, bao gồm kiểm soát hàng đợi, kỹ thuật prompt, điều phối công cụ và quản lý luồng xuất dữ liệu:
 
-- **[10.1 请求流转与分层排障](10.1_request_lifecycle.md)**：追踪一条消息的完整生命周期，掌握“由外到内”的分层排障策略。
-- **[10.2 π 运行底座与嵌入式集成](10.2_pi_framework.md)**：剖析 OpenClaw 如何通过嵌入 pi SDK 获得事件驱动的推理循环能力。
-- **[10.3 入口、排队与并发控制](10.3_entry_queue.md)**：理解纯 TypeScript 实现的 Command Queue 分道排队机制。
-- **[10.4 提示词装配与结构化注入防护](10.4_prompt_assembly.md)**：掌握提示词结构化装配过程，理解基于 Token 预算的裁剪策略。
-- **[10.5 工具执行与结果回注](10.5_tool_execution.md)**：拆解工具调用的策略过滤、钩子拦截与结果裁剪机制。
-- **[10.6 流式输出、重试与提前终止](10.6_streaming_retry.md)**：Block Chunker 的智能切分、有界重试策略与模型故障切换概述。
-- **[10.7 本章小结](summary.md)**：总结核心运行机制，并为后续可靠性与安全章节做好衔接。
+- **[10.1 Vòng đời luân chuyển yêu cầu & Chẩn đoán theo tầng](10.1_request_lifecycle.md)**: Theo vết vòng đời hoàn chỉnh của một tin nhắn, nắm vững chiến lược chẩn đoán sự cố phân tầng "từ ngoài vào trong".
+- **[10.2 Nền tảng thực thi pi & Tích hợp nhúng (Embedded Integration)](10.2_pi_framework.md)**: Mổ xẻ cách thức OpenClaw nhúng pi SDK để sở hữu năng lực vòng lặp suy luận hướng sự kiện.
+- **[10.3 Cổng vào, xếp hàng & Kiểm soát đồng thời (Concurrency Control)](10.3_entry_queue.md)**: Hiểu cơ chế hàng đợi phân làn Command Queue được hiện thực hóa bằng TypeScript thuần túy.
+- **[10.4 Lắp ráp Prompt & Phòng thủ tấn công chèn (Prompt Injection)](10.4_prompt_assembly.md)**: Làm chủ quy trình lắp ráp prompt có cấu trúc, hiểu chiến lược cắt tỉa dựa trên ngân sách Token.
+- **[10.5 Thực thi Tool & Bơm ngược kết quả (Result Injection)](10.5_tool_execution.md)**: Bóc tách bộ lọc chính sách gọi công cụ, cơ chế chặn của hook và cắt tỉa kết quả.
+- **[10.6 Luồng xuất (Streaming), Thử lại (Retry) & Kết thúc sớm](10.6_streaming_retry.md)**: Cơ chế phân đoạn thông minh của Block Chunker, chiến lược thử lại có giới hạn và tổng quan chuyển đổi mô hình dự phòng.
+- **[10.7 Tóm tắt chương](summary.md)**: Tổng kết các cơ chế vận hành nòng cốt và chuẩn bị liên kết sang các chương về độ tin cậy và an toàn bảo mật.
 
-## 阅读建议
+## Lời khuyên khi đọc
 
-本章属于“深水区”，建议在阅读时对照自己脑海中的传统中间件架构，思考 Agent 模式为什么必须要把“状态管理”推向极致。并在本地跑起最小用例，打开结构化日志观测执行链路。
+Chương này thuộc "vùng nước sâu" về mặt kỹ thuật. Khi đọc, bạn nên đối chiếu với kiến trúc middleware truyền thống trong tư duy của mình, suy ngẫm lý do vì sao mô hình Agent lại bắt buộc phải đẩy "quản trị trạng thái" lên mức độ tối đa; đồng thời hãy chạy một ca kiểm thử tối thiểu trên máy và bật nhật ký log có cấu trúc để trực tiếp quan sát chuỗi thực thi.
